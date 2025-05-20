@@ -1,0 +1,236 @@
+% !TeX document-id = {2e27ddd9-8725-4684-b0b8-a4328d10ae60}
+% !TeX program = txs:///lualatex
+% !TEX spellcheck = de-DE
+% !BIB program = txs:///biber
+%% magic comments above automatically switch to correct compiler in TexStudio
+
+\documentclass[
+%accepted, % uncomment this after your oral exam for the final print (changes title page)
+%print,% use this flag for printing (turns links black)
+english, ngerman,% Language: last one is the main language used in the document
+%smallfont, % if you wish a smaller font. This is 12pt for the manuscript, 
+twoside, % one of {oneside, twoside} -> onesided or twosided layout. for twosided print choose twoside
+toc=bib,
+BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thickness of book content)
+]{isw_smb_diss} % Relative path to class. If class is in subfolder (e.g. as git submodule) then \documentclass[...]{isw_smb_diss/isw_smb_diss}
+
+% Rules for the design of your dissertation: http://dx.doi.org/10.18419/opus-10327 (S. 25)
+
+% Suppress single lines on previous/next page:
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+%% ======= Recommended packages (not necessarily needed) ======= 
+
+\usepackage{shellesc} % shell escape alternative: more flexible than --shell-escape flag
+					  % for glossaries-extra, tikz external package
+
+% use this to debug where borders are hurt:
+%\usepackage{showframe}
+
+\usepackage{csquotes} % for bibliography and glossaries
+\usepackage{xpatch}
+
+% Citation style. If your institute has specific requirements, configure here:
+\usepackage[style=numeric, % see https://www.overleaf.com/learn/latex/Biblatex_citation_styles for a list of predefined styles
+sorting=none,
+maxcitenames=2,
+maxbibnames=99,
+giveninits=true,
+uniquelist=false,
+backend=biber,
+natbib=true,
+bibwarn=true,
+sortcites=true, % sort citations when multiple are cited, e.g. \cite{A,B,C} -> [1,2,3] instead of [3,1,2]
+isbn=true]{biblatex}
+
+% Hack: print url only if no doi is present, credits to samcarter_is_at_topanswers.xyz on https://tex.stackexchange.com/a/424775
+\renewbibmacro*{doi+eprint+url}{%
+	\printfield{doi}%
+	\newunit\newblock%
+	\iftoggle{bbx:eprint}{%
+		\usebibmacro{eprint}%
+	}{}%
+	\newunit\newblock%
+	\iffieldundef{doi}{%
+		\usebibmacro{url+urldate}}%
+	{}%
+}
+
+
+\usepackage{amsmath, amssymb, bm} % math commands
+\numberwithin{equation}{chapter} %ensure that equations enumeration starts at 1 for every chapter
+
+\usepackage{breakurl} %break links in bibliography
+
+\RequirePackage{graphicx} % images
+
+
+% Nice looking tables (https://nhigham.com/2019/11/19/better-latex-tables-with-booktabs/latex subfig)
+\usepackage{booktabs}
+
+% si-units: auto-rounding numbers, set same format for numbers globally, add and correclty typeset units for numbers
+\usepackage{siunitx}
+\sisetup{%round-mode = places, 
+	%round-precision = 3, % 
+	range-phrase=~--~, % --, % \qtyrange{from}{to}{unit}
+	table-number-alignment = center, 
+	table-omit-exponent=false, % turn of exp representation in tables
+	exponent-product=\cdot,
+	output-decimal-marker={,}, % "," instead of "." as decimal separator (for German theses)
+	%exponent-mode = fixed, fixed-exponent = 0, % turn of exponent mode with Latex3e
+}
+% The following line should help, if you experience problems with missing hyphenation of composed words with dash 
+% (LaTeX turns off hyphenation when a dash is present in a word)
+% Source: https://tex.stackexchange.com/questions/63232/why-can-words-with-hyphen-char-not-be-hyphenated/63234#63234
+% Alternatively, explicitely hyphenate with "= (https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_Silbentrennung)
+\defaulthyphenchar=127
+
+% Just for demonstration use
+\usepackage{blindtext}
+
+% harvey balls: e.g \harveyBallFull
+% \usepackage{harveyballs}
+
+%% mark changes after your Oral presentation for review (http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/changes/changes.english.pdf):
+%% You can even list all changes so they can easily be checked with "\listofchanges"
+%\usepackage[%final % keyword "final" is to hide changes highlighting
+%				]{changes}
+%\definechangesauthor[name=Prof. Haupt Berichter, color=Plum]{MyProf}
+%\definechangesauthor[name=Prof. Mit berichter, color=OliveGreen]{OtherProf}
+
+% Other settings you may find useful
+\input{isw_smb_diss/settings_example/definitions} % commands
+\input{isw_smb_diss/settings_example/tikz} % TikZ settings
+\input{isw_smb_diss/settings_example/tikz_blocks} % block diagrams using tikz 
+
+%% ======= End of recommended packages ======= 
+
+% TODO: add your own bibliography here:
+\addbibresource{bibliography.bib}
+
+% search for images in folder img/, i.e. instead of  \includegraphics{img/...}, just use \includegraphics{...}
+\graphicspath{{img/}}
+
+
+\title{Entwicklung Effizienter Multivariater Lebensdauertests}
+
+% English title: set proper title case: https://titlecaseconverter.com/
+\subtitle{Developing Efficient Multivariate Lifetime Tests}
+
+\author{Marco Arndt,~M.Sc.}
+\birthplace{Ravensburg}
+
+\examiner{Univ.-Prof.~Dr.-Ing.~Martin Dazer}
+\coexaminer{Univ.-Prof.~Dr.-Ing.~Mit~Berichter}
+\faculty{Konstruktions-, Produktions- und Fahrzeugtechnik} % Fak. 7
+\institute{Institut für Maschinenelemente}
+\dateoforalexamination{1. Januar 2026}
+\yearofpublication{2025}
+
+% Manual hyphenation. 
+% More info for German hyphenation in LaTeX: https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_Silbentrennung
+% \hyphenation{Dis-am-bi-gu-ie-rung, Sil-ben-trenn-ung}
+
+%%% Acronyms and glossary:
+% Glossary (Used symbols, acronyms, ...)
+%\input{settings_example/glossaries}
+
+% Define acronyms (needs \input{settings/glossaries})
+% Use in text: \ac{kgt} or short \acs{kgt}
+%\newacronym{ISW}{ISW}{Institut für Steuerungstechnik der Werkzeugmaschinen und Fertigungseinrichtungen}
+%\newacronym{FE}{FE}{Finite Elemente}
+
+% Glossary entries, also needs \input{settings/glossaries}, use in text as \gls{Q}
+%\glsxtrnewsymbol[description={Kovarianz des Systemrauschens des Kalmanfilters}]{Q}{\ensuremath{\bm Q}}
+%\glsxtrnewsymbol[description={Kovarianz des Messrauschens des Kalmanfilters}]{R}{\ensuremath{R}}
+
+%  Show page borders (useful for final checks)
+%\usepackage{showframe}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\onehalfspacing % line spacing: 1,5
+
+\addchap{Vorwort}
+% Formel-Beispiel
+Thanks for your service.
+
+
+% Beispiel für referenzieren eines Glossar-Eintrags
+% Matrizen \gls{Q} und \gls{R}
+% auch in Gleichungen: $\gls{Q}$
+
+% Beispiel fürs Referenzieren eines Akronyms:
+% \ac{ISW}.
+% Automatische Bindestriche bei zusammengesetzten Akronymen: \ac{FE}[-Modelle]
+
+\cleardoublepage
+\addchap{Kurzfassung/Abstract}
+Das ist die Kurzfassung für die Diss.
+
+\cleardoublepage
+\ifpdf
+	\phantomsection
+	\pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+\fi
+\tableofcontents
+
+% % List of acronyms/symbols
+\cleardoublepage
+% reference with label \ref{glo:acronyms}
+\addchap{Abkürzungsverzeichnis}
+% \glssetwidest{ISW~} % longest acronym to properly indent list of acronyms
+% \printglossary[type=\acronymtype, style=alttree, title={Abkürzungsverzeichnis}]
+
+\cleardoublepage
+% \printglossary[type=symbols,style={symbunitlong}, title={Symbolverzeichnis}]
+
+
+\cleardoublepage
+\listoffigures
+
+\cleardoublepage
+\listoftables
+
+\raggedbottom % prefer having whitespace on bottom of pages (instead of stretching content to have common bottom line)
+% This is required by the publisher
+
+\mainmatter % Main contents. Tips:
+% - Have separate .tex files per chapter, include them using \input{...}
+% - When using versioning with git, try to start each sentence in a new line (this makes diffs cleaner)
+
+\input{chapters/chapter1_einleitung.tex}
+\input{chapters/chapter2_standdertechnik.tex}
+\input{chapters/chapter3_ansatz.tex}
+\input{chapters/chapter4_screening.tex}
+\input{chapters/chapter5_entwurf.tex}
+\input{chapters/chapter6_casestudy.tex}
+\input{chapters/chapter7_zusammenfassung.tex}
+
+
+% TODO: nocite prints the whole bib file to the bibliography. This is for testing and should be commented out in your thesis:
+\nocite{*}
+
+% Bibliography
+\setlength{\emergencystretch}{.5em}
+%% Force page breaks in bibliography before splitting single entries over multiple pages
+%\patchcmd{\bibsetup}{\interlinepenalty=5000}{\interlinepenalty=10000}{}{}
+\printbibliography[title={Literatur}]
+
+
+
+
+
+% Appendix, if needed:
+%% This uses \section and below to have everything grouped in the virtual chapter "Anhang" in the table of contents. 
+\startSMBAppendix
+
+\addcontentsline{toc}{chapter}{Anhang}
+\section{Ein Anhang}
+\subsection{Unteranhang 1}
+
+\end{document}
