@@ -65,7 +65,7 @@ isbn=true]{biblatex}
 \usepackage{breakurl} %break links in bibliography
 
 \RequirePackage{graphicx} % images
-
+\usepackage{xcolor} % Markierung im Text
 
 % Nice looking tables (https://nhigham.com/2019/11/19/better-latex-tables-with-booktabs/latex subfig)
 \usepackage{booktabs}
@@ -174,8 +174,8 @@ Das ist die Kurzfassung für die Diss.
 
 \cleardoublepage
 \ifpdf
-	\phantomsection
-	\pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+    \phantomsection
+    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 

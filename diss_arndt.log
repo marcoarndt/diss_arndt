@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  20 MAY 2025 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  23 MAY 2025 01:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1461,23 +1461,28 @@ chapter 1.
 ]
 
 [2]
-
-[3]
-LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 33.
+LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 30.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\ts1qpl.fd
 File: ts1qpl.fd 2009/09/25 v1.2 font definition file for TS1/qpl
 )
 
-[4{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}]) (chapters/chapter2_standdertechnik.tex
+[3{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}]) (chapters/chapter2_standdertechnik.tex
 
-[5]
+[4]
+chapter 2.
+) (chapters/chapter3_ansatz.tex
+
+[5
+
+
+]
 
 [6
 
 
 ]
-chapter 2.
-) (chapters/chapter3_ansatz.tex
+chapter 3.
+) (chapters/chapter4_screening.tex
 
 [7]
 
@@ -1485,8 +1490,8 @@ chapter 2.
 
 
 ]
-chapter 3.
-) (chapters/chapter4_screening.tex
+chapter 4.
+) (chapters/chapter5_entwurf.tex) (chapters/chapter6_casestudy.tex) (chapters/chapter7_zusammenfassung.tex)
 
 [9]
 
@@ -1494,8 +1499,8 @@ chapter 3.
 
 
 ]
-chapter 4.
-) (chapters/chapter5_entwurf.tex) (chapters/chapter6_casestudy.tex) (chapters/chapter7_zusammenfassung.tex)
+chapter without number
+
 
 [11]
 
@@ -1503,17 +1508,8 @@ chapter 4.
 
 
 ]
-chapter without number
 
-
-[13]
-
-[14
-
-
-]
-
-[15] (diss_arndt.aux)
+[13] (diss_arndt.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1525,17 +1521,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 54979 strings out of 473577
- 1321529 string characters out of 5716318
- 2421972 words of memory out of 5000000
+ 54975 strings out of 473577
+ 1321497 string characters out of 5716318
+ 2420974 words of memory out of 5000000
  77145 multiletter control sequences out of 15000+600000
- 611782 words of font info for 125 fonts, out of 8000000 for 9000
+ 611642 words of font info for 124 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 122i,20n,121p,10947b,2910s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,19n,121p,10947b,2910s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on diss_arndt.pdf (29 pages, 272784 bytes).
+Output written on diss_arndt.pdf (27 pages, 269752 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
+ 372 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
  33157 words of extra memory for PDF output out of 35830 (max. 10000000)
 
