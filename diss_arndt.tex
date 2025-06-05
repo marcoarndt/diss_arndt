@@ -101,9 +101,9 @@ isbn=true]{biblatex}
 %\definechangesauthor[name=Prof. Mit berichter, color=OliveGreen]{OtherProf}
 
 % Other settings you may find useful
-\input{isw_smb_diss/settings_example/definitions} % commands
-\input{isw_smb_diss/settings_example/tikz} % TikZ settings
-\input{isw_smb_diss/settings_example/tikz_blocks} % block diagrams using tikz 
+\input{settings_example/definitions} % commands
+\input{settings_example/tikz} % TikZ settings
+\input{settings_example/tikz_blocks} % block diagrams using tikz 
 
 %% ======= End of recommended packages ======= 
 
@@ -127,7 +127,7 @@ isbn=true]{biblatex}
 \faculty{Konstruktions-, Produktions- und Fahrzeugtechnik} % Fak. 7
 \institute{Institut für Maschinenelemente}
 \dateoforalexamination{1. Januar 2026}
-\yearofpublication{2025}
+\yearofpublication{2026}
 
 % Manual hyphenation. 
 % More info for German hyphenation in LaTeX: https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_Silbentrennung
@@ -135,12 +135,16 @@ isbn=true]{biblatex}
 
 %%% Acronyms and glossary:
 % Glossary (Used symbols, acronyms, ...)
-%\input{settings_example/glossaries}
+\input{settings_example/glossaries}
 
 % Define acronyms (needs \input{settings/glossaries})
 % Use in text: \ac{kgt} or short \acs{kgt}
 %\newacronym{ISW}{ISW}{Institut für Steuerungstechnik der Werkzeugmaschinen und Fertigungseinrichtungen}
 %\newacronym{FE}{FE}{Finite Elemente}
+\newacronym{DoE}{DoE}{Design of Experiments}
+\newacronym{ALT}{ALT}{Accelerated Lifetime Testing}
+\newacronym{ECU}{ECU}{Electronic Control Unit}
+
 
 % Glossary entries, also needs \input{settings/glossaries}, use in text as \gls{Q}
 %\glsxtrnewsymbol[description={Kovarianz des Systemrauschens des Kalmanfilters}]{Q}{\ensuremath{\bm Q}}
@@ -174,20 +178,20 @@ Das ist die Kurzfassung für die Diss.
 
 \cleardoublepage
 \ifpdf
-    \phantomsection
-    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+	\phantomsection
+	\pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 
 % % List of acronyms/symbols
 \cleardoublepage
-% reference with label \ref{glo:acronyms}
-\addchap{Abkürzungsverzeichnis}
-% \glssetwidest{ISW~} % longest acronym to properly indent list of acronyms
-% \printglossary[type=\acronymtype, style=alttree, title={Abkürzungsverzeichnis}]
-
+%reference with label \ref{glo:acronyms}
+%\addchap{Abkürzungsverzeichnis}
+\glssetwidest{Electronic Control Unit~} % longest acronym to properly indent list of acronyms
+\printglossary[type=\acronymtype, style=alttree, title={Abkürzungsverzeichnis}]
+%
 \cleardoublepage
-% \printglossary[type=symbols,style={symbunitlong}, title={Symbolverzeichnis}]
+%\printglossary[type=symbols,style={symbunitlong}, title={Symbolverzeichnis}]
 
 
 \cleardoublepage
