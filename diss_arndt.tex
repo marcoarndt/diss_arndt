@@ -2,7 +2,8 @@
 % !TeX program = txs:///lualatex
 % !TEX spellcheck = de-DE
 % !BIB program = txs:///biber
-%% magic comments above automatically switch to correct compiler in TexStudio
+%% magic comments ab automatically switch to correct compiler in TexStudio
+
 
 \documentclass[
 %accepted, % uncomment this after your oral exam for the final print (changes title page)
@@ -101,9 +102,9 @@ isbn=true]{biblatex}
 %\definechangesauthor[name=Prof. Mit berichter, color=OliveGreen]{OtherProf}
 
 % Other settings you may find useful
-\input{settings_example/definitions} % commands
-\input{settings_example/tikz} % TikZ settings
-\input{settings_example/tikz_blocks} % block diagrams using tikz 
+\input{settings/definitions} % commands
+\input{settings/tikz} % TikZ settings
+\input{settings/tikz_blocks} % block diagrams using tikz 
 
 %% ======= End of recommended packages ======= 
 
@@ -135,7 +136,7 @@ isbn=true]{biblatex}
 
 %%% Acronyms and glossary:
 % Glossary (Used symbols, acronyms, ...)
-\input{settings_example/glossaries}
+\input{settings/glossaries}
 
 % Define acronyms (needs \input{settings/glossaries})
 % Use in text: \ac{kgt} or short \acs{kgt}
@@ -143,7 +144,8 @@ isbn=true]{biblatex}
 %\newacronym{FE}{FE}{Finite Elemente}
 \newacronym{DoE}{DoE}{Design of Experiments}
 \newacronym{ALT}{ALT}{Accelerated Lifetime Testing}
-\newacronym{ECU}{ECU}{Electronic Control Unit}
+% \newacronym{ECU}{ECU}{Electronic Control Unit}
+\newacronym[plural=ECUs, longplural=Electronic Control Units]{ECU}{ECU}{Electronic Control Unit}
 
 
 % Glossary entries, also needs \input{settings/glossaries}, use in text as \gls{Q}
@@ -178,8 +180,8 @@ Das ist die Kurzfassung für die Diss.
 
 \cleardoublepage
 \ifpdf
-	\phantomsection
-	\pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+    \phantomsection
+    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 

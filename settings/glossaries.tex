@@ -72,5 +72,7 @@
 % fix automake glossaries with lualatex: https://tex.stackexchange.com/a/468820
 \usepackage{etoolbox}
 \makeatletter
-\patchcmd\@gls@automake{\write18}{\DelayedShellEscape}{}{\GenericError{}{Shell escape patch failed}{}{}}
+% \patchcmd\@gls@automake{\write18}{\DelayedShellEscape}{}{\fail}
+\patchcmd\@gls@automake{\write18}{\DelayedShellEscape}{}{}
+
 \makeatother
