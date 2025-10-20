@@ -2,40 +2,49 @@
 %% Kapitel 1 - Einleitung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Einleitung}
+\chapter{Einleitung} \label{chap:einleitung}
 Die Absicherung technischer Produkte und Systeme hinsichtlich ihrer Funktionalität bildet einen zentralen Bestandteil der ingenieurwissenschaftlichen Verantwortlichkeiten im Produktentwicklungsprozess.
-Sie erfolgt zur Erfüllung von Produktversprechen gegenüber der potenziellen Käuferschaft sowie bestehender Kunden, zur Wahrung des Selbstverständnisses einer Marke oder rein aufgrund regulatorischer Vorgaben.
-Es wird erwartet - insbesondere aus Kundensicht - dass ein (technisches) Produkt - ein Fahrzeug, ein Smartphone, eine Photovoltaikanlage - mindestens die Garantiezeit problemlos übersteht.\\
+Motiviert durch  Produktversprechen gegenüber der potenziellen Käuferschaft sowie bestehender Kunden, zur Wahrung des Selbstverständnisses einer Marke oder rein aufgrund regulatorischer Vorgaben soll hier im Kontext des vorgesehenen Einsatzzweckes Zuverlässigkeitsmanagement betrieben werden.
+So wird auch insbesondere Kundensicht aus dabei erwartet, dass ein (technisches) Produkt - ein Fahrzeug, ein Smartphone, eine Photovoltaikanlage - seine Funktionalität mindestens zum Gewährleistungs- oder Garantiezeitraum uneingeschränkt erfüllt.\\
 Über den gesamten Produktlebenszyklus hinweg unterstützen Methoden der Zuverlässigkeitstechnik dabei, diese Anforderungen systematisch zu erfüllen.
-Dazu zählen Verfahren aus dem Bereich „Safety“, explorative Datenanalysen zur Untersuchung der Produktperformance im Betrieb oder Test, effiziente Versuchsplanung zum Nachweis der Lebensdauer am Design, Methoden der beschleunigten Versuchsplanung, engl. \ac{ALT}, der Aufbau probabilistischer Lebensdauermodelle sowie das Risikomanagement im Allgemeinen.
-Das zentrale Ergebnis liegt in der Ermittlung der Ausfallwahrscheinlichkeit als Komplement zur Zuverlässigkeit - also der Wahrscheinlichkeit, dass ein entwickeltes Produkt unter definierten Randbedingungen eine vorgegebene Zeitdauer ohne funktionskritischen Ausfall übersteht \cite{Bertsche.2022}.
-Üblicherweise soll damit nachgewiesen werden, dass das Erzeugnis dem Einfluss einer bestimmten Belastung - beispielsweise einer physikalischen oder elektrischen Kraft, einem Wärmeeintrag oder der Exposition gegenüber einem chemischen Milieu - standhält.
-Gelingt in der Praxis keine hinreichend genaue Quantifizierung dieser probabilistischen Metrik, so liegen die Ursachen jedoch nicht zwangsläufig allein in ökonomischen Einschränkungen wie dem Zeit- und Kostenbudget für das Testing oder einem fehlenden methodischen Know-how - vielmehr könnten  \textit{mehrere} Einflussfaktoren auf die Zuverlässigkeit einwirken und sogar Wechselwirkungen ausprägen, ohne dass dies adäquat wahrgenommen oder antizipiert wird.
-Moderne Produkte können schlichtweg durch multivariat ausgelöste Fehlermechanismen ausfallen.
+Verfahren aus dem Bereich „Safety“, explorative Datenanalysen zur Untersuchung der Produktperformance im Betrieb oder Test, effiziente Versuchsplanung zum Nachweis der Lebensdauer am Design, Methoden der beschleunigten Versuchsplanung, engl. \ac{ALT}, der Aufbau probabilistischer Lebensdauermodelle sowie das Risikomanagement im Allgemeinen eignen sich für diese Herausforderung.
+Das zentrale Ergebnis liegt in der Ermittlung der Ausfallwahrscheinlichkeit als Komplement zur Zuverlässigkeit - also der Wahrscheinlichkeit, dass ein entwickeltes Produkt unter den definierten Randbedingungen eine vorgegebene Zeitdauer ohne funktionskritischen Ausfall übersteht \cite{Bertsche.2022}.
+Üblicherweise soll so nachgewiesen werden, dass das Erzeugnis dem Einfluss einer bestimmten Belastung - beispielsweise einer physikalischen oder elektrischen Kraft, einem Wärmeeintrag oder der Exposition gegenüber einer chemischen Beanspruchung - standhält.
+Gelingt in der Praxis keine hinreichend genaue Quantifizierung dieser probabilistischen Metrik, so liegen die Ursachen jedoch nicht zwangsläufig allein in ökonomischen Einschränkungen wie dem Zeit- und Kostenbudget für ein erforderliches Testing oder einem fehlenden methodischen Know-how - vielmehr könnten  \textit{mehrere} Einflussfaktoren auf die Zuverlässigkeit einwirken und sogar Wechselwirkungen ausprägen, ohne dass dies adäquat wahrgenommen oder antizipiert wird.
+Moderne Produkte können schlichtweg durch multivariat bedingte Fehlermechanismen ausfallen.
 
-\section{Forschungperspektive und Problembeschreibung}
-Da trotz genannter Umstände die Kundenanforderungen und Garantiebedingungen üblicherweise als unveränderlich, teils sogar als zunehmend anspruchsvoll zu verstehen sind, werden Unsicherheiten in der Lebensdauerabsicherung meist nur durch präventive Wartungsstrategien, durch Tolerierung von Restrisiken oder durch die Inkaufnahme nachträglicher Schadensbegrenzung behandelt.
+\section{Forschungsperspektive und Problembeschreibung} \label{sec:problembeschreibung}
+Da trotz genannter Umstände die Kundenanforderungen und Garantiebedingungen üblicherweise als unveränderlich, teils sogar als zunehmend anspruchsvoll zu verstehen sind, werden Unsicherheiten in der Lebensdauerabsicherung dann meist nur durch präventive Wartungsstrategien, durch Tolerierung von Restrisiken oder durch die Inkaufnahme nachträglicher Schadensbegrenzung behandelt.
 Der zugrunde liegende Gedanke: ehe ein Produkt, dessen Lebensdauerverhalten nicht quantifizierbar verstanden ist, einen kritischen Verschleißzustand erreicht, wird es im Rahmen eines festgelegten Wartungsintervalls vorsorglich ersetzt.
+Dabei könnte zugrunde liegen, dass schlichtweg kein physikalisches Modell oder eine ausreichend ausgeprägte empirische Datengrundlage vorhanden ist.
 Führt auch diese Vorsorge zu erheblichen Regress- oder Kulanzkosten, müssen ausfallschutzorientierte Maßnahmen - bis hin zu Rückrufaktionen - frühzeitig eingeplant und umgesetzt werden, um Image- und Kostenrisiken (wenn auch selten nachhaltig) zu minimieren.
-Um jenes zu vermeiden, muss also bereits im Vorfeld auch den verschiedensten Randbedingungen mithilfe der Zuverlässigkeitstechnik begegnet werden.
-Besonders komplexe Randbedingungen lassen sich beispielsweise durch eine hochgradige Integration von Elektrifizierung und Digitalisierung, verkürzte Entwicklungszyklen, verschärfter Kostendruck, sich perse verändernde Prioritäten, wandelnde Materialauswahl und -komposition, leistungsoptimierte Belastungsszenarien, intensivierte Einsatzbedingungen und nicht zuletzt eine effiziente Ressourcennutzung innerhalb eines Produkts beschreiben - um nur einige zu nennen.
-Ein einfaches Beispiel verdeutlicht dies: der komfortable sowie ausfallfreie Betrieb eines Fahrzeugs soll einerseits gegenüber verschiedensten Schadensursachen gewährleistet werden; andererseits hängt er inzwischen maßgeblich vom Funktionserhalt einer bis zu dreistelligen Anzahl an \acp{ECU} ab - während in der jüngeren Vergangenheit noch eine geringe bis mittlere zweistellige Anzahl mit nur begrenztem Funktionsumfang üblich war, oder setzt die Funktionsfähigkeit einer alternden Traktionsbatterie heraus, durch die sich weitere Unsicherheiten einbringen \cite{dat.2025}.
+Um jenes zu vermeiden, muss also bereits im Vorfeld den verschiedensten Randbedingungen mithilfe der Zuverlässigkeitstechnik begegnet werden.
+Besonders komplexe Randbedingungen lassen sich beispielsweise durch eine hochgradige Integration von Elektrifizierung und Digitalisierung, verkürzte Entwicklungszyklen, verschärfter Kostendruck, sich per se verändernde Prioritäten, wandelnde Materialauswahl und -komposition, leistungsoptimierte Belastungsszenarien, intensivierte Einsatzbedingungen und nicht zuletzt eine effiziente Ressourcennutzung innerhalb eines Produkts beschreiben - um nur einige zu nennen.
+Ein einfaches Beispiel verdeutlicht dies: Der komfortable sowie ausfallfreie Betrieb eines Fahrzeugs soll einerseits gegenüber verschiedensten Schadensursachen gewährleistet werden; andererseits hängt er inzwischen maßgeblich vom Funktionserhalt einer bis zu dreistelligen Anzahl an \acp{ECU} ab - während in der jüngeren Vergangenheit noch eine geringe bis mittlere zweistellige Anzahl mit nur begrenztem Funktionsumfang üblich war \cite{dat.2025}.
+Oder aber der störungsfreie Betrieb digitale Services setzt bei Zentralisierung von \ac{ECU}-Funktionen die performante Funktionsfähigkeit einer Traktionsbatterie voraus, durch deren chemische Alterung sich jedoch zeitgleich wiederum weitere Unsicherheiten eingliedern können.
 Ein damit betrachtetes System bildet somit ein vielfältig komplexeres Netzwerk aus teils wechselwirkenden oder direkten Eigenschaften, die zu einem Versagen führen könnten.
-Damit ist gemeint: Produktdesigns werden angesichts steigender Kundenanforderungen zunehmend raffinierter und im Sinne des Effizienzgedankens optimiert (z.B. durch mehr Sensorik, Rechenleistung und fortschrittliche Assistenzsysteme), gleichzeitig wird jedoch die Art und Weise eines möglichen Funktionsverlustes zunehmend komplexer.
+Damit kann festgehalten werden: Produktdesigns werden angesichts steigender Kundenanforderungen zunehmend raffinierter und im Sinne des Effizienzgedankens optimiert (z.B. durch mehr Sensorik, Rechenleistung und fortschrittliche Assistenzsysteme), gleichzeitig wird jedoch die Art und Weise eines möglichen Funktionsverlustes zunehmend komplexer.
 Somit rückt die Fähigkeit, Prognosen über die Lebensdauer und Ausfallwahrscheinlichkeit in Abhängigkeit von mehreren Einflussgrößen treffen zu können, zunehmend in den unternehmerischen Fokus für strategische Entscheidungen.
 Über die klassische Testplanung im Rahmen der Zuverlässigkeitstechnik hinaus erfordert dies also Methoden der statistischen Versuchsplanung bei gleichzeitiger Berücksichtigung mehrerer Einflussfaktoren auf die Lebensdauer.
-Methoden wie \acs{ALT} und die Lebensdauermodellbildung behalten dabei weiterhin ihre Relevanz und bilden nach wie vor einen unverzichtbaren Bestandteil einer fundierten Teststrategie.
+Methoden wie \acs{ALT} und die Lebensdauermodellbildung behalten dabei weiterhin ihre Relevanz und bilden einen unverzichtbaren Bestandteil einer fundierten Teststrategie.
 
-\section{Beitrag dieser Arbeit}
+\section{Beitrag dieser Arbeit} \label{sec:beitrag}
 Ausgehend von der beschriebenen Problemstellung lässt sich der übergeordnete Beitrag dieser Arbeit wie folgt formulieren: Liegt ein komplexes technisches System vor und soll dieses hinsichtlich seiner Lebensdauer empirisch untersucht werden, um fundierte Prognosen über die Funktionalität im Betrieb treffen zu können, so müssen mehrdimensionale Lebensdaueruntersuchungen nach dem Prinzip des \ac{DoE} geplant werden.
-Neben der bloßen Implementierung von mehrdimensionale Tests für die Lebensdauerprobung berücksichtigt dieser Ansatz damit:
+Neben der bloßen Implementierung von mehrdimensionale Tests für die Lebensdauererprobung berücksichtigt dieser Ansatz damit:
 \begin{itemize}
-    \item eine effiziente Methodik zur gezielten Vorauswahl relevanter Faktoren aus der Gesamtheit potenzieller Systemparameter - mit dem Ziel, deren signifikanter Einfluss auf die Lebensdauer zu untersuchen;
-    \item die Auswahl geeigneter Strategien und passender Testpläne zur statistisch abgesicherten Quantifizierung von Einflüssen auf die Lebensdauer, in Kombination mit konventionellen Zuverlässigkeitsmethoden wie \acs{ALT};
+    \item eine effiziente Methodik zur gezielten Vorauswahl relevanter Faktoren aus der Gesamtheit potenzieller Systemparameter - mit dem Ziel, deren signifikanten Einfluss auf die Lebensdauer zu untersuchen;
+    \item die Auswahl geeigneter Strategien und passender Testpläne zur statistisch abgesicherten Quantifizierung von Einflüssen auf die Lebensdauer, in Kombination mit konventionellen Zuverlässigkeitsmethoden wie beispielsweise \acs{ALT};
     \item eine präzise Parameterschätzung zur mathematischen Beschreibung der Effekte auf Basis der als signifikant identifizierten Einflussgrößen;
-    \item die Bilanzierung geeigneter Testpläne im Vergleich zu etablierten Standardplänen, insbesondere hinsichtlich potenzieller Abweichungen bei nicht-normalverteilten Daten.
+    \item die Bilanzierung geeigneter Testpläne im Vergleich zu etablierten, in der Literatur bereits umfangreich diskutierten Versuchsplänen, insbesondere hinsichtlich potenzieller Abweichungen bei nicht-normalverteilten Daten.
 \end{itemize}
 
-\section{Aufbau der Arbeit}
-Zur Orientierung soll eine makroskopische Beschreibung zum Aufbau der Arbeit dienen, welcher \colorbox{yellow}{Abb. 1} zu entnehmen ist.
+\section{Aufbau der Arbeit} \label{sec:aufbau}
+Der allgemeine inhaltliche Aufbau der vorliegenden Arbeit kann \colorbox{yellow}{Abb. 1} entnommen werden.
+So folgt auf die in diesem Abschnitt beschrieben Problemstellung sowie Ausführung über den generellen Beitrag der Arbeit weiter in Kapitel~\ref{chap:stand} der relevante Stand aus aktueller Forschung und Literatur.
+Kapitel~\ref{chap:ansatz} fasst schließlich den Forschungsbedarf zusammen und stellt das Ziel der Arbeit, aus der sich die relevanten Forschungsfragen ergeben, konkret heraus.
+Kapitel~\ref{chap:screening} beinhaltet die Vorstellung zu effizienten, qualitativen Screeningmethoden.
+Hier werden die herausgearbeiteten Vorschläge zu einer Auswahl an heuristischen Methoden für die Selektion der perspektivisch wenig relevanten Faktoren für die Umsetzung in der experimentellen statistischen Datenerhebung beschrieben.
+Weiter werden in Kapitel~\ref{chap:entwurf} darauf die Rahmenbedingungen für die zur statistischen Versuchsplanung neu herausgearbeiteten Versuchsplankonfigurationen für effiziente Lebensdauertests abgeglichen und schließlich bewertet.
+Als Ergebnis sind neben neuen, effizienten Versuchsplänen auch die relevanten Merkmale beschrieben, die es bedarf, um Versuchspläne im Kontext von Lebensdauertests zu bewerten. \colorbox{yellow}{Kapitel~\ref{chap:casestudy}}.
+Abschließend stellt Kapitel~\ref{chap:fazit} eine Zusammenfassung über die methodische Herangehensweise und die erreichten Ergebnisse der Arbeit zusammen und ordnet diese für künftige Forschungsbestrebungen im Bereich der multivariaten Lebensdauer-Versuchsplanung ein.
 

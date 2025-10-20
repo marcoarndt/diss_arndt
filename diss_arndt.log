@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  13 JUN 2025 11:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  17 OCT 2025 12:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -41,9 +41,9 @@ Package: tocbasic 2024/10/24 v3.43 KOMA-Script package (handling toc-files)
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
 (tocbasic)             for `toc' on input line 137.
-Class scrbook Info: File `size14.clo' used to setup font sizes on input line 2716.
- (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/extsizes\size14.clo
-File: size14.clo 1999/11/11 v1.4a NON-Standard LaTeX file (size option)
+Class scrbook Info: File `scrsize12pt.clo' used to setup font sizes on input line 2716.
+ (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrsize12pt.clo
+File: scrsize12pt.clo 2024/10/24 v3.43 KOMA-Script font size class option (12pt)
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\typearea.sty
 Package: typearea 2024/10/24 v3.43 KOMA-Script package (type area)
 \ta@bcor=\skip50
@@ -52,31 +52,22 @@ Package: typearea 2024/10/24 v3.43 KOMA-Script package (type area)
 \ta@vblk=\skip52
 \ta@temp=\skip53
 \footheight=\skip54
-
-
-Package typearea Warning: DIV for 14.0pt and used papersize
-(typearea)                not defined!
-(typearea)                Using DIV=calc.
-
-
-Package typearea Info: DIV calculation for classic typearea. on input line 1802.
-
 Package typearea Info: These are the values describing the layout:
-(typearea)             DIV  = 16
+(typearea)             DIV  = 12
 (typearea)             BCOR = 17.07164pt
 (typearea)             \paperwidth      = 597.50793pt
-(typearea)              \textwidth      = 471.60449pt
-(typearea)              DIV departure   = 0%
-(typearea)              \evensidemargin = 0.28455pt
-(typearea)              \oddsidemargin  = -18.92108pt
+(typearea)              \textwidth      = 435.32722pt
+(typearea)              DIV departure   = -3%
+(typearea)              \evensidemargin = 24.46939pt
+(typearea)              \oddsidemargin  = -6.82866pt
 (typearea)             \paperheight     = 845.04694pt
-(typearea)              \textheight     = 643.0pt
-(typearea)              \topmargin      = -19.45456pt
-(typearea)              \headheight     = 21.25pt
-(typearea)              \headsep        = 25.5pt
-(typearea)              \topskip        = 14.0pt
-(typearea)              \footskip       = 59.5pt
-(typearea)              \baselineskip   = 17.0pt
+(typearea)              \textheight     = 606.5pt
+(typearea)              \topmargin      = -1.84941pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
 (typearea)              on input line 1802.
 )
 \c@part=\count197
@@ -1461,23 +1452,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 161.
+(Font)              scaled to size 12.50409pt on input line 161.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 161.
+(Font)              scaled to size 9.37807pt on input line 161.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 161.
+(Font)              scaled to size 7.29405pt on input line 161.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 161.
+(Font)              scaled to size 12.50409pt on input line 161.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 161.
+(Font)              scaled to size 9.37807pt on input line 161.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 161.
+(Font)              scaled to size 7.29405pt on input line 161.
 
 
 [1
@@ -1499,7 +1490,7 @@ chapter without number
 
 
 
-LaTeX Font Warning: Font shape `T1/qpl/m/sl' in size <14.4> not available
+LaTeX Font Warning: Font shape `T1/qpl/m/sl' in size <12> not available
 (Font)              Font shape `T1/qpl/m/it' tried instead on input line 177.
 
 [3]
@@ -1542,18 +1533,15 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 18.
 Package tocbasic Info: Using my definition of `\numberline' on input line 19.
 Package tocbasic Info: Using my definition of `\numberline' on input line 20.
 Package tocbasic Info: Using my definition of `\numberline' on input line 21.
-
-Underfull \vbox (badness 5985) has occurred while \output is active []
-
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
 
 
 [7
 
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 22.
-Package tocbasic Info: Using my definition of `\numberline' on input line 23.
-Package tocbasic Info: Using my definition of `\numberline' on input line 24.
 Package tocbasic Info: Using my definition of `\numberline' on input line 25.
 Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
@@ -1565,6 +1553,9 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 32.
 Package tocbasic Info: Using my definition of `\numberline' on input line 33.
 Package tocbasic Info: Using my definition of `\numberline' on input line 34.
 Package tocbasic Info: Using my definition of `\numberline' on input line 35.
+Package tocbasic Info: Using my definition of `\numberline' on input line 36.
+Package tocbasic Info: Using my definition of `\numberline' on input line 37.
+Package tocbasic Info: Using my definition of `\numberline' on input line 38.
 )
 \tf@toc=\write9
 \openout9 = `diss_arndt.toc'.
@@ -1629,18 +1620,15 @@ chapter 1.
 ]
 
 [2]
-
-[3]
-LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 33.
+LaTeX Font Info:    Trying to load font information for TS1+qpl on input line 35.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\ts1qpl.fd
 File: ts1qpl.fd 2009/09/25 v1.2 font definition file for TS1/qpl
-)) (chapters/chapter2_standdertechnik.tex
+)
 
-[4{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
+[3{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}]) (chapters/chapter2_standdertechnik.tex
+
+[4]
 chapter 2.
-
-LaTeX Warning: Citation 'colu92' on page 5 undefined on input line 7.
-
 ) (chapters/chapter3_ansatz.tex
 
 [5
@@ -1648,25 +1636,52 @@ LaTeX Warning: Citation 'colu92' on page 5 undefined on input line 7.
 
 ]
 
-[6]
-chapter 3.
-) (chapters/chapter4_screening.tex
-
-[7
+[6
 
 
 ]
+chapter 3.
+) (chapters/chapter4_screening.tex
+
+[7]
 
 [8
 
 
 ]
 chapter 4.
-) (chapters/chapter5_entwurf.tex) (chapters/chapter6_casestudy.tex) (chapters/chapter7_zusammenfassung.tex)
+) (chapters/chapter5_entwurf.tex
 
 [9]
 
 [10
+
+
+]
+chapter 5.
+) (chapters/chapter6_casestudy.tex
+
+[11]
+
+[12
+
+
+]
+chapter 6.
+) (chapters/chapter7_zusammenfassung.tex
+
+[13]
+
+[14
+
+
+]
+chapter 7.
+)
+
+[15]
+
+[16
 
 
 ]
@@ -1676,43 +1691,21 @@ LaTeX Font Info:    Trying to load font information for T1+DejaVuSansMono-TLF on
 File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono-TLF.
 )
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 12.24008pt on input line 228.
+(Font)              scaled to size 10.20007pt on input line 228.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `DejaVuSansMono-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-[11{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
-Overfull \hbox (10.03845pt too wide) in paragraph at lines 228--228
-\T1/qpl/m/it/14.4 (-10) in Sta^^?ti^^?stics \T1/qpl/m/n/14.4 (-10) 40.9 (2011), S. 1573^^U1590. \T1/qpl/m/sc/14.4/50ls (-10) doi\T1/qpl/m/n/14.4 (-10) : [][]$\T1/DejaVuSansMono-TLF/m/n/14.4 10 . 1080 / 03610921003637421$[][]\T1/qpl/m/n/14.4 (-10) . 
- []
-
-
-
-[12]
-
-[13]
-
-[14]
-
-[15]
-Overfull \hbox (24.23816pt too wide) in paragraph at lines 228--228
-\T1/qpl/m/n/14.4 (-10) nee-ring sys-tems. Cam-bridge, Mass.: MIT Press, 2012. \T1/qpl/m/sc/14.4/50ls (-10) isbn\T1/qpl/m/n/14.4 (-10) : 9780262301428.
- []
-
-
-
-[16]
-
-[17]
-Overfull \hbox (26.88617pt too wide) in paragraph at lines 228--228
-[]\T1/qpl/m/n/14.4 (-10) B. Klein. \T1/qpl/m/it/14.4 (-10) Ver^^?suchs^^?pla^^?nung - DoE: Ein^^?füh^^?rung in die Ta^^?gu^^?chi/Shainin-Methodik\T1/qpl/m/n/14.4 (-10) .
- []
-
-
+[17{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
 
 [18]
+Overfull \hbox (6.01952pt too wide) in paragraph at lines 228--228
+\T1/qpl/m/it/12 (-10) with SAS\T1/qpl/m/n/12 (-10) . 1st. New York: Ox-ford Uni-ver-si-ty Press Inc, 2007. \T1/qpl/m/sc/12/50ls (-10) isbn\T1/qpl/m/n/12 (-10) : 9780199296590. 
+ []
+
+
 
 [19]
 
@@ -1721,51 +1714,50 @@ Overfull \hbox (26.88617pt too wide) in paragraph at lines 228--228
 [21]
 
 [22]
-Overfull \hbox (17.7001pt too wide) in paragraph at lines 228--228
-\T1/qpl/m/sc/14.4/50ls (-10) isbn\T1/qpl/m/n/14.4 (-10) : 9780471715290. \T1/qpl/m/sc/14.4/50ls (-10) url\T1/qpl/m/n/14.4 (-10) : [][]$\T1/DejaVuSansMono-TLF/m/n/14.4 http : / / www . loc . gov / catdir / enhancements /
+
+[23]
+
+[24]
+
+[25]
+Overfull \hbox (8.53879pt too wide) in paragraph at lines 228--228
+\T1/qpl/m/it/12 (-10) dern, zahl^^?rei^^?chen Bei^^?spie^^?len und 92 Auf^^?ga^^?ben\T1/qpl/m/n/12 (-10) . 3., ak-tua-li-sier-te Auf-la-ge. Mathematik-
  []
 
 
 
-[23]
+[26]
 
-[24
+[27]
+
+[28
 
 
 ]
 
-[25] (diss_arndt.aux)
+[29] (diss_arndt.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `diss_arndt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                diss_arndt
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 \openout1 = `diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 65157 strings out of 473577
- 1564014 string characters out of 5716318
- 2760300 words of memory out of 5000000
- 87059 multiletter control sequences out of 15000+600000
- 624488 words of font info for 170 fonts, out of 8000000 for 9000
+ 65177 strings out of 473577
+ 1563998 string characters out of 5716318
+ 2761983 words of memory out of 5000000
+ 87079 multiletter control sequences out of 15000+600000
+ 623847 words of font info for 165 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,19n,121p,10947b,3026s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on diss_arndt.pdf (39 pages, 376725 bytes).
+Output written on diss_arndt.pdf (43 pages, 381865 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 178 named destinations out of 1000 (max. 500000)
- 37765 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 672 PDF objects out of 1000 (max. 8388607)
+ 185 named destinations out of 1000 (max. 500000)
+ 37789 words of extra memory for PDF output out of 42996 (max. 10000000)
 
