@@ -4,22 +4,72 @@
 
 \chapter{Stand der Forschung und Technik} \label{chap:stand}
 
-Dieses Kapitel stellt die für diese Arbeit erforderlichen technischen und methodischen Grundlagen bereit. Zunächst werden zentrale Begriffe und Konzepte der Zuverlässigkeitstechnik (Abschnitt~\ref{subsec:begriffezUV}) sowie grundlegende statistische Verfahren zur Lebensdauer-Datenanalyse in Kombination mit Versuchsplänen erläutert.
-Darauf aufbauend folgen die Einführung und die Einordnung von \acs{DoE} sowie multivariater Lebensdauermodellierung aus dem Stand der Technik und Forschung, die beide für die Entwicklung effizienter Lebensdauerversuchspläne maßgeblich sind.
-Dies umfasst insbesondere typische Versuchspläne im Kontext der Lebensdauererprobung sowie Metriken und Indikatoren zur Bewertung der Pläne.
+Dieses Kapitel stellt die für diese Arbeit erforderlichen technischen und methodischen Grundlagen bereit. Zunächst werde in Abschnitt~\ref{sec:zuv} zentrale Begriffe und Konzepte der Zuverlässigkeitstechnik sowie das grundlegende statistische Verfahren zur Lebensdauer-Datenanalyse in Kombination mit Versuchsplänen erläutert.
+Darauf aufbauend folgen in Abschnitt~\ref{sec:doe} die Einführung und die Einordnung von \acs{DoE} sowie der multivariaten Lebensdauermodellierung aus dem Stand der Technik und der Wissenschaft, die beide für die Entwicklung effizienter Lebensdauerversuchspläne maßgeblich sind.
+Im Kontext der Lebensdauererprobung umfasst dies insbesondere typische, statistische Versuchspläne sowie Metriken und Indikatoren zur allgemeinen Bewertung der Versuchspläne.
 
 \section{Zuverlässigkeitstechnik und Wahrscheinlichkeitstheorie} \label{sec:zuv}
+Die Zuverlässigkeitstechnik befasst sich mit der probabilistischen Beschreibung der Lebensdauer technischer Produkte und Systeme.
+Ziel ist die statistische Modellierung des Ausfallverhaltens unter Berücksichtigung der Funktionalität des Produkts unter relevanten Randbedingungen.
+Eine zentrale Aufgabe besteht somit in der statistischen Charakterisierung des Ausfallbegriffs mithilfe deskriptiver Statistik sowie in der Parametrisierung geeigneter Verteilungen zur Abbildung des Lebensdauerverhaltens.
+Die Modellierung kann - abhängig von den Randbedingungen - auf Basis \textit{einer einzelnen} Belastungsgröße oder \textit{mehrerer} Beanspruchungsparameter erfolgen, die gemeinsam den Produktausfall determinieren.
+Ein grundlegendes Verständnis des Umgangs mit zufallsverteilten Lebensdauerereignissen ist daher eine elementare Voraussetzung für die statistische Versuchsplanung im Rahmen der Zuverlässigkeitstechnik.
+Weiterführende Konzepte und vertiefte methodische Ansätze zur Zuverlässigkeitstechnik sowie zur statistischen Testplanung sind allen voran in der Standardliteratur von Bertsche und Dazer \cite{Bertsche.2022} dargelegt, an deren Vorgehensweise sich die nachfolgenden Ausführungen orientieren.
 
-\subsection{Begriffe und Definitionen} \label{subsec:begriffezUV}
+\subsection{Begriffe und Definitionen} \label{subsec:begriffezuv}
+Der \textbf{Ausfall} eines technischen Produkts bezeichnet den Zeitpunkt innerhalb seiner Lebensdauer, zu dem die geforderte Funktionalität unter definierten Umgebungs- und Randbedingungen nicht mehr erfüllt ist.
+Die \textbf{Ausfallzeit}, welche diese Zustandsänderung zeitlich definiert, wird im Allgemeinen als kontinuierliche Zufallsvariable $\sym{tau}>0$ aufgefasst.
+So ergibt sich die Wahrscheinlichkeit, dass ein Produkt im Zeitraum bis $\sym{t}$ einen Funktionsverlust erleidet, zu
+\begin{equation} \label{eq:probdef}
+    \sym{F}(\sym{t})=\sym{Pr}(\sym{tau}\leq \sym{t}).
+\end{equation}
+Diese Funktion beschreibt die \textbf{Ausfallwahrscheinlichkeit} $\sym{F}(\sym{t})$, während die \textbf{Zuverlässigkeit}
+\begin{equation} \label{eq:reldef}
+    \sym{R}(\sym{t})=\sym{Pr}(\sym{tau} > \sym{t}) = 1 - \sym{F}(\sym{t}) = \int_{-\infty}^{\sym{t}} \sym{f}(\sym{t}) \,d\sym{t} , \quad \sym{t} \geq 0.
+\end{equation}
+komplementär diejenige Wahrscheinlichkeit $\sym{R}(\sym{t}): \sym{RR}_{\geq 0} \rightarrow [0,1] \subset \sym{RR}$ quantifiziert, zu der das nicht reparierbare Produkt die realisierte Zeit $\sym{t}$ überlebt: also frei von Funktionsverlust bleibt und funktionsfähig ist \cite{Bertsche.2022,Birolini.2017,Meeker.2022,Yang.2007}.
+Damit ist die Zuverlässigkeit mathematisch als reellwertige, monoton fallende und stetige Funktion definiert.
+Die \textbf{Wahrscheinlichkeitsdichtefunktion} $\sym{f}(\sym{t})$ der Ausfallzeit beschreibt, wie sich die Wahrscheinlichkeiten der Ausfälle über der Zeit verteilen.
+Sie folgt der Ableitung der Verteilungsfunktion $F(\sym{t})$ und kann als Maß für die Ausfallintensität pro Zeiteinheit interpretiert werden:
+\begin{equation} \label{eq:pdfdef}
+    \sym{f}(\sym{t}) = \frac{d}{d\sym{t}}\sym{F}(\sym{t}) = \frac{d}{d\sym{t}}\sym{Pr}(\sym{tau} \leq \sym{t}), \quad \sym{t} \geq 0.
+\end{equation}
+Damit beschreibt $\sym{f}(\sym{t})$ die lokale Änderungsrate der Zuverlässigkeit - also, wie schnell die Wahrscheinlichkeit der Funktionserfüllung respektive der Lebensdauer ab- oder zunimmt.
 
-\subsection{Deskriptive Statistik für Lebensdauerdaten} \label{subsec.Stat}
 
-\subsection{Parameterschätzverfahren} \label{subsec.Schätzer}
+Mit Schätzung der entsprechenden Wahrscheinlichkeitsverteilung wird die Bestimmung wichtiger Zuverlässigkeitskennzahlen wie der Ausfallwahrscheinlichkeit oder einem Lebensdauerquantil ermöglicht.
 
-\section{Statistische Versuchsplanung und Modellbildung} \label{sec.DoE}
 
-\subsection{Grundbegriffe der statistischen Versuchsplanung} \label{subsec.BegriffeDoE}
 
-\subsection{Statistische Lebensdauer-Versuchspläne} \label{subsec.Pläne}
 
-\subsection{Statistische Modellbildung} \label{subsec.Model}
+Kumulative Verteilungsfunktion
+
+Die kumulative Verteilungsfunktion
+
+$ F(t) = \Pr(T \leq t)$
+$\sym{i}$
+
+liefert die Wahrscheinlichkeit, dass ein System bis zum Zeitpunkt $t$ ausfällt. Sie kann auch als Anteil der ausgefallenen Einheiten in einer Population interpretiert werden, sofern der zugrunde liegende Prozess stationär ist, d.h. $F(t)$ ist zeitinvariant.
+
+
+
+Wahrscheinlichkeitsdichtefunktion
+
+Die Wahrscheinlichkeitsdichtefunktion ergibt sich als Ableitung der cdf:
+
+$f(t) = \frac{dF(t)}{dt}$
+
+Sie beschreibt die Form der Ausfallverteilung über die Zeit und dient als kontinuierliches Analogon eines Histogramms der Ausfallhäufigkeiten. Die Fläche unter $f(t)$ bis $t$ entspricht der Aus
+
+
+\subsection{Deskriptive Statistik für Lebensdauerdaten} \label{subsec:stat}
+
+\subsection{Parameterschätzverfahren} \label{subsec:schätzer}
+
+\section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
+
+\subsection{Grundbegriffe der statistischen Versuchsplanung} \label{subsec:begriffedoe}
+
+\subsection{Statistische Lebensdauer-Versuchspläne} \label{subsec:pläne}
+
+\subsection{Statistische Modellbildung} \label{subsec:model}

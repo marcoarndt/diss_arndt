@@ -62,7 +62,11 @@
 			\AfterEndEnvironment{theglossary}{\end{multicols}}%
 }
 
+\newglossary*{indices}{Indizes}
+\newglossary*{formulas}{Formelverzeichnis}
 \makeglossaries
+
+
 
 %automatically label glossaries:
 \renewcommand*{\glossarypreamble}{%
@@ -75,4 +79,36 @@
 % \patchcmd\@gls@automake{\write18}{\DelayedShellEscape}{}{\fail}
 \patchcmd\@gls@automake{\write18}{\DelayedShellEscape}{}{}
 
+%%%%%%%%%%%%%%%%%%
+% ==========================================================
+% Neuer Stil: linelesssymbunitlong
+%   - keine Linien
+%   - bündige Spalten (wie bei Abkürzungen)
+% ==========================================================
+\newglossarystyle{linelesssymbunitlong}{%
+	\renewenvironment{theglossary}%
+	% --- Etwas schmalere erste Spalte und präziserer Abstand ---
+	{\begin{longtable}{@{}p{0.16\textwidth}@{\hspace{2.25cm}}p{0.74\textwidth}@{}}}%
+			{\end{longtable}}%
+
+	\renewcommand*{\glossaryheader}{}%
+
+	\ifglsnogroupskip
+		\renewcommand*{\glsgroupskip}{}%
+	\else
+		\renewcommand*{\glsgroupskip}{\\[0.5em]}%
+	\fi
+
+	\renewcommand*{\glossentry}[2]{%
+		\glsentryitem{##1}\glstarget{##1}{\textbf{\glossentryname{##1}}} &
+		\glossentrydesc{##1}\\[0.3em]%
+	}%
+
+	\renewcommand*{\subglossentry}[3]{%
+		\hspace{1em}\glsentryname{##2} &
+		\glossentrydesc{##2}\\[0.3em]%
+	}%
+}
+
+%%%%%%%%%%%%
 \makeatother
