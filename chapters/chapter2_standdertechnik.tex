@@ -1,7 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Kapitel 2 - Stand der Forschung und Technik %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter{Stand der Forschung und Technik} \label{chap:stand}
 
 Dieses Kapitel stellt die für diese Arbeit erforderlichen technischen und methodischen Grundlagen bereit. Zunächst werde in Abschnitt~\ref{sec:zuv} zentrale Begriffe und Konzepte der Zuverlässigkeitstechnik sowie das grundlegende statistische Verfahren zur Lebensdauer-Datenanalyse in Kombination mit Versuchsplänen erläutert.
@@ -34,32 +33,23 @@ Sie folgt der Ableitung der Verteilungsfunktion $F(\sym{t})$ und kann als Maß f
 \begin{equation} \label{eq:pdfdef}
     \sym{f}(\sym{t}) = \frac{d}{d\sym{t}}\sym{F}(\sym{t}) = \frac{d}{d\sym{t}}\sym{Pr}(\sym{tau} \leq \sym{t}), \quad \sym{t} \geq 0.
 \end{equation}
-Damit beschreibt $\sym{f}(\sym{t})$ die lokale Änderungsrate der Zuverlässigkeit - also, wie schnell die Wahrscheinlichkeit der Funktionserfüllung respektive der Lebensdauer ab- oder zunimmt.
+Damit beschreibt $\sym{f}(\sym{t})$ die lokale Änderungsrate der Zuverlässigkeit - also, wie schnell die Wahrscheinlichkeit der Funktionserfüllung respektive der Lebensdauer ab- bzw. zunimmt.
+Das \textbf{Quantil} $\symsub{t}{q}$ einer Lebensdauer definiert den Zeitpunkt, zu dem die kumulative Ausfallwahrscheinlichkeit $\sym{F}(\sym{t})$ mindestens den Anteil $\sym{q}$ (bzw. das \textbf{Perzentil} in Prozentpunkten) erreicht:
+\begin{equation} \label{eq:quantildef}
+    \sym{F}(\symsub{t}{q}) = \sym{q}, \quad \sym{q} \in [0,1].
+\end{equation}
+Damit gibt das $\sym{q}$~-~Quantil denjenigen Lebensdauerwert an, unterhalb dessen der Anteil $\sym{q}$ aller betrachteten Produkte ausgefallen ist.
 
-
-Mit Schätzung der entsprechenden Wahrscheinlichkeitsverteilung wird die Bestimmung wichtiger Zuverlässigkeitskennzahlen wie der Ausfallwahrscheinlichkeit oder einem Lebensdauerquantil ermöglicht.
-
-
-
-
-Kumulative Verteilungsfunktion
-
-Die kumulative Verteilungsfunktion
-
-$ F(t) = \Pr(T \leq t)$
-$\sym{i}$
-
-liefert die Wahrscheinlichkeit, dass ein System bis zum Zeitpunkt $t$ ausfällt. Sie kann auch als Anteil der ausgefallenen Einheiten in einer Population interpretiert werden, sofern der zugrunde liegende Prozess stationär ist, d.h. $F(t)$ ist zeitinvariant.
+Ein spezieller und häufig verwendeter Fall ist der \textbf{Median}, also das Quantil zur Lebensdauer $\sym{t}_{0.5}$, bei dem die Eintrittswahrscheinlichkeit zu einem Ereignis bzw. die Ausfallwahrscheinlichkeit 50\,\% beträgt:
+\begin{equation} \label{eq:mediandef}
+    \sym{F}(\sym{t}_{0.5}) = 0.5.
+\end{equation}
+Der Median beschreibt somit den Zeitpunkt, zu dem die Hälfte aller Produkte ausgefallen ist.
+Er stellt eine robuste, lagebezogene Kenngröße der zentralen Tendenz dar, da er - im Gegensatz zum \textbf{arithmetischen Mittelwert} - gegenüber Ausreißern und schiefen Verteilungen unempfindlich ist und auf der Verteilungsfunktion und nicht auf der Dichte basiert.
+Während der Mittelwert hingegen sensitiv gegenüber Ausreißern ist, erfassen \textbf{Varianz} und \textbf{Standardabweichung} lediglich die Streuung der Zufallsvariablen um den Erwartungswert.
 
 
 
-Wahrscheinlichkeitsdichtefunktion
-
-Die Wahrscheinlichkeitsdichtefunktion ergibt sich als Ableitung der cdf:
-
-$f(t) = \frac{dF(t)}{dt}$
-
-Sie beschreibt die Form der Ausfallverteilung über die Zeit und dient als kontinuierliches Analogon eines Histogramms der Ausfallhäufigkeiten. Die Fläche unter $f(t)$ bis $t$ entspricht der Aus
 
 
 \subsection{Deskriptive Statistik für Lebensdauerdaten} \label{subsec:stat}
