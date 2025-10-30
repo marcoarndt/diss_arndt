@@ -141,9 +141,14 @@ isbn=true]{biblatex}
 %%% 
 % Define acronyms (needs \input{settings/glossaries})
 %%%
+% Singular: \ac{cdf} Plural: \acp{cdf} 
+%%%
 \newacronym{DoE}{DoE}{Design of Experiments}
 \newacronym{ALT}{ALT}{Accelerated Lifetime Testing}
 \newacronym[plural=ECUs, longplural=Electronic Control Units]{ECU}{ECU}{Electronic Control Unit}
+\newacronym{EoL}{EoL}{End-of-Life}
+\newacronym[plural=cdfs, longplural=Cumulative Distribution Functions]{cdf}{\textit{cdf}}{Cumulative Distribution Function}
+\newacronym[plural=pdfs, longplural=Probability Density Functions]{pdf}{\textit{pdf}}{Probability Density Function}
 
 %%% 
 % Define Indices
@@ -163,6 +168,21 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={kontinuierliche Zufallsvariable}]{tau}{\ensuremath{\tau}}
 \glsxtrnewsymbol[type=formulas, description={Menge der reellen Zahlen}]{RR}{\ensuremath{\mathbb{R}}}
 \glsxtrnewsymbol[type=formulas, description={Wahrscheinlichkeit}, text={\ensuremath{\Pr}}]{Pr}{\ensuremath{\Pr}}
+\glsxtrnewsymbol[type=formulas, description={Ausfallrate}, text={\ensuremath{\lambda}}]{lambda}{\ensuremath{\lambda(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Messwert}, text={\ensuremath{x}}]{x}{\ensuremath{x}}
+\glsxtrnewsymbol[type=formulas, description={Arithmetischer Mittelwert (empirisch)}, text={\ensuremath{\bar{x}}}]{x_bar}{\ensuremath{\bar{x}}}
+\glsxtrnewsymbol[type=formulas, description={Empirische Varianz (von x)}, text={\ensuremath{s^2}}]{s_sq}{\ensuremath{s^2}}
+\glsxtrnewsymbol[type=formulas, description={Empirische Standardabweichung (von x)}, text={\ensuremath{s}}]{s}{\ensuremath{s}}
+\glsxtrnewsymbol[type=formulas, description={Stichprobenumfang}, text={\ensuremath{n}}]{n}{\ensuremath{n}}
+\glsxtrnewsymbol[type=formulas, description={Erwartungswert der Lebensdauer (theoretisch)}, text={\ensuremath{\mu}}]{mu}{\ensuremath{\mu}}
+\glsxtrnewsymbol[type=formulas, description={Varianz der Lebensdauer (theoretisch)}, text={\ensuremath{\sigma^2}}]{sigma_sq}{\ensuremath{\sigma^2}}
+\glsxtrnewsymbol[type=formulas, description={Erwartungswert}, text={\ensuremath{E}}]{E}{\ensuremath{E(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Weibull-Formparameter (Weibull-Modul)}, text={\ensuremath{b}}]{b}{\ensuremath{b}}
+\glsxtrnewsymbol[type=formulas, description={Charakteristische Lebensdauer (Skalenparameter)}, text={\ensuremath{T}}]{T}{\ensuremath{T}}
+\glsxtrnewsymbol[type=formulas, description={Gamma-Funktion}, text={\ensuremath{\Gamma}}]{Gamma}{\ensuremath{\Gamma(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Integrationsvariable (Gamma-Funktion)}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
+\glsxtrnewsymbol[type=formulas, description={Varianz-Operator}, text={\ensuremath{\text{Var}}}]{Var}{\ensuremath{\text{Var}[\cdot]}}
+\glsxtrnewsymbol[type=formulas, description={Weibull-Verteilung (Notation)}, text={\ensuremath{\mathcal{W}}}]{W}{\ensuremath{\mathcal{W}(\cdot, \cdot)}}
 
 
 %  Show page borders (useful for final checks)
