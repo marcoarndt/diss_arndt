@@ -5,21 +5,23 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=11.254in,
-height=7.131in,
-at={(1.888in,0.962in)},
+width=4.882in,
+height=2.451in,
+at={(0.819in,0.462in)},
 scale only axis,
 xmin=0,
 xmax=3,
 xlabel style={font=\color{mycolor1}},
 xlabel={$t$},
 ymin=0,
-ymax=1.48206919036772,
+ymax=1.4,
 ylabel style={font=\color{mycolor1}},
 ylabel={$f$},
 axis background/.style={fill=white},
-legend style={legend cell align=left, align=left},
-legend style={font=\small}
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25},
+legend style={legend cell align=left, align=left}
 ]
 \addplot [color=black, dotted, line width=1.5pt]
   table[row sep=crcr]{%
