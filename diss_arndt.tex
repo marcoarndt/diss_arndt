@@ -33,6 +33,16 @@ BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thic
 \usepackage{csquotes} % for bibliography and glossaries
 \usepackage{xpatch}
 
+% TikZ - Packages to include graphics
+  \usepackage{pgfplots}
+  \pgfplotsset{compat=newest}
+  %% the following commands are needed for some matlab2tikz features
+  \usetikzlibrary{plotmarks}
+  \usetikzlibrary{arrows.meta}
+  \usepgfplotslibrary{patchplots}
+  \usepackage{grffile}
+  \usepackage{amsmath}
+
 % Citation style. If your institute has specific requirements, configure here:
 \usepackage[style=numeric, % see https://www.overleaf.com/learn/latex/Biblatex_citation_styles for a list of predefined styles
 sorting=none,
