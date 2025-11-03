@@ -133,7 +133,7 @@ isbn=true]{biblatex}
 \author{Marco Arndt,~M.Sc.}
 \birthplace{Ravensburg}
 
-\examiner{Univ.-Prof.~Dr.-Ing.~Martin Dazer}
+\examiner{PD~Dr.-Ing.~Martin Dazer}
 \coexaminer{Univ.-Prof.~Dr.-Ing.~Mit~Berichter}
 \faculty{Konstruktions-, Produktions- und Fahrzeugtechnik} % Fak. 7
 \institute{Institut für Maschinenelemente}
@@ -155,24 +155,24 @@ isbn=true]{biblatex}
 %%%
 \newacronym{DoE}{DoE}{Design of Experiments}
 \newacronym{ALT}{ALT}{Accelerated Lifetime Testing}
+\newacronym{OLS}{OLS}{Ordinary Least Squares}
+\newacronym{MMR}{MMR}{Median-Rank-Regression-Methode}
+\newacronym[plural=MLEs, longplural=Electronic Control Units]{MLE}{MLE}{Maximum-Likelihood-Estimation/-Estimates}
 \newacronym[plural=ECUs, longplural=Electronic Control Units]{ECU}{ECU}{Electronic Control Unit}
 \newacronym{EoL}{EoL}{End-of-Life}
 \newacronym[plural=cdfs, longplural=Cumulative Distribution Functions]{cdf}{\textit{cdf}}{Cumulative Distribution Function}
 \newacronym[plural=pdfs, longplural=Probability Density Functions]{pdf}{\textit{pdf}}{Probability Density Function}
 
-%%% 
-% Define Indices
+
 %%%
 % Indices - use in text: \sym{i}, also needs \input{settings/glossaries}
 \newglossaryentry{i}{type=indices, name={\ensuremath{i}}, description={Laufvariable}}
 \newglossaryentry{0}{type=indices, name={\ensuremath{0}}, description={zum Zeitpunkt $\sym{t}=0$}}
 \newglossaryentry{q}{type=indices, name={\ensuremath{q}}, description={Quantilwert}}
 
-%%% 
-% Define Glossary
 %%%
 % Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
-\glsxtrnewsymbol[type=formulas, description={Kovarianz des Messrauschens des Kalmanfilters}]{R}{\ensuremath{R}}
+\glsxtrnewsymbol[type=formulas, description={Zuverlässigkeit}]{R}{\ensuremath{R}}
 \glsxtrnewsymbol[type=formulas, description={Zeit, Lebensdauermerkmal}]{t}{\ensuremath{t}}
 \glsxtrnewsymbol[type=formulas, description={Dichtefunktion}, text={\ensuremath{f}}]{f}{\ensuremath{f(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Ausfallwahrscheinlichkeit, Verteilungsfunktion}, text={\ensuremath{F}}]{F}{\ensuremath{F(\cdot)}}
@@ -194,6 +194,19 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Integrationsvariable (Gamma-Funktion)}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Operator}, text={\ensuremath{\text{Var}}}]{Var}{\ensuremath{\text{Var}[\cdot]}}
 \glsxtrnewsymbol[type=formulas, description={Weibull-Verteilung (Notation)}, text={\ensuremath{\mathcal{W}}}]{W}{\ensuremath{\mathcal{W}(\cdot, \cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Likelihood-Funktion}, text={\ensuremath{\mathcal{L}}}]{L_like}{\ensuremath{\mathcal{L}(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Log-Likelihood-Funktion}, text={\ensuremath{\Lambda}}]{Lambda}{\ensuremath{\mathcal{\Lambda}(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Vektor der Modellparameter}, text={\ensuremath{\theta}}]{theta}{\ensuremath{\theta}}
+
+\glsxtrnewsymbol[type=formulas, description={Anzahl der Modellparameter}, text={\ensuremath{k}}]{k}{\ensuremath{k}}
+
+\glsxtrnewsymbol[type=formulas, description={Statusindikator (1=Ausfall, 0=Zensiert)}, text={\ensuremath{\delta}}]{delta}{\ensuremath{\delta}}
+
+% \glsxtrnewsymbol[type=formulas,
+%     description={Vektor der geschätzten Modellparameter (MLE-Schätzer)},
+%     text={\ensuremath{\hat{\Theta}}}
+% ]{Theta_hat}{\ensuremath{\hat{\Theta}}}
+
 
 
 %  Show page borders (useful for final checks)
@@ -217,21 +230,21 @@ Thanks for your service.
 \addchap{Kurzfassung/Abstract}
 
 \todo{
-	\begin{itemize}
-		\item
-		\item Bilder prüfen
-		\item "mark changes after your Oral presentation for review"
-		\item "textcolor blue" in definitions ändern
-		\item "Print" Funktion aktivieren
-		\item "nocite" Funktion deaktivieren in main Z.269
-	\end{itemize}
+    \begin{itemize}
+        \item
+        \item Bilder prüfen
+        \item "mark changes after your Oral presentation for review"
+        \item "textcolor blue" in definitions ändern
+        \item "Print" Funktion aktivieren
+        \item "nocite" Funktion deaktivieren in main Z.269
+    \end{itemize}
 }\
 
 
 \cleardoublepage
 \ifpdf
-	\phantomsection
-	\pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+    \phantomsection
+    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 

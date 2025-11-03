@@ -410,6 +410,93 @@
       \field{title}{Reliability {\&} life testing handbook}
       \field{year}{2002}
     \endentry
+    \entry{Montgomery.2021}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=bb9dadeef0e27beee51d152faff8ca96}{%
+           family={Peck},
+           familyi={P\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=788c3b54381fbc8ef27cdf46201acf93}{%
+           family={Vining},
+           familyi={V\bibinitperiod},
+           given={G.\bibnamedelimi Geoffrey},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, New Jersey}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{d5b92f1f1d7a32f637a9fa8267ad1bf4}
+      \strng{fullhash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{fullhashraw}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{bibnamehash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{authorbibnamehash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{authornamehash}{d5b92f1f1d7a32f637a9fa8267ad1bf4}
+      \strng{authorfullhash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{authorfullhashraw}{99eadd8af988e76081d9186d2fd2c617}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}In statistics, linear regression is a linear approach to modelling the relationship between a scalar response and one or more explanatory variables. A linear regression model attempts to explain the relationship between two or more variables using a straight line.{"}--}
+      \field{edition}{Sixth edition}
+      \field{isbn}{978-1-119-57872-7}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Introduction to linear regression analysis}
+      \field{year}{2021}
+    \endentry
+    \entry{Wu.2021}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=8f7b81c89f3e6d3d658748723f89ff1c}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Chien-Fu},
+           giveni={C\bibinithyphendelim F\bibinitperiod}}}%
+        {{hash=5ca9417a5ceabf98b7d814febe5a681a}{%
+           family={Hamada},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ, USA}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{fullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{fullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{bibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorbibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authornamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorfullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorfullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}This Third Edition covers design of experiments and integrates computer experiments with other design topics. The main changes in this Third Edition are two new chapters, one on computer experiments, the other on optimal design. Computer experiments have become very popular in experimental design because increasingly more and more experiments are conducted on a computer, such as running finite element simulations, instead of conducting physical experiments. This book starts each chapter with a real experiment. Then, the authors develop the needed tools in subsequent sections. Finally, the chapter ends with the application of these tools to the experiment. Each chapter includes exercises, and the authors have added new exercise problems with selected solutions to the Instructor's solutions manual. This is an ideal book for design of experiments courses at the upper-undergraduate and graduate levels. It is also a valuable resource for practicing engineers and statisticians. Design of experiments (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships. This information is needed to manage process inputs in order to optimize the output{"}--}
+      \field{edition}{Third edition}
+      \field{isbn}{9781119470106}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Experiments: Planning, analysis and optimization}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://zbmath.org/?q=an%3A1460.62003
+      \endverb
+      \verb{url}
+      \verb https://zbmath.org/?q=an%3A1460.62003
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
