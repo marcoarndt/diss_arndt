@@ -453,6 +453,47 @@
       \field{title}{Introduction to linear regression analysis}
       \field{year}{2021}
     \endentry
+    \entry{Nelson.1990}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=8fc1a2b86e1326c2fe08563c8a81c59b}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Wayne},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Newark}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons Incorporated}%
+      }
+      \strng{namehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{fullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{fullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{bibnamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorbibnamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authornamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorfullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorfullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Accelerated Testing Statistical Models, Test Plans, and Data Analyses -- Contents -- Preface -- 1. Introduction and Background -- 1. Survey of Methodology and Applications -- 2. Types of Data -- 3. Types of Acceleration and Stress Loading -- 4. Engineering Considerations -- 5. Common Accelerated Tests -- 6. Statistical Considerations -- Problems -- 2. Models for Life Tests with Constant Stress -- 1. Introduction -- 2. Basic Concepts and the Exponential Distribution -- 3. Normal Distribution -- 4. Lognormal Distribution -- 5. Weibull Distribution -- 6. Extreme Value Distribution -- 7. Other Distributions -- 8. Life-Stress Relationships -- 9. Arrhenius Life-Temperature Relationship -- 10. Inverse Power Relationship -- 11. Endurance (Fatigue) Limit Relationships and Distributions -- 12. Other Single Stress Relationships -- 13. Multivariable Relationships -- 14. Spread in Log Life Depends on Stress -- Problems -- 3. Graphical Data Analysis -- 1. Introduction -- 2. Complete Data and Arrhenius-Lognormal Model -- 3. Complete Data and Power-Weibull Model -- 4. Singly Censored Data -- 5. Multiply Censored Data -- 6. Interval (Read-out) Data -- Problems -- 4. Complete Data and Least Squares Analyses -- 1. Introduction -- 2. Least-Squares Methods for Lognormal Life -- 3. Checks on the Linear-Lognormal Model and Data -- 4. Least-Squares Methods for Weibull and Exponential Life -- 5. Checks on the Linear-Weibull Model and Data -- 6. Multivariable Relationships -- Problems -- 5. Censored Data and Maximum Ukelihood Methods -- 1. Introduction to Maximum Likelihood -- 2. Fit the Simple Model to Right Censored Data -- 3. Assess the Simple Model and Right Censored Data -- 4. Other Models and Types of Data -- 5. Maximum Likelihood Calculations -- Problems -- 6. Test Plans -- 1. Plans for the Simple Model and Complete Data.}
+      \field{edition}{1st ed.}
+      \field{isbn}{978-0471697367}
+      \field{series}{Wiley Series in Probability and Statistics Series}
+      \field{title}{Accelerated Testing: Statistical Models, Test Plans, and Data Analysis}
+      \field{volume}{v.344}
+      \field{year}{1990}
+      \verb{urlraw}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=469757
+      \endverb
+      \verb{url}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=469757
+      \endverb
+    \endentry
     \entry{Wu.2021}{book}{}{}
       \name{author}{2}{}{%
         {{hash=8f7b81c89f3e6d3d658748723f89ff1c}{%
@@ -495,6 +536,149 @@
       \endverb
       \verb{url}
       \verb https://zbmath.org/?q=an%3A1460.62003
+      \endverb
+    \endentry
+    \entry{Nelson.2005}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=8fc1a2b86e1326c2fe08563c8a81c59b}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Wayne},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons Inc}%
+      }
+      \strng{namehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{fullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{fullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{bibnamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorbibnamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authornamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorfullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorfullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{WILEY-INTERSCIENCE PAPERBACK SERIES The Wiley-Interscience Paperback Series consists of selected books that have been made more accessible to consumers in an effort to increase global appeal and general circulation. With these new unabridged softcover volumes, Wiley hopes to extend the lives of these works by making them available to future generations of statisticians, mathematicians, and scientists. {"}Many examples drawn from the author's experience of engineering applications are used to illustrate the theoretical results, which are presented in a cookbook fashion...it provides an excellent}
+      \field{isbn}{9780471644620}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Applied Life Data Analysis}
+      \field{volume}{v.577}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=226561
+      \endverb
+      \verb{url}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=226561
+      \endverb
+    \endentry
+    \entry{Qiao.1994}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2692c53aa5c359427b3082e09a2fbe6e}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Hongzhu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c404c6024b95c11c715ecdf8df8b9185}{%
+           family={Tsokos},
+           familyi={T\bibinitperiod},
+           given={Chris\bibnamedelima P.},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{fullhash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{fullhashraw}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{bibnamehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authorbibnamehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authornamehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authorfullhash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authorfullhashraw}{366c7df0b59760b6d5b451ecc4d94e03}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Newton---Raphson's method plays a fundamental role in the maximum likelihood estimation of the two parameters of the Weibull probability distribution. It is well known that the method depends on the initial point of the iterative process and the iteration does not always converge. In the present article, we introduce an effective iterative procedure for estimating the subject parameter. Our proposed method always converges and does not depend on the initial point of the iteration. It will also be shown by numerical examples that our method converges faster than the popular Newton---Raphson method.}
+      \field{issn}{0378-4754}
+      \field{journaltitle}{Mathematics and Computers in Simulation}
+      \field{number}{1}
+      \field{title}{Parameter estimation of the Weibull probability distribution}
+      \field{volume}{37}
+      \field{year}{1994}
+      \field{pages}{47\bibrangedash 55}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/0378-4754(94)90058-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0378475494900582
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0378475494900582
+      \endverb
+    \endentry
+    \entry{Kremer.2019b}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
+           family={Bertsche},
+           familyi={B\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=7ef18fd006079fa9792505ec995bec01}{%
+           family={Beer},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a39584d47f804edfd114dc151188882f}{%
+           family={Zio},
+           familyi={Z\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Europe}%
+        {Singapore}%
+      }
+      \list{publisher}{2}{%
+        {European Safety and Reliability Association}%
+        {Research Publishing Services}%
+      }
+      \strng{namehash}{24084f1a715650339527050d213206f7}
+      \strng{fullhash}{24084f1a715650339527050d213206f7}
+      \strng{fullhashraw}{24084f1a715650339527050d213206f7}
+      \strng{bibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorbibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authornamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhashraw}{24084f1a715650339527050d213206f7}
+      \strng{editorbibnamehash}{e398fadf316c6698a920a5613e8fb9e9}
+      \strng{editornamehash}{e398fadf316c6698a920a5613e8fb9e9}
+      \strng{editorfullhash}{e398fadf316c6698a920a5613e8fb9e9}
+      \strng{editorfullhashraw}{e398fadf316c6698a920a5613e8fb9e9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 29th European Safety and Reliability Conference (ESREL)}
+      \field{isbn}{978-981-11-2724-3}
+      \field{title}{A New Approach for Parametrizing Multidimensional Lifetime Models}
+      \field{year}{2019}
+      \field{pages}{715\bibrangedash 722}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.3850/978-981-11-2724-3{\textunderscore }0443-cd
       \endverb
     \endentry
   \enddatalist

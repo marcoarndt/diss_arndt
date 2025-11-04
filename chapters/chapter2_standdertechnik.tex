@@ -8,7 +8,7 @@ Darauf aufbauend folgen in Abschnitt~\ref{sec:doe} die Einführung und die Einor
 Im Kontext der Lebensdauererprobung umfasst dies insbesondere typische, statistische Versuchspläne sowie Metriken und Indikatoren zur allgemeinen Bewertung der Versuchspläne.
 
 \section{Zuverlässigkeitstechnik und Wahrscheinlichkeitstheorie} \label{sec:zuv}
-Die Zuverlässigkeitstechnik befasst sich mit der probabilistischen Beschreibung der Lebensdauer technischer Produkte und Systeme.
+Die Zuverlässigkeitstechnik befasst sich mit der probabilistischen Beschreibung der Lebensdauer technischer Produkte und Systeme sowie der strategischen sowie statistischen Planung von Lebensdauertests.
 Ziel ist die statistische Modellierung des Ausfallverhaltens unter Berücksichtigung der Funktionalität des Produkts bei relevanten Randbedingungen.
 Eine zentrale Aufgabe besteht somit in der statistischen Charakterisierung des Ausfallbegriffs mithilfe deskriptiver Statistik sowie in der Parametrisierung geeigneter Verteilungen zur Abbildung des Lebensdauerverhaltens.
 Die Modellierung kann - abhängig von den Randbedingungen - auf Basis \textit{einer einzelnen} Belastungsgröße oder \textit{mehrerer} Beanspruchungsparameter erfolgen, die gemeinsam den Produktausfall determinieren.
@@ -97,9 +97,10 @@ Während die deskriptiven Statistiken $\sym{x_bar}$ und $\sym{s_sq}$ die zentral
 Um eine prädiktive, mathematische Beschreibung des stochastischen Ausfallverhaltens zu erhalten, müssen die in Abschnitt~\ref{subsec:begriffezuv} definierten Lebensdauerfunktionen durch geeignete parametrische Verteilungsmodelle approximiert werden.
 Diese Verteilungsmodelle bieten eine geschlossene mathematische Form für \ac{cdf} und \ac{pdf} und ermöglichen es, das komplexe Ausfallverhalten durch eine geringe Anzahl von Parametern zu charakterisieren.\
 
+\subsubsection{Weibull-Verteilung} \label{subsubsec:weibull}
 In der Zuverlässigkeitstechnik hat sich hierfür die \textbf{Weibull-Verteilung} aufgrund ihrer hohen Flexibilität als das am häufigsten verwendete Modell etabliert.
 Je nach zugrundeliegendem physikalischem Ausfallmechanismus finden jedoch auch andere statistische Verteilungen Anwendung, wie beispielsweise die \textbf{Lognormal-Verteilung} (häufig bei Ermüdungs-, Korrosions- oder Diffusionsprozessen), die \textbf{Exponentialverteilung} (zur Modellierung von Zufallsausfällen ohne Alterungseffekte) oder die \textbf{Beta-Verteilung} (allgemein zur formenreichen Modellierung von $\sym{R}$ über dem festen Intervall $[0,1]$).
-Für weitere Ausführungen dazu sei an dieser Stelle jedoch auf bereits ausreichend diskutierte Werke \cite{Bertsche.2022,Yang.2007,Birolini.2017,Hedderich.2020} verwiesen.
+Für weitere Ausführungen dazu sei an dieser Stelle jedoch auf bereits ausreichend diskutierte Beiträge in beispielsweise  \cite{Bertsche.2022,Yang.2007,Birolini.2017,Hedderich.2020} verwiesen.
 
 Die (zwei-parametrige) Weibull-Verteilung ist das Standardmodell zur Beschreibung der Lebensdauer von technischen Produkten ohne die Berücksichtigung einer ausfallfreien Zeit \symsub{t}{0}.
 Sie wird durch den \textbf{Formparameter}  $\sym{b} > 0$ (Weibull-Modul) und die \textbf{charakteristische Lebensdauer} $\sym{T} > 0$ (Skalenparameter), welche dem $63,2$-ten Perzentil $\sym{t}_{0,632}$ entspricht, beschrieben.
@@ -145,16 +146,16 @@ Für $\sym{b}=3,6$ wird die Schiefe der \ac{pdf} annähernd eliminiert, sodass s
 \end{figure}
 
 \subsection{Parameterschätzverfahren} \label{subsec:schätzer}
-Wird das im vorherigen Abschnitten~\ref{subsec:stat} definierte parametrische Verteilungsmodell $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ gewählt, resultiert eine geschlossene mathematische Beschreibung des stochastischen Ausfallverhaltens eines Produktes.
+Soll eine geschlossene mathematische Beschreibung des stochastischen Ausfallverhaltens eines Produktes gefunden werden, ist das im vorherigen Abschnitten~\ref{subsec:stat} definierte parametrische Verteilungsmodell $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ zu identifizieren.
 Die Modellparameter der Grundgesamtheit sind in der praktischen Anwendung jedoch unbekannt.
-Die zentrale Problemstellung der \textbf{Parameterschätzung} besteht somit darin, aus einer empirischen Stichprobe - bestehend aus $\sym{n}$ Realisierungen $\sym{t}_{1}, \dots, \symsub{t}{n}$ der Zufallsvariable $\sym{tau}$ - statistisch fundierte Schätzwerte $\hat{\sym{T}}$ und $\hat{\sym{b}}$ für die wahren, unbekannten Parameter zu gewinnen.
-So sind $\hat{\sym{T}}$ und $\hat{\sym{b}}$ die Voraussetzung, um das Lebensdauermodell (z.B. Gleichung~\eqref{eq:weibull_cdf}) zu quantifizieren und prädiktive Aussagen zu Quantilen oder der Zuverlässigkeit $\sym{R}(\sym{t})$, zu ermöglichen.
-Eine wesentliche Komplikation bei der Parameterschätzung für Lebensdauerdaten, welche die Anwendung statistischer Standardverfahren modifiziert, ist das häufige Auftreten von unvollständigen bzw. \textbf{zensierten Daten}.
-Während für die Schätzung von Verteilungsparametern einfache Verfahren, wie die Methode der kleinsten Quadrate - engl. \ac{OLS}, die beispielsweise bei der \ac{MMR} im Wahrscheinlichkeitsnetz Anwendung findet, oder die \textbf{Momentenmethode }existieren, sind diese für die Analyse von Lebensdauerdaten in der Regel unzureichend \cite{Bertsche.2022,Montgomery.2021}.
-Dies begründet sich primär in zwei Aspekten: Erstens können diese Verfahren nicht oder nur unter signifikanten Modifikationen der Zensierungen, bei denen der exakte \ac{EoL}-Zeitpunkt unbekannt ist.
-Zweitens sind sie nicht für die \textbf{multivariate Lebensdauermodellbildung} (vgl. Abschnitt~\ref{sec:doe}) ausgelegt, bei der die Lebensdauer $\sym{tau}$ als Funktion \textit{mehrerer} Belastungsparameter modelliert wird.
-Das universell anwendbare und robusteste Verfahren, das diese beiden Herausforderungen - zensierte Daten und multivariate Modelle - inhärent behandelt, ist die \ac{MLE} \cite{Bertsche.2022,Meeker.2022,Yang.2007}.
-Das Grundprinzip der \ac{MLE} besteht darin, diejenigen Parameter (z.B. $\hat{\sym{T}}, \hat{\sym{b}}$) als Schätzwerte auszuwählen, welche die Wahrscheinlichkeit (engl. Likelihood) maximieren, die empirisch beobachtete Stichprobe (bestehend aus Ausfällen und Zensierungen) zu erhalten.
+Die zentrale Problemstellung der \textbf{Parameterschätzung} besteht somit darin, aus einer empirischen Stichprobe - bestehend aus $\sym{n}$ Realisierungen $\sym{t}_{1}, \dots, \symsub{t}{n}$ der Zufallsvariable $\sym{tau}$ - statistisch fundierte Schätzwerte $\hat{\sym{T}}$ und $\hat{\sym{b}}$ zu gewinnen.
+Diese sind Voraussetzung, um das Lebensdauermodell (z.B. Gleichung~\eqref{eq:weibull_cdf}) zu quantifizieren und prädiktive Aussagen zu Quantilen oder der Zuverlässigkeit $\sym{R}(\sym{t})$ zu ermöglichen.
+Eine wesentliche Komplikation hierbei sind jedoch das mögliche Auftreten von unvollständigen bzw. \textbf{zensierten} Daten sowie \textit{multivariate} Abhängigkeiten der Belastungen zur Messgröße.
+Während für die Schätzung von Verteilungsparametern einfache Verfahren, wie die Methode der kleinsten Quadrate - engl. \ac{OLS}, die beispielsweise bei der \ac{MMR} im Wahrscheinlichkeitsnetz Anwendung findet, oder die \textbf{Momentenmethode }existieren, sind diese für die umfassende Analyse vielschichtiger Lebensdauerdaten in der Regel unzureichend und hier nur der Vollständigkeit wegen erwähnt - vgl. weiter ~\cite{Bertsche.2022,Montgomery.2021}.
+Das universell anwendbare und robusteste Verfahren, das diese beiden Herausforderungen - zensierte Daten und multivariate Modelle - inhärent behandelt, ist die \ac{MLE} \cite{Bertsche.2022,Meeker.2022,Nelson.1990}.
+
+\subsubsection{Maximum-Likelihood-Estimation} \label{subsubsec:mle}
+Das Grundprinzip der \ac{MLE} besteht darin, diejenigen Parameterwerte (z.B. $\hat{\sym{T}}, \hat{\sym{b}}$) als Schätzwerte auszuwählen, welche die Wahrscheinlichkeit (engl. Likelihood) maximieren, die empirisch beobachtete Stichprobe (bestehend aus Ausfällen und Zensierungen) zu erhalten.
 Mathematisch wird die Wahrscheinlichkeit der Realisierungen $\sym{t}_{1}, \dots, \symsub{t}{n}$ einer Stichprobe durch die \textbf{Likelihood-Funktion} $\sym{L_like}$ bestimmt. Diese ist eine Funktion des unbekannten Parametervektors $\sym{theta}$, der $\sym{k}$ zu schätzende Parameter enthält (z.B. $\sym{theta} = (\sym{T}, \sym{b})$ mit $\sym{k}=2$).
 Für den vereinfachten Fall, dass die Stichprobe ausschließlich aus $\sym{n}$ exakten Ausfallereignissen (vollständige Daten) besteht, ist die Likelihood-Funktion $\sym{L_like}$ das Produkt der einzelnen Wahrscheinlichkeitsdichten $\sym{f}(\cdot)$:
 \begin{equation} \label{eq:mle_likelihood_simple}
@@ -164,20 +165,32 @@ Zur Vereinfachung der numerischen Berechnung wird in der Anwendung die \textbf{L
 \begin{equation} \label{eq:mle_loglikelihood_simple}
     \sym{Lambda}(\sym{t}_{1}, \dots, \symsub{t}{n} | \sym{theta}) = \ln\left( \sym{L_like}(\sym{theta}) \right) = \sum_{\sym{i}=1}^{\sym{n}} \ln \left[ \sym{f}(\symsub{t}{i} | \sym{theta}) \right].
 \end{equation}
-Wie zuvor dargelegt, ist dieser vereinfachte Ansatz für Lebensdauerdaten jedoch oft unzureichend, da er das Auftreten von zensierten Daten ignoriert. Für die praktische Anwendung muss die Likelihood-Funktion daher erweitert werden, um die unterschiedlichen Beobachtungsarten zu differenzieren.
-Dazu wird die Stichprobe als Paare $\symsub{t}{i}, \symsub{delta}{i}$ für $\sym{i}=1, \dots, \sym{n}$ definiert, wobei $\symsub{t}{i}$ die beobachtete Zeit und $\symsub{delta}{i}$ ein Statusindikator ist: ($\symsub{delta}{i})=1$ für einen exakten Ausfall (\ac{EoL}); $\symsub{delta}{i})=0$ für eine Rechts-Zensierung \cite{Bertsche.2022, Meeker.2022,Wu.2021,Yang.2007}.
+Wie zuvor dargelegt, ist dieser vereinfachte Ansatz für Lebensdauerdaten jedoch oft unzureichend, da er das Auftreten von zensierten Daten vernachlässigt.
+Für die praktische Anwendung existiert jedoch die entsprechende Erweiterung der Likelihood-Funktion um die Differenzierung etwaiger Testausgänge.
+Dazu wird die Stichprobe als Paare $\symsub{t}{i}, \symsub{delta}{i}$ für $\sym{i}=1, \dots, \sym{n}$ definiert, wobei $\symsub{t}{i}$ die beobachtete Zeit und $\symsub{delta}{i}$ ein Statusindikator ($\symsub{delta}{i}=1$ für einen exakten Ausfall; ($\symsub{delta}{i}=0)$ für eine Rechts-Zensierung) ist \cite{Bertsche.2022, Meeker.2022,Wu.2021,Yang.2007}.
 $\sym{L_like}$ für rechts-zensierte Lebensdauerdaten lautet somit:
 \begin{equation} \label{eq:mle_likelihood_censored}
-    \sym{L_like}(\symsub{t}{i} | \sym{theta}) = \prod_{\sym{i}=1}^{\sym{n}} \left[ \sym{f}(\symsub{t}{i} | \sym{theta})^{\symsub{delta}{i})} \cdot \sym{R}(\symsub{t}{i} | \sym{theta})^{1 - \symsub{delta}{i})} \right].
+    \sym{L_like}(\symsub{t}{i} | \sym{theta}) = \prod_{\sym{i}=1}^{\sym{n}} \left[ \sym{f}(\symsub{t}{i} | \sym{theta})^{\symsub{delta}{i})} \cdot \sym{R}(\symsub{t}{i} | \sym{theta})^{1 - \symsub{delta}{i})} \right]
 \end{equation}
-und definiert:
+und definiert die Log-Likelihood Funktion:
 \begin{equation} \label{eq:mle_loglikelihood_censored}
     \sym{Lambda}(\symsub{t}{i} | \sym{theta}) = \ln\left(\sym{L_like}(\symsub{t}{i} | \sym{theta})\right) = \sum_{\sym{i}=1}^{\sym{n}} \left[ \symsub{delta}{i}) \cdot \ln \sym{f}(\symsub{t}{i} | \sym{theta}) + (1 - \symsub{delta}{i})) \cdot \ln \sym{R}(\symsub{t}{i} | \sym{theta}) \right].
 \end{equation}
-Der Vektor $\hat{\sym{theta}}$, der den Wert von $\sym{Lambda}(\sym{theta})$ maximiert (typischerweise durch numerische Optimierungsalgorithmen), liefert die Maximum-Likelihood-Schätzwerte für die unbekannten Parameter.
+Der Parameter-Vektor $\hat{\sym{theta}}$, der den Wert von $\sym{Lambda}(\sym{theta})$ maximiert - typischerweise durch numerische Optimierungsalgorithmen, vgl. Netwon-Raphson-Verfahren, Patternsearch und weitere \cite{Yang.2007,Nelson.2005,Qiao.1994,Kremer.2019b} -  liefert die \ac{MLE}-Werte der unbekannten Parameter.
+
+Die Qualität der Parameterschätzung beeinflusst darauffolgend nicht nur die Prädiktionsgüte zur Schätzung der Lebensdauer oder Zuverlässigkeit - sie bedingt schließlich auch die Effizienz des Schätzverfahrens.
+Wird im Sinne eines effizienten Verfahrens zur multivariaten Lebensdauermodellbildung eine Methodik gesucht, ist auch die Qualität der Parameterschätzung damit entscheidend.
+Vertrauensbereiche, oder engl. \acp{CI}, sind hier also entscheidend.
+
+\subsubsection{Vertrauensbereiche}
+
+\begin{itemize}
+    \item \colorbox{yellow}{lawless}
+    \item \colorbox{yellow}{nelson (p251)}
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Dieser Abschnitt ist entscheidend und muss die Basis für Ihre späteren Kapitel "Lebensdauermodellbildung" und "Statistische Versuchsplanung" legen.1. Einleitung & Problemstellung:Ziel: Schätzung der Verteilungsparameter (z.B. $\sym{T}, \sym{b}$) aus einer Stichprobe $\sym{x}_{1}, \dots, \symsub{x}{n}$.2. Die Realität von Lebensdauerdaten: Zensierung (Censoring)Dies ist der wichtigste Punkt, den Sie vor den Methoden einführen müssen. Die Schätzverfahren sind fundamental von der Zensierung abhängig.Rechts-Zensierung (Right-Censoring): Definieren Sie den häufigsten Fall. Ein Prüfling ist bis Zeit $\sym{t}_i$ gelaufen, aber noch nicht ausgefallen (Versuchsabbruch, Konkurrenzausfall).Erwähnen Sie (ggf. Zitate) die Zensierungs-Typen (Typ-I: Zeit-Zensierung; Typ-II: Ausfall-Zensierung).Konsequenz: Die Stichprobe besteht nicht nur aus Ausfällen, sondern aus einer Mischung von exakten Ausfallzeiten und zensierten "Überlebenszeiten".3. Methode 1: Die Maximum-Likelihood-Methode (MLE)Dies ist der Gold-Standard für die Parameterschätzung (wie Sie korrekt anmerkten).Likelihood-Funktion $L$: Definieren Sie das Prinzip (Wahrscheinlichkeit, die gegebene Stichprobe zu beobachten, als Funktion der Parameter).Likelihood-Funktion mit Zensierung (Kritisch):Der Beitrag eines Ausfalls zur Likelihood ist die \ac{pdf}: $\sym{f}(\sym{t}_i | \sym{T}, \sym{b})$.Der Beitrag eines zensierten (überlebenden) Datensatzes ist die Zuverlässigkeit: $\sym{R}(\sym{t}_i | \sym{T}, \sym{b})$.Die Gesamt-Likelihood $L$ ist das Produkt dieser Terme.Log-Likelihood-Funktion $\ln L$: Erwähnen Sie, dass stattdessen die (einfachere) Log-Likelihood-Funktion maximiert wird (Summe statt Produkt).Erwähnen Sie, dass die Maximierung (Auffinden der partiellen Ableitungen $\partial \ln L / \partial \sym{b} = 0$ etc.) i.d.R. numerisch erfolgt (z.B. Newton-Raphson-Algorithmus).4. Methode 2: Rang-Regressions-Verfahren (RR) (Regression on Y)Dies ist die numerische Umsetzung des oben genannten Weibull-Netzes.Erklären Sie den Prozess: 1) Daten sortieren. 2) "Plotting Positions" (Schätzungen für $\sym{F}(\sym{t}_i)$, z.B. Benard's Approximation) zuweisen, die auch Zensierung berücksichtigen (z.B. Kaplan-Meier-Schätzer). 3) Lineare Regression (Methode der kleinsten Quadrate, OLS) auf die transformierten Daten ( $Y$ und $X$ von oben) anwenden, um $\sym{b}$ und $\sym{T}$ zu bestimmen.Bezug: Dies ist die häufigste Methode für die grafische Darstellung im "Weibull-Netz".5. Der entscheidende Link zur Versuchsplanung (Effizienz)Hier bedienen Sie Ihre späteren Kapitel (Constraint 2).Frage: Wie "gut" oder "effizient" sind die Schätzungen $\hat{\sym{T}}$ und $\hat{\sym{b}}$?Antwort: Präzision. Diese wird über die Konfidenzintervalle (Confidence Intervals) der Parameter quantifiziert.Konfidenzintervalle (CI): Erklären Sie, dass CIs die Unsicherheit der Schätzung angeben (z.B. $95 \%$-CI).Herkunft der CIs (Der Link): Die CIs werden aus der (asymptotischen) Varianz-Kovarianz-Matrix der geschätzten Parameter $\text{Cov}(\hat{\sym{T}}, \hat{\sym{b}})$ berechnet.Fisher-Informationsmatrix (FIM), $\mathcal{I}$: Führen Sie diesen Begriff ein. Die Varianz-Kovarianz-Matrix ist die Inverse der (erwarteten) Fisher-Informationsmatrix ($[... ] = \mathcal{I}^{-1}$). Die FIM selbst wird aus den zweiten partiellen Ableitungen der Log-Likelihood-Funktion ($\ln L$) berechnet.Fazit für den Leser (Ausblick): Die Fisher-Informationsmatrix $\mathcal{I}$ ist das mathematische Maß für die Information, die ein Versuch liefert. Das Ziel "Effizienter Multivariater Lebensdauertests" (Ihr Titel!) ist es, einen Versuchsplan (DoE) zu finden, der diese Matrix (bzw. deren Determinante, $\det(\mathcal{I})$, "D-Optimalität") maximiert, um die Konfidenzintervalle (Unsicherheit) zu minimieren.
+% Dieser Abschnitt ist entscheidend und muss die Basis für Ihre späteren Kapitel "Lebensdauermodellbildung" und "Statistische Versuchsplanung" legen.1. EiDaten sortieren. 2) "Plotting Positions" (Schätzungen für $\sym{F}(\sym{t}_i)$, z.B. Benard's Approximation) zuweisen, die auch Zensierung berücksichtigen (z.B. Kaplan-Meier-Schätzer). 3) Lineare Regression (Methode der kleinsten Quadrate, OLS) auf die transformierten Daten ( $Y$ und $X$ von oben) anwenden, um $\sym{b}$ und $\sym{T}$ zu bestimmen.Bezug: Dies ist die häufigste Methode für die grafische Darstellung im "Weibull-Netz".5. Der entscheidende Link zur Versuchsplanung (Effizienz)Hier bedienen Sie Ihre späteren Kapitel (Constraint 2).Frage: Wie "gut" oder "effizient" sind die Schätzungen $\hat{\sym{T}}$ und $\hat{\sym{b}}$?Antwort: Präzision. Diese wird über die Konfidenzintervalle (Confidence Intervals) der Parameter quantifiziert.Konfidenzintervalle (CI): Erklären Sie, dass CIs die Unsicherheit der Schätzung angeben (z.B. $95 \%$-CI).Herkunft der CIs (Der Link): Die CIs werden aus der (asymptotischen) Varianz-Kovarianz-Matrix der geschätzten Parameter $\text{Cov}(\hat{\sym{T}}, \hat{\sym{b}})$ berechnet.Fisher-Informationsmatrix (FIM), $\mathcal{I}$: Führen Sie diesen Begriff ein. Die Varianz-Kovarianz-Matrix ist die Inverse der (erwarteten) Fisher-Informationsmatrix ($[... ] = \mathcal{I}^{-1}$). Die FIM selbst wird aus den zweiten partiellen Ableitungen der Log-Likelihood-Funktion ($\ln L$) berechnet.Fazit für den Leser (Ausblick): Die Fisher-Informationsmatrix $\mathcal{I}$ ist das mathematische Maß für die Information, die ein Versuch liefert. Das Ziel "Effizienter Multivariater Lebensdauertests" (Ihr Titel!) ist es, einen Versuchsplan (DoE) zu finden, der diese Matrix (bzw. deren Determinante, $\det(\mathcal{I})$, "D-Optimalität") maximiert, um die Konfidenzintervalle (Unsicherheit) zu minimieren.
 
 
 
@@ -190,6 +203,7 @@ Der Vektor $\hat{\sym{theta}}$, der den Wert von $\sym{Lambda}(\sym{theta})$ max
 \subsection{Statistische Modellbildung} \label{subsec:model}
 
 \begin{itemize}
-    \item wu
-    \item wütherich
+    \item \colorbox{yellow}{wu}
+    \item \colorbox{yellow}{wütherich}
+    \item \colorbox{yellow}{yang p282 erster abschnitt}
 \end{itemize}
