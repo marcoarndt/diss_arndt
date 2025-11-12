@@ -162,16 +162,17 @@ isbn=true]{biblatex}
 \newacronym{OLS}{OLS}{Ordinary Least Squares}
 \newacronym[plural=pdfs, longplural=Probability Density Functions]{pdf}{\textit{pdf}}{Probability Density Function}
 
-% --- Neue Indizes für Parametervektoren ---
-\newglossaryentry{j}{type=indices, name={\ensuremath{j}}, description={Laufvariable (Parameter-Index)}}
-\newglossaryentry{l}{type=indices, name={\ensuremath{l}}, description={Laufvariable (Parameter-Index)}}
 
-
-%%%
 % Indices - use in text: \sym{i}, also needs \input{settings/glossaries}
 \newglossaryentry{i}{type=indices, name={\ensuremath{i}}, description={Laufvariable}}
 \newglossaryentry{0}{type=indices, name={\ensuremath{0}}, description={zum Zeitpunkt $\sym{t}=0$}}
 \newglossaryentry{q}{type=indices, name={\ensuremath{q}}, description={Quantilwert}}
+\newglossaryentry{j}{type=indices, name={\ensuremath{j}}, description={Laufvariable}}
+\newglossaryentry{l}{type=indices, name={\ensuremath{l}}, description={Laufvariable}}
+\newglossaryentry{O}{type=indices, name={\ensuremath{O}}, description={Beobachtet (Observed)}}
+\newglossaryentry{u}{type=indices, name={\ensuremath{u}}, description={Untere Grenze des Vertrauensbereichs}}
+\newglossaryentry{o}{type=indices, name={\ensuremath{o}}, description={Obere Grenze des Vertrauensbereichs}}
+
 
 %%%
 % Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
@@ -199,45 +200,20 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={kontinuierliche Zufallsvariable}]{tau}{\ensuremath{\tau}}
 \glsxtrnewsymbol[type=formulas, description={Vektor der Modellparameter}, text={\ensuremath{\bm{\theta}}}]{theta}{\ensuremath{\bm{\theta}}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Operator}, text={\ensuremath{\mathrm{Var}}}]{Var}{\ensuremath{\mathrm{Var}[\cdot]}}
+\glsxtrnewsymbol[type=formulas, description={Covarianz-Operator}, text={\ensuremath{\mathrm{Cov}}}]{Cov}{\ensuremath{\mathrm{Cov}[\cdot]}}
 \glsxtrnewsymbol[type=formulas, description={Weibull-Verteilung (Notation)}, text={\ensuremath{\mathcal{W}}}]{W}{\ensuremath{\mathcal{W}(\cdot, \cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Messwert, Variable}, text={\ensuremath{x}}]{x}{\ensuremath{x}}
 \glsxtrnewsymbol[type=formulas, description={Arithmetischer Mittelwert (empirisch)}, text={\ensuremath{\bar{x}}}]{x_bar}{\ensuremath{\bar{x}}}
-\glsxtrnewsymbol[type=formulas, description={Integrationsvariable (Gamma-Funktion)}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
-
-\glsxtrnewsymbol[type=formulas,
-    description={Fisher-Informationsmatrix},
-    text={\ensuremath{\mathcal{I}}}
-]{FIM}{\ensuremath{\mathcal{I}}}
-
-\glsxtrnewsymbol[type=formulas,
-    description={Beobachtete Fisher-Informationsmatrix},
-    text={\ensuremath{\mathcal{I}_O}}
-]{FIM_O}{\ensuremath{\mathcal{I}_O}}
-
-\glsxtrnewsymbol[type=formulas,
-    description={Hessian-Matrix (der Log-Likelihood-Funktion)},
-    text={\ensuremath{\mathbf{H}}}
-]{H}{\ensuremath{\mathbf{H}}}
-
-\glsxtrnewsymbol[type=formulas,
-    description={Varianz-Kovarianz-Matrix (geschätzt)},
-    text={\ensuremath{\hat{\Sigma}}}
-]{Sigma_hat}{\ensuremath{\hat{\Sigma}}}
-
-\glsxtrnewsymbol[type=formulas,
-    description={Standardfehler (Standard Error)},
-    text={\ensuremath{\mathit{se}}}
-]{se}{\ensuremath{\mathit{se}}}
-
-\glsxtrnewsymbol[type=formulas,
-    description={Signifikanzniveau},
-    text={\ensuremath{\alpha}}
-]{alpha}{\ensuremath{\alpha}}
-
-% \glsxtrnewsymbol[type=formulas,
-%     description={Quantil der Standardnormalverteilung},
-%     text={\ensuremath{z}}
-% ]{z}{\ensuremath{z}}
+\glsxtrnewsymbol[type=formulas, description={Integrationsvariable (Gamma-Funktion)}, text={\ensuremath{\upsilon}}]{ups}{\ensuremath{\upsilon}}
+\glsxtrnewsymbol[type=formulas, description={Fisher-Informationsmatrix}, text={\ensuremath{\mathbf{F}}}]{FIM}{\ensuremath{\mathbf{F}}}
+\glsxtrnewsymbol[type=formulas, description={Hessian-Matrix (der Log-Likelihood-Funktion)}, text={\ensuremath{\mathbf{H}}}]{H}{\ensuremath{\mathbf{H}}}
+\glsxtrnewsymbol[type=formulas, description={Varianz-Kovarianz-Matrix}, text={\ensuremath{\mathbf{V}}}]{V}{\ensuremath{\mathbf{V}}}
+\glsxtrnewsymbol[type=formulas, description={Standardfehler (Standard Error)}, text={\ensuremath{\mathit{se}}}]{se}{\ensuremath{\mathit{se}}}
+\glsxtrnewsymbol[type=formulas, description={Signifikanzniveau}, text={\ensuremath{\alpha}}]{alpha}{\ensuremath{\alpha}}
+\glsxtrnewsymbol[type=formulas, description={Quantil der Standardnormalverteilung}, text={\ensuremath{q}}]{q_norm}{\ensuremath{q}}
+\glsxtrnewsymbol[type=formulas, description={Quantil der Standardnormalverteilung}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
+\glsxtrnewsymbol[type=formulas, description={Abgeleitete Funktion (für Delta-Methode)}, text={\ensuremath{g}}]{g_func}{\ensuremath{g(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Gradientenvektor der Funktion g}, text={\ensuremath{\mathbf{g}'}}]{g_grad}{\ensuremath{\mathbf{g}'}}
 
 
 %  Show page borders (useful for final checks)

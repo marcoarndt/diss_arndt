@@ -538,6 +538,48 @@
       \verb https://zbmath.org/?q=an%3A1460.62003
       \endverb
     \endentry
+    \entry{Kalbfleisch.2002}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=d14758bf8b584eaa358587db5a5f2774}{%
+           family={Kalbfleisch},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, N.J}%
+      }
+      \list{publisher}{1}{%
+        {J. Wiley}%
+      }
+      \strng{namehash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{fullhash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{fullhashraw}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{bibnamehash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{authorbibnamehash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{authornamehash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{authorfullhash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{authorfullhashraw}{d14758bf8b584eaa358587db5a5f2774}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Contains additional discussion and examples on left truncation as well as material on more general censoring and truncation patterns. Introduces the martingale and counting process formulation swil lbe in a new chapter. Develops multivariate failure time data in a separate chapter and extends the material on Markov and semi Markov formulations. Presents new examples and applications of data analysis Front Matter -- Introduction -- Failure Time Models -- Inference in Parametric Models and Related Topics -- Relative Risk (Cox) Regression Models -- Counting Processes and Asymptotic Theory -- Likelihood Construction and Further Results -- Rank Regression and the Accelerated Failure Time Model -- Competing Risks and Multistate Models -- Modeling and Analysis of Recurrent Event Data -- Analysis of Correlated Failure Time Data -- Additional Failure Time Data Topics -- Glossary of Notation -- Appendix A: Some Sets of Data -- Appendix B: Supporting Technical Material -- Bibliography -- Author Index -- Subject Index -- Wiley Series in Probability and Statistics. Failure time models --Inference in parametric models and related topics --Relative risk (Cox)regression models --Counting processes and asymptotic theory --Likelihood construction and further results --Rank regression and the accelerated failure time model --Competing risks and multi-state models --Modeling and analysis of recurrent event data --Analysis of correlated failure time data --Additional failure time data topics --Appendix A: Some sets of data --Appendix B: Some supporting technical material.}
+      \field{edition}{2nd ed.}
+      \field{isbn}{047136357X}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{The statistical analysis of failure time data}
+      \field{year}{2002}
+      \verb{doi}
+      \verb 10.1002/9781118032985
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781118032985
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781118032985
+      \endverb
+    \endentry
     \entry{Nelson.2005}{book}{}{}
       \name{author}{1}{}{%
         {{hash=8fc1a2b86e1326c2fe08563c8a81c59b}{%
@@ -667,6 +709,7 @@
       \strng{editornamehash}{e398fadf316c6698a920a5613e8fb9e9}
       \strng{editorfullhash}{e398fadf316c6698a920a5613e8fb9e9}
       \strng{editorfullhashraw}{e398fadf316c6698a920a5613e8fb9e9}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -743,6 +786,83 @@
       \range{pages}{15}
       \verb{doi}
       \verb 10.1109/94.485512
+      \endverb
+    \endentry
+    \entry{Kremer.2019c}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
+           family={Bertsche},
+           familyi={B\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{24084f1a715650339527050d213206f7}
+      \strng{fullhash}{24084f1a715650339527050d213206f7}
+      \strng{fullhashraw}{24084f1a715650339527050d213206f7}
+      \strng{bibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorbibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authornamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhashraw}{24084f1a715650339527050d213206f7}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 Annual Reliability and Maintainability Symposium (RAMS)}
+      \field{isbn}{978-1-5386-6554-1}
+      \field{title}{A Methodology for Consideration of Uncertainty in Lifetime Design of Experiments}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/RAMS.2019.8768906
+      \endverb
+    \endentry
+    \entry{Lawless.2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c8522a82bdbffcb9e6b888b265dd0d3}{%
+           family={Lawless},
+           familyi={L\bibinitperiod},
+           given={Jerald\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Interscience}%
+      }
+      \strng{namehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{fullhash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{fullhashraw}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{bibnamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authorbibnamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authornamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authorfullhash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authorfullhashraw}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed.}
+      \field{isbn}{0471372153}
+      \field{series}{Wiley series in probabilitiy and statistics}
+      \field{title}{Statistical models and methods for lifetime data}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/bios/wiley044/2002151805.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/bios/wiley044/2002151805.html
       \endverb
     \endentry
   \enddatalist
