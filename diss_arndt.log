@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  12 NOV 2025 01:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  15 NOV 2025 01:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1599,7 +1599,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 45.
 [8]
 chapter without number
 (diss_arndt.acr) (diss_arndt.indices-gls
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--21
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--22
  [] [] 
  []
 
@@ -1713,18 +1713,18 @@ Package pdftex.def Info: plots/ma_abb2.1_weibull.pdf  used on input line 144.
 
 [15]
 
-[16]) (chapters/chapter3_ansatz.tex
+[16]
 
-[17]
+[17]) (chapters/chapter3_ansatz.tex
 
-[18
-
-
-]
+[18]
 chapter 3.
 ) (chapters/chapter4_screening.tex
 
-[19]
+[19
+
+
+]
 
 [20
 
@@ -1785,12 +1785,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 [31]
 
-[32
+[32]
+
+[33]
+
+[34]
+
+[35
 
 
-]
-
-[33] (diss_arndt.aux)
+] (diss_arndt.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1802,17 +1806,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 67627 strings out of 473577
- 1600765 string characters out of 5716318
- 2805981 words of memory out of 5000000
- 89434 multiletter control sequences out of 15000+600000
- 646236 words of font info for 213 fonts, out of 8000000 for 9000
+ 67757 strings out of 473577
+ 1605776 string characters out of 5716318
+ 2807917 words of memory out of 5000000
+ 89528 multiletter control sequences out of 15000+600000
+ 646426 words of font info for 214 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,20n,121p,10947b,3026s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (49 pages, 703847 bytes).
+Output written on diss_arndt.pdf (51 pages, 737500 bytes).
 PDF statistics:
- 1349 PDF objects out of 1440 (max. 8388607)
- 205 named destinations out of 1000 (max. 500000)
+ 1483 PDF objects out of 1728 (max. 8388607)
+ 239 named destinations out of 1000 (max. 500000)
  46018 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -193,29 +193,32 @@ Vertrauensbereiche, oder engl. \acp{CI}, können eine Metrik für die Qualität 
 \subsubsection{Vertrauensbereiche} \label{subsubsec:ci}
 Die \ac{MLE} liefert nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern auch die Quantifizierung von deren statistischer Unsicherheit (Präzision).
 Obwohl verschiedene Ansätze, wie die numerisch anspruchsvolleren Berechnungen nach Likelihood-Ratio-Methode, Bootstrap-Perzentil-Methode oder Monte-Carlo-Approximation existieren, ist das gängigste Verfahren zur Berechnung von \acp{CI} die Approximation mittels asymptotischer Normalverteilung der \ac{MLE}-Schätzer $\hat{\sym{theta}}$ \cite{Bertsche.2022,Nelson.1990}.
-Dies erfolgt über die \textbf{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß Rechenaufwand und Qualität vergleichsweise effizient quantifiziert \cite{Kremer.2019c} und in gängigen Applikationen somit dem Standard entspricht \cite{Nelson.2005,Yang.2007}.
-In der praktischen Anwendung wird die Fisher-Informationsmatrix auf Basis der resultierenden Schätzwerte $\hat{\sym{theta}}$ so als Schätzung zur Beobachtung nach $\symsub{FIM}{O}$ verwendet \cite{Nelson.1990,Lawless.2003}.
+Dies erfolgt über die \textbf{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß Rechenaufwand und Qualität vergleichsweise effizient quantifiziert \cite{Kremer.2019c} und in gängigen Applikationen somit dem Standard entspricht \cite{Nelson.2005,Nelson.1990,Yang.2007}.
+In der praktischen Anwendung wird die Fisher-Informationsmatrix auf Basis der resultierenden Schätzwerte $\sym{theta}=\hat{\sym{theta}}$ so als Schätzung zur Beobachtung nach $\symsub{FIM}{O}$ verwendet \cite{Nelson.1990,Lawless.2003}.
 Diese ist definiert als die negative \textbf{Hesse-Matrix} $\sym{H}$ der Log-Likelihood-Funktion, ausgewertet an der Stelle der \ac{MLE}-Schätzwerte
 $\hat{\sym{theta}}$:
 \begin{equation} \label{eq:fim_o}
     \symsub{FIM}{O} \defeq - \sym{H}(\hat{\sym{theta}}) = - \left[ \frac{\partial^2 \sym{Lambda}(\sym{theta})}{\partial \symsub{theta}{j} \partial \symsub{theta}{l}} \right]_{\sym{theta} = \hat{\sym{theta}}}.
 \end{equation}
 Die Matrix $\sym{H}$ entspricht der ($\sym{k} \times \sym{k}$)-Matrix der $\sym{k}$ zweiten partiellen Ableitungen von $\sym{Lambda}$ (vgl. Gl.~\eqref{eq:mle_loglikelihood_censored}).
-Eine Invertierung $\symsub{FIM}{O}^{-1}$ liefert die geschätzte \textbf{Varianz-Kovarianz-Matrix} $\hat{\sym{V}}$:
+Eine Invertierung ${\hat{\sym{FIM}}_{\sym{O}}}^{-1}$ ergibt die geschätzte \textbf{Varianz-Kovarianz-Matrix} $\hat{\sym{V}}$:
 \begin{equation} \label{eq:var_covar}
-    \hat{\sym{V}} \approx \symsub{FIM}{O}^{-1}.
+    \hat{\sym{V}} \approx {\hat{\sym{FIM}}_{\sym{O}}}^{-1}.
 \end{equation}
-Die Diagonalelemente dieser Matrix, $\hat{\sym{V}}_{\sym{j}\sym{j}}$, entsprechen den Varianzen $\sym{Var}(\hat{\sym{theta}}_{\sym{j}})$ der einzelnen Parameterschätzer.
-Die Nicht-Diagonalelemente $\hat{\sym{V}}_{\sym{j}\sym{l}}$ (für $\sym{j} \neq \sym{l}$) repräsentieren die \textbf{Kovarianzen} $\sym{Cov}(\hat{\sym{theta}}_{\sym{j}}, \hat{\sym{theta}}_{\sym{l}})$.
-Diese Kovarianzen sind von entscheidender Bedeutung, da sie die statistische Abhängigkeit zwischen den Schätzwerten (z.B. zwischen $\hat{\sym{T}}$ und $\hat{\sym{b}}$) quantifizieren, welche für die Berechnung von \acp{CI} für abgeleitete Funktionen wie $\hat{\sym{R}}(\sym{t})$ erforderlich sind \cite{Meeker.2022}.
+Die Diagonalelemente dieser Matrix $\hat{\sym{V}}_{\sym{j}\sym{j}}$ entsprechen den Varianzen $\sym{Var}(\hat{\sym{theta}}_{\sym{j}})$ der einzelnen Parameterschätzwerte \cite{Nelson.1990}.
+Die Nicht-Diagonalelemente $\hat{\sym{V}}_{\sym{j}\sym{l}}$ (für $\sym{j} \neq \sym{l}$) repräsentieren die \textbf{Kovarianzen} $\sym{Cov}(\hat{\sym{theta}}_{\sym{j}}, \hat{\sym{theta}}_{\sym{l}})$ \cite{Nelson.1990,Yang.2007}.
+Diese Kovarianzen sind von entscheidender Bedeutung, da sie die statistische Abhängigkeit zwischen den Schätzwerten (z.B. zwischen $\hat{\sym{T}}$ und $\hat{\sym{b}}$) quantifizieren, welche für die Berechnung der \acp{CI} für abgeleitete Funktionen wie $\hat{\sym{R}}(\sym{t})$ erforderlich sind \cite{Meeker.2022}.
 Basierend auf der Annahme der asymptotischen Normalität der Schätzer wird ein zweiseitiges $(1-\sym{alpha})$-\ac{CI} für einen einzelnen Parameter $\hat{\sym{theta}}_{\sym{j}}$ direkt aus dessen Varianz approximiert durch:
 \begin{equation} \label{eq:ci_normal}
     [\sym{theta}_{\sym{j},\sym{u}},\sym{theta}_{\sym{j},\sym{o}}]  = \hat{\sym{theta}}_{\sym{j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{V}}_{\sym{j}\sym{j}}},
 \end{equation}
-wobei $\sym{z}_{1-\sym{alpha}/2}$ das $(1-\sym{alpha}/2)$-Quantil der Standardnormalverteilung ist.
-Da Lebensdauerparameter (z.B. $\sym{T}, \sym{b}$) oft auf $\sym{RR}_{>0}$ beschränkt sind, werden \acp{CI} robust über eine Log-Transformation der Parameter berechnet, um physikalisch unmögliche (negative) Intervallgrenzen zu vermeiden \cite{Meeker.2022,Yang.2007,Nelson.1990}.
+wobei $\sym{z}_{1-\sym{alpha}/2}$ dem $(1-\sym{alpha}/2)$-Quantil der Standardnormalverteilung entspricht.
+Da Lebensdauerparameter (z.B. $\sym{T}, \sym{b}$) oft auf $\sym{RR}_{>0}$ beschränkt sind, werden \acp{CI} robust über eine Log-Transformation der Parameter berechnet, um physikalisch unmögliche (negative) Intervallgrenzen zu vermeiden \cite{Meeker.2022,Yang.2007,Nelson.1990}:
+\begin{equation} \label{eq:ci_ln}
+    [\sym{theta}_{\sym{j},\sym{u}}, \sym{theta}_{\sym{j},\sym{o}}] = \hat{\sym{theta}}_{\sym{j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{j}\sym{j}}}}{\hat{\sym{theta}}_{\sym{j}}} \right).
+\end{equation}
 
-Die Berechnung dieser \acp{CI} für Schätzwerte $\sym{g_func}(\hat{\sym{theta}})$ zu Größen wie $\hat{\sym{R}}(\sym{t})$ oder $\hat{\sym{t}}_q$  erfolgt mittels \textbf{Delta-Methode} \cite{Meeker.2022,Nelson.1990}.
+Die Berechnung dieser \acp{CI} für Schätzwerte $\sym{g_func}(\hat{\sym{theta}})$ zu Größen wie $\hat{\sym{R}}(\sym{t})$ oder $\hat{\sym{t}}_{\sym{q}}$  erfolgt mittels \textbf{Delta-Methode} \cite{Nelson.1990,Meeker.2022}.
 Dieses auf einer Taylor-Reihenentwicklung basierende Verfahren (Gauß'sche Fehlerfortpflanzung) approximiert die Varianz der Funktion $\hat{\sym{g_func}}$ unter Einbeziehung der gesamten Varianz-Kovarianz-Matrix.
 Dazu wird der \textbf{Gradientenvektor} $\sym{g_grad}$ der Funktion $\sym{g_func}$ (z.B. $\sym{g_func} = \sym{R}(\sym{t})$) bezüglich des $\sym{k}$-dimensionalen Parametervektors $\sym{theta}$ gebildet:
 \begin{equation} \label{eq:delta_method_gradient}
@@ -225,19 +228,21 @@ Die approximierte Varianz $\sym{Var}(\hat{\sym{g_func}})$ der Funktion ergibt si
 \begin{equation} \label{eq:delta_method_variance}
     \sym{Var}(\hat{\sym{g_func}}) \approx \sym{g_grad}^T \hat{\sym{V}} \sym{g_grad}.
 \end{equation}
-Das Vertrauensintervall für die Funktion $\hat{\sym{g_func}}$ wird anschließend unter Verwendung dieser Varianz (bzw. des Standardfehlers $\sqrt{\sym{Var}(\hat{\sym{g_func}})}$) analog zu Gleichung~\eqref{eq:ci_normal} berechnet \cite{Meeker.2022,Yang.2007,Nelson.1990}:
+Das Vertrauensintervall für die Funktion $\hat{\sym{g_func}}$ wird anschließend unter Verwendung dieser Varianz (bzw. des Standardfehlers $\sqrt{\sym{Var}(\hat{\sym{g_func}})}$) analog zu Gleichung~\eqref{eq:ci_normal} berechnet \cite{Bain.2017b,Yang.2007,Nelson.1990}:
 \begin{equation} \label{eq:ci_rel}
     [\sym{g_func}_{\sym{u}},\sym{g_func}_{\sym{o}}]  = \hat{\sym{g_func}} \pm \sym{z}_{1-\sym{alpha}/2} \sqrt{\sym{Var}(\hat{\sym{g_func}})}.
 \end{equation}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Dieser Abschnitt ist entscheidend und muss die Basis für Ihre späteren Kapitel "Lebensdauermodellbildung" und "Statistische Versuchsplanung" legen.1. EiDaten sortieren. 2) "Plotting Positions" (Schätzungen für $\sym{F}(\sym{t}_i)$, z.B. Benard's Approximation) zuweisen, die auch Zensierung berücksichtigen (z.B. Kaplan-Meier-Schätzer). 3) Lineare Regression (Methode der kleinsten Quadrate, OLS) auf die transformierten Daten ( $Y$ und $X$ von oben) anwenden, um $\sym{b}$ und $\sym{T}$ zu bestimmen.Bezug: Dies ist die häufigste Methode für die grafische Darstellung im "Weibull-Netz".5. Der entscheidende Link zur Versuchsplanung (Effizienz)Hier bedienen Sie Ihre späteren Kapitel (Constraint 2).Frage: Wie "gut" oder "effizient" sind die Schätzungen $\hat{\sym{T}}$ und $\hat{\sym{b}}$?Antwort: Präzision. Diese wird über die Konfidenzintervalle (Confidence Intervals) der Parameter quantifiziert.Konfidenzintervalle (CI): Erklären Sie, dass CIs die Unsicherheit der Schätzung angeben (z.B. $95 \%$-CI).Herkunft der CIs (Der Link): Die CIs werden aus der (asymptotischen) Varianz-Kovarianz-Matrix der geschätzten Parameter $\text{Cov}(\hat{\sym{T}}, \hat{\sym{b}})$ berechnet.Fisher-Informationsmatrix (FIM), $\mathcal{I}$: Führen Sie diesen Begriff ein. Die Varianz-Kovarianz-Matrix ist die Inverse der (erwarteten) Fisher-Informationsmatrix ($[... ] = \mathcal{I}^{-1}$). Die FIM selbst wird aus den zweiten partiellen Ableitungen der Log-Likelihood-Funktion ($\ln L$) berechnet.Fazit für den Leser (Ausblick): Die Fisher-Informationsmatrix $\mathcal{I}$ ist das mathematische Maß für die Information, die ein Versuch liefert. Das Ziel "Effizienter Multivariater Lebensdauertests" (Ihr Titel!) ist es, einen Versuchsplan (DoE) zu finden, der diese Matrix (bzw. deren Determinante, $\det(\mathcal{I})$, "D-Optimalität") maximiert, um die Konfidenzintervalle (Unsicherheit) zu minimieren.
-
+Sollen auch hier nur positive Werte für $\sym{g_func}$ berücksichtigt werden, kann eine Logarithmierung in der Berechnung der Vertrauensbereiche analog zu Gl.~\ref{eq:ci_ln} erfolgen \cite{Yang.2007}.
 
 
 \section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
+Multivariate Lebensdauertests erfordern inhärent die Betrachtung mehrere $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter zur Erprobung gegenüber eine Zielgröße.
+Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) sowie der anschließenden Modellbildung.
+Da der bloße Aufbau eines Versuchsplans zudem genau die Qualität und Umfänge der Modellierung der Zielgröße bedingt, ist neben den fundamentalen Zusammenhängen auch deren Bewertungen relevant - insbesondere für Lebensdauerdaten.
+Daher beschäftigt sich der Inhalt dieses Kapitels mit einer gezielten Auswahl an Grundbegriffen und Metriken für multivariate Testpläne sowie einer Übersicht der für Lebensdauertests geeigneten Versuchspläne, bevor abschließend die statistische Modellbildung beleuchtet wird.
 
+
+\cite{RisbergEllekjr.1998, Bisgaard.1992,Bisgaard.2011}
 \subsection{Grundbegriffe der statistischen Versuchsplanung} \label{subsec:begriffedoe}
 
 \subsection{Statistische Lebensdauer-Versuchspläne} \label{subsec:pläne}
@@ -250,3 +255,4 @@ Das Vertrauensintervall für die Funktion $\hat{\sym{g_func}}$ wird anschließen
     \item \colorbox{yellow}{yang p282 erster abschnitt}
     \item \colorbox{yellow}{russell doe for glm kap1.4 p12}
 \end{itemize}
+\cite{RisbergEllekjr.1998, Bisgaard.1992,Bisgaard.2011,Myers.2016,Montgomery.2020,Zahran.2003,GiovannittiJensen.1989,Goos.2011,Hinkelmann.2012,Khuri.2006,Rittmaier.2025,Johnson.2011,Donev.2004,G.E.P.Box.1951,Ardakani.2011,Jones.2012,Jones.2021,Wu.2021,Khuri.2006,Escobar.1995,Modarres.2017,Ahn.2015,Rasch.2018,Xu.2002,Wald.1943,Rencher.2008,Box.2007,Kleppmann.2016,Siebertz.2017,Fisher.1935,Bisgaard.1997,Myers.2010}
