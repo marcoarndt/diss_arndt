@@ -4,7 +4,7 @@
 \chapter{Stand der Forschung und Technik} \label{chap:stand}
 
 Dieses Kapitel stellt die für diese Arbeit erforderlichen technischen und methodischen Grundlagen bereit. Zunächst werde in Abschnitt~\ref{sec:zuv} zentrale Begriffe und Konzepte der Zuverlässigkeitstechnik sowie das grundlegende statistische Verfahren zur Lebensdauer-Datenanalyse in Kombination mit Versuchsplänen erläutert.
-Darauf aufbauend folgen in Abschnitt~\ref{sec:doe} die Einführung und die Einordnung von \acs{DoE} sowie der multivariaten Lebensdauermodellierung aus dem Stand der Technik und der Wissenschaft, die beide für die Entwicklung effizienter Lebensdauerversuchspläne maßgeblich sind.
+Darauf aufbauend folgen in Abschnitt~\ref{sec:doe} die Einführung und die Einordnung von \acs{DoE} für Lebensdaueruntersuchungen sowie der multivariaten Lebensdauermodellierung aus dem Stand der Technik und der Wissenschaft, die beide für die Entwicklung effizienter Lebensdauerversuchspläne maßgeblich sind.
 Im Kontext der Lebensdauererprobung umfasst dies insbesondere typische, statistische Versuchspläne sowie Metriken und Indikatoren zur allgemeinen Bewertung der Versuchspläne.
 
 \section{Zuverlässigkeitstechnik und Wahrscheinlichkeitstheorie} \label{sec:zuv}
@@ -13,7 +13,7 @@ Ziel ist die statistische Modellierung des Ausfallverhaltens unter Berücksichti
 Eine zentrale Aufgabe besteht somit in der statistischen Charakterisierung des Ausfallbegriffs mithilfe deskriptiver Statistik sowie in der Parametrisierung geeigneter Verteilungen zur Abbildung des Lebensdauerverhaltens.
 Die Modellierung kann - abhängig von den Randbedingungen - auf Basis \textit{einer einzelnen} Belastungsgröße oder \textit{mehrerer} Beanspruchungsparameter erfolgen, die gemeinsam den Produktausfall determinieren.
 Ein grundlegendes Verständnis des Umgangs mit zufallsverteilten Lebensdauerereignissen ist daher eine elementare Voraussetzung für die statistische Versuchsplanung im Rahmen der Zuverlässigkeitstechnik.
-Weiterführende Konzepte und vertiefte methodische Ansätze zur Zuverlässigkeitstechnik sowie zur statistischen Testplanung sind allen voran in der Standardliteratur von Bertsche und Dazer \cite{Bertsche.2022} dargelegt, an deren Vorgehensweise sich die nachfolgenden Ausführungen orientieren.
+Weiterführende Konzepte und vertiefte methodische Ansätze zur Zuverlässigkeitstechnik sowie zur statistischen Testplanung sind allen voran in der Standardliteratur von \textcite{Bertsche.2022} dargelegt, an deren Vorgehensweise sich die nachfolgenden Ausführungen orientieren.
 
 \subsection{Begriffe und Definitionen} \label{subsec:begriffezuv}
 Der \textbf{Ausfall} eines technischen Produkts bezeichnet den Zeitpunkt innerhalb seiner Lebensdauer, zu dem die geforderte Funktionalität unter definierten Umgebungs- und Randbedingungen nicht mehr erfüllt ist - also das Lebensdauerende - engl. \textbf{\ac{EoL}}.
@@ -100,13 +100,13 @@ Diese Verteilungsmodelle bieten eine geschlossene mathematische Form für \ac{cd
 \subsubsection{Weibull-Verteilung} \label{subsubsec:weibull}
 In der Zuverlässigkeitstechnik hat sich die \textbf{Weibull-Verteilung} aufgrund ihrer hohen Flexibilität als das am häufigsten verwendete Modell etabliert.
 Je nach zugrundeliegendem physikalischen Ausfallmechanismus finden jedoch auch andere statistische Verteilungen Anwendung, wie beispielsweise die \textbf{Lognormal-Verteilung} (häufig bei Ermüdungs-, Korrosions- oder Diffusionsprozessen), die \textbf{Exponentialverteilung} (zur Modellierung von Zufallsausfällen ohne Alterungseffekte) oder die \textbf{Beta-Verteilung} (allgemein zur formenreichen Modellierung von $\sym{R}$ über dem festen Intervall $[0,1]$).
-Für weitere Ausführungen dazu sei an dieser Stelle jedoch auf bereits ausreichend diskutierte Beiträge in beispielsweise  \cite{Bertsche.2022,Yang.2007,Birolini.2017,Hedderich.2020} verwiesen.
+Für weitere Ausführungen dazu sei an dieser Stelle jedoch auf bereits ausreichend diskutierte Aufbereitungen von \textcite{Bertsche.2022,Birolini.2017,Yang.2007,Hedderich.2020} verwiesen.
 
 Die (zwei-parametrige) Weibull-Verteilung ist das Standardmodell zur Beschreibung der Lebensdauer von technischen Produkten ohne die Berücksichtigung eines möglichen dritten Parameters - der ausfallfreien Zeit \symsub{t}{0}.
 Sie wird durch den \textbf{Formparameter}  $\sym{b} > 0$ (Weibull-Modul) und die \textbf{charakteristische Lebensdauer} $\sym{T} > 0$ (Skalenparameter), welche dem $63,2$-ten Perzentil $\sym{t}_{0,632}$ entspricht, beschrieben.
 Unabhängig von $\sym{b}$ gilt hier: $\sym{F}(\sym{T})=1-e^{-1} \approx 63,2 \%$.
 Folgt die Lebensdauer-Zufallsvariable $\sym{tau}$ dieser Verteilung, wird dies mathematisch als $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ notiert.
-Damit ist sie in der Lage, alle drei Phasen der "Badewannenkurve" (Frühausfälle mit $\sym{b}<1$, Zufallsausfälle $\sym{b}\approx 1$, Verschleißausfälle mit $\sym{b}>1$) durch die Wahl ihrer Parametrisierung abzubilden, vgl. \cite{Bertsche.2022}.
+Damit ist sie in der Lage, alle drei Phasen der "Badewannenkurve" (Frühausfälle mit $\sym{b}<1$, Zufallsausfälle $\sym{b}\approx 1$, Verschleißausfälle mit $\sym{b}>1$) durch die Wahl ihrer Parametrisierung abzubilden, vgl. \textcite{Bertsche.2022}.
 
 Die Einheit des Skalenparameters $\sym{T}$ entspricht der Einheit des Messwertes ($\sym{t}$ in Stunden, Überrollungen, Kilometer, etc.).
 Die \ac{pdf} der Weibull-Verteilung ist damit definiert als:
@@ -153,7 +153,7 @@ Die zentrale Problemstellung der \textbf{Parameterschätzung} besteht somit dari
 Diese sind Voraussetzung, um das Lebensdauermodell (z.B. Gleichung~\eqref{eq:weibull_cdf}) zu quantifizieren und prädiktive Aussagen zu Quantilen oder der Zuverlässigkeit $\sym{R}(\sym{t})$ zu ermöglichen.
 Eine wesentliche Komplikation hierbei sind jedoch das mögliche Auftreten von unvollständigen bzw. \textbf{zensierten} Daten sowie \textit{multivariate} Abhängigkeiten der Belastungen zur Messgröße.
 Während für die Schätzung von Verteilungsparametern einfache Verfahren, wie die \textbf{Momentenmethode} oder die \textbf{Methode der kleinsten Fehlerquadrate} - engl. \ac{OLS}, die beispielsweise bei der \ac{MMR} im Wahrscheinlichkeitsnetz Anwendung findet, existieren, sind diese für die umfassende Analyse vielschichtiger Lebensdauerdaten in der Regel unzureichend und hier nur der Vollständigkeit wegen erwähnt - vgl. \cite{Bertsche.2022,Montgomery.2021}.
-Das universell anwendbare und robuste Verfahren, das Herausforderungen wie zensierte Daten und multivariate Modelle inhärent behandelt, ist die \ac{MLE} \cite{Bertsche.2022,Meeker.2022,Nelson.1990}.
+Das universell anwendbare und robuste Verfahren, das Herausforderungen wie zensierte Daten und multivariate Modelle inhärent behandelt, ist die \ac{MLE} \cite{Meeker.2022,Nelson.1990}.
 
 \subsubsection{Maximum-Likelihood-Estimation} \label{subsubsec:mle}
 Das Grundprinzip der \ac{MLE} besteht darin, diejenigen Parameterwerte (z.B. $\hat{\sym{T}}, \hat{\sym{b}}$) als Schätzwerte auszuwählen, welche die Wahrscheinlichkeit (engl. Likelihood) maximieren, die empirisch beobachtete Stichprobe (bestehend aus unabhängigen Ausfällen und Zensierungen) zu erhalten.
@@ -169,7 +169,7 @@ Zur Vereinfachung der numerischen Berechnung wird in der Anwendung die \textbf{L
 \end{equation}
 Wie zuvor dargelegt, ist dieser vereinfachte Ansatz für Lebensdauerdaten jedoch oft unzureichend, da er das Auftreten von zensierten Daten vernachlässigt.
 Für die praktische Anwendung existiert jedoch die entsprechende Erweiterung der Likelihood-Funktion um die Differenzierung etwaiger Testausgänge als \textit{Durchläufer}.
-Dazu wird die Stichprobe als Paarung von $\symsub{t}{i}, \symsub{delta}{i}$ für $\sym{t_vec}$ definiert, wobei $\symsub{t}{i}$ der beobachteten Zeit und $\symsub{delta}{i}$ einem Statusindikator ($\symsub{delta}{i}=1$ für einen exakten Ausfall; $\symsub{delta}{i}=0$ für eine Rechts-Zensierung) entspricht \cite{Bertsche.2022, Meeker.2022,Wu.2021,Kalbfleisch.2002,Rigdon.2022}.
+Dazu wird die Stichprobe als Paarung von $\symsub{t}{i}, \symsub{delta}{i}$ für $\sym{t_vec}$ definiert, wobei $\symsub{t}{i}$ der beobachteten Zeit und $\symsub{delta}{i}$ einem Statusindikator ($\symsub{delta}{i}=1$ für einen exakten Ausfall; $\symsub{delta}{i}=0$ für eine Rechts-Zensierung) entspricht \cite{Meeker.2022,Kalbfleisch.2002}.
 $\sym{L_like}$ für rechts-zensierte Lebensdauerdaten lautet somit:
 \begin{equation} \label{eq:mle_likelihood_censored}
     \sym{L_like}(\sym{t_vec} | \sym{theta}) = \prod_{\sym{i}=1}^{\sym{n}} \left[ \sym{f}(\symsub{t}{i} | \sym{theta})^{\symsub{delta}{i}} \cdot \sym{R}(\symsub{t}{i} | \sym{theta})^{1 - \symsub{delta}{i}} \right]
@@ -181,9 +181,9 @@ und definiert die Log-Likelihood Funktion als:
 
 Der Parametervektor $\hat{\sym{theta}}$, der den Wert von $\sym{Lambda}(\sym{theta})$ maximiert, liefert die \ac{MLE}-Werte.
 Die Schätzwerte repräsentieren die (asymptotisch) effizientesten Schätzwerte für die Parameter der Grundgesamtheit.
-Dies erfolgt mathematisch durch Nullsetzen $\sym{k}$ partieller Ableitungen von $\sym{Lambda}$, sofern mathematisch entsprechende Schätzwerte in geschlossener Form durch $\partial\sym{Lambda}/\partial \sym{theta} \stackrel{!}{=} 0$ identifiziert werden können \cite{Yang.2007,Nelson.2005,Rinne.2008,Meeker.2022}.
-Andernfalls werden numerische Optimierungsalgorithmen, vgl. Newton-Raphson-Verfahren, Patternsearch und vergleichbare dafür herangezogen, siehe weiterführend \cite{Nelson.2005,Qiao.1994,Kremer.2019b}.
-An dieser Stelle sei erwähnt, dass systematische Verzerrungen (engl. \textbf{Bias}) in $\hat{\sym{theta}}$ aufgrund kleiner Stichprobenumfänge auftreten können und korrigierbar sind, vgl. \cite{Yang.2007,Hirose.1999,Ross.1996}.
+Dies erfolgt mathematisch durch Nullsetzen $\sym{k}$ partieller Ableitungen von $\sym{Lambda}$, sofern mathematisch entsprechende Schätzwerte in geschlossener Form durch $\partial\sym{Lambda}/\partial \sym{theta} \stackrel{!}{=} 0$ identifiziert werden können \cite{Nelson.2005,Rinne.2008}.
+Andernfalls werden numerische Optimierungsalgorithmen, vgl. Newton-Raphson-Verfahren, Patternsearch und vergleichbare, dafür herangezogen - siehe weiterführend \cite{Nelson.2005,Qiao.1994} sowie detaillierte Untersuchungen von \textcite{Kremer.2019b}.
+An dieser Stelle sei erwähnt, dass systematische Verzerrungen (engl. \textbf{Bias}) in $\hat{\sym{theta}}$ aufgrund kleiner Stichprobenumfänge auftreten können \cite{Abernethy.2006} - jedoch auch korrigierbar sind, vgl. Arbeiten von \textcite{Hirose.1999,Ross.1996}.
 
 Die Qualität der Parameterschätzung beeinflusst daraus nicht nur die Prädiktionsgüte zur Schätzung der Lebensdauer oder Zuverlässigkeit - sie bedingt schließlich auch die Effizienz des Schätzverfahrens.
 Wird im Sinne eines effizienten Verfahrens zur multivariaten Lebensdauermodellbildung eine Methodik gesucht, ist auch die Qualität der Parameterschätzung damit entscheidend.
@@ -193,7 +193,8 @@ Vertrauensbereiche, oder engl. \acp{CI}, können eine Metrik für die Qualität 
 \subsubsection{Vertrauensbereiche} \label{subsubsec:ci}
 Die \ac{MLE} liefert nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern auch die Quantifizierung von deren statistischer Unsicherheit (Präzision).
 Obwohl verschiedene Ansätze, wie die numerisch anspruchsvolleren Berechnungen nach Likelihood-Ratio-Methode, Bootstrap-Perzentil-Methode oder Monte-Carlo-Approximation existieren, ist das gängigste Verfahren zur Berechnung von \acp{CI} die Approximation mittels asymptotischer Normalverteilung der \ac{MLE}-Schätzer $\hat{\sym{theta}}$ \cite{Bertsche.2022,Nelson.1990}.
-Dies erfolgt über die \textbf{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß Rechenaufwand und Qualität vergleichsweise effizient quantifiziert \cite{Kremer.2019c} und in gängigen Applikationen somit dem Standard entspricht \cite{Nelson.2005,Nelson.1990,Yang.2007}.
+Dies erfolgt über die \textbf{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß \textcite{Kremer.2019c}  bezüglich des Rechenaufwands und resultierender Modellqualität vergleichsweise effizient quantifiziert.
+So wird diese Methodik auch in gängiger Applikationen als Standard angewandt, vgl. \cite{Nelson.2005,Nelson.1990,Yang.2007}.
 In der praktischen Anwendung wird die Fisher-Informationsmatrix auf Basis der resultierenden Schätzwerte $\sym{theta}=\hat{\sym{theta}}$ so als Schätzung zur Beobachtung nach $\symsub{FIM}{O}$ verwendet \cite{Nelson.1990,Lawless.2003}.
 Diese ist definiert als die negative \textbf{Hesse-Matrix} $\sym{H}$ der Log-Likelihood-Funktion, ausgewertet an der Stelle der \ac{MLE}-Schätzwerte
 $\hat{\sym{theta}}$:
@@ -207,7 +208,7 @@ Eine Invertierung ${\hat{\sym{FIM}}_{\sym{O}}}^{-1}$ ergibt die geschätzte \tex
 \end{equation}
 Die Diagonalelemente dieser Matrix $\hat{\sym{V}}_{\sym{j}\sym{j}}$ entsprechen den Varianzen $\sym{Var}(\hat{\sym{theta}}_{\sym{j}})$ der einzelnen Parameterschätzwerte \cite{Nelson.1990}.
 Die Nicht-Diagonalelemente $\hat{\sym{V}}_{\sym{j}\sym{l}}$ (für $\sym{j} \neq \sym{l}$) repräsentieren die \textbf{Kovarianzen} $\sym{Cov}(\hat{\sym{theta}}_{\sym{j}}, \hat{\sym{theta}}_{\sym{l}})$ \cite{Nelson.1990,Yang.2007}.
-Diese Kovarianzen sind von entscheidender Bedeutung, da sie die statistische Abhängigkeit zwischen den Schätzwerten (z.B. zwischen $\hat{\sym{T}}$ und $\hat{\sym{b}}$) quantifizieren, welche für die Berechnung der \acp{CI} für abgeleitete Funktionen wie $\hat{\sym{R}}(\sym{t})$ erforderlich sind \cite{Meeker.2022}.
+Diese Kovarianzen sind von entscheidender Bedeutung, da sie die statistische Abhängigkeit zwischen den Schätzwerten (z.B. zwischen $\hat{\sym{T}}$ und $\hat{\sym{b}}$) quantifizieren, welche für die Berechnung der \acp{CI} von abgeleiteten Funktionen wie $\hat{\sym{R}}(\sym{t})$ erforderlich sind \cite{Meeker.2022}.
 Basierend auf der Annahme der asymptotischen Normalität der Schätzer wird ein zweiseitiges $(1-\sym{alpha})$-\ac{CI} für einen einzelnen Parameter $\hat{\sym{theta}}_{\sym{j}}$ direkt aus dessen Varianz approximiert durch:
 \begin{equation} \label{eq:ci_normal}
     [\sym{theta}_{\sym{j},\sym{u}},\sym{theta}_{\sym{j},\sym{o}}]  = \hat{\sym{theta}}_{\sym{j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{V}}_{\sym{j}\sym{j}}},
@@ -238,12 +239,17 @@ Sollen auch hier nur positive Werte für $\sym{g_func}$ berücksichtigt werden, 
 \section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
 Multivariate Lebensdauertests erfordern definitionsgemäß die Betrachtung mehrere $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter.
 Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten sowie der Lebensdauer-Modellbildung.
-Da der bloße Aufbau eines Versuchsplans zudem genau die Qualität und Umfänge der Modellierung der Zielgröße in Teilen bedingt - jedenfalls aber beeinflusst, ist neben den fundamentalen Zusammenhängen auch die Bewertung von Merkmalen der Versuchspläne durch spezifische Performance-Indikatoren oder Optimalitäten relevant.
-Daher beschäftigt sich der Inhalt dieses Kapitels mit einer gezielten Auswahl an Grundbegriffen und Metriken für multivariate Testpläne sowie einer Übersicht der für Lebensdauertests geeigneten Versuchspläne, bevor abschließend die statistische Modellbildung beleuchtet wird.
-Für eine grundsätzlichere Auseinandersetzung zu vorgeschalteten Methoden und Werkzeugen bezüglich \ac{DoE} sei mit Blick auf den Fokus und Umfang der vorliegenden Arbeit damit auf einschlägige Literatur wie \cite{Kleppmann.2016,Siebertz.2017,Montgomery.2020,Hinkelmann.2012} verwiesen, die durch weitere am \ac{IMA} entstandenen Arbeiten reichhaltig ergänzt wird \colorbox{yellow}{Kremer, Herzig, Dazer} - um nur eine Auswahl der relevante Referenzen zu nennen. 
-Daher wird im Umkehrschluss der Umgang mit normalverteilten Daten im Rahmen des \ac{DoE}, mit der Regressionsmodellierung auf Basis der \ac{ANOVA} sowie konventionellen Hypothesentests im Rahmen der nachfolgenden Ausführungen in Bezug auf Lebensdauerdaten nicht behandelt.
+Da der bloße Aufbau eines Versuchsplans zudem genau die Qualität und Umfänge der Modellierung der Zielgröße in Teilen bedingt - jedenfalls beeinflusst, ist neben den fundamentalen Zusammenhängen auch die Bewertung von Merkmalen der Versuchspläne relevant.
+Dazu dienen spezifische Performance-Indikatoren sowie sogenannte Optimalitäten, vgl. \cite{Montgomery.2020,Goos.2011}.
+Daher beschäftigt sich der Inhalt dieses Abschnitts mit einer gezielten Auswahl an Grundbegriffen und Metriken für multivariate Testpläne im Zusammenhang mit Lebensdauerdaten sowie einer Übersicht der für Lebensdauertests geeigneten Versuchspläne, bevor abschließend die statistische Modellbildung beleuchtet wird.
+Für eine grundsätzlichere Auseinandersetzung zu vorgeschalteten und klassischen Methoden und Werkzeugen bezüglich \ac{DoE} sei mit Blick auf den Fokus und Umfang der vorliegenden Arbeit damit auf einschlägige Literatur von \textcite{Kleppmann.2016}, \textcite{Siebertz.2017}, \textcite{Hinkelmann.2012} sowie insbesondere \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
+Diese behandeln intensiv die Inhalte konventioneller statistischer Versuchsplanung, welche um Perspektiven zu Lebensdaueruntersuchungen bereits durch am \ac{IMA} entstandenen Dissertationen von \textcite{Dazer.2019}, \textcite{Herzig.2021}, \textcite{Kremer.2021} und \textcite{Grundler.2024} fortschreitend ergänzt wird - um nur eine Auswahl relevanter Referenzen zu nennen.
+Konsequenterweise wird der Umgang mit normalverteilten Daten im Rahmen des \ac{DoE}, mit Regressionsmodellierung auf Basis der \ac{ANOVA}, mit konventionellen Hypothesentests und deren Hintergründe sowie mit fundamentalen Ausführungen zu \ac{ALT} daher innerhalb der nachfolgenden Ausführungen nicht explizit herausgestellt.
 
 \subsection{Grundbegriffe der statistischen Versuchsplanung} \label{subsec:begriffedoe}
+Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette \cite{Coleman.1993,Montgomery.2020} entlang mehrere Prozessschritte, die von eine spezifischen Aufgabendefinition ausgehend beginnt und in einer statistischen abgesicherten Lagebeurteilung mündet, bgl \colorbox{yellow}{Abbildung~Doe-Steps}.
+
+
 
 \subsection{Statistische Lebensdauer-Versuchspläne} \label{subsec:pläne}
 
@@ -255,4 +261,4 @@ Daher wird im Umkehrschluss der Umgang mit normalverteilten Daten im Rahmen des 
     \item \colorbox{yellow}{yang p282 erster abschnitt}
     \item \colorbox{yellow}{russell doe for glm kap1.4 p12}
 \end{itemize}
-\cite{RisbergEllekjr.1998, Bisgaard.1992,Bisgaard.2011,Myers.2016,Montgomery.2020,Zahran.2003,GiovannittiJensen.1989,Goos.2011,Hinkelmann.2012,Khuri.2006,Rittmaier.2025,Johnson.2011,Donev.2004,G.E.P.Box.1951,Ardakani.2011,Jones.2012,Jones.2021,Wu.2021,Khuri.2006,Escobar.1995,Modarres.2017,Ahn.2015,Rasch.2018,Xu.2002,Wald.1943,Rencher.2008,Box.2007,Kleppmann.2016,Siebertz.2017,Fisher.1935,Bisgaard.1997,Myers.2010}
+\cite{RisbergEllekjr.1998, Bisgaard.1992,Bisgaard.2011,Myers.2016,Montgomery.2020,Zahran.2003,GiovannittiJensen.1989,Goos.2011,Hinkelmann.2012,Khuri.2006,Rittmaier.2025,Johnson.2011,Donev.2004,G.E.P.Box.1951,Ardakani.2011,Jones.2012,Jones.2021,Rigdon.2022,Wu.2021,Khuri.2006,Escobar.1995,Modarres.2017,Ahn.2015,Rasch.2018,Xu.2002,Wald.1943,Rencher.2008,Box.2007,Kleppmann.2016,Siebertz.2017,Fisher.1935,Bisgaard.1997,Myers.2010}
