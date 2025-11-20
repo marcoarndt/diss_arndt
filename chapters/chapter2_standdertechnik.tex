@@ -195,7 +195,7 @@ Die \ac{MLE} liefert nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern a
 Obwohl verschiedene Ansätze, wie die numerisch anspruchsvolleren Berechnungen nach Likelihood-Ratio-Methode, Bootstrap-Perzentil-Methode oder Monte-Carlo-Approximation existieren, ist das gängigste Verfahren zur Berechnung von \acp{CI} die Approximation mittels asymptotischer Normalverteilung der \ac{MLE}-Schätzer $\hat{\sym{theta}}$ \cite{Bertsche.2022,Nelson.1990}.
 Dies erfolgt über die \textbf{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß \textcite{Kremer.2019c}  bezüglich des Rechenaufwands und resultierender Modellqualität vergleichsweise effizient quantifiziert.
 So wird diese Methodik auch in gängiger Applikationen als Standard angewandt, vgl. \cite{Nelson.2005,Nelson.1990,Yang.2007}.
-In der praktischen Anwendung wird die Fisher-Informationsmatrix auf Basis der resultierenden Schätzwerte $\sym{theta}=\hat{\sym{theta}}$ so als Schätzung zur Beobachtung nach $\symsub{FIM}{O}$ verwendet \cite{Nelson.1990,Lawless.2003}.
+In der praktischen Anwendung wird die Fisher-Informationsmatrix auf Basis der resultierenden Schätzwerte $\hat{\sym{theta}} = \sym{theta}$ so als Schätzung zur Beobachtung nach $\symsub{FIM}{O}$ verwendet \cite{Nelson.1990,Lawless.2003}.
 Diese ist definiert als die negative \textbf{Hesse-Matrix} $\sym{H}$ der Log-Likelihood-Funktion, ausgewertet an der Stelle der \ac{MLE}-Schätzwerte
 $\hat{\sym{theta}}$:
 \begin{equation} \label{eq:fim_o}
@@ -220,7 +220,7 @@ Da Lebensdauerparameter (z.B. $\sym{T}, \sym{b}$) oft auf $\sym{RR}_{>0}$ beschr
 \end{equation}
 
 Die Berechnung dieser \acp{CI} für Schätzwerte $\sym{g_func}(\hat{\sym{theta}})$ zu Größen wie $\hat{\sym{R}}(\sym{t})$ oder $\hat{\sym{t}}_{\sym{q}}$  erfolgt mittels \textbf{Delta-Methode} \cite{Nelson.1990,Meeker.2022}.
-Dieses auf einer Taylor-Reihenentwicklung basierende Verfahren (Gauß'sche Fehlerfortpflanzung) approximiert die Varianz der Funktion $\hat{\sym{g_func}}$ unter Einbeziehung der gesamten Varianz-Kovarianz-Matrix.
+Dieses auf einer Taylor-Reihenentwicklung basierende Verfahren (Gauß'sche Fehlerfortpflanzung) approximiert die Varianz der Funktion $\hat{\sym{g_func}}=\sym{g_func}(\hat{\sym{theta}})$ unter Einbeziehung der gesamten Varianz-Kovarianz-Matrix.
 Dazu wird der \textbf{Gradientenvektor} $\sym{g_grad}$ der Funktion $\sym{g_func}$ (z.B. $\sym{g_func} = \sym{R}(\sym{t})$) bezüglich des $\sym{k}$-dimensionalen Parametervektors $\sym{theta}$ gebildet:
 \begin{equation} \label{eq:delta_method_gradient}
     \sym{g_grad} \defeq \left[ \frac{\partial \sym{g_func}(\sym{theta})}{\partial \sym{theta}_{1}}, \dots, \frac{\partial \sym{g_func}(\sym{theta})}{\partial \symsub{theta}{k}} \right]^T_{\sym{theta} = \hat{\sym{theta}}}.
@@ -238,16 +238,32 @@ Sollen auch hier nur positive Werte für $\sym{g_func}$ berücksichtigt werden, 
 
 \section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
 Multivariate Lebensdauertests erfordern definitionsgemäß die Betrachtung mehrere $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter.
-Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten sowie der Lebensdauer-Modellbildung.
-Da der bloße Aufbau eines Versuchsplans zudem genau die Qualität und Umfänge der Modellierung der Zielgröße in Teilen bedingt - jedenfalls beeinflusst, ist neben den fundamentalen Zusammenhängen auch die Bewertung von Merkmalen der Versuchspläne relevant.
+Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten, auch \ac{L-DoE} sowie der Lebensdauermodellbildung.
+Da die Struktur des Versuchsplans die erreichbare Modellierungsqualität der Zielgröße maßgeblich determiniert, ist neben dem Verständnis fundamentaler Zusammenhänge insbesondere die quantitative Bewertung von Gütekriterien der Versuchspläne essenziell.
 Dazu dienen spezifische Performance-Indikatoren sowie sogenannte Optimalitäten, vgl. \cite{Montgomery.2020,Goos.2011}.
-Daher beschäftigt sich der Inhalt dieses Abschnitts mit einer gezielten Auswahl an Grundbegriffen und Metriken für multivariate Testpläne im Zusammenhang mit Lebensdauerdaten sowie einer Übersicht der für Lebensdauertests geeigneten Versuchspläne, bevor abschließend die statistische Modellbildung beleuchtet wird.
-Für eine grundsätzlichere Auseinandersetzung zu vorgeschalteten und klassischen Methoden und Werkzeugen bezüglich \ac{DoE} sei mit Blick auf den Fokus und Umfang der vorliegenden Arbeit damit auf einschlägige Literatur von \textcite{Kleppmann.2016}, \textcite{Siebertz.2017}, \textcite{Hinkelmann.2012} sowie insbesondere \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
+Aufgrund dessen beschäftigt sich der Inhalt dieses Abschnitts mit einer gezielten Auswahl an Grundbegriffen und Metriken für multivariate Testpläne im Zusammenhang mit Lebensdauerdaten sowie einer Übersicht der für Lebensdauertests geeigneten Versuchspläne, bevor abschließend die statistische Modellbildung beleuchtet wird.
+Für eine grundsätzlichere Auseinandersetzung zu vorgeschalteten, konventionellen Methoden und Werkzeugen bezüglich \ac{DoE} sei mit Blick auf den Fokus und möglichen Umfang der vorliegenden Arbeit damit auf einschlägige Literatur von \textcite{Kleppmann.2016}, \textcite{Siebertz.2017}, \textcite{Hinkelmann.2012} sowie vornehmlich \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
 Diese behandeln intensiv die Inhalte konventioneller statistischer Versuchsplanung, welche um Perspektiven zu Lebensdaueruntersuchungen bereits durch am \ac{IMA} entstandenen Dissertationen von \textcite{Dazer.2019}, \textcite{Herzig.2021}, \textcite{Kremer.2021} und \textcite{Grundler.2024} fortschreitend ergänzt wird - um nur eine Auswahl relevanter Referenzen zu nennen.
 Konsequenterweise wird der Umgang mit normalverteilten Daten im Rahmen des \ac{DoE}, mit Regressionsmodellierung auf Basis der \ac{ANOVA}, mit konventionellen Hypothesentests und deren Hintergründe sowie mit fundamentalen Ausführungen zu \ac{ALT} daher innerhalb der nachfolgenden Ausführungen nicht explizit herausgestellt.
 
 \subsection{Grundbegriffe der statistischen Versuchsplanung} \label{subsec:begriffedoe}
-Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette \cite{Coleman.1993,Montgomery.2020} entlang mehrere Prozessschritte, die von eine spezifischen Aufgabendefinition ausgehend beginnt und in einer statistischen abgesicherten Lagebeurteilung mündet, bgl \colorbox{yellow}{Abbildung~Doe-Steps}.
+Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette \cite{Coleman.1993,Montgomery.2020} entlang mehrere Prozessschritte, die ausgehend von einer spezifischen Aufgabendefinition beginnt und in einer statistischen abgesicherten Lagebeurteilung mündet, vgl. \colorbox{yellow}{Abbildung~Doe-Steps}.
+Das erklärte Ziel ist es also, den kausalen Zusammenhang zwischen Einflussfaktoren und Systemantwort funktional abzubilden.
+So kann dieser Zusammenhang - beispielhaft die zufallsverteilte Lebensdauer in Abhängigkeit $k>2$ technischer Beanspruchungen - modelliert und gegebenenfalls optimiert werden, vergleiche \textit{Schritt~1} in \colorbox{yellow}{Abbildung~Doe-Steps}.
+
+Im Zentrum der Betrachtung steht dabei das technische \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der Eingangsgrößen definiert.
+Die zu untersuchende oder zu optimierende Ausgangsgröße wird als \textbf{Systemantwort} $\sym{y}$ (engl. Response) bezeichnet.
+Die gezielt kontrollierbaren und variierten Eingangsgrößen sind die \textbf{Faktoren} (\textbf{Steuergrößen}), während nicht kontrollierbare oder unbekannte Einflüsse als \textbf{Störgrößen} (engl. Noise) klassifiziert werden, vergleiche \textit{Schritt~2} in \colorbox{yellow}{Abbildung Doe-Steps} \cite{Kleppmann.2016}.
+Um ein Systemverhalten perspektivisch zu charakterisieren, werden die Faktoren als kategoriale oder kontinuierliche Parameter im Versuch auf diskreten Werten, den sogenannten \textbf{Faktorstufen} (engl. Level), variiert (\textit{Schritt~3}).
+Die planerische Kombination verschiedener Faktorstufen äußert sich dann in spezifischen \textbf{Versuchspunkten} innerhalb des \textbf{Parameterraums}.
+Anteilig erstreckt sich hierin das Volumen über die Parameterwerte, welche im Versuchs eingestellt werden können, über den \textbf{Versuchsraum} (engl. Design Space)
+Statistische Versuchspläne (\textit{Schritt~4}) für die Durchführung (\textit{Schritt~5}) können nachfolgend aus Abschnitt~\ref{subsec:pläne} entnommen werden.
+Die aus dieser Variation resultierende Änderung der Systemantwort quantifiziert den Einfluss des Faktors, der statistisch als \textbf{Effekt} bezeichnet und quantifiziert wird (\textit{Schritte~6-7}).
+Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Paramterdiagram, kurz \textbf{P-Diagramm}, in \colorbox{yellow}{Abbildung~P-Diagram} entnommen werden.
+Die hierbei erreichte Akquisition einer empirischen Datengrundlage folgt als entlang eines präzise beschriebenen Prozesses und innerhalb der Vorgaben vorab definierter Versuchspläne.
+Das ergibt entscheidende Vorteile, wird der planerische Aspekt in die Ausführung aufgenommen.
+Entgegen in der Praxis üblicherweise noch verbreiteter alternativer Vorgehen wie \ac{OFAT}-Testing können mittels \ac{L-DoE} effizient und verbindlich Informationen gewonnen werden, die über die faktorbedingten Effekte hinaus gehen und differenziert Aufschluss über \textbf{Haupteffekte} und etwaige \textbf{Wechselwirkungen} der Faktoren geben können.
+Beide können gemäß beliebiger Polynomfunktionen höhere Ordnungen annehmen, als \textbf{quadratische Effekte} oder \textbf{Mehrfachwechselwirkungen} abbilden.
 
 
 

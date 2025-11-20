@@ -1,18 +1,18 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
-[75] biber-MSWIN64:340> INFO - === 
-[101] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
-[178] Biber.pm:994> INFO - Found 58 citekeys in bib section 0
-[187] Biber.pm:4463> INFO - Processing section 0
-[195] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[245] bibtex.pm:1713> INFO - LaTeX decoding ...
-[428] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[613] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[613] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[613] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[613] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[638] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[658] bbl.pm:779> INFO - Output to diss_arndt.bbl
-[658] Biber.pm:131> WARN - legacy year field 'Februar 2025' in entry 'dat.2025' is not an integer - this will probably not sort properly.
-[658] Biber.pm:131> WARN - misc entry 'dat.2025' (bibliography.bib): Invalid format '13.06.2025' of date field 'urldate' - ignoring
-[658] Biber.pm:133> INFO - WARNINGS: 2
+[71] biber-MSWIN64:340> INFO - === 
+[96] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
+[169] Biber.pm:994> INFO - Found 58 citekeys in bib section 0
+[178] Biber.pm:4463> INFO - Processing section 0
+[185] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[232] bibtex.pm:1713> INFO - LaTeX decoding ...
+[406] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[580] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[580] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[580] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[580] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[603] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[621] bbl.pm:779> INFO - Output to diss_arndt.bbl
+[621] Biber.pm:131> WARN - legacy year field 'Februar 2025' in entry 'dat.2025' is not an integer - this will probably not sort properly.
+[621] Biber.pm:131> WARN - misc entry 'dat.2025' (bibliography.bib): Invalid format '13.06.2025' of date field 'urldate' - ignoring
+[621] Biber.pm:133> INFO - WARNINGS: 2
