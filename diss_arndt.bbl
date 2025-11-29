@@ -890,6 +890,50 @@
       \verb Bain, Engelhardt 2017 - Statistical Analysis of Reliability:Attachments/Bain, Engelhardt 2017 - Statistical Analysis of Reliability.pdf:application/pdf
       \endverb
     \endentry
+    \entry{Wu.2021}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=8f7b81c89f3e6d3d658748723f89ff1c}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Chien-Fu},
+           giveni={C\bibinithyphendelim F\bibinitperiod}}}%
+        {{hash=5ca9417a5ceabf98b7d814febe5a681a}{%
+           family={Hamada},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ, USA}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{fullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{fullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{bibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorbibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authornamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorfullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorfullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}This Third Edition covers design of experiments and integrates computer experiments with other design topics. The main changes in this Third Edition are two new chapters, one on computer experiments, the other on optimal design. Computer experiments have become very popular in experimental design because increasingly more and more experiments are conducted on a computer, such as running finite element simulations, instead of conducting physical experiments. This book starts each chapter with a real experiment. Then, the authors develop the needed tools in subsequent sections. Finally, the chapter ends with the application of these tools to the experiment. Each chapter includes exercises, and the authors have added new exercise problems with selected solutions to the Instructor's solutions manual. This is an ideal book for design of experiments courses at the upper-undergraduate and graduate levels. It is also a valuable resource for practicing engineers and statisticians. Design of experiments (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships. This information is needed to manage process inputs in order to optimize the output{"}--}
+      \field{edition}{Third edition}
+      \field{isbn}{9781119470106}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Experiments: Planning, analysis and optimization}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://zbmath.org/?q=an%3A1460.62003
+      \endverb
+      \verb{url}
+      \verb https://zbmath.org/?q=an%3A1460.62003
+      \endverb
+    \endentry
     \entry{Montgomery.2020}{book}{}{}
       \name{author}{1}{}{%
         {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
@@ -1026,8 +1070,8 @@
       \strng{authornamehash}{1f49c6d22773878487629b490053f3fc}
       \strng{authorfullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
       \strng{authorfullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. Auflage}
@@ -1156,8 +1200,8 @@
       \strng{authornamehash}{1b17d112f7833c081ab1d64dd0ef11ef}
       \strng{authorfullhash}{1b17d112f7833c081ab1d64dd0ef11ef}
       \strng{authorfullhashraw}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Zentraler Kernpunkt des Zielkonflikts in der heutigen Produktentwicklung sind die immer weiter steigenden Kundenanforderungen bei einer gleichzeitig geforderten Reduktion der Entwicklungskosten. Beschleunigte Lebensdauertests sind daher für die Erprobung und den Zuverlässigkeitsnachweis unverzichtbar. Die vorliegende Arbeit betrachtet die Probability of Test Success als entscheidenden Parameter des erweiterten Zuverlässigkeitsziels, bei dem die Wahrscheinlichkeit eines erfolgreichen Zuverlässigkeitsnachweises durch Planung effizienter Zuverlässigkeitstests maximiert werden kann. Damit ist es möglich, die Grenzen des Zuverlässigkeitsnachweises und damit auch die Grenzen der Auslegung unter Berücksichtigung der Randbedingungen zu finden und Leichtbauanwendungen kostenoptimal auszulegen und gleichzeitig zuverlässigkeitstechnisch abzusichern. Die praxisrelevanten beschleunigten End-of-Life-Tests wurden in dieser Arbeit in das Konzept der Probability of Test Success integriert, um Handlungsempfehlungen für die Planung effizienter Zuverlässigkeitstests abzuleiten. Diese umfassen Empfehlungen zur Wahl und Verteilung der Prüflinge und der Lage der beschleunigten Lastniveaus, zur Berücksichtigung von beschleunigten Success-Run-Tests sowie zu Zensierungsstrategien und zusätzlichen beschleunigten Lastniveaus. Darüber hinaus wurde eine Einordnung des erweiterten Konzepts in die Produktauslegung vorgenommen. Für die untersuchten Anwendungen konnte gezeigt werden, dass das erweiterte Konzept der Probability of Test Success und die Vorgehensweise zur anforderungsgerechten Produktauslegung das Potenzial besitzt, die Zuverlässigkeitstestplanung bereits in der Produktauslegung zu berücksichtigen, die minimal mögliche Dimensionierung zu finden und dabei die Gesamtkosten zu reduzieren. Dieses Potenzial besteht insbesondere für Leichtbauanwendungen, bei welchen minimale Dimensionierung zentral ist, die Erfüllung der Zuverlässigkeits- und Lebensdaueranforderungen jedoch gewährleistet sein muss. Die Nachweisbarkeit eines Zuverlässigkeitsziels unter Berücksichtigung der Probability of Test Success kann mit dem erweiterten Konzept nun erstmals auch für die praxisrelevanten beschleunigten End-of-Life-Erprobungsstrategien berücksichtigt und quantifiziert werden.}
@@ -1769,50 +1813,6 @@
       \field{year}{2021}
       \field{pages}{411\bibrangedash 427}
       \range{pages}{17}
-    \endentry
-    \entry{Wu.2021}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=8f7b81c89f3e6d3d658748723f89ff1c}{%
-           family={Wu},
-           familyi={W\bibinitperiod},
-           given={Chien-Fu},
-           giveni={C\bibinithyphendelim F\bibinitperiod}}}%
-        {{hash=5ca9417a5ceabf98b7d814febe5a681a}{%
-           family={Hamada},
-           familyi={H\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, NJ, USA}%
-      }
-      \list{publisher}{1}{%
-        {Wiley}%
-      }
-      \strng{namehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{fullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{fullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{bibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{authorbibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{authornamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{authorfullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{authorfullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{{"}This Third Edition covers design of experiments and integrates computer experiments with other design topics. The main changes in this Third Edition are two new chapters, one on computer experiments, the other on optimal design. Computer experiments have become very popular in experimental design because increasingly more and more experiments are conducted on a computer, such as running finite element simulations, instead of conducting physical experiments. This book starts each chapter with a real experiment. Then, the authors develop the needed tools in subsequent sections. Finally, the chapter ends with the application of these tools to the experiment. Each chapter includes exercises, and the authors have added new exercise problems with selected solutions to the Instructor's solutions manual. This is an ideal book for design of experiments courses at the upper-undergraduate and graduate levels. It is also a valuable resource for practicing engineers and statisticians. Design of experiments (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships. This information is needed to manage process inputs in order to optimize the output{"}--}
-      \field{edition}{Third edition}
-      \field{isbn}{9781119470106}
-      \field{series}{Wiley series in probability and statistics}
-      \field{title}{Experiments: Planning, analysis and optimization}
-      \field{year}{2021}
-      \verb{urlraw}
-      \verb https://zbmath.org/?q=an%3A1460.62003
-      \endverb
-      \verb{url}
-      \verb https://zbmath.org/?q=an%3A1460.62003
-      \endverb
     \endentry
     \entry{Escobar.1995}{article}{}{}
       \name{author}{2}{}{%
