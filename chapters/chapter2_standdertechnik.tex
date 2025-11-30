@@ -236,42 +236,85 @@ Das Vertrauensintervall für die Funktion $\hat{\sym{g_func}}$ wird anschließen
 Sollen auch hier nur positive Werte für $\sym{g_func}$ berücksichtigt werden, kann eine Logarithmierung in der Berechnung der Vertrauensbereiche analog zu Gl.~\ref{eq:ci_ln} erfolgen \cite{Yang.2007}.
 
 
+% \section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
+% Multivariate Lebensdauertests erfordern definitionsgemäß die Betrachtung mehrere $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter.
+% Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten - auch unter dem Begriff \ac{L-DoE} zusammengefasst - sowie darauffolgend der Lebensdauermodellbildung.
+% Der primäre Anspruch von \ac{DoE} besteht in der effizienten Planung empirischer Datenerhebungen, um Zielgrößen in Abhängigkeit erklärender Variablen robust zu optimieren.
+% Dieses Paradigma lässt sich gemäß \ac{DfR} unmittelbar auf die Analyse von Lebensdauer und Zuverlässigkeit übertragen \cite{Yang.2007,Wu.2021}.
+% Da das globale Optimum der Zuverlässigkeitsfunktion a priori meist unbekannt ist, erfordert dessen Identifikation eine systematische Exploration eines Parameterraumes.
+% Eine besondere Herausforderung stellt hierbei die Integration von \ac{ALT} dar: Die Diskrepanz zwischen dem hochbelasteten Testraum (engl. Design Space) und dem regulären Prädiktionsraum (engl. Use Space oder Field Level) kann daher eine Extrapolation erzwingen, welche die Anforderungen an die Daten- und somit auch Designqualität deutlich verschärft.
+% Da die geometrische Struktur des Versuchsplans die erreichbare Modellierungsqualität deterministisch begrenzt, ist eine a priori Bewertung der Plangüte hier wiederum unerlässlich.
+% Hierfür dienen objektive Performance-Indikatoren sowie mathematische Optimalitätskriterien, vgl. \cite{Montgomery.2020,Goos.2011}.
+
+% Aufgrund dessen beschäftigt sich der Inhalt dieses Abschnitts mit einer nur gezielten Auswahl an Grundbegriffen und Metriken für multivariate Testpläne im Zusammenhang mit Lebensdauerdaten sowie vielmehr mit einer Übersicht der für Lebensdauertests geeigneten Versuchspläne und dessen Features, bevor abschließend die statistische Modellbildung beleuchtet wird.
+
+% Für eine grundsätzlichere Auseinandersetzung zu vorgeschalteten, konventionellen Methoden und Werkzeugen bezüglich \ac{DoE} sei mit Blick auf den Fokus und möglichen Umfang der vorliegenden Arbeit damit auf einschlägige Literatur von \textcite{Kleppmann.2016}, \textcite{Siebertz.2017}, \textcite{Hinkelmann.2012} sowie vornehmlich \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
+% Diese behandeln intensiv die Inhalte konventioneller statistischer Versuchsplanung, welche um Perspektiven zu \ac{L-DoE} bereits durch am \ac{IMA} entstandenen Dissertationen von \textcite{Dazer.2019}, \textcite{Herzig.2021}, \textcite{Kremer.2021} und \textcite{Grundler.2024} fortschreitend ergänzt wird - um nur eine Auswahl relevanter Referenzen zu nennen.
+% Konsequenterweise wird der Umgang mit normalverteilten Daten im Rahmen des \ac{DoE}, mit Regressionsmodellierung auf Basis der \ac{ANOVA}, mit konventionellen Hypothesentests und deren Hintergründe sowie mit fundamentalen Ausführungen zu \ac{ALT} innerhalb der nachfolgenden Ausführungen nicht explizit herausgestellt.
+
+% \subsection{Grundlagen zur statistischen Versuchsplanung} \label{subsec:begriffedoe}
+% Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette \cite{Coleman.1993,Montgomery.2020} entlang mehrere Prozessschritte, die ausgehend von einer spezifischen Aufgabendefinition beginnt und in einer statistischen abgesicherten Datenmodellierung mündet, vgl. \colorbox{yellow}{Abbildung~Doe-Steps}.
+% Das erklärte Ziel ist es also, den kausalen Zusammenhang zwischen Einflussfaktoren und Systemantwort funktional abzubilden.
+% So kann dieser Zusammenhang - beispielhaft die zufallsverteilte Lebensdauer $\sym{tau}$ in Abhängigkeit $k>2$ technischer Beanspruchungen - modelliert und optimiert werden, vergleiche \textit{Schritt~1} in \colorbox{yellow}{Abbildung~Doe-Steps}.
+
+% Im Zentrum der Betrachtung steht dabei das technische \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der Eingangsgrößen definiert.
+% Die zu untersuchende oder zu optimierende Ausgangsgröße wird generell als \textbf{Systemantwort} $\sym{y}$ (engl. Response) bezeichnet.
+% Die gezielt kontrollierbaren und variierten Eingangsgrößen sind die \textbf{Faktoren} (\textbf{Steuergrößen}), während nicht kontrollierbare oder unbekannte Einflüsse als \textbf{Störgrößen} (engl. Noise) klassifiziert werden, vergleiche \textit{Schritt~2} in \colorbox{yellow}{Abbildung Doe-Steps} \cite{Kleppmann.2016}.
+% Um ein Systemverhalten perspektivisch zu charakterisieren, werden die Faktoren als kategoriale oder kontinuierliche Parameter im Versuch auf diskreten Werten, den sogenannten \textbf{Faktorstufen} (engl. Level), variiert (\textit{Schritt~3}).
+% Die planerische Kombination verschiedener Faktorstufen äußert sich dann in spezifischen \textbf{Versuchspunkten} innerhalb des \textbf{Parameterraums} bzw. Design Spaces.
+% Anteilig erstreckt sich hierin das Volumen über die Parameterwerte, welche im Versuchs eingestellt werden können, über den \textbf{Versuchsraum} (engl. Design Space)
+% Statistische Versuchspläne (\textit{Schritt~4}) für die Durchführung (\textit{Schritt~5}) können nachfolgend aus Abschnitt~\ref{subsec:pläne} entnommen werden.
+% Die aus dieser Variation resultierende Änderung der Systemantwort quantifiziert den Einfluss des Faktors, der statistisch als \textbf{Effekt} bezeichnet und quantifiziert wird (\textit{Schritte~6-7}).
+% Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Paramterdiagram, kurz \textbf{P-Diagramm}, in \colorbox{yellow}{Abbildung~P-Diagram} entnommen werden.
+% Die hierbei erreichte Akquisition einer empirischen Datengrundlage folgt also entlang eines präzise beschriebenen Prozesses und innerhalb der Vorgaben vorab definierter Versuchspläne.
+% Dies ergibt entscheidende Vorteile, wird der planerische Aspekt in die Ausführung aufgenommen.
+% Entgegen in der Praxis üblicherweise noch verbreiteter alternativer Vorgehen wie \ac{OFAT}-Testing können mittels \ac{L-DoE} strukturiert, effizient und verbindlich Informationen gewonnen werden, die über die faktorbedingten Effekte hinaus gehen und differenziert Aufschluss über \textbf{Haupteffekte} und etwaige \textbf{Wechselwirkungen} der Faktoren geben können, vgl. \cite{Montgomery.2020,Kleppmann.2016,Siebertz.2017}.
+% Beide können gemäß beliebiger Polynomfunktionen höhere Ordnungen annehmen, smoit \textbf{quadratische Effekte} oder \textbf{Mehrfachwechselwirkungen} abbilden.
+
 \section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
-Multivariate Lebensdauertests erfordern definitionsgemäß die Betrachtung mehrere $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter.
-Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten - auch \ac{L-DoE} genannt - sowie darauffolgend der Lebensdauermodellbildung.
-Der primäre Anspruch von \ac{DoE} besteht in der effizienten Planung empirischer Datenerhebungen, um Zielgrößen in Abhängigkeit erklärender Variablen robust zu optimieren.
-Dieses Paradigma lässt sich gemäß \ac{DfR} unmittelbar auf die Analyse von Lebensdauer und Zuverlässigkeit übertragen \cite{Yang.2007,Wu.2021}.
-Da das globale Optimum der Zuverlässigkeitsfunktion a priori meist unbekannt ist, erfordert dessen Identifikation eine systematische Exploration eines Parameterraumes.
-Eine besondere Herausforderung stellt hierbei die Integration von \ac{ALT} dar: Die Diskrepanz zwischen dem hochbelasteten Testraum (engl. Design Space) und dem regulären Prädiktionsraum (engl. Use Space oder Field Level) kann daher eine Extrapolation erzwingen, welche die Anforderungen an die Daten- und somit auch Designqualität deutlich verschärft.
-Da die geometrische Struktur des Versuchsplans die erreichbare Modellierungsqualität deterministisch begrenzt, ist eine a priori Bewertung der Plangüte hier wiederum unerlässlich.
+Multivariate Lebensdauertests erfordern definitionsgemäß die Betrachtung mehrerer $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter.
+Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten - auch unter dem Begriff \ac{L-DoE} zusammengefasst - sowie der darauffolgenden Lebensdauermodellbildung.
+
+Der primäre Anspruch von \ac{DoE} besteht in der effizienten Planung empirischer Datenerhebungen, um Zielgrößen in Abhängigkeit erklärender Variablen zunächst robust zu modellieren und schließlich zu optimieren.
+Dieses Paradigma lässt sich auch unter der Begrifflichkeit \ac{DfR} unmittelbar wiedererkennen und auf die Analyse von Lebensdauer und Zuverlässigkeit übertragen \cite{Yang.2007,Wu.2021}.
+Da das lokale oder globale Optimum der Lebensdauer- bzw. Zuverlässigkeitsfunktion a priori jedoch meist unbekannt ist, erfordert dessen Identifikation eine systematische Exploration des Parameterraumes.
+Eine besondere Herausforderung stellt hierbei zusätzlich die Integration von \ac{ALT} dar: Die Diskrepanz zwischen dem hochbelasteten Testraum (engl. Design Space) und dem regulären Prädiktionsraum (engl. Use Space oder Field Space) kann eine Extrapolation erforderlich machen, welche die Anforderungen an die Daten- und somit auch an die Designqualität deutlich verschärft.
+Das Unwissen zur tatsächlichen Lage optimaler Antwortwerte und die Möglichkeit, per se einen systematischen Offset zwischen Design- und Field-Space durch \ac{ALT} vorzufinden, stellen Teststrategien nach Best-Guess Ansätzen nachteilig.
+Hier wird in der industriellen Praxis häufig fälschlicherweise ein \ac{OFAT}-Testing Ansatz gewählt, welcher schlichtweg die Wahrscheinlichkeit, Optimalstellen im Parameterraum systematisch zu treffen, senkt und somit gegenüber \ac{L-DoE} nachteilig ist.
+Da nun die geometrische Struktur eines Versuchsplans die erreichbare Modellierungsqualität deterministisch begrenzt, ist eine Bewertung der Plangüte im Vorfeld unerlässlich.
 Hierfür dienen objektive Performance-Indikatoren sowie mathematische Optimalitätskriterien, vgl. \cite{Montgomery.2020,Goos.2011}.
 
-Aufgrund dessen beschäftigt sich der Inhalt dieses Abschnitts mit einer nur gezielten Auswahl an Grundbegriffen und Metriken für multivariate Testpläne im Zusammenhang mit Lebensdauerdaten sowie vielmehr mit einer Übersicht der für Lebensdauertests geeigneten Versuchspläne und dessen Features, bevor abschließend die statistische Modellbildung beleuchtet wird.
+Vor diesem Hintergrund fokussiert sich dieser Abschnitt auf eine gezielte Auswahl an Grundbegriffen und Metriken für multivariate Testpläne im Kontext von \ac{L-DoE} sowie auf eine Übersicht der für Lebensdauertests geeigneten Versuchspläne, bevor abschließend die statistische Modellbildung beleuchtet wird.
 
-Für eine grundsätzlichere Auseinandersetzung zu vorgeschalteten, konventionellen Methoden und Werkzeugen bezüglich \ac{DoE} sei mit Blick auf den Fokus und möglichen Umfang der vorliegenden Arbeit damit auf einschlägige Literatur von \textcite{Kleppmann.2016}, \textcite{Siebertz.2017}, \textcite{Hinkelmann.2012} sowie vornehmlich \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
-Diese behandeln intensiv die Inhalte konventioneller statistischer Versuchsplanung, welche um Perspektiven zu \ac{L-DoE} bereits durch am \ac{IMA} entstandenen Dissertationen von \textcite{Dazer.2019}, \textcite{Herzig.2021}, \textcite{Kremer.2021} und \textcite{Grundler.2024} fortschreitend ergänzt wird - um nur eine Auswahl relevanter Referenzen zu nennen.
-Konsequenterweise wird der Umgang mit normalverteilten Daten im Rahmen des \ac{DoE}, mit Regressionsmodellierung auf Basis der \ac{ANOVA}, mit konventionellen Hypothesentests und deren Hintergründe sowie mit fundamentalen Ausführungen zu \ac{ALT} innerhalb der nachfolgenden Ausführungen nicht explizit herausgestellt.
+Für eine grundsätzlichere Auseinandersetzung mit konventionellen Methoden und Werkzeugen von \ac{DoE} sei, mit Blick auf den Fokus der vorliegenden Arbeit, auf die einschlägige Literatur von \textcite{Kleppmann.2016}, \textcite{Siebertz.2017}, \textcite{Hinkelmann.2012} sowie vornehmlich \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
+Diese Werke behandeln intensiv die Inhalte konventioneller statistischer Versuchsplanung, welche um Perspektiven zu \ac{L-DoE} bereits durch am \ac{IMA} entstandene Dissertationen von \textcite{Dazer.2019}, \textcite{Herzig.2021}, \textcite{Kremer.2021} und \textcite{Grundler.2024} fortschreitend ergänzt wurden.
+Konsequenterweise werden der Umgang mit normalverteilten Daten im Rahmen des \ac{DoE}, die Diskussion zu einschlägigen Vor- und Nachteilen auch unter Abgrenzung zu Alternativen wie \ac{OFAT}, die Regressionsmodellierung auf Basis der \ac{ANOVA}, konventionelle Hypothesentests sowie fundamentale Ausführungen zu \ac{ALT} in den nachfolgenden Ausführungen nicht explizit isoliert betrachtet, sondern als bekannt vorausgesetzt.
 
 \subsection{Grundlagen zur statistischen Versuchsplanung} \label{subsec:begriffedoe}
-Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette \cite{Coleman.1993,Montgomery.2020} entlang mehrere Prozessschritte, die ausgehend von einer spezifischen Aufgabendefinition beginnt und in einer statistischen abgesicherten Datenmodellierung mündet, vgl. \colorbox{yellow}{Abbildung~Doe-Steps}.
-Das erklärte Ziel ist es also, den kausalen Zusammenhang zwischen Einflussfaktoren und Systemantwort funktional abzubilden.
-So kann dieser Zusammenhang - beispielhaft die zufallsverteilte Lebensdauer $\sym{tau}$ in Abhängigkeit $k>2$ technischer Beanspruchungen - modelliert und optimiert werden, vergleiche \textit{Schritt~1} in \colorbox{yellow}{Abbildung~Doe-Steps}.
+Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette \cite{Coleman.1993,Montgomery.2020} entlang mehrerer Prozessschritte, die ausgehend von einer spezifischen Aufgabendefinition beginnt und in einer statistisch abgesicherten Datenmodellierung mündet (vgl. \colorbox{yellow}{Abbildung~Doe-Steps}).
+Das erklärte Ziel ist es, den kausalen Zusammenhang zwischen Einflussfaktoren und Systemantwort funktional abzubilden.
+So kann beispielsweise die zufallsverteilte Lebensdauer $\sym{tau}$ in Abhängigkeit von $k \geq 2$ technischen Beanspruchungen modelliert und optimiert werden (\textit{Schritt~1} in \colorbox{yellow}{Abbildung~Doe-Steps}).
 
-Im Zentrum der Betrachtung steht dabei das technische \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der Eingangsgrößen definiert.
-Die zu untersuchende oder zu optimierende Ausgangsgröße wird generell als \textbf{Systemantwort} $\sym{y}$ (engl. Response) bezeichnet.
-Die gezielt kontrollierbaren und variierten Eingangsgrößen sind die \textbf{Faktoren} (\textbf{Steuergrößen}), während nicht kontrollierbare oder unbekannte Einflüsse als \textbf{Störgrößen} (engl. Noise) klassifiziert werden, vergleiche \textit{Schritt~2} in \colorbox{yellow}{Abbildung Doe-Steps} \cite{Kleppmann.2016}.
-Um ein Systemverhalten perspektivisch zu charakterisieren, werden die Faktoren als kategoriale oder kontinuierliche Parameter im Versuch auf diskreten Werten, den sogenannten \textbf{Faktorstufen} (engl. Level), variiert (\textit{Schritt~3}).
-Die planerische Kombination verschiedener Faktorstufen äußert sich dann in spezifischen \textbf{Versuchspunkten} innerhalb des \textbf{Parameterraums} bzw. Design Spaces.
-Anteilig erstreckt sich hierin das Volumen über die Parameterwerte, welche im Versuchs eingestellt werden können, über den \textbf{Versuchsraum} (engl. Design Space)
-Statistische Versuchspläne (\textit{Schritt~4}) für die Durchführung (\textit{Schritt~5}) können nachfolgend aus Abschnitt~\ref{subsec:pläne} entnommen werden.
-Die aus dieser Variation resultierende Änderung der Systemantwort quantifiziert den Einfluss des Faktors, der statistisch als \textbf{Effekt} bezeichnet und quantifiziert wird (\textit{Schritte~6-7}).
-Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Paramterdiagram, kurz \textbf{P-Diagramm}, in \colorbox{yellow}{Abbildung~P-Diagram} entnommen werden.
-Die hierbei erreichte Akquisition einer empirischen Datengrundlage folgt also entlang eines präzise beschriebenen Prozesses und innerhalb der Vorgaben vorab definierter Versuchspläne.
-Dies ergibt entscheidende Vorteile, wird der planerische Aspekt in die Ausführung aufgenommen.
-Entgegen in der Praxis üblicherweise noch verbreiteter alternativer Vorgehen wie \ac{OFAT}-Testing können mittels \ac{L-DoE} strukturiert, effizient und verbindlich Informationen gewonnen werden, die über die faktorbedingten Effekte hinaus gehen und differenziert Aufschluss über \textbf{Haupteffekte} und etwaige \textbf{Wechselwirkungen} der Faktoren geben können, vgl. \cite{Montgomery.2020,Kleppmann.2016,Siebertz.2017}.
-Beide können gemäß beliebiger Polynomfunktionen höhere Ordnungen annehmen, smoit \textbf{quadratische Effekte} oder \textbf{Mehrfachwechselwirkungen} abbilden.
+Im Zentrum der Betrachtung steht das technische \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der Eingangsgrößen definiert.
+Die zu untersuchende oder zu optimierende Ausgangsgröße wird als \textbf{Systemantwort} $\sym{y}$ (engl. Response) bezeichnet.
+Die gezielt kontrollierbaren und variierten Eingangsgrößen sind die \textbf{Faktoren} (\textbf{Steuergrößen}), während nicht kontrollierbare oder unbekannte Einflüsse als \textbf{Störgrößen} (engl. Noise) klassifiziert werden (\textit{Schritt~2}, vgl. \cite{Kleppmann.2016}).
+Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Parameterdiagramm, kurz \textbf{P-Diagramm}, in \colorbox{yellow}{Abbildung~P-Diagram} entnommen werden.
 
+Um das Systemverhalten zu charakterisieren, werden die Faktoren als kategoriale oder kontinuierliche Parameter im Versuch auf diskreten Werten, den sogenannten \textbf{Faktorstufen} (engl. Level), variiert (\textit{Schritt~3}).
+Die planerische Kombination verschiedener Faktorstufen äußert sich in spezifischen \textbf{Versuchspunkten} innerhalb des Parameterraums.
+Der \textbf{Versuchsraum} (engl. Design Space) wird hierbei durch die Gesamtheit der technisch realisierbaren und im Versuch einstellbaren Parameterkombinationen aufgespannt.
+Die Auswahl geeigneter statistischer Versuchspläne (\textit{Schritt~4}) für die Durchführung (\textit{Schritt~5}) wird in Abschnitt~\ref{subsec:pläne} detailliert behandelt.
 
+Die aus der Variation resultierende Änderung der Systemantwort quantifiziert den Einfluss des Faktors, der statistisch als \textbf{Effekt} bezeichnet wird (\textit{Schritte~6-7}).
+Mittels \ac{L-DoE} können strukturiert, effizient und verbindlich Informationen gewonnen werden, die über isolierte Effekte hinausgehen und differenziert Aufschluss über \textbf{Haupteffekte} sowie etwaige \textbf{Wechselwirkungen} der Faktoren geben \cite{Montgomery.2020,Kleppmann.2016,Siebertz.2017}.
+Diese Zusammenhänge können mathematisch durch Polynomfunktionen höherer Ordnung approximiert werden, um auch \textbf{quadratische Effekte} oder \textbf{Mehrfachwechselwirkungen} abzubilden.
+
+\subsubsection{Screening} \label{subsubsec:screening}
+Angesichts der potentiell hohen Komplexität durch Wechselwirkungen und Nichtlinearitäten sind die in \colorbox{yellow}{Abbildung~Doe-Steps} beschriebenen Schritte 2 bis 3 als propädeutische Arbeiten für ein effizientes Testdesign zu interpretieren. Methodisch lassen sich diese unter dem Terminus \textbf{Screening} subsumieren. Daraus folgend dienen Screening-Methoden und -Versuchspläne dem Ziel, Informationsverluste bei einer minimalen Anzahl an Versuchsläufen zu begrenzen und die vitalen von den trivialen Faktoren zu separieren.
+
+Im Hinblick auf die Realisierung eines unter Zeit- und Kostenrestriktionen hochgradig effizienten \ac{DoE} ist die effiziente Ausgestaltung der Screening-Strategie selbst von primärem Interesse. Dies impliziert den Einsatz \textbf{heuristischer Screening-Methoden}, wie sie exemplarisch durch \textcite{Siebertz.2017} zusammengefasst werden.
+Solche heuristischen Ansätze fundieren auf einer Systemanalyse, die sowohl mit als auch ohne spezifisches A-priori-Wissen über das System erfolgen kann. Folglich ist ein Rückgriff auf Ergebnisse aus Experimenten, die explizit für das Forschungsziel ausgelegt wurden, in dieser Phase unter Umständen noch nicht möglich.
+Prozessual verorten sich heuristische Screening-Schritte zwischen der Definition des Untersuchungsziels und der Durchführung der physischen (Screening-)Experimente (vgl. \textit{Schritt~3} in \colorbox{yellow}{Abbildung~Doe-Steps}). Als rationale Methode zur Plausibilisierung und Entscheidungsfindung können Heuristiken somit die experimentelle Charakterisierung komplexer Systemzusammenhänge teilweise substituieren -- oder den damit verbundenen Aufwand zumindest signifikant reduzieren.
 
 \subsection{Statistische Lebensdauer-Versuchspläne} \label{subsec:pläne}
 

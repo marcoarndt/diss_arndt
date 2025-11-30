@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  30 NOV 2025 00:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  30 NOV 2025 13:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1560,10 +1560,10 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 18.
 Package tocbasic Info: Using my definition of `\numberline' on input line 20.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
 Package tocbasic Info: Using my definition of `\numberline' on input line 24.
-Package tocbasic Info: Using my definition of `\numberline' on input line 25.
 Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 Package tocbasic Info: Using my definition of `\numberline' on input line 28.
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
 
 Underfull \vbox (badness 1648) has occurred while \output is active []
 
@@ -1573,7 +1573,6 @@ Underfull \vbox (badness 1648) has occurred while \output is active []
 
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 29.
 Package tocbasic Info: Using my definition of `\numberline' on input line 30.
 Package tocbasic Info: Using my definition of `\numberline' on input line 31.
 Package tocbasic Info: Using my definition of `\numberline' on input line 32.
@@ -1590,6 +1589,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 42.
 Package tocbasic Info: Using my definition of `\numberline' on input line 43.
 Package tocbasic Info: Using my definition of `\numberline' on input line 44.
 Package tocbasic Info: Using my definition of `\numberline' on input line 45.
+Package tocbasic Info: Using my definition of `\numberline' on input line 46.
 )
 \tf@toc=\write11
 \openout11 = `diss_arndt.toc'.
@@ -1716,29 +1716,24 @@ Package pdftex.def Info: plots/ma_abb2.1_weibull.pdf  used on input line 144.
 [17]
 
 [18]
-Overfull \hbox (13.13803pt too wide) in paragraph at lines 260--273
-\T1/qpl/b/n/12 (-10) grö^^?ÿen \T1/qpl/m/n/12 (-10) (engl. Noi-se) klas-si-fi-ziert wer-den, ver-glei-che \T1/qpl/m/it/12 (-10) Schritt 2 \T1/qpl/m/n/12 (-10) in [][][][][][]
+Overfull \hbox (7.56195pt too wide) in paragraph at lines 294--297
+\T1/qpl/m/n/12 (-10) an-spru-chun-gen mo-del-liert und op-ti-miert wer-den (\T1/qpl/m/it/12 (-10) Schritt 1 \T1/qpl/m/n/12 (-10) in [][][][][][]). 
  []
 
 
 
-[19]) (chapters/chapter3_ansatz.tex
+[19]
 
-[20]
-chapter 3.
-) (chapters/chapter4_screening.tex
+[20]) (chapters/chapter3_ansatz.tex
 
-[21
-
-
-]
+[21]
 
 [22
 
 
 ]
-chapter 4.
-) (chapters/chapter5_entwurf.tex
+chapter 3.
+) (chapters/chapter4_screening.tex
 
 [23]
 
@@ -1746,8 +1741,8 @@ chapter 4.
 
 
 ]
-chapter 5.
-) (chapters/chapter6_casestudy.tex
+chapter 4.
+) (chapters/chapter5_entwurf.tex
 
 [25]
 
@@ -1755,8 +1750,8 @@ chapter 5.
 
 
 ]
-chapter 6.
-) (chapters/chapter7_zusammenfassung.tex
+chapter 5.
+) (chapters/chapter6_casestudy.tex
 
 [27]
 
@@ -1764,12 +1759,21 @@ chapter 6.
 
 
 ]
-chapter 7.
-)
+chapter 6.
+) (chapters/chapter7_zusammenfassung.tex
 
 [29]
 
 [30
+
+
+]
+chapter 7.
+)
+
+[31]
+
+[32
 
 
 ]
@@ -1786,11 +1790,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[31{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
-
-[32]
-
-[33]
+[33{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
 
 [34]
 
@@ -1798,7 +1798,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 [36]
 
-[37
+[37]
+
+[38]
+
+[39
 
 
 ] (diss_arndt.aux)
@@ -1813,17 +1817,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68083 strings out of 473577
- 1611129 string characters out of 5716318
- 2812455 words of memory out of 5000000
- 89836 multiletter control sequences out of 15000+600000
+ 68088 strings out of 473577
+ 1611192 string characters out of 5716318
+ 2812502 words of memory out of 5000000
+ 89837 multiletter control sequences out of 15000+600000
  646630 words of font info for 216 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,20n,121p,10947b,3026s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (53 pages, 758168 bytes).
+Output written on diss_arndt.pdf (55 pages, 763571 bytes).
 PDF statistics:
- 1545 PDF objects out of 1728 (max. 8388607)
- 253 named destinations out of 1000 (max. 500000)
+ 1564 PDF objects out of 1728 (max. 8388607)
+ 257 named destinations out of 1000 (max. 500000)
  46018 words of extra memory for PDF output out of 51595 (max. 10000000)
 
