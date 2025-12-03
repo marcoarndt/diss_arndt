@@ -965,6 +965,49 @@
       \field{title}{Design and Analysis of Experiments}
       \field{year}{2020}
     \endentry
+    \entry{Siebertz.2017}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=d645d85000fb1a9b0b0e6f3fc20617de}{%
+           family={Siebertz},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3f85d9aa754c21d01f35494bf2062cfd}{%
+           family={{van Bebber}},
+           familyi={v\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e9e55f9152a098501c9682b22bf119e3}{%
+           family={Hochkirchen},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Berlin}%
+        {Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Vieweg}%
+      }
+      \strng{namehash}{1f49c6d22773878487629b490053f3fc}
+      \strng{fullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{fullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{bibnamehash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{authorbibnamehash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{authornamehash}{1f49c6d22773878487629b490053f3fc}
+      \strng{authorfullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{authorfullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. Auflage}
+      \field{isbn}{978-3-662-55742-6}
+      \field{series}{VDI-Buch}
+      \field{title}{Statistische Versuchsplanung: Design of Experiments (DoE)}
+      \field{year}{2017}
+    \endentry
     \entry{Goos.2011}{book}{}{}
       \name{author}{2}{}{%
         {{hash=bd639e8bc0dd4c3689cb8b7cc745dbe5}{%
@@ -1036,49 +1079,6 @@
       \verb{doi}
       \verb 10.3139/9783446447172?locatt=mode:legacy
       \endverb
-    \endentry
-    \entry{Siebertz.2017}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=d645d85000fb1a9b0b0e6f3fc20617de}{%
-           family={Siebertz},
-           familyi={S\bibinitperiod},
-           given={Karl},
-           giveni={K\bibinitperiod}}}%
-        {{hash=3f85d9aa754c21d01f35494bf2062cfd}{%
-           family={{van Bebber}},
-           familyi={v\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=e9e55f9152a098501c9682b22bf119e3}{%
-           family={Hochkirchen},
-           familyi={H\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
-      }
-      \list{location}{2}{%
-        {Berlin}%
-        {Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer Vieweg}%
-      }
-      \strng{namehash}{1f49c6d22773878487629b490053f3fc}
-      \strng{fullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{fullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{bibnamehash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{authorbibnamehash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{authornamehash}{1f49c6d22773878487629b490053f3fc}
-      \strng{authorfullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{authorfullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{2. Auflage}
-      \field{isbn}{978-3-662-55742-6}
-      \field{series}{VDI-Buch}
-      \field{title}{Statistische Versuchsplanung: Design of Experiments (DoE)}
-      \field{year}{2017}
     \endentry
     \entry{Hinkelmann.2012}{book}{}{}
       \name{author}{1}{}{%
@@ -1215,34 +1215,6 @@
       \verb Herzig 2021 - Anforderungsgerechte Produktauslegung durch Planung effizienter:Attachments/Herzig 2021 - Anforderungsgerechte Produktauslegung durch Planung effizienter.pdf:application/pdf
       \endverb
     \endentry
-    \entry{Kremer.2021}{thesis}{}{}
-      \name{author}{1}{}{%
-        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
-           family={Kremer},
-           familyi={K\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{fullhash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{fullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{bibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authorbibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authornamehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authorfullhash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authorfullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Die Erfahrung zeigt, dass sich sowohl die meisten historischen Unfälle und oft damit verbundenen Rückrufaktionen auf einen suboptimalen Zuverlässigkeits- und Erprobungsprozess zurückführen lassen. Und auch wenn durch den zunehmenden Wettbewerbsdruck die Unternehmen gezwungen sind schonend mit den Ressourcen umzugehen, kann keine Berechnung oder gar Simulation die Erprobung komplett ersetzen. Die Zuverlässigkeit zählt mittlerweile zu einem wichtigen Schlüsselfaktor in einem Qualitätsprozess und erfreut sich zudem einer stetig wachsenden Beliebtheit. Immer mehr Käufer von Neu- und Gebrauchtwagen sehen die Zuverlässigkeit als das wichtigste Kaufkriterium an. Auf der anderen Seite wird vermehrt der Nachweis der Systemzuverlässigkeit von Anlagen und Anlagenkomponenten verlangt. In der Regel beruht jeder Zuverlässigkeitsnachweis auf einem geeigneten Lebensdauermodell, das den Zusammenhang zwischen der Lebensdauer und der Belastung charakterisiert. Die existierenden Lebensdauermodelle sind jedoch oft auf bestimmte Anwendungen limitiert und daher auch nicht allgemeingültig. Viele von diesen Ansätzen können oft mechanische und thermische Belastungen abbilden. Allerdings besteht oft keine Möglichkeit geometrische Designparameter oder Fertigungsparameter zu berücksichtigen. Was jedoch viel wichtiger ist: Gängige Modellierungsansätze bilden keine Wechselwirkungen zwischen den einzelnen Belastungsfaktoren ab. Die einzige Möglichkeit dieses Problem zu lösen ist der Weg über Experimente. Die statistische Versuchsplanung (DoE) stellt ein geeignetes Rahmenwerk an statistischen Werkzeugen zur Verfügung, um auf Grundlage effizienten Experimenten ein empirisches Modell zu entwickeln. Das Problem besteht allerdings darin, dass DoE normalverteilte Residuen voraussetzt. Im Falle von Lebensdauertests ist die Zielgrö{ß}e in der Regel weibullverteilt und folgt keiner Normalverteilung mehr. In diesem Ursprünglichen Zustand ist keine sinnvolle Lebensdauermodellierung möglich. Die fehlende Kenntnis eines Lebensdauermodells erschwert aber sämtliche Aussagen bezüglich der Lebensdauer von technischen Systemen. Das wiederum führt dazu, dass keine vernünftige Zuverlässigkeitsanforderungen definiert werden kann. Folglich bleibt ein Zuverlässigkeitsnachweis aus. Um diesen Ansprüchen gerecht zu werden, wird im Rahmen dieser Arbeit eine Möglichkeit vorgestellt anwendungsspezifische Lebensdauermodelle zu entwickeln. Dieser Ansatz greift den klassischen DoE-Gedanken auf und entwickelt diesen zu Lebensdauer-DoE (L-DoE) weiter. Nach der kritischen Auseinandersetzung mit den Ansätzen zur Entwicklung von Lebensdauermodellen nach dem Stand der Technik werden Schwachstellen aufgedeckt und Optimierungspotenziale aufgezeigt. Um anwendungspezifische Ausfallprognosen unter realen Feldbedinungen zu ermöglichen, wird eine Methodik entwickelt, die den neuen L-DoE-Ansatz als wichtiges Kernelement beinhaltet. Neben der Systemanalyse und der Vorselektion relevanter Belastungsfaktoren, hat die neue Methodik die Entwicklung eines L-DoE-Modells im Versuch und die Integration von Felddaten zum Inhalt. Zur Entwicklung eines L-DoE-Modells stehen dabei vier unterschiedliche Ansätze zur Verfügung: der Box-Cox-Ansatz, Generalized-Logarithmic-Linear-Ansatz, Proportional-Hazard-Ansatz nund der Lifetime-Regression-Ansatz zur Verfügung. Eine Analyse dieser Ansätze zeigt, dass der Box-Cox-Ansatz sehr ungenaue Ausfallprognosen liefern kann. Dies lässt sich auf die Verwischung der Effekt infolge der Transformation der Daten zurückführen. Da Lebensdauerprognosen stark von den geschätzten Modellparametern abhängt, ist das Verfahren zur Parameterschätzung sehr entscheidend. In der Zuverlässigkeitstechnik hat sich dabei der Maximum-Likelihood-Estimation-Ansatz durchgesetzt, bei dem die unbekannten Modellparameter durch die Maximierung der Likelihoodfunktion bestimmt werden. Gängige MLE-Verfahren, wie beispielsweise Newton-Raphson, sind auf die Kenntnis von Startwerten angewiesen. Das erweist sich in der Praxis vor allem bei multidimensionalen Modellen als sehr schwierig. Zur Lösung dieses Problems werden vier Ansätze entwickelt und am Beispiel von zwei unterschiedlich komplexen Lebensdauermodellen untersucht. Die Pattern-Search-Ansatz, Latin-Hypercube-Steepest-Ascent-Ansatz und Latin-Hypercube-Pattern-Search-Ansatz zeigen dabei die besten Ergebnisse. Allgemein lässt sich aber sagen, dass es stark vom Lebensdauermodell abhängt welches Verfahren zur Parameterschätzung eingesetzt werden soll. Damit bereits vor der eigentlichen Versuchsplanung der Versuchsaufwand abgeschätzt werden kann, wird eine auf der Monte-Carlo-Simulation basierende Methodik zur Trennschärfeanalyse entwickelt und anhand einer Simulationsstudie demonstriert. Erste Ergebnisse zeigen, dass die Trennschärfe erwartungsgemä{ß} mit zunehmendem Stichprobenumfang zunimmt. Au{ß}erdem ist bei dem in der Praxis am häufigsten auftretende Fall, dass die Stichprobengrö{ß}e aus drei Prüflingen besteht hohe Aufmerksamkeit geboten. Dies kann unter Umständen dazu führen, dass wahre Effekte erkannt werden obwohl in Wirklichkeit die Ergebnisse auf den Zufall zurückzuführen sind. Gerade bei stark überdimensionierten Produkten muss mit langen Laufzeiten gerechnet werden, um erste Ausfälle im Feld zu erhalten. Aus diesem Grund liegen oft keinerlei Felddaten vor, mit denen ein Lebensdauermodell unter Feldbedingungen mit der L-DoE-Methodik entwickelt werden kann. Die einzige Möglichkeit sind ineffiziente Lebensdauertests unter realen Feldbedingungen. Alternative Möglichkeiten Vorwissen bei der Modellierung zu berücksichtigen sind derzeit nicht zuverlässig genug. Darüber hinaus steht gerade bei Neuentwicklungen oft kein Vorwissen zur Verfügung. Gelöst wird das Problem dadurch, dass ein neuer Ansatz zur Extrapolation auf das Feldniveau entwickelt wird. Der Kerngedanke beruht darin die mit L-DoE entwickelten Lebensdauermodelle mit den physikalisch basierten Modellen, wie beispielsweise dem Arrhenius-Modell zu verknüpfen. Dadurch werden allgemeingültige Zusammenhänge zwischen der Lebensdauer und Belastung angenommen, die Extrapolationen zulassen. Um die Anwendbarkeit zu erleichtern, wird die L-DoE-Methodik softwaretechnisch in MATLAB umgesetzt. Die Übertragung der Stichprobenergebnisse auf die Grundgesamtheit erfolgt mit Hilfe von Vertrauensintervallen. Dazu wird im Rahmen der Arbeit eine Methodik vorgestellt, um die entwickelten L-DoE-Modelle in die Berechnung und Simulation von Vertrauensintervallen zu integrieren. Dazu werden die Fisher-Vertrauensintervall, Pseudo-Vertrauensintervall, Nicht-Parametrische-Booststrap-Perzentil-Vertrauensintervall und Monte-Carlo-Vertrauensintervall entwickelt. Im Anschluss werden die entwickelten Ansätze einer Simulationsstudie unterzogen. Hierbei zeigen alle Ansätze unterschiedlich gro{ß}e Vertrauensintervalle. Im letzten Teil dieser Arbeit wird die neue Methodik um den L-DoE-Ansatz auf ein exemplarisches Zahnriemengetriebe angewandt und ein Lebensdauermodell entwickelt.}
-      \field{title}{Statistische Versuchsplanung in der Lebensdauererprobung mit Vertrauensintervallen}
-      \field{type}{phdthesis}
-      \field{year}{2021}
-      \verb{doi}
-      \verb 10.18419/OPUS-11728
-      \endverb
-    \endentry
     \entry{Grundler.2024}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=f784da2389a332859e32df8d9d618d14}{%
@@ -1275,6 +1247,34 @@
       \endverb
       \verb{file}
       \verb Grundler 2024 - Zuverl{\"a}ssigkeitsnachweis von Systemen durch Komponenten:Attachments/Grundler 2024 - Zuverl{\"a}ssigkeitsnachweis von Systemen durch Komponenten.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Kremer.2021}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{fullhash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{fullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{bibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorbibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authornamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorfullhash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorfullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Die Erfahrung zeigt, dass sich sowohl die meisten historischen Unfälle und oft damit verbundenen Rückrufaktionen auf einen suboptimalen Zuverlässigkeits- und Erprobungsprozess zurückführen lassen. Und auch wenn durch den zunehmenden Wettbewerbsdruck die Unternehmen gezwungen sind schonend mit den Ressourcen umzugehen, kann keine Berechnung oder gar Simulation die Erprobung komplett ersetzen. Die Zuverlässigkeit zählt mittlerweile zu einem wichtigen Schlüsselfaktor in einem Qualitätsprozess und erfreut sich zudem einer stetig wachsenden Beliebtheit. Immer mehr Käufer von Neu- und Gebrauchtwagen sehen die Zuverlässigkeit als das wichtigste Kaufkriterium an. Auf der anderen Seite wird vermehrt der Nachweis der Systemzuverlässigkeit von Anlagen und Anlagenkomponenten verlangt. In der Regel beruht jeder Zuverlässigkeitsnachweis auf einem geeigneten Lebensdauermodell, das den Zusammenhang zwischen der Lebensdauer und der Belastung charakterisiert. Die existierenden Lebensdauermodelle sind jedoch oft auf bestimmte Anwendungen limitiert und daher auch nicht allgemeingültig. Viele von diesen Ansätzen können oft mechanische und thermische Belastungen abbilden. Allerdings besteht oft keine Möglichkeit geometrische Designparameter oder Fertigungsparameter zu berücksichtigen. Was jedoch viel wichtiger ist: Gängige Modellierungsansätze bilden keine Wechselwirkungen zwischen den einzelnen Belastungsfaktoren ab. Die einzige Möglichkeit dieses Problem zu lösen ist der Weg über Experimente. Die statistische Versuchsplanung (DoE) stellt ein geeignetes Rahmenwerk an statistischen Werkzeugen zur Verfügung, um auf Grundlage effizienten Experimenten ein empirisches Modell zu entwickeln. Das Problem besteht allerdings darin, dass DoE normalverteilte Residuen voraussetzt. Im Falle von Lebensdauertests ist die Zielgrö{ß}e in der Regel weibullverteilt und folgt keiner Normalverteilung mehr. In diesem Ursprünglichen Zustand ist keine sinnvolle Lebensdauermodellierung möglich. Die fehlende Kenntnis eines Lebensdauermodells erschwert aber sämtliche Aussagen bezüglich der Lebensdauer von technischen Systemen. Das wiederum führt dazu, dass keine vernünftige Zuverlässigkeitsanforderungen definiert werden kann. Folglich bleibt ein Zuverlässigkeitsnachweis aus. Um diesen Ansprüchen gerecht zu werden, wird im Rahmen dieser Arbeit eine Möglichkeit vorgestellt anwendungsspezifische Lebensdauermodelle zu entwickeln. Dieser Ansatz greift den klassischen DoE-Gedanken auf und entwickelt diesen zu Lebensdauer-DoE (L-DoE) weiter. Nach der kritischen Auseinandersetzung mit den Ansätzen zur Entwicklung von Lebensdauermodellen nach dem Stand der Technik werden Schwachstellen aufgedeckt und Optimierungspotenziale aufgezeigt. Um anwendungspezifische Ausfallprognosen unter realen Feldbedinungen zu ermöglichen, wird eine Methodik entwickelt, die den neuen L-DoE-Ansatz als wichtiges Kernelement beinhaltet. Neben der Systemanalyse und der Vorselektion relevanter Belastungsfaktoren, hat die neue Methodik die Entwicklung eines L-DoE-Modells im Versuch und die Integration von Felddaten zum Inhalt. Zur Entwicklung eines L-DoE-Modells stehen dabei vier unterschiedliche Ansätze zur Verfügung: der Box-Cox-Ansatz, Generalized-Logarithmic-Linear-Ansatz, Proportional-Hazard-Ansatz nund der Lifetime-Regression-Ansatz zur Verfügung. Eine Analyse dieser Ansätze zeigt, dass der Box-Cox-Ansatz sehr ungenaue Ausfallprognosen liefern kann. Dies lässt sich auf die Verwischung der Effekt infolge der Transformation der Daten zurückführen. Da Lebensdauerprognosen stark von den geschätzten Modellparametern abhängt, ist das Verfahren zur Parameterschätzung sehr entscheidend. In der Zuverlässigkeitstechnik hat sich dabei der Maximum-Likelihood-Estimation-Ansatz durchgesetzt, bei dem die unbekannten Modellparameter durch die Maximierung der Likelihoodfunktion bestimmt werden. Gängige MLE-Verfahren, wie beispielsweise Newton-Raphson, sind auf die Kenntnis von Startwerten angewiesen. Das erweist sich in der Praxis vor allem bei multidimensionalen Modellen als sehr schwierig. Zur Lösung dieses Problems werden vier Ansätze entwickelt und am Beispiel von zwei unterschiedlich komplexen Lebensdauermodellen untersucht. Die Pattern-Search-Ansatz, Latin-Hypercube-Steepest-Ascent-Ansatz und Latin-Hypercube-Pattern-Search-Ansatz zeigen dabei die besten Ergebnisse. Allgemein lässt sich aber sagen, dass es stark vom Lebensdauermodell abhängt welches Verfahren zur Parameterschätzung eingesetzt werden soll. Damit bereits vor der eigentlichen Versuchsplanung der Versuchsaufwand abgeschätzt werden kann, wird eine auf der Monte-Carlo-Simulation basierende Methodik zur Trennschärfeanalyse entwickelt und anhand einer Simulationsstudie demonstriert. Erste Ergebnisse zeigen, dass die Trennschärfe erwartungsgemä{ß} mit zunehmendem Stichprobenumfang zunimmt. Au{ß}erdem ist bei dem in der Praxis am häufigsten auftretende Fall, dass die Stichprobengrö{ß}e aus drei Prüflingen besteht hohe Aufmerksamkeit geboten. Dies kann unter Umständen dazu führen, dass wahre Effekte erkannt werden obwohl in Wirklichkeit die Ergebnisse auf den Zufall zurückzuführen sind. Gerade bei stark überdimensionierten Produkten muss mit langen Laufzeiten gerechnet werden, um erste Ausfälle im Feld zu erhalten. Aus diesem Grund liegen oft keinerlei Felddaten vor, mit denen ein Lebensdauermodell unter Feldbedingungen mit der L-DoE-Methodik entwickelt werden kann. Die einzige Möglichkeit sind ineffiziente Lebensdauertests unter realen Feldbedingungen. Alternative Möglichkeiten Vorwissen bei der Modellierung zu berücksichtigen sind derzeit nicht zuverlässig genug. Darüber hinaus steht gerade bei Neuentwicklungen oft kein Vorwissen zur Verfügung. Gelöst wird das Problem dadurch, dass ein neuer Ansatz zur Extrapolation auf das Feldniveau entwickelt wird. Der Kerngedanke beruht darin die mit L-DoE entwickelten Lebensdauermodelle mit den physikalisch basierten Modellen, wie beispielsweise dem Arrhenius-Modell zu verknüpfen. Dadurch werden allgemeingültige Zusammenhänge zwischen der Lebensdauer und Belastung angenommen, die Extrapolationen zulassen. Um die Anwendbarkeit zu erleichtern, wird die L-DoE-Methodik softwaretechnisch in MATLAB umgesetzt. Die Übertragung der Stichprobenergebnisse auf die Grundgesamtheit erfolgt mit Hilfe von Vertrauensintervallen. Dazu wird im Rahmen der Arbeit eine Methodik vorgestellt, um die entwickelten L-DoE-Modelle in die Berechnung und Simulation von Vertrauensintervallen zu integrieren. Dazu werden die Fisher-Vertrauensintervall, Pseudo-Vertrauensintervall, Nicht-Parametrische-Booststrap-Perzentil-Vertrauensintervall und Monte-Carlo-Vertrauensintervall entwickelt. Im Anschluss werden die entwickelten Ansätze einer Simulationsstudie unterzogen. Hierbei zeigen alle Ansätze unterschiedlich gro{ß}e Vertrauensintervalle. Im letzten Teil dieser Arbeit wird die neue Methodik um den L-DoE-Ansatz auf ein exemplarisches Zahnriemengetriebe angewandt und ein Lebensdauermodell entwickelt.}
+      \field{title}{Statistische Versuchsplanung in der Lebensdauererprobung mit Vertrauensintervallen}
+      \field{type}{phdthesis}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.18419/OPUS-11728
       \endverb
     \endentry
     \entry{Coleman.1993}{article}{}{}
@@ -1312,6 +1312,38 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.2307/1269280
+      \endverb
+    \endentry
+    \entry{Gundlach.2004}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=378b8e259b386f1d908f287a81d3f95f}{%
+           family={Gundlach},
+           familyi={G\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Kassel}%
+      }
+      \strng{namehash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{fullhash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{fullhashraw}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{bibnamehash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{authorbibnamehash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{authornamehash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{authorfullhash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{authorfullhashraw}{378b8e259b386f1d908f287a81d3f95f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Entwicklung eines ganzheitlichen Vorgehensmodells zur problemorientierten Anwendung des statistischen Versuchsplanung}
+      \field{type}{Zugl.: Kassel, Univ., Diss, 2004}
+      \verb{urlraw}
+      \verb http://d-nb.info/971843546/34
+      \endverb
+      \verb{url}
+      \verb http://d-nb.info/971843546/34
       \endverb
     \endentry
     \entry{RisbergEllekjr.1998}{article}{}{}
@@ -2209,6 +2241,48 @@
       \field{year}{2010}
       \verb{doi}
       \verb 10.1002/9780470556986
+      \endverb
+    \endentry
+    \entry{Box.1988}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=beeaf743dc5d4fb9bbe34e165a1de434}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
+           family={Bisgaard},
+           familyi={B\bibinitperiod},
+           given={S{ø}ren},
+           giveni={S\bibinitperiod}}}%
+        {{hash=656f9d99c2a19df6e255c8f95f592b0c}{%
+           family={Fung},
+           familyi={F\bibinitperiod},
+           given={Conrad},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a55f100b54be2cea5bd69ff52ef6cff1}
+      \strng{fullhash}{676c8192e299d2474e41a89c49de38da}
+      \strng{fullhashraw}{676c8192e299d2474e41a89c49de38da}
+      \strng{bibnamehash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authorbibnamehash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authornamehash}{a55f100b54be2cea5bd69ff52ef6cff1}
+      \strng{authorfullhash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authorfullhashraw}{676c8192e299d2474e41a89c49de38da}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0748-8017}
+      \field{journaltitle}{Quality and Reliability Engineering International}
+      \field{number}{2}
+      \field{title}{An explanation and critique of taguchi's contributions to quality engineering}
+      \field{volume}{4}
+      \field{year}{1988}
+      \field{pages}{123\bibrangedash 131}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1002/qre.4680040207
       \endverb
     \endentry
   \enddatalist
