@@ -1346,6 +1346,124 @@
       \verb http://d-nb.info/971843546/34
       \endverb
     \endentry
+    \entry{Mayers.1997}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7aa05a2685adf946e74256782bec5282}{%
+           family={Mayers},
+           familyi={M\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Aachen}%
+      }
+      \list{publisher}{1}{%
+        {Shaker}%
+      }
+      \strng{namehash}{7aa05a2685adf946e74256782bec5282}
+      \strng{fullhash}{7aa05a2685adf946e74256782bec5282}
+      \strng{fullhashraw}{7aa05a2685adf946e74256782bec5282}
+      \strng{bibnamehash}{7aa05a2685adf946e74256782bec5282}
+      \strng{authorbibnamehash}{7aa05a2685adf946e74256782bec5282}
+      \strng{authornamehash}{7aa05a2685adf946e74256782bec5282}
+      \strng{authorfullhash}{7aa05a2685adf946e74256782bec5282}
+      \strng{authorfullhashraw}{7aa05a2685adf946e74256782bec5282}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Als Ms. gedr}
+      \field{isbn}{3826524977}
+      \field{series}{Berichte aus der Produktionstechnik}
+      \field{title}{Proze{ß}- und Produktoptimierung mit Hilfe der statistischen Versuchsmethodik: Zugl.: Aachen, Techn. Hochsch., Diss., 1997}
+      \field{volume}{97,9}
+      \field{year}{1997}
+    \endentry
+    \entry{Lindemann.2008}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=42b5fd0b7e31007f8c523c23e6213ca4}{%
+           family={Lindemann},
+           familyi={L\bibinitperiod},
+           given={Udo},
+           giveni={U\bibinitperiod}}}%
+        {{hash=928591e2f032bfeef444ee3f38a34b2d}{%
+           family={Maurer},
+           familyi={M\bibinitperiod},
+           given={Maik},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0a93ba26271374f5df0358e14dd8951e}{%
+           family={Braun},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{06d8c16d8df8ef3e1f2d308a2fea81c7}
+      \strng{fullhash}{dff827c6c99690c358cc79e787dc805a}
+      \strng{fullhashraw}{dff827c6c99690c358cc79e787dc805a}
+      \strng{bibnamehash}{dff827c6c99690c358cc79e787dc805a}
+      \strng{authorbibnamehash}{dff827c6c99690c358cc79e787dc805a}
+      \strng{authornamehash}{06d8c16d8df8ef3e1f2d308a2fea81c7}
+      \strng{authorfullhash}{dff827c6c99690c358cc79e787dc805a}
+      \strng{authorfullhashraw}{dff827c6c99690c358cc79e787dc805a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-87888-9}
+      \field{title}{Structural Complexity Management: An Approach for the Field of Product Design}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1007/978-3-540-87889-6
+      \endverb
+    \endentry
+    \entry{Box.1988}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=beeaf743dc5d4fb9bbe34e165a1de434}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
+           family={Bisgaard},
+           familyi={B\bibinitperiod},
+           given={S{ø}ren},
+           giveni={S\bibinitperiod}}}%
+        {{hash=656f9d99c2a19df6e255c8f95f592b0c}{%
+           family={Fung},
+           familyi={F\bibinitperiod},
+           given={Conrad},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a55f100b54be2cea5bd69ff52ef6cff1}
+      \strng{fullhash}{676c8192e299d2474e41a89c49de38da}
+      \strng{fullhashraw}{676c8192e299d2474e41a89c49de38da}
+      \strng{bibnamehash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authorbibnamehash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authornamehash}{a55f100b54be2cea5bd69ff52ef6cff1}
+      \strng{authorfullhash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authorfullhashraw}{676c8192e299d2474e41a89c49de38da}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0748-8017}
+      \field{journaltitle}{Quality and Reliability Engineering International}
+      \field{number}{2}
+      \field{title}{An explanation and critique of taguchi's contributions to quality engineering}
+      \field{volume}{4}
+      \field{year}{1988}
+      \field{pages}{123\bibrangedash 131}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1002/qre.4680040207
+      \endverb
+    \endentry
     \entry{RisbergEllekjr.1998}{article}{}{}
       \name{author}{2}{}{%
         {{hash=f515dcde667f80f75bb5b4dc16172fab}{%
@@ -1367,8 +1485,8 @@
       \strng{authornamehash}{0f0d568b2491039855ed3fe37d54ee0e}
       \strng{authorfullhash}{0f0d568b2491039855ed3fe37d54ee0e}
       \strng{authorfullhashraw}{0f0d568b2491039855ed3fe37d54ee0e}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1359-8538}
@@ -1403,8 +1521,8 @@
       \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
       \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0954-4828}
@@ -1442,8 +1560,8 @@
       \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
       \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{An intuition-based approach enables you to master time series analysis with ease Time Series Analysis and Forecasting by Example provides the fundamental techniques in time series analysis using various examples. By introducing necessary theory through examples that showcase the discussed topics, the authors successfully help readers develop an intuitive understanding of seemingly complicated time series models and their implications. The book presents methodologies for time series analysis in a simplified, example-based approach. Using graphics, the authors discuss e Frontmatter -- Time Series Data: Examples and Basic Concepts -- Visualizing Time Series Data Structures: Graphical Tools -- Stationary Models -- Nonstationary Models -- Seasonal Models -- Time Series Model Selection -- Additional Issues in ARIMA Models -- Transfer Function Models -- Additional Topics -- Appendix A: Datasets Used in the Examples -- Appendix B: Datasets Used in the Exercises -- Bibliography -- Index.}
@@ -1487,8 +1605,8 @@
       \strng{authornamehash}{6910ad762b52d0b3a9f87266e1dc1988}
       \strng{authorfullhash}{328305cb2473619c908c23ee426a1f07}
       \strng{authorfullhashraw}{328305cb2473619c908c23ee426a1f07}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-4065}
@@ -1521,8 +1639,8 @@
       \strng{authornamehash}{6f00dbcc041f65d1e4ff5157396072d1}
       \strng{authorfullhash}{6f00dbcc041f65d1e4ff5157396072d1}
       \strng{authorfullhashraw}{6f00dbcc041f65d1e4ff5157396072d1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -1553,8 +1671,8 @@
       \strng{authornamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
       \strng{authorfullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
       \strng{authorfullhashraw}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1st}
@@ -1591,8 +1709,8 @@
       \strng{authornamehash}{bce756dc5759b1bc87d9c7d067cda739}
       \strng{authorfullhash}{92910794072f549b819af4c181fdd243}
       \strng{authorfullhashraw}{92910794072f549b819af4c181fdd243}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2025 Annual Reliability and Maintainability Symposium (RAMS)}
@@ -1631,8 +1749,8 @@
       \strng{authornamehash}{111284965b95d341f0c326dffe053008}
       \strng{authorfullhash}{1237100d14ee095544f4efae13ae199e}
       \strng{authorfullhashraw}{1237100d14ee095544f4efae13ae199e}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0898-2112}
@@ -1667,8 +1785,8 @@
       \strng{authornamehash}{b71bd38e2484817468107b12da236bbc}
       \strng{authorfullhash}{b71bd38e2484817468107b12da236bbc}
       \strng{authorfullhashraw}{b71bd38e2484817468107b12da236bbc}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Statistical Planning and Inference}
@@ -1700,8 +1818,8 @@
       \strng{authornamehash}{6eb96cefa94addb37eb003547b1710b5}
       \strng{authorfullhash}{6eb96cefa94addb37eb003547b1710b5}
       \strng{authorfullhashraw}{6eb96cefa94addb37eb003547b1710b5}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00359246}
@@ -1754,8 +1872,8 @@
       \strng{authornamehash}{fd67122f44d94b81ea483acf74cc3cb9}
       \strng{authorfullhash}{bd58e8c12f38ea84695af5f81c73be6e}
       \strng{authorfullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Commun. in Statistics}
@@ -1794,8 +1912,8 @@
       \strng{authornamehash}{8c8501f34b404c9a5de4737d0eff8dd6}
       \strng{authorfullhash}{8c8501f34b404c9a5de4737d0eff8dd6}
       \strng{authorfullhashraw}{8c8501f34b404c9a5de4737d0eff8dd6}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-4065}
@@ -1833,8 +1951,8 @@
       \strng{authornamehash}{e165621fd636dc69c8af3ffc3f2f7a99}
       \strng{authorfullhash}{63c50a1fc911e99823fc3a6cac7aae6d}
       \strng{authorfullhashraw}{63c50a1fc911e99823fc3a6cac7aae6d}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-4065}
@@ -1867,8 +1985,8 @@
       \strng{authornamehash}{b41eb607d0cb53e89941a48d5f8c7070}
       \strng{authorfullhash}{b41eb607d0cb53e89941a48d5f8c7070}
       \strng{authorfullhashraw}{b41eb607d0cb53e89941a48d5f8c7070}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -1914,8 +2032,8 @@
       \strng{authornamehash}{360122917dc07abd38b27440bffeda7a}
       \strng{authorfullhash}{4f6b0ad12b1a228cf6e95e4ed4091377}
       \strng{authorfullhashraw}{4f6b0ad12b1a228cf6e95e4ed4091377}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781119388630}
@@ -1939,8 +2057,8 @@
       \strng{authornamehash}{e6ca6b3bff2ac6561da420340530dc34}
       \strng{authorfullhash}{e6ca6b3bff2ac6561da420340530dc34}
       \strng{authorfullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Industrial Engineering}
@@ -1980,8 +2098,8 @@
       \strng{authornamehash}{e91d83cc311fae6b023556eae85bbd5d}
       \strng{authorfullhash}{e91d83cc311fae6b023556eae85bbd5d}
       \strng{authorfullhashraw}{e91d83cc311fae6b023556eae85bbd5d}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781119385288}
@@ -2004,8 +2122,8 @@
       \strng{authornamehash}{c0614e3cda3d136f04f8e826877d2c3d}
       \strng{authorfullhash}{c0614e3cda3d136f04f8e826877d2c3d}
       \strng{authorfullhashraw}{c0614e3cda3d136f04f8e826877d2c3d}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -2033,8 +2151,8 @@
       \strng{authornamehash}{6eeb37aec54485fe044a9e233abb2183}
       \strng{authorfullhash}{6eeb37aec54485fe044a9e233abb2183}
       \strng{authorfullhashraw}{6eeb37aec54485fe044a9e233abb2183}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Annals of Mathematical Statistics}
@@ -2072,8 +2190,8 @@
       \strng{authornamehash}{fc004a97c21adebe39252fa234f7b0db}
       \strng{authorfullhash}{fc004a97c21adebe39252fa234f7b0db}
       \strng{authorfullhashraw}{fc004a97c21adebe39252fa234f7b0db}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. ed.}
@@ -2114,8 +2232,8 @@
       \strng{authornamehash}{c41fad29bb532c1a4c0d761a38572952}
       \strng{authorfullhash}{c41fad29bb532c1a4c0d761a38572952}
       \strng{authorfullhashraw}{c41fad29bb532c1a4c0d761a38572952}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. ed.}
@@ -2152,8 +2270,8 @@
       \strng{authornamehash}{565b1403c3b3172839fa752390fdd3bf}
       \strng{authorfullhash}{565b1403c3b3172839fa752390fdd3bf}
       \strng{authorfullhashraw}{565b1403c3b3172839fa752390fdd3bf}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The Design of Experiments}
@@ -2176,8 +2294,8 @@
       \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
       \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
       \field{extraname}{3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -2230,8 +2348,8 @@
       \strng{authorfullhash}{3ae1ad58d7bca135f45130dd1e459966}
       \strng{authorfullhashraw}{3ae1ad58d7bca135f45130dd1e459966}
       \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. ed.}
@@ -2241,48 +2359,6 @@
       \field{year}{2010}
       \verb{doi}
       \verb 10.1002/9780470556986
-      \endverb
-    \endentry
-    \entry{Box.1988}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=beeaf743dc5d4fb9bbe34e165a1de434}{%
-           family={Box},
-           familyi={B\bibinitperiod},
-           given={George},
-           giveni={G\bibinitperiod}}}%
-        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
-           family={Bisgaard},
-           familyi={B\bibinitperiod},
-           given={S{ø}ren},
-           giveni={S\bibinitperiod}}}%
-        {{hash=656f9d99c2a19df6e255c8f95f592b0c}{%
-           family={Fung},
-           familyi={F\bibinitperiod},
-           given={Conrad},
-           giveni={C\bibinitperiod}}}%
-      }
-      \strng{namehash}{a55f100b54be2cea5bd69ff52ef6cff1}
-      \strng{fullhash}{676c8192e299d2474e41a89c49de38da}
-      \strng{fullhashraw}{676c8192e299d2474e41a89c49de38da}
-      \strng{bibnamehash}{676c8192e299d2474e41a89c49de38da}
-      \strng{authorbibnamehash}{676c8192e299d2474e41a89c49de38da}
-      \strng{authornamehash}{a55f100b54be2cea5bd69ff52ef6cff1}
-      \strng{authorfullhash}{676c8192e299d2474e41a89c49de38da}
-      \strng{authorfullhashraw}{676c8192e299d2474e41a89c49de38da}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0748-8017}
-      \field{journaltitle}{Quality and Reliability Engineering International}
-      \field{number}{2}
-      \field{title}{An explanation and critique of taguchi's contributions to quality engineering}
-      \field{volume}{4}
-      \field{year}{1988}
-      \field{pages}{123\bibrangedash 131}
-      \range{pages}{9}
-      \verb{doi}
-      \verb 10.1002/qre.4680040207
       \endverb
     \endentry
   \enddatalist

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  3 DEC 2025 01:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  4 DEC 2025 01:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1609,11 +1609,11 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--22
 
 
 {C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (diss_arndt.formulas-gls
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 69.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 70.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--119
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--120
  [] [] 
  []
 
@@ -1721,23 +1721,18 @@ Package pdftex.def Info: plots/ma_abb2.1_weibull.pdf  used on input line 144.
 
 [20]
 
-[21]) (chapters/chapter3_ansatz.tex
+[21]
 
-[22]
-chapter 3.
-) (chapters/chapter4_screening.tex
+[22]) (chapters/chapter3_ansatz.tex
 
-[23
-
-
-]
+[23]
 
 [24
 
 
 ]
-chapter 4.
-) (chapters/chapter5_entwurf.tex
+chapter 3.
+) (chapters/chapter4_screening.tex
 
 [25]
 
@@ -1745,8 +1740,8 @@ chapter 4.
 
 
 ]
-chapter 5.
-) (chapters/chapter6_casestudy.tex
+chapter 4.
+) (chapters/chapter5_entwurf.tex
 
 [27]
 
@@ -1754,8 +1749,8 @@ chapter 5.
 
 
 ]
-chapter 6.
-) (chapters/chapter7_zusammenfassung.tex
+chapter 5.
+) (chapters/chapter6_casestudy.tex
 
 [29]
 
@@ -1763,12 +1758,21 @@ chapter 6.
 
 
 ]
-chapter 7.
-)
+chapter 6.
+) (chapters/chapter7_zusammenfassung.tex
 
 [31]
 
 [32
+
+
+]
+chapter 7.
+)
+
+[33]
+
+[34
 
 
 ]
@@ -1785,11 +1789,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[33{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
-
-[34]
-
-[35]
+[35{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
 
 [36]
 
@@ -1799,12 +1799,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 [39]
 
-[40
+[40]
+
+[41]
+
+[42
 
 
 ]
 
-[41] (diss_arndt.aux)
+[43] (diss_arndt.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -1816,17 +1820,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68100 strings out of 473577
- 1611534 string characters out of 5716318
- 2812641 words of memory out of 5000000
- 89843 multiletter control sequences out of 15000+600000
+ 68110 strings out of 473577
+ 1611872 string characters out of 5716318
+ 2812765 words of memory out of 5000000
+ 89849 multiletter control sequences out of 15000+600000
  646776 words of font info for 217 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,20n,121p,10947b,3026s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (57 pages, 774647 bytes).
+Output written on diss_arndt.pdf (59 pages, 780607 bytes).
 PDF statistics:
- 1584 PDF objects out of 1728 (max. 8388607)
- 261 named destinations out of 1000 (max. 500000)
+ 1605 PDF objects out of 1728 (max. 8388607)
+ 265 named destinations out of 1000 (max. 500000)
  46018 words of extra memory for PDF output out of 51595 (max. 10000000)
 
