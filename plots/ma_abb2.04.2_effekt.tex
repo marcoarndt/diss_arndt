@@ -1,0 +1,63 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=\figurewidth,
+height=0.967\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=-1.5,
+xmax=1.5,
+xtick={-1,1},
+xlabel style={font=\color{mycolor1}},
+xlabel={$x_1$},
+ymin=0,
+ymax=5,
+ytick={\empty},
+ylabel style={font=\color{mycolor1}},
+ylabel={$y$},
+axis background/.style={fill=white}
+]
+\addplot [color=black, line width=1.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+-1	2\\
+1	4\\
+};
+\node[right, align=left, inner sep=0, rotate=28, font=\color{mycolor1}]
+at (axis cs:-0.8,2.8) {$x_2 = +1$};
+\addplot [color=black, dashed, line width=1.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+-1	1\\
+1	1.5\\
+};
+\node[right, align=left, inner sep=0, rotate=9, font=\color{mycolor1}]
+at (axis cs:-0.8,1.4) {$x_2 = -1$};
+\addplot [color=black, dotted, line width=1.0pt, forget plot]
+  table[row sep=crcr]{%
+1	2\\
+1.2	2\\
+};
+\addplot [color=black, dotted, line width=1.0pt, forget plot]
+  table[row sep=crcr]{%
+1	4\\
+1.2	4\\
+};
+\node[right, align=left, inner sep=0, font=\color{mycolor1}]
+at (axis cs:1.1,3) {$+E_2$};
+\addplot [color=black, dotted, line width=1.0pt, forget plot]
+  table[row sep=crcr]{%
+1	1\\
+1.2	1\\
+};
+\addplot [color=black, dotted, line width=1.0pt, forget plot]
+  table[row sep=crcr]{%
+1	1.5\\
+1.2	1.5\\
+};
+\node[right, align=left, inner sep=0, font=\color{mycolor1}]
+at (axis cs:1.1,1.25) {$+E_3$};
+\end{axis}
+\end{tikzpicture}%
