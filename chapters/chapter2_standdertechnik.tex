@@ -107,12 +107,13 @@ Die \textbf{empirische Standardabweichung} $\sym{s} = \sqrt{\sym{s_sq}}$ dient e
 
 Während die deskriptiven Statistiken $\sym{x_bar}$ und $\sym{s_sq}$ die zentrale Tendenz und die Streuung der vorliegenden Stichprobe quantifizieren, erlauben sie keine Extrapolation oder die Modellierung der zugrundeliegenden Funktionen $\sym{F}(\sym{t})$ und $\sym{f}(\sym{t})$ der Grundgesamtheit.
 Um eine prädiktive, mathematische Beschreibung des stochastischen Ausfallverhaltens zu erhalten, müssen die in Abschnitt~\ref{subsec:begriffezuv} definierten Lebensdauerfunktionen durch geeignete parametrische Verteilungsmodelle approximiert werden.
-Diese Verteilungsmodelle bieten eine geschlossene mathematische Form für \ac{cdf} und \ac{pdf} und ermöglichen es, das komplexe Ausfallverhalten durch eine geringe Anzahl von Parametern zu charakterisieren.\
+Andernfalls können nur nichtparametrische Modellierungsansätze zur Schätzung der kumulierten Wahrscheinlichkeit in Überlebensfunktionen wie beispielsweise nach \textcite{Kaplan.1958} genutzt werden \cite{Rigdon.2022,Meeker.2022}.
+Die Verteilungsmodelle hingegen bieten eine geschlossene mathematische Form für \ac{cdf} und \ac{pdf} und ermöglichen es, das komplexe Ausfallverhalten durch eine geringe Anzahl von Parametern zu charakterisieren.\
 
 \subsubsection{Weibull-Verteilung} \label{subsubsec:weibull}
 In der Zuverlässigkeitstechnik hat sich die \textbf{Weibull-Verteilung} aufgrund ihrer hohen Flexibilität als das am häufigsten verwendete Modell etabliert.
 Je nach zugrundeliegendem physikalischen Ausfallmechanismus finden jedoch auch andere statistische Verteilungen Anwendung, wie beispielsweise die \textbf{Lognormal-Verteilung} (häufig bei Ermüdungs-, Korrosions- oder Diffusionsprozessen), die \textbf{Exponentialverteilung} (zur Modellierung von Zufallsausfällen ohne Alterungseffekte) oder die \textbf{Beta-Verteilung} (allgemein zur formenreichen Modellierung von $\sym{R}$ über dem festen Intervall $[0,1]$).
-Für weitere Ausführungen dazu sei an dieser Stelle jedoch auf bereits ausreichend diskutierte Aufbereitungen von \textcite{Bertsche.2022,Birolini.2017,Yang.2007,Hedderich.2020} verwiesen.
+Für weitere Ausführungen dazu sei an dieser Stelle jedoch auf bereits ausreichend diskutierte Aufbereitungen von \textcite{Bertsche.2022,Birolini.2017,Yang.2007,Hedderich.2020,Rigdon.2022} verwiesen.
 
 Die (zweiparametrige) Weibull-Verteilung ist das Standardmodell zur Beschreibung der Lebensdauer von technischen Produkten ohne die Berücksichtigung eines möglichen dritten Parameters - der ausfallfreien Zeit \symsub{t}{0}.
 Sie wird durch den \textbf{Formparameter}  $\sym{b} > 0$ (Weibull-Modul) und die \textbf{charakteristische Lebensdauer} $\sym{T} > 0$ (Skalenparameter), welche dem $63,2$-ten Perzentil $\sym{t}_{0,632}$ entspricht, beschrieben.
@@ -256,6 +257,7 @@ Sollen auch hier nur positive Werte für $\sym{g_func}$ berücksichtigt werden, 
 \section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
 Multivariate Lebensdauertests erfordern definitionsgemäß die Betrachtung mehrerer $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter.
 Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten - auch unter dem Begriff \ac{L-DoE} zusammengefasst - sowie der darauffolgenden Lebensdauermodellbildung.
+Während detaillierte Übersichten zur Historie von \ac{DoE} von anfänglichen einschlägigen Beschreibungen durch \textcite{Fisher.1935}, außerdem maßgebliche Weiterentwicklungen durch \textcite{Box.1978} oder evolutionäre Schritte durch \textcite{Taguchi.2005} ausgiebig in Werken von \textcite{Kleppmann.2016,Rigdon.2022,Montgomery.2020} beschrieben sind, wird im Folgenden auf die wesentlichen Inhalte für die Forschungsschwerpunkte eingegangen.
 
 Der primäre Anspruch von \ac{DoE} besteht in der effizienten Planung empirischer Datenerhebungen, um Zielgrößen in Abhängigkeit erklärender Variablen zunächst robust zu modellieren und schließlich zu optimieren.
 Dieses Paradigma lässt sich auch unter der Begrifflichkeit \ac{DfR} unmittelbar wiedererkennen und so auf die Analyse von Lebensdauer und Zuverlässigkeit übertragen \cite{Yang.2007,Wu.2021}.
@@ -281,9 +283,9 @@ Konsequenterweise werden Hintergründe zum Umgang mit normalverteilten Daten ode
 Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette \cite{Coleman.1993,Montgomery.2020} entlang mehrerer Prozessschritte, die beginnend von einer spezifischen Aufgabendefinition in einer statistisch abgesicherten Testentscheidung und Datenmodellierung mündet (vgl. \colorbox{yellow}{Abbildung~Doe-Steps}).
 Das erklärte Ziel ist es, den kausalen Zusammenhang zwischen Einflussfaktoren und Systemantwort funktional abzubilden.
 Darin abgebildete Einflussfaktoren sollen also per se statistisch signifikant und somit relevant für das Systemverhalten sein.
-So kann beispielsweise die zufallsverteilte Lebensdauer $\sym{tau}$ in Abhängigkeit von $\sym{k} \geq 2$ technischen Beanspruchungen modelliert und optimiert werden (\textit{Schritt~1} in \colorbox{yellow}{Abbildung~Doe-Steps}).
+So kann beispielsweise die zufallsverteilte Lebensdauer $\sym{tau}$ in Abhängigkeit von $\sym{k} \geq 2$ technischen Beanspruchungen zunächst empirisch untersucht und anschließend modelliert sowie optimiert werden (\textit{Schritt~1} in \colorbox{yellow}{Abbildung~Doe-Steps}).
 
-Im Zentrum der Betrachtung steht das technische \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der Eingangsgrößen definiert.
+Im Zentrum der Betrachtung steht damit generell ein technisches \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der Eingangsgrößen definiert.
 Die zu untersuchende oder zu optimierende Ausgangsgröße wird als \textbf{Systemantwort} $\sym{y}$ (engl. Response) bezeichnet.
 Die gezielt kontrollierbaren und variierten Eingangsgrößen sind \textbf{Faktoren} (\textbf{Steuergrößen}), während nicht kontrollierbare oder unbekannte Einflüsse als \textbf{Störgrößen} (engl. Noise) klassifiziert werden (\textit{Schritt~2}, vgl. \cite{Kleppmann.2016}).
 Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Parameterdiagramm, kurz \textbf{P-Diagramm}, in \colorbox{yellow}{Abbildung~P-Diagramm} entnommen werden \cite{Montgomery.2020}.
@@ -295,8 +297,9 @@ Der \textbf{Versuchsraum} (engl. Design Space) wird hierbei durch die Gesamtheit
 Die Auswahl geeigneter statistischer Versuchspläne (\textit{Schritt~4}) für die Durchführung (\textit{Schritt~5}) wird in Abschnitt~\ref{subsec:pläne} detailliert behandelt.
 
 Die aus der Variation resultierende Änderung der Systemantwort quantifiziert den Einfluss des Faktors, der statistisch als \textbf{Effekt} $\sym{Eff}$ bezeichnet wird und den Mittelwertunterschiede zweier Faktorstufen beschreibt (\textit{Schritte~6-7}).
-Mittels \ac{DoE} können strukturiert, effizient und verbindlich Informationen gewonnen werden, die über isolierte Effekte hinausgehen und differenziert Aufschluss über \textbf{Haupteffekte} sowie etwaige \textbf{Wechselwirkungen} der Faktoren auf die Antwort des Systems geben - vergleiche Abb.~\ref{fig:ma_abb2.04_effekt} sowie \textcite{Montgomery.2020,Kleppmann.2016,Siebertz.2017,Kremer.2021}.
-
+So können mittels \ac{DoE} strukturiert, effizient und verbindlich Informationen gewonnen werden, die über die direkten Effekte hinausgehen und differenziert Aufschluss über \textbf{Haupteffekte} sowie etwaige \textbf{Wechselwirkungen} der Faktoren auf die Antwort des Systems geben - vergleiche Abb.~\ref{fig:ma_abb2.04_effekt} sowie \textcite{Montgomery.2020,Kleppmann.2016,Siebertz.2017,Kremer.2021}.
+Abbildung~\ref{fig:ma_abb2.04_effekt} visualisiert derartige Effekte.
+So gibt die Darstellung eines Haupteffekts in Abhängigkeit des Vorzeichens und der Steigung (\textbf{positiver} oder \textbf{negativer} Haupteffekt) sozusagen die Einflussstärke und -richtung wieder, während bei Wechselwirkung der Effekt in Abhängigkeit der Einstellung eines \textbf{Co-Faktors} dargestellt wird.
 \begin{figure}[h]
     \centering
     \begin{subfigure}[b]{0.48\textwidth}
@@ -319,34 +322,34 @@ Mittels \ac{DoE} können strukturiert, effizient und verbindlich Informationen g
     \caption{Schematische Darstellung der Effekte: (a) positiver Haupteffekt von Faktor $\sym{x}_1$, (b) Wechselwirkungseffekte zwischen $\sym{x}_1$ und $\sym{x}_2$.}
     \label{fig:ma_abb2.04_effekt}
 \end{figure}
-
 Diese Zusammenhänge können mathematisch positiv oder negativ beschrieben sowie durch Polynomfunktionen höherer Ordnung approximiert werden, um zusätzlich beispielsweise \textbf{quadratische Effekte} oder \textbf{Mehrfachwechselwirkungen} abzubilden.
+
 Sollen zunächst perspektivisch relevante Faktoren für eine versuchstechnische Untersuchung identifiziert werden, kann ein \textbf{Parameter-Screening} durchgeführt werden.
 Dessen Durchführung kann sowohl heuristisch als auch versuchstechnisch erfolgen.
 
 \subsubsection{Parameter-Screening} \label{subsubsec:screening}
 Angesichts der potenziell hohen Komplexität durch Wechselwirkungen und Nichtlinearitäten sind die in \colorbox{yellow}{Abbildung~Doe-Steps} beschriebenen \textit{Schritte~2-3} als propädeutische Arbeiten für ein effizientes Testdesign zu interpretieren.
 Methodisch lassen sich diese unter dem Terminus \textbf{Screening} subsumieren.
+Screening-Schritte sind zwischen der Definition des Untersuchungsziels und der Durchführung der physischen Screening-Experimente angeordnet (vgl. \textit{Schritt~3} in \colorbox{yellow}{Abbildung~Doe-Steps} sowie Abschnitt~\ref{subsec:pläne}).
 Daraus folgend dienen Screening-Methoden und -Versuchspläne dem Ziel, Informationsverluste bei einer minimalen Anzahl an Versuchsläufen zu begrenzen und die vitalen (\textit{Steuergrößen}) von den trivialen (\textit{Störgrößen}) Faktoren zu separieren.
 
-Im Hinblick auf die Realisierung eines unter Zeit- und Kostenrestriktionen hochgradig effizienten \ac{DoE} ist die effiziente Ausgestaltung der Screening-Strategie selbst von primärem Interesse.
+Im Hinblick auf die Realisierung eines unter Zeit- und Kostenrestriktionen hochgradig effizienten \ac{DoE} ist die effiziente Ausgestaltung der Screening-Strategie selbst schon von primärem Interesse.
 In traditionellen \ac{DoE}-Ansätzen impliziert dies den Einsatz von \textbf{Kreativmethoden}, wie sie Standardliteratur von \textcite{Montgomery.2020} aufführen oder exemplarisch durch \textcite{Kremer.2021} und \textcite{Gundlach.2004} zusammengefasst werden.
-Hierbei ist ein Rückgriff auf Ergebnisse aus Experimenten, die explizit für das Forschungsziel ausgelegt wären, in dieser Phase Umständen noch nicht möglich.
-Es gilt zunächst, qualitativ eine rational erlesene Sammlung an potenziellen Einflussparameter qualitativ zu erstellen, um diese dann anhand ihrer Einschlägigkeit bis hin zu einem Schwellwert zu priorisieren.
-Ansätze aus der Kreativmethodik fundieren hierbei meist auf der technischen \textbf{Systemanalyse}, die sowohl mit als auch ohne spezifisches A-priori-Wissen über das System erfolgen kann \cite{Bertsche.2022}.
-Hilfsmittel zur Priorisierung einer hier zu erstellenden Parametersammlung können schließlich Entscheidungsfindungsprotokollen, wie beispielsweise der \ac{DSM}, und Methoden aus dem Komplexitätsmanagement entsprechen, siehe hierzu Werke von \textcite{Mayers.1997}, \textcite{Pahl.2007} oder \textcite{Lindemann.2008}.
-Priorisierungen können sich dann entlang von Umfängen an recherchierten Direkt-Einflüssen, den Mengen an plausiblen Wechselwirkungen oder schlichtweg Präferenzen aus der Testplanung ergeben, wofür sich Methoden wie beispielsweise das \textbf{Ishikawa-Diagramm} eignen, vgl. \textcite{Wu.2021, Daenzer.2002}.
-Prozessual verorten sich Screening-Schritte zwischen der Definition des Untersuchungsziels und der Durchführung der physischen Screening-Experimente (vgl. \textit{Schritt~3} in \colorbox{yellow}{Abbildung~Doe-Steps} sowie Abschnitt~\ref{subsec:pläne}).
-Mit deren Hilfe kann jedenfalls eine Priorisierung der Beeinträchtigungen der Systemantwort durch schiere Anzahl von rational begründbaren Einflüssen oder Wechselwirkungen auf die entsprechende Performance-Kennzahl, die Systemantwort, getroffen und somit eine qualitative Auswahl für fortführende Prozessschritte erfasst werden.
-Als rationale Methode zur Plausibilisierung und Entscheidungsfindung können Kreativmethoden somit die experimentelle Charakterisierung komplexer Systemzusammenhänge teilweise substituieren - oder den damit verbundenen Aufwand zumindest  reduzieren.
-Entsprechend ist darauf anschließend ein geeigneter Versuchsplan zu wählen.
+Hierbei ist ein Rückgriff auf Ergebnisse aus Experimenten, die explizit für das Forschungsziel ausgelegt wären, in dieser Phase unter Umständen noch nicht möglich.
+Es gilt damit zunächst, qualitativ eine rein rational erlesene Sammlung an potenziellen Einflussparameter zu erstellen, um diese dann anhand ihrer geschätzten Einflüsse auf die Systemantwort zu priorisieren.
+Ansätze aus der Kreativmethodik können dazu genutzt werden und fundieren auf der technischen \textbf{Systemanalyse}, die sowohl mit als auch ohne spezifisches Vorwissen über das System erfolgen kann \cite{Bertsche.2022}.
+Hilfsmittel zur Priorisierung einer hier erstellten Parametersammlung können beispielsweise Entscheidungsfindungsprotokolle, wie die \ac{DSM}, und Methoden aus dem Komplexitätsmanagement, z.B. \textbf{Ishikawa-Diagramm}, sein - siehe hierzu auch weiterführende Werke von \textcite{Mayers.1997}, \textcite{Pahl.2007},\textcite{Wu.2021, Daenzer.2002} sowie \textcite{Lindemann.2008}.
+Das Screening liefert somit eine rational festgestellte Auswahl an möglichst wenigen Einflussparametern, die mutmaßlich den entscheidenden Anteil an statistisch begründeter Manipulation der Systemantwort tragen und sich daher für eine Untersuchung in Versuchsplänen qualifizieren.
+Entsprechend ist daraufhin ein geeigneter Versuchsplan für die physischen Datenerhebungen zu wählen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Statistische Versuchsplanung zur Lebensdauererprobung} \label{subsec:pläne}
-Standardprotokolle aus dem \ac{DoE} wie der vollfaktorielle Versuchsplan eignen sich grundsätzlich auch für Lebensdaueruntersuchungen, wo genauso wie bei vergleichbar statistisch verteilten Daten sich Effekte stets als Mittelwertunterschiede aus dem Vergleich zweier Einstellstufen eines Faktors oder mehrerer ergeben \cite{Kleppmann.2016}.
+Standardprotokolle aus dem \ac{DoE} wie der \textbf{$2^{\sym{k}}$ voll-faktorielle Versuchsplan} eignen sich grundsätzlich auch für Lebensdaueruntersuchungen, da sich hier analog zu vergleichbar statistisch verteilter Datenlage Effekte stets als (Mittelwert-) Unterschiede in der Beobachtung der Systemantwort aus dem Vergleich zweier Einstellstufen eines oder mehrerer Faktoren ergeben \cite{Kleppmann.2016}.
+
+\subsubsection{$2^{\sym{k}}$ Faktorielle Versuchspläne}
 Demzufolge kann auch ein Lebensdauer-beeinflussendes Parameterset -  beispielhaft $(\sym{x}_1,\sym{x}_2)$ - voll-faktoriell auf zwei Stufen variiert und vollständig kombiniert werden, vgl. Abbildung~\ref{fig:abb2.05_vfdesign}.
 \begin{figure}[h]
     \centering
@@ -357,7 +360,7 @@ Demzufolge kann auch ein Lebensdauer-beeinflussendes Parameterset -  beispielhaf
         \setlength\figureheight{\figurewidth}
         \input{plots/ma_abb2.05_FF_design.tex}
         \caption{Versuchsplan}
-        \label{fig:abb2.5_vfdesign_plot}
+        \label{fig:abb2.05.1_vfdesign_plot}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.4\textwidth}
@@ -375,14 +378,20 @@ Demzufolge kann auch ein Lebensdauer-beeinflussendes Parameterset -  beispielhaf
         \end{tabular}
         \vspace*{1.5cm}
         \caption{Versuchsplanmatrix zu Abb.~\ref{fig:abb2.05_vfdesign}}
-        \label{fig:abb2.05_vfdesign_matrix}
+        \label{fig:abb2.05.2_vfdesign_matrix}
     \end{subfigure}
     \caption{Standard Voll-faktorieller Versuchsplan mit $\sym{k}=2$ Faktoren}
     \label{fig:abb2.05_vfdesign}
 \end{figure}
-Ein derartiges Setup erlaubt es, die perspektivische Differenz erreichbarer \ac{EoL}-Werte durch tiefe und hohe Beanspruchungswerte der Faktoren zu beobachten.
+Ein derartiges Setup erlaubt es, die perspektivische Differenz erreichbarer \ac{EoL}-Werte durch tiefe und hohe Beanspruchungswerte der Faktoren zu beobachten \cite{Yang.2007,Meeker.2022}.
+Der voll-faktorielle Versuchsplan bildet somit den Standard-Versuchsplan im \ac{DoE} und fordert bei einmaliger Durchführung (\textbf{Replikation} $\sym{r}=1$)
+\begin{equation}
+    \sym{n}=2^{\sym{k}}
+    \label{eq:ffvp_n}
+\end{equation}
+Versuche.
 Von entscheidender Bedeutung für die Aussagekraft des Versuchsplans ist die Wahl der Faktorstufen (vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand}).
-Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, dass signifikante Effekte sicher detektiert werden („Signal-to-Noise“), wobei gleichzeitig zu geringe Abstände (Rauschen) sowie zu große Intervalle (Gefahr unerkannter Nichtlinearitäten) zu vermeiden sind - vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand} \cite{Wu.2021,Siebertz.2017,Kleppmann.2016}.
+Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, sodass signifikante Effekte sicher detektiert werden („\textbf{Signal-to-Noise}“), wobei gleichzeitig zu geringe Abstände (Rauschen) sowie zu große Intervalle (Gefahr unerkannter Nichtlinearitäten) zu vermeiden sind - vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand} sowie \textcite{Wu.2021,Siebertz.2017,Kleppmann.2016}.
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.9\textwidth}
@@ -392,12 +401,32 @@ Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, das
     \label{fig:ma_abb2.06_effektabstand}
 \end{figure}
 Auf Basis eines solchen zweistufigen Setups lässt sich der Zusammenhang zwischen Einflussgrößen und Lebensdauer interpolieren und in einem linearen Modell abbilden, welches zudem die Schätzung von Wechselwirkungen erlaubt.
-Der voll-faktorielle Versuchsplan nimmt hierbei eine Schlüsselrolle in der strategischen Modellbildung der Zuverlässigkeitstechnik ein.
-Ausgehend vom qualitativen Parameter-Screening (vgl. Abschnitt~\ref{subsec:begriffedoe}) ist ohne initiale Experimente oft unklar, welche Faktoren die Lebensdauer als Antwortvariable signifikant beeinflussen.
+Der voll-faktorielle Versuchsplan nimmt dabei eine entscheidende Schlüsselrolle in der strategischen Modellbildung ein - insbesondere im Hinblick auf Lebensdauerdaten und Zuverlässigkeitstechnik.\
+
+Darin aufgeführte Versuchspunkte können auf Basis der Struktur ihrer Zuordnung üblicherweise ideal aus Voruntersuchungen übernommen oder durch weiterführende Untersuchungen nachfolgend erweitert werden.
+Ausgehend vom qualitativen Parameter-Screening (vgl. Abschnitt~\ref{subsec:begriffedoe}) ist ohne initiale Experimente oft unklar, welche Faktoren die Antwortvariable, also beispielsweise die Lebensdauer eines Systems, nun tatsächlich signifikant beeinflussen.
 Folglich ist es essenziell, diese Fragestellung vor der eigentlichen Versuchsplanumsetzung effizient zu klären.
-Im Sinne einer ressourceneffizienten Strategie sollten diese initialen Versuche idealerweise so konzipiert sein, dass sie direkt in einen nachfolgenden voll-faktoriellen Versuchsplan übernommen werden können.
-Perspektivisch ist zudem entscheidend, wie diese Datenbasis weitergenutzt und augmentiert werden kann, falls das resultierende lineare Modell im weiteren Verlauf (z. B. zur Abbildung von \textbf{Krümmungen} - engl. \textbf{Curvature}) detailliert werden muss.
+
+\subsubsection{$2^{\sym{k}-\sym{p}}$ Fraktionell Faktorielle Versuchspläne}
+Sind nach Anwendung qualitativer Kreativmethoden als Auswahlverfahren im Screening nach wie vor noch derart viele Einflussfaktoren als relevante betitelt, dass daraus entsprechend Gleichung~\ref{eq:ffvp_n} ein wirtschaftlich nicht abbildbarer Versuchsumfang resultiert - in der Regel bei $\sym{k}>5$ Faktoren - ist die Screening-Strategie hin zu physikalischen Screening-Tests verschärfbar.
+\textbf{Screening-Versuchspläne} wie der \textbf{teil-faktorielle Versuchsplan} (oder alternativ auch \textbf{Plackett-Burman-Versuchsplan}) eigenen sich für derartige Selektionsaufgaben \cite{Kleppmann.2016,Siebertz.2017,Montgomery.2020}.
+Hier wird nur ein Anteil der voll-faktoriellen Versuchsagenda umgesetzt, sodass sich bei einem teil-faktoriellen Versuchsplan $\sym{p}$ Faktoren mehr als üblich in einer $\sym{n}=2^{\sym{k}-\sym{p}}$ umfassenden Versuchsagenda abbilden lassen.
+Dabei werden zwei prinzipielle Annahmen ausgenutzt \cite{Montgomery.2021,Rigdon.2022}:
+\begin{itemize}
+    \item \textbf{Effekthierarchie}, die besagt, dass Effekte kleinerer Ordnung - also Haupteffekte - in der Regel größere Anteile am Gesamteffekt tragen und tendenziell signifikanter sind;
+    \item \textbf{Effektvererbung}, die impliziert, dass Effekte höherer Ordnung (also quadratische Effekte oder Wechselwirkungen) tendenziell an die Signifikanz ihrer korrespondieren Haupteffekte gekoppelt sind.
+\end{itemize}
+Dies lässt zuletzt zu, dass Fraktionen der faktoriellen Versuchspläne entsprechend Abbildung~\ref{fig:abb2.05.1_vfdesign_plot} unter Umständen nur gewisse Effekte, beispielsweise nur Haupteffekte, als solche erkennen lassen und selbst dann nicht zweifelsfrei trennbar sind zu möglicherweise identifizierbaren Wechselwirkungen: Es liegt also eine \textbf{Vermengung}, engl. \textbf{Aliasing} der Effekte vor.
+Diese bewusst in Kauf nehmend und ingenieurwissenschaftlich eingeordnet, eröffnet sich damit jedoch ein geringerer Versuchsumfang um zuletzt die effektstarken und signifikanten Faktoren aus der initialen Sammlung zu isolieren.
 Dies ist insbesondere relevant, da Lebensdauertests - ob als beschleunigte Prüfung mittels \ac{ALT} oder auf Feldniveau - aufgrund der inhärenten Zeitabhängigkeit der Systemantwort prinzipiell hohe Kapazitäten binden und Ergebnisse nicht ad hoc verfügbar sind.
+Im Sinne einer ressourceneffizienten Strategie sind darin enthaltene Versuche so konzipiert sein, dass sie direkt in einen nachfolgenden voll-faktoriellen Versuchsplan übernommen werden können.
+
+\subsubsection{Wirkungsflächenversuchspläne}
+Perspektivisch ist zudem entscheidend, wie diese Datenbasis weitergenutzt und augmentiert werden kann, falls das resultierende lineare Modell im weiteren Verlauf (z. B. zur Abbildung von \textbf{Krümmungen} - engl. \textbf{Curvature}) detailliert werden muss.
+
+\subsubsection{Optimale Versuchspläne und deren Metriken}
+
+\subsubsection{Strategische Vorgehensweisen}
 
 %%%%%%%%%%%%%%%%%
 Bei einer größeren Anzahl an Einflussfaktoren ($\sym{k} > 5$) steigt der Aufwand für voll-faktorielle Pläne ($\sym{n} = 2^{\sym{k}}$) jedoch exponentiell an. Um dennoch effizient initiale Experimente durchzuführen, kommen **teil-faktorielle Versuchspläne** (Fractional Factorial Designs) zum Einsatz. Diese verzichten durch gezieltes Weglassen von Faktor-Kombinationen (Aliasing) auf die Auflösung höherer Wechselwirkungen, um mit minimalem Aufwand die Haupteffekte zu screenen.
@@ -445,6 +474,7 @@ So können Effekte eindeutig identifiziert werden.
     \item Modellaufbau
     \item Extrapolation: bedarf in der Praxis / oder sind doch dann mal VPs verfügbar und das modell wird einfach erweitert
     \item Optimalitäten
+    \item Risiduen (Cox-Snell \cite{Rigdon.2022})
 \end{itemize}
 
 \begin{itemize}
