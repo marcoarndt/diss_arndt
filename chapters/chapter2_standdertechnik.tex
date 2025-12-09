@@ -280,16 +280,29 @@ Konsequenterweise werden Hintergründe zum Umgang mit normalverteilten Daten ode
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Grundlagen zur statistischen Versuchsplanung} \label{subsec:begriffedoe}
-Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette \cite{Coleman.1993,Montgomery.2020} entlang mehrerer Prozessschritte, die beginnend von einer spezifischen Aufgabendefinition in einer statistisch abgesicherten Testentscheidung und Datenmodellierung mündet (vgl. \colorbox{yellow}{Abbildung~Doe-Steps}).
+Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette \cite{Coleman.1993,Montgomery.2020} entlang mehrerer Prozessschritte, die beginnend von einer spezifischen Aufgabendefinition in einer statistisch abgesicherten Testentscheidung und Datenmodellierung mündet (vgl. \ref{fig:ma_abb2.02_doe_steps}).
+\begin{figure}[htbp]
+    \centering
+    \def\svgwidth{0.9\textwidth}
+    \input{plots/ma_abb2.02_doe_steps.pdf_tex}
+    \caption{Ablaufschritte der statistischen Versuchsplanung (\ac{DoE} Steps)}
+    \label{fig:ma_abb2.02_doe_steps}
+\end{figure}
 Das erklärte Ziel ist es, den kausalen Zusammenhang zwischen Einflussfaktoren und Systemantwort funktional abzubilden.
 Darin abgebildete Einflussfaktoren sollen also per se statistisch signifikant und somit relevant für das Systemverhalten sein.
-So kann beispielsweise die zufallsverteilte Lebensdauer $\sym{tau}$ in Abhängigkeit von $\sym{k} \geq 2$ technischen Beanspruchungen zunächst empirisch untersucht und anschließend modelliert sowie optimiert werden (\textit{Schritt~1} in \colorbox{yellow}{Abbildung~Doe-Steps}).
+So kann beispielsweise die zufallsverteilte Lebensdauer $\sym{tau}$ in Abhängigkeit von $\sym{k} \geq 2$ technischen Beanspruchungen zunächst empirisch untersucht und anschließend modelliert sowie optimiert werden (\textit{Schritt~1} in Abbildung~\ref{fig:ma_abb2.02_doe_steps}).
 
 Im Zentrum der Betrachtung steht damit generell ein technisches \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der Eingangsgrößen definiert.
 Die zu untersuchende oder zu optimierende Ausgangsgröße wird als \textbf{Systemantwort} $\sym{y}$ (engl. Response) bezeichnet.
 Die gezielt kontrollierbaren und variierten Eingangsgrößen sind \textbf{Faktoren} (\textbf{Steuergrößen}), während nicht kontrollierbare oder unbekannte Einflüsse als \textbf{Störgrößen} (engl. Noise) klassifiziert werden (\textit{Schritt~2}, vgl. \cite{Kleppmann.2016}).
-Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Parameterdiagramm, kurz \textbf{P-Diagramm}, in \colorbox{yellow}{Abbildung~P-Diagramm} entnommen werden \cite{Montgomery.2020}.
-
+Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Parameterdiagramm, kurz \textbf{P-Diagramm}, in Abbildung~\ref{fig:ma_abb2.03_p_diagramm} entnommen werden \cite{Montgomery.2020}.
+\begin{figure}[htbp]
+    \centering
+    \def\svgwidth{0.8\textwidth}
+    \input{plots/ma_abb2.03_p_diagramm.pdf_tex}
+    \caption{Parameter-Diagramm (P-Diagramm)}
+    \label{fig:ma_abb2.03_p_diagramm}
+\end{figure}
 Um das Systemverhalten zu charakterisieren, werden die Faktoren als kategoriale oder kontinuierliche Parameter im Versuch auf diskreten Werten, den sogenannten \textbf{Faktorstufen} (engl. Level), variiert (\textit{Schritt~3}).
 Dies erfolgt in aller Regel in kodierter Darstellung, so entsprechen gemäß der gängigsten Konvention die Stufe \textit{-1} der niedrigen und \textit{+1} der hohen Einstellstufe.
 Die planerische Kombination verschiedener Faktorstufen äußert sich in spezifischen \textbf{Versuchspunkten} innerhalb des Parameterraums und entspricht der Versuchsplan-Matrix.
@@ -328,9 +341,9 @@ Sollen zunächst perspektivisch relevante Faktoren für eine versuchstechnische 
 Dessen Durchführung kann sowohl heuristisch als auch versuchstechnisch erfolgen.
 
 \subsubsection{Parameter-Screening} \label{subsubsec:screening}
-Angesichts der potenziell hohen Komplexität durch Wechselwirkungen und Nichtlinearitäten sind die in \colorbox{yellow}{Abbildung~Doe-Steps} beschriebenen \textit{Schritte~2-3} als propädeutische Arbeiten für ein effizientes Testdesign zu interpretieren.
+Angesichts der potenziell hohen Komplexität durch Wechselwirkungen und Nichtlinearitäten sind die in Abbildung~\ref{fig:ma_abb2.02_doe_steps} beschriebenen \textit{Schritte~2-3} als propädeutische Arbeiten für ein effizientes Testdesign zu interpretieren.
 Methodisch lassen sich diese unter dem Terminus \textbf{Screening} subsumieren.
-Screening-Schritte sind zwischen der Definition des Untersuchungsziels und der Durchführung der physischen Screening-Experimente angeordnet (vgl. \textit{Schritt~3} in \colorbox{yellow}{Abbildung~Doe-Steps} sowie Abschnitt~\ref{subsec:pläne}).
+Screening-Schritte sind zwischen der Definition des Untersuchungsziels und der Durchführung der physischen Screening-Experimente angeordnet (vgl. \textit{Schritt~3} in Abbildung~\ref{fig:ma_abb2.02_doe_steps} sowie Abschnitt~\ref{subsec:pläne}).
 Daraus folgend dienen Screening-Methoden und -Versuchspläne dem Ziel, Informationsverluste bei einer minimalen Anzahl an Versuchsläufen zu begrenzen und die vitalen (\textit{Steuergrößen}) von den trivialen (\textit{Störgrößen}) Faktoren zu separieren.
 
 Im Hinblick auf die Realisierung eines unter Zeit- und Kostenrestriktionen hochgradig effizienten \ac{DoE} ist die effiziente Ausgestaltung der Screening-Strategie selbst schon von primärem Interesse.
@@ -380,7 +393,7 @@ Demzufolge kann auch ein Lebensdauer-beeinflussendes Parameterset -  beispielhaf
         \caption{Versuchsplanmatrix zu Abb.~\ref{fig:abb2.05_vfdesign}}
         \label{fig:abb2.05.2_vfdesign_matrix}
     \end{subfigure}
-    \caption{Standard Voll-faktorieller Versuchsplan mit $\sym{k}=2$ Faktoren}
+    \caption{Standard voll-faktorieller Versuchsplan mit $\sym{k}=2$ Faktoren}
     \label{fig:abb2.05_vfdesign}
 \end{figure}
 Ein derartiges Setup erlaubt es, die perspektivische Differenz erreichbarer \ac{EoL}-Werte durch tiefe und hohe Beanspruchungswerte der Faktoren zu beobachten \cite{Yang.2007,Meeker.2022}.
@@ -408,56 +421,41 @@ Ausgehend vom qualitativen Parameter-Screening (vgl. Abschnitt~\ref{subsec:begri
 Folglich ist es essenziell, diese Fragestellung vor der eigentlichen Versuchsplanumsetzung effizient zu klären.
 
 \subsubsection{$2^{\sym{k}-\sym{p}}$ Fraktionell Faktorielle Versuchspläne}
-Sind nach Anwendung qualitativer Kreativmethoden als Auswahlverfahren im Screening nach wie vor noch derart viele Einflussfaktoren als relevante betitelt, dass daraus entsprechend Gleichung~\ref{eq:ffvp_n} ein wirtschaftlich nicht abbildbarer Versuchsumfang resultiert - in der Regel bei $\sym{k}>5$ Faktoren - ist die Screening-Strategie hin zu physikalischen Screening-Tests verschärfbar.
-\textbf{Screening-Versuchspläne} wie der \textbf{teil-faktorielle Versuchsplan} (oder alternativ auch \textbf{Plackett-Burman-Versuchsplan}) eigenen sich für derartige Selektionsaufgaben \cite{Kleppmann.2016,Siebertz.2017,Montgomery.2020}.
-Hier wird nur ein Anteil der voll-faktoriellen Versuchsagenda umgesetzt, sodass sich bei einem teil-faktoriellen Versuchsplan $\sym{p}$ Faktoren mehr als üblich in einer $\sym{n}=2^{\sym{k}-\sym{p}}$ umfassenden Versuchsagenda abbilden lassen.
-Dabei werden zwei prinzipielle Annahmen ausgenutzt \cite{Montgomery.2021,Rigdon.2022}:
+Sind nach Anwendung der Kreativmethoden (qualitatives Screening) weiterhin so viele Einflussfaktoren als relevant eingestuft, dass ein voll-faktorieller Ansatz gemäß Gleichung~\ref{eq:ffvp_n} zu einem wirtschaftlich nicht vertretbaren Versuchsumfang führen würde, muss die Strategie hin zu physikalischen Screening-Tests verschärft werden.
+Dies empfiehlt sich insbesondere für Systeme mit $\sym{k} > 5$ Faktoren, um die experimentelle Effizienz zu gewährleisten.
+Für derartige Selektionsaufgaben eignen sich \textbf{Screening-Versuchspläne}, wie der \textbf{teil-faktorielle Versuchsplan} (Fractional Factorial Design) oder alternativ der \textbf{Plackett-Burman-Plan} \cite{Kleppmann.2016,Siebertz.2017,Montgomery.2020}.
+Bei diesem Ansatz wird lediglich eine Fraktion der voll-faktoriellen Versuchsagenda umgesetzt. Mathematisch wird die Anzahl der Versuche dabei auf $\sym{n} = 2^{\sym{k}-\sym{p}}$ reduziert, wobei $\sym{p}$ den Grad der Fraktionierung angibt.
+Die Validität dieses Vorgehens stützt sich auf zwei fundamentale empirische Postulate \cite{Montgomery.2021,Rigdon.2022}:
 \begin{itemize}
-    \item \textbf{Effekthierarchie}, die besagt, dass Effekte kleinerer Ordnung - also Haupteffekte - in der Regel größere Anteile am Gesamteffekt tragen und tendenziell signifikanter sind;
-    \item \textbf{Effektvererbung}, die impliziert, dass Effekte höherer Ordnung (also quadratische Effekte oder Wechselwirkungen) tendenziell an die Signifikanz ihrer korrespondieren Haupteffekte gekoppelt sind.
+    \item Die \textbf{Effekthierarchie} besagt, dass Effekte niedrigerer Ordnung - primär Haupteffekte - in der Regel eine größere Amplitude aufweisen und mit höherer Wahrscheinlichkeit signifikant sind als Effekte höherer Ordnung.
+    \item Die \textbf{Effektvererbung} impliziert, dass das Auftreten signifikanter Wechselwirkungen oder quadratischer Terme strukturell an die Signifikanz ihrer korrespondierenden Haupteffekte gekoppelt ist.
 \end{itemize}
-Dies lässt zuletzt zu, dass Fraktionen der faktoriellen Versuchspläne entsprechend Abbildung~\ref{fig:abb2.05.1_vfdesign_plot} unter Umständen nur gewisse Effekte, beispielsweise nur Haupteffekte, als solche erkennen lassen und selbst dann nicht zweifelsfrei trennbar sind zu möglicherweise identifizierbaren Wechselwirkungen: Es liegt also eine \textbf{Vermengung}, engl. \textbf{Aliasing} der Effekte vor.
-Diese bewusst in Kauf nehmend und ingenieurwissenschaftlich eingeordnet, eröffnet sich damit jedoch ein geringerer Versuchsumfang um zuletzt die effektstarken und signifikanten Faktoren aus der initialen Sammlung zu isolieren.
-Dies ist insbesondere relevant, da Lebensdauertests - ob als beschleunigte Prüfung mittels \ac{ALT} oder auf Feldniveau - aufgrund der inhärenten Zeitabhängigkeit der Systemantwort prinzipiell hohe Kapazitäten binden und Ergebnisse nicht ad hoc verfügbar sind.
-Im Sinne einer ressourceneffizienten Strategie sind darin enthaltene Versuche so konzipiert sein, dass sie direkt in einen nachfolgenden voll-faktoriellen Versuchsplan übernommen werden können.
+Eine direkte Konsequenz dieser Reduktion ist jedoch, dass sich in teil-faktoriellen Versuchsplänen bestimmte Effekte nicht mehr isoliert betrachten lassen (vgl. Abbildung~\ref{fig:abb2.05.1_vfdesign_plot} für den Fall einer Fraktionierung).
+So sind beispielsweise Haupteffekte unter Umständen nicht mehr zweifelsfrei von Wechselwirkungen höherer Ordnung zu unterscheiden. Da sich diese Effekte statistisch überlagern, spricht man von einer \textbf{Vermengung} (engl. \textbf{Aliasing}).
+Wird dieser Informationsverlust jedoch bewusst in Kauf genommen und ingenieurwissenschaftlich bewertet, ermöglicht dies eine signifikante Reduktion des Versuchsumfangs, um effizient die dominanten Faktoren aus der initialen Parametermenge zu isolieren.
+Diese Vorgehensweise ist von hoher Relevanz, da Lebensdauertests - ob als beschleunigte Prüfung mittels \ac{ALT} oder unter Feldbedingungen - durch die inhärente Zeitabhängigkeit der Systemantwort erhebliche Kapazitäten binden und Ergebnisse nicht ad hoc verfügbar sind.
+Im Sinne einer ressourceneffizienten Gesamtstrategie sollten die Screening-Versuche daher idealerweise so konzipiert sein, dass sie nahtlos in einen nachfolgenden, höher aufgelösten Versuchsplan integriert (\textbf{augmentiert}) werden können.
 
 \subsubsection{Wirkungsflächenversuchspläne}
-Perspektivisch ist zudem entscheidend, wie diese Datenbasis weitergenutzt und augmentiert werden kann, falls das resultierende lineare Modell im weiteren Verlauf (z. B. zur Abbildung von \textbf{Krümmungen} - engl. \textbf{Curvature}) detailliert werden muss.
+Perspektivisch ist zudem entscheidend, wie diese Datenbasis weitergenutzt werden kann, falls resultierende lineare Modelle im weiteren Verlauf z. B. zur Abbildung von \textbf{Krümmungen} - engl. \textbf{Curvature} detailliert werden müssen.
+Dies kann eben durch die Integration weiterer Versuchspunkte erfolgen, was erlaubt, nicht-lineare Zusammenhänge in der Systemantwort abzubilden.
+Die \ac{RSM} behandelt als Teildisziplin des \ac{DoE} derartige Herangehensweisen und bietet Wirkungsflächenversuchspläne, engl. \acp{RSD}, an.
+Um zu entscheiden, inwiefern Krümmungen vorliegen und damit die Systemantwort von einer linearen Modellierung abweicht, können sogenannte Zentralpunkte, engl. \acp{CP}, zusätzlich getestet werden.
+Hier werden alle Faktoren auf die Stufe \textit{0} gesetzt wobei im Fall diskreter Faktorstufen alle kategorialen Einstellungen abgetestet werden
+Diese geben schließlich Aufschluss über Diskrepanzen zu linearen Zusammenhängen zwischen Faktor und Antwort.
 
-\subsubsection{Optimale Versuchspläne und deren Metriken}
+
+\textbf{Box-Behnken-Design}
+\textbf{Sternpunkten} \textbf{Axial Points} \ac{CCD} \textbf{Rotierbarkeit}
 
 \subsubsection{Strategische Vorgehensweisen}
 
-%%%%%%%%%%%%%%%%%
-Bei einer größeren Anzahl an Einflussfaktoren ($\sym{k} > 5$) steigt der Aufwand für voll-faktorielle Pläne ($\sym{n} = 2^{\sym{k}}$) jedoch exponentiell an. Um dennoch effizient initiale Experimente durchzuführen, kommen **teil-faktorielle Versuchspläne** (Fractional Factorial Designs) zum Einsatz. Diese verzichten durch gezieltes Weglassen von Faktor-Kombinationen (Aliasing) auf die Auflösung höherer Wechselwirkungen, um mit minimalem Aufwand die Haupteffekte zu screenen.
-
-Im Sinne einer ressourceneffizienten Strategie sollten diese initialen Screening-Versuche idealerweise so konzipiert sein, dass sie direkt in einen nachfolgenden voll-faktoriellen Plan integriert (**augmentiert**) werden können.
-Dies ist insbesondere relevant, da Lebensdauertests -- ob als beschleunigte Prüfung mittels \ac{ALT} oder auf Feldniveau -- aufgrund der inhärenten Zeitabhängigkeit der Systemantwort prinzipiell hohe Kapazitäten binden und Ergebnisse nicht ad hoc verfügbar sind.
-
-Stößt das resultierende lineare Modell an seine Grenzen, etwa weil physikalische Zusammenhänge nicht-linearer Natur sind, muss das Modell detailliert werden.
-Ein erster Indikator für **Krümmung** (Curvature) im Systemverhalten ist der Einschluss von **Zentralpunkten** (Center Points) in den Versuchsplan. Zeigt der Mittelwert der Zentralpunkte eine signifikante Abweichung von der linearen Interpolation der Eckpunkte, deutet dies auf quadratische Effekte hin.
-
-Zur expliziten Modellierung dieser quadratischen Zusammenhänge werden **Wirkflächenversuchspläne** (Response Surface Methodology, RSM) herangezogen.
-Ein prominentes Beispiel hierfür ist das **Box-Behnken-Design**, welches eine effiziente Schätzung quadratischer Terme ermöglicht, ohne extreme (simultane Hoch/Hoch) Einstellkombinationen zu erfordern, die in Lebensdauertests oft zum verfrühten Ausfall führen.
-Alternativ lassen sich voll-faktorielle Pläne durch Hinzufügen von Sternpunkten (Axial Points) zu einem **Central Composite Design (CCD)** erweitern, um eine Rotierbarkeit des Designs und damit eine gleichmäßige Prognosegüte im gesamten Designraum zu gewährleisten \cite{Montgomery.2020,Myers.2016}.
-
-%%%%%%%%%%%%%%%%%
-
-
 \begin{itemize}
-    \item Versuchspunktandordnung
-    \item Faktoriell
-    \item Screening
+
     \item CCD mit \cite{Box.1988}
-    \item Optimalitäten
+
 \end{itemize}
 
-
-\subsubsection{Metriken zur optimalen Versuchsplanung}
-
-Ein Versuchsplan wird hier als \textbf{orthogonal} bezeichnet, wenn keine Korrelation zwischen jeweils zwei Spalten der Matrix vorliegt - deren Skalarprodukt also null ergibt.
-So können Effekte eindeutig identifiziert werden.
-\textbf{Ausgewogenheit} liegt vor, sofern für einen jeweiligen Faktor alle anderen Faktoreinstellungen gleichmäßig aufgeteilt sind \cite{Siebertz.2017}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -470,17 +468,25 @@ So können Effekte eindeutig identifiziert werden.
     \item GLL-Weibull
     \item LR-Ratio
     \item p-Werte
+    \item Trennschärfe etwa $80\%$, Effekt $\sym{Eff}>2\sigma$ \cite[S.116]{Rigdon.2022}
     \item Varianzen
     \item Modellaufbau
     \item Extrapolation: bedarf in der Praxis / oder sind doch dann mal VPs verfügbar und das modell wird einfach erweitert
     \item Optimalitäten
     \item Risiduen (Cox-Snell \cite{Rigdon.2022})
 \end{itemize}
-
 \begin{itemize}
     \item \colorbox{yellow}{wu}
     \item \colorbox{yellow}{wütherich}
     \item \colorbox{yellow}{yang p282 erster abschnitt}
     \item \colorbox{yellow}{russell doe for glm kap1.4 p12}
 \end{itemize}
+\subsubsection{Metriken zur optimalen Versuchsplanung}
+
+Ein Versuchsplan wird hier als \textbf{orthogonal} bezeichnet, wenn keine Korrelation zwischen jeweils zwei Spalten der Matrix vorliegt - deren Skalarprodukt also null ergibt.
+So können Effekte eindeutig identifiziert werden.
+\textbf{Ausgewogenheit} liegt vor, sofern für einen jeweiligen Faktor alle anderen Faktoreinstellungen gleichmäßig aufgeteilt sind \cite{Siebertz.2017}.
+
+
+
 \cite{RisbergEllekjr.1998, Bisgaard.1992,Bisgaard.2011,Myers.2016,Montgomery.2020,Zahran.2003,GiovannittiJensen.1989,Goos.2011,Hinkelmann.2012,Khuri.2006,Rittmaier.2025,Johnson.2011,Donev.2004,G.E.P.Box.1951,Ardakani.2011,Jones.2012,Jones.2021,Rigdon.2022,Wu.2021,Khuri.2006,Escobar.1995,Modarres.2017,Ahn.2015,Rasch.2018,Xu.2002,Wald.1943,Rencher.2008,Box.2007,Kleppmann.2016,Siebertz.2017,Fisher.1935,Bisgaard.1997,Myers.2010,Box.1988}

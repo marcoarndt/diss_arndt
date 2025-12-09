@@ -45,6 +45,7 @@ BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thic
   \usepackage{amsmath}
   \usepackage{subcaption}
   \usepackage{booktabs}
+  \usepackage{graphicx}
 
 % Citation style. If your institute has specific requirements, configure here:
 \usepackage[style=numeric, % see https://www.overleaf.com/learn/latex/Biblatex_citation_styles for a list of predefined styles
@@ -128,8 +129,8 @@ isbn=true]{biblatex}
 \addbibresource{bibliography.bib}
 
 % search for images in folder img/, i.e. instead of  \includegraphics{img/...}, just use \includegraphics{...}
-\graphicspath{{img/}}
-
+% \graphicspath{{img/}}
+\graphicspath{{img/}{plots/}}
 
 \title{Entwicklung Effizienter Multivariater Lebensdauertests}
 
@@ -173,6 +174,10 @@ isbn=true]{biblatex}
 \newacronym{OFAT}{OFAT}{One Factor At Time}
 \newacronym{DfR}{DfR}{Design for Reliability}
 \newacronym{DSM}{DSM}{Design-Structure-Matrix}
+\newacronym{RSM}{RSM}{Response Surface Methodology}
+\newacronym[plural=RSDs, longplural=Response Surface Designs]{RSD}{RSD}{Response Surface Design}
+\newacronym[plural=CPs, longplural=Center Points]{CP}{CP}{Center Point}
+\newacronym[plural=CCDs, longplural=Central Composite Designs]{CCD}{CCD}{Central Composite Design}
 
 % Indices - use in text: \sym{i}, also needs \input{settings/glossaries}
 \newglossaryentry{i}{type=indices, name={\ensuremath{i}}, description={Laufvariable}}

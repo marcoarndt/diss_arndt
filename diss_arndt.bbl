@@ -1,0 +1,2598 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Bertsche.2022}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
+           family={Bertsche},
+           familyi={B\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Springer-Verlag GmbH}%
+      }
+      \list{location}{2}{%
+        {Berlin}%
+        {Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Vieweg}%
+      }
+      \strng{namehash}{712a8325b7ef4a5d2d1d98ccf66addd2}
+      \strng{fullhash}{712a8325b7ef4a5d2d1d98ccf66addd2}
+      \strng{fullhashraw}{712a8325b7ef4a5d2d1d98ccf66addd2}
+      \strng{bibnamehash}{712a8325b7ef4a5d2d1d98ccf66addd2}
+      \strng{authorbibnamehash}{712a8325b7ef4a5d2d1d98ccf66addd2}
+      \strng{authornamehash}{712a8325b7ef4a5d2d1d98ccf66addd2}
+      \strng{authorfullhash}{712a8325b7ef4a5d2d1d98ccf66addd2}
+      \strng{authorfullhashraw}{712a8325b7ef4a5d2d1d98ccf66addd2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4. Auflage}
+      \field{isbn}{978-3-662-65023-3}
+      \field{series}{Lehrbuch}
+      \field{title}{Zuverlässigkeit im Fahrzeug- und Maschinenbau: Ermittlung von Bauteil- und System-Zuverlässigkeiten}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb http://www.springer.com/
+      \endverb
+      \verb{url}
+      \verb http://www.springer.com/
+      \endverb
+    \endentry
+    \entry{Koselka.1996}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e77ea5208fdb13f124cf42b2a33b31c5}{%
+           family={Koselka},
+           familyi={K\bibinitperiod},
+           given={Rita},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e77ea5208fdb13f124cf42b2a33b31c5}
+      \strng{fullhash}{e77ea5208fdb13f124cf42b2a33b31c5}
+      \strng{fullhashraw}{e77ea5208fdb13f124cf42b2a33b31c5}
+      \strng{bibnamehash}{e77ea5208fdb13f124cf42b2a33b31c5}
+      \strng{authorbibnamehash}{e77ea5208fdb13f124cf42b2a33b31c5}
+      \strng{authornamehash}{e77ea5208fdb13f124cf42b2a33b31c5}
+      \strng{authorfullhash}{e77ea5208fdb13f124cf42b2a33b31c5}
+      \strng{authorfullhashraw}{e77ea5208fdb13f124cf42b2a33b31c5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Forbes}
+      \field{number}{March 11}
+      \field{title}{The New Mantra: MVT}
+      \field{year}{11.03.1996}
+      \field{pages}{114\bibrangedash 118}
+      \range{pages}{5}
+    \endentry
+    \entry{dat.2025}{misc}{}{}
+      \list{location}{1}{%
+        {Ostfildern, Deutschland}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{title}{DAT Report 2025: Kurzbericht}
+      \field{year}{Februar 2025}
+      \verb{urlraw}
+      \verb https://www.dat.de/fileadmin/protected/DAT_Report/2025/DAT-Report-2025-Kurzbericht.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.dat.de/fileadmin/protected/DAT_Report/2025/DAT-Report-2025-Kurzbericht.pdf
+      \endverb
+      \warn{\item misc entry 'dat.2025' (bibliography.bib): Invalid format '13.06.2025' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Birolini.2017}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ecf114aa7badca10474bfa02e9cccde1}{%
+           family={Birolini},
+           familyi={B\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{fullhash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{fullhashraw}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{bibnamehash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{authorbibnamehash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{authornamehash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{authorfullhash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{authorfullhashraw}{ecf114aa7badca10474bfa02e9cccde1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-54208-8}
+      \field{title}{Reliability Engineering}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1007/978-3-662-54209-5
+      \endverb
+    \endentry
+    \entry{Meeker.2022}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=06c9248ef411ccbabea6465250ba6c45}{%
+           family={Meeker},
+           familyi={M\bibinitperiod},
+           given={William\bibnamedelima Q.},
+           giveni={W\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+        {{hash=cbb2ef219bd70f7277cfeb8abb93206a}{%
+           family={Escobar},
+           familyi={E\bibinitperiod},
+           given={Luis\bibnamedelima A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ac8d7c46bf95ba3616ae28e2a8a55122}{%
+           family={Pascual},
+           familyi={P\bibinitperiod},
+           given={Francis\bibnamedelima G.},
+           giveni={F\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3108999677b731b9b6ef01ad029f17fc}
+      \strng{fullhash}{5bbe4ce7176f019d042db7c48104aad0}
+      \strng{fullhashraw}{5bbe4ce7176f019d042db7c48104aad0}
+      \strng{bibnamehash}{5bbe4ce7176f019d042db7c48104aad0}
+      \strng{authorbibnamehash}{5bbe4ce7176f019d042db7c48104aad0}
+      \strng{authornamehash}{3108999677b731b9b6ef01ad029f17fc}
+      \strng{authorfullhash}{5bbe4ce7176f019d042db7c48104aad0}
+      \strng{authorfullhashraw}{5bbe4ce7176f019d042db7c48104aad0}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}This book improves Meeker and Escobar (1998, Wiley) not only in terms of organization and presentation, but also in extensions and modifications to the technical material. It presents state-of-the-art, computer-based statistical methods for reliability data analysis and for test planning of industrial products. It also improves long time established techniques as it demonstrates how to apply the new graphical, numerical, or simulation-based methods to a broad range of models encountered in reliability data analysis. Bayesian methods in solving practical problems (e.g. models involving random effects or censoring that arises in reliability studies) are now incorporated where appropriate; the computations are done with WinBUGS. Ample exercises that extend and strengthen the concepts in the book are included. The criterion for integrating material in the book is that the authors have in-hand or have seen real applications for the methodology. The book is specifically geared for a one-semester course on the topic in either a statistics or engineering department at either the upper-undergraduate or beginning graduate levels. R functions and subroutines, along with an extensive list of data sets, are included on a massive web site that is meticulously maintained by the authors{"}--}
+      \field{edition}{Second edition}
+      \field{isbn}{978-1-118-11545-9}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Statistical methods for reliability data}
+      \field{year}{2022}
+    \endentry
+    \entry{Yang.2007}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=254c3e5bb0c3e09bf3f73d96c9ff17d5}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Guangbin},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, N.J.}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
+      \strng{fullhash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
+      \strng{fullhashraw}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
+      \strng{bibnamehash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
+      \strng{authorbibnamehash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
+      \strng{authornamehash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
+      \strng{authorfullhash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
+      \strng{authorfullhashraw}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780471715290}
+      \field{title}{Life cycle reliability engineering}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/enhancements/fy0740/2006019150-b.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/enhancements/fy0740/2006019150-b.html
+      \endverb
+    \endentry
+    \entry{Rigdon.2022}{book}{}{}
+      \name{author}{4}{}{%
+        {{hash=c808b810e0385a805d7b731ed1584bb0}{%
+           family={Rigdon},
+           familyi={R\bibinitperiod},
+           given={Steven\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=3acacc1f684ef378918a00ece495d31b}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Rong},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d227bb15ac70e57dedbb81a8e5337949}{%
+           family={Freeman},
+           familyi={F\bibinitperiod},
+           given={Laura\bibnamedelima June},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{5c8f62ba392933db331eb31d518225a6}
+      \strng{fullhash}{d27a45dcb741548bd1d12638bcaa086f}
+      \strng{fullhashraw}{d27a45dcb741548bd1d12638bcaa086f}
+      \strng{bibnamehash}{d27a45dcb741548bd1d12638bcaa086f}
+      \strng{authorbibnamehash}{d27a45dcb741548bd1d12638bcaa086f}
+      \strng{authornamehash}{5c8f62ba392933db331eb31d518225a6}
+      \strng{authorfullhash}{d27a45dcb741548bd1d12638bcaa086f}
+      \strng{authorfullhashraw}{d27a45dcb741548bd1d12638bcaa086f}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}Experimental design has been used extensively and successfully to aid in quality achievement; however, there have been fewer successful applications in reliability. Experiments in reliability are inherently different from other industrial experiments since lifetimes usually do not follow a normal distribution, which is often the assumption in experimental design. Written by internationally known experts in the fields of experimental design methodology and reliability data analysis, this book illustrates how experimental design and tests can improve the reliability of the outcome. Focusing on reliability applications and methods, this book describes and illustrates methods for designing experiments and analyzes the results when the response is a lifetime. This book is organized into four main parts: Part One begins with an introduction to reliability, lifetime distributions, and inference for parameter of lifetime distributions; Part Two focuses on design of experiments, optimal design, and robust design; Part Three features coverage of lifetime regression, parametric regression models, the Cox Proportional Hazard Model, and design strategies for reliability achievement; and Part Four addresses accelerated testing, models for acceleration, and design of experiments for accelerated testing. The authors also utilize R, SAS{\circledR}, and JMP{\circledR} software throughout as appropriate, and a supplemental website contains the related data sets{"}--}
+      \field{isbn}{9781119237693}
+      \field{title}{Design of experiments for reliability achievement}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1002/9781119237754
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781119237754
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781119237754
+      \endverb
+    \endentry
+    \entry{Fahrmeir.2016}{book}{}{}
+      \name{author}{5}{}{%
+        {{hash=476d0247462120c31452a2a58cbd6cdc}{%
+           family={Fahrmeir},
+           familyi={F\bibinitperiod},
+           given={Ludwig},
+           giveni={L\bibinitperiod}}}%
+        {{hash=149888aa6ce3887c3ba08caf0a6d6bf8}{%
+           family={Heumann},
+           familyi={H\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1860a0a88eb0ecf0d36f45cccde7841a}{%
+           family={Künstler},
+           familyi={K\bibinitperiod},
+           given={Rita},
+           giveni={R\bibinitperiod}}}%
+        {{hash=28ec15dca2b989c6bb6073992ad66e15}{%
+           family={Pigeot},
+           familyi={P\bibinitperiod},
+           given={Iris},
+           giveni={I\bibinitperiod}}}%
+        {{hash=4133bdf1da384bf31d5c1ec83be7006e}{%
+           family={Tutz},
+           familyi={T\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{db761f4cd757345a30ce4eb384db4b6f}
+      \strng{fullhash}{ff763cc26b32bb473793196242a1df93}
+      \strng{fullhashraw}{ff763cc26b32bb473793196242a1df93}
+      \strng{bibnamehash}{ff763cc26b32bb473793196242a1df93}
+      \strng{authorbibnamehash}{ff763cc26b32bb473793196242a1df93}
+      \strng{authornamehash}{db761f4cd757345a30ce4eb384db4b6f}
+      \strng{authorfullhash}{ff763cc26b32bb473793196242a1df93}
+      \strng{authorfullhashraw}{ff763cc26b32bb473793196242a1df93}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-50371-3}
+      \field{title}{Statistik}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.1007/978-3-662-50372-0
+      \endverb
+    \endentry
+    \entry{Kaplan.1958}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bed2cb36936919857be6848c7e32e975}{%
+           family={Kaplan},
+           familyi={K\bibinitperiod},
+           given={E.\bibnamedelimi L.},
+           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=c0b76397dc289c7890d1cd0b286a68ae}{%
+           family={Meier},
+           familyi={M\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b29e200d0b5b68f183a9ee86c92791a}
+      \strng{fullhash}{2b29e200d0b5b68f183a9ee86c92791a}
+      \strng{fullhashraw}{2b29e200d0b5b68f183a9ee86c92791a}
+      \strng{bibnamehash}{2b29e200d0b5b68f183a9ee86c92791a}
+      \strng{authorbibnamehash}{2b29e200d0b5b68f183a9ee86c92791a}
+      \strng{authornamehash}{2b29e200d0b5b68f183a9ee86c92791a}
+      \strng{authorfullhash}{2b29e200d0b5b68f183a9ee86c92791a}
+      \strng{authorfullhashraw}{2b29e200d0b5b68f183a9ee86c92791a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{01621459}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{282}
+      \field{title}{Nonparametric Estimation from Incomplete Observations}
+      \field{volume}{53}
+      \field{year}{1958}
+      \field{pages}{457}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.2307/2281868
+      \endverb
+    \endentry
+    \entry{Hedderich.2020}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=f0ededa4c2c3dade8b2efd49818285c4}{%
+           family={Hedderich},
+           familyi={H\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fbccda98bf338df51822a75000c71f3e}{%
+           family={Sachs},
+           familyi={S\bibinitperiod},
+           given={Lothar},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{de8d73d8f167dd75b610703e373a22a1}
+      \strng{fullhash}{de8d73d8f167dd75b610703e373a22a1}
+      \strng{fullhashraw}{de8d73d8f167dd75b610703e373a22a1}
+      \strng{bibnamehash}{de8d73d8f167dd75b610703e373a22a1}
+      \strng{authorbibnamehash}{de8d73d8f167dd75b610703e373a22a1}
+      \strng{authornamehash}{de8d73d8f167dd75b610703e373a22a1}
+      \strng{authorfullhash}{de8d73d8f167dd75b610703e373a22a1}
+      \strng{authorfullhashraw}{de8d73d8f167dd75b610703e373a22a1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-62293-3}
+      \field{title}{Angewandte Statistik}
+      \field{year}{2020}
+      \verb{doi}
+      \verb 10.1007/978-3-662-62294-0
+      \endverb
+    \endentry
+    \entry{Rinne.2008}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ec8317a15ab9b47e1eacf21fc05589c1}{%
+           family={Rinne},
+           familyi={R\bibinitperiod},
+           given={Horst},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press LLC}%
+      }
+      \strng{namehash}{ec8317a15ab9b47e1eacf21fc05589c1}
+      \strng{fullhash}{ec8317a15ab9b47e1eacf21fc05589c1}
+      \strng{fullhashraw}{ec8317a15ab9b47e1eacf21fc05589c1}
+      \strng{bibnamehash}{ec8317a15ab9b47e1eacf21fc05589c1}
+      \strng{authorbibnamehash}{ec8317a15ab9b47e1eacf21fc05589c1}
+      \strng{authornamehash}{ec8317a15ab9b47e1eacf21fc05589c1}
+      \strng{authorfullhash}{ec8317a15ab9b47e1eacf21fc05589c1}
+      \strng{authorfullhashraw}{ec8317a15ab9b47e1eacf21fc05589c1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Most Comprehensive Book on the Subject Chronicles the Development of the Weibull Distribution in Statistical Theory and Applied Statistics Exploring one of the most important distributions in statistics, The Weibull Distribution: A Handbook focuses on its origin, statistical properties, and related distributions. The book also presents various approaches to estimate the parameters of the Weibull distribution under all possible situations of sampling data as well as approaches to parameter and goodness-of-fit testing. Describes the Statistical Methods, Concepts, Theories, and Applications of This Distribution Compiling findings from dozens of scientific journals and hundreds of research papers, the author first gives a careful and thorough mathematical description of the Weibull distribution and all of its features. He then deals with Weibull analysis, using classical and Bayesian approaches along with graphical and linear maximum likelihood techniques to estimate the three Weibull parameters. The author also explores the inference of Weibull processes, Weibull parameter testing, and different types of goodness-of-fit tests and methods. Successfully Apply the Weibull Model By using inferential procedures for estimating, testing, forecasting, and simulating data, this self-contained, detailed handbook shows how to solve statistical life science and engineering problems. Cover -- Title -- Copyright -- Contents -- Preface -- List of Figures -- List of Tables -- Part I: Genesis, theory and description -- Chapter 1: History and meaning of the WEIBULL distribution -- Chapter 2: Definition and properties of the WEIBULL distribution -- Chapter 3: Related distributions -- Chapter 4: WEIBULL processes and WEIBULL renewal theory -- Chapter 5: Order statistics and related variables -- Chapter 6: Characterizations -- Part II: Applications and inference -- Chapter 7: WEIBULL applications and aids in doing WEIBULL analysis -- Chapter 8: Collecting life data -- Chapter 9: Parameter estimation - Graphical approaches -- Chapter 10: Parameter estimation - Least squares and linear approaches -- Chapter 11: Parameter estimation - Maximum likelihood approaches -- Chapter 12: Parameter estimation - Methods of moments -- Chapter 13: Parameter estimation - More classical approaches and comparisons -- Chapter 14: Parameter estimation - BAYESIAN approaches -- Chapter 15: Parameter estimation - Further approaches -- Chapter 16: Parameter estimation in accelerated life testing -- Chapter 17: Parameter estimation for mixed WEIBULL models -- Chapter 18: Inference of WEIBULL processes -- Chapter 19: Estimation of percentiles and reliability including tolerance limits -- Chapter 20: Prediction of future random quantities -- Chapter 21: WEIBULL parameter testing -- Chapter 22: WEIBULL goodness-of-fit testing and related problems -- Part III: Appendices -- Table of the gamma, digamma and trigamma functions -- Abbreviations -- Mathematical and statistical notations -- Bibliography -- Author index -- Subject index.}
+      \field{edition}{1st ed.}
+      \field{isbn}{978-1-4200-8743-7}
+      \field{title}{The Weibull Distribution: A Handbook}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=1633687
+      \endverb
+      \verb{url}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=1633687
+      \endverb
+    \endentry
+    \entry{Kececioglu.2002}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=2e1bd4c711f964987d8fef154f2ba2f0}{%
+           family={Kececioglu},
+           familyi={K\bibinitperiod},
+           given={Dimitri},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Lancaster, PA}%
+      }
+      \list{publisher}{1}{%
+        {DEStech Publications}%
+      }
+      \strng{namehash}{2e1bd4c711f964987d8fef154f2ba2f0}
+      \strng{fullhash}{2e1bd4c711f964987d8fef154f2ba2f0}
+      \strng{fullhashraw}{2e1bd4c711f964987d8fef154f2ba2f0}
+      \strng{bibnamehash}{2e1bd4c711f964987d8fef154f2ba2f0}
+      \strng{authorbibnamehash}{2e1bd4c711f964987d8fef154f2ba2f0}
+      \strng{authornamehash}{2e1bd4c711f964987d8fef154f2ba2f0}
+      \strng{authorfullhash}{2e1bd4c711f964987d8fef154f2ba2f0}
+      \strng{authorfullhashraw}{2e1bd4c711f964987d8fef154f2ba2f0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This volume includes the binomial tests of comparison and up-to-date information on Accept-Reject Tests, the Sequential Probability Ratio Test, Bayesian MTBF and Reliability Demonstration Tests, as well as other very important accelerated tests such as Arrhenius, Eyring, Bazovsky, and Inverse Power Law}
+      \field{isbn}{1-932078-03-7}
+      \field{title}{Reliability {\&} life testing handbook}
+      \field{year}{2002}
+    \endentry
+    \entry{Montgomery.2021}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=bb9dadeef0e27beee51d152faff8ca96}{%
+           family={Peck},
+           familyi={P\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=788c3b54381fbc8ef27cdf46201acf93}{%
+           family={Vining},
+           familyi={V\bibinitperiod},
+           given={G.\bibnamedelimi Geoffrey},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, New Jersey}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{d5b92f1f1d7a32f637a9fa8267ad1bf4}
+      \strng{fullhash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{fullhashraw}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{bibnamehash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{authorbibnamehash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{authornamehash}{d5b92f1f1d7a32f637a9fa8267ad1bf4}
+      \strng{authorfullhash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{authorfullhashraw}{99eadd8af988e76081d9186d2fd2c617}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}In statistics, linear regression is a linear approach to modelling the relationship between a scalar response and one or more explanatory variables. A linear regression model attempts to explain the relationship between two or more variables using a straight line.{"}--}
+      \field{edition}{Sixth edition}
+      \field{isbn}{978-1-119-57872-7}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Introduction to linear regression analysis}
+      \field{year}{2021}
+    \endentry
+    \entry{Nelson.1990}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=8fc1a2b86e1326c2fe08563c8a81c59b}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Wayne},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Newark}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons Incorporated}%
+      }
+      \strng{namehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{fullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{fullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{bibnamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorbibnamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authornamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorfullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorfullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Accelerated Testing Statistical Models, Test Plans, and Data Analyses -- Contents -- Preface -- 1. Introduction and Background -- 1. Survey of Methodology and Applications -- 2. Types of Data -- 3. Types of Acceleration and Stress Loading -- 4. Engineering Considerations -- 5. Common Accelerated Tests -- 6. Statistical Considerations -- Problems -- 2. Models for Life Tests with Constant Stress -- 1. Introduction -- 2. Basic Concepts and the Exponential Distribution -- 3. Normal Distribution -- 4. Lognormal Distribution -- 5. Weibull Distribution -- 6. Extreme Value Distribution -- 7. Other Distributions -- 8. Life-Stress Relationships -- 9. Arrhenius Life-Temperature Relationship -- 10. Inverse Power Relationship -- 11. Endurance (Fatigue) Limit Relationships and Distributions -- 12. Other Single Stress Relationships -- 13. Multivariable Relationships -- 14. Spread in Log Life Depends on Stress -- Problems -- 3. Graphical Data Analysis -- 1. Introduction -- 2. Complete Data and Arrhenius-Lognormal Model -- 3. Complete Data and Power-Weibull Model -- 4. Singly Censored Data -- 5. Multiply Censored Data -- 6. Interval (Read-out) Data -- Problems -- 4. Complete Data and Least Squares Analyses -- 1. Introduction -- 2. Least-Squares Methods for Lognormal Life -- 3. Checks on the Linear-Lognormal Model and Data -- 4. Least-Squares Methods for Weibull and Exponential Life -- 5. Checks on the Linear-Weibull Model and Data -- 6. Multivariable Relationships -- Problems -- 5. Censored Data and Maximum Ukelihood Methods -- 1. Introduction to Maximum Likelihood -- 2. Fit the Simple Model to Right Censored Data -- 3. Assess the Simple Model and Right Censored Data -- 4. Other Models and Types of Data -- 5. Maximum Likelihood Calculations -- Problems -- 6. Test Plans -- 1. Plans for the Simple Model and Complete Data.}
+      \field{edition}{1st ed.}
+      \field{isbn}{978-0471697367}
+      \field{series}{Wiley Series in Probability and Statistics Series}
+      \field{title}{Accelerated Testing: Statistical Models, Test Plans, and Data Analysis}
+      \field{volume}{v.344}
+      \field{year}{1990}
+      \verb{urlraw}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=469757
+      \endverb
+      \verb{url}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=469757
+      \endverb
+    \endentry
+    \entry{Kalbfleisch.2002}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=d14758bf8b584eaa358587db5a5f2774}{%
+           family={Kalbfleisch},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, N.J}%
+      }
+      \list{publisher}{1}{%
+        {J. Wiley}%
+      }
+      \strng{namehash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{fullhash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{fullhashraw}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{bibnamehash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{authorbibnamehash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{authornamehash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{authorfullhash}{d14758bf8b584eaa358587db5a5f2774}
+      \strng{authorfullhashraw}{d14758bf8b584eaa358587db5a5f2774}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Contains additional discussion and examples on left truncation as well as material on more general censoring and truncation patterns. Introduces the martingale and counting process formulation swil lbe in a new chapter. Develops multivariate failure time data in a separate chapter and extends the material on Markov and semi Markov formulations. Presents new examples and applications of data analysis Front Matter -- Introduction -- Failure Time Models -- Inference in Parametric Models and Related Topics -- Relative Risk (Cox) Regression Models -- Counting Processes and Asymptotic Theory -- Likelihood Construction and Further Results -- Rank Regression and the Accelerated Failure Time Model -- Competing Risks and Multistate Models -- Modeling and Analysis of Recurrent Event Data -- Analysis of Correlated Failure Time Data -- Additional Failure Time Data Topics -- Glossary of Notation -- Appendix A: Some Sets of Data -- Appendix B: Supporting Technical Material -- Bibliography -- Author Index -- Subject Index -- Wiley Series in Probability and Statistics. Failure time models --Inference in parametric models and related topics --Relative risk (Cox)regression models --Counting processes and asymptotic theory --Likelihood construction and further results --Rank regression and the accelerated failure time model --Competing risks and multi-state models --Modeling and analysis of recurrent event data --Analysis of correlated failure time data --Additional failure time data topics --Appendix A: Some sets of data --Appendix B: Some supporting technical material.}
+      \field{edition}{2nd ed.}
+      \field{isbn}{047136357X}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{The statistical analysis of failure time data}
+      \field{year}{2002}
+      \verb{doi}
+      \verb 10.1002/9781118032985
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781118032985
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781118032985
+      \endverb
+    \endentry
+    \entry{Nelson.2005}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=8fc1a2b86e1326c2fe08563c8a81c59b}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={Wayne},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons Inc}%
+      }
+      \strng{namehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{fullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{fullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{bibnamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorbibnamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authornamehash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorfullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \strng{authorfullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{WILEY-INTERSCIENCE PAPERBACK SERIES The Wiley-Interscience Paperback Series consists of selected books that have been made more accessible to consumers in an effort to increase global appeal and general circulation. With these new unabridged softcover volumes, Wiley hopes to extend the lives of these works by making them available to future generations of statisticians, mathematicians, and scientists. {"}Many examples drawn from the author's experience of engineering applications are used to illustrate the theoretical results, which are presented in a cookbook fashion...it provides an excellent}
+      \field{isbn}{9780471644620}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Applied Life Data Analysis}
+      \field{volume}{v.577}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=226561
+      \endverb
+      \verb{url}
+      \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=226561
+      \endverb
+    \endentry
+    \entry{Qiao.1994}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2692c53aa5c359427b3082e09a2fbe6e}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Hongzhu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c404c6024b95c11c715ecdf8df8b9185}{%
+           family={Tsokos},
+           familyi={T\bibinitperiod},
+           given={Chris\bibnamedelima P.},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{fullhash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{fullhashraw}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{bibnamehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authorbibnamehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authornamehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authorfullhash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authorfullhashraw}{366c7df0b59760b6d5b451ecc4d94e03}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Newton---Raphson's method plays a fundamental role in the maximum likelihood estimation of the two parameters of the Weibull probability distribution. It is well known that the method depends on the initial point of the iterative process and the iteration does not always converge. In the present article, we introduce an effective iterative procedure for estimating the subject parameter. Our proposed method always converges and does not depend on the initial point of the iteration. It will also be shown by numerical examples that our method converges faster than the popular Newton---Raphson method.}
+      \field{issn}{0378-4754}
+      \field{journaltitle}{Mathematics and Computers in Simulation}
+      \field{number}{1}
+      \field{title}{Parameter estimation of the Weibull probability distribution}
+      \field{volume}{37}
+      \field{year}{1994}
+      \field{pages}{47\bibrangedash 55}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/0378-4754(94)90058-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0378475494900582
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0378475494900582
+      \endverb
+    \endentry
+    \entry{Kremer.2019b}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
+           family={Bertsche},
+           familyi={B\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=7ef18fd006079fa9792505ec995bec01}{%
+           family={Beer},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a39584d47f804edfd114dc151188882f}{%
+           family={Zio},
+           familyi={Z\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Europe}%
+        {Singapore}%
+      }
+      \list{publisher}{2}{%
+        {European Safety and Reliability Association}%
+        {Research Publishing Services}%
+      }
+      \strng{namehash}{24084f1a715650339527050d213206f7}
+      \strng{fullhash}{24084f1a715650339527050d213206f7}
+      \strng{fullhashraw}{24084f1a715650339527050d213206f7}
+      \strng{bibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorbibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authornamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhashraw}{24084f1a715650339527050d213206f7}
+      \strng{editorbibnamehash}{e398fadf316c6698a920a5613e8fb9e9}
+      \strng{editornamehash}{e398fadf316c6698a920a5613e8fb9e9}
+      \strng{editorfullhash}{e398fadf316c6698a920a5613e8fb9e9}
+      \strng{editorfullhashraw}{e398fadf316c6698a920a5613e8fb9e9}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 29th European Safety and Reliability Conference (ESREL)}
+      \field{isbn}{978-981-11-2724-3}
+      \field{title}{A New Approach for Parametrizing Multidimensional Lifetime Models}
+      \field{year}{2019}
+      \field{pages}{715\bibrangedash 722}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.3850/978-981-11-2724-3{\textunderscore }0443-cd
+      \endverb
+    \endentry
+    \entry{Abernethy.2006}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=72428f479388991b9fb020dff299038f}{%
+           family={Abernethy},
+           familyi={A\bibinitperiod},
+           given={Robert\bibnamedelima B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {North Palm Beach, Fla.}%
+      }
+      \list{publisher}{1}{%
+        {R.B. Abernethy}%
+      }
+      \strng{namehash}{72428f479388991b9fb020dff299038f}
+      \strng{fullhash}{72428f479388991b9fb020dff299038f}
+      \strng{fullhashraw}{72428f479388991b9fb020dff299038f}
+      \strng{bibnamehash}{72428f479388991b9fb020dff299038f}
+      \strng{authorbibnamehash}{72428f479388991b9fb020dff299038f}
+      \strng{authornamehash}{72428f479388991b9fb020dff299038f}
+      \strng{authorfullhash}{72428f479388991b9fb020dff299038f}
+      \strng{authorfullhashraw}{72428f479388991b9fb020dff299038f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5. ed.}
+      \field{isbn}{0965306232}
+      \field{title}{The new Weibull handbook: Reliability {\&} statistical analysis for predicting life, safety, risk, support costs, failures, and forecasting warranty claims, substantiation and accelerated testing, using Weibull, log normal, Crow-AMSAA, Probit, and Kaplan- meier Models}
+      \field{year}{2006}
+    \endentry
+    \entry{Hirose.1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=a5499b1679a871e0639ff4cba54fe95f}{%
+           family={Hirose},
+           familyi={H\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5499b1679a871e0639ff4cba54fe95f}
+      \strng{fullhash}{a5499b1679a871e0639ff4cba54fe95f}
+      \strng{fullhashraw}{a5499b1679a871e0639ff4cba54fe95f}
+      \strng{bibnamehash}{a5499b1679a871e0639ff4cba54fe95f}
+      \strng{authorbibnamehash}{a5499b1679a871e0639ff4cba54fe95f}
+      \strng{authornamehash}{a5499b1679a871e0639ff4cba54fe95f}
+      \strng{authorfullhash}{a5499b1679a871e0639ff4cba54fe95f}
+      \strng{authorfullhashraw}{a5499b1679a871e0639ff4cba54fe95f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{10709878}
+      \field{journaltitle}{IEEE Transactions on Dielectrics and Electrical Insulation}
+      \field{number}{1}
+      \field{title}{Bias correction for the maximum likelihood estimates in the two-parameter Weibull distribution}
+      \field{volume}{6}
+      \field{year}{1999}
+      \field{pages}{66\bibrangedash 68}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/94.752011
+      \endverb
+    \endentry
+    \entry{Ross.1996}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=5624c38077822c81ba36774b4f549a77}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5624c38077822c81ba36774b4f549a77}
+      \strng{fullhash}{5624c38077822c81ba36774b4f549a77}
+      \strng{fullhashraw}{5624c38077822c81ba36774b4f549a77}
+      \strng{bibnamehash}{5624c38077822c81ba36774b4f549a77}
+      \strng{authorbibnamehash}{5624c38077822c81ba36774b4f549a77}
+      \strng{authornamehash}{5624c38077822c81ba36774b4f549a77}
+      \strng{authorfullhash}{5624c38077822c81ba36774b4f549a77}
+      \strng{authorfullhashraw}{5624c38077822c81ba36774b4f549a77}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{10709878}
+      \field{journaltitle}{IEEE Transactions on Dielectrics and Electrical Insulation}
+      \field{number}{1}
+      \field{title}{Bias and standard deviation due to Weibull parameter estimation for small data sets}
+      \field{volume}{3}
+      \field{year}{1996}
+      \field{pages}{28\bibrangedash 42}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1109/94.485512
+      \endverb
+    \endentry
+    \entry{Kremer.2019c}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
+           family={Bertsche},
+           familyi={B\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{24084f1a715650339527050d213206f7}
+      \strng{fullhash}{24084f1a715650339527050d213206f7}
+      \strng{fullhashraw}{24084f1a715650339527050d213206f7}
+      \strng{bibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorbibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authornamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhashraw}{24084f1a715650339527050d213206f7}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 Annual Reliability and Maintainability Symposium (RAMS)}
+      \field{isbn}{978-1-5386-6554-1}
+      \field{title}{A Methodology for Consideration of Uncertainty in Lifetime Design of Experiments}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/RAMS.2019.8768906
+      \endverb
+    \endentry
+    \entry{Lawless.2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c8522a82bdbffcb9e6b888b265dd0d3}{%
+           family={Lawless},
+           familyi={L\bibinitperiod},
+           given={Jerald\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Interscience}%
+      }
+      \strng{namehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{fullhash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{fullhashraw}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{bibnamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authorbibnamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authornamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authorfullhash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authorfullhashraw}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed.}
+      \field{isbn}{0471372153}
+      \field{series}{Wiley series in probabilitiy and statistics}
+      \field{title}{Statistical models and methods for lifetime data}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/bios/wiley044/2002151805.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/bios/wiley044/2002151805.html
+      \endverb
+    \endentry
+    \entry{Bain.2017b}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=616127d3303355661d3437d6f1615d2d}{%
+           family={Bain},
+           familyi={B\bibinitperiod},
+           given={Lee\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c41ebdb27b647147d4ae9f658701119c}{%
+           family={Engelhardt},
+           familyi={E\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{fullhash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{fullhashraw}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{bibnamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{authorbibnamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{authornamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{authorfullhash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{authorfullhashraw}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780203738733}
+      \field{title}{Statistical Analysis of Reliability and Life-Testing Models}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1201/9780203738733
+      \endverb
+      \verb{file}
+      \verb Bain, Engelhardt 2017 - Statistical Analysis of Reliability:Attachments/Bain, Engelhardt 2017 - Statistical Analysis of Reliability.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Fisher.1935}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=565b1403c3b3172839fa752390fdd3bf}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Edinburgh}%
+      }
+      \list{publisher}{1}{%
+        {Oliver {\&} Boyd}%
+      }
+      \strng{namehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{fullhash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{fullhashraw}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{bibnamehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authorbibnamehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authornamehash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authorfullhash}{565b1403c3b3172839fa752390fdd3bf}
+      \strng{authorfullhashraw}{565b1403c3b3172839fa752390fdd3bf}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Design of Experiments}
+      \field{year}{1935}
+    \endentry
+    \entry{Box.1978}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=d30289ba50f0f7219fb405bc35b8b71c}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelimb E.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=8b96e29d65d428f0b768b4469c62e4e1}{%
+           family={Hunter},
+           familyi={H\bibinitperiod},
+           given={William\bibnamedelima Gordon},
+           giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=e620953e9de119874f338714fbeb40a6}{%
+           family={Hunter},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima Stuart},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{a889686a50c7749def33de6826e92748}
+      \strng{fullhash}{d2491eff897e9c683bea038ca7d9fec6}
+      \strng{fullhashraw}{d2491eff897e9c683bea038ca7d9fec6}
+      \strng{bibnamehash}{d2491eff897e9c683bea038ca7d9fec6}
+      \strng{authorbibnamehash}{d2491eff897e9c683bea038ca7d9fec6}
+      \strng{authornamehash}{a889686a50c7749def33de6826e92748}
+      \strng{authorfullhash}{d2491eff897e9c683bea038ca7d9fec6}
+      \strng{authorfullhashraw}{d2491eff897e9c683bea038ca7d9fec6}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0471093157}
+      \field{series}{Wiley series in probability and mathematical statistics}
+      \field{title}{Statistics for experimenters: An introduction to design, data analysis, and model building}
+      \field{year}{1978}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/description/wiley033/77015087.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/description/wiley033/77015087.html
+      \endverb
+    \endentry
+    \entry{Taguchi.2005}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3f2df364a007491176bd3e047c324d88}{%
+           family={Taguchi},
+           familyi={T\bibinitperiod},
+           given={Genichi},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{3f2df364a007491176bd3e047c324d88}
+      \strng{fullhash}{3f2df364a007491176bd3e047c324d88}
+      \strng{fullhashraw}{3f2df364a007491176bd3e047c324d88}
+      \strng{bibnamehash}{3f2df364a007491176bd3e047c324d88}
+      \strng{authorbibnamehash}{3f2df364a007491176bd3e047c324d88}
+      \strng{authornamehash}{3f2df364a007491176bd3e047c324d88}
+      \strng{authorfullhash}{3f2df364a007491176bd3e047c324d88}
+      \strng{authorfullhashraw}{3f2df364a007491176bd3e047c324d88}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780471413349}
+      \field{title}{Taguchi's quality engineering handbook}
+      \field{year}{2005}
+      \verb{doi}
+      \verb 10.1002/9780470258354
+      \endverb
+    \endentry
+    \entry{Kleppmann.2016}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=622bb48821228d9a7605a21d73f0fc9d}{%
+           family={Kleppmann},
+           familyi={K\bibinitperiod},
+           given={Wilhelm},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Hanser}%
+      }
+      \strng{namehash}{622bb48821228d9a7605a21d73f0fc9d}
+      \strng{fullhash}{622bb48821228d9a7605a21d73f0fc9d}
+      \strng{fullhashraw}{622bb48821228d9a7605a21d73f0fc9d}
+      \strng{bibnamehash}{622bb48821228d9a7605a21d73f0fc9d}
+      \strng{authorbibnamehash}{622bb48821228d9a7605a21d73f0fc9d}
+      \strng{authornamehash}{622bb48821228d9a7605a21d73f0fc9d}
+      \strng{authorfullhash}{622bb48821228d9a7605a21d73f0fc9d}
+      \strng{authorfullhashraw}{622bb48821228d9a7605a21d73f0fc9d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Jede Neu- oder Weiterentwicklung von Produkten und Fertigungsprozessen durchläuft eine Vielzahl von Versuchen. Aber Versuche kosten Zeit und Geld, und manche Ergebnisse sind nicht reproduzierbar. Versuchsplanung (auch DOE = Design of Experiments genannt) hilft dabei, mit möglichst geringem Aufwand reproduzierbare Ergebnisse zu erhalten. Dieses Buch zeigt Praktikern in Entwicklung, Konstruktion und Fertigung, sowie Studenten, wie mit Versuchsplanung Produkte und Prozesse optimiert werden können. Versuchsplanung ist ein wesentlicher Bestandteil der Six-Sigma-Strategie. Anhand von vielen Beispielen wird beschrieben, wie man 'durch systematische Beobachtung Informationen sammeln, 'durch einfache Versuche einfache Probleme lösen, 'mit wenigen Einzelversuchen die Bedeutung vieler Faktoren gleichzeitig beurteilen und so die wichtigen von den unwichtigen trennen, 'robuste Produkte und Prozesse entwickeln, 'die Abhängigkeit mehrerer Zielgrö{ß}en von mehreren Faktoren gleichzeitig erfassen und ein gemeinsames Optimum suchen, und 'schrittweise Fertigungsprozesse und Produkte verbessern kann. Ziel des Buches ist, einen anwendungsorientierten Überblick zu geben. Es verbindet die Methoden der klassischen Statistischen Versuchsplanung mit Ideen von D. Shainin, G. Taguchi und vielen anderen zu einer neuen Kombination. So können die Vorteile aller Methoden genutzt werden. Visualisierungen in JavaTM bzw. JavaScript erlauben es, statistische Grundlagen spielerisch zu erleben und besser zu verstehen. In der 9. Auflage wurden die Versuchspläne und Optimierungsansätze erweitert, andere Kapitel wurden aktualisiert. Für die beiliegende DVD haben zahlreiche Hersteller die aktuellsten Demos ihrer Versuchsplanungs- bzw. Statistiksoftware zur Verfügung gestellt. Mit den Beispieldaten auf der DVD kann der Anwender die Programme anhand bekannter Beispiele selbst testen und das für seine Bedürfnisse am besten geeignete auswählen. Prof. Dr. Wilhelm Kleppmann war von 1986 bis 1991 Betreuer von Versuchsplanungsprojekten bei Siemens. Seither lehrt er an der Hochschule Aalen in den Studiengängen Elektronik, Informatik, Maschinenbau/Fertigungstechnik und Kunststofftechnik. Für Firmen und für die DGQ (Deutsche Gesellschaft für Qualität e.V.) führt er Lehrgänge und Pilotprojekte zur Versuchsplanung durch. Prof. Dr. Wilhelm Kleppmann, Hochschule Aalen, Beethovenstrasse 1, 73430 Aalen email: wilhelm.kleppmannhtw-aalen.de Internet: http://www.elektronik.htw-aalen.de/kleppmann/}
+      \field{edition}{9., überarbeitete Auflage}
+      \field{isbn}{978-3-446-44716-5}
+      \field{series}{Hanser eLibrary}
+      \field{title}{Versuchsplanung: Produkte und Prozesse optimieren}
+      \field{year}{2016}
+      \verb{doi}
+      \verb 10.3139/9783446447172?locatt=mode:legacy
+      \endverb
+    \endentry
+    \entry{Montgomery.2020}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ, USA}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons, Inc}%
+      }
+      \strng{namehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{fullhash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{fullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{bibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorbibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authornamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorfullhash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorfullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{10th}
+      \field{isbn}{9781119722106}
+      \field{title}{Design and Analysis of Experiments}
+      \field{year}{2020}
+    \endentry
+    \entry{Wu.2021}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=8f7b81c89f3e6d3d658748723f89ff1c}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Chien-Fu},
+           giveni={C\bibinithyphendelim F\bibinitperiod}}}%
+        {{hash=5ca9417a5ceabf98b7d814febe5a681a}{%
+           family={Hamada},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ, USA}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{fullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{fullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{bibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorbibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authornamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorfullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorfullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}This Third Edition covers design of experiments and integrates computer experiments with other design topics. The main changes in this Third Edition are two new chapters, one on computer experiments, the other on optimal design. Computer experiments have become very popular in experimental design because increasingly more and more experiments are conducted on a computer, such as running finite element simulations, instead of conducting physical experiments. This book starts each chapter with a real experiment. Then, the authors develop the needed tools in subsequent sections. Finally, the chapter ends with the application of these tools to the experiment. Each chapter includes exercises, and the authors have added new exercise problems with selected solutions to the Instructor's solutions manual. This is an ideal book for design of experiments courses at the upper-undergraduate and graduate levels. It is also a valuable resource for practicing engineers and statisticians. Design of experiments (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships. This information is needed to manage process inputs in order to optimize the output{"}--}
+      \field{edition}{Third edition}
+      \field{isbn}{9781119470106}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Experiments: Planning, analysis and optimization}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://zbmath.org/?q=an%3A1460.62003
+      \endverb
+      \verb{url}
+      \verb https://zbmath.org/?q=an%3A1460.62003
+      \endverb
+    \endentry
+    \entry{Siebertz.2017}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=d645d85000fb1a9b0b0e6f3fc20617de}{%
+           family={Siebertz},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3f85d9aa754c21d01f35494bf2062cfd}{%
+           family={{van Bebber}},
+           familyi={v\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e9e55f9152a098501c9682b22bf119e3}{%
+           family={Hochkirchen},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Berlin}%
+        {Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Vieweg}%
+      }
+      \strng{namehash}{1f49c6d22773878487629b490053f3fc}
+      \strng{fullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{fullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{bibnamehash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{authorbibnamehash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{authornamehash}{1f49c6d22773878487629b490053f3fc}
+      \strng{authorfullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \strng{authorfullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. Auflage}
+      \field{isbn}{978-3-662-55742-6}
+      \field{series}{VDI-Buch}
+      \field{title}{Statistische Versuchsplanung: Design of Experiments (DoE)}
+      \field{year}{2017}
+    \endentry
+    \entry{Goos.2011}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=bd639e8bc0dd4c3689cb8b7cc745dbe5}{%
+           family={Goos},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=de511b43605b30524c08cd416cf11604}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Bradley\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons, Inc}%
+      }
+      \strng{namehash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{fullhash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{fullhashraw}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{bibnamehash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{authorbibnamehash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{authornamehash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{authorfullhash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{authorfullhashraw}{e9b8290c4891fab41ae653f4590250b9}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{9780470744611}
+      \field{title}{Optimal Design of Experiments: A Case Study Approach}
+      \field{year}{2011}
+    \endentry
+    \entry{Hinkelmann.2012}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=1a0880c02579e3839e4eccae94c06260}{%
+           family={Hinkelmann},
+           familyi={H\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons, Inc}%
+      }
+      \strng{namehash}{1a0880c02579e3839e4eccae94c06260}
+      \strng{fullhash}{1a0880c02579e3839e4eccae94c06260}
+      \strng{fullhashraw}{1a0880c02579e3839e4eccae94c06260}
+      \strng{bibnamehash}{1a0880c02579e3839e4eccae94c06260}
+      \strng{authorbibnamehash}{1a0880c02579e3839e4eccae94c06260}
+      \strng{authornamehash}{1a0880c02579e3839e4eccae94c06260}
+      \strng{authorfullhash}{1a0880c02579e3839e4eccae94c06260}
+      \strng{authorfullhashraw}{1a0880c02579e3839e4eccae94c06260}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{978-0470-53068-9}
+      \field{title}{Design and Analysis of Experiments - Volume 3: Special Designs and Applications}
+      \field{year}{2012}
+    \endentry
+    \entry{Myers.2016}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=33227d4358a3d37f134dea3babce8eec}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Raymond\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
+           family={Anderson-Cook},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Christine\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ, USA}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons, Inc}%
+      }
+      \strng{namehash}{5bddaf63e20d2d4fc3b2ab77023c52a8}
+      \strng{fullhash}{01c14a626dccac2c615539582f23bfbd}
+      \strng{fullhashraw}{01c14a626dccac2c615539582f23bfbd}
+      \strng{bibnamehash}{01c14a626dccac2c615539582f23bfbd}
+      \strng{authorbibnamehash}{01c14a626dccac2c615539582f23bfbd}
+      \strng{authornamehash}{5bddaf63e20d2d4fc3b2ab77023c52a8}
+      \strng{authorfullhash}{01c14a626dccac2c615539582f23bfbd}
+      \strng{authorfullhashraw}{01c14a626dccac2c615539582f23bfbd}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{isbn}{978-1-118-91601-8}
+      \field{title}{Response Surface Methodology: Process and Product Optimization Using Designed Experiments}
+      \field{year}{2016}
+    \endentry
+    \entry{Dazer.2019}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Universität Stuttgart}%
+      }
+      \strng{namehash}{b2d5e4d5be1aedd86811d93b996f7c35}
+      \strng{fullhash}{b2d5e4d5be1aedd86811d93b996f7c35}
+      \strng{fullhashraw}{b2d5e4d5be1aedd86811d93b996f7c35}
+      \strng{bibnamehash}{b2d5e4d5be1aedd86811d93b996f7c35}
+      \strng{authorbibnamehash}{b2d5e4d5be1aedd86811d93b996f7c35}
+      \strng{authornamehash}{b2d5e4d5be1aedd86811d93b996f7c35}
+      \strng{authorfullhash}{b2d5e4d5be1aedd86811d93b996f7c35}
+      \strng{authorfullhashraw}{b2d5e4d5be1aedd86811d93b996f7c35}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Diese Arbeit widmet sich zum einen dem Ziel einer individuell anforderungsgerechten Zuverlässigkeitstestplanung im Zielkonflikt zwischen statistischer Genauigkeit, Testkosten und -zeit und zum anderen der Berechnung des dafür benötigten Vorwissens über das Produktausfallverhalten. Bei der Lebensdauer eines technischen Systems handelt es sich um eine Zufallsvariable, die Testingenieure in Kombination mit vielen möglichen Teststrategien und Randbedingungen bei der Planung von Zuverlässigkeitstests vor eine Herausforderung stellt. In einem Zuverlässigkeits-DOE werden die End-of-Life Tests und die ausfallfreien Tests im Spannungsfeld von Genauigkeit, Kosten und Zeit untersucht. Die Resultate zeigen die besten Anwendungsbereiche der jeweiligen Teststrategie und können für die Planung von Zuverlässigkeitstests mit unterschiedlichen Anforderungen verwendet werden. Ausfallfreie Tests, wie der Success Run, benötigen eine hohe Produktüberdimensionierung, um passable Erfolgsaussichten zu garantieren. Ausfallbasierte Teststrategien dagegen, sind zwar häufig kostenintensiver, dafür aber universeller einsetzbar. Durch die eingeführte Normierung aller zeitabhängigen Grö{ß}en lässt sich das Planungskonzept auf beliebige Produkte übertragen. Das produktspezifische Vorwissen wird im Rahmen dieser Arbeit nicht aus Felddaten oder Vorgängerprodukten gewonnen, sondern mit einem Ansatz zur stochastischen Lebensdauerberechnung ermittelt. Während konventionelle Lebensdauerberechnungskonzepte versuchen, die Streuung von Lebensdauerdaten durch konservative Annahmen und Sicherheitsfaktoren zu kompensieren, wird in diesem Konzept die Streuung zur realitätsnahen Berechnung der Lebensdauer berücksichtigt. Systematische Streuungen der Materialeigenschaften von Toleranzen und der äu{ß}eren Lasteinwirkung werden statistisch modelliert und für die Berechnung der Verteilungsfunktionen von Belastung und Belastbarkeit genutzt. Aus deren Überlappung werden die stochastischen Lebensdauerdaten berechnet. Durch Weibullanalyse resultieren die berechneten Lebensdauerdaten im produktspezifischen Ausfallverhalten. Die Anwendbarkeit der stochastischen Lebensdauerberechnung und der daraus abgeleiteten optimalen Testplanung werden anhand eines Nutzfahrzeugbremssattels für strukturmechanisches Versagen unter Beweis gestellt.}
+      \field{title}{Zuverlässigkeitstestplanung mit Berücksichtigung von Vorwissen aus stochastischen Lebensdauerberechnungen}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.18419/OPUS-10501
+      \endverb
+    \endentry
+    \entry{Herzig.2021}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=1b17d112f7833c081ab1d64dd0ef11ef}{%
+           family={Herzig},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Universität Stuttgart}%
+      }
+      \strng{namehash}{1b17d112f7833c081ab1d64dd0ef11ef}
+      \strng{fullhash}{1b17d112f7833c081ab1d64dd0ef11ef}
+      \strng{fullhashraw}{1b17d112f7833c081ab1d64dd0ef11ef}
+      \strng{bibnamehash}{1b17d112f7833c081ab1d64dd0ef11ef}
+      \strng{authorbibnamehash}{1b17d112f7833c081ab1d64dd0ef11ef}
+      \strng{authornamehash}{1b17d112f7833c081ab1d64dd0ef11ef}
+      \strng{authorfullhash}{1b17d112f7833c081ab1d64dd0ef11ef}
+      \strng{authorfullhashraw}{1b17d112f7833c081ab1d64dd0ef11ef}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Zentraler Kernpunkt des Zielkonflikts in der heutigen Produktentwicklung sind die immer weiter steigenden Kundenanforderungen bei einer gleichzeitig geforderten Reduktion der Entwicklungskosten. Beschleunigte Lebensdauertests sind daher für die Erprobung und den Zuverlässigkeitsnachweis unverzichtbar. Die vorliegende Arbeit betrachtet die Probability of Test Success als entscheidenden Parameter des erweiterten Zuverlässigkeitsziels, bei dem die Wahrscheinlichkeit eines erfolgreichen Zuverlässigkeitsnachweises durch Planung effizienter Zuverlässigkeitstests maximiert werden kann. Damit ist es möglich, die Grenzen des Zuverlässigkeitsnachweises und damit auch die Grenzen der Auslegung unter Berücksichtigung der Randbedingungen zu finden und Leichtbauanwendungen kostenoptimal auszulegen und gleichzeitig zuverlässigkeitstechnisch abzusichern. Die praxisrelevanten beschleunigten End-of-Life-Tests wurden in dieser Arbeit in das Konzept der Probability of Test Success integriert, um Handlungsempfehlungen für die Planung effizienter Zuverlässigkeitstests abzuleiten. Diese umfassen Empfehlungen zur Wahl und Verteilung der Prüflinge und der Lage der beschleunigten Lastniveaus, zur Berücksichtigung von beschleunigten Success-Run-Tests sowie zu Zensierungsstrategien und zusätzlichen beschleunigten Lastniveaus. Darüber hinaus wurde eine Einordnung des erweiterten Konzepts in die Produktauslegung vorgenommen. Für die untersuchten Anwendungen konnte gezeigt werden, dass das erweiterte Konzept der Probability of Test Success und die Vorgehensweise zur anforderungsgerechten Produktauslegung das Potenzial besitzt, die Zuverlässigkeitstestplanung bereits in der Produktauslegung zu berücksichtigen, die minimal mögliche Dimensionierung zu finden und dabei die Gesamtkosten zu reduzieren. Dieses Potenzial besteht insbesondere für Leichtbauanwendungen, bei welchen minimale Dimensionierung zentral ist, die Erfüllung der Zuverlässigkeits- und Lebensdaueranforderungen jedoch gewährleistet sein muss. Die Nachweisbarkeit eines Zuverlässigkeitsziels unter Berücksichtigung der Probability of Test Success kann mit dem erweiterten Konzept nun erstmals auch für die praxisrelevanten beschleunigten End-of-Life-Erprobungsstrategien berücksichtigt und quantifiziert werden.}
+      \field{title}{Anforderungsgerechte Produktauslegung durch Planung effizienter beschleunigter Zuverlässigkeitstests}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.18419/OPUS-12001
+      \endverb
+      \verb{file}
+      \verb Herzig 2021 - Anforderungsgerechte Produktauslegung durch Planung effizienter:Attachments/Herzig 2021 - Anforderungsgerechte Produktauslegung durch Planung effizienter.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Grundler.2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f784da2389a332859e32df8d9d618d14}{%
+           family={Grundler},
+           familyi={G\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Universität Stuttgart}%
+      }
+      \strng{namehash}{f784da2389a332859e32df8d9d618d14}
+      \strng{fullhash}{f784da2389a332859e32df8d9d618d14}
+      \strng{fullhashraw}{f784da2389a332859e32df8d9d618d14}
+      \strng{bibnamehash}{f784da2389a332859e32df8d9d618d14}
+      \strng{authorbibnamehash}{f784da2389a332859e32df8d9d618d14}
+      \strng{authornamehash}{f784da2389a332859e32df8d9d618d14}
+      \strng{authorfullhash}{f784da2389a332859e32df8d9d618d14}
+      \strng{authorfullhashraw}{f784da2389a332859e32df8d9d618d14}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Zentraler Gegenstand dieser Arbeit ist der Nachweis der Zuverlässigkeit von Systemen und die Planung der dazu notwendigen Tests. Selbst einfache Produkte können durch mehrere Ursachen und Mechanismen ausfallen und besitzen dazu meist mehrere Komponenten und Subsysteme. Diese Arbeit behandelt die Planung von Tests für den effizienten Nachweis der Systemzuverlässigkeit, welche die Systemstruktur und die Komponenten mit der Kombina- tion von Tests dieser Elemente berücksichtigt. Dazu wird die Probability of Test Success als zentrale, objektive Bewertungsmetrik verwendet. Sie ist fähig, die Wahrscheinlichkeit für einen erfolgreichen Zuverlässigkeitsnachweis anzugeben und erlaubt damit beispielsweise auch die Frage nach dem erforderlichen Stichprobenumfang bei ausfallbasierten Tests zu beantworten. Durch die vorgenommene Einordnung der Probability of Test Success in den statistischen Kontext eines Hypothesentests kann die Probability of Test Success auch als Trennschärfe verstanden werden. Dadurch werden Berechnungsmethoden entwickelt, die diesen Kontext ausnutzen. Ebenso ermöglicht dies die notwendige Erweiterung auf Systeme mit mehreren Ausfallmoden sowie die Berücksichtigung der Unsicherheit in der Vorkenntnis und die zusätzliche Berücksichtigung der Vorkenntnis mit dem Satz von Bayes. Ein ganzheitliches Vorgehen zeigt auf, wie im individuellen Fall der effizienteste Test identifiziert werden kann. Das hei{ß}t ein Test, welcher sowohl den Nachweis mit hoher Wahrscheinlichkeit erbringt, als auch die gesetzten Grenzen bezüglich des zur Verfügung stehenden Budgets einhält und die Ressourcen dabei möglichst effizient einsetzt. Untersuchungen zeigen, dass sich daraus ein grundsätzliches Verständnis zu den Tests, der Vorkenntnis und den Systemen ableiten lässt. Beispielsweise sind ausfallfreie Tests auf Komponentenebene den ausfallbasierten Tests aus statistischer Sicht fast immer unterlegen. Zudem verhält sich der Effekt von hohem Aufwand auf die Güte des Tests bei ausfallbasierten und ausfallfreien Tests gegensätzlich. Werden bei einem ausfallbasierten Test mehr Prüflinge verwendet, so steigt die Wahrscheinlichkeit für einen erfolgreichen Nachweis. Bei den ausfallfreien Tests sinkt dagegen die Wahrscheinlichkeit für einen erfolgreichen Nachweis. Das bedeutet, dass ausfallfreie Testverfahren nur dann mit hoher Wahrscheinlichkeit einen Nachweis erbringen können, wenn die dabei gewonnene Aussage von schlechter statistischer Güte ist. Zudem sind sie unfähig, Zuverlässigkeitsnachweise für Systeme zu erbringen, welche die Anforderung nur wenig übererfüllen. Werden die Komponenten des Systems ausfallbasiert getestet, um den Nachweis zu erbringen, so ermöglichen die entwickelten Methoden eine optimale Aufteilung der Prüflinge zu berechnen. Neben der Auswahl der Testart erlaubt diese Arbeit demnach die Untersuchung der optimalen Testgestaltung, sodass der Nachweis mit grö{ß}tmöglicher Wahrscheinlichkeit erbracht werden kann. Hierzu zählen auch Kombinationen verschiedener Testtypen und Komponenten des Systems. Es lassen sich beispielsweise ausfallbasierte Komponententests mit ausfallfreien Dauerlauftests auf Systemebene kombinieren und hinsichtlich deren Eignung für den Zuverlässigkeitsnachweis bewerten. Durch die zusätzliche Berücksichtigung der Vorkenntnis mittels des Satzes von Bayes lassen sich Testaufwände einsparen. Die Bewertung solcher Tests ist durch die erarbeiteten Methoden ebenso möglich und stellt sicher, dass der effizienteste Test zum Nachweis der Zuverlässigkeit gefunden werden kann. Weitere Untersuchungen ergeben ergänzende Erkenntnisse. Die Anwendung des ganzheitlichen Verfahrens am Fallbeispiel eines Synchronmotors demonstriert zusätzlich den Nutzen der entwickelten Methoden und Prozesse. Die Arbeit leistet damit einen Beitrag zur umfassenden und statistisch fundierten Planung von Zuverlässigkeitstests zum Nachweis von Systemen. Sie konzentriert sich dabei auf die statistischen Aspekte und erlaubt den objektiven Vergleich und Bewertung von Tests verschiedener Systemebenen und Arten, sowie Kombinationen davon zum Nachweis der Systemzuverlässigkeit. Um möglichst effiziente Tests zu ermöglichen, wird eine Methode mit dem Satz von Bayes integriert. Die Güte der Planung selbst wird durch die Berücksichtigung der Unsicherheit der Eingangsdaten mitbewertet.}
+      \field{title}{Zuverlässigkeitsnachweis von Systemen durch Komponenten- und Systemtests unter Berücksichtigung von Vorkenntnissen}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.18419/OPUS-14393
+      \endverb
+      \verb{file}
+      \verb Grundler 2024 - Zuverl{\"a}ssigkeitsnachweis von Systemen durch Komponenten:Attachments/Grundler 2024 - Zuverl{\"a}ssigkeitsnachweis von Systemen durch Komponenten.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Kremer.2021}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{fullhash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{fullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{bibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorbibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authornamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorfullhash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorfullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Die Erfahrung zeigt, dass sich sowohl die meisten historischen Unfälle und oft damit verbundenen Rückrufaktionen auf einen suboptimalen Zuverlässigkeits- und Erprobungsprozess zurückführen lassen. Und auch wenn durch den zunehmenden Wettbewerbsdruck die Unternehmen gezwungen sind schonend mit den Ressourcen umzugehen, kann keine Berechnung oder gar Simulation die Erprobung komplett ersetzen. Die Zuverlässigkeit zählt mittlerweile zu einem wichtigen Schlüsselfaktor in einem Qualitätsprozess und erfreut sich zudem einer stetig wachsenden Beliebtheit. Immer mehr Käufer von Neu- und Gebrauchtwagen sehen die Zuverlässigkeit als das wichtigste Kaufkriterium an. Auf der anderen Seite wird vermehrt der Nachweis der Systemzuverlässigkeit von Anlagen und Anlagenkomponenten verlangt. In der Regel beruht jeder Zuverlässigkeitsnachweis auf einem geeigneten Lebensdauermodell, das den Zusammenhang zwischen der Lebensdauer und der Belastung charakterisiert. Die existierenden Lebensdauermodelle sind jedoch oft auf bestimmte Anwendungen limitiert und daher auch nicht allgemeingültig. Viele von diesen Ansätzen können oft mechanische und thermische Belastungen abbilden. Allerdings besteht oft keine Möglichkeit geometrische Designparameter oder Fertigungsparameter zu berücksichtigen. Was jedoch viel wichtiger ist: Gängige Modellierungsansätze bilden keine Wechselwirkungen zwischen den einzelnen Belastungsfaktoren ab. Die einzige Möglichkeit dieses Problem zu lösen ist der Weg über Experimente. Die statistische Versuchsplanung (DoE) stellt ein geeignetes Rahmenwerk an statistischen Werkzeugen zur Verfügung, um auf Grundlage effizienten Experimenten ein empirisches Modell zu entwickeln. Das Problem besteht allerdings darin, dass DoE normalverteilte Residuen voraussetzt. Im Falle von Lebensdauertests ist die Zielgrö{ß}e in der Regel weibullverteilt und folgt keiner Normalverteilung mehr. In diesem Ursprünglichen Zustand ist keine sinnvolle Lebensdauermodellierung möglich. Die fehlende Kenntnis eines Lebensdauermodells erschwert aber sämtliche Aussagen bezüglich der Lebensdauer von technischen Systemen. Das wiederum führt dazu, dass keine vernünftige Zuverlässigkeitsanforderungen definiert werden kann. Folglich bleibt ein Zuverlässigkeitsnachweis aus. Um diesen Ansprüchen gerecht zu werden, wird im Rahmen dieser Arbeit eine Möglichkeit vorgestellt anwendungsspezifische Lebensdauermodelle zu entwickeln. Dieser Ansatz greift den klassischen DoE-Gedanken auf und entwickelt diesen zu Lebensdauer-DoE (L-DoE) weiter. Nach der kritischen Auseinandersetzung mit den Ansätzen zur Entwicklung von Lebensdauermodellen nach dem Stand der Technik werden Schwachstellen aufgedeckt und Optimierungspotenziale aufgezeigt. Um anwendungspezifische Ausfallprognosen unter realen Feldbedinungen zu ermöglichen, wird eine Methodik entwickelt, die den neuen L-DoE-Ansatz als wichtiges Kernelement beinhaltet. Neben der Systemanalyse und der Vorselektion relevanter Belastungsfaktoren, hat die neue Methodik die Entwicklung eines L-DoE-Modells im Versuch und die Integration von Felddaten zum Inhalt. Zur Entwicklung eines L-DoE-Modells stehen dabei vier unterschiedliche Ansätze zur Verfügung: der Box-Cox-Ansatz, Generalized-Logarithmic-Linear-Ansatz, Proportional-Hazard-Ansatz nund der Lifetime-Regression-Ansatz zur Verfügung. Eine Analyse dieser Ansätze zeigt, dass der Box-Cox-Ansatz sehr ungenaue Ausfallprognosen liefern kann. Dies lässt sich auf die Verwischung der Effekt infolge der Transformation der Daten zurückführen. Da Lebensdauerprognosen stark von den geschätzten Modellparametern abhängt, ist das Verfahren zur Parameterschätzung sehr entscheidend. In der Zuverlässigkeitstechnik hat sich dabei der Maximum-Likelihood-Estimation-Ansatz durchgesetzt, bei dem die unbekannten Modellparameter durch die Maximierung der Likelihoodfunktion bestimmt werden. Gängige MLE-Verfahren, wie beispielsweise Newton-Raphson, sind auf die Kenntnis von Startwerten angewiesen. Das erweist sich in der Praxis vor allem bei multidimensionalen Modellen als sehr schwierig. Zur Lösung dieses Problems werden vier Ansätze entwickelt und am Beispiel von zwei unterschiedlich komplexen Lebensdauermodellen untersucht. Die Pattern-Search-Ansatz, Latin-Hypercube-Steepest-Ascent-Ansatz und Latin-Hypercube-Pattern-Search-Ansatz zeigen dabei die besten Ergebnisse. Allgemein lässt sich aber sagen, dass es stark vom Lebensdauermodell abhängt welches Verfahren zur Parameterschätzung eingesetzt werden soll. Damit bereits vor der eigentlichen Versuchsplanung der Versuchsaufwand abgeschätzt werden kann, wird eine auf der Monte-Carlo-Simulation basierende Methodik zur Trennschärfeanalyse entwickelt und anhand einer Simulationsstudie demonstriert. Erste Ergebnisse zeigen, dass die Trennschärfe erwartungsgemä{ß} mit zunehmendem Stichprobenumfang zunimmt. Au{ß}erdem ist bei dem in der Praxis am häufigsten auftretende Fall, dass die Stichprobengrö{ß}e aus drei Prüflingen besteht hohe Aufmerksamkeit geboten. Dies kann unter Umständen dazu führen, dass wahre Effekte erkannt werden obwohl in Wirklichkeit die Ergebnisse auf den Zufall zurückzuführen sind. Gerade bei stark überdimensionierten Produkten muss mit langen Laufzeiten gerechnet werden, um erste Ausfälle im Feld zu erhalten. Aus diesem Grund liegen oft keinerlei Felddaten vor, mit denen ein Lebensdauermodell unter Feldbedingungen mit der L-DoE-Methodik entwickelt werden kann. Die einzige Möglichkeit sind ineffiziente Lebensdauertests unter realen Feldbedingungen. Alternative Möglichkeiten Vorwissen bei der Modellierung zu berücksichtigen sind derzeit nicht zuverlässig genug. Darüber hinaus steht gerade bei Neuentwicklungen oft kein Vorwissen zur Verfügung. Gelöst wird das Problem dadurch, dass ein neuer Ansatz zur Extrapolation auf das Feldniveau entwickelt wird. Der Kerngedanke beruht darin die mit L-DoE entwickelten Lebensdauermodelle mit den physikalisch basierten Modellen, wie beispielsweise dem Arrhenius-Modell zu verknüpfen. Dadurch werden allgemeingültige Zusammenhänge zwischen der Lebensdauer und Belastung angenommen, die Extrapolationen zulassen. Um die Anwendbarkeit zu erleichtern, wird die L-DoE-Methodik softwaretechnisch in MATLAB umgesetzt. Die Übertragung der Stichprobenergebnisse auf die Grundgesamtheit erfolgt mit Hilfe von Vertrauensintervallen. Dazu wird im Rahmen der Arbeit eine Methodik vorgestellt, um die entwickelten L-DoE-Modelle in die Berechnung und Simulation von Vertrauensintervallen zu integrieren. Dazu werden die Fisher-Vertrauensintervall, Pseudo-Vertrauensintervall, Nicht-Parametrische-Booststrap-Perzentil-Vertrauensintervall und Monte-Carlo-Vertrauensintervall entwickelt. Im Anschluss werden die entwickelten Ansätze einer Simulationsstudie unterzogen. Hierbei zeigen alle Ansätze unterschiedlich gro{ß}e Vertrauensintervalle. Im letzten Teil dieser Arbeit wird die neue Methodik um den L-DoE-Ansatz auf ein exemplarisches Zahnriemengetriebe angewandt und ein Lebensdauermodell entwickelt.}
+      \field{title}{Statistische Versuchsplanung in der Lebensdauererprobung mit Vertrauensintervallen}
+      \field{type}{phdthesis}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.18419/OPUS-11728
+      \endverb
+    \endentry
+    \entry{Coleman.1993}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9bef0f636ff6b70b78978555d2510a1d}{%
+           family={Coleman},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{fullhash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{fullhashraw}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{bibnamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{authorbibnamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{authornamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{authorfullhash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{authorfullhashraw}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{1}
+      \field{title}{A Systematic Approach to Planning for a Designed Industrial Experiment}
+      \field{volume}{35}
+      \field{year}{1993}
+      \field{pages}{1}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.2307/1269280
+      \endverb
+    \endentry
+    \entry{Gundlach.2004}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=378b8e259b386f1d908f287a81d3f95f}{%
+           family={Gundlach},
+           familyi={G\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Kassel}%
+      }
+      \strng{namehash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{fullhash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{fullhashraw}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{bibnamehash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{authorbibnamehash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{authornamehash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{authorfullhash}{378b8e259b386f1d908f287a81d3f95f}
+      \strng{authorfullhashraw}{378b8e259b386f1d908f287a81d3f95f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Entwicklung eines ganzheitlichen Vorgehensmodells zur problemorientierten Anwendung des statistischen Versuchsplanung}
+      \field{type}{Zugl.: Kassel, Univ., Diss, 2004}
+      \verb{urlraw}
+      \verb http://d-nb.info/971843546/34
+      \endverb
+      \verb{url}
+      \verb http://d-nb.info/971843546/34
+      \endverb
+    \endentry
+    \entry{Mayers.1997}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7aa05a2685adf946e74256782bec5282}{%
+           family={Mayers},
+           familyi={M\bibinitperiod},
+           given={Bernhard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Aachen}%
+      }
+      \list{publisher}{1}{%
+        {Shaker}%
+      }
+      \strng{namehash}{7aa05a2685adf946e74256782bec5282}
+      \strng{fullhash}{7aa05a2685adf946e74256782bec5282}
+      \strng{fullhashraw}{7aa05a2685adf946e74256782bec5282}
+      \strng{bibnamehash}{7aa05a2685adf946e74256782bec5282}
+      \strng{authorbibnamehash}{7aa05a2685adf946e74256782bec5282}
+      \strng{authornamehash}{7aa05a2685adf946e74256782bec5282}
+      \strng{authorfullhash}{7aa05a2685adf946e74256782bec5282}
+      \strng{authorfullhashraw}{7aa05a2685adf946e74256782bec5282}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Als Ms. gedr}
+      \field{isbn}{3826524977}
+      \field{series}{Berichte aus der Produktionstechnik}
+      \field{title}{Proze{ß}- und Produktoptimierung mit Hilfe der statistischen Versuchsmethodik: Zugl.: Aachen, Techn. Hochsch., Diss., 1997}
+      \field{volume}{97,9}
+      \field{year}{1997}
+    \endentry
+    \entry{Pahl.2007}{book}{}{}
+      \name{author}{4}{}{%
+        {{hash=ebfef24ebb8e436dc150ff7760ed8d76}{%
+           family={Pahl},
+           familyi={P\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3ef03332e0b0fca2547a93058102d8a1}{%
+           family={Beitz},
+           familyi={B\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=502d001917782be467412a33cb557f57}{%
+           family={Feldhusen},
+           familyi={F\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+        {{hash=013ec710ca8a4acbf6b2cfc9ef514325}{%
+           family={Grote},
+           familyi={G\bibinitperiod},
+           given={Karl-Heinrich},
+           giveni={K\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{56a2d4cb584abea19ecced826e5f6a8e}
+      \strng{fullhash}{a4d6bc6a63af810baa307cce673cc7d5}
+      \strng{fullhashraw}{a4d6bc6a63af810baa307cce673cc7d5}
+      \strng{bibnamehash}{a4d6bc6a63af810baa307cce673cc7d5}
+      \strng{authorbibnamehash}{a4d6bc6a63af810baa307cce673cc7d5}
+      \strng{authornamehash}{56a2d4cb584abea19ecced826e5f6a8e}
+      \strng{authorfullhash}{a4d6bc6a63af810baa307cce673cc7d5}
+      \strng{authorfullhashraw}{a4d6bc6a63af810baa307cce673cc7d5}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3. ed.}
+      \field{isbn}{978-1-84628-318-5}
+      \field{title}{Engineering design: A systematic approach}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1007/978-1-84628-319-2
+      \endverb
+    \endentry
+    \entry{Daenzer.2002}{book}{}{}
+      \name{editor}{2}{}{%
+        {{hash=77f99923243de9b269f80fbf46cb5b5a}{%
+           family={Daenzer},
+           familyi={D\bibinitperiod},
+           given={Walter\bibnamedelima F.},
+           giveni={W\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=01dbd8b2e14a2aad84ab0ab2f19f3c96}{%
+           family={Haberfellner},
+           familyi={H\bibinitperiod},
+           given={Reinhard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Zürich}%
+      }
+      \list{publisher}{1}{%
+        {Verl. Industrielle Organisation}%
+      }
+      \strng{namehash}{b269b5dbab6e5ecbbae3964a901e5ae2}
+      \strng{fullhash}{b269b5dbab6e5ecbbae3964a901e5ae2}
+      \strng{fullhashraw}{b269b5dbab6e5ecbbae3964a901e5ae2}
+      \strng{bibnamehash}{b269b5dbab6e5ecbbae3964a901e5ae2}
+      \strng{editorbibnamehash}{b269b5dbab6e5ecbbae3964a901e5ae2}
+      \strng{editornamehash}{b269b5dbab6e5ecbbae3964a901e5ae2}
+      \strng{editorfullhash}{b269b5dbab6e5ecbbae3964a901e5ae2}
+      \strng{editorfullhashraw}{b269b5dbab6e5ecbbae3964a901e5ae2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{edition}{11., durchges. Aufl.}
+      \field{isbn}{385743998X}
+      \field{title}{Systems Engineering: Methodik und Praxis}
+      \field{year}{2002}
+    \endentry
+    \entry{Lindemann.2008}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=42b5fd0b7e31007f8c523c23e6213ca4}{%
+           family={Lindemann},
+           familyi={L\bibinitperiod},
+           given={Udo},
+           giveni={U\bibinitperiod}}}%
+        {{hash=928591e2f032bfeef444ee3f38a34b2d}{%
+           family={Maurer},
+           familyi={M\bibinitperiod},
+           given={Maik},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0a93ba26271374f5df0358e14dd8951e}{%
+           family={Braun},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{06d8c16d8df8ef3e1f2d308a2fea81c7}
+      \strng{fullhash}{dff827c6c99690c358cc79e787dc805a}
+      \strng{fullhashraw}{dff827c6c99690c358cc79e787dc805a}
+      \strng{bibnamehash}{dff827c6c99690c358cc79e787dc805a}
+      \strng{authorbibnamehash}{dff827c6c99690c358cc79e787dc805a}
+      \strng{authornamehash}{06d8c16d8df8ef3e1f2d308a2fea81c7}
+      \strng{authorfullhash}{dff827c6c99690c358cc79e787dc805a}
+      \strng{authorfullhashraw}{dff827c6c99690c358cc79e787dc805a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-87888-9}
+      \field{title}{Structural Complexity Management: An Approach for the Field of Product Design}
+      \field{year}{2008}
+      \verb{doi}
+      \verb 10.1007/978-3-540-87889-6
+      \endverb
+    \endentry
+    \entry{Box.1988}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=beeaf743dc5d4fb9bbe34e165a1de434}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
+           family={Bisgaard},
+           familyi={B\bibinitperiod},
+           given={S{ø}ren},
+           giveni={S\bibinitperiod}}}%
+        {{hash=656f9d99c2a19df6e255c8f95f592b0c}{%
+           family={Fung},
+           familyi={F\bibinitperiod},
+           given={Conrad},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a55f100b54be2cea5bd69ff52ef6cff1}
+      \strng{fullhash}{676c8192e299d2474e41a89c49de38da}
+      \strng{fullhashraw}{676c8192e299d2474e41a89c49de38da}
+      \strng{bibnamehash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authorbibnamehash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authornamehash}{a55f100b54be2cea5bd69ff52ef6cff1}
+      \strng{authorfullhash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authorfullhashraw}{676c8192e299d2474e41a89c49de38da}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0748-8017}
+      \field{journaltitle}{Quality and Reliability Engineering International}
+      \field{number}{2}
+      \field{title}{An explanation and critique of taguchi's contributions to quality engineering}
+      \field{volume}{4}
+      \field{year}{1988}
+      \field{pages}{123\bibrangedash 131}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1002/qre.4680040207
+      \endverb
+    \endentry
+    \entry{RisbergEllekjr.1998}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f515dcde667f80f75bb5b4dc16172fab}{%
+           family={{Risberg Ellekj{æ}r}},
+           familyi={R\bibinitperiod},
+           given={Marit},
+           giveni={M\bibinitperiod}}}%
+        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
+           family={Bisgaard},
+           familyi={B\bibinitperiod},
+           given={S{ø}ren},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{fullhash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{fullhashraw}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{bibnamehash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{authorbibnamehash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{authornamehash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{authorfullhash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{authorfullhashraw}{0f0d568b2491039855ed3fe37d54ee0e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1359-8538}
+      \field{journaltitle}{International Journal of Quality Science}
+      \field{number}{3}
+      \field{title}{The use of experimental design in the development of new products}
+      \field{volume}{3}
+      \field{year}{1998}
+      \field{pages}{254\bibrangedash 274}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1108/13598539810229230
+      \endverb
+      \verb{file}
+      \verb Risberg Ellekj{\ae}r, Bisgaard 1998 - The use of experimental design:Attachments/Risberg Ellekj{\ae}r, Bisgaard 1998 - The use of experimental design.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Bisgaard.1992}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
+           family={Bisgaard},
+           familyi={B\bibinitperiod},
+           given={S{ø}ren},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{fullhash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{fullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{bibnamehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authorbibnamehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authornamehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0954-4828}
+      \field{journaltitle}{Journal of Engineering Design}
+      \field{number}{1}
+      \field{title}{A Conceptual Framework for the use of Quality Concepts and Statistical Methods in Product Design}
+      \field{volume}{3}
+      \field{year}{1992}
+      \field{pages}{31\bibrangedash 47}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1080/09544829208914746
+      \endverb
+    \endentry
+    \entry{Bisgaard.2011}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
+           family={Bisgaard},
+           familyi={B\bibinitperiod},
+           given={S{ø}ren},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, N.J}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{fullhash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{fullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{bibnamehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authorbibnamehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authornamehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{An intuition-based approach enables you to master time series analysis with ease Time Series Analysis and Forecasting by Example provides the fundamental techniques in time series analysis using various examples. By introducing necessary theory through examples that showcase the discussed topics, the authors successfully help readers develop an intuitive understanding of seemingly complicated time series models and their implications. The book presents methodologies for time series analysis in a simplified, example-based approach. Using graphics, the authors discuss e Frontmatter -- Time Series Data: Examples and Basic Concepts -- Visualizing Time Series Data Structures: Graphical Tools -- Stationary Models -- Nonstationary Models -- Seasonal Models -- Time Series Model Selection -- Additional Issues in ARIMA Models -- Transfer Function Models -- Additional Topics -- Appendix A: Datasets Used in the Examples -- Appendix B: Datasets Used in the Exercises -- Bibliography -- Index.}
+      \field{isbn}{1118056949}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Time series analysis and forecasting by example}
+      \field{year}{2011}
+      \verb{doi}
+      \verb 10.1002/9781118056943
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781118056943
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781118056943
+      \endverb
+    \endentry
+    \entry{Zahran.2003}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b22a3c315b1aa0f77c42f26fa6cb146a}{%
+           family={Zahran},
+           familyi={Z\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
+           family={Anderson-Cook},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Christine\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=33227d4358a3d37f134dea3babce8eec}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Raymond\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6910ad762b52d0b3a9f87266e1dc1988}
+      \strng{fullhash}{328305cb2473619c908c23ee426a1f07}
+      \strng{fullhashraw}{328305cb2473619c908c23ee426a1f07}
+      \strng{bibnamehash}{328305cb2473619c908c23ee426a1f07}
+      \strng{authorbibnamehash}{328305cb2473619c908c23ee426a1f07}
+      \strng{authornamehash}{6910ad762b52d0b3a9f87266e1dc1988}
+      \strng{authorfullhash}{328305cb2473619c908c23ee426a1f07}
+      \strng{authorfullhashraw}{328305cb2473619c908c23ee426a1f07}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-4065}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{number}{4}
+      \field{title}{Fraction of Design Space to Assess Prediction Capability of Response Surface Designs}
+      \field{volume}{35}
+      \field{year}{2003}
+      \field{pages}{377\bibrangedash 386}
+      \range{pages}{10}
+    \endentry
+    \entry{GiovannittiJensen.1989}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9905c94b7e74fabe15fa82b0aeca0793}{%
+           family={Giovannitti-Jensen},
+           familyi={G\bibinithyphendelim J\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=33227d4358a3d37f134dea3babce8eec}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Raymond\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{6f00dbcc041f65d1e4ff5157396072d1}
+      \strng{fullhash}{6f00dbcc041f65d1e4ff5157396072d1}
+      \strng{fullhashraw}{6f00dbcc041f65d1e4ff5157396072d1}
+      \strng{bibnamehash}{6f00dbcc041f65d1e4ff5157396072d1}
+      \strng{authorbibnamehash}{6f00dbcc041f65d1e4ff5157396072d1}
+      \strng{authornamehash}{6f00dbcc041f65d1e4ff5157396072d1}
+      \strng{authorfullhash}{6f00dbcc041f65d1e4ff5157396072d1}
+      \strng{authorfullhashraw}{6f00dbcc041f65d1e4ff5157396072d1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{2}
+      \field{title}{Graphical Assessment of the Prediction Capability of Response Surface Designs}
+      \field{volume}{31}
+      \field{year}{1989}
+      \field{pages}{159\bibrangedash 171}
+      \range{pages}{13}
+    \endentry
+    \entry{Khuri.2006}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=bdc9d2bd4b5cf01092c051b69f2f483b}{%
+           family={Khuri},
+           familyi={K\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific Publishing Co Pte Ltd}%
+      }
+      \strng{namehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{fullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{fullhashraw}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{bibnamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{authorbibnamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{authornamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{authorfullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{authorfullhashraw}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{9789812564580}
+      \field{title}{Response Surface Methodology and Related Topics}
+      \field{year}{2006}
+    \endentry
+    \entry{Rittmaier.2025}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=237cd2690daa06ce75eb0a191e1bcbf0}{%
+           family={Rittmaier},
+           familyi={R\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{bce756dc5759b1bc87d9c7d067cda739}
+      \strng{fullhash}{92910794072f549b819af4c181fdd243}
+      \strng{fullhashraw}{92910794072f549b819af4c181fdd243}
+      \strng{bibnamehash}{92910794072f549b819af4c181fdd243}
+      \strng{authorbibnamehash}{92910794072f549b819af4c181fdd243}
+      \strng{authornamehash}{bce756dc5759b1bc87d9c7d067cda739}
+      \strng{authorfullhash}{92910794072f549b819af4c181fdd243}
+      \strng{authorfullhashraw}{92910794072f549b819af4c181fdd243}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 Annual Reliability and Maintainability Symposium (RAMS)}
+      \field{isbn}{979-8-3503-6774-4}
+      \field{title}{Simulative Analysis of Statistical Power of Optimal Test Designs}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/RAMS48127.2025.10935086
+      \endverb
+    \endentry
+    \entry{Johnson.2011}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=3aa3892a0691b3e5db33d44c25922ac6}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Rachel\bibnamedelima T.},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=de511b43605b30524c08cd416cf11604}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Bradley\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{111284965b95d341f0c326dffe053008}
+      \strng{fullhash}{1237100d14ee095544f4efae13ae199e}
+      \strng{fullhashraw}{1237100d14ee095544f4efae13ae199e}
+      \strng{bibnamehash}{1237100d14ee095544f4efae13ae199e}
+      \strng{authorbibnamehash}{1237100d14ee095544f4efae13ae199e}
+      \strng{authornamehash}{111284965b95d341f0c326dffe053008}
+      \strng{authorfullhash}{1237100d14ee095544f4efae13ae199e}
+      \strng{authorfullhashraw}{1237100d14ee095544f4efae13ae199e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0898-2112}
+      \field{journaltitle}{Quality Engineering}
+      \field{number}{3}
+      \field{title}{An Expository Paper on Optimal Design}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2023}
+      \field{volume}{23}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{287\bibrangedash 301}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/08982112.2011.576203
+      \endverb
+    \endentry
+    \entry{Donev.2004}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b71bd38e2484817468107b12da236bbc}{%
+           family={Donev},
+           familyi={D\bibinitperiod},
+           given={Alexander\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{b71bd38e2484817468107b12da236bbc}
+      \strng{fullhash}{b71bd38e2484817468107b12da236bbc}
+      \strng{fullhashraw}{b71bd38e2484817468107b12da236bbc}
+      \strng{bibnamehash}{b71bd38e2484817468107b12da236bbc}
+      \strng{authorbibnamehash}{b71bd38e2484817468107b12da236bbc}
+      \strng{authornamehash}{b71bd38e2484817468107b12da236bbc}
+      \strng{authorfullhash}{b71bd38e2484817468107b12da236bbc}
+      \strng{authorfullhashraw}{b71bd38e2484817468107b12da236bbc}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Planning and Inference}
+      \field{number}{2}
+      \field{title}{Design of experiments in the presence of errors in factor levels}
+      \field{volume}{126}
+      \field{year}{2004}
+      \field{pages}{569\bibrangedash 585}
+      \range{pages}{17}
+    \endentry
+    \entry{G.E.P.Box.1951}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=002f69bf140cceda97f81a168d86ceec}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={G.\bibnamedelimi E.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=fea4d1df36147bc314c5ca612e925ec9}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={K.\bibnamedelimi B.},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{fullhash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{fullhashraw}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{bibnamehash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{authorbibnamehash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{authornamehash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{authorfullhash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{authorfullhashraw}{6eb96cefa94addb37eb003547b1710b5}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00359246}
+      \field{journaltitle}{Journal of the Royal Statistical Society. Series B (Methodological)}
+      \field{number}{1}
+      \field{title}{On the Experimental Attainment of Optimum Conditions}
+      \field{urlday}{23}
+      \field{urlmonth}{3}
+      \field{urlyear}{2023}
+      \field{volume}{13}
+      \field{year}{1951}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 45}
+      \range{pages}{45}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2983966
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2983966
+      \endverb
+    \endentry
+    \entry{Ardakani.2011}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=882f38cda5f44951d8ee2e746f5274bb}{%
+           family={Ardakani},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=9254dd6932e7308133e2d455e201149e}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=07b8775e0626a75d2f1881ff27e7531d}{%
+           family={Wulf},
+           familyi={W\bibinitperiod},
+           given={S.\bibnamedelimi S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f711b3e628e92e9165e20db290a88684}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={T.\bibnamedelimi J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd67122f44d94b81ea483acf74cc3cb9}
+      \strng{fullhash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{fullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{bibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{authorbibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{authornamehash}{fd67122f44d94b81ea483acf74cc3cb9}
+      \strng{authorfullhash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{authorfullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Commun. in Statistics}
+      \field{number}{9}
+      \field{title}{Estimation in Second-Order Models with Errors in the Factor Levels}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2023}
+      \field{volume}{40}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{1573\bibrangedash 1590}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1080/03610921003637421
+      \endverb
+    \endentry
+    \entry{Jones.2012}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=de511b43605b30524c08cd416cf11604}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Bradley\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=bd639e8bc0dd4c3689cb8b7cc745dbe5}{%
+           family={Goos},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c8501f34b404c9a5de4737d0eff8dd6}
+      \strng{fullhash}{8c8501f34b404c9a5de4737d0eff8dd6}
+      \strng{fullhashraw}{8c8501f34b404c9a5de4737d0eff8dd6}
+      \strng{bibnamehash}{8c8501f34b404c9a5de4737d0eff8dd6}
+      \strng{authorbibnamehash}{8c8501f34b404c9a5de4737d0eff8dd6}
+      \strng{authornamehash}{8c8501f34b404c9a5de4737d0eff8dd6}
+      \strng{authorfullhash}{8c8501f34b404c9a5de4737d0eff8dd6}
+      \strng{authorfullhashraw}{8c8501f34b404c9a5de4737d0eff8dd6}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-4065}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{number}{2}
+      \field{title}{I-Optimal Versus D-Optimal Split-Plot Response Surface Designs}
+      \field{volume}{44}
+      \field{year}{2012}
+      \field{pages}{85\bibrangedash 101}
+      \range{pages}{17}
+    \endentry
+    \entry{Jones.2021}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=de511b43605b30524c08cd416cf11604}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Bradley\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=7213308a496213a62190648955cd088f}{%
+           family={Allen-Moyer},
+           familyi={A\bibinithyphendelim M\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=bd639e8bc0dd4c3689cb8b7cc745dbe5}{%
+           family={Goos},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{e165621fd636dc69c8af3ffc3f2f7a99}
+      \strng{fullhash}{63c50a1fc911e99823fc3a6cac7aae6d}
+      \strng{fullhashraw}{63c50a1fc911e99823fc3a6cac7aae6d}
+      \strng{bibnamehash}{63c50a1fc911e99823fc3a6cac7aae6d}
+      \strng{authorbibnamehash}{63c50a1fc911e99823fc3a6cac7aae6d}
+      \strng{authornamehash}{e165621fd636dc69c8af3ffc3f2f7a99}
+      \strng{authorfullhash}{63c50a1fc911e99823fc3a6cac7aae6d}
+      \strng{authorfullhashraw}{63c50a1fc911e99823fc3a6cac7aae6d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-4065}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{number}{4}
+      \field{title}{A-optimal versus D-optimal design of screening experiments}
+      \field{volume}{53}
+      \field{year}{2021}
+      \field{pages}{411\bibrangedash 427}
+      \range{pages}{17}
+    \endentry
+    \entry{Escobar.1995}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bdbd96adc373ec5f0c64c66857c5272d}{%
+           family={Escobar},
+           familyi={E\bibinitperiod},
+           given={L.\bibnamedelimi A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=65f0be4856fac2afe1608213a24a32a9}{%
+           family={Meeker},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi Q.},
+           giveni={W\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{fullhash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{fullhashraw}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{bibnamehash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{authorbibnamehash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{authornamehash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{authorfullhash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{authorfullhashraw}{b41eb607d0cb53e89941a48d5f8c7070}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{4}
+      \field{title}{Planning Accelerated Life Tests with Two or More Experimental Factors}
+      \field{volume}{37}
+      \field{year}{1995}
+      \field{pages}{411\bibrangedash 427}
+      \range{pages}{17}
+    \endentry
+    \entry{Modarres.2017}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=bddac90398a742fd034cd242b83cd90d}{%
+           family={Modarres},
+           familyi={M\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2e0c848cf44f536f5651e691c3d6868e}{%
+           family={Nuri-Amiri},
+           familyi={N\bibinithyphendelim A\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=59a1d0dd030cb397b9e2c9de64c3e2cf}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Beverly, MA}%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{2}{%
+        {Scrivener Publishing}%
+        {John Wiley {\&} Sons Inc}%
+      }
+      \strng{namehash}{360122917dc07abd38b27440bffeda7a}
+      \strng{fullhash}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{fullhashraw}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{bibnamehash}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{authorbibnamehash}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{authornamehash}{360122917dc07abd38b27440bffeda7a}
+      \strng{authorfullhash}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{authorfullhashraw}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781119388630}
+      \field{series}{Performability engineering series}
+      \field{title}{Probabilistic physics of failure approach to reliability: Modeling, accelerated testing, prognosis and reliability assessment}
+      \field{year}{2017}
+    \endentry
+    \entry{Ahn.2015}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e6ca6b3bff2ac6561da420340530dc34}{%
+           family={Ahn},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{fullhash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{fullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{bibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorbibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authornamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorfullhash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorfullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial Engineering}
+      \field{title}{Central Composite Design for the Experiments with Replicate Runs at Factorial and Axial Points}
+      \field{volume}{349}
+      \field{year}{2015}
+      \field{pages}{969\bibrangedash 979}
+      \range{pages}{11}
+    \endentry
+    \entry{Rasch.2018}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=6a2238726880a5cc3addd61e17dfa4a0}{%
+           family={Rasch},
+           familyi={R\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c54c531d8dd70bf8ed2473dc05412b56}{%
+           family={Schott},
+           familyi={S\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {John Wiley and Sons}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons Inc}%
+      }
+      \strng{namehash}{e91d83cc311fae6b023556eae85bbd5d}
+      \strng{fullhash}{e91d83cc311fae6b023556eae85bbd5d}
+      \strng{fullhashraw}{e91d83cc311fae6b023556eae85bbd5d}
+      \strng{bibnamehash}{e91d83cc311fae6b023556eae85bbd5d}
+      \strng{authorbibnamehash}{e91d83cc311fae6b023556eae85bbd5d}
+      \strng{authornamehash}{e91d83cc311fae6b023556eae85bbd5d}
+      \strng{authorfullhash}{e91d83cc311fae6b023556eae85bbd5d}
+      \strng{authorfullhashraw}{e91d83cc311fae6b023556eae85bbd5d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781119385288}
+      \field{title}{Mathematical statistics}
+      \field{year}{2018}
+    \endentry
+    \entry{Xu.2002}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=c0614e3cda3d136f04f8e826877d2c3d}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{c0614e3cda3d136f04f8e826877d2c3d}
+      \strng{fullhash}{c0614e3cda3d136f04f8e826877d2c3d}
+      \strng{fullhashraw}{c0614e3cda3d136f04f8e826877d2c3d}
+      \strng{bibnamehash}{c0614e3cda3d136f04f8e826877d2c3d}
+      \strng{authorbibnamehash}{c0614e3cda3d136f04f8e826877d2c3d}
+      \strng{authornamehash}{c0614e3cda3d136f04f8e826877d2c3d}
+      \strng{authorfullhash}{c0614e3cda3d136f04f8e826877d2c3d}
+      \strng{authorfullhashraw}{c0614e3cda3d136f04f8e826877d2c3d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{4}
+      \field{title}{An Algorithm for Constructing Orthogonal and Nearly-Orthogonal Arrays with Mixed Levels and Small Runs}
+      \field{volume}{44}
+      \field{year}{2002}
+      \field{pages}{356\bibrangedash 368}
+      \range{pages}{13}
+    \endentry
+    \entry{Wald.1943}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=6eeb37aec54485fe044a9e233abb2183}{%
+           family={Wald},
+           familyi={W\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6eeb37aec54485fe044a9e233abb2183}
+      \strng{fullhash}{6eeb37aec54485fe044a9e233abb2183}
+      \strng{fullhashraw}{6eeb37aec54485fe044a9e233abb2183}
+      \strng{bibnamehash}{6eeb37aec54485fe044a9e233abb2183}
+      \strng{authorbibnamehash}{6eeb37aec54485fe044a9e233abb2183}
+      \strng{authornamehash}{6eeb37aec54485fe044a9e233abb2183}
+      \strng{authorfullhash}{6eeb37aec54485fe044a9e233abb2183}
+      \strng{authorfullhashraw}{6eeb37aec54485fe044a9e233abb2183}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Mathematical Statistics}
+      \field{number}{2}
+      \field{title}{On the Efficient Design of Statistical Investigations}
+      \field{volume}{14}
+      \field{year}{1943}
+      \field{pages}{134\bibrangedash 140}
+      \range{pages}{7}
+    \endentry
+    \entry{Rencher.2008}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=67e3a4b81bdc0419963f493654cb5bc7}{%
+           family={Rencher},
+           familyi={R\bibinitperiod},
+           given={Alvin\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=b13d353211976408dd63543c78de7e42}{%
+           family={Schaalje},
+           familyi={S\bibinitperiod},
+           given={G.\bibnamedelimi Bruce},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Interscience}%
+      }
+      \strng{namehash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{fullhash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{fullhashraw}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{bibnamehash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{authorbibnamehash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{authornamehash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{authorfullhash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{authorfullhashraw}{fc004a97c21adebe39252fa234f7b0db}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed.}
+      \field{isbn}{9780471754985}
+      \field{title}{Linear models in statistics}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2007024268-b.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2007024268-b.html
+      \endverb
+    \endentry
+    \entry{Box.2007}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=d30289ba50f0f7219fb405bc35b8b71c}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={George\bibnamedelimb E.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d341f9df4f1da061d5c4dac8ec1a6444}{%
+           family={Draper},
+           familyi={D\bibinitperiod},
+           given={Norman\bibnamedelima Richard},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, New Jersey}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{fullhash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{fullhashraw}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{bibnamehash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{authorbibnamehash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{authornamehash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{authorfullhash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{authorfullhashraw}{c41fad29bb532c1a4c0d761a38572952}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed.}
+      \field{isbn}{9780470053577}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Response surfaces, mixtures, and ridge analyses}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2006043975-b.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2006043975-b.html
+      \endverb
+    \endentry
+    \entry{Bisgaard.1997}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
+           family={Bisgaard},
+           familyi={B\bibinitperiod},
+           given={S{ø}ren},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{fullhash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{fullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{bibnamehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authorbibnamehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authornamehash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
+      \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
+      \field{extraname}{3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{2}
+      \field{title}{Designing Experiments for Tolerancing Assembled Products}
+      \field{volume}{39}
+      \field{year}{1997}
+      \field{pages}{142\bibrangedash 152}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1080/00401706.1997.10485079
+      \endverb
+    \endentry
+    \entry{Myers.2010}{book}{}{}
+      \name{author}{4}{}{%
+        {{hash=33227d4358a3d37f134dea3babce8eec}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Raymond\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=788c3b54381fbc8ef27cdf46201acf93}{%
+           family={Vining},
+           familyi={V\bibinitperiod},
+           given={G.\bibnamedelimi Geoffrey},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=df912f429197228b697c785637b0c83e}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Timothy\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{5bddaf63e20d2d4fc3b2ab77023c52a8}
+      \strng{fullhash}{3ae1ad58d7bca135f45130dd1e459966}
+      \strng{fullhashraw}{3ae1ad58d7bca135f45130dd1e459966}
+      \strng{bibnamehash}{3ae1ad58d7bca135f45130dd1e459966}
+      \strng{authorbibnamehash}{3ae1ad58d7bca135f45130dd1e459966}
+      \strng{authornamehash}{5bddaf63e20d2d4fc3b2ab77023c52a8}
+      \strng{authorfullhash}{3ae1ad58d7bca135f45130dd1e459966}
+      \strng{authorfullhashraw}{3ae1ad58d7bca135f45130dd1e459966}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed.}
+      \field{isbn}{9780470454633}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Generalized linear models: With applications in engineering and the sciences}
+      \field{year}{2010}
+      \verb{doi}
+      \verb 10.1002/9780470556986
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,78 @@
+%% Creator: Inkscape 1.3.2 (091e20e, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'ma_abb2.02_doe_steps.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{349.11201357bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.31786272)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{ma_abb2.02_doe_steps.pdf}}%
+    \put(0.03398689,0.28692022){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{1}\end{tabular}}}}%
+    \put(0.07261939,0.28788616){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Definition des Untersuchungsziels\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{ma_abb2.02_doe_steps.pdf}}%
+    \put(0.03412115,0.19435217){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{3}\end{tabular}}}}%
+    \put(0.07261939,0.19482299){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Auswahl von Faktoren, Stufen und Parameterbereich\\\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{ma_abb2.02_doe_steps.pdf}}%
+    \put(0.0340708,0.14732545){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{4}\end{tabular}}}}%
+    \put(0.07261939,0.14829139){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Auswahl des Versuchsplans\\\\\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{ma_abb2.02_doe_steps.pdf}}%
+    \put(0.03369317,0.05475741){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{6}\end{tabular}}}}%
+    \put(0.07261939,0.05522822){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Statistische Datenanalyse\\\\\\\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{ma_abb2.02_doe_steps.pdf}}%
+    \put(0.03313931,0.00794889){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{7}\end{tabular}}}}%
+    \put(0.07261939,0.00869664){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Schlussfolgerungen und Empfehlungen/Optimierung\\\\\\\\\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{ma_abb2.02_doe_steps.pdf}}%
+    \put(0.03423025,0.10136454){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{5}\end{tabular}}}}%
+    \put(0.07261939,0.10175983){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Durchführung der Versuchsreihe gemäß Versuchsplan\\\\\\\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{ma_abb2.02_doe_steps.pdf}}%
+    \put(0.03385262,0.240632){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{2}\end{tabular}}}}%
+    \put(0.07261939,0.24135457){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Identifizierung von Einflussparametern und Systemantwort\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
