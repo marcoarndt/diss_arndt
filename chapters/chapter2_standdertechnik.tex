@@ -368,7 +368,6 @@ Demzufolge kann auch ein Lebensdauer-beeinflussendes Parameterset -  beispielhaf
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \centering
-        % Breite relativ zur Spalte (subfigure) setzen
         \setlength\figurewidth{0.9\linewidth}
         \setlength\figureheight{\figurewidth}
         \input{plots/ma_abb2.05_FF_design.tex}
@@ -376,24 +375,27 @@ Demzufolge kann auch ein Lebensdauer-beeinflussendes Parameterset -  beispielhaf
         \label{fig:abb2.05.1_vfdesign_plot}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.55\textwidth}
         \centering
         \vspace*{1cm}
-        \begin{tabular}{cc}
+        \begin{tabular}{cccc}
             \toprule
-            $\sym{x}_1$ & $\sym{x}_2$ \\
+            \multicolumn{1}{c}{Faktorstufen-} & \multicolumn{3}{c}{Faktoren und}                                         \\
+            \multicolumn{1}{c}{Kombination}   & \multicolumn{3}{c}{Wechselwirkung}                                       \\
+            \cmidrule(r){1-1} \cmidrule(l){2-4}
+            \#                                & $\sym{x}_1$                        & $\sym{x}_2$ & $\sym{x}_1 \sym{x}_2$ \\
             \midrule
-            $-1$        & $-1$        \\
-            $+1$        & $-1$        \\
-            $-1$        & $+1$        \\
-            $+1$        & $+1$        \\
+            1                                 & $-1$                               & $-1$        & $+1$                  \\
+            2                                 & $+1$                               & $-1$        & $-1$                  \\
+            3                                 & $-1$                               & $+1$        & $-1$                  \\
+            4                                 & $+1$                               & $+1$        & $+1$                  \\
             \bottomrule
         \end{tabular}
         \vspace*{1.5cm}
-        \caption{Versuchsplanmatrix zu Abb.~\ref{fig:abb2.05_vfdesign}}
+        \caption{Versuchsplanmatrix zu Abb.~\ref{fig:abb2.05.1_vfdesign_plot}}
         \label{fig:abb2.05.2_vfdesign_matrix}
     \end{subfigure}
-    \caption{Standard voll-faktorieller Versuchsplan mit $\sym{k}=2$ Faktoren}
+    \caption{Standard voll-faktorieller Versuchsplan}
     \label{fig:abb2.05_vfdesign}
 \end{figure}
 Ein derartiges Setup erlaubt es, die perspektivische Differenz erreichbarer \ac{EoL}-Werte durch tiefe und hohe Beanspruchungswerte der Faktoren zu beobachten \cite{Yang.2007,Meeker.2022}.
@@ -403,6 +405,7 @@ Der voll-faktorielle Versuchsplan bildet somit den Standard-Versuchsplan im \ac{
     \label{eq:ffvp_n}
 \end{equation}
 Versuche.
+Dieser Stichprobenumfang stellt sicher, dass das resultierende Gleichungssystem \textbf{gesättigt} ist: Mit $\sym{n}$ Versuchen lassen sich $\sym{n}-1$ Effekte für Hauptfaktoren und Wechselwirkungen eindeutig bestimmen.
 Von entscheidender Bedeutung für die Aussagekraft des Versuchsplans ist die Wahl der Faktorstufen (vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand}).
 Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, sodass signifikante Effekte sicher detektiert werden („\textbf{Signal-to-Noise}“), wobei gleichzeitig zu geringe Abstände (Rauschen) sowie zu große Intervalle (Gefahr unerkannter Nichtlinearitäten) zu vermeiden sind - vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand} sowie \textcite{Wu.2021,Siebertz.2017,Kleppmann.2016}.
 \begin{figure}[htbp]
@@ -414,8 +417,8 @@ Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, sod
     \label{fig:ma_abb2.06_effektabstand}
 \end{figure}
 Auf Basis eines solchen zweistufigen Setups lässt sich der Zusammenhang zwischen Einflussgrößen und Lebensdauer interpolieren und in einem linearen Modell abbilden, welches zudem die Schätzung von Wechselwirkungen erlaubt.
+Werden davon abweichende Modellterme zur Abbildung der Systemantwort erwartet, berücksichtigen alternative Versuchspläne typischerweise drei bis fünf Faktorstufen.
 Der voll-faktorielle Versuchsplan nimmt dabei eine entscheidende Schlüsselrolle in der strategischen Modellbildung ein - insbesondere im Hinblick auf Lebensdauerdaten und Zuverlässigkeitstechnik.\
-
 Darin aufgeführte Versuchspunkte können auf Basis der Struktur ihrer Zuordnung üblicherweise ideal aus Voruntersuchungen übernommen oder durch weiterführende Untersuchungen nachfolgend erweitert werden.
 Ausgehend vom qualitativen Parameter-Screening (vgl. Abschnitt~\ref{subsec:begriffedoe}) ist ohne initiale Experimente oft unklar, welche Faktoren die Antwortvariable, also beispielsweise die Lebensdauer eines Systems, nun tatsächlich signifikant beeinflussen.
 Folglich ist es essenziell, diese Fragestellung vor der eigentlichen Versuchsplanumsetzung effizient zu klären.
@@ -423,30 +426,62 @@ Folglich ist es essenziell, diese Fragestellung vor der eigentlichen Versuchspla
 \subsubsection{$2^{\sym{k}-\sym{p}}$ Fraktionell Faktorielle Versuchspläne}
 Sind nach Anwendung der Kreativmethoden (qualitatives Screening) weiterhin so viele Einflussfaktoren als relevant eingestuft, dass ein voll-faktorieller Ansatz gemäß Gleichung~\ref{eq:ffvp_n} zu einem wirtschaftlich nicht vertretbaren Versuchsumfang führen würde, muss die Strategie hin zu physikalischen Screening-Tests verschärft werden.
 Dies empfiehlt sich insbesondere für Systeme mit $\sym{k} > 5$ Faktoren, um die experimentelle Effizienz zu gewährleisten.
-Für derartige Selektionsaufgaben eignen sich \textbf{Screening-Versuchspläne}, wie der \textbf{teil-faktorielle Versuchsplan} (Fractional Factorial Design) oder alternativ der \textbf{Plackett-Burman-Plan} \cite{Kleppmann.2016,Siebertz.2017,Montgomery.2020}.
-Bei diesem Ansatz wird lediglich eine Fraktion der voll-faktoriellen Versuchsagenda umgesetzt. Mathematisch wird die Anzahl der Versuche dabei auf $\sym{n} = 2^{\sym{k}-\sym{p}}$ reduziert, wobei $\sym{p}$ den Grad der Fraktionierung angibt.
+Zur Veranschaulichung der Notwendigkeit: Bereits eine einzelne Replikation eines voll-faktoriellen Experiments mit $\sym{k}=8$ Faktoren würde $2^8 = 256$ Versuchsdurchläufe erfordern, was in der Lebensdauererprobung meist illusorisch ist.
+
+Für derartige Selektionsaufgaben eignen sich daher \textbf{Screening-Versuchspläne}, wie der \textbf{teil-faktorielle Versuchsplan} (Fractional Factorial Design) oder alternativ der \textbf{Plackett-Burman-Plan} \cite{Kleppmann.2016,Siebertz.2017,Montgomery.2020}.
+Bei diesem Ansatz wird lediglich eine selektive Teilmenge (Fraktion) der voll-faktoriellen Versuchsagenda umgesetzt, um mit minimalem Informationsverlust die für den Anwendungsfall signifikanten Effekte zu beschreiben.
+Mathematisch wird die Anzahl der Versuche dabei auf
+\begin{equation} \label{eq:teilfakt_n}
+    \sym{n} = 2^{\sym{k}-\sym{p}}
+\end{equation}
+reduziert, wobei $\sym{p}$ den Grad der Fraktionierung (die Anzahl der Generatoren) angibt.
 Die Validität dieses Vorgehens stützt sich auf zwei fundamentale empirische Postulate \cite{Montgomery.2021,Rigdon.2022}:
 \begin{itemize}
-    \item Die \textbf{Effekthierarchie} besagt, dass Effekte niedrigerer Ordnung - primär Haupteffekte - in der Regel eine größere Amplitude aufweisen und mit höherer Wahrscheinlichkeit signifikant sind als Effekte höherer Ordnung.
+    \item Die \textbf{Effekthierarchie} besagt, dass Effekte niedrigerer Ordnung -- primär Haupteffekte -- in der Regel eine größere Amplitude aufweisen und mit höherer Wahrscheinlichkeit signifikant sind als Effekte höherer Ordnung.
     \item Die \textbf{Effektvererbung} impliziert, dass das Auftreten signifikanter Wechselwirkungen oder quadratischer Terme strukturell an die Signifikanz ihrer korrespondierenden Haupteffekte gekoppelt ist.
 \end{itemize}
-Eine direkte Konsequenz dieser Reduktion ist jedoch, dass sich in teil-faktoriellen Versuchsplänen bestimmte Effekte nicht mehr isoliert betrachten lassen (vgl. Abbildung~\ref{fig:abb2.05.1_vfdesign_plot} für den Fall einer Fraktionierung).
+Eine direkte Konsequenz dieser Reduktion („Der Preis der Einsparung“) ist jedoch, dass sich in teil-faktoriellen Versuchsplänen bestimmte Effekte nicht mehr isoliert betrachten lassen (vgl. Abbildung~\ref{fig:abb2.05.1_vfdesign_plot} für den Fall einer Fraktionierung).
 So sind beispielsweise Haupteffekte unter Umständen nicht mehr zweifelsfrei von Wechselwirkungen höherer Ordnung zu unterscheiden. Da sich diese Effekte statistisch überlagern, spricht man von einer \textbf{Vermengung} (engl. \textbf{Aliasing}).
+Die Schwere dieser Vermengung wird dabei über die \textbf{Auflösung} (engl. Resolution) des Versuchsplans klassifiziert (z.\,B. Auflösung III, IV oder V).
 Wird dieser Informationsverlust jedoch bewusst in Kauf genommen und ingenieurwissenschaftlich bewertet, ermöglicht dies eine signifikante Reduktion des Versuchsumfangs, um effizient die dominanten Faktoren aus der initialen Parametermenge zu isolieren.
-Diese Vorgehensweise ist von hoher Relevanz, da Lebensdauertests - ob als beschleunigte Prüfung mittels \ac{ALT} oder unter Feldbedingungen - durch die inhärente Zeitabhängigkeit der Systemantwort erhebliche Kapazitäten binden und Ergebnisse nicht ad hoc verfügbar sind.
+Diese Vorgehensweise ist von hoher Relevanz, da Lebensdauertests -- ob als beschleunigte Prüfung mittels \ac{ALT} oder unter Feldbedingungen -- durch die inhärente Zeitabhängigkeit der Systemantwort erhebliche Kapazitäten binden und Ergebnisse nicht ad hoc verfügbar sind.
 Im Sinne einer ressourceneffizienten Gesamtstrategie sollten die Screening-Versuche daher idealerweise so konzipiert sein, dass sie nahtlos in einen nachfolgenden, höher aufgelösten Versuchsplan integriert (\textbf{augmentiert}) werden können.
 
-\subsubsection{Wirkungsflächenversuchspläne}
-Perspektivisch ist zudem entscheidend, wie diese Datenbasis weitergenutzt werden kann, falls resultierende lineare Modelle im weiteren Verlauf z. B. zur Abbildung von \textbf{Krümmungen} - engl. \textbf{Curvature} detailliert werden müssen.
-Dies kann eben durch die Integration weiterer Versuchspunkte erfolgen, was erlaubt, nicht-lineare Zusammenhänge in der Systemantwort abzubilden.
-Die \ac{RSM} behandelt als Teildisziplin des \ac{DoE} derartige Herangehensweisen und bietet Wirkungsflächenversuchspläne, engl. \acp{RSD}, an.
-Um zu entscheiden, inwiefern Krümmungen vorliegen und damit die Systemantwort von einer linearen Modellierung abweicht, können sogenannte Zentralpunkte, engl. \acp{CP}, zusätzlich getestet werden.
-Hier werden alle Faktoren auf die Stufe \textit{0} gesetzt wobei im Fall diskreter Faktorstufen alle kategorialen Einstellungen abgetestet werden
-Diese geben schließlich Aufschluss über Diskrepanzen zu linearen Zusammenhängen zwischen Faktor und Antwort.
+% \subsubsection{Wirkungsflächenversuchspläne}
+% Perspektivisch ist zudem entscheidend, wie diese Datenbasis weitergenutzt werden kann, falls resultierende lineare Modelle im weiteren Verlauf z. B. zur Abbildung von \textbf{Krümmungen} - engl. \textbf{Curvature} detailliert werden müssen.
+% Dies kann eben durch die Integration weiterer Versuchspunkte erfolgen, was erlaubt, nicht-lineare Zusammenhänge in der Systemantwort abzubilden.
+% Die \ac{RSM} behandelt als Teildisziplin des \ac{DoE} derartige Herangehensweisen und bietet Wirkungsflächenversuchspläne, engl. \acp{RSD}, an.
+% Um zu entscheiden, inwiefern Krümmungen vorliegen und damit die Systemantwort von einer linearen Modellierung abweicht, können sogenannte Zentralpunkte, engl. \acp{CP}, zusätzlich getestet werden.
+% Hier werden alle Faktoren auf die Stufe \textit{0} gesetzt wobei im Fall diskreter Faktorstufen alle kategorialen Einstellungen abgetestet werden
+% Diese geben schließlich Aufschluss über Diskrepanzen zu linearen Zusammenhängen zwischen Faktor und Antwort.
 
 
-\textbf{Box-Behnken-Design}
-\textbf{Sternpunkten} \textbf{Axial Points} \ac{CCD} \textbf{Rotierbarkeit}
+% \textbf{Box-Behnken-Design}
+% \textbf{Sternpunkten} \textbf{Axial Points} \ac{CCD} \textbf{Rotierbarkeit}
+
+
+\subsubsection{Wirkungsflächenversuchspläne} \label{subsubsec:rsm}
+Die bisher diskutierten Versuchspläne beschränken sich auf die Untersuchung von Faktoren auf jeweils zwei Stufen ($\pm 1$). Dies ermöglicht zwar eine effiziente Darstellung linearer Beziehungen und Interaktionen, jedoch ist die Modellierung komplexerer, nicht-linearer Effekte aufgrund fehlender Stützstellen im Versuchsraum damit physikalisch nicht möglich.
+Perspektivisch ist daher entscheidend, wie die bestehende Datenbasis weitergenutzt und augmentiert werden kann, falls die Systemantwort signifikante \textbf{Krümmungen} (engl. \textbf{Curvature}) aufweist und die quantitativen Beziehungen zwischen Faktoren und Zielgröße für eine Optimierung detaillierter beschrieben werden müssen.
+
+Die \ac{RSM} behandelt als Teildisziplin des \ac{DoE} derartige Herangehensweisen und bietet hierfür spezielle \textbf{Wirkungsflächenversuchspläne} - engl. \acp{RSD} - an.
+Der erste Schritt zur Detektion von Nichtlinearitäten besteht in der Integration von $\sym{n_center}$ sogenannten \textbf{Zentralpunkten}, engl. \acp{CP}, in den faktoriellen Basisplan. Hierbei werden alle Faktoren auf die kodierte Stufe \textit{0} (die Mitte des Versuchsraums) gesetzt.
+Weicht der Mittelwert der Systemantwort in den Zentralpunkten signifikant vom Mittelwert über die faktoriellen Eckpunkte ab, deutet dies auf eine Krümmung der Antwortfläche hin \cite{Montgomery.2020}.
+
+Um diese quadratischen Zusammenhänge explizit zu bestimmen, gilt der \textbf{Zentral-Zusammengesetzte-Versuchsplan}, engl. \ac{CCD}, als etablierter Standard.
+Ein \ac{CCD} entsteht durch die Augmentierung der $\sym{n_fact}$ Eckpunkte des ursprünglichen voll- (oder teil-)faktoriellen Plans um:
+\begin{itemize}
+    \item eine definierte Anzahl $\sym{n_center}$ an wiederholten Zentralpunkten (üblicherweise $3 \leq \sym{n_center} \leq 5$ zur Abschätzung des reinen Fehlers) sowie
+    \item $\sym{n_star} = 2\sym{k}$ zusätzliche \textbf{Sternpunkte} (engl. Axial Points), die auf den Achsen des Koordinatensystems im Abstand $\pm \sym{alpha_rot}$ vom Zentrum liegen.
+\end{itemize}
+
+Während die Zentralpunkte das Vorhandensein quadratischer Effekte validieren, ermöglichen die Sternpunkte deren genaue geometrische Bestimmung.
+Ein wesentliches Qualitätsmerkmal solcher Pläne ist die \textbf{Drehbarkeit} (engl. Rotatability), welche sicherstellt, dass die Varianz der Vorhersage nur vom Abstand zum Zentrum abhängt und nicht von der Richtung.
+Um diese Eigenschaft zu gewährleisten, orientiert sich der Abstand $\sym{alpha_rot}$ der Sternpunkte vom Zentrum an der Anzahl der faktoriellen Versuchspunkte $\sym{n_fact}$ \cite{Kleppmann.2016,Montgomery.2020}:
+\begin{equation} \label{eq:ccd_alpha}
+    \sym{alpha_rot} = (\sym{n_fact})^{1/4}.
+\end{equation}
+Abwandlungen dieses Konzepts, wie das \textbf{Box-Behnken-Design} (welches extreme Ecken vermeidet) oder flächenzentrierte Pläne (engl. Face-Centered CCD mit $\sym{alpha_rot}=1$), erfüllen spezifische Randbedingungen hinsichtlich des Versuchsaufwands und der physikalischen Machbarkeit extremer Einstellungen \cite{Myers.2016}.
 
 \subsubsection{Strategische Vorgehensweisen}
 

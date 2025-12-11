@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{260.69572629bp}%
+    \setlength{\unitlength}{265.19574143bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,18 +50,20 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.65600454)%
+  \begin{picture}(1,0.64487302)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{ma_abb2.03_p_diagramm.pdf}}%
-    \put(0.00906516,0.37700504){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Einflüsse}\end{tabular}}}}%
-    \put(0.81270839,0.37840422){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Antwort}\end{tabular}}}}%
-    \put(0.33171798,0.28324313){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Produkt oder Prozess\end{tabular}}}}%
-    \put(0.42091667,0.33498573){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{System}\end{tabular}}}}%
-    \put(0.27262702,0.02582346){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Störfaktoren (diskret oder kontinuierlich)\end{tabular}}}}%
-    \put(0.27274312,0.07049238){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Unkontrollierte Parameter}\end{tabular}}}}%
-    \put(0.27309527,0.54438955){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Faktoren (diskret oder kontinuierlich)\end{tabular}}}}%
-    \put(0.27251839,0.58905844){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Kontrollierte Parameter}\end{tabular}}}}%
+    \put(0.76671643,0.41834345){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Zielgröße}\end{tabular}}}}%
+    \put(0.34305778,0.27843687){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Produkt oder Prozess\end{tabular}}}}%
+    \put(0.43074288,0.32930146){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{System}\end{tabular}}}}%
+    \put(0.21709511,0.02538526){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Störgrößen (diskret oder kontinuierlich)\end{tabular}}}}%
+    \put(0.21720924,0.06929621){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Unkontrollierte Parameter}\end{tabular}}}}%
+    \put(0.21755542,0.53515199){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Steuergrößen (diskret oder kontinuierlich)\end{tabular}}}}%
+    \put(0.76644301,0.37536269){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Antwort\end{tabular}}}}%
+    \put(0.02017584,0.41551875){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Einflüsse}\end{tabular}}}}%
+    \put(0.01990242,0.37253798){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Stellgrößen\end{tabular}}}}%
+    \put(0.21698832,0.57906291){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\textbf{Kontrollierte Parameter, Faktoren}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{ma_abb2.03_p_diagramm.pdf}}%
   \end{picture}%
 \endgroup%
