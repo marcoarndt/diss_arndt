@@ -183,14 +183,18 @@ isbn=true]{biblatex}
 \newacronym[plural=CCDs, longplural=Central Composite Designs]{CCD}{CCD}{Central Composite Design}
 
 % Indices - use in text: \sym{i}, also needs \input{settings/glossaries}
-\newglossaryentry{i}{type=indices, name={\ensuremath{i}}, description={Laufvariable}}
-\newglossaryentry{0}{type=indices, name={\ensuremath{0}}, description={zum Zeitpunkt $\sym{t}=0$}}
-\newglossaryentry{q}{type=indices, name={\ensuremath{q}}, description={Quantilwert}}
-\newglossaryentry{j}{type=indices, name={\ensuremath{j}}, description={Laufvariable}}
-\newglossaryentry{l}{type=indices, name={\ensuremath{l}}, description={Laufvariable}}
-\newglossaryentry{O}{type=indices, name={\ensuremath{O}}, description={Beobachtet (Observed)}}
-\newglossaryentry{u}{type=indices, name={\ensuremath{u}}, description={Untere Grenze des Vertrauensbereichs}}
-\newglossaryentry{o}{type=indices, name={\ensuremath{o}}, description={Obere Grenze des Vertrauensbereichs}}
+\newglossaryentry{idx_i}{type=indices, name={\ensuremath{i}}, description={Laufvariable}}
+\newglossaryentry{idx_j}{type=indices, name={\ensuremath{j}}, description={Laufvariable}}
+\newglossaryentry{idx_l}{type=indices, name={\ensuremath{l}}, description={Laufvariable}}
+\newglossaryentry{idx_0}{type=indices, name={\ensuremath{0}}, description={Zeitpunkt $\sym{t}=0$ \newline  Zentralpunkt \newline Regressionskonstante}}
+\newglossaryentry{idx_q}{type=indices, name={\ensuremath{q}}, description={Quantilwert}}
+\newglossaryentry{idx_O}{type=indices, name={\ensuremath{O}}, description={Beobachtet (Observed)}}
+\newglossaryentry{idx_u}{type=indices, name={\ensuremath{u}}, description={Untere Grenze des Vertrauensbereichs}}
+\newglossaryentry{idx_o}{type=indices, name={\ensuremath{o}}, description={Obere Grenze des Vertrauensbereichs}}
+\newglossaryentry{idx_F}{type=indices, name={\ensuremath{F}}, description={Faktorieller Punkt}}
+\newglossaryentry{idx_S}{type=indices, name={\ensuremath{S}}, description={Sternpunkt}}
+\newglossaryentry{idx_D}{type=indices, name={\ensuremath{D}}, description={Sternpunktabstand CCD}}
+\newglossaryentry{idx_C}{type=indices, name={\ensuremath{C}}, description={Zentralpunkt}}
 
 
 %%%
@@ -207,7 +211,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Log-Likelihood-Funktion}, text={\ensuremath{\Lambda}}]{Lambda}{\ensuremath{\Lambda(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Likelihood-Funktion}, text={\ensuremath{\mathcal{L}}}]{L_like}{\ensuremath{\mathcal{L}(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Erwartungswert der Lebensdauer (theoretisch)}, text={\ensuremath{\mu}}]{mu}{\ensuremath{\mu}}
-\glsxtrnewsymbol[type=formulas, description={Stichprobenumfang}, text={\ensuremath{n}}]{n}{\ensuremath{n}}
+\glsxtrnewsymbol[type=formulas, description={Stichprobenumfang / Anzahl der Versuchspunkte}, text={\ensuremath{n}}]{n}{\ensuremath{n}}
 \glsxtrnewsymbol[type=formulas, description={Wahrscheinlichkeit}, text={\ensuremath{\Pr}}]{Pr}{\ensuremath{\Pr}}
 \glsxtrnewsymbol[type=formulas, description={Zuverlässigkeit}]{R}{\ensuremath{R}}
 \glsxtrnewsymbol[type=formulas, description={Menge der reellen Zahlen}]{RR}{\ensuremath{\mathbb{R}}}
@@ -218,6 +222,8 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Vektor der Ausfallzeiten}, text={\ensuremath{\mathbf{t}}}]{t_vec}{\ensuremath{\mathbf{t}}}
 \glsxtrnewsymbol[type=formulas, description={Charakteristische Lebensdauer (Skalenparameter)}, text={\ensuremath{T}}]{T}{\ensuremath{T}}
 \glsxtrnewsymbol[type=formulas, description={kontinuierliche Zufallsvariable}]{tau}{\ensuremath{\tau}}
+\glsxtrnewsymbol[type=formulas, description={Regressionskoeffizient, Modellparameter}]{beta}{\ensuremath{\beta}}
+\glsxtrnewsymbol[type=formulas, description={Fehlerterm}]{epsilon}{\ensuremath{\epsilon}}
 \glsxtrnewsymbol[type=formulas, description={Vektor der Modellparameter}, text={\ensuremath{\bm{\theta}}}]{theta}{\ensuremath{\bm{\theta}}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Operator}, text={\ensuremath{\mathrm{Var}}}]{Var}{\ensuremath{\mathrm{Var}[\cdot]}}
 \glsxtrnewsymbol[type=formulas, description={Covarianz-Operator}, text={\ensuremath{\mathrm{Cov}}}]{Cov}{\ensuremath{\mathrm{Cov}[\cdot]}}
@@ -229,8 +235,8 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Hessian-Matrix (der Log-Likelihood-Funktion)}, text={\ensuremath{\mathbf{H}}}]{H}{\ensuremath{\mathbf{H}}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Kovarianz-Matrix}, text={\ensuremath{\mathbf{V}}}]{V}{\ensuremath{\mathbf{V}}}
 \glsxtrnewsymbol[type=formulas, description={Standardfehler (Standard Error)}, text={\ensuremath{\mathit{se}}}]{se}{\ensuremath{\mathit{se}}}
-\glsxtrnewsymbol[type=formulas, description={Signifikanzniveau}, text={\ensuremath{\alpha}}]{alpha}{\ensuremath{\alpha}}
-\glsxtrnewsymbol[type=formulas, description={Quantil der Standardnormalverteilung}, text={\ensuremath{q}}]{q_norm}{\ensuremath{q}}
+\glsxtrnewsymbol[type=formulas, description={Signifikanzniveau\newline Abstand der Sternpunkte (Axial Points)}, text={\ensuremath{\alpha}}]{alpha}{\ensuremath{\alpha}}
+\glsxtrnewsymbol[type=formulas, description={Quantilwert}, text={\ensuremath{q}}]{q}{\ensuremath{q}}
 \glsxtrnewsymbol[type=formulas, description={Quantil der Standardnormalverteilung}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
 \glsxtrnewsymbol[type=formulas, description={Abgeleitete Funktion (für Delta-Methode)}, text={\ensuremath{g}}]{g_func}{\ensuremath{g(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Gradientenvektor der Funktion g}, text={\ensuremath{\mathbf{g}'}}]{g_grad}{\ensuremath{\mathbf{g}'}}
@@ -239,29 +245,6 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Alternativhypothese}, text={\ensuremath{H_1}}]{H1}{\ensuremath{H_1}}
 \glsxtrnewsymbol[type=formulas, description={Replikation}, text={\ensuremath{r}}]{r}{\ensuremath{r}}
 \glsxtrnewsymbol[type=formulas, description={Fraktionsgrad}, text={\ensuremath{p}}]{p}{\ensuremath{p}}
-
-\glsxtrnewsymbol[type=formulas,
-    description={Abstand der Sternpunkte (Axial Points)},
-    text={\ensuremath{\alpha}}
-]{alpha_rot}{\ensuremath{\alpha}}
-% Hinweis: Wir nutzen 'alpha_rot' als Key, um Konflikte mit dem Signifikanzniveau 'alpha' zu vermeiden.
-% Im Text wird trotzdem das Symbol alpha gedruckt.
-
-\glsxtrnewsymbol[type=formulas,
-    description={Anzahl der faktoriellen Versuchspunkte},
-    text={\ensuremath{n_F}}
-]{n_fact}{\ensuremath{n_F}}
-
-\glsxtrnewsymbol[type=formulas,
-    description={Anzahl der Zentralpunkte},
-    text={\ensuremath{n_0}}
-]{n_center}{\ensuremath{n_0}}
-
-\glsxtrnewsymbol[type=formulas,
-    description={Anzahl der Sternpunkte},
-    text={\ensuremath{n_{\alpha}}}
-]{n_star}{\ensuremath{n_{\alpha}}}
-
 
 %  Show page borders (useful for final checks)
 %\usepackage{showframe}
@@ -284,22 +267,22 @@ Thanks for your service.
 \addchap{Kurzfassung/Abstract}
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 \todo{
-    \begin{itemize}
-        \item
-        \item Abstract / Kurzfassung / Danksagung
-        \item Bilder prüfen
-        \item "mark changes after your Oral presentation for review"
-        \item "textcolor blue" in definitions ändern
-        \item "Print" Funktion aktivieren
-        \item "nocite" Funktion deaktivieren in main Z.269
-    \end{itemize}
+  \begin{itemize}
+    \item
+    \item Abstract / Kurzfassung / Danksagung
+    \item Bilder prüfen
+    \item "mark changes after your Oral presentation for review"
+    \item "textcolor blue" in definitions ändern
+    \item "Print" Funktion aktivieren
+    \item "nocite" Funktion deaktivieren in main Z.269
+  \end{itemize}
 }\
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 
 \cleardoublepage
 \ifpdf
-    \phantomsection
-    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+  \phantomsection
+  \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 
