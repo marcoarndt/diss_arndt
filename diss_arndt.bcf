@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.11" bltxversion="3.20" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.10" bltxversion="3.19" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -502,7 +502,6 @@
     <bcf:option datatype="xml">inheritance</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">uniquenametemplate</bcf:option>
-    <bcf:option datatype="xml">namehashtemplate</bcf:option>
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
@@ -749,10 +748,9 @@
   </bcf:optionscope>
   <bcf:optionscope type="ENTRY">
     <bcf:option datatype="string">noinherit</bcf:option>
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
     <bcf:option datatype="string" backendout="1">indexing</bcf:option>
@@ -829,10 +827,9 @@
     <bcf:option datatype="integer" backendout="1">minalphanames</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAMELIST">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquelist</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
@@ -846,10 +843,9 @@
     <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAME">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
     <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
@@ -1063,13 +1059,6 @@
     <bcf:namepart order="2" base="1">family</bcf:namepart>
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
-  <!-- NAME HASH TEMPLATES -->
-  <bcf:namehashtemplate name="global">
-    <bcf:namepart order="1" hashscope="full">family</bcf:namepart>
-    <bcf:namepart order="2" hashscope="full">given</bcf:namepart>
-    <bcf:namepart order="3" hashscope="full">prefix</bcf:namepart>
-    <bcf:namepart order="4" hashscope="full">suffix</bcf:namepart>
-  </bcf:namehashtemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
   <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
@@ -2537,55 +2526,57 @@
     <bcf:citekey order="105" intorder="1">Jones.2011</bcf:citekey>
     <bcf:citekey order="106" intorder="1">Goos.2011</bcf:citekey>
     <bcf:citekey order="106" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="107" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="107" intorder="2">Montgomery.2020</bcf:citekey>
+    <bcf:citekey order="107" intorder="1">Siebertz.2017</bcf:citekey>
     <bcf:citekey order="108" intorder="1">Goos.2011</bcf:citekey>
     <bcf:citekey order="108" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="108" intorder="3">Myers.2016</bcf:citekey>
-    <bcf:citekey order="108" intorder="4">Rigdon.2022</bcf:citekey>
     <bcf:citekey order="109" intorder="1">Goos.2011</bcf:citekey>
     <bcf:citekey order="109" intorder="2">Montgomery.2020</bcf:citekey>
     <bcf:citekey order="109" intorder="3">Myers.2016</bcf:citekey>
     <bcf:citekey order="109" intorder="4">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="110" intorder="1">Siebertz.2017</bcf:citekey>
+    <bcf:citekey order="110" intorder="1">Goos.2011</bcf:citekey>
+    <bcf:citekey order="110" intorder="2">Montgomery.2020</bcf:citekey>
+    <bcf:citekey order="110" intorder="3">Myers.2016</bcf:citekey>
+    <bcf:citekey order="110" intorder="4">Rigdon.2022</bcf:citekey>
     <bcf:citekey order="111" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="112" intorder="1">Box.1988</bcf:citekey>
-    <bcf:citekey order="113" intorder="1">Rigdon.2022</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">Siebertz.2017</bcf:citekey>
+    <bcf:citekey order="112" intorder="2">Kleppmann.2016</bcf:citekey>
+    <bcf:citekey order="113" intorder="1">Box.1988</bcf:citekey>
     <bcf:citekey order="114" intorder="1">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="115" intorder="1">RisbergEllekjr.1998</bcf:citekey>
-    <bcf:citekey order="115" intorder="2">Bisgaard.1992</bcf:citekey>
-    <bcf:citekey order="115" intorder="3">Bisgaard.2011</bcf:citekey>
-    <bcf:citekey order="115" intorder="4">Myers.2016</bcf:citekey>
-    <bcf:citekey order="115" intorder="5">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="115" intorder="6">Zahran.2003</bcf:citekey>
-    <bcf:citekey order="115" intorder="7">GiovannittiJensen.1989</bcf:citekey>
-    <bcf:citekey order="115" intorder="8">Goos.2011</bcf:citekey>
-    <bcf:citekey order="115" intorder="9">Hinkelmann.2012</bcf:citekey>
-    <bcf:citekey order="115" intorder="10">Khuri.2006</bcf:citekey>
-    <bcf:citekey order="115" intorder="11">Rittmaier.2025</bcf:citekey>
-    <bcf:citekey order="115" intorder="12">Johnson.2011</bcf:citekey>
-    <bcf:citekey order="115" intorder="13">Donev.2004</bcf:citekey>
-    <bcf:citekey order="115" intorder="14">G.E.P.Box.1951</bcf:citekey>
-    <bcf:citekey order="115" intorder="15">Ardakani.2011</bcf:citekey>
-    <bcf:citekey order="115" intorder="16">Jones.2012</bcf:citekey>
-    <bcf:citekey order="115" intorder="17">Jones.2021</bcf:citekey>
-    <bcf:citekey order="115" intorder="18">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="115" intorder="19">Wu.2021</bcf:citekey>
-    <bcf:citekey order="115" intorder="20">Khuri.2006</bcf:citekey>
-    <bcf:citekey order="115" intorder="21">Escobar.1995</bcf:citekey>
-    <bcf:citekey order="115" intorder="22">Modarres.2017</bcf:citekey>
-    <bcf:citekey order="115" intorder="23">Ahn.2015</bcf:citekey>
-    <bcf:citekey order="115" intorder="24">Rasch.2018</bcf:citekey>
-    <bcf:citekey order="115" intorder="25">Xu.2002</bcf:citekey>
-    <bcf:citekey order="115" intorder="26">Wald.1943</bcf:citekey>
-    <bcf:citekey order="115" intorder="27">Rencher.2008</bcf:citekey>
-    <bcf:citekey order="115" intorder="28">Box.2007</bcf:citekey>
-    <bcf:citekey order="115" intorder="29">Kleppmann.2016</bcf:citekey>
-    <bcf:citekey order="115" intorder="30">Siebertz.2017</bcf:citekey>
-    <bcf:citekey order="115" intorder="31">Fisher.1935</bcf:citekey>
-    <bcf:citekey order="115" intorder="32">Bisgaard.1997</bcf:citekey>
-    <bcf:citekey order="115" intorder="33">Myers.2010</bcf:citekey>
-    <bcf:citekey order="115" intorder="34">Box.1988</bcf:citekey>
+    <bcf:citekey order="115" intorder="1">Rigdon.2022</bcf:citekey>
+    <bcf:citekey order="116" intorder="1">RisbergEllekjr.1998</bcf:citekey>
+    <bcf:citekey order="116" intorder="2">Bisgaard.1992</bcf:citekey>
+    <bcf:citekey order="116" intorder="3">Bisgaard.2011</bcf:citekey>
+    <bcf:citekey order="116" intorder="4">Myers.2016</bcf:citekey>
+    <bcf:citekey order="116" intorder="5">Montgomery.2020</bcf:citekey>
+    <bcf:citekey order="116" intorder="6">Zahran.2003</bcf:citekey>
+    <bcf:citekey order="116" intorder="7">GiovannittiJensen.1989</bcf:citekey>
+    <bcf:citekey order="116" intorder="8">Goos.2011</bcf:citekey>
+    <bcf:citekey order="116" intorder="9">Hinkelmann.2012</bcf:citekey>
+    <bcf:citekey order="116" intorder="10">Khuri.2006</bcf:citekey>
+    <bcf:citekey order="116" intorder="11">Rittmaier.2025</bcf:citekey>
+    <bcf:citekey order="116" intorder="12">Johnson.2011</bcf:citekey>
+    <bcf:citekey order="116" intorder="13">Donev.2004</bcf:citekey>
+    <bcf:citekey order="116" intorder="14">G.E.P.Box.1951</bcf:citekey>
+    <bcf:citekey order="116" intorder="15">Ardakani.2011</bcf:citekey>
+    <bcf:citekey order="116" intorder="16">Jones.2012</bcf:citekey>
+    <bcf:citekey order="116" intorder="17">Jones.2021</bcf:citekey>
+    <bcf:citekey order="116" intorder="18">Rigdon.2022</bcf:citekey>
+    <bcf:citekey order="116" intorder="19">Wu.2021</bcf:citekey>
+    <bcf:citekey order="116" intorder="20">Khuri.2006</bcf:citekey>
+    <bcf:citekey order="116" intorder="21">Escobar.1995</bcf:citekey>
+    <bcf:citekey order="116" intorder="22">Modarres.2017</bcf:citekey>
+    <bcf:citekey order="116" intorder="23">Ahn.2015</bcf:citekey>
+    <bcf:citekey order="116" intorder="24">Rasch.2018</bcf:citekey>
+    <bcf:citekey order="116" intorder="25">Xu.2002</bcf:citekey>
+    <bcf:citekey order="116" intorder="26">Wald.1943</bcf:citekey>
+    <bcf:citekey order="116" intorder="27">Rencher.2008</bcf:citekey>
+    <bcf:citekey order="116" intorder="28">Box.2007</bcf:citekey>
+    <bcf:citekey order="116" intorder="29">Kleppmann.2016</bcf:citekey>
+    <bcf:citekey order="116" intorder="30">Siebertz.2017</bcf:citekey>
+    <bcf:citekey order="116" intorder="31">Fisher.1935</bcf:citekey>
+    <bcf:citekey order="116" intorder="32">Bisgaard.1997</bcf:citekey>
+    <bcf:citekey order="116" intorder="33">Myers.2010</bcf:citekey>
+    <bcf:citekey order="116" intorder="34">Box.1988</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2598,13 +2589,12 @@
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
   <bcf:datalist section="0"
-                name="none/global//global/global/global"
+                name="none/global//global/global"
                 type="entry"
                 sortingtemplatename="none"
                 sortingnamekeytemplatename="global"
                 labelprefix=""
                 uniquenametemplatename="global"
-                labelalphanametemplatename="global"
-                namehashtemplatename="global">
+                labelalphanametemplatename="global">
   </bcf:datalist>
 </bcf:controlfile>
