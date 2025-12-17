@@ -1,0 +1,55 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=-1.9,
+xmax=1.9,
+xtick={-1,0,1},
+xlabel style={font=\color{mycolor1}},
+xlabel={$x_1$},
+ymin=-1.9,
+ymax=1.9,
+ytick={-1,0,1},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={Zentralpunkt ($n_C$)},
+title style={font=\small\bfseries, yshift=-0.5ex}
+]
+\addplot [color=black, dashed, line width=0.8pt, forget plot]
+  table[row sep=crcr]{%
+-1	-1\\
+1	-1\\
+1	1\\
+-1	1\\
+-1	-1\\
+};
+\addplot [color=white!70!black, dotted, forget plot]
+  table[row sep=crcr]{%
+0	-1.9\\
+0	1.9\\
+};
+\addplot [color=white!70!black, dotted, forget plot]
+  table[row sep=crcr]{%
+-1.9	0\\
+1.9	0\\
+};
+\addplot[only marks, mark=*, mark options={}, mark size=1.5811pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
+x	y\\
+-1	-1\\
+1	-1\\
+-1	1\\
+1	1\\
+};
+\addplot[only marks, mark=*, mark options={}, mark size=1.5811pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
+x	y\\
+0	0\\
+};
+\end{axis}
+\end{tikzpicture}%

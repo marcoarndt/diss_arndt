@@ -380,7 +380,7 @@ Entsprechend ist daraufhin ein geeigneter Versuchsplan für die physischen Daten
 \subsection{Statistische Versuchsplanung zur Lebensdauererprobung} \label{subsec:pläne}
 Standardprotokolle aus dem \ac{DoE} wie der \textbf{$2^{\sym{k}}$ voll-faktorielle Versuchsplan} eignen sich grundsätzlich auch für Lebensdaueruntersuchungen, da sich hier analog zu vergleichbar statistisch verteilter Datenlage Effekte stets als (Mittelwert-) Unterschiede in der Beobachtung der Systemantwort aus dem Vergleich zweier Einstellstufen eines oder mehrerer Faktoren ergeben \cite{Kleppmann.2016}.
 
-\subsubsection{$2^{\sym{k}}$ Faktorielle Versuchspläne}
+\subsubsection{$2^{\sym{k}}$ Faktorielle Versuchspläne} \label{subsubsec:voll}
 Demzufolge kann auch ein Lebensdauer-beeinflussendes Parameterset -  beispielhaft $(\sym{x}_1,\sym{x}_2)$ - voll-faktoriell auf zwei Stufen variiert und vollständig kombiniert werden, vgl. Abbildung~\ref{fig:abb2.05_vfdesign}.
 \begin{figure}[h]
     \centering
@@ -544,20 +544,53 @@ Stoßen Standard-Designs (CCD, Box-Behnken) aufgrund von Restriktionen im Versuc
 Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche Vorhersagevarianz über den gesamten Designraum und können Standard-Designs in ihrer Prädiktionsgüte oft übertreffen \cite{Goos.2011,Montgomery.2020}.
 
 \subsubsection{Metriken zur optimalen Versuchsplanung}
-Optimale Versuchspläne (Computer-Generated Designs) erweitern das methodische Spektrum, indem sie eine maximale Flexibilität jenseits starrer Standard-Designs ermöglichen.
-Ihr Einsatz ist prädestiniert für Szenarien, in denen klassische orthogonale Pläne an ihre Grenzen stoßen - sei es durch physikalische Randbedingungen welche bestimmte Faktorstufenkombinationen ausschließen, oder durch strikte Limitierungen der verfügbaren Versuchskapazität.
-Ein Versuchsplan wird hier als \textbf{orthogonal} bezeichnet, wenn keine Korrelation zwischen jeweils zwei Spalten der Versuchsplan-Matrix vorliegt - deren Skalarprodukt also null ergibt:
+Optimale Versuchspläne erweitern das methodische Spektrum, indem sie eine maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} ermöglichen.
+Ihr Einsatz ist prädestiniert für Szenarien, in denen klassische Pläne an ihre Grenzen stoßen - sei es durch physikalische Randbedingungen welche bestimmte Faktorstufenkombinationen ausschließen, oder durch strikte Limitierungen der verfügbaren Versuchskapazität.
+
+Derart klassische Versuchspläne  wie der voll-faktorielle Versuchsplan sind aufgrund ihrer Versuchspunktanordnung stets \textbf{orthogonal} \cite{Rigdon.2022,Montgomery.2020}.
+Ein Versuchsplan wird als orthogonal bezeichnet, wenn keine Korrelation zwischen jeweils zwei Spalten der Versuchsplan-Matrix vorliegt - deren Skalarprodukt also null ergibt:
 \begin{equation}
-    \langle \sym{x}, \sym{x} \rangle = 0 \quad \text{für alle möglichen } \symsub{x}{idx_i}
+    \langle \sym{x}, \sym{x} \rangle = 0 \quad \text{für alle möglichen } \symsub{x}{idx_i}.
     \label{eq:skalar}
 \end{equation}
+Oder in anderen Worten: Wenn die \textbf{Informationsmatrix}
+\begin{equation}
+    \sym{M}\stackrel{\sym{r}=1}{=} \sym{X}^{\top}\sym{X}.
+    \label{eq:informationsmatrix}
+\end{equation}
+einer Diagonalmatrix entspricht, ist der Versuchsplan orthogonal \cite{Montgomery.2021,Rigdon.2022}.
+So können Effekte eindeutig identifiziert werden - die Vektoren der Faktorstufenkombinationen sind linear unabhängig und Effekte lassen sich unverzerrt schätzen.
+Dies stellt einen Versuchsplan also zunächst einmal qualitativ günstig.\
 
-So können Effekte eindeutig identifiziert werden.
-\textbf{Ausgewogenheit} liegt vor, sofern für einen jeweiligen Faktor alle anderen Faktoreinstellungen gleichmäßig aufgeteilt sind \cite{Siebertz.2017}.
-Im Gegensatz zu Standardplänen erlauben optimale Designs beliebige Freiheitsgrade hinsichtlich der Stichprobengröße und der Modellkomplexität.
+Zudem liegt \textbf{Ausgewogenheit} vor, sofern für einen jeweiligen Faktor alle anderen Faktoreinstellungen gleichmäßig aufgeteilt sind \cite{Siebertz.2017}.
+Damit wird Varianzhomogenität und Gleichbehandlung der Faktoren gewährleistet, sodass die Schätzung der Effekte unverzerrt erfolgt.\
+
+Mathematisch fundiert die Bewertung der Schätzgenauigkeit auf der Inversen der Informationsmatrix, welche als \textbf{Varianz-Kovarianz-Matrix} (oder \textbf{Dispersionsmatrix}) der Regressionskoeffizienten definiert ist:
+\begin{equation}
+    \sym{Var}(\hat{\sym{Beta}}) = \sym{sigma_sq} (\sym{X}^{\top}\sym{X})^{-1},
+    \label{eq:dispersion}
+\end{equation}
+wobei wie gehabt $\sym{sigma_sq}$ die Varianz des Versuchsfehlers darstellt.
+Die Diagonalelemente der Matrix $(\sym{X}^{\top}\sym{X})^{-1}$ stehen hierbei in direktem Zusammenhang mit dem \ac{VIF}.
+Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht \cite{Siebertz.2017,Kleppmann.2016}.
+Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Myers.2016,Montgomery.2021}.
+Ergänzend zur globalen Bewertung der Multikollinearität durch den \ac{VIF} erlaubt die Betrachtung der sogenannten \textbf{Hat-Matrix}
+\begin{equation}
+    \sym{Hat} = \sym{X}(\sym{X}^{\top}\sym{X})^{-1}\sym{X}^{\top}
+    \label{eq:hat_matrix}
+\end{equation}
+eine lokale Diagnose der Versuchspunkte.
+Die Diagonalelemente $\text{h}_{ii}$ dieser Projektionsmatrix, bezeichnet als \textbf{Hebelwerte} (engl. Leverage), quantifizieren den Einfluss eines einzelnen Versuchslaufs auf die Modellvorhersage.
+Punkte mit hohen Hebelwerten (typischerweise $\text{h}_{ii} > 2\sym{p}/\sym{n}$) befinden sich geometrisch weit vom Zentrum des Versuchsraums entfernt und dominieren die Regression, was den Plan anfällig für Ausreißer in diesen spezifischen Einstellungen macht \cite{Montgomery.2021, Myers.2016}.
+
+Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{statistische Power} (Teststärke) verfügt.
+Diese Metrik beschreibt die Wahrscheinlichkeit, mit der ein Effekt einer definierten Größe (Signal) vor dem Hintergrund des experimentellen Rauschens (Noise) als signifikant erkannt wird.
+Insbesondere bei reduzierten Versuchsplänen ist die Power-Analyse essenziell, um das Risiko von $\sym{Beta}$-Fehlern (falsch-negativen Ergebnissen) zu minimieren und sicherzustellen, dass die gewählte Stichprobengröße $\sym{n}$ für den angestrebten Erkenntnisgewinn hinreichend ist \cite{Cohen.1988, Siebertz.2017}.\
+
+Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix den Informationsgehalt trotz Korrelationen zu maximieren.
 Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
 Eine Übersicht dieser Optimalitätskriterien, welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitäten} zusammengefasst und folgt in Abschnitt~\ref{subsec:stat} der zugehörigen Berechnung \cite{Goos.2011,Montgomery.2020}.
-\begin{table}[h]
+\begin{table}[htbp]
     \centering
     \caption{Übersicht und Zielsetzung verschiedener Optimalitätskriterien für Versuchspläne \cite{Goos.2011,Montgomery.2020,Myers.2016,Rigdon.2022}}
     \renewcommand{\arraystretch}{1.2} % Etwas mehr Abstand zwischen den Zeilen
@@ -624,7 +657,65 @@ Ein \ac{CCD} besteht somit aus:
 
 \end{itemize}
 
+\begin{figure}[htbp]
+    \centering
 
+    \setlength\figurewidth{0.15\textwidth}
+    \setlength\figureheight{0.15\textwidth}
+
+    % --- 1. Teilfaktoriell ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.1_strategy.tex}
+    \end{minipage}
+    \hfill
+    % --- Pfeil 1 ---
+    \begin{minipage}[b]{0.05\textwidth}
+        \centering
+        \raisebox{2.25cm}{
+            \hspace*{0.3cm}
+            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
+        }
+    \end{minipage}
+    \hfill
+    % --- 2. Vollfaktoriell ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.2_strategy.tex}
+    \end{minipage}
+    \hfill
+    % --- Pfeil 2 ---
+    \begin{minipage}[b]{0.02\textwidth}
+        \centering
+        \raisebox{2.25cm}{
+            \hspace*{0.0cm}
+            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
+        }
+    \end{minipage}
+    \hfill
+    % --- 3. Zentralpunkt ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.3_strategy.tex}
+    \end{minipage}
+    \hfill
+    % --- Pfeil 3 ---
+    \begin{minipage}[b]{0.01\textwidth}
+        \centering
+        \raisebox{2.25cm}{
+            \hspace*{0.00cm}
+            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
+        }
+    \end{minipage}
+    \hfill
+    % --- 4. CCD ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.4_strategy.tex}
+    \end{minipage}
+    \caption{Strategischer Ansatz zu augmentierter Versuchsplanung für die Lebensdauererprobung nach \cite{Box.1988}}
+    \label{fig:ma_abb2.08_strategy}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

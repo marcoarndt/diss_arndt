@@ -181,6 +181,8 @@ isbn=true]{biblatex}
 \newacronym[plural=RSDs, longplural=Response Surface Designs]{RSD}{RSD}{Response Surface Design}
 \newacronym[plural=CPs, longplural=Center Points]{CP}{CP}{Center Point}
 \newacronym[plural=CCDs, longplural=Central Composite Designs]{CCD}{CCD}{Central Composite Design}
+\newacronym[plural=VIFs, longplural=Varianz-Inflations-Faktoren]{VIF}{VIF}{Varianz-Inflations-Faktor}
+
 
 % Indices - use in text: \sym{i}, also needs \input{settings/glossaries}
 \newglossaryentry{idx_i}{type=indices, name={\ensuremath{i}}, description={Laufvariable}}
@@ -232,7 +234,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Arithmetischer Mittelwert (empirisch)}, text={\ensuremath{\bar{x}}}]{x_bar}{\ensuremath{\bar{x}}}
 \glsxtrnewsymbol[type=formulas, description={Integrationsvariable (Gamma-Funktion)}, text={\ensuremath{\upsilon}}]{ups}{\ensuremath{\upsilon}}
 \glsxtrnewsymbol[type=formulas, description={Fisher-Informationsmatrix}, text={\ensuremath{\mathbf{F}}}]{FIM}{\ensuremath{\mathbf{F}}}
-\glsxtrnewsymbol[type=formulas, description={Hessian-Matrix (der Log-Likelihood-Funktion)}, text={\ensuremath{\mathbf{H}}}]{H}{\ensuremath{\mathbf{H}}}
+\glsxtrnewsymbol[type=formulas, description={Hessian-Matrix (der Log-Likelihood-Funktion)}, text={\ensuremath{\mathbf{H_f}}}]{H}{\ensuremath{\mathbf{H_f}}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Kovarianz-Matrix}, text={\ensuremath{\mathbf{V}}}]{V}{\ensuremath{\mathbf{V}}}
 \glsxtrnewsymbol[type=formulas, description={Standardfehler (Standard Error)}, text={\ensuremath{\mathit{se}}}]{se}{\ensuremath{\mathit{se}}}
 \glsxtrnewsymbol[type=formulas, description={Signifikanzniveau\newline Abstand der Sternpunkte (Axial Points)}, text={\ensuremath{\alpha}}]{alpha}{\ensuremath{\alpha}}
@@ -249,6 +251,11 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Koeffizientenmatrix}, text={\ensuremath{\bm{\beta}}}]{Beta}{\ensuremath{\bm{\beta}}}
 \glsxtrnewsymbol[type=formulas, description={Antwortmatrix}, text={\ensuremath{\mathbf{y}}}]{Y}{\ensuremath{\mathbf{y}}}
 \glsxtrnewsymbol[type=formulas, description={Fehlerterm-Matrix}, text={\ensuremath{\bm{\epsilon}}}]{Epsilon}{\ensuremath{\bm{\epsilon}}}
+\glsxtrnewsymbol[type=formulas, description={Informationsmatrix $=\sym{X}^{\top}\sym{X}$}, text={\ensuremath{\mathbf{M}}}]{M}{\ensuremath{\mathbf{M}}}
+\glsxtrnewsymbol[type=formulas, description={Orthogonale Projektionsmatrix / Hat-Matrix}, text={\ensuremath{\mathbf{H}}}]{Hat}{\ensuremath{\mathbf{H}}}
+\glsxtrnewsymbol[type=formulas, description={Eintrag von $\sym{Hat}$}, text={\ensuremath{h}}]{h}{\ensuremath{h}}
+
+
 %  Show page borders (useful for final checks)
 %\usepackage{showframe}
 
