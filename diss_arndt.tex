@@ -49,6 +49,7 @@ BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thic
   \usepackage{booktabs}
   \usepackage{graphicx}
   \usepackage{multirow}
+  \usepackage{upgreek}
 
 % Citation style. If your institute has specific requirements, configure here:
 \usepackage[style=numeric, % see https://www.overleaf.com/learn/latex/Biblatex_citation_styles for a list of predefined styles
@@ -190,13 +191,13 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_l}{type=indices, name={\ensuremath{l}}, description={Laufvariable}}
 \newglossaryentry{idx_0}{type=indices, name={\ensuremath{0}}, description={Zeitpunkt $\sym{t}=0$ \newline  Zentralpunkt \newline Regressionskonstante}}
 \newglossaryentry{idx_q}{type=indices, name={\ensuremath{q}}, description={Quantilwert}}
-\newglossaryentry{idx_O}{type=indices, name={\ensuremath{O}}, description={Beobachtet (Observed)}}
+\newglossaryentry{idx_O}{type=indices, name={\ensuremath{\text{O}}}, description={Beobachtet (Observed)}}
 \newglossaryentry{idx_u}{type=indices, name={\ensuremath{u}}, description={Untere Grenze des Vertrauensbereichs}}
 \newglossaryentry{idx_o}{type=indices, name={\ensuremath{o}}, description={Obere Grenze des Vertrauensbereichs}}
-\newglossaryentry{idx_F}{type=indices, name={\ensuremath{F}}, description={Faktorieller Punkt}}
-\newglossaryentry{idx_S}{type=indices, name={\ensuremath{S}}, description={Sternpunkt}}
-\newglossaryentry{idx_D}{type=indices, name={\ensuremath{D}}, description={Sternpunktabstand CCD}}
-\newglossaryentry{idx_C}{type=indices, name={\ensuremath{C}}, description={Zentralpunkt}}
+\newglossaryentry{idx_F}{type=indices, name={\ensuremath{\text{F}}}, description={Faktorieller Punkt}}
+\newglossaryentry{idx_S}{type=indices, name={\ensuremath{\text{S}}}, description={Sternpunkt}}
+\newglossaryentry{idx_D}{type=indices, name={\ensuremath{\text{D}}}, description={Sternpunktabstand CCD}}
+\newglossaryentry{idx_C}{type=indices, name={\ensuremath{\text{C}}}, description={Zentralpunkt}}
 
 
 %%%
@@ -217,8 +218,8 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Wahrscheinlichkeit}, text={\ensuremath{\Pr}}]{Pr}{\ensuremath{\Pr}}
 \glsxtrnewsymbol[type=formulas, description={Zuverlässigkeit}]{R}{\ensuremath{R}}
 \glsxtrnewsymbol[type=formulas, description={Menge der reellen Zahlen}]{RR}{\ensuremath{\mathbb{R}}}
-\glsxtrnewsymbol[type=formulas, description={Empirische Standardabweichung (von x)}, text={\ensuremath{s}}]{s}{\ensuremath{s}}
-\glsxtrnewsymbol[type=formulas, description={Empirische Varianz (von x)}, text={\ensuremath{s^2}}]{s_sq}{\ensuremath{s^2}}
+\glsxtrnewsymbol[type=formulas, description={Empirische Standardabweichung (von \sym{x})}, text={\ensuremath{s}}]{s}{\ensuremath{s}}
+\glsxtrnewsymbol[type=formulas, description={Empirische Varianz (von \sym{x})}, text={\ensuremath{s^2}}]{s_sq}{\ensuremath{s^2}}
 \glsxtrnewsymbol[type=formulas, description={Varianz der Lebensdauer (theoretisch)}, text={\ensuremath{\sigma^2}}]{sigma_sq}{\ensuremath{\sigma^2}}
 \glsxtrnewsymbol[type=formulas, description={Zeit, Lebensdauermerimal}]{t}{\ensuremath{t}}
 \glsxtrnewsymbol[type=formulas, description={Vektor der Ausfallzeiten}, text={\ensuremath{\mathbf{t}}}]{t_vec}{\ensuremath{\mathbf{t}}}
@@ -226,7 +227,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={kontinuierliche Zufallsvariable}]{tau}{\ensuremath{\tau}}
 \glsxtrnewsymbol[type=formulas, description={Regressionskoeffizient, Modellparameter}]{beta}{\ensuremath{\beta}}
 \glsxtrnewsymbol[type=formulas, description={Fehlerterm}]{epsilon}{\ensuremath{\epsilon}}
-\glsxtrnewsymbol[type=formulas, description={Vektor der Modellparameter}, text={\ensuremath{\bm{\theta}}}]{theta}{\ensuremath{\bm{\theta}}}
+\glsxtrnewsymbol[type=formulas, description={Vektor der Modellparameter}, text={\ensuremath{\bm{\uptheta}}}]{theta}{\ensuremath{\bm{\uptheta}}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Operator}, text={\ensuremath{\mathrm{Var}}}]{Var}{\ensuremath{\mathrm{Var}[\cdot]}}
 \glsxtrnewsymbol[type=formulas, description={Covarianz-Operator}, text={\ensuremath{\mathrm{Cov}}}]{Cov}{\ensuremath{\mathrm{Cov}[\cdot]}}
 \glsxtrnewsymbol[type=formulas, description={Weibull-Verteilung (Notation)}, text={\ensuremath{\mathcal{W}}}]{W}{\ensuremath{\mathcal{W}(\cdot, \cdot)}}
@@ -241,20 +242,31 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Quantilwert}, text={\ensuremath{q}}]{q}{\ensuremath{q}}
 \glsxtrnewsymbol[type=formulas, description={Quantil der Standardnormalverteilung}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
 \glsxtrnewsymbol[type=formulas, description={Abgeleitete Funktion (für Delta-Methode)}, text={\ensuremath{g}}]{g_func}{\ensuremath{g(\cdot)}}
-\glsxtrnewsymbol[type=formulas, description={Gradientenvektor der Funktion g}, text={\ensuremath{\mathbf{g}'}}]{g_grad}{\ensuremath{\mathbf{g}'}}
+\glsxtrnewsymbol[type=formulas, description={Gradientenvektor der Funktion \sym{g_func}}, text={\ensuremath{\mathbf{g}'}}]{g_grad}{\ensuremath{\mathbf{g}'}}
 \glsxtrnewsymbol[type=formulas, description={Systemantwort, -variable}, text={\ensuremath{y}}]{y}{\ensuremath{y}}
 \glsxtrnewsymbol[type=formulas, description={Nullhypothese}, text={\ensuremath{H_0}}]{H0}{\ensuremath{H_0}}
 \glsxtrnewsymbol[type=formulas, description={Alternativhypothese}, text={\ensuremath{H_1}}]{H1}{\ensuremath{H_1}}
-\glsxtrnewsymbol[type=formulas, description={Replikation}, text={\ensuremath{r}}]{r}{\ensuremath{r}}
-\glsxtrnewsymbol[type=formulas, description={Fraktionsgrad}, text={\ensuremath{p}}]{p}{\ensuremath{p}}
+\glsxtrnewsymbol[type=formulas, description={Replikation}, text={\ensuremath{m}}]{m}{\ensuremath{m}}
+\glsxtrnewsymbol[type=formulas, description={Fraktionsgrad}, text={\ensuremath{p_{\text{f}}}}]{p_f}{\ensuremath{p_{\text{f}}}}
+\glsxtrnewsymbol[type=formulas, description={Anzahl der Regressionskoeffizienten}, text={\ensuremath{p}}]{p}{\ensuremath{p}}
 \glsxtrnewsymbol[type=formulas, description={Versuchsplan-Matrix oder Modellmatrix}, text={\ensuremath{\mathbf{X}}}]{X}{\ensuremath{\mathbf{X}}}
-\glsxtrnewsymbol[type=formulas, description={Koeffizientenmatrix}, text={\ensuremath{\bm{\beta}}}]{Beta}{\ensuremath{\bm{\beta}}}
+\glsxtrnewsymbol[type=formulas, description={Koeffizientenmatrix}, text={\ensuremath{\bm{\upbeta}}}]{Beta}{\ensuremath{\bm{\upbeta}}}
 \glsxtrnewsymbol[type=formulas, description={Antwortmatrix}, text={\ensuremath{\mathbf{y}}}]{Y}{\ensuremath{\mathbf{y}}}
 \glsxtrnewsymbol[type=formulas, description={Fehlerterm-Matrix}, text={\ensuremath{\bm{\epsilon}}}]{Epsilon}{\ensuremath{\bm{\epsilon}}}
-\glsxtrnewsymbol[type=formulas, description={Informationsmatrix $=\sym{X}^{\top}\sym{X}$}, text={\ensuremath{\mathbf{M}}}]{M}{\ensuremath{\mathbf{M}}}
-\glsxtrnewsymbol[type=formulas, description={Orthogonale Projektionsmatrix / Hat-Matrix}, text={\ensuremath{\mathbf{H}}}]{Hat}{\ensuremath{\mathbf{H}}}
-\glsxtrnewsymbol[type=formulas, description={Eintrag von $\sym{Hat}$}, text={\ensuremath{h}}]{h}{\ensuremath{h}}
+\glsxtrnewsymbol[type=formulas, description={Informationsmatrix $\sym{X}'\sym{X}$}, text={\ensuremath{\mathbf{M}}}]{M}{\ensuremath{\mathbf{M}}}
+\glsxtrnewsymbol[type=formulas, description={Orthogonale Projektionsmatrix, Prädiktionsmatrix, Hat-Matrix}, text={\ensuremath{\mathbf{H}}}]{Hat}{\ensuremath{\mathbf{H}}}
+\glsxtrnewsymbol[type=formulas, description={Eintrag von $\sym{Hat}$, Hebelwert}, text={\ensuremath{h}}]{h}{\ensuremath{h}}
+\glsxtrnewsymbol[type=formulas, description={Cook's Distanz}, text={\ensuremath{D}}]{D}{\ensuremath{D}}
+\glsxtrnewsymbol[type=formulas, description={Studentisiertes Residuum}, text={\ensuremath{r}}]{resid}{\ensuremath{r}}
+\glsxtrnewsymbol[type=formulas, description={Standardabweichung (theoretisch)}, text={\ensuremath{\sigma}}]{sigma}{\ensuremath{\sigma}}
+\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Koeffizienten (Difference in Betas)}, text={\text{DFBETAS}}]{dfbetas}{\ensuremath{\text{DFBETAS}}}
+\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Prädiktionen (Difference in Fits)}, text={\text{DFFITS}}]{dffits}{\ensuremath{\text{DFFITS}}}
+\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Schätzwerte (Covariance Ratio)}, text={\text{COVRATIO}}]{covratio}{\ensuremath{\text{COVRATIO}}}
+\glsxtrnewsymbol[type=formulas, description={Determinante einer Matrix}, text={\det}]{det}{\ensuremath{\det(\cdot)}}
 
+
+\glsxtrnewsymbol[type=formulas, description={A-Priori-Information/Verteilung}, text={\pi}]{prior}{\ensuremath{\pi(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Erwartete Testdauer}, text={\text{ETD}}]{ETD}{\ensuremath{\text{ETD}}}
 
 %  Show page borders (useful for final checks)
 %\usepackage{showframe}
@@ -359,7 +371,7 @@ Thanks for your service.
 
 
 % TODO: nocite prints the whole bib file to the bibliography. This is for testing and should be commented out in your thesis:
-% \nocite{*}
+\nocite{*}
 
 % Bibliography
 \setlength{\emergencystretch}{.5em}

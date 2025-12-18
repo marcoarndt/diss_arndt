@@ -6,4 +6,28 @@
 
 \section{Bewertung des Standes der Forschung und Technik}
 
+\begin{itemize}
+    \item \cite[Kap. 9.1.4]{Myers.2016}
+    \item \cite[Kap. 9.2.1]{Myers.2016}
+\end{itemize}
+
+\subsubsection{Besonderheiten der Effizienz in der Lebensdauerprüfung}
+Der Begriff der Effizienz erfährt im Kontext der Planung multivariater Lebensdauertests (\ac{ALT} oder Reliability Demonstration Tests) eine signifikante Erweiterung gegenüber der klassischen linearen Versuchsplanung.
+Während Standard-Designs primär die Varianz der Parameterschätzer minimieren, unterliegen Lebensdauertests der zusätzlichen Restriktion, dass die Information (der Ausfall eines Bauteils) stochastisch über die Zeit generiert wird und oft durch \textbf{Zensierung} limitiert ist.
+
+Eine zentrale Herausforderung besteht in der \textbf{Modellabhängigkeit} (engl. Model Dependence) der Informationsmatrix.
+Bei nicht-linearen Modellen, wie der in der Zuverlässigkeitstechnik omnipräsenten Weibull- oder Lognormal-Regression, ist die Fisher-Informationsmatrix $\sym{FIM}$ nicht mehr allein von der Versuchsplanmatrix $\sym{X}$ abhängig, sondern auch von den wahren, aber unbekannten Verteilungsparametern $\sym{theta}$ (z.\,B. Formparameter $\sym{b}$):
+\begin{equation}
+    \sym{M}(\sym{X}, \sym{theta}) = \sym{E} \left[ - \frac{\partial^2 \sym{L_like}(\sym{theta})}{\partial \sym{theta}^2} \right].
+    \label{eq:fisher_info_depend}
+\end{equation}
+Daraus resultiert das Paradoxon, dass zur Konstruktion eines optimalen Plans bereits Kenntnisse über die zu ermittelnden Parameter vorliegen müssen.
+Klassische Optimalitätskriterien (D-, A-Optimalität) wandeln sich daher zu \textbf{lokalen Optimalitäten}, die nur für einen spezifischen Parametervektor $\sym{theta}_0$ („Best Guess“) gültig sind.
+Um Robustheit gegenüber Fehlannahmen dieser Startwerte zu gewährleisten, werden in der Entwicklung effizienter Lebensdauertests häufig \textbf{Bayes-Optimale Versuchspläne} eingesetzt, welche die Effizienz über eine A-Priori-Verteilung der Parameter maximieren \cite{Meeker.2022, Goos.2011}.
+
+Zudem muss die \textbf{zeitliche Effizienz} berücksichtigt werden.
+Ein Versuchsplan gilt im Kontext der Lebensdaueranalyse nur dann als effizient, wenn er unter Berücksichtigung der Zensierungsmechanismen (Typ-I oder Typ-II) die erwartete Anzahl an Ausfällen maximiert oder die \textbf{erwartete Testdauer} (Expected Test Duration, ETD) bei gegebener Präzision minimiert.
+Die Varianz der Schätzung wird hierbei maßgeblich durch die Anzahl der ausgefallenen Einheiten getrieben, nicht allein durch die Stichprobengröße $\sym{n}$ \cite{Nelson.2005}.
+
+
 \section{Forschungsfragen und Aufbau der Arbeit}
