@@ -31,25 +31,25 @@ BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thic
 %\usepackage{showframe}
 
 \usepackage{csquotes} % for bibliography and glossaries
-\usepackage{xpatch}
+\usepackage{xpatch}   % for patching commands (used for bibliography tweaks)
 
 % TikZ - Packages to include graphics
-  \usepackage{pgfplots}
-  \pgfplotsset{compat=newest}
+  \usepackage{pgfplots}       % for plots
+  \pgfplotsset{compat=newest} % use newest features of pgfplots
 
   %% the following commands are needed for some matlab2tikz features
-  \usetikzlibrary{plotmarks}
-  \usetikzlibrary{arrows.meta}
-  \usepgfplotslibrary{patchplots}
+  \usetikzlibrary{plotmarks}      % for plot marks
+  \usetikzlibrary{arrows.meta}    % for more arrow tip options
+  \usepgfplotslibrary{patchplots} % for patch plots
   
 % Additional individual Packages  
-  \usepackage{grffile}
-  \usepackage{amsmath}
-  \usepackage{subcaption}
-  \usepackage{booktabs}
-  \usepackage{graphicx}
-  \usepackage{multirow}
-  \usepackage{upgreek}
+  \usepackage{grffile}    % allow graphics with multiple dots in the filename
+  \usepackage{amsmath}    % math environments
+  \usepackage{subcaption} % subfigures
+  \usepackage{booktabs}   % nice tables
+  \usepackage{graphicx}   % images
+  \usepackage{multirow}   % tables
+  \usepackage{upgreek}    % upright greek letters
 
 % Citation style. If your institute has specific requirements, configure here:
 \usepackage[style=numeric, % see https://www.overleaf.com/learn/latex/Biblatex_citation_styles for a list of predefined styles
@@ -90,7 +90,7 @@ isbn=true]{biblatex}
 \usepackage{xcolor} % Markierung im Text
 
 % Nice looking tables (https://nhigham.com/2019/11/19/better-latex-tables-with-booktabs/latex subfig)
-\usepackage{booktabs}
+\usepackage{booktabs}   % for \toprule, \midrule, \bottomrule in tables
 
 % si-units: auto-rounding numbers, set same format for numbers globally, add and correclty typeset units for numbers
 \usepackage{siunitx}
@@ -110,7 +110,7 @@ isbn=true]{biblatex}
 \defaulthyphenchar=127
 
 % Just for demonstration use
-\usepackage{blindtext}
+\usepackage{blindtext} % generate dummy text for testing
 
 % harvey balls: e.g \harveyBallFull
 % \usepackage{harveyballs}
@@ -134,7 +134,7 @@ isbn=true]{biblatex}
 
 % search for images in folder img/, i.e. instead of  \includegraphics{img/...}, just use \includegraphics{...}
 % \graphicspath{{img/}}
-\graphicspath{{img/}{plots/}}
+\graphicspath{{img/}{plots/}} % add more paths as needed
 
 \title{Entwicklung Effizienter Multivariater Lebensdauertests}
 
@@ -263,8 +263,6 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Prädiktionen (Difference in Fits)}, text={\text{DFFITS}}]{dffits}{\ensuremath{\text{DFFITS}}}
 \glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Schätzwerte (Covariance Ratio)}, text={\text{COVRATIO}}]{covratio}{\ensuremath{\text{COVRATIO}}}
 \glsxtrnewsymbol[type=formulas, description={Determinante einer Matrix}, text={\det}]{det}{\ensuremath{\det(\cdot)}}
-
-
 \glsxtrnewsymbol[type=formulas, description={A-Priori-Information/Verteilung}, text={\pi}]{prior}{\ensuremath{\pi(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Erwartete Testdauer}, text={\text{ETD}}]{ETD}{\ensuremath{\text{ETD}}}
 
