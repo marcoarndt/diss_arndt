@@ -265,6 +265,16 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Determinante einer Matrix}, text={\det}]{det}{\ensuremath{\det(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={A-Priori-Information/Verteilung}, text={\pi}]{prior}{\ensuremath{\pi(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Erwartete Testdauer}, text={\text{ETD}}]{ETD}{\ensuremath{\text{ETD}}}
+\glsxtrnewsymbol[type=formulas, description={A-Optimalitätskriterium (Spur-Minimierung)}, text={\ensuremath{A_{\text{opt}}}}]{A_opt}{\ensuremath{A_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={D-Optimalitätskriterium (Determinanten-Maximierung)}, text={\ensuremath{D_{\text{opt}}}}]{D_opt}{\ensuremath{D_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={E-Optimalitätskriterium (Eigenwert-Minimierung)}, text={\ensuremath{E_{\text{opt}}}}]{E_opt}{\ensuremath{E_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={G-Optimalitätskriterium (Minimierung max. Prädiktionsvarianz)},
+    text={\ensuremath{G_{\text{opt}}}}]{G_opt}{\ensuremath{G_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={I-Optimalitätskriterium (Minimierung durchschn. Prädiktionsvarianz)}, text={\ensuremath{I_{\text{opt}}}}]{I_opt}{\ensuremath{I_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={S-Optimalitätskriterium (Abstands-Maximierung)}, text={\ensuremath{S_{\text{opt}}}}]{S_opt}{\ensuremath{S_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={V-Optimalitätskriterium (Punktuelle Varianz-Minimierung)}, text={\ensuremath{V_{\text{opt}}}}]{V_opt}{\ensuremath{V_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={Prädiktionsvarianz an der Stelle $\sym{x}$ (skaliert)}, text={\ensuremath{\nu(\sym{x})}}]{pred_var}{\ensuremath{\nu(\sym{x})}}
+
 
 %  Show page borders (useful for final checks)
 %\usepackage{showframe}
@@ -287,22 +297,22 @@ Thanks for your service.
 \addchap{Kurzfassung/Abstract}
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 \todo{
-  \begin{itemize}
-    \item
-    \item Abstract / Kurzfassung / Danksagung
-    \item Bilder prüfen
-    \item "mark changes after your Oral presentation for review"
-    \item "textcolor blue" in definitions ändern
-    \item "Print" Funktion aktivieren
-    \item "nocite" Funktion deaktivieren in main Z.269
-  \end{itemize}
+    \begin{itemize}
+        \item
+        \item Abstract / Kurzfassung / Danksagung
+        \item Bilder prüfen
+        \item "mark changes after your Oral presentation for review"
+        \item "textcolor blue" in definitions ändern
+        \item "Print" Funktion aktivieren
+        \item "nocite" Funktion deaktivieren in main Z.269
+    \end{itemize}
 }\
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 
 \cleardoublepage
 \ifpdf
-  \phantomsection
-  \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+    \phantomsection
+    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 

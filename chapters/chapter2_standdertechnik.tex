@@ -544,9 +544,16 @@ Stoßen Standard-Designs (CCD, Box-Behnken) aufgrund von Restriktionen im Versuc
 Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche Vorhersagevarianz über den gesamten Designraum und können Standard-Designs in ihrer Prädiktionsgüte oft übertreffen \cite{Goos.2011,Montgomery.2020}.
 
 \subsubsection{Metriken zur optimalen Versuchsplanung}
-Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, können optimale Versuchsplanungen als Ansatz genutzt werden.
-Diese folgen dem Ziel, die Anordnung der Versuchspunkte im Versuchsraum so zu gestalten, dass spezifische Qualitätskriterien, allen voran Varianzverteilungen innerhalb der Modellierung, optimiert werden.
-Eine Übersicht gängiger Metriken bzw. Qualitätsmerkmale wird daher im Folgenden gegeben.
+Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, bieten \textbf{optimale Versuchspläne} einen leistungsfähigen Lösungsansatz.
+Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der Prädiktionsvarianz
+\begin{equation}
+    \sym{pred_var} = \sym{x}' (\sym{X}'\sym{X})^{-1} \sym{x} = \sym{x}' \sym{M}^{-1} \sym{x}.
+    \label{eq:pred_variance_def}
+\end{equation}
+optimiert werden.
+Die Prädiktionsvarianz ist ein dimensionsloses Maß, das ausschließlich von der geometrischen Anordnung der Versuchspunkte (der Matrix $\sym{X}$) und der Position $\sym{x}$ abhängt, jedoch unabhängig von der tatsächlichen Streuung der Messdaten ($\sym{sigma_sq}$) ist.
+Eine effiziente Versuchsplanung für multivariate Lebensdaueruntersuchungen muss sich neben pragmatischen Beweggründen maßgeblich an diesen Größen orientieren, weshalb im Folgenden eine Übersicht der gängigen Metriken und Qualitätsmerkmale gegeben wird.\
+
 
 Der Einsatz optimaler Versuchspläne ist zunächst prädestiniert für Szenarien, in denen klassische Pläne an ihre Grenzen stoßen - sei es durch physikalische Randbedingungen welche bestimmte Faktorstufenkombinationen ausschließen, oder durch strikte Limitierungen der verfügbaren Versuchskapazität \cite{Goos.2011,Kleppmann.2020}.
 Derart klassische Versuchspläne wie der voll-faktorielle Versuchsplan sind aufgrund ihrer Versuchspunktanordnung stets \textbf{orthogonal} \cite{Rigdon.2022,Montgomery.2020}.
@@ -555,12 +562,12 @@ Ein Versuchsplan wird als orthogonal bezeichnet, wenn keine Korrelation zwischen
     \langle \symsub{x}{idx_i}, \symsub{x}{idx_j} \rangle = 0 \quad \text{für alle } \sym{idx_i} \neq \sym{idx_j}.
     \label{eq:skalar}
 \end{equation}
-Oder in anderen Worten: Wenn die \textbf{Informationsmatrix}
+Oder in anderen Worten: entpricht die \textbf{Informationsmatrix}
 \begin{equation}
     \sym{M}\stackrel{\sym{m}=1}{=} \sym{X}'\sym{X}
     \label{eq:informationsmatrix}
 \end{equation}
-einer Diagonalmatrix entspricht, ist der Versuchsplan orthogonal \cite{Montgomery.2021,Rigdon.2022}.
+einer Diagonalmatrix, ist der Versuchsplan orthogonal \cite{Montgomery.2021,Rigdon.2022}.
 So können Effekte eindeutig identifiziert werden - die Vektoren der Faktorstufenkombinationen sind linear unabhängig und Effekte lassen sich unverzerrt schätzen.
 Dies stellt einen Versuchsplan also zunächst einmal qualitativ günstig dar.
 
@@ -607,7 +614,7 @@ Sie misst die standardisierte Änderung eines spezifischen Regressionskoeffizien
     \label{eq:dfbetas}
 \end{equation}
 wobei $\hat{\sym{beta}}_{\sym{idx_j}(-\sym{idx_i})}$ den Koeffizienten ohne die $\sym{idx_i}$-te Beobachtung und $\hat{\sym{sigma}}_{(-\sym{idx_i})}^2$ die entsprechende Fehlerquadratschätzung darstellt.
-Hiermit lässt sich prüfen, ob einzelne Versuche die Schätzung eines Haupteffekts oder einer Wechselwirkung verzerren (kritischer Schwellenwert oft $> 2/\sqrt{\sym{n}}$) \cite{Belsley.2004,Montgomery.2021}.
+Hiermit lässt sich prüfen, ob einzelne Versuche die Schätzung eines Effekt-Terms verzerren (kritischer Schwellenwert oft $> 2/\sqrt{\sym{n}}$) \cite{Belsley.2004,Montgomery.2021}.
 
 Ergänzend beschreibt $\sym{dffits}$ (Difference in Fits) die Änderung des Vorhersagewertes an der Stelle $\sym{idx_i}$ selbst, normiert auf die Standardabweichung der Anpassung:
 \begin{equation}
@@ -625,57 +632,96 @@ Werte, die signifikant von $1$ abweichen (Grenzen $1 \pm 3\sym{p}/\sym{n}$), zei
 
 Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix $(\sym{X}'\sym{X})^{-1}$ den Informationsgehalt trotz Korrelationen zu maximieren.
 Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
-Eine Übersicht dieser \textbf{Optimalitätskriterien} oder einfach \textbf{Optimalitäten}, welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst und folgt in Abschnitt~\ref{subsec:stat} der zugehörigen Berechnung \cite{Goos.2011,Montgomery.2020}.
+Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten}, welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}.
 
 \begin{table}[htbp]
     \centering
-    \caption{Übersicht und Zielsetzung verschiedener Optimalitätskriterien für Versuchspläne \cite{Goos.2011,Montgomery.2020,Myers.2016,Rigdon.2022}}
+    \caption{Übersicht, Zielsetzung und mathematische Definition verschiedener Optimalitätskriterien für Versuchspläne \cite{Goos.2011,Montgomery.2020,Myers.2016,Rigdon.2022}}
     \label{tab:2.1_optimalitaeten}
-    \renewcommand{\arraystretch}{1.2} % Etwas mehr Abstand zwischen den Zeilen
+    \renewcommand{\arraystretch}{1.2} % Zeilenabstand
+
+    % Lokaler Befehl für kompaktere Formeln in der Tabelle
+    \newcommand{\compressEq}{\vspace*{-0.6\baselineskip}}
 
     \begin{tabular}{@{}lp{0.75\textwidth}@{}}
         \toprule
-        \textbf{Kriterium}     & \textbf{Zielgröße und Beschreibung}    \\
+        \textbf{Kriterium}     & \textbf{Zielgröße, Beschreibung und Definition} \\
         \midrule
 
         \textbf{A-Optimalität} &
         Minimierung der Spur der inversen Informationsmatrix. \newline
-        Ziel: Minimierung der durchschnittlichen Varianz der Regressionskoeffizienten. \newline
-        \textit{Präzision der einzelnen Parameter}                      \\
-        \addlinespace
+        \textit{Ziel: Maximale Präzision der einzelnen Parameter im Durchschnitt.}
+        \compressEq
+        \begin{equation} \label{eq:opt_A}
+            \sym{A_opt} = \min \left( \text{spur}(\sym{M}^{-1}) \right) = \min \left( \sum_{j=1}^{\sym{k}} \sym{Var}(\hat{\beta}_j) \right)
+        \end{equation}
+        \compressEq
+        \\ \addlinespace
 
         \textbf{D-Optimalität} &
-        Minimierung des Volumens des gemeinsamen Vertrauensbereichs der Regressionskoeffizienten. \newline
-        \textit{Beste Gesamtschätzung aller Parameter}                  \\
-        \addlinespace
+        Maximierung der Determinante der Informationsmatrix $\sym{M}$. \newline
+        \textit{Ziel: Beste Gesamtschätzung; minimiert das Volumen des Vertrauensellipsoids.}
+        \compressEq
+        \begin{equation} \label{eq:opt_D}
+            \sym{D_opt} = \max \left( \det(\sym{M}) \right) \Leftrightarrow \min \left( \det(\sym{M}^{-1}) \right)
+        \end{equation}
+        \compressEq
+        \\ \addlinespace
 
         \textbf{E-Optimalität} &
-        Minimierung der maximalen Breite des Vertrauensbereichs eines einzelnen Regressionskoeffizienten. \newline
-        \textit{Worst-Case-Absicherung für den ungenausten Parameter}   \\
-        \addlinespace
+        Minimierung des maximalen Eigenwerts $\lambda_{\max}$ der inversen Informationsmatrix. \newline
+        \textit{Ziel: Worst-Case-Absicherung für den am schlechtesten geschätzten Parameter.}
+        \compressEq
+        \begin{equation} \label{eq:opt_E}
+            \sym{E_opt} = \min \left( \lambda_{\max}(\sym{M}^{-1}) \right)
+        \end{equation}
+        \compressEq
+        \\ \addlinespace
 
         \textbf{G-Optimalität} &
-        Minimierung der erwarteten, maximalen Prädiktionsvarianz im gesamten Parameterraum. \newline
-        \textit{Qualität der Vorhersage an der schlechtesten Stelle}    \\
-        \addlinespace
+        Minimierung der maximalen skalierten Prädiktionsvarianz $\sym{pred_var}$ im relevanten Parameterraum. \newline
+        \textit{Ziel: Qualität der Vorhersage an der ungünstigsten Stelle sichern.}
+        \compressEq
+        \begin{equation} \label{eq:opt_G}
+            \sym{G_opt} = \min \left( \max_{\sym{x} \in \sym{RR}^{\sym{k}}} \sym{pred_var} \right)
+        \end{equation}
+        \compressEq
+        \\ \addlinespace
 
         \textbf{I-Optimalität} &
-        Minimierung der durchschnittlichen Prädiktionsvarianz über den gesamten Parameterraum. \newline
-        \textit{Optimale Vorhersage-Güte im Mittel; ideal für \ac{RSM}} \\
-        \addlinespace
+        Minimierung des Integrals der skalierten Prädiktionsvarianz über den Parameterraum. \newline
+        \textit{Ziel: Optimale Vorhersagegüte im Mittel über den gesamten Raum.}
+        \compressEq
+        \begin{equation} \label{eq:opt_I}
+            \sym{I_opt} = \min \left( \int_{\sym{RR}^{\sym{k}}} \sym{pred_var} \, d\sym{x} \right)
+        \end{equation}
+        \compressEq
+        \\ \addlinespace
 
         \textbf{S-Optimalität} &
-        Harmonisierung des Abstandes der Versuchspunkte im Parameterraum. \newline
-        \textit{Gleichmäßige Raumfüllung / Space-Filling Design}        \\
-        \addlinespace
+        Maximierung des minimalen euklidischen Abstandes zwischen zwei Versuchspunkten. \newline
+        \textit{Ziel: Gleichmäßige Raumfüllung (Space-Filling).}
+        \compressEq
+        \begin{equation} \label{eq:opt_S}
+            \sym{S_opt} = \max \left( \min_{i \neq j} \| \symsub{x}{idx_i} - \symsub{x}{idx_j} \| \right)
+        \end{equation}
+        \compressEq
+        \\ \addlinespace
 
         \textbf{V-Optimalität} &
-        Minimierung der durchschnittlichen Prädiktionsvarianz über ein definiertes Set von Punkten (z.\,B. Validierungspunkte). \newline
-        \textit{Optimale Vorhersage-Güte an spezifischen Stellen}       \\
+        Minimierung der durchschnittlichen Prädiktionsvarianz über ein diskretes Set von $m$ Punkten. \newline
+        \textit{Ziel: Optimale Vorhersagegüte an spezifischen Stellen.}
+        \compressEq
+        \begin{equation} \label{eq:opt_V}
+            \sym{V_opt} = \min \left( \frac{1}{m} \sum_{i=1}^{m} \sym{pred_var}(\symsub{x}{idx_i}) \right)
+        \end{equation}
+        \compressEq
+        \\
 
         \bottomrule
     \end{tabular}
 \end{table}
+
 
 \colorbox{yellow}{--TODO--}
 \todo{
