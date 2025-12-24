@@ -184,12 +184,15 @@ isbn=true]{biblatex}
 \newacronym[plural=CCDs, longplural=Central Composite Designs]{CCD}{CCD}{Central Composite Design}
 \newacronym[plural=VIFs, longplural=Varianz-Inflations-Faktoren]{VIF}{VIF}{Varianz-Inflations-Faktor}
 
+% Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
 
-% Indices - use in text: \sym{i}, also needs \input{settings/glossaries}
+% ===========================================================================
+% 0. Indices
+% ===========================================================================
 \newglossaryentry{idx_i}{type=indices, name={\ensuremath{i}}, description={Laufvariable}}
 \newglossaryentry{idx_j}{type=indices, name={\ensuremath{j}}, description={Laufvariable}}
 \newglossaryentry{idx_l}{type=indices, name={\ensuremath{l}}, description={Laufvariable}}
-\newglossaryentry{idx_0}{type=indices, name={\ensuremath{0}}, description={Zeitpunkt $\sym{t}=0$ \newline  Zentralpunkt \newline Regressionskonstante}}
+\newglossaryentry{idx_0}{type=indices, name={\ensuremath{0}}, description={Zeitpunkt $\sym{t}=0$ \newline  Zentralpunkt \newline Regressionskonstante \newline Position im Versuchsraum}}
 \newglossaryentry{idx_q}{type=indices, name={\ensuremath{q}}, description={Quantilwert}}
 \newglossaryentry{idx_O}{type=indices, name={\ensuremath{\text{O}}}, description={Beobachtet (Observed)}}
 \newglossaryentry{idx_u}{type=indices, name={\ensuremath{u}}, description={Untere Grenze des Vertrauensbereichs}}
@@ -199,81 +202,109 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_D}{type=indices, name={\ensuremath{\text{D}}}, description={Sternpunktabstand CCD}}
 \newglossaryentry{idx_C}{type=indices, name={\ensuremath{\text{C}}}, description={Zentralpunkt}}
 
-
-%%%
-% Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
+% ===========================================================================
+% 1. LATEINISCHE SKALARE (Variablen & Parameter)
+% ===========================================================================
 \glsxtrnewsymbol[type=formulas, description={Weibull-Formparameter (Weibull-Modul)}, text={\ensuremath{b}}]{b}{\ensuremath{b}}
-\glsxtrnewsymbol[type=formulas, description={Statusindikator (1=Ausfall, 0=Zensiert)}, text={\ensuremath{\delta}}]{delta}{\ensuremath{\delta}}
-\glsxtrnewsymbol[type=formulas, description={Erwartungswert}, text={\ensuremath{E}}]{E}{\ensuremath{E(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Cook's Distanz}, text={\ensuremath{D}}]{D}{\ensuremath{D}}
 \glsxtrnewsymbol[type=formulas, description={Effekt}, text={\ensuremath{E}}]{Eff}{\ensuremath{E}}
 \glsxtrnewsymbol[type=formulas, description={Dichtefunktion}, text={\ensuremath{f}}]{f}{\ensuremath{f(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Ausfallwahrscheinlichkeit, Verteilungsfunktion}, text={\ensuremath{F}}]{F}{\ensuremath{F(\cdot)}}
-\glsxtrnewsymbol[type=formulas, description={Gamma-Funktion}, text={\ensuremath{\Gamma}}]{Gamma}{\ensuremath{\Gamma(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Abgeleitete Funktion (für Delta-Methode)}, text={\ensuremath{g}}]{g_func}{\ensuremath{g(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Eintrag von $\sym{Hat}$, Hebelwert}, text={\ensuremath{h}}]{h}{\ensuremath{h}}
 \glsxtrnewsymbol[type=formulas, description={Anzahl der Modellparameter}, text={\ensuremath{k}}]{k}{\ensuremath{k}}
-\glsxtrnewsymbol[type=formulas, description={Ausfallrate}, text={\ensuremath{\lambda}}]{lambda}{\ensuremath{\lambda(\cdot)}}
-\glsxtrnewsymbol[type=formulas, description={Log-Likelihood-Funktion}, text={\ensuremath{\Lambda}}]{Lambda}{\ensuremath{\Lambda(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Likelihood-Funktion}, text={\ensuremath{\mathcal{L}}}]{L_like}{\ensuremath{\mathcal{L}(\cdot)}}
-\glsxtrnewsymbol[type=formulas, description={Erwartungswert der Lebensdauer (theoretisch)}, text={\ensuremath{\mu}}]{mu}{\ensuremath{\mu}}
-\glsxtrnewsymbol[type=formulas, description={Stichprobenumfang / Anzahl der Versuchspunkte}, text={\ensuremath{n}}]{n}{\ensuremath{n}}
-\glsxtrnewsymbol[type=formulas, description={Wahrscheinlichkeit}, text={\ensuremath{\Pr}}]{Pr}{\ensuremath{\Pr}}
+\glsxtrnewsymbol[type=formulas, description={Replikation}, text={\ensuremath{m}}]{m}{\ensuremath{m}}
+\glsxtrnewsymbol[type=formulas, description={Stichprobenumfang / Anzahlvariable}, text={\ensuremath{n}}]{n}{\ensuremath{n}}
+\glsxtrnewsymbol[type=formulas, description={Versuchsanzahl}, text={\ensuremath{N}}]{N}{\ensuremath{N}}
+\glsxtrnewsymbol[type=formulas, description={Anzahl der Regressionskoeffizienten}, text={\ensuremath{p}}]{p}{\ensuremath{p}}
+\glsxtrnewsymbol[type=formulas, description={Fraktionsgrad}, text={\ensuremath{p_{\text{f}}}}]{p_f}{\ensuremath{p_{\text{f}}}}
+\glsxtrnewsymbol[type=formulas, description={Quantilwert}, text={\ensuremath{q}}]{q}{\ensuremath{q}}
 \glsxtrnewsymbol[type=formulas, description={Zuverlässigkeit}]{R}{\ensuremath{R}}
-\glsxtrnewsymbol[type=formulas, description={Menge der reellen Zahlen}]{RR}{\ensuremath{\mathbb{R}}}
+\glsxtrnewsymbol[type=formulas, description={Studentisiertes Residuum}, text={\ensuremath{r}}]{resid}{\ensuremath{r}}
 \glsxtrnewsymbol[type=formulas, description={Empirische Standardabweichung (von \sym{x})}, text={\ensuremath{s}}]{s}{\ensuremath{s}}
 \glsxtrnewsymbol[type=formulas, description={Empirische Varianz (von \sym{x})}, text={\ensuremath{s^2}}]{s_sq}{\ensuremath{s^2}}
-\glsxtrnewsymbol[type=formulas, description={Varianz der Lebensdauer (theoretisch)}, text={\ensuremath{\sigma^2}}]{sigma_sq}{\ensuremath{\sigma^2}}
 \glsxtrnewsymbol[type=formulas, description={Zeit, Lebensdauermerimal}]{t}{\ensuremath{t}}
-\glsxtrnewsymbol[type=formulas, description={Vektor der Ausfallzeiten}, text={\ensuremath{\mathbf{t}}}]{t_vec}{\ensuremath{\mathbf{t}}}
 \glsxtrnewsymbol[type=formulas, description={Charakteristische Lebensdauer (Skalenparameter)}, text={\ensuremath{T}}]{T}{\ensuremath{T}}
-\glsxtrnewsymbol[type=formulas, description={kontinuierliche Zufallsvariable}]{tau}{\ensuremath{\tau}}
-\glsxtrnewsymbol[type=formulas, description={Regressionskoeffizient, Modellparameter}]{beta}{\ensuremath{\beta}}
-\glsxtrnewsymbol[type=formulas, description={Fehlerterm}]{epsilon}{\ensuremath{\epsilon}}
-\glsxtrnewsymbol[type=formulas, description={Vektor der Modellparameter}, text={\ensuremath{\bm{\uptheta}}}]{theta}{\ensuremath{\bm{\uptheta}}}
-\glsxtrnewsymbol[type=formulas, description={Varianz-Operator}, text={\ensuremath{\mathrm{Var}}}]{Var}{\ensuremath{\mathrm{Var}[\cdot]}}
-\glsxtrnewsymbol[type=formulas, description={Covarianz-Operator}, text={\ensuremath{\mathrm{Cov}}}]{Cov}{\ensuremath{\mathrm{Cov}[\cdot]}}
-\glsxtrnewsymbol[type=formulas, description={Weibull-Verteilung (Notation)}, text={\ensuremath{\mathcal{W}}}]{W}{\ensuremath{\mathcal{W}(\cdot, \cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Messwert, Variable, Parameter}, text={\ensuremath{x}}]{x}{\ensuremath{x}}
 \glsxtrnewsymbol[type=formulas, description={Arithmetischer Mittelwert (empirisch)}, text={\ensuremath{\bar{x}}}]{x_bar}{\ensuremath{\bar{x}}}
-\glsxtrnewsymbol[type=formulas, description={Integrationsvariable (Gamma-Funktion)}, text={\ensuremath{\upsilon}}]{ups}{\ensuremath{\upsilon}}
-\glsxtrnewsymbol[type=formulas, description={Fisher-Informationsmatrix}, text={\ensuremath{\mathbf{F}}}]{FIM}{\ensuremath{\mathbf{F}}}
-\glsxtrnewsymbol[type=formulas, description={Hessian-Matrix (der Log-Likelihood-Funktion)}, text={\ensuremath{\mathbf{H_f}}}]{H}{\ensuremath{\mathbf{H_f}}}
-\glsxtrnewsymbol[type=formulas, description={Varianz-Kovarianz-Matrix}, text={\ensuremath{\mathbf{V}}}]{V}{\ensuremath{\mathbf{V}}}
-\glsxtrnewsymbol[type=formulas, description={Standardfehler (Standard Error)}, text={\ensuremath{\mathit{se}}}]{se}{\ensuremath{\mathit{se}}}
-\glsxtrnewsymbol[type=formulas, description={Signifikanzniveau\newline Abstand der Sternpunkte (Axial Points)}, text={\ensuremath{\alpha}}]{alpha}{\ensuremath{\alpha}}
-\glsxtrnewsymbol[type=formulas, description={Quantilwert}, text={\ensuremath{q}}]{q}{\ensuremath{q}}
-\glsxtrnewsymbol[type=formulas, description={Quantil der Standardnormalverteilung}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
-\glsxtrnewsymbol[type=formulas, description={Abgeleitete Funktion (für Delta-Methode)}, text={\ensuremath{g}}]{g_func}{\ensuremath{g(\cdot)}}
-\glsxtrnewsymbol[type=formulas, description={Gradientenvektor der Funktion \sym{g_func}}, text={\ensuremath{\mathbf{g}'}}]{g_grad}{\ensuremath{\mathbf{g}'}}
 \glsxtrnewsymbol[type=formulas, description={Systemantwort, -variable}, text={\ensuremath{y}}]{y}{\ensuremath{y}}
+\glsxtrnewsymbol[type=formulas, description={Quantil der Standardnormalverteilung}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
+
+% ===========================================================================
+% 2. VEKTOREN UND MATRIZEN (Fettgedruckt)
+% ===========================================================================
+\glsxtrnewsymbol[type=formulas, description={Koeffizientenmatrix}, text={\ensuremath{\bm{\upbeta}}}]{Beta}{\ensuremath{\bm{\upbeta}}}
+\glsxtrnewsymbol[type=formulas, description={Fehlerterm-Matrix}, text={\ensuremath{\bm{\upepsilon}}}]{Epsilon}{\ensuremath{\bm{\upepsilon}}}
+\glsxtrnewsymbol[type=formulas, description={Fisher-Informationsmatrix}, text={\ensuremath{\mathbf{F}}}]{FIM}{\ensuremath{\mathbf{F}}}
+\glsxtrnewsymbol[type=formulas, description={Gradientenvektor der Funktion \sym{g_func}}, text={\ensuremath{\mathbf{g}'}}]{g_grad}{\ensuremath{\mathbf{g}'}}
+\glsxtrnewsymbol[type=formulas, description={Hessian-Matrix (der Log-Likelihood-Funktion)}, text={\ensuremath{\mathbf{H_f}}}]{H}{\ensuremath{\mathbf{H_f}}}
+\glsxtrnewsymbol[type=formulas, description={Orthogonale Projektionsmatrix, Prädiktionsmatrix, Hat-Matrix}, text={\ensuremath{\mathbf{H}}}]{Hat}{\ensuremath{\mathbf{H}}}
+\glsxtrnewsymbol[type=formulas, description={Informationsmatrix $\sym{X}'\sym{X}$}, text={\ensuremath{\mathbf{M}}}]{M}{\ensuremath{\mathbf{M}}}
+\glsxtrnewsymbol[type=formulas, description={Vektor der Ausfallzeiten}, text={\ensuremath{\mathbf{t}}}]{t_vec}{\ensuremath{\mathbf{t}}}
+\glsxtrnewsymbol[type=formulas, description={Vektor der Modellparameter}, text={\ensuremath{\bm{\uptheta}}}]{theta}{\ensuremath{\bm{\uptheta}}}
+\glsxtrnewsymbol[type=formulas, description={Varianz-Kovarianz-Matrix}, text={\ensuremath{\mathbf{V}}}]{V}{\ensuremath{\mathbf{V}}}
+\glsxtrnewsymbol[type=formulas, description={Postion im Parameterraum}, text={\ensuremath{\mathbf{x}}}]{x_loc}{\ensuremath{\mathbf{x}}}
+\glsxtrnewsymbol[type=formulas, description={Versuchsplan-Matrix oder Modellmatrix}, text={\ensuremath{\mathbf{X}}}]{X}{\ensuremath{\mathbf{X}}}
+\glsxtrnewsymbol[type=formulas, description={Antwortmatrix}, text={\ensuremath{\mathbf{y}}}]{Y}{\ensuremath{\mathbf{y}}}
+
+% ===========================================================================
+% 3. GRIECHISCHE SKALARE
+% ===========================================================================
+\glsxtrnewsymbol[type=formulas, description={Signifikanzniveau\newline Abstand der Sternpunkte (Axial Points)}, text={\ensuremath{\alpha}}]{alpha}{\ensuremath{\alpha}}
+\glsxtrnewsymbol[type=formulas, description={Regressionskoeffizient, Modellparameter}]{beta}{\ensuremath{\beta}}
+\glsxtrnewsymbol[type=formulas, description={Konditionszahl der Informationsmatrix}, text={\ensuremath{\kappa}}]{cond_num}{\ensuremath{\kappa}}
+\glsxtrnewsymbol[type=formulas, description={Statusindikator (1=Ausfall, 0=Zensiert)}, text={\ensuremath{\delta}}]{delta}{\ensuremath{\delta}}
+\glsxtrnewsymbol[type=formulas, description={Fehlerterm}]{epsilon}{\ensuremath{\epsilon}}
+\glsxtrnewsymbol[type=formulas, description={Ausfallrate}, text={\ensuremath{\lambda}}]{lambda}{\ensuremath{\lambda(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Log-Likelihood-Funktion}, text={\ensuremath{\Lambda}}]{Lambda}{\ensuremath{\Lambda(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Erwartungswert der Lebensdauer (theoretisch)}, text={\ensuremath{\mu}}]{mu}{\ensuremath{\mu}}
+\glsxtrnewsymbol[type=formulas, description={Prädiktionsvarianz an der Stelle $\symsub{x_loc}{idx_0}$ (skaliert)}, text={\ensuremath{\nu(\symsub{x_loc}{idx_0})}}]{pred_var}{\ensuremath{\nu(\symsub{x_loc}{idx_0})}}
+\glsxtrnewsymbol[type=formulas, description={A-Priori-Information/Verteilung}, text={\pi}]{prior}{\ensuremath{\pi(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Standardabweichung (theoretisch)}, text={\ensuremath{\sigma}}]{sigma}{\ensuremath{\sigma}}
+\glsxtrnewsymbol[type=formulas, description={Varianz der Lebensdauer (theoretisch)}, text={\ensuremath{\sigma^2}}]{sigma_sq}{\ensuremath{\sigma^2}}
+\glsxtrnewsymbol[type=formulas, description={kontinuierliche Zufallsvariable}]{tau}{\ensuremath{\tau}}
+\glsxtrnewsymbol[type=formulas, description={Integrationsvariable (Gamma-Funktion)}, text={\ensuremath{\upsilon}}]{ups}{\ensuremath{\upsilon}}
+
+
+% ===========================================================================
+% 4. OPERATOREN, FUNKTIONEN & MENGEN
+% ===========================================================================
+\glsxtrnewsymbol[type=formulas, description={Covarianz-Operator}, text={\ensuremath{\mathrm{Cov}}}]{Cov}{\ensuremath{\mathrm{Cov}[\cdot]}}
+\glsxtrnewsymbol[type=formulas, description={Determinante einer Matrix}, text={\det}]{det}{\ensuremath{\det(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Erwartungswert}, text={\ensuremath{E}}]{E}{\ensuremath{E(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Gamma-Funktion}, text={\ensuremath{\Gamma}}]{Gamma}{\ensuremath{\Gamma(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Nullhypothese}, text={\ensuremath{H_0}}]{H0}{\ensuremath{H_0}}
 \glsxtrnewsymbol[type=formulas, description={Alternativhypothese}, text={\ensuremath{H_1}}]{H1}{\ensuremath{H_1}}
-\glsxtrnewsymbol[type=formulas, description={Replikation}, text={\ensuremath{m}}]{m}{\ensuremath{m}}
-\glsxtrnewsymbol[type=formulas, description={Fraktionsgrad}, text={\ensuremath{p_{\text{f}}}}]{p_f}{\ensuremath{p_{\text{f}}}}
-\glsxtrnewsymbol[type=formulas, description={Anzahl der Regressionskoeffizienten}, text={\ensuremath{p}}]{p}{\ensuremath{p}}
-\glsxtrnewsymbol[type=formulas, description={Versuchsplan-Matrix oder Modellmatrix}, text={\ensuremath{\mathbf{X}}}]{X}{\ensuremath{\mathbf{X}}}
-\glsxtrnewsymbol[type=formulas, description={Koeffizientenmatrix}, text={\ensuremath{\bm{\upbeta}}}]{Beta}{\ensuremath{\bm{\upbeta}}}
-\glsxtrnewsymbol[type=formulas, description={Antwortmatrix}, text={\ensuremath{\mathbf{y}}}]{Y}{\ensuremath{\mathbf{y}}}
-\glsxtrnewsymbol[type=formulas, description={Fehlerterm-Matrix}, text={\ensuremath{\bm{\epsilon}}}]{Epsilon}{\ensuremath{\bm{\epsilon}}}
-\glsxtrnewsymbol[type=formulas, description={Informationsmatrix $\sym{X}'\sym{X}$}, text={\ensuremath{\mathbf{M}}}]{M}{\ensuremath{\mathbf{M}}}
-\glsxtrnewsymbol[type=formulas, description={Orthogonale Projektionsmatrix, Prädiktionsmatrix, Hat-Matrix}, text={\ensuremath{\mathbf{H}}}]{Hat}{\ensuremath{\mathbf{H}}}
-\glsxtrnewsymbol[type=formulas, description={Eintrag von $\sym{Hat}$, Hebelwert}, text={\ensuremath{h}}]{h}{\ensuremath{h}}
-\glsxtrnewsymbol[type=formulas, description={Cook's Distanz}, text={\ensuremath{D}}]{D}{\ensuremath{D}}
-\glsxtrnewsymbol[type=formulas, description={Studentisiertes Residuum}, text={\ensuremath{r}}]{resid}{\ensuremath{r}}
-\glsxtrnewsymbol[type=formulas, description={Standardabweichung (theoretisch)}, text={\ensuremath{\sigma}}]{sigma}{\ensuremath{\sigma}}
-\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Koeffizienten (Difference in Betas)}, text={\text{DFBETAS}}]{dfbetas}{\ensuremath{\text{DFBETAS}}}
-\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Prädiktionen (Difference in Fits)}, text={\text{DFFITS}}]{dffits}{\ensuremath{\text{DFFITS}}}
-\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Schätzwerte (Covariance Ratio)}, text={\text{COVRATIO}}]{covratio}{\ensuremath{\text{COVRATIO}}}
-\glsxtrnewsymbol[type=formulas, description={Determinante einer Matrix}, text={\det}]{det}{\ensuremath{\det(\cdot)}}
-\glsxtrnewsymbol[type=formulas, description={A-Priori-Information/Verteilung}, text={\pi}]{prior}{\ensuremath{\pi(\cdot)}}
-\glsxtrnewsymbol[type=formulas, description={Erwartete Testdauer}, text={\text{ETD}}]{ETD}{\ensuremath{\text{ETD}}}
+\glsxtrnewsymbol[type=formulas, description={Wahrscheinlichkeit}, text={\ensuremath{\Pr}}]{Pr}{\ensuremath{\Pr}}
+\glsxtrnewsymbol[type=formulas, description={Menge der reellen Zahlen}]{RR}{\ensuremath{\mathbb{R}}}
+\glsxtrnewsymbol[type=formulas, description={Varianz-Operator}, text={\ensuremath{\mathrm{Var}}}]{Var}{\ensuremath{\mathrm{Var}[\cdot]}}
+\glsxtrnewsymbol[type=formulas, description={Weibull-Verteilung (Notation)}, text={\ensuremath{\mathcal{W}}}]{W}{\ensuremath{\mathcal{W}(\cdot, \cdot)}}
+
+% ===========================================================================
+% 5. OPTIMALITÄTSKRITERIEN & EFFIZIENZEN
+% ===========================================================================
 \glsxtrnewsymbol[type=formulas, description={A-Optimalitätskriterium (Spur-Minimierung)}, text={\ensuremath{A_{\text{opt}}}}]{A_opt}{\ensuremath{A_{\text{opt}}}}
 \glsxtrnewsymbol[type=formulas, description={D-Optimalitätskriterium (Determinanten-Maximierung)}, text={\ensuremath{D_{\text{opt}}}}]{D_opt}{\ensuremath{D_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={D-Effizienz (Normierte Determinante)}, text={\ensuremath{D_{\text{eff}}}}]{eff_D}{\ensuremath{D_{\text{eff}}}}
+\glsxtrnewsymbol[type=formulas, description={G-Effizienz (Verhältnis Modellparameter zu max. Varianz)}, text={\ensuremath{G_{\text{eff}}}}]{eff_G}{\ensuremath{G_{\text{eff}}}}
 \glsxtrnewsymbol[type=formulas, description={E-Optimalitätskriterium (Eigenwert-Minimierung)}, text={\ensuremath{E_{\text{opt}}}}]{E_opt}{\ensuremath{E_{\text{opt}}}}
-\glsxtrnewsymbol[type=formulas, description={G-Optimalitätskriterium (Minimierung max. Prädiktionsvarianz)},
-    text={\ensuremath{G_{\text{opt}}}}]{G_opt}{\ensuremath{G_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={G-Optimalitätskriterium (Minimierung max. Prädiktionsvarianz)}, text={\ensuremath{G_{\text{opt}}}}]{G_opt}{\ensuremath{G_{\text{opt}}}}
 \glsxtrnewsymbol[type=formulas, description={I-Optimalitätskriterium (Minimierung durchschn. Prädiktionsvarianz)}, text={\ensuremath{I_{\text{opt}}}}]{I_opt}{\ensuremath{I_{\text{opt}}}}
 \glsxtrnewsymbol[type=formulas, description={S-Optimalitätskriterium (Abstands-Maximierung)}, text={\ensuremath{S_{\text{opt}}}}]{S_opt}{\ensuremath{S_{\text{opt}}}}
 \glsxtrnewsymbol[type=formulas, description={V-Optimalitätskriterium (Punktuelle Varianz-Minimierung)}, text={\ensuremath{V_{\text{opt}}}}]{V_opt}{\ensuremath{V_{\text{opt}}}}
-\glsxtrnewsymbol[type=formulas, description={Prädiktionsvarianz an der Stelle $\sym{x}$ (skaliert)}, text={\ensuremath{\nu(\sym{x})}}]{pred_var}{\ensuremath{\nu(\sym{x})}}
+
+% ===========================================================================
+% 6. STATISTISCHE KENNZAHLEN & AKRONYME
+% ===========================================================================
+\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Schätzwerte (Covariance Ratio)}, text={\text{COVRATIO}}]{covratio}{\ensuremath{\text{COVRATIO}}}
+\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Koeffizienten (Difference in Betas)}, text={\text{DFBETAS}}]{dfbetas}{\ensuremath{\text{DFBETAS}}}
+\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Prädiktionen (Difference in Fits)}, text={\text{DFFITS}}]{dffits}{\ensuremath{\text{DFFITS}}}
+\glsxtrnewsymbol[type=formulas, description={Erwartete Testdauer}, text={\text{ETD}}]{ETD}{\ensuremath{\text{ETD}}}
+\glsxtrnewsymbol[type=formulas, description={Standardfehler (Standard Error)}, text={\ensuremath{\mathit{se}}}]{se}{\ensuremath{\mathit{se}}}
+
+
+
 
 
 %  Show page borders (useful for final checks)
@@ -297,22 +328,22 @@ Thanks for your service.
 \addchap{Kurzfassung/Abstract}
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 \todo{
-    \begin{itemize}
-        \item
-        \item Abstract / Kurzfassung / Danksagung
-        \item Bilder prüfen
-        \item "mark changes after your Oral presentation for review"
-        \item "textcolor blue" in definitions ändern
-        \item "Print" Funktion aktivieren
-        \item "nocite" Funktion deaktivieren in main Z.269
-    \end{itemize}
+  \begin{itemize}
+    \item
+    \item Abstract / Kurzfassung / Danksagung
+    \item Bilder prüfen
+    \item "mark changes after your Oral presentation for review"
+    \item "textcolor blue" in definitions ändern
+    \item "Print" Funktion aktivieren
+    \item "nocite" Funktion deaktivieren in main Z.269
+  \end{itemize}
 }\
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 
 \cleardoublepage
 \ifpdf
-    \phantomsection
-    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+  \phantomsection
+  \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 

@@ -545,13 +545,15 @@ Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche
 
 \subsubsection{Metriken zur optimalen Versuchsplanung}
 Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, bieten \textbf{optimale Versuchspläne} einen leistungsfähigen Lösungsansatz.
-Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der Prädiktionsvarianz
+Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der (um die Versuchsanzahl $\sym{N}$ \textbf{skalierte}) \textbf{Prädiktionsvarianz}
 \begin{equation}
-    \sym{pred_var} = \sym{x}' (\sym{X}'\sym{X})^{-1} \sym{x} = \sym{x}' \sym{M}^{-1} \sym{x}.
-    \label{eq:pred_variance_def}
+    \sym{pred_var}= \frac{\sym{N} \sym{Var}[\hat{\sym{y}}(\symsub{x_loc}{idx_0})]}{\sym{sigma_sq}}
+    = \sym{x}_0' \left( \frac{\sym{M}}{\sym{N}} \right)^{-1} \sym{x}_0
+    = \sym{N} \sym{x}_0' \sym{M}^{-1} \sym{x}_0
+    \label{eq:pred_variance_scaled}
 \end{equation}
-optimiert werden.
-Die Prädiktionsvarianz ist ein dimensionsloses Maß, das ausschließlich von der geometrischen Anordnung der Versuchspunkte (der Matrix $\sym{X}$) und der Position $\sym{x}$ abhängt, jedoch unabhängig von der tatsächlichen Streuung der Messdaten ($\sym{sigma_sq}$) ist.
+optimiert werden \cite{Myers.2016,Montgomery.2020}.
+Die Prädiktionsvarianz ist ein dimensionsloses Maß, das ausschließlich von der geometrischen Anordnung der \sym{N} Versuchspunkte (der Matrix $\sym{X}$) und der Position $\symsub{x_loc}{idx_0}'=[1,\sym{x}_{01},\cdots,\sym{x}_{0\sym{k}}]$ als Referenz im Parameterraum abhängt, also entsprechend noch unabhängig von der tatsächlichen Streuung der Messdaten ($\sym{sigma_sq}$) ist.
 Eine effiziente Versuchsplanung für multivariate Lebensdaueruntersuchungen muss sich neben pragmatischen Beweggründen maßgeblich an diesen Größen orientieren, weshalb im Folgenden eine Übersicht der gängigen Metriken und Qualitätsmerkmale gegeben wird.\
 
 
@@ -581,8 +583,8 @@ Mathematisch fundiert die Bewertung der Schätzgenauigkeit auf der Inversen der 
     \label{eq:dispersion}
 \end{equation}
 wobei wie gehabt $\sym{sigma_sq}$ die Varianz des Versuchsfehlers darstellt.
-Die Diagonalelemente der Matrix $(\sym{X}'\sym{X})^{-1}$ stehen hierbei in direktem Zusammenhang mit dem \ac{VIF}.
-Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht \cite{Siebertz.2017,Kleppmann.2020}.
+Die Diagonalelemente der Matrix $(\sym{X}'\sym{X})^{-1}$ stehen hierbei in direktem Zusammenhang mit dem \ac{VIF} \cite{Siebertz.2017,Kleppmann.2020}.
+Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.
 Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Kleppmann.2020,Montgomery.2021}.
 
 
@@ -633,7 +635,6 @@ Werte, die signifikant von $1$ abweichen (Grenzen $1 \pm 3\sym{p}/\sym{n}$), zei
 Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix $(\sym{X}'\sym{X})^{-1}$ den Informationsgehalt trotz Korrelationen zu maximieren.
 Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
 Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten}, welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}.
-
 \begin{table}[htbp]
     \centering
     \caption{Übersicht, Zielsetzung und mathematische Definition verschiedener Optimalitätskriterien für Versuchspläne \cite{Goos.2011,Montgomery.2020,Myers.2016,Rigdon.2022}}
@@ -722,42 +723,18 @@ Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Op
     \end{tabular}
 \end{table}
 
-
-\colorbox{yellow}{--TODO--}
-\todo{
-    \begin{itemize}
-        \item Effizienzen (D- und G-Effizienz) \cite[Seite. 523 (2017)]{Montgomery.2020}
-        \item Konditionszahl \cite[9.4.3 (2012)]{Montgomery.2021}
-        \item PRESS und $R^2_{pred}$
-    \end{itemize}
-}\
-\colorbox{yellow}{--TODO--}
-
-
-% 1. Die Konditionszahl (Condition Number)Während der VIF die Multikollinearität für einzelne Koeffizienten prüft, bewertet die Konditionszahl die numerische Stabilität der gesamten Informationsmatrix $X'X$.Was sie misst: Sie gibt an, wie empfindlich die Lösung des Gleichungssystems (die Invertierung) auf kleine Änderungen in den Daten reagiert (Schlecht konditionierte Matrix).Mathematik: Sie ist das Verhältnis des größten zum kleinsten Eigenwert ($\lambda_{max}/\lambda_{min}$) der Matrix $X'X$ (bzw. Singularwerte bei nicht-quadratischen Matrizen).Bewertung:Wert = 1: Perfekt orthogonal.Wert < 100: Gut.Wert > 1000: Starke Multikollinearität, das Modell ist numerisch instabil.
-% 2. Design-Effizienzen (G-Effizienz, D-Effizienz)Die reinen Optimalitätswerte (z. B. Determinante $|X'X|$ für D-Optimalität) sind schwer zu interpretieren, da sie von der Anzahl der Versuche ($n$) und der Skalierung abhängen. Um Pläne unterschiedlicher Größe vergleichbar zu machen, nutzt man Effizienzen (normiert auf 0 bis 100\%).D-Effizienz: Vergleicht das Design mit einem hypothetischen, perfekt orthogonalen Design gleicher Größe.$$\text{D-Eff} = \left( \frac{|\sym{X}'\sym{X}|}{n^p} \right)^{1/p}$$G-Effizienz: Setzt die theoretische Anzahl der Parameter ins Verhältnis zur maximalen Varianz im Designraum (bezogen auf G-Optimalität).$$\text{G-Eff} = \frac{p}{n \cdot \max(\text{SPV})}$$Nutzen: Damit können Sie bewerten: "Mein Plan ist zu 95\% D-effizient, aber ich spare 5 Versuche gegenüber dem Standardplan."
-% 3. PRESS und $R^2_{\text{pred}}$ (Prognosegüte)Da Sie spezifisch "Prädiktion" angesprochen haben: Die klassischen $R^2$-Werte sagen nur, wie gut das Modell die vorhandenen Daten erklärt (Fitting). Um zu prüfen, wie gut es neue Daten vorhersagt, nutzt man die PRESS-Statistik (Predicted Residual Error Sum of Squares).Konzept: Basiert ebenfalls auf Leave-One-Out. Man summiert die quadrierten Fehler der Vorhersage für jeden weggelassenen Punkt.$R^2_{\text{pred}}$: Ein daraus abgeleitetes Bestimmtheitsmaß für die Vorhersage.Wenn $R^2_{\text{pred}}$ deutlich kleiner ist als das normale $R^2$ (z. B. Differenz > 0.2), ist das Modell überangepasst (Overfitting) oder ein einzelner Punkt (siehe COVRATIO/Cook's D) verzerrt die Vorhersagekraft massiv.
-
-
-Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{statistische Power} (Teststärke) verfügt.
-Diese Metrik beschreibt die Wahrscheinlichkeit, mit der ein Effekt einer definierten Größe (Signal) vor dem Hintergrund des experimentellen Rauschens (Noise) als signifikant erkannt wird.
+Zur vergleichbaren Bewertung unterschiedlicher Designs unabhängig von der Skalierung werden normierte \textbf{Effizienzen} herangezogen \cite{Montgomery.2020}.
+Die \textbf{D-Effizienz }$\sym{eff_D}$ beschreibt die Güte der Parameterschätzung im Vergleich zu einem idealen orthogonalen Design gleicher Größe. Hohe Werte (nahe $100\,\%$) stehen für eine effiziente Ausnutzung der Versuche:
+\begin{equation} \label{eq:eff_D}
+    \sym{eff_D} = \left( \frac{\det(\sym{M})}{\sym{n}^{\sym{p}}} \right)^{\frac{1}{\sym{p}}} = \frac{\sym{D_opt}^{\frac{1}{\sym{p}}}}{\sym{n}}.
+\end{equation}
+Die \textbf{G-Effizienz} $\sym{eff_G}$ bewertet die Robustheit der Vorhersage. Sie setzt die theoretisch minimal erreichbare Prädiktionsvarianz ($\sym{p}/\sym{n}$) ins Verhältnis zum tatsächlichen Worst-Case-Wert $\sym{G_opt}$ des Designs:
+\begin{equation} \label{eq:eff_G}
+    \sym{eff_G} = \frac{\sym{p}}{\displaystyle \max \frac{\sym{n} \sym{Var}[\hat{\sym{y}}(\sym{x})]}{\sym{sigma_sq}}}
+\end{equation}
+Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. \textbf{Power}) verfügt.
+Diese Metrik beschreibt die Wahrscheinlichkeit, mit der ein Effekt einer definierten Größe (Signal) vor dem Hintergrund des experimentellen Rauschens als \textbf{signifikant} erkannt wird.
 Insbesondere bei reduzierten Versuchsplänen ist die Power-Analyse essenziell, um das Risiko von $\sym{Beta}$-Fehlern (falsch-negativen Ergebnissen) zu minimieren und sicherzustellen, dass die gewählte Stichprobengröße $\sym{n}$ für den angestrebten Erkenntnisgewinn hinreichend ist \cite{Siebertz.2017}.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
