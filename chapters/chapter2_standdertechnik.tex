@@ -545,15 +545,16 @@ Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche
 
 \subsubsection{Metriken zur optimalen Versuchsplanung}
 Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, bieten \textbf{optimale Versuchspläne} einen leistungsfähigen Lösungsansatz.
-Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der (um die Versuchsanzahl $\sym{N}$ \textbf{skalierte}) \textbf{Prädiktionsvarianz}
+Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der (um die Versuchsanzahl $\sym{N}$ \textbf{skalierten}) \textbf{Prädiktionsvarianz}, engl. \ac{SPV}\ac{MLE},
 \begin{equation}
     \sym{pred_var}= \frac{\sym{N} \sym{Var}[\hat{\sym{y}}(\symsub{x_loc}{idx_0})]}{\sym{sigma_sq}}
-    = \sym{x}_0' \left( \frac{\sym{M}}{\sym{N}} \right)^{-1} \sym{x}_0
-    = \sym{N} \sym{x}_0' \sym{M}^{-1} \sym{x}_0
+    = \symsub{x_loc}{idx_0}' \left( \frac{\sym{M}}{\sym{N}} \right)^{-1} \symsub{x_loc}{idx_0}
+    = \sym{N} \symsub{x_loc}{idx_0}' \sym{M}^{-1} \symsub{x_loc}{idx_0}
     \label{eq:pred_variance_scaled}
 \end{equation}
 optimiert werden \cite{Myers.2016,Montgomery.2020}.
-Die Prädiktionsvarianz ist ein dimensionsloses Maß, das ausschließlich von der geometrischen Anordnung der \sym{N} Versuchspunkte (der Matrix $\sym{X}$) und der Position $\symsub{x_loc}{idx_0}'=[1,\sym{x}_{01},\cdots,\sym{x}_{0\sym{k}}]$ als Referenz im Parameterraum abhängt, also entsprechend noch unabhängig von der tatsächlichen Streuung der Messdaten ($\sym{sigma_sq}$) ist.
+Die Prädiktionsvarianz ist ein dimensionsloses Maß, das ausschließlich von der geometrischen Anordnung der \sym{N} Versuchspunkte (der Matrix $\sym{X}$) und damit positionsabhängig von einer Referenz $\symsub{x_loc}{idx_0}'=[1,\sym{x}_{01},\cdots,\sym{x}_{0\sym{k}}]$ im Parameterraum ist. 
+Sie ist damit unabhängig von der tatsächlichen Streuung der Messdaten ($\sym{sigma_sq}$).
 Eine effiziente Versuchsplanung für multivariate Lebensdaueruntersuchungen muss sich neben pragmatischen Beweggründen maßgeblich an diesen Größen orientieren, weshalb im Folgenden eine Übersicht der gängigen Metriken und Qualitätsmerkmale gegeben wird.\
 
 
@@ -635,27 +636,40 @@ Werte, die signifikant von $1$ abweichen (Grenzen $1 \pm 3\sym{p}/\sym{n}$), zei
 Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix $(\sym{X}'\sym{X})^{-1}$ den Informationsgehalt trotz Korrelationen zu maximieren.
 Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
 Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten}, welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}.
-\begin{table}[htbp]
-    \centering
-    \caption{Übersicht, Zielsetzung und mathematische Definition verschiedener Optimalitätskriterien für Versuchspläne \cite{Goos.2011,Montgomery.2020,Myers.2016,Rigdon.2022}}
-    \label{tab:2.1_optimalitaeten}
-    \renewcommand{\arraystretch}{1.2} % Zeilenabstand
-
-    % Lokaler Befehl für kompaktere Formeln in der Tabelle
+{
+    % Definitionen nur für diese Tabelle lokal halten
+    \renewcommand{\arraystretch}{1.2} % Etwas Luft für die Formeln
     \newcommand{\compressEq}{\vspace*{-0.6\baselineskip}}
-
-    \begin{tabular}{@{}lp{0.75\textwidth}@{}}
+    
+    \begin{longtable}{@{}lp{0.75\textwidth}@{}}
+    
+        \caption{Übersicht, Zielsetzung und mathematische Definition verschiedener Optimalitätskriterien für Versuchspläne \cite{Goos.2011,Montgomery.2020,Myers.2016,Rigdon.2022}}
+        \label{tab:2.1_optimalitaeten} \\
         \toprule
-        \textbf{Kriterium}     & \textbf{Zielgröße, Beschreibung und Definition} \\
+        \textbf{Kriterium} & \textbf{Zielgröße, Beschreibung und Definition} \\
         \midrule
-
+        \endfirsthead
+        
+        \caption*{\textbf{Tabelle \ref{tab:2.1_optimalitaeten} (Fortsetzung):} Übersicht der Optimalitätskriterien} \\
+        \toprule
+        \textbf{Kriterium} & \textbf{Zielgröße, Beschreibung und Definition} \\
+        \midrule
+        \endhead
+        
+            \midrule
+        \multicolumn{2}{r}{\footnotesize\textit{Fortsetzung auf der nächsten Seite...}} \\
+        \endfoot
+       
+        \bottomrule
+        \endlastfoot
+         
         \textbf{A-Optimalität} &
         Minimierung der Spur der inversen Informationsmatrix. \newline
         \textit{Ziel: Maximale Präzision der einzelnen Parameter im Durchschnitt.}
         \compressEq
-        \begin{equation} \label{eq:opt_A}
-            \sym{A_opt} = \min \left( \text{spur}(\sym{M}^{-1}) \right) = \min \left( \sum_{j=1}^{\sym{k}} \sym{Var}(\hat{\beta}_j) \right)
-        \end{equation}
+  \begin{equation} \label{eq:opt_A}
+    \sym{A_opt} = \min \left( \text{spur}(\sym{M}^{-1}) \right) = \min \left( \sum_{\sym{idx_j}=1}^{\sym{k}} \sym{Var}(\hat{\beta}_{\sym{idx_j}}) \right)
+\end{equation}
         \compressEq
         \\ \addlinespace
 
@@ -670,11 +684,11 @@ Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Op
         \\ \addlinespace
 
         \textbf{E-Optimalität} &
-        Minimierung des maximalen Eigenwerts $\lambda_{\max}$ der inversen Informationsmatrix. \newline
+        Minimierung des maximalen Eigenwerts $\sym{eigen_val}_{\max}$ der inversen Informationsmatrix. \newline
         \textit{Ziel: Worst-Case-Absicherung für den am schlechtesten geschätzten Parameter.}
         \compressEq
         \begin{equation} \label{eq:opt_E}
-            \sym{E_opt} = \min \left( \lambda_{\max}(\sym{M}^{-1}) \right)
+            \sym{E_opt} = \min \left( \sym{eigen_val}_{\max}(\sym{M}^{-1}) \right)
         \end{equation}
         \compressEq
         \\ \addlinespace
@@ -688,13 +702,13 @@ Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Op
         \end{equation}
         \compressEq
         \\ \addlinespace
-
+               
         \textbf{I-Optimalität} &
-        Minimierung des Integrals der skalierten Prädiktionsvarianz über den Parameterraum. \newline
+        Minimierung der durchschnittlichen Prädiktionsvarianz über den Parameterraum. \newline
         \textit{Ziel: Optimale Vorhersagegüte im Mittel über den gesamten Raum.}
         \compressEq
         \begin{equation} \label{eq:opt_I}
-            \sym{I_opt} = \min \left( \int_{\sym{RR}^{\sym{k}}} \sym{pred_var} \, d\sym{x} \right)
+            \sym{I_opt} = \min \left(\frac{\sym{N}}{\int_{\sym{RR}^{\sym{k}}} d\sym{x}} \int_{\sym{RR}^{\sym{k}}} \sym{pred_var} \, d\sym{x} \right)
         \end{equation}
         \compressEq
         \\ \addlinespace
@@ -704,24 +718,24 @@ Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Op
         \textit{Ziel: Gleichmäßige Raumfüllung (Space-Filling).}
         \compressEq
         \begin{equation} \label{eq:opt_S}
-            \sym{S_opt} = \max \left( \min_{i \neq j} \| \symsub{x}{idx_i} - \symsub{x}{idx_j} \| \right)
+            \sym{S_opt} = \max \left( \min_{\sym{idx_i} \neq \sym{idx_j}} \| \symsub{x}{idx_i} - \symsub{x}{idx_j} \| \right)
         \end{equation}
         \compressEq
         \\ \addlinespace
 
         \textbf{V-Optimalität} &
-        Minimierung der durchschnittlichen Prädiktionsvarianz über ein diskretes Set von $m$ Punkten. \newline
+        Minimierung der durchschnittlichen Prädiktionsvarianz über ein diskretes Set von $\sym{N}$ Punkten. \newline
         \textit{Ziel: Optimale Vorhersagegüte an spezifischen Stellen.}
         \compressEq
         \begin{equation} \label{eq:opt_V}
-            \sym{V_opt} = \min \left( \frac{1}{m} \sum_{i=1}^{m} \sym{pred_var}(\symsub{x}{idx_i}) \right)
+            \sym{V_opt} = \min \left( \frac{1}{\sym{N}} \sum_{\sym{idx_i}=1}^{\sym{N}} \nu(\symsub{x}{idx_i}) \right)
         \end{equation}
         \compressEq
         \\
 
-        \bottomrule
-    \end{tabular}
-\end{table}
+    \end{longtable}
+}
+
 
 Zur vergleichbaren Bewertung unterschiedlicher Designs unabhängig von der Skalierung werden normierte \textbf{Effizienzen} herangezogen \cite{Montgomery.2020}.
 Die \textbf{D-Effizienz }$\sym{eff_D}$ beschreibt die Güte der Parameterschätzung im Vergleich zu einem idealen orthogonalen Design gleicher Größe. Hohe Werte (nahe $100\,\%$) stehen für eine effiziente Ausnutzung der Versuche:

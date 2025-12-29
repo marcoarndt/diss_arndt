@@ -50,6 +50,7 @@ BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thic
   \usepackage{graphicx}   % images
   \usepackage{multirow}   % tables
   \usepackage{upgreek}    % upright greek letters
+  \usepackage{longtable}  % tables across multiple pages
 
 % Citation style. If your institute has specific requirements, configure here:
 \usepackage[style=numeric, % see https://www.overleaf.com/learn/latex/Biblatex_citation_styles for a list of predefined styles
@@ -182,6 +183,7 @@ isbn=true]{biblatex}
 \newacronym[plural=RSDs, longplural=Response Surface Designs]{RSD}{RSD}{Response Surface Design}
 \newacronym[plural=CPs, longplural=Center Points]{CP}{CP}{Center Point}
 \newacronym[plural=CCDs, longplural=Central Composite Designs]{CCD}{CCD}{Central Composite Design}
+\newacronym{SPV}{SPV}{Scaled Prediction Variance}
 \newacronym[plural=VIFs, longplural=Varianz-Inflations-Faktoren]{VIF}{VIF}{Varianz-Inflations-Faktor}
 
 % Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
@@ -256,7 +258,10 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Konditionszahl der Informationsmatrix}, text={\ensuremath{\kappa}}]{cond_num}{\ensuremath{\kappa}}
 \glsxtrnewsymbol[type=formulas, description={Statusindikator (1=Ausfall, 0=Zensiert)}, text={\ensuremath{\delta}}]{delta}{\ensuremath{\delta}}
 \glsxtrnewsymbol[type=formulas, description={Fehlerterm}]{epsilon}{\ensuremath{\epsilon}}
-\glsxtrnewsymbol[type=formulas, description={Ausfallrate}, text={\ensuremath{\lambda}}]{lambda}{\ensuremath{\lambda(\cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Ausfallrate (zeitabhängig)}, 
+    text={\ensuremath{\lambda(t)}}]{lambda}{\ensuremath{\lambda(t)}}
+\glsxtrnewsymbol[type=formulas, description={Eigenvektor}, text={\ensuremath{\mathbf{v}}}]{eigen_vec}{\ensuremath{\mathbf{v}}}
+\glsxtrnewsymbol[type=formulas, description={Eigenwert (einer Matrix)},   text={\ensuremath{\lambda}}]{eigen_val}{\ensuremath{\lambda}}
 \glsxtrnewsymbol[type=formulas, description={Log-Likelihood-Funktion}, text={\ensuremath{\Lambda}}]{Lambda}{\ensuremath{\Lambda(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Erwartungswert der Lebensdauer (theoretisch)}, text={\ensuremath{\mu}}]{mu}{\ensuremath{\mu}}
 \glsxtrnewsymbol[type=formulas, description={Prädiktionsvarianz an der Stelle $\symsub{x_loc}{idx_0}$ (skaliert)}, text={\ensuremath{\nu(\symsub{x_loc}{idx_0})}}]{pred_var}{\ensuremath{\nu(\symsub{x_loc}{idx_0})}}
@@ -357,11 +362,14 @@ Thanks for your service.
 % --- Abkürzungen ---
 \section*{Abkürzungen}
 \addcontentsline{toc}{section}{Abkürzungen}
-\glssetwidest{Electronic Control Unit~}
+% \glssetwidest{...} ist hier nicht mehr nötig, da Spaltenbreiten im Stil definiert sind
 \begingroup
+\glsaddall
 \renewcommand*{\glossarysection}[2][]{}%
-\printglossary[type=\acronymtype,style=alttree,title={},nonumberlist,nogroupskip]
+% Ändere style=alttree zu style=linelesssymbunitlong
+\printglossary[type=\acronymtype,style=linelesssymbunitlong,title={},nonumberlist,nogroupskip]
 \endgroup
+
 
 % --- Indizes ---
 \section*{Indizes}

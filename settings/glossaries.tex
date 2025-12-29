@@ -86,29 +86,68 @@
 %   - bündige Spalten (wie bei Abkürzungen)
 % ==========================================================
 \newglossarystyle{linelesssymbunitlong}{%
-	\renewenvironment{theglossary}%
-	% --- Etwas schmalere erste Spalte und präziserer Abstand ---
-	{\begin{longtable}{@{}p{0.16\textwidth}@{\hspace{2.25cm}}p{0.74\textwidth}@{}}}%
-			{\end{longtable}}%
+    \renewenvironment{theglossary}%
+    {\begin{longtable}{@{}p{0.16\textwidth}@{\hspace{2.25cm}}p{0.74\textwidth}@{}}}%
+    {\end{longtable}}%
 
-	\renewcommand*{\glossaryheader}{}%
+    % --- Header- und Footer-Logik für den Seitenumbruch ---
+    \renewcommand*{\glossaryheader}{%
+        % Inhalt für den Kopf der allerersten Seite (hier leer)
+        \endfirsthead
+        % Inhalt für den Kopf aller Folgeseiten (falls Überschriften wiederholt werden sollen)
+        % \textbf{Symbol} & \textbf{Beschreibung (Fortsetzung)}\\[0.5em]
+        \endhead
+        % Inhalt für den Fuß aller Seiten (außer der letzten)
+        % \multicolumn{2}{r}{\footnotesize\textit{Fortsetzung auf der nächsten Seite...}}
+        \endfoot
+        % Inhalt für den Fuß der allerletzten Seite
+        \endlastfoot
+    }%
 
-	\ifglsnogroupskip
-		\renewcommand*{\glsgroupskip}{}%
-	\else
-		\renewcommand*{\glsgroupskip}{\\[0.5em]}%
-	\fi
+    \ifglsnogroupskip
+        \renewcommand*{\glsgroupskip}{}%
+    \else
+        \renewcommand*{\glsgroupskip}{\\[0.5em]}% 
+    \fi
 
-	\renewcommand*{\glossentry}[2]{%
-		\glsentryitem{##1}\glstarget{##1}{\textbf{\glossentryname{##1}}} &
-		\glossentrydesc{##1}\\[0.3em]%
-	}%
+    \renewcommand*{\glossentry}[2]{%
+        \glsentryitem{##1}\glstarget{##1}{\textbf{\glossentryname{##1}}} &
+        \glossentrydesc{##1}\\[0.3em]%
+    }%
 
-	\renewcommand*{\subglossentry}[3]{%
-		\hspace{1em}\glsentryname{##2} &
-		\glossentrydesc{##2}\\[0.3em]%
-	}%
+    \renewcommand*{\subglossentry}[3]{%
+        \hspace{1em}\glsentryname{##2} &
+        \glossentrydesc{##2}\\[0.3em]%
+    }%
 }
+
+
+
+% \newglossarystyle{linelesssymbunitlong}{%
+% 	\renewenvironment{theglossary}%
+% 	% --- Etwas schmalere erste Spalte und präziserer Abstand ---
+% 	{\begin{longtable}{@{}p{0.16\textwidth}@{\hspace{2.25cm}}p{0.74\textwidth}@{}}}%
+% 			{\end{longtable}}%
+%
+% 	\renewcommand*{\glossaryheader}{}%
+%
+% 	\ifglsnogroupskip
+% 		\renewcommand*{\glsgroupskip}{}%
+% 	\else
+% 		\renewcommand*{\glsgroupskip}{\\[0.5em]}%
+% 	\fi
+%
+% 	\renewcommand*{\glossentry}[2]{%
+% 		\glsentryitem{##1}\glstarget{##1}{\textbf{\glossentryname{##1}}} &
+% 		\glossentrydesc{##1}\\[0.3em]%
+% 	}%
+%
+% 	\renewcommand*{\subglossentry}[3]{%
+% 		\hspace{1em}\glsentryname{##2} &
+% 		\glossentrydesc{##2}\\[0.3em]%
+% 	}%
+% }
+
 
 %%%%%%%%%%%%
 \makeatother
