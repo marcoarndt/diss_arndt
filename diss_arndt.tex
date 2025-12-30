@@ -185,6 +185,7 @@ isbn=true]{biblatex}
 \newacronym[plural=CCDs, longplural=Central Composite Designs]{CCD}{CCD}{Central Composite Design}
 \newacronym{SPV}{SPV}{Scaled Prediction Variance}
 \newacronym[plural=VIFs, longplural=Varianz-Inflations-Faktoren]{VIF}{VIF}{Varianz-Inflations-Faktor}
+\newacronym[plural=GLMs, longplural=Generalized Linear Models]{GLM}{GLM}{Generalized Linear Model}
 
 % Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
 
@@ -203,6 +204,7 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_S}{type=indices, name={\ensuremath{\text{S}}}, description={Sternpunkt}}
 \newglossaryentry{idx_D}{type=indices, name={\ensuremath{\text{D}}}, description={Sternpunktabstand CCD}}
 \newglossaryentry{idx_C}{type=indices, name={\ensuremath{\text{C}}}, description={Zentralpunkt}}
+\newglossaryentry{idx_error}{type=indices, name={\ensuremath{\text{error}}}, description={Fehler 2. Art (Wahrscheinlichkeit für ein falsch-negatives Ergebnis)}}
 
 % ===========================================================================
 % 1. LATEINISCHE SKALARE (Variablen & Parameter)
@@ -254,7 +256,7 @@ isbn=true]{biblatex}
 % 3. GRIECHISCHE SKALARE
 % ===========================================================================
 \glsxtrnewsymbol[type=formulas, description={Signifikanzniveau\newline Abstand der Sternpunkte (Axial Points)}, text={\ensuremath{\alpha}}]{alpha}{\ensuremath{\alpha}}
-\glsxtrnewsymbol[type=formulas, description={Regressionskoeffizient, Modellparameter}]{beta}{\ensuremath{\beta}}
+\glsxtrnewsymbol[type=formulas, description={Regressionskoeffizient, Modellparameter \newline Fehler 2.Art}]{beta}{\ensuremath{\beta}}
 \glsxtrnewsymbol[type=formulas, description={Konditionszahl der Informationsmatrix}, text={\ensuremath{\kappa}}]{cond_num}{\ensuremath{\kappa}}
 \glsxtrnewsymbol[type=formulas, description={Statusindikator (1=Ausfall, 0=Zensiert)}, text={\ensuremath{\delta}}]{delta}{\ensuremath{\delta}}
 \glsxtrnewsymbol[type=formulas, description={Fehlerterm}]{epsilon}{\ensuremath{\epsilon}}

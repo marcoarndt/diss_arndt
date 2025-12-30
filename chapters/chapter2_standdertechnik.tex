@@ -256,7 +256,7 @@ Sollen auch hier nur positive Werte für $\sym{g_func}$ berücksichtigt werden, 
 
 \section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
 Multivariate Lebensdauertests erfordern definitionsgemäß die Betrachtung mehrerer $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter.
-Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten - auch unter dem Begriff \ac{L-DoE} zusammengefasst - sowie der darauffolgenden Lebensdauermodellbildung.
+Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten - auch unter dem Begriff \textbf{\ac{L-DoE}} zusammengefasst - sowie der darauffolgenden Lebensdauermodellbildung.
 Während detaillierte Übersichten zur Historie von \ac{DoE} von anfänglichen einschlägigen Beschreibungen durch \textcite{Fisher.1935}, außerdem maßgebliche Weiterentwicklungen durch \textcite{Box.1978} oder evolutionäre Schritte durch \textcite{Taguchi.2005} ausgiebig in Werken von \textcite{Kleppmann.2020,Rigdon.2022,Montgomery.2020} beschrieben sind, wird im Folgenden auf die wesentlichen Inhalte für die Forschungsschwerpunkte eingegangen.
 
 Der primäre Anspruch von \ac{DoE} besteht in der effizienten Planung empirischer Datenerhebungen, um Zielgrößen in Abhängigkeit erklärender Variablen zunächst robust zu modellieren und schließlich zu optimieren.
@@ -273,7 +273,7 @@ Vor diesem Hintergrund fokussiert sich dieser Abschnitt auf eine gezielte Auswah
 
 Für eine grundsätzlichere Auseinandersetzung mit konventionellen Methoden und Werkzeugen von \ac{DoE} sei, mit Blick auf den Fokus der vorliegenden Arbeit, hingegen auf die einschlägige Literatur von \textcite{Kleppmann.2020}, \textcite{Siebertz.2017}, \textcite{Hinkelmann.2012} sowie vornehmlich \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
 Diese Werke behandeln intensiv die Inhalte grundsätzlicher statistischer Versuchsplanung, welche um Perspektiven zu \ac{L-DoE} bereits durch am \ac{IMA} entstandene Dissertationen von \textcite{Dazer.2019}, \textcite{Herzig.2021}, \textcite{Grundler.2024} und maßgeblich durch \textcite{Kremer.2021} fortschreitend ergänzt wurden.
-Konsequenterweise werden Hintergründe zum Umgang mit normalverteilten Daten oder Abweichungen davon im Rahmen des \ac{DoE}, die Diskussion zu einschlägigen Vor- und Nachteilen auch unter Abgrenzung zu Alternativen wie \ac{OFAT}, die Regressionsmodellierung auf Basis der \ac{ANOVA}, konventionelle Hypothesentests sowie fundamentale Ausführungen zu \ac{ALT} in den nachfolgenden Ausführungen nicht explizit betrachtet, sondern als bekannt vorausgesetzt.
+Konsequenterweise werden Hintergründe zum Umgang mit normalverteilten Daten oder Abweichungen davon im Rahmen des \ac{DoE}, die Diskussion zu einschlägigen Vor- und Nachteilen auch unter Abgrenzung zu Alternativen wie \ac{OFAT}, die Regressionsmodellierung auf Basis der \textbf{\ac{ANOVA}}, konventionelle Hypothesentests sowie fundamentale Ausführungen zu \ac{ALT} in den nachfolgenden Ausführungen nicht explizit betrachtet, sondern als bekannt vorausgesetzt.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -469,7 +469,7 @@ Im Sinne einer ressourceneffizienten Gesamtstrategie sollten die Screening-Versu
 Die bisher diskutierten Versuchspläne beschränken sich auf die Untersuchung von Faktoren auf jeweils zwei Stufen ($\pm 1$). Dies ermöglicht zwar eine effiziente Darstellung linearer Beziehungen und Interaktionen, jedoch ist die Modellierung komplexerer, nicht-linearer Effekte aufgrund fehlender Stützstellen im Versuchsraum damit physikalisch nicht möglich.
 Perspektivisch ist daher entscheidend, wie die bestehende Datenbasis weitergenutzt und augmentiert werden kann, falls die Systemantwort signifikante \textbf{Krümmungen} (engl. \textbf{Curvature}) aufweist und die quantitativen Beziehungen zwischen Faktoren und Zielgröße für eine Optimierung detaillierter beschrieben werden müssen.
 
-Die \ac{RSM} behandelt als Teildisziplin des \ac{DoE} derartige Herangehensweisen und bietet hierfür spezielle \textbf{Wirkungsflächenversuchspläne} - engl. \acp{RSD} - an.
+Die \textbf{\ac{RSM}} behandelt als Teildisziplin des \ac{DoE} derartige Herangehensweisen und bietet hierfür spezielle \textbf{Wirkungsflächenversuchspläne} - engl. \acp{RSD} - an.
 Der erste Schritt zur Detektion von Nichtlinearitäten besteht in der Integration von $\symsub{n}{idx_C}$ sogenannten \textbf{Zentralpunkten}, engl. \acp{CP}, in den faktoriellen Basisplan. Hierbei werden alle Faktoren auf die kodierte Stufe \textit{0} (die Mitte des Versuchsraums) gesetzt.
 Weicht der Mittelwert der Systemantwort in den Zentralpunkten signifikant vom Mittelwert über die faktoriellen Eckpunkte ab, deutet dies auf eine Krümmung der Antwortfläche hin \cite{Montgomery.2020}.
 
@@ -545,7 +545,7 @@ Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche
 
 \subsubsection{Metriken zur optimalen Versuchsplanung}
 Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, bieten \textbf{optimale Versuchspläne} einen leistungsfähigen Lösungsansatz.
-Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der (um die Versuchsanzahl $\sym{N}$ \textbf{skalierten}) \textbf{Prädiktionsvarianz}, engl. \ac{SPV}\ac{MLE},
+Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der (um die Versuchsanzahl $\sym{N}$ \textbf{skalierten}) \textbf{Prädiktionsvarianz}, engl. \textbf{\ac{SPV}},
 \begin{equation}
     \sym{pred_var}= \frac{\sym{N} \sym{Var}[\hat{\sym{y}}(\symsub{x_loc}{idx_0})]}{\sym{sigma_sq}}
     = \symsub{x_loc}{idx_0}' \left( \frac{\sym{M}}{\sym{N}} \right)^{-1} \symsub{x_loc}{idx_0}
@@ -584,7 +584,7 @@ Mathematisch fundiert die Bewertung der Schätzgenauigkeit auf der Inversen der 
     \label{eq:dispersion}
 \end{equation}
 wobei wie gehabt $\sym{sigma_sq}$ die Varianz des Versuchsfehlers darstellt.
-Die Diagonalelemente der Matrix $(\sym{X}'\sym{X})^{-1}$ stehen hierbei in direktem Zusammenhang mit dem \ac{VIF} \cite{Siebertz.2017,Kleppmann.2020}.
+Die Diagonalelemente der Matrix $(\sym{X}'\sym{X})^{-1}$ stehen hierbei in direktem Zusammenhang mit dem \textbf{\ac{VIF}} \cite{Siebertz.2017,Kleppmann.2020}.
 Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.
 Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Kleppmann.2020,Montgomery.2021}.
 
@@ -745,11 +745,35 @@ Die \textbf{D-Effizienz }$\sym{eff_D}$ beschreibt die Güte der Parameterschätz
 Die \textbf{G-Effizienz} $\sym{eff_G}$ bewertet die Robustheit der Vorhersage. Sie setzt die theoretisch minimal erreichbare Prädiktionsvarianz ($\sym{p}/\sym{n}$) ins Verhältnis zum tatsächlichen Worst-Case-Wert $\sym{G_opt}$ des Designs:
 \begin{equation} \label{eq:eff_G}
     \sym{eff_G} = \frac{\sym{p}}{\displaystyle \max \frac{\sym{n} \sym{Var}[\hat{\sym{y}}(\sym{x})]}{\sym{sigma_sq}}}
-\end{equation}
-Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. \textbf{Power}) verfügt.
-Diese Metrik beschreibt die Wahrscheinlichkeit, mit der ein Effekt einer definierten Größe (Signal) vor dem Hintergrund des experimentellen Rauschens als \textbf{signifikant} erkannt wird.
-Insbesondere bei reduzierten Versuchsplänen ist die Power-Analyse essenziell, um das Risiko von $\sym{Beta}$-Fehlern (falsch-negativen Ergebnissen) zu minimieren und sicherzustellen, dass die gewählte Stichprobengröße $\sym{n}$ für den angestrebten Erkenntnisgewinn hinreichend ist \cite{Siebertz.2017}.
+\end{equation}\
 
+Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. \textbf{Power}) verfügt.
+Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird.
+Insbesondere bei reduzierten Versuchsplänen und unter dem Einfluss stochastischer Lebensdauerstreuung ist die Power-Analyse essenziell, um das Risiko von falsch-negativen Schlussfolgerungen zu minimieren.
+Letztendlich kann die Trennschärfe auch als Garantiemetrik verstanden werden, die sicherstellt, dass ein geplanter Versuchsaufbau in der Lage ist, Effekte von praktischer Relevanz zu detektieren \colorbox{yellow}{\cite{Cohen.1988,Myers.2016}} - was  insbesondere in Bezug auf Lebensdauertests aufgrund genannter wirtschaftlicher Randbedingungen von hoher Bedeutung ist.
+Formalisiert wird dies im Rahmen eines \textbf{statistischen Hypothesentests}.
+Die Zielsetzung besteht darin, den Nachweis zu erbringen, ob ein bestimmter Faktor $\symsub{x}{idx_j}$ einen signifikanten Einfluss auf die Systemantwort $\sym{y}$ ausübt.
+Dazu werden zwei konkurrierende Hypothesen formuliert:
+Die \textbf{Nullhypothese} $\sym{H0}$ unterstellt, dass kein Zusammenhang besteht, der korrespondierende Regressionskoeffizient $\symsub{beta}{idx_j}$ (vgl. Abschnitt~\ref{subsec:model}) also den Wert Null annimmt:
+\begin{equation} \label{eq:hypotheses}
+    \sym{H0}: \sym{beta}_j = 0 \quad \text{gegen} \quad \sym{H1}: \sym{beta}_j \neq 0.
+\end{equation}
+Die \textbf{Alternativhypothese} $\sym{H1}$ postuliert hingegen einen signifikanten Effekt ($\symsub{beta}{idx_j} \neq 0$).
+Die Entscheidung über die Annahme oder Ablehnung von $\sym{H0}$ basiert auf dem \textbf{p-Wert}.
+Dieser quantifiziert die Wahrscheinlichkeit, unter der Annahme der Gültigkeit von $\sym{H0}$ die beobachteten Daten (oder extremere Ergebnisse) zu erhalten.
+Unterschreitet der p-Wert das a priori definierte \textbf{Signifikanzniveau} $\sym{alpha}$ (üblicherweise $\sym{alpha} = 0,05$), wird $\sym{H0}$ zugunsten der Alternativhypothese $\sym{H1}$ verworfen.
+Der Fehler, $\sym{H0}$ fälschlicherweise abzulehnen, obwohl kein Effekt vorliegt, wird als Fehler 1. Art bezeichnet; seine Wahrscheinlichkeit ist durch $\sym{alpha}$ begrenzt.
+
+Die \textbf{Trennschärfe} fokussiert hingegen auf den Fehler 2. Art (oft mit $\symsub{beta}{idx_error}$ notiert), welcher das Risiko beschreibt, einen tatsächlich vorhandenen Effekt nicht zu erkennen (falsch-negative Entscheidung).
+Die Power ist definiert als das Komplement dieses Fehlers ($1 - \symsub{beta}{idx_error}$) und entspricht somit der Wahrscheinlichkeit, $\sym{H0}$ korrekterweise abzulehnen, wenn $\sym{H1}$ wahr ist.
+
+Im Kontext der Lebensdauerdatenanalyse, bei der nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten nicht über klassische t-Tests berechnen.
+Stattdessen kommen Verfahren für \textbf{Generalisierte Lineare Modelle}, engl. \textbf{\ac{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\sym{beta}_j$ vorzugsweise über \textbf{Likelihood-Ratio-Tests} (oder approximativ über \colorbox{yellow}{Wald-Tests->Quelle}) ermittelt wird.
+Da für diese komplexen Verteilungsmodelle bei kleinen Stichprobenumfängen $\sym{n}$ keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung numerisch mittels \textbf{Monte-Carlo-Simulation}.
+Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.\,B. $10.000$ Simulationsläufe).
+Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht und zensiert.
+Anschließend erfolgt die Modellbildung und Hypothesenprüfung.
+Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant \colorbox{yellow}{($\text{p-Wert} < \sym{alpha}$)->p-Wert} erkannt wurde, entspricht der geschätzten Trennschärfe des Designs.
 
 
 \subsubsection{Strategische Vorgehensweisen}
