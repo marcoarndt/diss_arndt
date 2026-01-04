@@ -540,8 +540,83 @@ Eine effiziente Alternative zum CCD stellt das \textbf{Box-Behnken-Design} dar \
 Dieses Design kombiniert $2^{\sym{k}}$-Faktorielle mit unvollständigen Blockplänen und platziert Versuchspunkte auf den Kantenmitten des Versuchsraums, vermeidet jedoch die extremen faktoriellen Versuchspunkte.
 Dies kann vorteilhaft für Lebensdauertests sein, bei denen extreme Ecken oft zu verfrühten Ausfällen führen können.
 Zudem ist es bei korrekter Wahl der Zentralpunkte alias-optimal gegenüber kubischen Modellen \cite{Jones.2011}.
-Stoßen Standard-Designs (CCD, Box-Behnken) aufgrund von Restriktionen im Versuchsraum (\textbf{Constraints}), nicht-standardmäßigen Modellierungszielen oder ungewöhnlichen Stichprobenumfängen an ihre Grenzen, empfiehlt sich der Einsatz von \textbf{Optimalen Versuchsplänen}, vergleiche nachfolgenden Abschnitt.
+Stoßen Standard-Designs (CCD, Box-Behnken) aufgrund von Restriktionen im Versuchsraum (\textbf{Constraints}), nicht-standardmäßigen Modellierungszielen oder ungewöhnlichen Stichprobenumfängen an ihre Grenzen, empfiehlt sich der Einsatz von \textbf{Optimalen Versuchsplänen}, vergleiche übernächsten Abschnitt.
 Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche Vorhersagevarianz über den gesamten Designraum und können Standard-Designs in ihrer Prädiktionsgüte oft übertreffen \cite{Goos.2011,Montgomery.2020}.
+
+\subsubsection{Strategische Vorgehensweisen}
+In der Praxis entsteht ein \ac{CCD} häufig im Rahmen einer \textbf{sequenziellen Versuchsstrategie}: Zeigt das initiale lineare Modell Anpassungsmängel (\textbf{Lack-of-Fit}), wird der bestehende faktorielle Plan um die Sternpunkte augmentiert, um ein Modell zweiter Ordnung zu fitten \cite{Myers.2016}.
+Modelle zweiter Ordnung sind insbesondere in der Lebensdauer- und Zuverlässigkeitstechnik vermehrt von Bedeutung, da sie die Existenz von lokalen Extrema (Minima oder Maxima) der Systemantwort im Versuchsraum abbilden können \cite{Rigdon.2022}.
+Prinzipielle Vorgehensweisen, die ein erfolgreiches umsetzen von \ac{DoE} begünstigen sollten, wie \textbf{Blockbildung} oder \textbf{Randomisierung} (vgl. \cite{Siebertz.2017,Kleppmann.2020}) seien hier vorausgesetzt.
+Abbildung~\ref{fig:ma_abb2.08_strategy} fasst eine derartige strategische Vorgehensweise zur Realisierung eines \ac{CCD} zusammen, wie sie \textcite{Box.1988} vorschlagen.
+
+\begin{figure}[htbp]
+    \centering
+
+    \setlength\figurewidth{0.15\textwidth}
+    \setlength\figureheight{0.15\textwidth}
+
+    % --- 1. Teilfaktoriell ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.1_strategy.tex}
+    \end{minipage}
+    \hfill
+    % --- Pfeil 1 ---
+    \begin{minipage}[b]{0.05\textwidth}
+        \centering
+        \raisebox{2.25cm}{
+            \hspace*{0.3cm}
+            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
+        }
+    \end{minipage}
+    \hfill
+    % --- 2. Vollfaktoriell ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.2_strategy.tex}
+    \end{minipage}
+    \hfill
+    % --- Pfeil 2 ---
+    \begin{minipage}[b]{0.02\textwidth}
+        \centering
+        \raisebox{2.25cm}{
+            \hspace*{0.0cm}
+            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
+        }
+    \end{minipage}
+    \hfill
+    % --- 3. Zentralpunkt ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.3_strategy.tex}
+    \end{minipage}
+    \hfill
+    % --- Pfeil 3 ---
+    \begin{minipage}[b]{0.01\textwidth}
+        \centering
+        \raisebox{2.25cm}{
+            \hspace*{0.00cm}
+            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
+        }
+    \end{minipage}
+    \hfill
+    % --- 4. CCD ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.4_strategy.tex}
+    \end{minipage}
+    \caption{Strategischer Ansatz zu augmentierter Versuchsplanung für die Lebensdauererprobung nach \cite{Box.1988}}
+    \label{fig:ma_abb2.08_strategy}
+\end{figure}
+Demnach wird zunächst ein \textbf{teil-faktorieller Versuchsplan} zur Identifikation signifikanter Faktoren durchgeführt.
+Anschließend wird der Plan zu einem \textbf{voll-faktoriellen Versuchsplan} erweitert, um alle Haupteffekte und Wechselwirkungen erster Ordnung zu schätzen.
+Daraufhin werden \textbf{Zentralpunkte} ergänzt, um das Vorhandensein von Krümmungen zu validieren.
+Abschließend werden bei Bedarf die \textbf{Sternpunkte} hinzugefügt, um ein vollständiges \ac{CCD} zu realisieren.
+Insbesondere in der Lebensdauererprobung ist eine derartige schrittweise Vorgehensweise sinnvoll, um den Versuchsumfang zu minimieren und dennoch eine fundierte Modellierung der Systemantwort zu gewährleisten.
+Gleichzeitig erlaubt diese Strategie eine flexible Anpassung an unerwartete Ergebnisse in den einzelnen Phasen der Untersuchung, während lokale Optima von Zuverlässigkeiten im Sinne von \ac{DfR} im Vorfeld ohnehin nicht bekannt sind.
+So kann beispielsweise auf Basis der Ergebnisse des teil-faktoriellen Plans entschieden werden, ob eine Erweiterung zum voll-faktoriellen Plan überhaupt notwendig ist, oder ob direkt zu den Zentralpunkten übergegangen wird.
+Genauso kann die Anzahl der Zentralpunkte an die beobachtete Streuung der Lebensdauerdaten angepasst werden, um eine robuste Schätzung des Fehlers zu gewährleisten.
+Ist dann eine Extrapolation in Richtung a-priori unbekannter Beanspruchungsniveaus geplant, verfügt der \ac{CCD} über die notwendigen Stützstellen, um eine adäquate Exploration des Versuchsraums zu ermöglichen. 
 
 \subsubsection{Metriken zur optimalen Versuchsplanung}
 Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, bieten \textbf{optimale Versuchspläne} einen leistungsfähigen Lösungsansatz.
@@ -635,11 +710,11 @@ Werte, die signifikant von $1$ abweichen (Grenzen $1 \pm 3\sym{p}/\sym{n}$), zei
 
 Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix $(\sym{X}'\sym{X})^{-1}$ den Informationsgehalt trotz Korrelationen zu maximieren.
 Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
-Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten}, welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}.
+Eine Übersicht der einschlägigsten \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten} - welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}. Sie bilden mitunter die Grundlage für diverse weitere Optimalitäten und hybride Ansätze \cite{Myers.2016,Rigdon.2022}.
 {
     % Definitionen nur für diese Tabelle lokal halten
     \renewcommand{\arraystretch}{1.2} % Etwas Luft für die Formeln
-    \newcommand{\compressEq}{\vspace*{-0.6\baselineskip}}
+    \newcommand{\compressEq}{\vspace*{-0.4\baselineskip}}
     
     \begin{longtable}{@{}lp{0.75\textwidth}@{}}
     
@@ -664,7 +739,7 @@ Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Op
         \endlastfoot
          
         \textbf{A-Optimalität} &
-        Minimierung der Spur der inversen Informationsmatrix. \newline
+        Minimierung der Spur der inversen Informationsmatrix \cite{Kleppmann.2020,Montgomery.2020,Rigdon.2022}. \newline
         \textit{Ziel: Maximale Präzision der einzelnen Parameter im Durchschnitt.}
         \compressEq
   \begin{equation} \label{eq:opt_A}
@@ -674,7 +749,7 @@ Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Op
         \\ \addlinespace
 
         \textbf{D-Optimalität} &
-        Maximierung der Determinante der Informationsmatrix $\sym{M}$. \newline
+        Maximierung der Determinante der Informationsmatrix $\sym{M}$ \cite{Kleppmann.2020,Montgomery.2020,Rigdon.2022}. \newline
         \textit{Ziel: Beste Gesamtschätzung; minimiert das Volumen des Vertrauensellipsoids.}
         \compressEq
         \begin{equation} \label{eq:opt_D}
@@ -684,7 +759,7 @@ Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Op
         \\ \addlinespace
 
         \textbf{E-Optimalität} &
-        Minimierung des maximalen Eigenwerts $\sym{eigen_val}_{\max}$ der inversen Informationsmatrix. \newline
+        Minimierung des maximalen Eigenwerts $\sym{eigen_val}_{\max}$ der inversen Informationsmatrix \colorbox{yellow}{\cite[Erich->Boyd]{Kleppmann.2020}}. \newline
         \textit{Ziel: Worst-Case-Absicherung für den am schlechtesten geschätzten Parameter.}
         \compressEq
         \begin{equation} \label{eq:opt_E}
@@ -694,17 +769,17 @@ Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Op
         \\ \addlinespace
 
         \textbf{G-Optimalität} &
-        Minimierung der maximalen skalierten Prädiktionsvarianz $\sym{pred_var}$ im relevanten Parameterraum. \newline
+        Minimierung der maximalen skalierten Prädiktionsvarianz $\sym{pred_var}$ im relevanten Parameterraum \cite{Montgomery.2020,Myers.2016}. \newline
         \textit{Ziel: Qualität der Vorhersage an der ungünstigsten Stelle sichern.}
         \compressEq
         \begin{equation} \label{eq:opt_G}
-            \sym{G_opt} = \min \left( \max_{\sym{x} \in \sym{RR}^{\sym{k}}} \sym{pred_var} \right)
+            \sym{G_opt} = \min \left( \max_{\symsub{x_loc}{idx_0} \in \sym{RR}^{\sym{k}}} \sym{pred_var} \right)
         \end{equation}
         \compressEq
         \\ \addlinespace
                
         \textbf{I-Optimalität} &
-        Minimierung der durchschnittlichen Prädiktionsvarianz über den Parameterraum. \newline
+        Minimierung der durchschnittlichen (\textit{integrierten}) Prädiktionsvarianz über den Parameterraum - auch \textbf{U-Optimalität} im ingenieurwissenschaftlich-statistischen Sinn: (\textit{uniforme} Prädiktionsvarianz) \colorbox{yellow}{\cite[Monroe]{Rigdon.2022}}. \newline
         \textit{Ziel: Optimale Vorhersagegüte im Mittel über den gesamten Raum.}
         \compressEq
         \begin{equation} \label{eq:opt_I}
@@ -724,7 +799,7 @@ Eine Übersicht dieser \textbf{Optimalitätskriterien} - oder einfach \textbf{Op
         \\ \addlinespace
 
         \textbf{V-Optimalität} &
-        Minimierung der durchschnittlichen Prädiktionsvarianz über ein diskretes Set von $\sym{N}$ Punkten. \newline
+        Minimierung der durchschnittlichen Prädiktionsvarianz über ein diskretes Set von $\sym{N}$ Punkten - z.B. die \ac{L-DoE}-Versuchspunkte oder sepzifische Nennlasten \cite{Goos.2011,Montgomery.2020,Myers.2010}. \newline
         \textit{Ziel: Optimale Vorhersagegüte an spezifischen Stellen.}
         \compressEq
         \begin{equation} \label{eq:opt_V}
@@ -748,10 +823,11 @@ Die \textbf{G-Effizienz} $\sym{eff_G}$ bewertet die Robustheit der Vorhersage. S
 \end{equation}\
 
 Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. \textbf{Power}) verfügt.
-Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird.
-Insbesondere bei reduzierten Versuchsplänen und unter dem Einfluss stochastischer Lebensdauerstreuung ist die Power-Analyse essenziell, um das Risiko von falsch-negativen Schlussfolgerungen zu minimieren.
-Letztendlich kann die Trennschärfe auch als Garantiemetrik verstanden werden, die sicherstellt, dass ein geplanter Versuchsaufbau in der Lage ist, Effekte von praktischer Relevanz zu detektieren \colorbox{yellow}{\cite{Cohen.1988,Myers.2016}} - was  insbesondere in Bezug auf Lebensdauertests aufgrund genannter wirtschaftlicher Randbedingungen von hoher Bedeutung ist.
-Formalisiert wird dies im Rahmen eines \textbf{statistischen Hypothesentests}.
+Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2017,Kleppmann.2020}.
+Insofern ist ein Effekt in praktischem Umfeld natürlich problemabhängig (Streuungscharakteristik der Lebensdauer, realisierbare Stichprobengröße, etc.) und meist von Bedeutung für $\sym{Eff} \geq 2\sym{sigma}$, wobei Trennschärfewerte $\geq 80\%$ als befriedigend gelten \cite{Rigdon.2022,Montgomery.2020}.
+Insbesondere bei reduzierten Versuchsplänen und unter dem Einfluss stochastischer Lebensdauerstreuung ist die Power-Analyse jedoch essenziell, um das Risiko von falsch-negativen Schlussfolgerungen zu minimieren.
+Letztendlich kann die Trennschärfe somit als Garantiemetrik verstanden werden, die sicherstellt, dass ein geplanter Versuchsaufbau in der Lage ist, Effekte von praktischer Relevanz zu detektieren \colorbox{yellow}{\cite{Cohen.1988,Myers.2016}} - was insbesondere in Bezug auf Lebensdauertests aufgrund genannter wirtschaftlicher Randbedingungen von hoher Bedeutung ist.
+Formalisiert wird dies im Rahmen \textbf{statistischer Hypothesentests} \cite{Kleppmann.2020,Montgomery.2020}.
 Die Zielsetzung besteht darin, den Nachweis zu erbringen, ob ein bestimmter Faktor $\symsub{x}{idx_j}$ einen signifikanten Einfluss auf die Systemantwort $\sym{y}$ ausübt.
 Dazu werden zwei konkurrierende Hypothesen formuliert:
 Die \textbf{Nullhypothese} $\sym{H0}$ unterstellt, dass kein Zusammenhang besteht, der korrespondierende Regressionskoeffizient $\symsub{beta}{idx_j}$ (vgl. Abschnitt~\ref{subsec:model}) also den Wert Null annimmt:
@@ -759,111 +835,32 @@ Die \textbf{Nullhypothese} $\sym{H0}$ unterstellt, dass kein Zusammenhang besteh
     \sym{H0}: \sym{beta}_j = 0 \quad \text{gegen} \quad \sym{H1}: \sym{beta}_j \neq 0.
 \end{equation}
 Die \textbf{Alternativhypothese} $\sym{H1}$ postuliert hingegen einen signifikanten Effekt ($\symsub{beta}{idx_j} \neq 0$).
-Die Entscheidung über die Annahme oder Ablehnung von $\sym{H0}$ basiert auf dem \textbf{p-Wert}.
+Die Entscheidung über die Annahme oder Ablehnung von $\sym{H0}$ basiert auf dem $\sym{p-Wert}$.
 Dieser quantifiziert die Wahrscheinlichkeit, unter der Annahme der Gültigkeit von $\sym{H0}$ die beobachteten Daten (oder extremere Ergebnisse) zu erhalten.
-Unterschreitet der p-Wert das a priori definierte \textbf{Signifikanzniveau} $\sym{alpha}$ (üblicherweise $\sym{alpha} = 0,05$), wird $\sym{H0}$ zugunsten der Alternativhypothese $\sym{H1}$ verworfen.
+Unterschreitet der $\sym{p-Wert}$ das a priori definierte \textbf{Signifikanzniveau} $\sym{alpha}$ (üblicherweise $\sym{alpha} = 0,05$), wird $\sym{H0}$ zugunsten der Alternativhypothese $\sym{H1}$ verworfen.
 Der Fehler, $\sym{H0}$ fälschlicherweise abzulehnen, obwohl kein Effekt vorliegt, wird als Fehler 1. Art bezeichnet; seine Wahrscheinlichkeit ist durch $\sym{alpha}$ begrenzt.
-
 Die \textbf{Trennschärfe} fokussiert hingegen auf den Fehler 2. Art (oft mit $\symsub{beta}{idx_error}$ notiert), welcher das Risiko beschreibt, einen tatsächlich vorhandenen Effekt nicht zu erkennen (falsch-negative Entscheidung).
-Die Power ist definiert als das Komplement dieses Fehlers ($1 - \symsub{beta}{idx_error}$) und entspricht somit der Wahrscheinlichkeit, $\sym{H0}$ korrekterweise abzulehnen, wenn $\sym{H1}$ wahr ist.
-
-Im Kontext der Lebensdauerdatenanalyse, bei der nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten nicht über klassische t-Tests berechnen.
-Stattdessen kommen Verfahren für \textbf{Generalisierte Lineare Modelle}, engl. \textbf{\ac{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\sym{beta}_j$ vorzugsweise über \textbf{Likelihood-Ratio-Tests} (oder approximativ über \colorbox{yellow}{Wald-Tests->Quelle}) ermittelt wird.
-Da für diese komplexen Verteilungsmodelle bei kleinen Stichprobenumfängen $\sym{n}$ keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung numerisch mittels \textbf{Monte-Carlo-Simulation}.
-Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.\,B. $10.000$ Simulationsläufe).
-Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht und zensiert.
+Die Power folglich ist definiert als das Komplement dieses Fehlers ($1 - \symsub{beta}{idx_error}$) und entspricht somit der Wahrscheinlichkeit, $\sym{H0}$ korrekterweise abzulehnen, wenn $\sym{H1}$ wahr ist:
+\begin{equation} \label{eq:power}
+    \sym{power} = \sym{Pr}(\sym{H0} \text{ ablehnen} \mid \sym{H1} \text{ ist wahr}) = 1 - \symsub{beta}{idx_error}.
+\end{equation}
+Im Kontext der Lebensdauerdatenanalyse, bei der nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten nicht über klassische \textbf{t-Tests} berechnen.
+Stattdessen kommen Verfahren für \textbf{Generalisierte Lineare Modelle}, engl. \textbf{\ac{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\sym{beta}_j$ vorzugsweise über \textbf{Likelihood-Ratio-Tests} (oder approximativ über Wald-Tests, vergleiche hierzu Arbeiten von \textcite{Rigdon.2022,Meeker.2022,Montgomery.2020}) ermittelt wird.
+Da für diese komplexen Verteilungsmodelle bei kleinen Stichprobenumfängen $\sym{n}$ keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung gerne numerisch mittels \textbf{Monte-Carlo-Simulation} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
+Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.\,B. $\symsub{n}{idx_MC}=10^4$ Simulationsläufe).
+Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht bzw. mit Streuung überlagert und/oder zensiert.
 Anschließend erfolgt die Modellbildung und Hypothesenprüfung.
-Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant \colorbox{yellow}{($\text{p-Wert} < \sym{alpha}$)->p-Wert} erkannt wurde, entspricht der geschätzten Trennschärfe des Designs.
+Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant ($\text{p-Wert} < \sym{alpha}$) erkannt wird, entspricht der geschätzten $\sym{power}$ des Designs.
 
 
-\subsubsection{Strategische Vorgehensweisen}
-In der Praxis entsteht ein \ac{CCD} häufig im Rahmen einer \textbf{sequenziellen Versuchsstrategie}: Zeigt das initiale lineare Modell Anpassungsmängel (\textbf{Lack-of-Fit}), wird der bestehende faktorielle Plan um Sternpunkte erweitert („augmentiert“), um ein Modell zweiter Ordnung zu fitten \cite{Myers.2016}.
-Prinzipielle Vorgehensweisen, die ein erfolgreiches umsetzen von \ac{DoE} begünstigen sollten, wie \textbf{Blockbildung} oder \textbf{Randomisierung} (vgl. \cite{Siebertz.2017,Kleppmann.2020}) seien hier vorausgesetzt.
-Ein \ac{CCD} besteht somit aus:
-\begin{itemize}
-    \item den $\symsub{n}{idx_F}$ Eckpunkten des ursprünglichen voll- (oder teil-)faktoriellen Plans,
-    \item einer definierten Anzahl $\symsub{n}{idx_C}$ an wiederholten Zentralpunkten (üblicherweise $3 \leq \symsub{n}{idx_C} \leq 5$ zur Abschätzung des reinen Fehlers) sowie
-    \item $\symsub{n}{idx_S} = 2 \cdot \sym{k}$ zusätzlichen \textbf{Sternpunkten} (engl. \textbf{Axial Points}), die auf den Achsen des Koordinatensystems im Abstand $\pm \symsub{alpha}{idx_D}$ vom Zentrum liegen.
-\end{itemize}
-\begin{itemize}
-
-    \item CCD mit \cite{Box.1988}
-
-\end{itemize}
-
-\begin{figure}[htbp]
-    \centering
-
-    \setlength\figurewidth{0.15\textwidth}
-    \setlength\figureheight{0.15\textwidth}
-
-    % --- 1. Teilfaktoriell ---
-    \begin{minipage}[b]{0.2\textwidth}
-        \centering
-        \input{plots/ma_abb2.08.1_strategy.tex}
-    \end{minipage}
-    \hfill
-    % --- Pfeil 1 ---
-    \begin{minipage}[b]{0.05\textwidth}
-        \centering
-        \raisebox{2.25cm}{
-            \hspace*{0.3cm}
-            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
-        }
-    \end{minipage}
-    \hfill
-    % --- 2. Vollfaktoriell ---
-    \begin{minipage}[b]{0.2\textwidth}
-        \centering
-        \input{plots/ma_abb2.08.2_strategy.tex}
-    \end{minipage}
-    \hfill
-    % --- Pfeil 2 ---
-    \begin{minipage}[b]{0.02\textwidth}
-        \centering
-        \raisebox{2.25cm}{
-            \hspace*{0.0cm}
-            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
-        }
-    \end{minipage}
-    \hfill
-    % --- 3. Zentralpunkt ---
-    \begin{minipage}[b]{0.2\textwidth}
-        \centering
-        \input{plots/ma_abb2.08.3_strategy.tex}
-    \end{minipage}
-    \hfill
-    % --- Pfeil 3 ---
-    \begin{minipage}[b]{0.01\textwidth}
-        \centering
-        \raisebox{2.25cm}{
-            \hspace*{0.00cm}
-            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
-        }
-    \end{minipage}
-    \hfill
-    % --- 4. CCD ---
-    \begin{minipage}[b]{0.2\textwidth}
-        \centering
-        \input{plots/ma_abb2.08.4_strategy.tex}
-    \end{minipage}
-    \caption{Strategischer Ansatz zu augmentierter Versuchsplanung für die Lebensdauererprobung nach \cite{Box.1988}}
-    \label{fig:ma_abb2.08_strategy}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Statistische Modellbildung} \label{subsec:model}
 
 \begin{itemize}
-    \item GLL-Weibull
-    \item LR-Ratio
-    \item p-Werte
-    \item Trennschärfe etwa $80\%$, Effekt $\sym{Eff}>2\sigma$ \cite[S.116]{Rigdon.2022}
-    \item Varianzen
-    \item Modellaufbau
+    \item -> todo next: \newline https://www.researchgate.net/profile/Steven-Rigdon/research \newline https://www.researchgate.net/profile/Rong-Pan-7/research \newline https://www.researchgate.net/scientific-contributions/Eric-M-Monroe-70325879 \newline \cite[S.314]{Rigdon.2022}: UC Optimal Test Deisgns
+    \item \colorbox{yellow}{GLL-Weibull}
+    \item \colorbox{yellow}{LR-Ratio}
+    \item \colorbox{yellow}{Varianzen}
+    \item \colorbox{yellow}{Modellaufbau}
     \item Extrapolation: bedarf in der Praxis / oder sind doch dann mal VPs verfügbar und das modell wird einfach erweitert
     \item Optimalitäten
     \item Risiduen (Cox-Snell \cite{Rigdon.2022})

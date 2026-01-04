@@ -1693,6 +1693,47 @@
       \verb 10.1198/TECH.2010.09113
       \endverb
     \endentry
+    \entry{Box.1988}{article}{}
+      \name{author}{3}{}{%
+        {{hash=beeaf743dc5d4fb9bbe34e165a1de434}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
+           family={Bisgaard},
+           familyi={B\bibinitperiod},
+           given={S{ø}ren},
+           giveni={S\bibinitperiod}}}%
+        {{hash=656f9d99c2a19df6e255c8f95f592b0c}{%
+           family={Fung},
+           familyi={F\bibinitperiod},
+           given={Conrad},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a55f100b54be2cea5bd69ff52ef6cff1}
+      \strng{fullhash}{676c8192e299d2474e41a89c49de38da}
+      \strng{bibnamehash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authorbibnamehash}{676c8192e299d2474e41a89c49de38da}
+      \strng{authornamehash}{a55f100b54be2cea5bd69ff52ef6cff1}
+      \strng{authorfullhash}{676c8192e299d2474e41a89c49de38da}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0748-8017}
+      \field{journaltitle}{Quality and Reliability Engineering International}
+      \field{number}{2}
+      \field{title}{An explanation and critique of taguchi's contributions to quality engineering}
+      \field{volume}{4}
+      \field{year}{1988}
+      \field{pages}{123\bibrangedash 131}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1002/qre.4680040207
+      \endverb
+    \endentry
     \entry{Belsley.2004}{book}{}
       \name{author}{1}{}{%
         {{hash=7bb25e352d186fa63f389be0d951fbb6}{%
@@ -1776,46 +1817,117 @@
       \verb Fahrmeir, Kneib et al. 2009 - Regression:Attachments/Fahrmeir, Kneib et al. 2009 - Regression.pdf:application/pdf
       \endverb
     \endentry
-    \entry{Box.1988}{article}{}
-      \name{author}{3}{}{%
-        {{hash=beeaf743dc5d4fb9bbe34e165a1de434}{%
-           family={Box},
-           familyi={B\bibinitperiod},
-           given={George},
-           giveni={G\bibinitperiod}}}%
-        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
-           family={Bisgaard},
-           familyi={B\bibinitperiod},
-           given={S{ø}ren},
-           giveni={S\bibinitperiod}}}%
-        {{hash=656f9d99c2a19df6e255c8f95f592b0c}{%
-           family={Fung},
-           familyi={F\bibinitperiod},
-           given={Conrad},
-           giveni={C\bibinitperiod}}}%
+    \entry{Myers.2010}{book}{}
+      \name{author}{4}{}{%
+        {{hash=33227d4358a3d37f134dea3babce8eec}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={Raymond\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=788c3b54381fbc8ef27cdf46201acf93}{%
+           family={Vining},
+           familyi={V\bibinitperiod},
+           given={G.\bibnamedelimi Geoffrey},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=df912f429197228b697c785637b0c83e}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Timothy\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
       }
-      \strng{namehash}{a55f100b54be2cea5bd69ff52ef6cff1}
-      \strng{fullhash}{676c8192e299d2474e41a89c49de38da}
-      \strng{bibnamehash}{676c8192e299d2474e41a89c49de38da}
-      \strng{authorbibnamehash}{676c8192e299d2474e41a89c49de38da}
-      \strng{authornamehash}{a55f100b54be2cea5bd69ff52ef6cff1}
-      \strng{authorfullhash}{676c8192e299d2474e41a89c49de38da}
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{5bddaf63e20d2d4fc3b2ab77023c52a8}
+      \strng{fullhash}{3ae1ad58d7bca135f45130dd1e459966}
+      \strng{bibnamehash}{3ae1ad58d7bca135f45130dd1e459966}
+      \strng{authorbibnamehash}{3ae1ad58d7bca135f45130dd1e459966}
+      \strng{authornamehash}{5bddaf63e20d2d4fc3b2ab77023c52a8}
+      \strng{authorfullhash}{3ae1ad58d7bca135f45130dd1e459966}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{0748-8017}
-      \field{journaltitle}{Quality and Reliability Engineering International}
-      \field{number}{2}
-      \field{title}{An explanation and critique of taguchi's contributions to quality engineering}
-      \field{volume}{4}
-      \field{year}{1988}
-      \field{pages}{123\bibrangedash 131}
-      \range{pages}{9}
+      \field{edition}{2. ed.}
+      \field{isbn}{9780470454633}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Generalized linear models: With applications in engineering and the sciences}
+      \field{year}{2010}
       \verb{doi}
-      \verb 10.1002/qre.4680040207
+      \verb 10.1002/9780470556986
       \endverb
+    \endentry
+    \entry{Arndt.2022}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1bd42f23ad4c4d4311ca8cd8a0966357}{%
+           family={Mell},
+           familyi={M\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Honolulu, HI, USA}%
+      }
+      \strng{namehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{fullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \strng{bibnamehash}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \strng{authorbibnamehash}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 16th International Probabilistic Safety Assessment and Management Conference (PSAM16)}
+      \field{title}{Generic effects of deviations from test design orthogonality on test power and regression modelling of Central-Composite Designs}
+      \field{volume}{PSAM 16}
+      \field{year}{2022}
+    \endentry
+    \entry{Khuri.2006}{book}{}
+      \name{author}{1}{}{%
+        {{hash=bdc9d2bd4b5cf01092c051b69f2f483b}{%
+           family={Khuri},
+           familyi={K\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific Publishing Co Pte Ltd}%
+      }
+      \strng{namehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{fullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{bibnamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{authorbibnamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{authornamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \strng{authorfullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{9789812564580}
+      \field{title}{Response Surface Methodology and Related Topics}
+      \field{year}{2006}
     \endentry
     \entry{RisbergEllekjr.1998}{article}{}
       \name{author}{2}{}{%
@@ -1994,32 +2106,6 @@
       \field{year}{1989}
       \field{pages}{159\bibrangedash 171}
       \range{pages}{13}
-    \endentry
-    \entry{Khuri.2006}{book}{}
-      \name{author}{1}{}{%
-        {{hash=bdc9d2bd4b5cf01092c051b69f2f483b}{%
-           family={Khuri},
-           familyi={K\bibinitperiod},
-           given={André},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {World Scientific Publishing Co Pte Ltd}%
-      }
-      \strng{namehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \strng{fullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \strng{bibnamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \strng{authorbibnamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \strng{authornamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \strng{authorfullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{1st}
-      \field{isbn}{9789812564580}
-      \field{title}{Response Surface Methodology and Related Topics}
-      \field{year}{2006}
     \endentry
     \entry{Rittmaier.2025}{inproceedings}{}
       \name{author}{3}{}{%
@@ -2590,55 +2676,6 @@
       \verb 10.1080/00401706.1997.10485079
       \endverb
     \endentry
-    \entry{Myers.2010}{book}{}
-      \name{author}{4}{}{%
-        {{hash=33227d4358a3d37f134dea3babce8eec}{%
-           family={Myers},
-           familyi={M\bibinitperiod},
-           given={Raymond\bibnamedelima H.},
-           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
-           family={Montgomery},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima C.},
-           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=788c3b54381fbc8ef27cdf46201acf93}{%
-           family={Vining},
-           familyi={V\bibinitperiod},
-           given={G.\bibnamedelimi Geoffrey},
-           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-        {{hash=df912f429197228b697c785637b0c83e}{%
-           family={Robinson},
-           familyi={R\bibinitperiod},
-           given={Timothy\bibnamedelima J.},
-           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, NJ}%
-      }
-      \list{publisher}{1}{%
-        {Wiley}%
-      }
-      \strng{namehash}{5bddaf63e20d2d4fc3b2ab77023c52a8}
-      \strng{fullhash}{3ae1ad58d7bca135f45130dd1e459966}
-      \strng{bibnamehash}{3ae1ad58d7bca135f45130dd1e459966}
-      \strng{authorbibnamehash}{3ae1ad58d7bca135f45130dd1e459966}
-      \strng{authornamehash}{5bddaf63e20d2d4fc3b2ab77023c52a8}
-      \strng{authorfullhash}{3ae1ad58d7bca135f45130dd1e459966}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{2. ed.}
-      \field{isbn}{9780470454633}
-      \field{series}{Wiley series in probability and statistics}
-      \field{title}{Generalized linear models: With applications in engineering and the sciences}
-      \field{year}{2010}
-      \verb{doi}
-      \verb 10.1002/9780470556986
-      \endverb
-    \endentry
     \entry{.1985}{book}{}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -2889,7 +2926,7 @@
       \strng{editorbibnamehash}{415f36d42158b1a0234574565ccf01b4}
       \strng{editornamehash}{415f36d42158b1a0234574565ccf01b4}
       \strng{editorfullhash}{415f36d42158b1a0234574565ccf01b4}
-      \field{extraname}{1}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -2904,44 +2941,6 @@
       \verb{doi}
       \verb 10.3850/978-981-18-2016-8{\textunderscore }318-cd
       \endverb
-    \endentry
-    \entry{Arndt.2022}{inproceedings}{}
-      \name{author}{3}{}{%
-        {{hash=cb1e3a90988f317beb3353678cbde418}{%
-           family={Arndt},
-           familyi={A\bibinitperiod},
-           given={Marco},
-           giveni={M\bibinitperiod}}}%
-        {{hash=1bd42f23ad4c4d4311ca8cd8a0966357}{%
-           family={Mell},
-           familyi={M\bibinitperiod},
-           given={Philipp},
-           giveni={P\bibinitperiod}}}%
-        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
-           family={Dazer},
-           familyi={D\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Honolulu, HI, USA}%
-      }
-      \strng{namehash}{b18fafb45b39de1207e36f000129af31}
-      \strng{fullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
-      \strng{bibnamehash}{f938eb5ea778b1893dcdfbcde1ea455d}
-      \strng{authorbibnamehash}{f938eb5ea778b1893dcdfbcde1ea455d}
-      \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
-      \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 16th International Probabilistic Safety Assessment and Management Conference (PSAM16)}
-      \field{title}{Generic effects of deviations from test design orthogonality on test power and regression modelling of Central-Composite Designs}
-      \field{volume}{PSAM 16}
-      \field{year}{2022}
-      \true{nocite}
     \endentry
     \entry{Arndt.2022b}{inproceedings}{}
       \name{author}{3}{}{%
@@ -3463,8 +3462,8 @@
       \strng{authorbibnamehash}{c2ea1f8d0398fab3a435afb00eaea2da}
       \strng{authornamehash}{c2ea1f8d0398fab3a435afb00eaea2da}
       \strng{authorfullhash}{c2ea1f8d0398fab3a435afb00eaea2da}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-642-63908-1}
@@ -3518,8 +3517,8 @@
       \strng{editorbibnamehash}{5b99632d0af8f03ec2d13d1ae1a5804e}
       \strng{editornamehash}{86a15e33ab951e24ca01f3661ff3a6e7}
       \strng{editorfullhash}{5b99632d0af8f03ec2d13d1ae1a5804e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{isbn}{978-981-18-8071-1}
@@ -3550,8 +3549,8 @@
       \strng{authorbibnamehash}{b34e283d2d96594abe1958a8c2ef78de}
       \strng{authornamehash}{b34e283d2d96594abe1958a8c2ef78de}
       \strng{authorfullhash}{b34e283d2d96594abe1958a8c2ef78de}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2., vollständig überarbeitete und erweiterte Auflage}
@@ -3588,8 +3587,8 @@
       \strng{authorbibnamehash}{ae9ecf9af164a1dd2398717b74ab18b6}
       \strng{authornamehash}{ae9ecf9af164a1dd2398717b74ab18b6}
       \strng{authorfullhash}{ae9ecf9af164a1dd2398717b74ab18b6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1. publ}
@@ -3636,8 +3635,8 @@
       \strng{authorbibnamehash}{f6c1cc0181c0411f3c429f0ac78c3be8}
       \strng{authornamehash}{e1c7f19be321b189e090ef44ad83b8e3}
       \strng{authorfullhash}{f6c1cc0181c0411f3c429f0ac78c3be8}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2nd}
@@ -3670,8 +3669,8 @@
       \strng{editorbibnamehash}{415f36d42158b1a0234574565ccf01b4}
       \strng{editornamehash}{415f36d42158b1a0234574565ccf01b4}
       \strng{editorfullhash}{415f36d42158b1a0234574565ccf01b4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{isbn}{978-981-18-2016-8}
@@ -3702,8 +3701,8 @@
       \strng{authorbibnamehash}{5a8dba20ff21800823b6a24f46fedf55}
       \strng{authornamehash}{5a8dba20ff21800823b6a24f46fedf55}
       \strng{authorfullhash}{5a8dba20ff21800823b6a24f46fedf55}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Qualitätstechniken unterstützen die systematische Problemlösung und gestalten die Abläufe effizienter. Dieses Buch zeigt alle Qualitätstechniken im Überblick. Es hilft, Qualitätstechniken neu zu erlernen oder vorhandenes Wissen aufzufrischen und gibt konkrete Umsetzungstipps. Dieses Buch ist branchenunabhängig und gleicherma{ß}en geeignet für die Arbeit allein wie im Team. Highlights - Alle Qualitätstechniken im Überblick - Kompakt, fundiert und leicht verständlich - Viele Beispiele und konkrete Tipps}
@@ -3759,8 +3758,8 @@
       \strng{authornamehash}{fe990c13a984850cbcc447e963dcdb76}
       \strng{authorfullhash}{028ab093bc2f21115148859a9a177f5e}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2016 IEEE Accelerated Stress Testing {\&} Reliability Conference (ASTR)}
@@ -3840,8 +3839,8 @@
       \strng{editornamehash}{bff1d7e3a247022368bd7fb65029f42c}
       \strng{editorfullhash}{c6f51ba78dd999db99d1c7a9e4892a12}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 32st European Safety and Reliability Conference (ESREL 2021)}
@@ -3875,8 +3874,8 @@
       \strng{authorbibnamehash}{c0f2f6e44f53b2fec1c8c42c14672304}
       \strng{authornamehash}{c0f2f6e44f53b2fec1c8c42c14672304}
       \strng{authorfullhash}{c0f2f6e44f53b2fec1c8c42c14672304}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{An introduction to a powerful and flexible network modeling tool for developing and understanding complex systems, with many examples from a range of industries.}

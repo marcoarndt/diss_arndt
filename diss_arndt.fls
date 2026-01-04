@@ -710,7 +710,9 @@ INPUT .\diss_arndt.indices-gls
 INPUT .\diss_arndt.indices-gls
 INPUT diss_arndt.indices-gls
 INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplb.tfm
+INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplr.tfm
 INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplb.tfm
+INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplr.tfm
 INPUT .\diss_arndt.formulas-gls
 INPUT .\diss_arndt.formulas-gls
 INPUT diss_arndt.formulas-gls
@@ -750,6 +752,10 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmb.tfm
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplri9t.vf
+INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
+INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT .\diss_arndt.lof
 INPUT .\diss_arndt.lof
 INPUT diss_arndt.lof
@@ -771,10 +777,6 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
-INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
-INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT .\plots\ma_abb2.01_weibull.tex
@@ -836,8 +838,6 @@ INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
-INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplr.tfm
-INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplr.tfm
 INPUT .\plots\ma_abb2.02_doe_steps.pdf_tex
 INPUT .\plots\ma_abb2.02_doe_steps.pdf_tex
 INPUT plots\ma_abb2.02_doe_steps.pdf_tex
@@ -951,9 +951,6 @@ INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
-INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplri.tfm
-INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
-INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
 INPUT .\plots\ma_abb2.08.1_strategy.tex
 INPUT .\plots\ma_abb2.08.1_strategy.tex
 INPUT plots\ma_abb2.08.1_strategy.tex
@@ -967,9 +964,6 @@ INPUT plots\ma_abb2.08.3_strategy.tex
 INPUT .\plots\ma_abb2.08.4_strategy.tex
 INPUT .\plots\ma_abb2.08.4_strategy.tex
 INPUT plots\ma_abb2.08.4_strategy.tex
-INPUT .\chapters\chapter3_ansatz.tex
-INPUT .\chapters\chapter3_ansatz.tex
-INPUT chapters\chapter3_ansatz.tex
 INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
 INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
 INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
@@ -978,6 +972,12 @@ INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
 INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
+INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplri.tfm
+INPUT C:\Program Files\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
+INPUT C:\Users\arndt\AppData\Roaming\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
+INPUT .\chapters\chapter3_ansatz.tex
+INPUT .\chapters\chapter3_ansatz.tex
+INPUT chapters\chapter3_ansatz.tex
 INPUT .\chapters\chapter4_screening.tex
 INPUT .\chapters\chapter4_screening.tex
 INPUT chapters\chapter4_screening.tex

@@ -1,26 +1,26 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'diss_arndt.blg'
-[170] biber-MSWIN64:340> INFO - === 
-[228] Biber.pm:419> INFO - Reading 'diss_arndt.bcf'
-[472] Biber.pm:976> INFO - Using all citekeys in bib section 0
-[495] Biber.pm:4419> INFO - Processing section 0
-[519] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[623] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1168] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[2141] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2141] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2141] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[2141] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
-[2270] bbl.pm:660> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[2363] bbl.pm:763> INFO - Output to diss_arndt.bbl
-[2364] Biber.pm:131> WARN - ISBN '979-8-3503-6774-4' in entry '.2025' is invalid - run biber with '--validate_datamodel' for details.
-[2364] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry 'Arndt.2024' is invalid - run biber with '--validate_datamodel' for details.
-[2364] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry 'Mell.2024' is invalid - run biber with '--validate_datamodel' for details.
-[2364] Biber.pm:131> WARN - ISBN '979-8-3503-6774-4' in entry 'Rittmaier.2025' is invalid - run biber with '--validate_datamodel' for details.
-[2364] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry '.2024b' is invalid - run biber with '--validate_datamodel' for details.
-[2365] Biber.pm:131> WARN - legacy year field 'Februar 2025' in entry 'dat.2025' is not an integer - this will probably not sort properly.
-[2365] Biber.pm:131> WARN - misc entry 'dat.2025' (bibliography.bib): Invalid format '13.06.2025' of date field 'urldate' - ignoring
-[2365] Biber.pm:131> WARN - legacy year field '11.03.1996' in entry 'Koselka.1996' is not an integer - this will probably not sort properly.
-[2365] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry 'Arndt.2024b' is invalid - run biber with '--validate_datamodel' for details.
-[2365] Biber.pm:131> WARN - ISBN '979-8-3503-6774-4' in entry 'Arndt.2025b' is invalid - run biber with '--validate_datamodel' for details.
-[2365] Biber.pm:133> INFO - WARNINGS: 10
+[184] biber-MSWIN64:340> INFO - === 
+[264] Biber.pm:419> INFO - Reading 'diss_arndt.bcf'
+[567] Biber.pm:976> INFO - Using all citekeys in bib section 0
+[593] Biber.pm:4419> INFO - Processing section 0
+[615] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[772] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1297] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[2297] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2324] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2324] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[2325] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[2451] bbl.pm:660> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[2546] bbl.pm:763> INFO - Output to diss_arndt.bbl
+[2547] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry 'Mell.2024' is invalid - run biber with '--validate_datamodel' for details.
+[2547] Biber.pm:131> WARN - legacy year field 'Februar 2025' in entry 'dat.2025' is not an integer - this will probably not sort properly.
+[2547] Biber.pm:131> WARN - misc entry 'dat.2025' (bibliography.bib): Invalid format '13.06.2025' of date field 'urldate' - ignoring
+[2547] Biber.pm:131> WARN - ISBN '979-8-3503-6774-4' in entry '.2025' is invalid - run biber with '--validate_datamodel' for details.
+[2548] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry 'Arndt.2024b' is invalid - run biber with '--validate_datamodel' for details.
+[2548] Biber.pm:131> WARN - ISBN '979-8-3503-6774-4' in entry 'Rittmaier.2025' is invalid - run biber with '--validate_datamodel' for details.
+[2548] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry '.2024b' is invalid - run biber with '--validate_datamodel' for details.
+[2549] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry 'Arndt.2024' is invalid - run biber with '--validate_datamodel' for details.
+[2549] Biber.pm:131> WARN - ISBN '979-8-3503-6774-4' in entry 'Arndt.2025b' is invalid - run biber with '--validate_datamodel' for details.
+[2549] Biber.pm:131> WARN - legacy year field '11.03.1996' in entry 'Koselka.1996' is not an integer - this will probably not sort properly.
+[2549] Biber.pm:133> INFO - WARNINGS: 10

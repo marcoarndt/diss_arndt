@@ -197,14 +197,15 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_l}{type=indices, name={\ensuremath{l}}, description={Laufvariable}}
 \newglossaryentry{idx_0}{type=indices, name={\ensuremath{0}}, description={Zeitpunkt $\sym{t}=0$ \newline  Zentralpunkt \newline Regressionskonstante \newline Position im Versuchsraum}}
 \newglossaryentry{idx_q}{type=indices, name={\ensuremath{q}}, description={Quantilwert}}
-\newglossaryentry{idx_O}{type=indices, name={\ensuremath{\text{O}}}, description={Beobachtet (Observed)}}
+\newglossaryentry{idx_O}{type=indices, name={\ensuremath{\textnormal{O}}}, description={Beobachtet (Observed)}}
 \newglossaryentry{idx_u}{type=indices, name={\ensuremath{u}}, description={Untere Grenze des Vertrauensbereichs}}
 \newglossaryentry{idx_o}{type=indices, name={\ensuremath{o}}, description={Obere Grenze des Vertrauensbereichs}}
-\newglossaryentry{idx_F}{type=indices, name={\ensuremath{\text{F}}}, description={Faktorieller Punkt}}
-\newglossaryentry{idx_S}{type=indices, name={\ensuremath{\text{S}}}, description={Sternpunkt}}
-\newglossaryentry{idx_D}{type=indices, name={\ensuremath{\text{D}}}, description={Sternpunktabstand CCD}}
-\newglossaryentry{idx_C}{type=indices, name={\ensuremath{\text{C}}}, description={Zentralpunkt}}
-\newglossaryentry{idx_error}{type=indices, name={\ensuremath{\text{error}}}, description={Fehler 2. Art (Wahrscheinlichkeit für ein falsch-negatives Ergebnis)}}
+\newglossaryentry{idx_F}{type=indices, name={\ensuremath{\textnormal{F}}}, description={Faktorieller Punkt}}
+\newglossaryentry{idx_S}{type=indices, name={\ensuremath{\textnormal{S}}}, description={Sternpunkt}}
+\newglossaryentry{idx_D}{type=indices, name={\ensuremath{\textnormal{D}}}, description={Sternpunktabstand CCD}}
+\newglossaryentry{idx_C}{type=indices, name={\ensuremath{\textnormal{C}}}, description={Zentralpunkt}}
+\newglossaryentry{idx_error}{type=indices, name={\ensuremath{\textnormal{error}}}, description={Fehler 2. Art (Wahrscheinlichkeit für ein falsch-negatives Ergebnis)}}
+\newglossaryentry{idx_MC}{type=indices, name={\ensuremath{\textnormal{MC}}}, description={Monte-Carlo-Simulation}}
 
 % ===========================================================================
 % 1. LATEINISCHE SKALARE (Variablen & Parameter)
@@ -222,7 +223,8 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Stichprobenumfang / Anzahlvariable}, text={\ensuremath{n}}]{n}{\ensuremath{n}}
 \glsxtrnewsymbol[type=formulas, description={Versuchsanzahl}, text={\ensuremath{N}}]{N}{\ensuremath{N}}
 \glsxtrnewsymbol[type=formulas, description={Anzahl der Regressionskoeffizienten}, text={\ensuremath{p}}]{p}{\ensuremath{p}}
-\glsxtrnewsymbol[type=formulas, description={Fraktionsgrad}, text={\ensuremath{p_{\text{f}}}}]{p_f}{\ensuremath{p_{\text{f}}}}
+\glsxtrnewsymbol[type=formulas, description={Überschreitungs- / Rest-Irrtumswahrscheinlichkeit}, text={\ensuremath{p\textnormal{-Wert}}}]{p-Wert}{\ensuremath{p\textnormal{-Wert}}}
+\glsxtrnewsymbol[type=formulas, description={Fraktionsgrad}, text={\ensuremath{p_{\textnormal{f}}}}]{p_f}{\ensuremath{p_{\textnormal{f}}}}
 \glsxtrnewsymbol[type=formulas, description={Quantilwert}, text={\ensuremath{q}}]{q}{\ensuremath{q}}
 \glsxtrnewsymbol[type=formulas, description={Zuverlässigkeit}]{R}{\ensuremath{R}}
 \glsxtrnewsymbol[type=formulas, description={Studentisiertes Residuum}, text={\ensuremath{r}}]{resid}{\ensuremath{r}}
@@ -234,6 +236,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Arithmetischer Mittelwert (empirisch)}, text={\ensuremath{\bar{x}}}]{x_bar}{\ensuremath{\bar{x}}}
 \glsxtrnewsymbol[type=formulas, description={Systemantwort, -variable}, text={\ensuremath{y}}]{y}{\ensuremath{y}}
 \glsxtrnewsymbol[type=formulas, description={Quantil der Standardnormalverteilung}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
+\glsxtrnewsymbol[type=formulas, description={Trennschärfe, Power}, text={\ensuremath{power}}]{power}{\ensuremath{power}}
 
 % ===========================================================================
 % 2. VEKTOREN UND MATRIZEN (Fettgedruckt)
@@ -291,23 +294,23 @@ isbn=true]{biblatex}
 % ===========================================================================
 % 5. OPTIMALITÄTSKRITERIEN & EFFIZIENZEN
 % ===========================================================================
-\glsxtrnewsymbol[type=formulas, description={A-Optimalitätskriterium (Spur-Minimierung)}, text={\ensuremath{A_{\text{opt}}}}]{A_opt}{\ensuremath{A_{\text{opt}}}}
-\glsxtrnewsymbol[type=formulas, description={D-Optimalitätskriterium (Determinanten-Maximierung)}, text={\ensuremath{D_{\text{opt}}}}]{D_opt}{\ensuremath{D_{\text{opt}}}}
-\glsxtrnewsymbol[type=formulas, description={D-Effizienz (Normierte Determinante)}, text={\ensuremath{D_{\text{eff}}}}]{eff_D}{\ensuremath{D_{\text{eff}}}}
-\glsxtrnewsymbol[type=formulas, description={G-Effizienz (Verhältnis Modellparameter zu max. Varianz)}, text={\ensuremath{G_{\text{eff}}}}]{eff_G}{\ensuremath{G_{\text{eff}}}}
-\glsxtrnewsymbol[type=formulas, description={E-Optimalitätskriterium (Eigenwert-Minimierung)}, text={\ensuremath{E_{\text{opt}}}}]{E_opt}{\ensuremath{E_{\text{opt}}}}
-\glsxtrnewsymbol[type=formulas, description={G-Optimalitätskriterium (Minimierung max. Prädiktionsvarianz)}, text={\ensuremath{G_{\text{opt}}}}]{G_opt}{\ensuremath{G_{\text{opt}}}}
-\glsxtrnewsymbol[type=formulas, description={I-Optimalitätskriterium (Minimierung durchschn. Prädiktionsvarianz)}, text={\ensuremath{I_{\text{opt}}}}]{I_opt}{\ensuremath{I_{\text{opt}}}}
-\glsxtrnewsymbol[type=formulas, description={S-Optimalitätskriterium (Abstands-Maximierung)}, text={\ensuremath{S_{\text{opt}}}}]{S_opt}{\ensuremath{S_{\text{opt}}}}
-\glsxtrnewsymbol[type=formulas, description={V-Optimalitätskriterium (Punktuelle Varianz-Minimierung)}, text={\ensuremath{V_{\text{opt}}}}]{V_opt}{\ensuremath{V_{\text{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={A-Optimalitätskriterium (Spur-Minimierung)}, text={\ensuremath{A_{\textnormal{opt}}}}]{A_opt}{\ensuremath{A_{\textnormal{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={D-Optimalitätskriterium (Determinanten-Maximierung)}, text={\ensuremath{D_{\textnormal{opt}}}}]{D_opt}{\ensuremath{D_{\textnormal{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={D-Effizienz (Normierte Determinante)}, text={\ensuremath{D_{\textnormal{eff}}}}]{eff_D}{\ensuremath{D_{\textnormal{eff}}}}
+\glsxtrnewsymbol[type=formulas, description={G-Effizienz (Verhältnis Modellparameter zu max. Varianz)}, text={\ensuremath{G_{\textnormal{eff}}}}]{eff_G}{\ensuremath{G_{\textnormal{eff}}}}
+\glsxtrnewsymbol[type=formulas, description={E-Optimalitätskriterium (Eigenwert-Minimierung)}, text={\ensuremath{E_{\textnormal{opt}}}}]{E_opt}{\ensuremath{E_{\textnormal{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={G-Optimalitätskriterium (Minimierung max. Prädiktionsvarianz)}, text={\ensuremath{G_{\textnormal{opt}}}}]{G_opt}{\ensuremath{G_{\textnormal{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={I-Optimalitätskriterium (Minimierung durchschn. Prädiktionsvarianz)}, text={\ensuremath{I_{\textnormal{opt}}}}]{I_opt}{\ensuremath{I_{\textnormal{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={S-Optimalitätskriterium (Abstands-Maximierung)}, text={\ensuremath{S_{\textnormal{opt}}}}]{S_opt}{\ensuremath{S_{\textnormal{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={U-Optimalitätskriterium (Minimierung Prädiktionsvarianz)}, text={\ensuremath{U_{C_{\textnormal{opt}}}}}]{UCopt}{\ensuremath{U_{C_{\textnormal{opt}}}}}
+\glsxtrnewsymbol[type=formulas, description={V-Optimalitätskriterium (Punktuelle Varianz-Minimierung)}, text={\ensuremath{V_{\textnormal{opt}}}}]{V_opt}{\ensuremath{V_{\textnormal{opt}}}}
 
 % ===========================================================================
 % 6. STATISTISCHE KENNZAHLEN & AKRONYME
 % ===========================================================================
-\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Schätzwerte (Covariance Ratio)}, text={\text{COVRATIO}}]{covratio}{\ensuremath{\text{COVRATIO}}}
-\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Koeffizienten (Difference in Betas)}, text={\text{DFBETAS}}]{dfbetas}{\ensuremath{\text{DFBETAS}}}
-\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Prädiktionen (Difference in Fits)}, text={\text{DFFITS}}]{dffits}{\ensuremath{\text{DFFITS}}}
-\glsxtrnewsymbol[type=formulas, description={Erwartete Testdauer}, text={\text{ETD}}]{ETD}{\ensuremath{\text{ETD}}}
+\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Schätzwerte (Covariance Ratio)}, text={\textnormal{COVRATIO}}]{covratio}{\ensuremath{\textnormal{COVRATIO}}}
+\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Koeffizienten (Difference in Betas)}, text={\textnormal{DFBETAS}}]{dfbetas}{\ensuremath{\textnormal{DFBETAS}}}
+\glsxtrnewsymbol[type=formulas, description={Einflussstatistik auf Prädiktionen (Difference in Fits)}, text={\textnormal{DFFITS}}]{dffits}{\ensuremath{\textnormal{DFFITS}}}
 \glsxtrnewsymbol[type=formulas, description={Standardfehler (Standard Error)}, text={\ensuremath{\mathit{se}}}]{se}{\ensuremath{\mathit{se}}}
 
 
