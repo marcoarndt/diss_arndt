@@ -184,8 +184,10 @@ isbn=true]{biblatex}
 \newacronym[plural=CPs, longplural=Center Points]{CP}{CP}{Center Point}
 \newacronym[plural=CCDs, longplural=Central Composite Designs]{CCD}{CCD}{Central Composite Design}
 \newacronym{SPV}{SPV}{Scaled Prediction Variance}
+\newacronym{UPV}{UPV}{Unscaled Prediction Variance}
 \newacronym[plural=VIFs, longplural=Varianz-Inflations-Faktoren]{VIF}{VIF}{Varianz-Inflations-Faktor}
 \newacronym[plural=GLMs, longplural=Generalized Linear Models]{GLM}{GLM}{Generalized Linear Model}
+\newacronym[plural=LR-Tests, longplural=Likelihood-Ratio Tests]{LR-Test}{LR-Test}{Likelihood-Ratio Test}
 
 % Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
 
@@ -338,22 +340,22 @@ Thanks for your service.
 \addchap{Kurzfassung/Abstract}
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 \todo{
-  \begin{itemize}
-    \item
-    \item Abstract / Kurzfassung / Danksagung
-    \item Bilder prüfen
-    \item "mark changes after your Oral presentation for review"
-    \item "textcolor blue" in definitions ändern
-    \item "Print" Funktion aktivieren
-    \item "nocite" Funktion deaktivieren in main Z.269
-  \end{itemize}
+    \begin{itemize}
+        \item
+        \item Abstract / Kurzfassung / Danksagung
+        \item Bilder prüfen
+        \item "mark changes after your Oral presentation for review"
+        \item "textcolor blue" in definitions ändern
+        \item "Print" Funktion aktivieren
+        \item "nocite" Funktion deaktivieren in main Z.269
+    \end{itemize}
 }\
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 
 \cleardoublepage
 \ifpdf
-  \phantomsection
-  \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+    \phantomsection
+    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 
@@ -369,7 +371,7 @@ Thanks for your service.
 \addcontentsline{toc}{section}{Abkürzungen}
 % \glssetwidest{...} ist hier nicht mehr nötig, da Spaltenbreiten im Stil definiert sind
 \begingroup
-\glsaddall
+% \glsaddall
 \renewcommand*{\glossarysection}[2][]{}%
 % Ändere style=alttree zu style=linelesssymbunitlong
 \printglossary[type=\acronymtype,style=linelesssymbunitlong,title={},nonumberlist,nogroupskip]
