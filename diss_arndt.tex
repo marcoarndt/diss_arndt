@@ -222,17 +222,17 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Anzahl der Modellparameter}, text={\ensuremath{k}}]{k}{\ensuremath{k}}
 \glsxtrnewsymbol[type=formulas, description={Likelihood-Funktion}, text={\ensuremath{\mathcal{L}}}]{L_like}{\ensuremath{\mathcal{L}(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Replikation}, text={\ensuremath{m}}]{m}{\ensuremath{m}}
-\glsxtrnewsymbol[type=formulas, description={Stichprobenumfang / Anzahlvariable}, text={\ensuremath{n}}]{n}{\ensuremath{n}}
+\glsxtrnewsymbol[type=formulas, description={Stichprobenumfang \newline Anzahlvariable}, text={\ensuremath{n}}]{n}{\ensuremath{n}}
 \glsxtrnewsymbol[type=formulas, description={Versuchsanzahl}, text={\ensuremath{N}}]{N}{\ensuremath{N}}
 \glsxtrnewsymbol[type=formulas, description={Anzahl der Regressionskoeffizienten}, text={\ensuremath{p}}]{p}{\ensuremath{p}}
-\glsxtrnewsymbol[type=formulas, description={Überschreitungs- / Rest-Irrtumswahrscheinlichkeit}, text={\ensuremath{p\textnormal{-Wert}}}]{p-Wert}{\ensuremath{p\textnormal{-Wert}}}
+\glsxtrnewsymbol[type=formulas, description={Überschreitungs-, Rest-Irrtumsdwahrscheinlichkeit}, text={\ensuremath{p\textnormal{-Wert}}}]{p-Wert}{\ensuremath{p\textnormal{-Wert}}}
 \glsxtrnewsymbol[type=formulas, description={Fraktionsgrad}, text={\ensuremath{p_{\textnormal{f}}}}]{p_f}{\ensuremath{p_{\textnormal{f}}}}
 \glsxtrnewsymbol[type=formulas, description={Quantilwert}, text={\ensuremath{q}}]{q}{\ensuremath{q}}
 \glsxtrnewsymbol[type=formulas, description={Zuverlässigkeit}]{R}{\ensuremath{R}}
 \glsxtrnewsymbol[type=formulas, description={Studentisiertes Residuum}, text={\ensuremath{r}}]{resid}{\ensuremath{r}}
 \glsxtrnewsymbol[type=formulas, description={Empirische Standardabweichung (von \sym{x})}, text={\ensuremath{s}}]{s}{\ensuremath{s}}
 \glsxtrnewsymbol[type=formulas, description={Empirische Varianz (von \sym{x})}, text={\ensuremath{s^2}}]{s_sq}{\ensuremath{s^2}}
-\glsxtrnewsymbol[type=formulas, description={Zeit, Lebensdauermerimal}]{t}{\ensuremath{t}}
+\glsxtrnewsymbol[type=formulas, description={Zeit, Lebensdauermerimal \newline Teststatistik, Signal-to-Noise Ratio}]{t}{\ensuremath{t}}
 \glsxtrnewsymbol[type=formulas, description={Charakteristische Lebensdauer (Skalenparameter)}, text={\ensuremath{T}}]{T}{\ensuremath{T}}
 \glsxtrnewsymbol[type=formulas, description={Messwert, Variable, Parameter}, text={\ensuremath{x}}]{x}{\ensuremath{x}}
 \glsxtrnewsymbol[type=formulas, description={Arithmetischer Mittelwert (empirisch)}, text={\ensuremath{\bar{x}}}]{x_bar}{\ensuremath{\bar{x}}}
@@ -298,6 +298,9 @@ isbn=true]{biblatex}
 % ===========================================================================
 \glsxtrnewsymbol[type=formulas, description={A-Optimalitätskriterium (Spur-Minimierung)}, text={\ensuremath{A_{\textnormal{opt}}}}]{A_opt}{\ensuremath{A_{\textnormal{opt}}}}
 \glsxtrnewsymbol[type=formulas, description={D-Optimalitätskriterium (Determinanten-Maximierung)}, text={\ensuremath{D_{\textnormal{opt}}}}]{D_opt}{\ensuremath{D_{\textnormal{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={A-Effizienz}, text={\ensuremath{A_{\textnormal{eff}}}}]{eff_A}{\ensuremath{A_{\textnormal{eff}}}}
+\glsxtrnewsymbol[type=formulas, description={I-Effizienz}, text={\ensuremath{I_{\textnormal{eff}}}}]{eff_I}{\ensuremath{I_{\textnormal{eff}}}}
+\glsxtrnewsymbol[type=formulas, description={V-Effizienz}, text={\ensuremath{V_{\textnormal{eff}}}}]{eff_V}{\ensuremath{V_{\textnormal{eff}}}}
 \glsxtrnewsymbol[type=formulas, description={D-Effizienz (Normierte Determinante)}, text={\ensuremath{D_{\textnormal{eff}}}}]{eff_D}{\ensuremath{D_{\textnormal{eff}}}}
 \glsxtrnewsymbol[type=formulas, description={G-Effizienz (Verhältnis Modellparameter zu max. Varianz)}, text={\ensuremath{G_{\textnormal{eff}}}}]{eff_G}{\ensuremath{G_{\textnormal{eff}}}}
 \glsxtrnewsymbol[type=formulas, description={E-Optimalitätskriterium (Eigenwert-Minimierung)}, text={\ensuremath{E_{\textnormal{opt}}}}]{E_opt}{\ensuremath{E_{\textnormal{opt}}}}
@@ -316,6 +319,11 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Standardfehler (Standard Error)}, text={\ensuremath{\mathit{se}}}]{se}{\ensuremath{\mathit{se}}}
 
 
+
+
+\glsxtrnewsymbol[type=formulas, description={Vektor der partiellen Ableitungen (Modell-Steigungen)}, text={\ensuremath{\mathbf{s}(\symsub{x_loc}{idx_0})}}]{s_grad}{\ensuremath{\mathbf{s}(\symsub{x_loc}{idx_0})}}
+\glsxtrnewsymbol[type=formulas, description={Gewichtsmatrix für S-Optimalität (Slope-Momentenmatrix)}, text={\ensuremath{\mathbf{W_s}}}]{W_s}{\ensuremath{\mathbf{W_s}}}
+\glsxtrnewsymbol[type=formulas, description={S-Effizienz (für Schätzung der Steigungen)}, text={\ensuremath{S_{\textnormal{eff}}}}]{eff_S}{\ensuremath{S_{\textnormal{eff}}}}
 
 
 

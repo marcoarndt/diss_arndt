@@ -263,6 +263,7 @@ Der primäre Anspruch von \ac{DoE} besteht in der effizienten Planung empirische
 Dieses Paradigma lässt sich auch unter der Begrifflichkeit \ac{DfR} unmittelbar wiedererkennen und so auf die Analyse von Lebensdauer und Zuverlässigkeit übertragen \cite{Yang.2007,Wu.2021}.
 Da das lokale oder globale Optimum der Lebensdauer- bzw. Zuverlässigkeitsfunktion eines Produktes a priori meist unbekannt ist, erfordert dessen Identifikation eine systematische Exploration des Parameterraumes.
 Eine besondere Herausforderung stellt hierbei zusätzlich die Integration von \ac{ALT} dar: Die Diskrepanz zwischen dem hochbelasteten Testraum (engl. \textbf{Design Space}) und dem regulären \textbf{Prädiktionsraum} (engl. Use Space oder \textbf{Field Space}) kann eine \textbf{Extrapolation} erforderlich machen, welche die Anforderungen an die Daten- und somit auch an die Designqualität deutlich verschärft.
+Für umfassendere Ausführungen zu Forschungserkenntnissen in \ac{ALT} sei hierbei insbesondere auf Arbeiten von \textcite{Meeker.1993,Meeker.2022,Nelson.1990, Elsayed.2007} verwiesen.
 Das Unwissen zur tatsächlichen Lage optimaler Antwortwerte und die Möglichkeit, per se einen systematischen Offset zwischen Design- und Field-Space durch \ac{ALT} vorzufinden, stellen Teststrategien nach Best-Guess Ansätzen nachteilig.
 Hier wird in der industriellen Praxis häufig fälschlicherweise ein \ac{OFAT}-Testing Ansatz gewählt - unabhängig, ob vom Vorhandensein von Lebensdauer- oder anderen Daten, welcher schlichtweg die Wahrscheinlichkeit, Optimalstellen im Parameterraum systematisch zu treffen, senkt und somit gegenüber \ac{L-DoE} nachteilig ist, vgl. \cite{Montgomery.2020,Siebertz.2017}.
 Da nun die geometrische Struktur eines Versuchsplans die erreichbare Modellierungsqualität deterministisch begrenzt, ist eine präzise Bewertung der Plangüte anhand genau dieser Eigenschaft im Vorfeld unerlässlich.
@@ -310,7 +311,7 @@ Der \textbf{Versuchsraum} (engl. \textbf{Design Space}) wird hierbei durch die G
 Die Auswahl geeigneter statistischer Versuchspläne (\textit{Schritt~4}) für die Durchführung (\textit{Schritt~5}) wird in Abschnitt~\ref{subsec:pläne} detailliert behandelt.
 
 Die aus der Variation resultierende Änderung der Systemantwort quantifiziert den Einfluss des Faktors, der statistisch als \textbf{Effekt} $\sym{Eff}$ bezeichnet wird und den Mittelwertunterschiede zweier Faktorstufen beschreibt (\textit{Schritte~6-7}).
-Mittels \textbf{Kontrastmethode} wird also die Änderung der Systemantwort über alle durchgeführten Versuche mit jeweiligen Faktorsrufen registriert \cite{Kleppmann.2020,Montgomery.2020}:
+Mittels \textbf{Kontrastmethode} wird also die Änderung der Systemantwort über alle durchgeführten Versuche mit jeweiligen Faktorstufen registriert \cite{Kleppmann.2020,Montgomery.2020}:
 \begin{equation} \label{eq:eff}
     \sym{Eff}=\frac{1}{\sym{n}|_{+1}}\sum{\sym{y}|_{+1}} - \frac{1}{\sym{n}|_{-1}}\sum{\sym{y}|_{-1}}
 \end{equation}
@@ -532,22 +533,22 @@ Um diese Eigenschaft zu gewährleisten, berechnet sich der Abstand $\symsub{alph
 \begin{equation} \label{eq:ccd_alpha}
     \symsub{alpha}{idx_D} = (\symsub{n}{idx_F})^{1/4}.
 \end{equation}
-Alternativ kann für sphärische Räume auch $\symsub{alpha}{idx_D} = \sqrt{\sym{k}}$ gewählt werden (\textbf{Sphärisches CCD}), wodurch alle Versuchs- und Sternpunkte auf einer Kugeloberfläche liegen \cite{Myers.2016}.
-Ist der Versuchsraum hingegen durch harte physikalische Grenzen (z.B. maximale Temperatur) kubisch beschränkt, bietet sich der \textbf{flächenzentrierte CCD} (\textbf{Face Centered CCD}) an.
+Alternativ kann für sphärische Räume auch $\symsub{alpha}{idx_D} = \sqrt{\sym{k}}$ gewählt werden (\textbf{Sphärisches \ac{CCD}}), wodurch alle Versuchs- und Sternpunkte auf einer Kugeloberfläche liegen \cite{Myers.2016}.
+Ist der Versuchsraum hingegen durch harte physikalische Grenzen (z.B. maximale Temperatur) kubisch beschränkt, bietet sich der \textbf{flächenzentrierte \ac{CCD}} (\textbf{Face Centered \ac{CCD}}) an.
 Hierbei wird $\symsub{alpha}{idx_D} = 1$ gesetzt, sodass die Sternpunkte direkt auf den Flächenmitten des Würfels liegen.
 Dies vereinfacht die Durchführung, da nur drei Faktorstufen ($-1$, $0$, $+1$) benötigt werden, opfert jedoch die Eigenschaft der Rotierbarkeit.
-Eine effiziente Alternative zum CCD stellt das \textbf{Box-Behnken-Design} dar \cite{Box.1960}.
+Eine effiziente Alternative zum \ac{CCD} stellt das \textbf{Box-Behnken-Design} dar \cite{Box.1960}.
 Dieses Design kombiniert $2^{\sym{k}}$-Faktorielle mit unvollständigen Blockplänen und platziert Versuchspunkte auf den Kantenmitten des Versuchsraums, vermeidet jedoch die extremen faktoriellen Versuchspunkte.
 Dies kann vorteilhaft für Lebensdauertests sein, bei denen extreme Ecken oft zu verfrühten Ausfällen führen können.
 Zudem ist es bei korrekter Wahl der Zentralpunkte alias-optimal gegenüber kubischen Modellen \cite{Jones.2011}.
-Stoßen Standard-Designs (CCD, Box-Behnken) aufgrund von Restriktionen im Versuchsraum (\textbf{Constraints}), nicht-standardmäßigen Modellierungszielen oder ungewöhnlichen Stichprobenumfängen an ihre Grenzen, empfiehlt sich der Einsatz von \textbf{Optimalen Versuchsplänen}, vergleiche übernächsten Abschnitt.
+Stoßen Standard-Designs (\ac{CCD}, Box-Behnken) aufgrund von Restriktionen im Versuchsraum (\textbf{Constraints}), nicht-standardmäßigen Modellierungszielen oder ungewöhnlichen Stichprobenumfängen an ihre Grenzen, empfiehlt sich der Einsatz von \textbf{Optimalen Versuchsplänen}, vergleiche übernächsten Abschnitt.
 Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche Vorhersagevarianz über den gesamten Designraum und können Standard-Designs in ihrer Prädiktionsgüte oft übertreffen \cite{Goos.2011,Montgomery.2020}.
 
 \subsubsection{Strategische Vorgehensweisen}
 In der Praxis entsteht ein \ac{CCD} häufig im Rahmen einer \textbf{sequenziellen Versuchsstrategie}: Zeigt das initiale lineare Modell Anpassungsmängel (\textbf{Lack-of-Fit}), wird der bestehende faktorielle Plan um die Sternpunkte augmentiert, um ein Modell zweiter Ordnung zu fitten \cite{Myers.2016}.
-Modelle zweiter Ordnung sind insbesondere in der Lebensdauer- und Zuverlässigkeitstechnik vermehrt von Bedeutung, da sie die Existenz von lokalen Extrema (Minima oder Maxima) der Systemantwort im Versuchsraum abbilden können \cite{Rigdon.2022}.
-Prinzipielle Vorgehensweisen, die ein erfolgreiches umsetzen von \ac{DoE} begünstigen sollten, wie \textbf{Blockbildung} oder \textbf{Randomisierung} (vgl. \cite{Siebertz.2017,Kleppmann.2020}) seien hier vorausgesetzt.
-Abbildung~\ref{fig:ma_abb2.08_strategy} fasst eine derartige strategische Vorgehensweise zur Realisierung eines \ac{CCD} zusammen, wie sie \textcite{Box.1988} vorschlagen.
+Modelle zweiter Ordnung sind insbesondere in der Lebensdauer- und Zuverlässigkeitstechnik vermehrt von Bedeutung, da sie die Existenz von lokalen Extrema (Minima oder Maxima) der Systemantwort im Versuchsraum detaillierter abbilden können \cite{Rigdon.2022,Dean.2017}.
+Prinzipielle Vorgehensweisen, die ein erfolgreiches Umsetzen von \ac{DoE} bzw. \ac{L-DoE} begünstigen sollten, wie \textbf{Blockbildung} oder \textbf{Randomisierung} (vgl. \cite{Siebertz.2017,Kleppmann.2020}) seien hier bereits vorausgesetzt.
+Abbildung~\ref{fig:ma_abb2.08_strategy} fasst eine derartige strategische Vorgehensweise zur Realisierung eines \ac{CCD} zusammen, wie sie beispielsweise \textcite{Box.1988,Bisgaard.1992} vorschlagen.
 
 \begin{figure}[htbp]
     \centering
@@ -605,10 +606,10 @@ Abbildung~\ref{fig:ma_abb2.08_strategy} fasst eine derartige strategische Vorgeh
         \centering
         \input{plots/ma_abb2.08.4_strategy.tex}
     \end{minipage}
-    \caption{Strategischer Ansatz zu augmentierter Versuchsplanung für die Lebensdauererprobung nach \cite{Box.1988}}
+    \caption{Strategischer Ansatz zu augmentierter Versuchsplanung für die Lebensdauererprobung nach \cite{Box.1988,Bisgaard.1992}}
     \label{fig:ma_abb2.08_strategy}
 \end{figure}
-Demnach wird zunächst ein \textbf{teil-faktorieller Versuchsplan} zur Identifikation signifikanter Faktoren durchgeführt.
+Um effizient Versuchspunkte zu allokieren und für sequentiell fortlaufende Versuche weiterverwendet zu werden, wird in Abgleich mit Abbildung~\ref{fig:ma_abb2.02_doe_steps} zunächst ein \textbf{teil-faktorieller Versuchsplan} zur Identifikation signifikanter Faktoren durchgeführt.
 Anschließend wird der Plan zu einem \textbf{voll-faktoriellen Versuchsplan} erweitert, um alle Haupteffekte und Wechselwirkungen erster Ordnung zu schätzen.
 Daraufhin werden \textbf{Zentralpunkte} ergänzt, um das Vorhandensein von Krümmungen zu validieren.
 Abschließend werden bei Bedarf die \textbf{Sternpunkte} hinzugefügt, um ein vollständiges \ac{CCD} zu realisieren.
@@ -619,7 +620,7 @@ Genauso kann die Anzahl der Zentralpunkte an die beobachtete Streuung der Lebens
 Ist dann eine Extrapolation in Richtung a-priori unbekannter Beanspruchungsniveaus geplant, verfügt der \ac{CCD} über die notwendigen Stützstellen, um eine adäquate Exploration des Versuchsraums zu ermöglichen.
 
 \subsubsection{Metriken zur optimalen Versuchsplanung}
-Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, bieten \textbf{optimale Versuchspläne} einen leistungsfähigen Lösungsansatz.
+Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, können \textbf{optimale Versuchspläne} einen leistungsfähigen, \textit{effizienten} Lösungsansatz für \textit{multivariate} Versuchsplanung bieten \cite{Kleppmann.2016,Montgomery.2020,Myers.2016}.
 Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der (um die Versuchsanzahl $\sym{N}$ \textbf{skalierten}) \textbf{Prädiktionsvarianz}, engl. \textbf{\ac{SPV}},
 \begin{equation}
     \sym{pred_var}= \frac{\sym{N} \sym{Var}[\hat{\sym{y}}(\symsub{x_loc}{idx_0})]}{\sym{sigma_sq}}
@@ -628,9 +629,15 @@ Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu
     \label{eq:pred_variance_scaled}
 \end{equation}
 optimiert werden \cite{Myers.2016,Montgomery.2020}.
-Die Prädiktionsvarianz ist ein dimensionsloses Maß, das ausschließlich von der geometrischen Anordnung der \sym{N} Versuchspunkte (der Matrix $\sym{X}$) und damit positionsabhängig von einer Referenz $\symsub{x_loc}{idx_0}'=[1,\sym{x}_{01},\cdots,\sym{x}_{0\sym{k}}]$ im Parameterraum ist.
+Die Prädiktionsvarianz ist ein dimensionsloses Maß, das ausschließlich über die geometrische Anordnung der \sym{N} Versuchspunkte (der Matrix $\sym{X}$) in der \textbf{Informationsmatrix} (auch \textbf{\textit{M}omentenmatrix})
+\begin{equation}
+    \sym{M}\stackrel{\sym{m}=1}{=} \sym{X}'\sym{X}
+    \label{eq:informationsmatrix}
+\end{equation}
+definiert und damit positionsabhängig von einer Referenz $\symsub{x_loc}{idx_0}'=[1,\sym{x}_{01},\cdots,\sym{x}_{0\sym{k}}]$ im Parameterraum ist \cite{Myers.2016}.
 Sie ist damit unabhängig von der tatsächlichen Streuung der Messdaten ($\sym{sigma_sq}$).
-Weiter wird sie über die Anzahl der Versuchspunkte $\sym{N}$ skaliert, um Vergleiche zwischen Versuchsplänen mit unterschiedlicher Stichprobengröße zu ermöglichen \cite{Goos.2011,Myers.2016} - kann aber auch unskaliert betrachtet werden: \textbf{\ac{UPV}}
+Weiter wird sie über die Anzahl der Versuchspunkte $\sym{N}$ skaliert, um Vergleiche zwischen Versuchsplänen mit unterschiedlicher Stichprobengröße zu ermöglichen \cite{Goos.2011,Myers.2016} - kann aber auch unskaliert betrachtet werden: als \textbf{\ac{UPV}} $=\sym{Var} [\hat{\sym{y}}(\symsub{x_loc}{idx_0})] / \sym{sigma_sq} = \symsub{x_loc}{idx_0}' \sym{M}^{-1} \symsub{x_loc}{idx_0}$, vgl. \textcite{Montgomery.2020,Myers.2010}.
+Zusammen mit der Varianz des Versuchsfehlers $\sym{sigma_sq}$ (vgl. Gleichung~\ref{eq:dispersion}) erlaubt die Prädiktionsvarianz somit eine direkte Quantifizierung der \textbf{Unsicherheit in der Modellvorhersage} $\sym{Var} [\hat{\sym{y}}(\symsub{x_loc}{idx_0})]$ an einer beliebigen Stelle $\symsub{x_loc}{idx_0}$ im Versuchsraum.
 Eine effiziente Versuchsplanung für multivariate Lebensdaueruntersuchungen muss sich neben pragmatischen Beweggründen maßgeblich an diesen Größen orientieren, weshalb im Folgenden eine Übersicht der gängigen Metriken und Qualitätsmerkmale gegeben wird.\
 
 
@@ -641,12 +648,7 @@ Ein Versuchsplan wird als orthogonal bezeichnet, wenn keine Korrelation zwischen
     \langle \symsub{x}{idx_i}, \symsub{x}{idx_j} \rangle = 0 \quad \text{für alle } \sym{idx_i} \neq \sym{idx_j}.
     \label{eq:skalar}
 \end{equation}
-Oder in anderen Worten: entpricht die \textbf{Informationsmatrix}
-\begin{equation}
-    \sym{M}\stackrel{\sym{m}=1}{=} \sym{X}'\sym{X}
-    \label{eq:informationsmatrix}
-\end{equation}
-einer Diagonalmatrix, ist der Versuchsplan orthogonal \cite{Montgomery.2021,Rigdon.2022}.
+Oder in anderen Worten: entspricht die Informationsmatrix $\sym{M}$ einer Diagonalmatrix, ist der Versuchsplan orthogonal \cite{Montgomery.2021,Rigdon.2022}.
 So können Effekte eindeutig identifiziert werden - die Vektoren der Faktorstufenkombinationen sind linear unabhängig und Effekte lassen sich unverzerrt schätzen.
 Dies stellt einen Versuchsplan also zunächst einmal qualitativ günstig dar.
 
@@ -711,24 +713,31 @@ Werte, die signifikant von $1$ abweichen (Grenzen $1 \pm 3\sym{p}/\sym{n}$), zei
 
 Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix $(\sym{X}'\sym{X})^{-1}$ den Informationsgehalt trotz Korrelationen zu maximieren.
 Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
-Eine Übersicht der einschlägigsten \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten} - welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}. Sie bilden mitunter die Grundlage für diverse weitere Optimalitäten und hybride Ansätze \cite{Myers.2016,Rigdon.2022}.
-{
-% Definitionen nur für diese Tabelle lokal halten
-\renewcommand{\arraystretch}{1.2} % Etwas Luft für die Formeln
-\newcommand{\compressEq}{\vspace*{-0.4\baselineskip}}
+Eine Übersicht der einschlägigen \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten} - welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}.
+Sie bilden mitunter die Grundlage für diverse weitere Optimalitäten und hybride Ansätze und lassen sich prinzipiell in Modellierungskriterien (\textit{\textbf{A}}-, \textit{\textbf{D}}-~Optimalität) und Prädiktionskriterien (\textit{\textbf{G}}-, \textit{\textbf{I}}-, \textit{\textbf{U}}-, \textit{\textbf{V}}\textbf{-~Optimalität}) unterteilen \cite{Myers.2016,Rigdon.2022}.
 
+Jenseits praktischer Kriterien sind hier der Vollständigkeit halber auch eine Teilmenge eher theoretischerer Optimalitäten zu nennen.
+Die \textbf{\textit{E}-Optimalität}, führt zur Minimierung des maximalen Eigenwerts der Dispersionsmatrix, was eine Worst-Case-Absicherung zur Varianzschätzung begünstigt - vergleiche \textcite{Boyd.2004,Russell.2019}.
+Für explorative Zielsetzungen ohne starre Modellannahmen kann nach \textcite{Atkinson.1970} die \textit{\textbf{S}}\textbf{-Optimalität} relevant sein, da hier durch die Maximierung der euklidischen Abstände benachbarter Punkte eine gleichmäßige Raumfüllung (\textit{Space-Filling}) sichergestellt werden kann.
+So können für sich ändernde Modelle entlang einzelner Parameter wie beispielsweise $\hat{\sym{T}} \in \hat{\sym{theta}}$ Sensitivatsanalysen effizient durchgeführt werden.
+Eine Verallgemeinerung der prädiktionsorientierten Kriterien stellt die \textit{\textbf{Q}}\textbf{-Optimalität} dar, welche analog zur \textbf{\textit{I}}-Optimalität die integrierte Prädiktionsvarianz minimiert, jedoch mittels Gewichtsfunktionen eine differenzierte Priorisierung spezifischer Regionen im Versuchsraum erlaubt, vgl. \textcite{Goos.2011}.
+Liegt der Fokus hingegen isoliert auf einer Teilmenge der Modellparameter - etwa zur Trennung von Haupteffekten und Blockeffekten oder von Termen erster und zweiter Ordnung - ermöglicht die \textit{\textbf{D}}$_{\textit{\textbf{S}}}$\textbf{-Optimalität} als Derivat der \textit{\textbf{D}}-Optimalität eine gezielte Maximierung der Schätzgüte für genau dieses jeweilige \textit{S}ubset der Parametergruppe - siehe auch Werke von \textcite{Goos.2011,Atkinson.2007,Myers.2016}.
+
+{
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\compressEq}{\vspace*{-0.4\baselineskip}}
 \begin{longtable}{@{}lp{0.75\textwidth}@{}}
 
-    \caption{Übersicht, Zielsetzung und mathematische Definition verschiedener Optimalitätskriterien für Versuchspläne \cite{Goos.2011,Montgomery.2020,Myers.2016,Rigdon.2022}}
+    \caption{Übersicht, Zielsetzung und mathematische Definition verschiedener Optimalitätskriterien für Versuchspläne}  %
     \label{tab:2.1_optimalitaeten}                                                                              \\
     \toprule
-    \textbf{Kriterium}     & \textbf{Zielgröße, Beschreibung und Definition}                                    \\
+    \textbf{Kriterium}              & \textbf{Zielgröße, Beschreibung und Definition}                           \\
     \midrule
     \endfirsthead
 
-    \caption*{\textbf{Tabelle \ref{tab:2.1_optimalitaeten} (Fortsetzung):} Übersicht der Optimalitätskriterien} \\
+    \caption*{Tabelle \ref{tab:2.1_optimalitaeten} (\textit{Fortsetzung}): Übersicht der Optimalitätskriterien} \\
     \toprule
-    \textbf{Kriterium}     & \textbf{Zielgröße, Beschreibung und Definition}                                    \\
+    \textbf{Kriterium}              & \textbf{Zielgröße, Beschreibung und Definition}                           \\
     \midrule
     \endhead
 
@@ -739,38 +748,38 @@ Eine Übersicht der einschlägigsten \textbf{Optimalitätskriterien} - oder einf
     \bottomrule
     \endlastfoot
 
-    \textbf{A-Optimalität} &
+    \textbf{\textit{A}-Optimalität} &
     Minimierung der Spur der inversen Informationsmatrix \cite{Kleppmann.2020,Montgomery.2020,Rigdon.2022}. \newline
     \textit{Ziel: Maximale Präzision der einzelnen Parameter im Durchschnitt.}
     \compressEq
     \begin{equation} \label{eq:opt_A}
-        \sym{A_opt} = \min \left( \text{spur}(\sym{M}^{-1}) \right) = \min \left( \sum_{\sym{idx_j}=1}^{\sym{k}} \sym{Var}(\hat{\beta}_{\sym{idx_j}}) \right)
+        \sym{A_opt} = \min \left( \text{spur} \left(\sym{M}^{-1}\right) \right) = \min \left( \sum_{\sym{idx_j}=1}^{\sym{k}} \sym{Var}\left(\hat{\beta}_{\sym{idx_j}}\right) \right)
     \end{equation}
     \compressEq
     \\ \addlinespace
 
-    \textbf{D-Optimalität} &
-    Maximierung der Determinante der Informationsmatrix $\sym{M}$ \cite{Kleppmann.2020,Montgomery.2020,Rigdon.2022}. \newline
-    \textit{Ziel: Beste Gesamtschätzung; minimiert das Volumen des Vertrauensellipsoids.}
+    \textbf{\textit{D}-Optimalität} &
+    Maximierung der Determinante der Informationsmatrix $\sym{M}$. Da das Volumen des Vertrauensellipsoids der Koeffizientenschätzwerte umgekehrt proportional zur Quadratwurzel der Determinante ($\sqrt{\det(\sym{M})}$) ist, minimiert dieses Kriterium das Unsicherheitsvolumen im Parameterraum \cite{Montgomery.2020,Kleppmann.2020,Myers.2016}. \newline
+    \textit{Ziel: Minimierung des Volumens des gemeinsamen Vertrauensbereichs aller Modellparameter.}
     \compressEq
     \begin{equation} \label{eq:opt_D}
-        \sym{D_opt} = \max \left( \det(\sym{M}) \right) \Leftrightarrow \min \left( \det(\sym{M}^{-1}) \right)
+        \sym{D_opt} = \max \left( \det(\sym{M}) \right) = \min \left( \det\left(\sym{M}^{-1}\right) \right)
     \end{equation}
     \compressEq
     \\ \addlinespace
 
-    \textbf{E-Optimalität} &
-    Minimierung des maximalen Eigenwerts $\sym{eigen_val}_{\max}$ der inversen Informationsmatrix \cite{Kleppmann.2020,Boyd.2004}. \newline
-    \textit{Ziel: Worst-Case-Absicherung für den am schlechtesten geschätzten Parameter.}
-    \compressEq
-    \begin{equation} \label{eq:opt_E}
-        \sym{E_opt} = \min \left( \sym{eigen_val}_{\max}(\sym{M}^{-1}) \right)
-    \end{equation}
-    \compressEq
-    \\ \addlinespace
+    % \textbf{\textit{E}-Optimalität} &
+    % Minimierung des maximalen Eigenwerts $\sym{eigen_val}_{\max}$ der inversen Informationsmatrix \cite{Kleppmann.2020,Boyd.2004}. \newline
+    % \textit{Ziel: Worst-Case-Absicherung für den am schlechtesten geschätzten Parameter.}
+    % \compressEq
+    % \begin{equation} \label{eq:opt_E}
+    %     \sym{E_opt} = \min \left( \sym{eigen_val}_{\max}\left(\sym{M}^{-1}\right) \right)
+    % \end{equation}
+    % \compressEq
+    % \\ \addlinespace
 
-    \textbf{G-Optimalität} &
-    Minimierung der maximalen skalierten Prädiktionsvarianz $\sym{pred_var}$ im relevanten Parameterraum \cite{Montgomery.2020,Myers.2016}. \newline
+    \textbf{\textit{G}-Optimalität} &
+    Minimierung der maximalen skalierten Prädiktionsvarianz $\sym{pred_var}$ im relevanten Parameterraum \cite{Montgomery.2020,Myers.2016,Russell.2019}. \newline
     \textit{Ziel: Qualität der Vorhersage an der ungünstigsten Stelle sichern.}
     \compressEq
     \begin{equation} \label{eq:opt_G}
@@ -779,9 +788,9 @@ Eine Übersicht der einschlägigsten \textbf{Optimalitätskriterien} - oder einf
     \compressEq
     \\ \addlinespace
 
-    \textbf{I-Optimalität} &
-    Minimierung der durchschnittlichen (\textit{integrierten}) Prädiktionsvarianz über den Parameterraum - auch \textbf{U-Optimalität} im ingenieurwissenschaftlich-statistischen Sinn: \textit{uniforme} Prädiktionsvarianz \cite{Monroe.2011,Rigdon.2022}. \newline
-    \textit{Ziel: Optimale Vorhersagegüte im Mittel über den gesamten Raum.}
+    \textbf{\textit{I}-Optimalität} &
+    Minimierung der durchschnittlichen (\textit{integrierten}) Prädiktionsvarianz über den Parameterraum - auch als \textbf{\textit{U}-Optimalität} im ingenieurwissenschaftlich-statistischen Sinn bekannt: Optimierung bzgl. einer \textit{uniformen} Prädiktionsvarianz \cite{Monroe.2011,Rigdon.2022,Atkinson.2007}. \newline
+    \textit{Ziel: Optimale Vorhersagegüte (\ac{SPV}) im Mittel über den gesamten Raum - z.B. bei initialer Parametrisierung eines multivariaten Lebensdauermodells.}
     \compressEq
     \begin{equation} \label{eq:opt_I}
         \sym{I_opt} = \min \left(\frac{\sym{N}}{\int_{\sym{RR}^{\sym{k}}} d\sym{x}} \int_{\sym{RR}^{\sym{k}}} \sym{pred_var} \, d\sym{x} \right)
@@ -789,19 +798,20 @@ Eine Übersicht der einschlägigsten \textbf{Optimalitätskriterien} - oder einf
     \compressEq
     \\ \addlinespace
 
-    \textbf{S-Optimalität} &
-    Maximierung des minimalen euklidischen Abstandes zwischen zwei Versuchspunkten. \newline
-    \textit{Ziel: Gleichmäßige Raumfüllung (Space-Filling).}
-    \compressEq
-    \begin{equation} \label{eq:opt_S}
-        \sym{S_opt} = \max \left( \min_{\sym{idx_i} \neq \sym{idx_j}} \| \symsub{x}{idx_i} - \symsub{x}{idx_j} \| \right)
-    \end{equation}
-    \compressEq
-    \\ \addlinespace
 
-    \textbf{V-Optimalität} &
-    Minimierung der durchschnittlichen Prädiktionsvarianz über ein diskretes Set von $\sym{N}$ Punkten - z.B. die \ac{L-DoE}-Versuchspunkte oder sepzifische Nennlasten \cite{Goos.2011,Montgomery.2020,Myers.2010}. \newline
-    \textit{Ziel: Optimale Vorhersagegüte an spezifischen Stellen.}
+    % \textbf{S-Optimalität}       &
+    % Minimierung der Varianz der geschätzten Steigung der Regressionsfunktion an einem spezifischen Punkt $\symsub{x_loc}{idx_0}$. \newline
+    % \textit{Ziel: Maximale Präzision des Grenzeffekts (Slope) an einer kritischen Stelle.}
+    % \compressEq
+    % \begin{equation} \label{eq:opt_S_Atkinson}
+    %     \sym{S_opt} = \min_{\xi} \left( \sym{s_grad}^T \sym{M}^{-1} \sym{s_grad} \right) \text{ mit } \sym{s_grad} = \frac{\partial \sym{f}(\symsub{x_loc}{idx_0})}{\partial \symsub{x_loc}{idx_0}}
+    % \end{equation}
+    % \compressEq
+    % \\ \addlinespace
+
+    \textbf{\textit{V}-Optimalität} &
+    Minimierung der durchschnittlichen Prädiktionsvarianz über ein diskretes Set von $\sym{N}$ Punkten \cite{Goos.2011,Montgomery.2020,Myers.2010}. \newline
+    \textit{Ziel: Optimale Vorhersagegüte (\ac{SPV}) an spezifischen \sym{idx_i} Stellen - z.B. bei \ac{L-DoE}-Versuchspunkten oder spezifischen Nennlasten.}
     \compressEq
     \begin{equation} \label{eq:opt_V}
         \sym{V_opt} = \min \left( \frac{1}{\sym{N}} \sum_{\sym{idx_i}=1}^{\sym{N}} \nu(\symsub{x}{idx_i}) \right)
@@ -813,17 +823,97 @@ Eine Übersicht der einschlägigsten \textbf{Optimalitätskriterien} - oder einf
 
 
 Zur vergleichbaren Bewertung unterschiedlicher Designs unabhängig von der Skalierung werden normierte \textbf{Effizienzen} herangezogen \cite{Montgomery.2020}.
-Die \textbf{D-Effizienz }$\sym{eff_D}$ beschreibt die Güte der Parameterschätzung im Vergleich zu einem idealen orthogonalen Design gleicher Größe. Hohe Werte (nahe $100\,\%$) stehen für eine effiziente Ausnutzung der Versuche:
-\begin{equation} \label{eq:eff_D}
-    \sym{eff_D} = \left( \frac{\det(\sym{M})}{\sym{n}^{\sym{p}}} \right)^{\frac{1}{\sym{p}}} = \frac{\sym{D_opt}^{\frac{1}{\sym{p}}}}{\sym{n}}.
-\end{equation}
-Die \textbf{G-Effizienz} $\sym{eff_G}$ bewertet die Robustheit der Vorhersage. Sie setzt die theoretisch minimal erreichbare Prädiktionsvarianz ($\sym{p}/\sym{n}$) ins Verhältnis zum tatsächlichen Worst-Case-Wert $\sym{G_opt}$ des Designs:
-\begin{equation} \label{eq:eff_G}
-    \sym{eff_G} = \frac{\sym{p}}{\displaystyle \max \frac{\sym{n} \sym{Var}[\hat{\sym{y}}(\sym{x})]}{\sym{sigma_sq}}}
-\end{equation}\
+Aus Tabelle~\ref{tab:2.1_optimalitaeten} lassen sich die \textbf{\textit{A}-Effizienz} $\sym{eff_A}$, \textbf{\textit{D}-Effizienz} $\sym{eff_D}$, \textbf{\textit{G}-Effizienz} $\sym{eff_G}$, \textbf{\textit{I}-Effizienz} $\sym{eff_I}$ und \textbf{\textit{V}-Effizienz} $\sym{eff_V}$ ableiten, welche jeweils die Güte $[0,1]$ eines Versuchsplans quantifizieren - vergleiche Tabelle~\ref{tab:2.2_effizienzen}.
 
-Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. \textbf{Power}) verfügt.
-Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2017,Kleppmann.2020}.
+{
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\compressEq}{\vspace*{-0.4\baselineskip}}
+\begin{longtable}{@{}lp{0.75\textwidth}@{}}
+
+    \caption{Übersicht, Zielsetzung und mathematische Definition verschiedener Effizienzkriterien für Versuchspläne}
+    \label{tab:2.2_effizienzen}                                                                           \\
+    \toprule
+    \textbf{Kriterium}            & \textbf{Zielgröße, Beschreibung und Definition}                       \\
+    \midrule
+    \endfirsthead
+
+    \caption*{Tabelle \ref{tab:2.2_effizienzen} (\textit{Fortsetzung}): Übersicht der Effizienzkriterien} \\
+    \toprule
+    \textbf{Kriterium}            & \textbf{Zielgröße, Beschreibung und Definition}                       \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{2}{r}{\footnotesize\textit{Fortsetzung auf der nächsten Seite...}}                       \\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    \textbf{\textit{A}-Effizienz} &
+    Maß für die durchschnittliche Präzision der Regressionskoeffizienten. \cite{Myers.2016,Goos.2011}.  \newline
+    \compressEq
+    \begin{equation} \label{eq:eff_A}
+        \sym{eff_A} = 100 \cdot \frac{\sym{p}}{\text{spur} (\sym{N} \cdot \sym{M}^{-1})}
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{D}-Effizienz} &
+    Maß für den Informationsgehalt der Informationsmatrix $\sym{M}$, definiert über die Determinante, umgekehrt proportional zum Volumen des Vertrauensellipsoids der Parameterschätzwerte und durch die Potenzierung mit $1/\sym{p}$ pro Schätzparameter normiert. \cite{Myers.2016,Goos.2011}.
+    \compressEq
+    \begin{equation} \label{eq:eff_D}
+        \sym{eff_D} = 100 \cdot \frac{\det(\sym{M})^{1/\sym{p}}}{\sym{N}}
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{G}-Effizienz} &
+    Maß für die Vorhersagegüte im ungünstigsten Fall innerhalb des Versuchsraums. Da für die maximale \ac{SPV} die theoretische Untergrenze $\sym{pred_var}_{\max} \geq \sym{p}$ gilt, beschreibt dieses Kriterium das Verhältnis zwischen idealer und realisierter maximaler Varianz \cite{Myers.2016}.
+    \compressEq
+    \begin{equation} \label{eq:eff_G}
+        \sym{eff_G} = 100 \cdot \frac{\sym{p}}{\sym{pred_var}_{\max}}
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{I}-Effizienz} &
+    Maß für die durchschnittliche Vorhersagegüte über den gesamten Versuchsraum \cite{Myers.2016}.
+    \compressEq
+    \begin{equation} \label{eq:eff_I}
+        \sym{eff_I} = 100 \cdot \frac{\sym{p}}{\displaystyle \frac{1}{\int_{R} d\sym{x}} \int_{R} \sym{pred_var} \, d\sym{x}}
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{V}-Effizienz} &
+    Maß für die durchschnittliche Vorhersagegüte über ein diskretes Set von $\sym{N}$ Punkten analog zu Gleichung~\ref{eq:eff_I} \cite{Myers.2016}.
+    \compressEq
+    \begin{equation} \label{eq:eff_V}
+        \sym{eff_V} = 100 \cdot \frac{1}{\sym{N}} \sum_{\sym{idx_i}=1}^{\sym{N}} \frac{\sym{p}}{\sym{pred_var}(\symsub{x}{idx_i})}
+    \end{equation}
+    \compressEq
+    \\
+\end{longtable}
+}
+
+% Die \textbf{\textit{A}-Effizienz} $\sym{eff_A}$ misst die durchschnittliche Präzision der Parameterschätzung im Vergleich zu einem idealen orthogonalen Design gleicher Größe:
+% \begin{equation} \label{eq:eff_A}
+%     \sym{eff_A} = 100 \cdot \frac{\sym{p}}{\text{spur} (\sym{N} \cdot \sym{M}^{-1})}.
+% \end{equation}
+% Die \textbf{\textit{D}-Effizienz }$\sym{eff_D}$ beschreibt die Güte der Parameterschätzung im Vergleich zu einem idealen orthogonalen Design gleicher Größe. Hohe Werte (nahe $100\,\%$) stehen für eine effiziente Ausnutzung der Versuche:
+% \begin{equation} \label{eq:eff_D}
+%     \sym{eff_D} = 100 \cdot \left( \frac{\det(\sym{M})^{1/\sym{p}}}{\sym{N}} \right).
+% \end{equation}
+% Die \textbf{\textit{G}-Effizienz} $\sym{eff_G}$ bewertet die Robustheit der Vorhersage. Sie setzt die theoretisch minimal erreichbare Prädiktionsvarianz ($\sym{p}/\sym{n}$) ins Verhältnis zum tatsächlichen Worst-Case-Wert $\sym{G_opt}$ des Designs:
+% \begin{equation} \label{eq:eff_G}
+%     \sym{eff_G} = 100 \cdot \frac{\sym{p}}{\sym{pred_var}_{\max}}.
+% \end{equation}\
+
+
+\subsubsection{Signifikanz und Trennschärfe}
+Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. $\sym{power}$) verfügt.
+Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens (vergleiche \textbf{\sym{t}-Statistik}, \textbf{Signal-to-Noise Ratio}, \textbf{Signifikanztests} nach \textcite{Kleppmann.2020,Montgomery.2020,Goos.2011}) korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2017,Kleppmann.2020}.
 Insofern ist ein Effekt in praktischem Umfeld natürlich problemabhängig (Streuungscharakteristik der Lebensdauer, realisierbare Stichprobengröße, etc.) und meist von Bedeutung für $\sym{Eff} \geq 2\sym{sigma}$, wobei Trennschärfewerte $\geq 80\%$ als befriedigend gelten \cite{Rigdon.2022,Montgomery.2020}.
 Insbesondere bei reduzierten Versuchsplänen und unter dem Einfluss stochastischer Lebensdauerstreuung ist die Power-Analyse jedoch essenziell, um das Risiko von falsch-negativen Schlussfolgerungen zu minimieren.
 Letztendlich kann die Trennschärfe somit als Garantiemetrik verstanden werden, die sicherstellt, dass ein geplanter Versuchsaufbau in der Lage ist, Effekte von praktischer Relevanz zu detektieren \cite{Cohen.1988,Myers.2016} - was vornehmlich in Bezug auf Lebensdauertests aufgrund genannter wirtschaftlicher Randbedingungen von hoher Bedeutung ist.
@@ -850,19 +940,53 @@ Da für diese komplexen Verteilungsmodelle bei kleinen Stichprobenumfängen $\sy
 Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.\,B. $\symsub{n}{idx_MC}=10^4$ Simulationsläufe).
 Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht bzw. mit Streuung überlagert und/oder zensiert.
 Anschließend erfolgt die Modellbildung und Hypothesenprüfung.
-Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant ($\text{p-Wert} < \sym{alpha}$) erkannt wird, entspricht der geschätzten $\sym{power}$ des Designs.
+Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant ($\sym{p-Wert} < \sym{alpha}$) erkannt wird, entspricht der geschätzten $\sym{power}$ des Designs.
+
+\subsection{Statistische Modellbildung} \label{subsec:modellbildung}
+Die statistische Modellbildung transformiert die durch den Versuchsplan generierte Datenbasis in einen funktionalen Zusammenhang zwischen den Einflussfaktoren $\sym{x}$ und der Lebensdauerantwort.
+Aufgrund der in Abschnitt~\ref{sec:zuv} dargelegten Eigenschaften von Lebensdauerdaten (Nicht-Normalverteilung, Zensierung) sind klassische Regressionsverfahren (\ac{OLS}) hier nicht zulässig.
+Stattdessen kommt das Framework der \textbf{Generalisierten Linearen Modelle} (\ac{GLM}) zur Anwendung, welches die lineare Prädiktion mit der zugrundeliegenden Weibull-Verteilung verknüpft \cite{Myers.2010,Rigdon.2022}.
+
+Der Prozess der Modellierung gliedert sich hierbei in die folgenden methodischen Schritte:
+
+\textbf{1. Modellauswahl (Weibull-GLM):}
+Das Kernstück bildet die Verknüpfung der linearen Prädiktorfunktion $\eta = \sym{x}'\sym{Beta}$ mit dem charakteristischen Lebensdauerparameter $\sym{T}$ über eine logarithmische Link-Funktion.
+Das \textbf{Weibull-GLM} (auch Cox-Weibull-Modell) modelliert die Abhängigkeit der Lebensdauer $\sym{T}(\sym{x})$ von den Stressfaktoren (z.\,B. Temperatur, Last) üblicherweise als Log-Linear-Beziehung (Arrhenius- oder Inverse-Power-Law-Ansatz):
+\begin{equation} \label{eq:glm_link}
+    \ln(\sym{T}) = \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} + \dots + \sym{epsilon}.
+\end{equation}
+Der Formparameter $\sym{b}$ wird hierbei häufig als konstant über den Versuchsraum angenommen (konstante Ausfallmechanik), kann jedoch in erweiterten Modellen ebenfalls als funktionale Abhängigkeit modelliert werden \cite{Meeker.2022}.
+
+\textbf{2. Parameterschätzung:}
+Die Bestimmung des unbekannten Koeffizientenvektors $\hat{\sym{Beta}}$ erfolgt mittels \textbf{\ac{MLE}} auf Basis der in Abschnitt~\ref{subsubsec:mle} definierten Log-Likelihood-Funktion $\sym{Lambda}$ für zensierte Daten.
+Da für dieses Gleichungssystem keine geschlossene analytische Lösung existiert, werden iterative numerische Optimierungsverfahren eingesetzt.
+Neben klassischen Gradientenverfahren (Newton-Raphson) haben sich hier insbesondere direkte Suchverfahren wie \textbf{Pattern Search} als robust erwiesen, um das globale Maximum der Likelihood-Funktion auch bei flachen Wirkungsflächen zuverlässig zu identifizieren \cite{Qiao.1994}.
+
+\textbf{3. Signifikanzprüfung:}
+Zur Selektion der relevanten Modellterme (Haupteffekte, Wechselwirkungen) wird der \textbf{Likelihood-Ratio-Test} (\ac{LR-Test}) herangezogen.
+Er vergleicht die Güte eines vollständigen Modells mit der eines reduzierten Modells, indem die Differenz ihrer Log-Likelihood-Werte (die \textit{Devianz}) bewertet wird.
+Der \ac{LR-Test} gilt bei kleinen bis mittleren Stichprobenumfängen, wie sie in der Lebensdauererprobung üblich sind, gegenüber dem approximativen Wald-Test als überlegen und präziser hinsichtlich der Einhaltung des Signifikanzniveaus $\sym{alpha}$ \cite{Rigdon.2022,Nelson.1990}.
+
+\textbf{4. Varianzschätzung und Unsicherheit:}
+Die Präzision der geschätzten Koeffizienten wird über die \textbf{Fisher-Informationsmatrix} quantifiziert.
+Die Invertierung der beobachteten Fisher-Information $\symsub{FIM}{idx_O}$ an der Stelle der \ac{MLE}-Lösung liefert die asymptotische Varianz-Kovarianz-Matrix $\hat{\sym{V}}$ (vgl. Gleichung~\ref{eq:var_covar}).
+Daraus leiten sich die Standardfehler und die \textit{Wald}-Vertrauensbereiche (Fisher-CIs) für die Regressionskoeffizienten ab, welche die Grundlage für die Berechnung der Unsicherheitsbänder in der Prädiktion bilden.
+
+\textbf{5. Modellprädiktion und Zuverlässigkeit:}
+Das final parametrisierte Modell erlaubt die \textbf{Prädiktion} der charakteristischen Lebensdauer $\hat{\sym{y}} = \hat{\sym{T}}(\sym{x}_0)$ an jedem beliebigen Punkt $\sym{x}_0$ des Designraums (Inter- und Extrapolation).
+Durch Einsetzen in die Weibull-Verteilungsfunktion (Gleichung~\ref{eq:weibull_cdf}) resultiert die geschätzte \textbf{Zuverlässigkeitsfunktion} $\hat{\sym{R}}(\sym{t}|\sym{x}_0)$.
+Die zugehörigen Vertrauensbereiche für $\hat{\sym{R}}$ oder spezifische Quantile $\hat{\sym{t}}_q$ werden unter Berücksichtigung der Kovarianzen in $\hat{\sym{V}}$ mittels Delta-Methode approximiert, um die statistische Sicherheit der Aussage für den Anwender transparent auszuweisen.
 
 
-\subsection{Statistische Modellbildung} \label{subsec:model}
 
 \begin{itemize}
-    \item -> todo next: \newline https://www.researchgate.net/profile/Steven-Rigdon/research \newline https://www.researchgate.net/profile/Rong-Pan-7/research \newline https://www.researchgate.net/scientific-contributions/Eric-M-Monroe-70325879 \newline \cite[S.314]{Rigdon.2022}: UC Optimal Test Deisgns
+    \item \colorbox{yellow}{\cite[Chapter. 27]{Cui.2021}}
     \item \colorbox{yellow}{GLL-Weibull}
     \item \colorbox{yellow}{LR-Ratio}
     \item \colorbox{yellow}{Varianzen}
     \item \colorbox{yellow}{Modellaufbau}
     \item Extrapolation: bedarf in der Praxis / oder sind doch dann mal VPs verfügbar und das modell wird einfach erweitert
-    \item Optimalitäten
+
     \item Risiduen (Cox-Snell \cite{Rigdon.2022})
 \end{itemize}
 \begin{itemize}
@@ -873,4 +997,4 @@ Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als sig
 \end{itemize}
 
 
-\cite{RisbergEllekjr.1998, Bisgaard.1992,Bisgaard.2011,Myers.2016,Montgomery.2020,Zahran.2003,GiovannittiJensen.1989,Goos.2011,Hinkelmann.2012,Khuri.2006,Rittmaier.2025,Johnson.2011,Donev.2004,G.E.P.Box.1951,Ardakani.2011,Jones.2012,Jones.2021,Rigdon.2022,Wu.2021,Khuri.2006,Escobar.1995,Modarres.2017,Ahn.2015,Rasch.2018,Xu.2002,Wald.1943,Rencher.2008,Box.2007,Kleppmann.2020,Siebertz.2017,Fisher.1935,Bisgaard.1997,Myers.2010,Box.1988}
+\cite{RisbergEllekjr.1998,Bisgaard.2011,Zahran.2003,GiovannittiJensen.1989,Hinkelmann.2012,Khuri.2006,Johnson.2011,Donev.2004,G.E.P.Box.1951,Ardakani.2011,Jones.2012,Jones.2021,Wu.2021,Khuri.2006,Escobar.1995,Modarres.2017,Ahn.2015,Rasch.2018,Xu.2002,Wald.1943,Rencher.2008,Box.2007,Fisher.1935,Myers.2010,Box.1988}

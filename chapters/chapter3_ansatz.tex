@@ -1,7 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Kapitel 3 - Ansatz %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter{Ansätze zur Effizienzsteigerung in der Planung von ausfallbasierten Lebensdauertests mit mehreren Faktoren} \label{chap:ansatz}
 
 \section{Bewertung des Standes der Forschung und Technik}
@@ -12,8 +11,9 @@
     \item Khuri - 2006 - Design Issues for Generalized Linear Models A Review
     \item Yang - 2011 - OPTIMAL DESIGNS FOR GENERALIZED LINEAR MODELS WITH MULTIPLE DESIGN VARIABLES
     \item \cite[Seite 314]{Rigdon.2022}
-    \item Monroe, E.M., Pan, R., Anderson-Cook, C. et al. (2011). A generalized linear model approach to designing
-accelerated life test experiments. Quality and Reliability Engineering International 27: 595-607.
+    \item Monroe, E.M., Pan, R., Anderson-Cook, C. et al. (2011). A generalized linear model approach to designing accelerated life test experiments. Quality and Reliability Engineering International 27: 595-607.
+    \item \cite[S.69:]{Russell.2019}: The minimum number is p, the number of parameters. This is intuitively ob-vious. At least two separate points are needed to estimate the two parameters,beta 0 and 1, of a straight line, and at least three separate points are required to 0, beta 1 and beta 2, of a quadratic. See Figure 3.2 to recall the situation that arises when there are only two points for a quadratic.
+          The maximum number of support points necessary for an optimal design canbe shown to be p(p + 1)=2 + 1, using Caratheodory's Theorem. The proof is beyond the scope of this book, but is given in Rockafellar (1970, p. 155) or Silvey (1980, p. 77). Pukelsheim (1993, p. 190) showed that, if our interest is in estimating all elements of the parameter vector beta, then this upper limit can be reduced to p(p + 1)=2.
 \end{itemize}
 
 \subsubsection{Besonderheiten der Effizienz in der Lebensdauerprüfung}
@@ -34,5 +34,35 @@ Zudem muss die \textbf{zeitliche Effizienz} berücksichtigt werden.
 Ein Versuchsplan gilt im Kontext der Lebensdaueranalyse nur dann als effizient, wenn er unter Berücksichtigung der Zensierungsmechanismen (Typ-I oder Typ-II) die erwartete Anzahl an Ausfällen maximiert oder die \textbf{erwartete Testdauer} (Expected Test Duration, ETD) bei gegebener Präzision minimiert.
 Die Varianz der Schätzung wird hierbei maßgeblich durch die Anzahl der ausgefallenen Einheiten getrieben, nicht allein durch die Stichprobengröße $\sym{n}$ \cite{Nelson.2005}.
 
+
+\subsubsection{Abgrenzung zu weiteren Themen in der \ac{RSM}} \label{subsubsec:abgrenzung}
+
+\begin{itemize}
+    \item \textbf{\ac{GLM} Mixed Models}, \textbf{Random Effects} (Generalized Linear Mixed Models) \cite[Myers 2010 Kap.7.1.2]{Myers.2010}
+    \item \textbf{Robuste Versuchspläne} (Robust Designs):
+    \item \textbf{Adaptive Versuchspläne} (Adaptive Designs):
+    \item \textbf{Bayesian Designs}, z.B. in \textcite{Englert.2012}
+    \item \textbf{Sequential Designs}:
+    \item \textbf{Optimalität für Vorhersagegüte}:
+    \item \textbf{Optimalität für Klassifikationsaufgaben}:
+    \item \textbf{Optimalität für multiple Zielgrößen}:
+    \item \textbf{Robuste Optimale Versuchspläne} (Robust Optimal Designs):
+    \item \textbf{Kombinierte Optimalitätskriterien} (Compound Optimal Designs):
+    \item \textbf{Optimale Versuchspläne für Mischmodelle} (Optimal Designs for Mixed Models):
+    \item \textbf{Optimale Versuchspläne für räumliche Modelle} (Optimal Designs for Spatial Models):
+    \item \textbf{Optimale Versuchspläne für Zeitreihenmodelle} (Optimal Designs for Time Series Models):
+    \item \textbf{Optimale Versuchspläne für nichtparametrische Modelle} (Optimal Designs for Nonparametric Models):
+    \item \textbf{Optimale Versuchspläne für Hochdimensionale Modelle} (Optimal Designs for High-Dimensional Models):
+    \item \textbf{Optimale Versuchspläne für dynamische Systeme} (Optimal Designs for Dynamic Systems):
+    \item \textbf{Optimale Versuchspläne für Netzwerke} (Optimal Designs for Networks):
+    \item \textbf{Optimale Versuchspläne für Big Data Anwendungen} (Optimal Designs for Big Data Applications):
+    \item \textbf{Optimale Versuchspläne für maschinelles Lernen} (Optimal Designs for Machine Learning): \textcite{Colak.2024}
+    \item \textbf{Optimale Versuchspläne für Künstliche Intelligenz} (Optimal Designs for Artificial Intelligence):
+    \item \textbf{Optimale Versuchspläne für Quantencomputing} (Optimal Designs for Quantum Computing):
+    \item \textbf{Optimale Versuchspläne für Blockchain-Technologien} (Optimal Designs for Blockchain Technologies):
+    \item \textbf{Optimale Versuchspläne für Internet der Dinge (IoT)} (Optimal Designs for Internet of Things (IoT)):
+    \item \textbf{Optimale Versuchspläne für Cyber-Physische Systeme} (Optimal Designs for Cyber-Physical Systems):
+    \item \textbf{Optimale Versuchspläne für Nachhaltigkeit und Umweltwissenschaften} (Optimal Designs for Sustainability and Environmental Sciences):
+\end{itemize}
 
 \section{Forschungsfragen und Aufbau der Arbeit}
