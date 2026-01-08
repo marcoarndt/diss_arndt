@@ -943,18 +943,77 @@ Anschließend erfolgt die Modellbildung und Hypothesenprüfung.
 Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant ($\sym{p-Wert} < \sym{alpha}$) erkannt wird, entspricht der geschätzten $\sym{power}$ des Designs.
 
 \subsection{Statistische Modellbildung} \label{subsec:modellbildung}
-Die statistische Modellbildung transformiert die durch den Versuchsplan generierte Datenbasis in einen funktionalen Zusammenhang zwischen den Einflussfaktoren $\sym{x}$ und der Lebensdauerantwort.
+Die statistische Modellbildung transformiert die durch den Versuchsplan generierte Datenbasis in einen funktionalen, empirisch basierten Zusammenhang zwischen den Einflussfaktoren $\symsub{x}{idx_i}$ und der Lebensdauerantwort.
 Aufgrund der in Abschnitt~\ref{sec:zuv} dargelegten Eigenschaften von Lebensdauerdaten (Nicht-Normalverteilung, Zensierung) sind klassische Regressionsverfahren (\ac{OLS}) hier nicht zulässig.
-Stattdessen kommt das Framework der \textbf{Generalisierten Linearen Modelle} (\ac{GLM}) zur Anwendung, welches die lineare Prädiktion mit der zugrundeliegenden Weibull-Verteilung verknüpft \cite{Myers.2010,Rigdon.2022}.
+Stattdessen kommt das Framework der \ac{GLM} zur Anwendung, welches die lineare Prädiktion mit der zugrundeliegenden Verteilung verknüpft \cite{Yang.2007,Myers.2010,Rigdon.2022}.
+Hinsichtlich der Modellauswahl greifen klassische Ansätze der Versuchsplanung oft auf Potenztransformationen der Antwortvariablen zurück - wie die \textbf{Box-Cox-Transformation} nach Gleichung~\eqref{eq:box_cox} -, um Varianzhomogenität und Normalverteilung zu approximieren \cite{Box.1964,Montgomery.2021}:
+\begin{equation} \label{eq:box_cox}
+    \symsub{y}{idx_i}^{(\symsub{eigen_val}{idx_BC})} =
+    \begin{cases}
+        \frac{\symsub{y}{idx_i}^{\symsub{eigen_val}{idx_BC}} - 1}{\symsub{eigen_val}{idx_BC} \dot{\sym{y}}^{\symsub{eigen_val}{idx_BC}-1}}, & \text{für } \symsub{eigen_val}{idx_BC} \neq 0, \\
+        \dot{\sym{y}}\ln(\symsub{y}{idx_i}),                                                                                                & \text{für } \symsub{eigen_val}{idx_BC} = 0.
+    \end{cases}
+\end{equation}
+Im Kontext der expliziten Lebensdaueranalyse ist dieser generische Ansatz jedoch weniger gebräuchlich, da die physikalisch motivierte Verteilungsannahme (z.,B. Weibull) bereits eine inhärente Transformation der Lebensdauerzeit impliziert.
+In der Zuverlässigkeitstechnik konkurrieren stattdessen zwei spezifische Modellierungsansätze: das \textbf{Proportional-Hazard-Modell} (PH-Modell, z.B. Cox-Regression) und das \textbf{Log-Location-Scale-Modell}.
+Während PH-Modelle insbesondere in der Biostatistik dominieren und ihre Stärke bei der Abbildung zeitabhängiger Kovariaten ausspielen, fokussiert sich die ingenieurwissenschaftliche Praxis - maßgeblich gestützt durch \textcite{Meeker.2022} und \textcite{Yang.2007} - auf Log-Location-Scale-Modelle.
+Obwohl für die Weibull-Verteilung eine mathematische Äquivalenz zwischen beiden Ansätzen besteht, sprechen drei fundamentale Gründe für die Verwendung des Log-Location-Scale-Ansatzes:
+\begin{enumerate}
+    \item \textbf{Physikalischer Bezug:} Gängige physikalische Beschleunigungsmodelle (Arrhenius, Inverses Potenzgesetz) beschreiben die Änderung der \textit{Zeit} bis zum Ausfall ($\ln(\sym{T})$) und nicht der Ausfallrate. Die Log-Linearisierung dieser Gesetze führt direkt auf die Regressionsgleichung der Location-Scale-Modelle.
+    \item \textbf{Universalität der Auswertung:} Das Modell bietet einen einheitlichen mathematischen Rahmen, der nicht nur für die Weibull-Verteilung, sondern identisch auch für die Lognormal-Verteilung und Normalverteilung gültig ist. Das PH-Modell hingegen ist für Lognormal-Verteilungen mathematisch nicht geschlossen anwendbar.
+    \item \textbf{Fokus auf Lebensdauer-Quantile:} Im Engineering und \ac{DfR} liegt das Interesse primär auf der Prädiktion von Ausfallzeiten für geringe Ausfallanteile (z.,B. $\sym{t}_{10}$). Diese Größen sind direkte Ergebnisse der Location-Scale-Gleichung, während sie im PH-Modell nur indirekt über die Invertierung der Hazard-Funktion zugänglich sind.
+\end{enumerate}
+Folglich wird die Lebensdauer $\sym{tau}$ als Log-Location-Scale-Regression modelliert.
+Hierbei wird der Logarithmus der Lebensdauer $\ln(\sym{tau})$ als Summe einer deterministischen Funktion der Kovariaten $\sym{mu}(\sym{x})$ und eines skalierten Fehlerterms $\sym{epsilon}$ beschrieben:
+\begin{equation} \label{eq:log_location_scale}
+    \ln(\sym{tau}) = \sym{mu}(\sym{x}) + \sym{sigma} \cdot \sym{epsilon}.
+\end{equation}
+Der Parameter $\sym{mu}(\sym{x})$ entspricht dem \textbf{Location-Parameter} und bildet die Abhängigkeit der charakteristischen Lebensdauer von den Stressfaktoren $\symsub{x}{idx_j}$ ab (vgl. Gleichung~\ref{eq:linear_std_model}):
+\begin{equation} \label{eq:mu_regression}
+    \sym{mu}(\sym{x}) = \ln(\sym{T}(\sym{x})) = \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} + \sum \sum \sym{beta}_{\sym{idx_j}\sym{idx_l}} \symsub{x}{idx_j} \symsub{x}{idx_l}.
+\end{equation}
+Der Parameter $\sym{sigma}$ ist der \textbf{Skalenparameter} des Fehlers und beschreibt die Streuung.Im Falle der Weibull-Verteilung korrespondiert dieser direkt mit dem Formparameter durch $\sym{sigma} = 1/\sym{b}$, wobei $\sym{epsilon}$ der Standard-Gumbel-Verteilung (Extremwertverteilung des Typs I) folgt \cite{Meeker.2022}.
+Standardmäßig wird $\sym{sigma}$ als konstant über den Versuchsraum angenommen, kann jedoch in erweiterten Modellen ebenfalls als Funktion der Stressfaktoren modelliert werden.
+Der Prozess der Modellierung gliedert sich zur Anwendung dieses Frameworks analog zu Abschnitt~\ref{subsec:schätzer} in die methodischen Schritte: \textbf{(1) Modellauswahl}, \textbf{(2) Parameterschätzung} mittels \ac{MLE}, \textbf{(3) Signifikanztest}, \textbf{(4) Varianzschätzung} sowie \textbf{(5) Modellprädiktion} der Zuverlässigkeit mit Aussagesicherheit \cite{Meeker.2022,Rigdon.2022,Nelson.1990}.
 
-Der Prozess der Modellierung gliedert sich hierbei in die folgenden methodischen Schritte:
+% Aufgrund der in Abschnitt~\ref{sec:zuv} dargelegten Eigenschaften von Lebensdauerdaten (Nicht-Normalverteilung, Zensierung) sind klassische Regressionsverfahren (\ac{OLS}) wie schon geschildert hier nicht zulässig.
+% Stattdessen kann das Framework der \ac{GLM} zur Anwendung kommen, welches die lineare Prädiktion mit der zugrundeliegenden Weibull-Verteilung verknüpft: \textbf{Weibull-\ac{GLM}} \cite{Yang.2007,Myers.2010,Rigdon.2022}.
+% Der Prozess der Modellierung gliedert sich hierbei analog zu Abschnitt~\ref{subsec:schätzer} in die  methodischen Schritte: \textbf{(1) Modellauswahl}, \textbf{(2) Parameterschätzung}, \textbf{(3) Signifikanztest}, \textbf{(4) Varianzschätzung und Unsicherheit} sowie \textbf{(5) Modellprädiktion und Zuverlässigkeitsschätzung mit Aussagesicherheit} \cite{Meeker.2022,Rigdon.2022,Nelson.1990}.
+
+% Wird also für die Lebensdauerverteilung die Weibull-Verteilung (Abschnitt~\ref{subsec:paramleben}) angenommen, so ergibt sich für $\sym{idx_j}=0,...,\sym{k}$ betrachtete Parameter aus beispielsweise Gleichung~\ref{eq:quadric_std_model} und $\sym{n}$ Beobachtungen analog zu Gleichung~\ref{eq:weibull_pdf} die charakteristische Lebensdauer als Funktion der Einflussfaktoren $\symsub{x}{idx_i}$ und des unbekannten Koeffizientenvektors $\hat{\sym{Beta}}$:
+% \begin{equation} \label{eq:glm_link}
+%     \ln(\sym{T}) = \hat{\sym{y}} = \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} + \dots + \sym{epsilon}.
+% \end{equation}
+% Hinsichtlich der \textbf{Modellauswahl} ist dabei im Vorfeld zu prüfen, ob die funktionale Beziehung zwischen $\sym{y}$ und $\sym{x}$ linearisiert werden muss.
+% Klassische Ansätze der Versuchsplanung greifen hierzu oft auf Potenztransformationen der Antwortvariablen, wie die \textbf{Box-Cox-Transformation}, zurück, um Varianzhomogenität und Normalverteilung zu approximieren, vgl. die Arbeiten von \textcite{Box.1964,Montgomery.2021}.
+% Als Teil der Modellparameter $\sym{theta}$ wird dabei der Transformationsparameter $\symsub{eigen_val}{idx_BC}$ geschätzt, welcher die optimale Transformation der Antwortvariable spezifiziert.
+% So wird die Zielvariable durch eine Potenztransformation der Form $\sym{y}^{(\symsub{eigen_val}{idx_BC})}$ oder $\ln(\sym{y})$ (für $\symsub{eigen_val}{idx_BC} = 0$ mit geometrischem Mittelwert der Beobachtung $\dot{\sym{y}} = \exp \left[ \frac{1}{\sym{n}} \sum_{\sym{idx_i}=1}^{\sym{n}} \ln(\symsub{y}{idx_i}) \right]$) transformiert, um die Modellannahmen bestmöglich zu erfüllen:
+% \begin{equation} \label{eq:box_cox}
+%     \symsub{y}{idx_i}^{(\symsub{eigen_val}{idx_BC})} =
+%     \begin{cases}
+%         \frac{\symsub{y}{idx_i}^{\symsub{eigen_val}{idx_BC}} - 1}{\symsub{eigen_val}{idx_BC} \dot{\sym{y}}^{\symsub{eigen_val}{idx_BC}-1}}, & \text{für } \symsub{eigen_val}{idx_BC} \neq 0, \\
+%         \dot{\sym{y}}\ln(\symsub{y}{idx_i}),                                                                                                & \text{für } \symsub{eigen_val}{idx_BC} = 0.
+%     \end{cases}
+% \end{equation}
+% Im Kontext der expliziten Lebensdauer-Datenanalyse ist dieser Ansatz jedoch weniger gebräuchlich, da die Verteilungsannahme (Weibull, Lognormal, etc.) bereits eine inhärente Transformation der Lebensdauerzeit impliziert.
+% In der Zuverlässigkeitstechnik konkurriert dieser parametrische Ansatz daher unter anderem mit \textbf{Proportional-Hazard-Modellen} (PH-Modelle, z.\,B. via Cox-Regression nach \textcite{Cox.1972}), welche die multiplikative Wirkung von Kovariaten auf die Ausfallrate $\sym{lambda}$ statt auf die Lebensdauerzeit modellieren \cite{Meeker.2022}.
+% Die Weibulldichte mit Formparameter $\sym{b}$ und Skalenparameter $\sym{T}$ nach Gleichung~\ref{eq:glm_link} ergibt sich dabei zu:
+% \begin{equation} \label{eq:weibull_pdf}
+%     \sym{f}(\sym{t},\sym{X}) = \sym{eigen_val}(\sym{t}, \sym{X}) \cdot \sym{R}(\sym{t}, \sym{X}) = \sym{b} \cdot \sym{t}^{\sym{b}-1} \cdot e^{\left[ \sym{y} - \sym{t}^{\sym{b}} e^{\sym{y}} \right]}
+% \end{equation}
+
+
+
+
+
+Das hier fokussierte \textbf{Weibull-\ac{GLM}} nimmt eine Sonderstellung ein: Es lässt sich sowohl als PH-Modell als auch als \textbf{Accelerated Failure Time}-Modell (AFT) interpretieren.
+Da im Engineering die Prädiktion konkreter Ausfallzeiten (Quantile) im Vordergrund steht, wird der AFT-Ansatz gemäß Gleichung~\ref{eq:glm_link} favorisiert, bei dem die Kovariaten die Zeitskala der Lebensdauerverteilung direkt stauchen oder strecken \cite{Rigdon.2022,Nelson.1990}.
+
 
 \textbf{1. Modellauswahl (Weibull-GLM):}
 Das Kernstück bildet die Verknüpfung der linearen Prädiktorfunktion $\eta = \sym{x}'\sym{Beta}$ mit dem charakteristischen Lebensdauerparameter $\sym{T}$ über eine logarithmische Link-Funktion.
 Das \textbf{Weibull-GLM} (auch Cox-Weibull-Modell) modelliert die Abhängigkeit der Lebensdauer $\sym{T}(\sym{x})$ von den Stressfaktoren (z.\,B. Temperatur, Last) üblicherweise als Log-Linear-Beziehung (Arrhenius- oder Inverse-Power-Law-Ansatz):
-\begin{equation} \label{eq:glm_link}
-    \ln(\sym{T}) = \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} + \dots + \sym{epsilon}.
-\end{equation}
+
 Der Formparameter $\sym{b}$ wird hierbei häufig als konstant über den Versuchsraum angenommen (konstante Ausfallmechanik), kann jedoch in erweiterten Modellen ebenfalls als funktionale Abhängigkeit modelliert werden \cite{Meeker.2022}.
 
 \textbf{2. Parameterschätzung:}

@@ -208,6 +208,7 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_C}{type=indices, name={\ensuremath{\textnormal{C}}}, description={Zentralpunkt}}
 \newglossaryentry{idx_error}{type=indices, name={\ensuremath{\textnormal{error}}}, description={Fehler 2. Art (Wahrscheinlichkeit für ein falsch-negatives Ergebnis)}}
 \newglossaryentry{idx_MC}{type=indices, name={\ensuremath{\textnormal{MC}}}, description={Monte-Carlo-Simulation}}
+\newglossaryentry{idx_BC}{type=indices, name={\ensuremath{\textnormal{BC}}}, description={Box-Cox-Transformation}}
 
 % ===========================================================================
 % 1. LATEINISCHE SKALARE (Variablen & Parameter)
@@ -268,7 +269,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Ausfallrate (zeitabhängig)}, 
     text={\ensuremath{\lambda(t)}}]{lambda}{\ensuremath{\lambda(t)}}
 \glsxtrnewsymbol[type=formulas, description={Eigenvektor}, text={\ensuremath{\mathbf{v}}}]{eigen_vec}{\ensuremath{\mathbf{v}}}
-\glsxtrnewsymbol[type=formulas, description={Eigenwert (einer Matrix)},   text={\ensuremath{\lambda}}]{eigen_val}{\ensuremath{\lambda}}
+\glsxtrnewsymbol[type=formulas, description={Eigenwert (einer Matrix) \newline Transformationsparameter (Box-Cox)},   text={\ensuremath{\lambda}}]{eigen_val}{\ensuremath{\lambda}}
 \glsxtrnewsymbol[type=formulas, description={Log-Likelihood-Funktion}, text={\ensuremath{\Lambda}}]{Lambda}{\ensuremath{\Lambda(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Erwartungswert der Lebensdauer (theoretisch)}, text={\ensuremath{\mu}}]{mu}{\ensuremath{\mu}}
 \glsxtrnewsymbol[type=formulas, description={Prädiktionsvarianz an der Stelle $\symsub{x_loc}{idx_0}$ (skaliert)}, text={\ensuremath{\nu(\symsub{x_loc}{idx_0})}}]{pred_var}{\ensuremath{\nu(\symsub{x_loc}{idx_0})}}
@@ -348,22 +349,22 @@ Thanks for your service.
 \addchap{Kurzfassung/Abstract}
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 \todo{
-    \begin{itemize}
-        \item
-        \item Abstract / Kurzfassung / Danksagung
-        \item Bilder prüfen
-        \item "mark changes after your Oral presentation for review"
-        \item "textcolor blue" in definitions ändern
-        \item "Print" Funktion aktivieren
-        \item "nocite" Funktion deaktivieren in main Z.269
-    \end{itemize}
+  \begin{itemize}
+    \item
+    \item Abstract / Kurzfassung / Danksagung
+    \item Bilder prüfen
+    \item "mark changes after your Oral presentation for review"
+    \item "textcolor blue" in definitions ändern
+    \item "Print" Funktion aktivieren
+    \item "nocite" Funktion deaktivieren in main Z.269
+  \end{itemize}
 }\
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 
 \cleardoublepage
 \ifpdf
-    \phantomsection
-    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+  \phantomsection
+  \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 
