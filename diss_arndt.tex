@@ -185,8 +185,10 @@ isbn=true]{biblatex}
 \newacronym[plural=CCDs, longplural=Central Composite Designs]{CCD}{CCD}{Central Composite Design}
 \newacronym{SPV}{SPV}{Scaled Prediction Variance}
 \newacronym{UPV}{UPV}{Unscaled Prediction Variance}
+\newacronym{PH}{PH}{Proportional Hazard}
 \newacronym[plural=VIFs, longplural=Varianz-Inflations-Faktoren]{VIF}{VIF}{Varianz-Inflations-Faktor}
 \newacronym[plural=GLMs, longplural=Generalized Linear Models]{GLM}{GLM}{Generalized Linear Model}
+\newacronym[plural=GLLs, longplural=Generalized Log-Linears]{GLL}{GLL}{Generalized Log-Linear}
 \newacronym[plural=LR-Tests, longplural=Likelihood-Ratio Tests]{LR-Test}{LR-Test}{Likelihood-Ratio Test}
 
 % Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
@@ -202,10 +204,12 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_O}{type=indices, name={\ensuremath{\textnormal{O}}}, description={Beobachtet (Observed)}}
 \newglossaryentry{idx_u}{type=indices, name={\ensuremath{u}}, description={Untere Grenze des Vertrauensbereichs}}
 \newglossaryentry{idx_o}{type=indices, name={\ensuremath{o}}, description={Obere Grenze des Vertrauensbereichs}}
+\newglossaryentry{idx_z}{type=indices, name={\ensuremath{z}}, description={Zensierungsindikator}}
 \newglossaryentry{idx_F}{type=indices, name={\ensuremath{\textnormal{F}}}, description={Faktorieller Punkt}}
 \newglossaryentry{idx_S}{type=indices, name={\ensuremath{\textnormal{S}}}, description={Sternpunkt}}
 \newglossaryentry{idx_D}{type=indices, name={\ensuremath{\textnormal{D}}}, description={Sternpunktabstand CCD}}
 \newglossaryentry{idx_C}{type=indices, name={\ensuremath{\textnormal{C}}}, description={Zentralpunkt}}
+\newglossaryentry{idx_V}{type=indices, name={\ensuremath{\textnormal{V}}}, description={Transformation}}
 \newglossaryentry{idx_error}{type=indices, name={\ensuremath{\textnormal{error}}}, description={Fehler 2. Art (Wahrscheinlichkeit für ein falsch-negatives Ergebnis)}}
 \newglossaryentry{idx_MC}{type=indices, name={\ensuremath{\textnormal{MC}}}, description={Monte-Carlo-Simulation}}
 \newglossaryentry{idx_BC}{type=indices, name={\ensuremath{\textnormal{BC}}}, description={Box-Cox-Transformation}}
@@ -216,6 +220,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Weibull-Formparameter (Weibull-Modul)}, text={\ensuremath{b}}]{b}{\ensuremath{b}}
 \glsxtrnewsymbol[type=formulas, description={Cook's Distanz}, text={\ensuremath{D}}]{D}{\ensuremath{D}}
 \glsxtrnewsymbol[type=formulas, description={Effekt}, text={\ensuremath{E}}]{Eff}{\ensuremath{E}}
+\glsxtrnewsymbol[type=formulas, description={Erwartungswert}, text={\ensuremath{\textit{E}}}]{Er}{\ensuremath{\textit{E}(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Dichtefunktion}, text={\ensuremath{f}}]{f}{\ensuremath{f(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Ausfallwahrscheinlichkeit, Verteilungsfunktion}, text={\ensuremath{F}}]{F}{\ensuremath{F(\cdot)}}
 \glsxtrnewsymbol[type=formulas, description={Abgeleitete Funktion (für Delta-Methode)}, text={\ensuremath{g}}]{g_func}{\ensuremath{g(\cdot)}}
@@ -231,6 +236,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Quantilwert}, text={\ensuremath{q}}]{q}{\ensuremath{q}}
 \glsxtrnewsymbol[type=formulas, description={Zuverlässigkeit}]{R}{\ensuremath{R}}
 \glsxtrnewsymbol[type=formulas, description={Studentisiertes Residuum}, text={\ensuremath{r}}]{resid}{\ensuremath{r}}
+\glsxtrnewsymbol[type=formulas, description={Modellparameter, Schätzung}, text={\ensuremath{\theta}}]{thet}{\ensuremath{\theta}}
 \glsxtrnewsymbol[type=formulas, description={Empirische Standardabweichung (von \sym{x})}, text={\ensuremath{s}}]{s}{\ensuremath{s}}
 \glsxtrnewsymbol[type=formulas, description={Empirische Varianz (von \sym{x})}, text={\ensuremath{s^2}}]{s_sq}{\ensuremath{s^2}}
 \glsxtrnewsymbol[type=formulas, description={Zeit, Lebensdauermerimal \newline Teststatistik, Signal-to-Noise Ratio}]{t}{\ensuremath{t}}
