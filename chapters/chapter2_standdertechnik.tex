@@ -212,37 +212,37 @@ Vertrauensbereiche, oder engl. \acp{CI}, können eine Metrik für die Qualität 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\subsubsection{Vertrauensbereiche} \label{subsubsec:ci}
 Die \ac{MLE} liefert nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern auch die Quantifizierung von deren statistischer Unsicherheit (Präzision).
 Obwohl verschiedene Ansätze, wie die numerisch anspruchsvolleren Berechnungen nach Likelihood-Ratio-Methode, Bootstrap-Perzentil-Methode oder Monte-Carlo-Approximation existieren, ist das gängigste Verfahren zur Berechnung von \acp{CI} die Approximation mittels asymptotischer Normalverteilung der \ac{MLE}-Schätzer $\hat{\sym{theta}}$ \cite{Bertsche.2022,Nelson.1990}.
-Dies erfolgt über die \textbf{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß \textcite{Kremer.2019c}  bezüglich des Rechenaufwands und resultierender Modellqualität vergleichsweise effizient quantifiziert.
+Dies erfolgt über die \textbf{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß \textcite{Kremer.2019c} bezüglich des Rechenaufwands und resultierender Modellqualität vergleichsweise effizient quantifiziert.
 So wird diese Methodik auch in gängiger Applikationen als Standard angewandt, vgl. \cite{Nelson.2005,Nelson.1990,Yang.2007}.
 In der praktischen Anwendung wird die Fisher-Informationsmatrix auf Basis der resultierenden Schätzwerte $\hat{\sym{theta}} = \sym{theta}$ so als Schätzung zur Beobachtung nach $\symsub{FIM}{idx_O}$ verwendet \cite{Nelson.1990,Lawless.2003}.
 Diese ist definiert als die negative \textbf{Hesse-Matrix} $\sym{H}$ der Log-Likelihood-Funktion, ausgewertet an der Stelle der \ac{MLE}-Schätzwerte
 $\hat{\sym{theta}}$:
 \begin{equation} \label{eq:fim_o}
-    \symsub{FIM}{idx_O} \defeq - \sym{H}(\hat{\sym{theta}}) = - \left[ \frac{\partial^2 \sym{Lambda}(\sym{theta})}{\partial \symsub{theta}{idx_j} \partial \symsub{theta}{idx_l}} \right]_{\sym{theta} = \hat{\sym{theta}}}.
+    \symsub{FIM}{idx_O} \defeq - \sym{H}(\hat{\sym{theta}}) = - \left[ \frac{\partial^2 \sym{Lambda}(\sym{theta})}{\partial \symsub{thet}{idx_j} \partial \symsub{thet}{idx_l}} \right]_{\sym{theta} = \hat{\sym{theta}}}.
 \end{equation}
 Die Matrix $\sym{H}$ entspricht der ($\sym{k} \times \sym{k}$)-Matrix der $\sym{k}$ zweiten partiellen Ableitungen von $\sym{Lambda}$ (vgl. Gl.~\eqref{eq:mle_loglikelihood_censored}).
 Eine Invertierung ${\hat{\sym{FIM}}_{\sym{idx_O}}}^{-1}$ ergibt die geschätzte \textbf{Varianz-Kovarianz-Matrix} $\hat{\sym{V}}$:
 \begin{equation} \label{eq:var_covar}
     \hat{\sym{V}} \approx {\hat{\sym{FIM}}_{\sym{idx_O}}}^{-1}.
 \end{equation}
-Die Diagonalelemente dieser Matrix $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}$ entsprechen den Varianzen $\sym{Var}(\hat{\sym{theta}}_{\sym{idx_j}})$ der einzelnen Parameterschätzwerte \cite{Nelson.1990}.
-Die Nicht-Diagonalelemente $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_l}}$ (für $\sym{idx_j} \neq \sym{idx_l}$) repräsentieren die \textbf{Kovarianzen} $\sym{Cov}(\hat{\sym{theta}}_{\sym{idx_j}}, \hat{\sym{theta}}_{\sym{idx_l}})$ \cite{Nelson.1990,Yang.2007}.
+Die Diagonalelemente dieser Matrix $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}$ entsprechen den Varianzen $\sym{Var}(\hat{\sym{thet}}_{\sym{idx_j}})$ der einzelnen Parameterschätzwerte \cite{Nelson.1990}.
+Die Nicht-Diagonalelemente $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_l}}$ (für $\sym{idx_j} \neq \sym{idx_l}$) repräsentieren die \textbf{Kovarianzen} $\sym{Cov}(\hat{\sym{thet}}_{\sym{idx_j}}, \hat{\sym{thet}}_{\sym{idx_l}})$ \cite{Nelson.1990,Yang.2007}.
 Diese Kovarianzen sind von entscheidender Bedeutung, da sie die statistische Abhängigkeit zwischen den Schätzwerten (z.B. zwischen $\hat{\sym{T}}$ und $\hat{\sym{b}}$) quantifizieren, welche für die Berechnung der \acp{CI} von abgeleiteten Funktionen wie $\hat{\sym{R}}(\sym{t})$ erforderlich sind \cite{Meeker.2022}.
-Basierend auf der Annahme der asymptotischen Normalität der Schätzer wird ein zweiseitiges $(1-\sym{alpha})$-\ac{CI} für einen einzelnen Parameter $\hat{\sym{theta}}_{\sym{idx_j}}$ direkt aus dessen Varianz approximiert durch:
+Basierend auf der Annahme der asymptotischen Normalität der Schätzer wird ein zweiseitiges $(1-\sym{alpha})$-\ac{CI} für einen einzelnen Parameter $\hat{\sym{thet}}_{\sym{idx_j}}$ direkt aus dessen Varianz approximiert durch:
 \begin{equation} \label{eq:ci_normal}
-    [\sym{theta}_{\sym{idx_j},\sym{idx_u}},\sym{theta}_{\sym{idx_j},\sym{idx_o}}]  = \hat{\sym{theta}}_{\sym{idx_j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}},
+    [\sym{thet}_{\sym{idx_j},\sym{idx_u}},\sym{thet}_{\sym{idx_j},\sym{idx_o}}]  = \hat{\sym{thet}}_{\sym{idx_j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}},
 \end{equation}
 wobei $\sym{z}_{1-\sym{alpha}/2}$ dem $(1-\sym{alpha}/2)$-Quantil der Standardnormalverteilung entspricht.
 Da Lebensdauerparameter (z.B. $\sym{T}, \sym{b}$) üblicherweise auf $\sym{RR}_{>0}$ beschränkt sind, werden \acp{CI} robust über eine Log-Transformation der Parameter berechnet, um physikalisch unmögliche (negative) Intervallgrenzen zu vermeiden \cite{Meeker.2022,Yang.2007,Nelson.1990}:
 \begin{equation} \label{eq:ci_ln}
-    [\sym{theta}_{\sym{idx_j},\sym{idx_u}}, \sym{theta}_{\sym{idx_j},\sym{idx_o}}] = \hat{\sym{theta}}_{\sym{idx_j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}}}{\hat{\sym{theta}}_{\sym{idx_j}}} \right).
+    [\sym{thet}_{\sym{idx_j},\sym{idx_u}}, \sym{thet}_{\sym{idx_j},\sym{idx_o}}] = \hat{\sym{thet}}_{\sym{idx_j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}}}{\hat{\sym{thet}}_{\sym{idx_j}}} \right).
 \end{equation}
 
 Die Berechnung dieser \acp{CI} für Schätzwerte $\sym{g_func}(\hat{\sym{theta}})$ zu Größen wie $\hat{\sym{R}}(\sym{t})$ oder $\hat{\sym{t}}_{\sym{idx_q}}$  erfolgt mittels \textbf{Delta-Methode} \cite{Nelson.1990,Meeker.2022}.
 Dieses auf einer Taylor-Reihenentwicklung basierende Verfahren (Gauß'sche Fehlerfortpflanzung) approximiert die Varianz der Funktion $\hat{\sym{g_func}}=\sym{g_func}(\hat{\sym{theta}})$ unter Einbeziehung der gesamten Varianz-Kovarianz-Matrix.
 Dazu wird der \textbf{Gradientenvektor} $\sym{g_grad}$ der Funktion $\sym{g_func}$ (z.B. $\sym{g_func} = \sym{R}(\sym{t})$) bezüglich des $\sym{k}$-dimensionalen Parametervektors $\sym{theta}$ gebildet:
 \begin{equation} \label{eq:delta_method_gradient}
-    \sym{g_grad} \defeq \left[ \frac{\partial \sym{g_func}(\sym{theta})}{\partial \sym{theta}_{1}}, \dots, \frac{\partial \sym{g_func}(\sym{theta})}{\partial \symsub{theta}{k}} \right]^T_{\sym{theta} = \hat{\sym{theta}}}.
+    \sym{g_grad} \defeq \left[ \frac{\partial \sym{g_func}(\sym{theta})}{\partial \sym{thet}_{1}}, \dots, \frac{\partial \sym{g_func}(\sym{theta})}{\partial \symsub{thet}{k}} \right]^T_{\sym{theta} = \hat{\sym{theta}}}.
 \end{equation}
 Die approximierte Varianz $\sym{Var}(\hat{\sym{g_func}})$ der Funktion ergibt sich dann aus:
 \begin{equation} \label{eq:delta_method_variance}
@@ -920,7 +920,7 @@ Letztendlich kann die Trennschärfe somit als Garantiemetrik verstanden werden, 
 Formalisiert wird dies im Rahmen \textbf{statistischer Hypothesentests} \cite{Kleppmann.2020,Montgomery.2020}.
 Die Zielsetzung besteht darin, den Nachweis zu erbringen, ob ein bestimmter Faktor $\symsub{x}{idx_j}$ einen signifikanten Einfluss auf die Systemantwort $\sym{y}$ ausübt.
 Dazu werden zwei konkurrierende Hypothesen formuliert:
-Die \textbf{Nullhypothese} $\sym{H0}$ unterstellt, dass kein Zusammenhang besteht, der korrespondierende Regressionskoeffizient $\symsub{beta}{idx_j}$ (vgl. Abschnitt~\ref{subsec:model}) also den Wert Null annimmt:
+Die \textbf{Nullhypothese} $\sym{H0}$ unterstellt, dass kein Zusammenhang besteht, der korrespondierende Regressionskoeffizient $\symsub{beta}{idx_j}$ (vgl. Abschnitt~\ref{subsec:modellbildung}) also den Wert Null annimmt:
 \begin{equation} \label{eq:hypotheses}
     \sym{H0}: \sym{beta}_j = 0 \quad \text{gegen} \quad \sym{H1}: \sym{beta}_j \neq 0.
 \end{equation}
@@ -956,18 +956,18 @@ So wird Varianzhomogenität und Normalverteilung approximiert zu:
     \end{cases}
 \end{equation}
 Im Kontext der expliziten Lebensdaueranalyse ist dieser generische Ansatz jedoch weniger gebräuchlich, da die physikalisch motivierte Verteilungsannahme (z.B. Weibull) bereits eine inhärente Transformation der Lebensdauerzeit impliziert - vgl. Abschnitt~\ref{subsec:paramleben}, Gleichung~\ref{eq:weibull_pdf} sowie \textcite{Wu.2021,Yang.2007}.
-Wird also für die Lebensdauerverteilung die Weibull-Verteilung (Abschnitt~\ref{subsec:paramleben}) angenommen, so ergibt sich für $\sym{idx_j}=0,...,\sym{k}$ betrachtete Parameter aus beispielsweise Gleichung~\ref{eq:quadric_std_model} und $\sym{n}$ Beobachtungen analog zu Gleichung~\ref{eq:weibull_pdf} der Erwartungswert der charakteristische Lebensdauer als Funktion der Einflussfaktoren $\symsub{x}{idx_i}$ und des unbekannten Koeffizientenvektors $\hat{\sym{Beta}}$ \cite{Wu.2021,Yang.2007,Wuthrich.2023}:
+Wird also für die Lebensdauerverteilung die Weibull-Verteilung (Abschnitt~\ref{subsec:paramleben}) angenommen, so ergibt sich für $\sym{idx_j}=0,...,\sym{k}$ betrachtete Parameter aus beispielsweise Gleichung~\ref{eq:quadric_std_model} und $\sym{n}$ Beobachtungen analog zu Gleichung~\ref{eq:weibull_pdf} der Erwartungswert der charakteristischen Lebensdauer als Funktion der Einflussfaktoren $\symsub{x}{idx_i}$ und des unbekannten Koeffizientenvektors $\hat{\sym{Beta}}$ \cite{Wu.2021,Yang.2007,Wuthrich.2023}:
 \begin{equation} \label{eq:glm_link}
     \sym{Er}_{\sym{thet}_{\sym{x}}}\left(\ln(\sym{T})\right) = \sym{y} = \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} + \dots + \sym{epsilon}.
 \end{equation}
-In der Lebensdauerdatenanalyse werden insbesondere zwei weitere Modellierungsansätze verwendet: neben den \ac{GLM}-Ansätzen insbesondere der \textbf{\ac{PH}-Modell}-Ansatz.
-Jedoch werden \ac{PH}-Modelle vornehmlich in der Biostatistik  verwendet und spielen hier ihre Stärke bei der Abbildung zeitabhängiger Kovariate aus:
+In der Lebensdauer-Datenanalyse werden insbesondere zwei weitere Modellierungsansätze verwendet: neben den \ac{GLM}-Ansätzen insbesondere der \textbf{\ac{PH}-Modell}-Ansatz.
+Jedoch werden \ac{PH}-Modelle vornehmlich in der Biostatistik  verwendet und spielen hier ihre Stärke bei der Abbildung zeitabhängiger Kovariate aus \cite{Modarres.2017,Kremer.2020}:
 \begin{equation} \label{eq:weibull_pdf_cox}
     \sym{f}(\sym{t}, \sym{X}) = \sym{lambda}(\sym{t}, \sym{X}) \cdot \sym{R}(\sym{t}, \sym{X}) = \sym{b} \cdot \sym{t}^{\sym{b}-1} \cdot e^{\left[ \sym{y} - \sym{t}^{\sym{b}} e^{\sym{y}} \right]}.
 \end{equation}
 
 \subsubsection{Weibull-\ac{GLM}}
-Im ingenieurwissenschaftlichen Kontext - maßgeblich gestützt durch Ausführungen in \textcite{Meeker.2022,Wu.2021,Yang.2007,Dobson.2018} - finden hingegen \textbf{Log-Location-Scale-Modelle}, also \acp{GLM}, überwiegend Anwendung.
+Im ingenieurwissenschaftlichen Kontext - maßgeblich gestützt durch Ausführungen in \textcite{Meeker.2022,Wu.2021,Yang.2007,Dobson.2018,Kremer.2020} - finden hingegen \textbf{Log-Location-Scale-Modelle}, also \acp{GLM}, überwiegend Anwendung.
 Obwohl für die Weibull-Verteilung eine mathematische Äquivalenz zwischen beiden Ansätzen besteht, sprechen drei fundamentale Gründe für deren Verwendung.
 \textbf{Physikalischer Bezug:} Gängige physikalische Beschleunigungsmodelle (Arrhenius, Inverses Potenzgesetz) beschreiben die Änderung der \textit{Zeit} bis zum Ausfall ($\ln(\hat{\sym{T}})$) und nicht der Ausfallrate.
 Die Log-Linearisierung dieser Gesetze führt direkt auf die Regressionsgleichung der Location-Scale-Modelle.
@@ -980,7 +980,7 @@ Folglich wird eine zufallsverteilte Lebensdauer $\sym{tau}$ für ein Weibull-\ac
     \sym{f}(\sym{t}, \sym{X}) = \sym{b} \cdot \sym{t}^{\sym{b}-1} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} \right)}
     \cdot e^{-\sym{t}^{\sym{b}} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} \right)}}, \quad \sym{t} > 0.
 \end{equation}
-beschrieben und analog zu Gleichungen~\ref{eq:mle_likelihood_simple}--\ref{eq:mle_loglikelihood_censored} in die \textbf{\ac{GLL}-Funktion} überführt, \cite{Russell.2019,Yang.2007}:
+beschrieben und analog zu Gleichungen~\ref{eq:mle_likelihood_simple}--\ref{eq:mle_loglikelihood_censored} in die \textbf{\ac{GLL}-Funktion} überführt, \cite{Russell.2019,Yang.2007,Aitkin.1980}:
 \begin{equation} \label{eq:log_likelihood_explicit}
     \begin{split}
         \sym{Lambda} & = \ln \left( \sym{L_like}(\symsub{t}{idx_i}; \sym{b}, \symsub{beta}{idx_0}, \dots, \symsub{beta}{k}) \right)                                                                                                                                                                                                                                                                                                        \\
@@ -1010,61 +1010,99 @@ Gängige Transformationen umfassen hierbei die reziproke Anpassung für thermisc
         \bottomrule
     \end{tabular}
 \end{table}
+Eine Schätzung der unbekannten Parameter $\hat{\sym{Beta}}$ und $\hat{\sym{b}}$ erfolgt anschließend mittels \ac{MLE} durch Maximierung der Log-Likelihood-Funktion (Gleichung~\ref{eq:log_likelihood_explicit_censored}) mittels beispielsweise \textbf{Newton-Raphson-Verfahren} bzw. \textbf{Pattern-Search-Algorithmen} oder \textbf{Gradientenverfahren}, \cite{Yang.2007,Qiao.1994}.
+Geeignete numerische Optimierungsverfahren wurden in Abschnitt~\ref{subsubsec:mle} erwähnt und unter anderem durch Vorarbeiten von \textcite{Kremer.2019b} evaluiert.
 
 \subsubsection{Signifikanzanalyse}
-
-
-
-Hierbei wird der Logarithmus der Lebensdauer $\ln(\sym{tau})$ als Summe einer deterministischen Funktion der Kovariaten $\sym{mu}(\sym{x})$ und eines skalierten Fehlerterms $\sym{epsilon}$ beschrieben:
-\begin{equation} \label{eq:log_location_scale}
-    \ln(\sym{tau}) = \sym{mu}(\sym{x}) + \sym{sigma} \cdot \sym{epsilon}.
+Liegen die Parameterschätzungen $\hat{\sym{thet}}_{\sym{idx_i}}$ vor, erfolgt die Bewertung ihrer statistischen Relevanz mittels \ac{LR-Test}.
+Dieses Verfahren stellt das methodische Äquivalent zur \ac{ANOVA} bei normalverteilten Daten dar und prüft, ob die Aufnahme eines Parameters die Modellanpassung signifikant verbessert.
+Der Test basiert auf dem Vergleich der maximalen Likelihoods des vollständigen Modells $\sym{L_like}(\hat{\sym{thet}}_{\sym{idx_i}})$ gegenüber einem reduzierten Modell $\sym{L_like}(\hat{\sym{thet}}_{-\sym{idx_i}})$, aus dem der zu untersuchende Parameter eliminiert wurde \cite{Kremer.2021,Kremer.2019c}.
+Die Teststatistik $\sym{LR}$ quantifiziert den Informationsverlust durch die Modellreduktion und ist definiert als \textbf{Devianz}-Funktion \cite{Meeker.2022}:
+\begin{equation} \label{eq:lrt_statistic}
+    \sym{LR} = -2 \ln \left( \frac{\sym{L_like}\left(\hat{\sym{thet}}_{-\sym{idx_i}}\right)}{\sym{L_like}\left(\hat{\sym{thet}}_{\sym{idx_i}}\right)} \right) = 2 \cdot \left[ \ln\left(\sym{L_like}(\hat{\sym{thet}}_{\sym{idx_i}})\right) - \ln\left(\sym{L_like}(\hat{\sym{thet}}_{-\sym{idx_i}})\right) \right].
 \end{equation}
-Der Parameter $\sym{mu}(\sym{x})$ entspricht dem \textbf{Location-Parameter} und bildet die Abhängigkeit der charakteristischen Lebensdauer von den Stressfaktoren $\symsub{x}{idx_j}$ ab (vgl. Gleichung~\ref{eq:linear_std_model}):
-\begin{equation} \label{eq:mu_regression}
-    \sym{mu}(\sym{x}) = \ln(\sym{T}(\sym{x})) = \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} + \sum \sum \sym{beta}_{\sym{idx_j}\sym{idx_l}} \symsub{x}{idx_j} \symsub{x}{idx_l}.
+Unter der Nullhypothese $\sym{H0}$, dass der ausgeschlossene Parameter keinen Einfluss hat, folgt $\sym{LR}$ asymptotisch einer $\sym{chi_sq}$-Verteilung mit $\sym{d_f}$ Freiheitsgraden (Anzahl der ausgeschlossenen Parameter, hier meist $\sym{d_f}=1$).
+Die Signifikanzentscheidung erfolgt über den $\sym{p-Wert}$, der die Wahrscheinlichkeit angibt, einen Testwert $\ge \sym{LR}$ zu beobachten:
+\begin{equation} \label{eq:lrt_p_value}
+    \sym{p-Wert} = \sym{Pr}\left(\sym{chi_sq}\left({\sym{d_f}}\right) \geq \sym{LR}\right).
 \end{equation}
-Der Parameter $\sym{sigma}$ ist der \textbf{Skalenparameter} des Fehlers und beschreibt die Streuung.Im Falle der Weibull-Verteilung korrespondiert dieser direkt mit dem Formparameter durch $\sym{sigma} = 1/\sym{b}$, wobei $\sym{epsilon}$ der Standard-Gumbel-Verteilung (Extremwertverteilung des Typs I) folgt \cite{Meeker.2022}.
-Standardmäßig wird $\sym{sigma}$ als konstant über den Versuchsraum angenommen, kann jedoch in erweiterten Modellen ebenfalls als Funktion der Stressfaktoren modelliert werden.
-Der Prozess der Modellierung gliedert sich zur Anwendung dieses Frameworks analog zu Abschnitt~\ref{subsec:schätzer} in die methodischen Schritte: \textbf{(1) Modellauswahl}, \textbf{(2) Parameterschätzung} mittels \ac{MLE}, \textbf{(3) Signifikanztest}, \textbf{(4) Varianzschätzung} sowie \textbf{(5) Modellprädiktion} der Zuverlässigkeit mit Aussagesicherheit \cite{Meeker.2022,Rigdon.2022,Nelson.1990}.
+Ist dieser $\sym{p-Wert}$ kleiner als das definierte Signifikanzniveau $\sym{p-Wert}<\sym{alpha}$, wird der Parameter als signifikant in das Modell aufgenommen.
 
 
+\subsubsection{Erwartungswerte und Konfidenzintervalle}
+Nach der Ermittlung der optimalen Modellparameter $\hat{\sym{theta}}$ ist die Quantifizierung der mit diesen Schätzungen verbundenen Unsicherheit essenziell.
+Analytisch erfolgt dies über die Betrachtung der Krümmung der Log-Likelihood-Funktion $\sym{Lambda}$ im Maximum. Je stärker die Krümmung (steilerer Peak), desto präziser ist die Schätzung (geringere Varianz).
+Mathematisch wird dies analog zu Gleichungen~\ref{eq:fim_o}-\ref{eq:var_covar} durch die Hesse-Matrix $\sym{H}$ beschrieben, welche die zweiten partiellen Ableitungen der Log-Likelihood-Funktion nach den Parametern $\symsub{thet}{idx_i}$ (also $\symsub{beta}{idx_j}$ und $\sym{b}$) enthält.
+Der negative Erwartungswert dieser Matrix führt damit zur Erwartung der Fisher-Informationsmatrix $\sym{FIM}$ \cite{Fisher.1935,Rasch.2018}:
+\begin{equation} \label{eq:fim_o_glm}
+    \symsub{FIM}{idx_O} \defeq - \sym{H}(\hat{\sym{theta}}) =
+    \begin{bmatrix}
+        -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_1^2}                             & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_1 \partial \sym{thet}_2}         & \cdots & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_1 \partial \sym{thet}_{\sym{k}}} \\
+        -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_2 \partial \sym{thet}_1}         & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_2^2}                             & \cdots & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_2 \partial \sym{thet}_{\sym{k}}} \\
+        \vdots                                                                               & \vdots                                                                               & \ddots & \vdots                                                                               \\
+        -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}} \partial \sym{thet}_1} & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}} \partial \sym{thet}_2} & \cdots & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}}^2}
+    \end{bmatrix}.
+\end{equation}
 
-Das hier fokussierte \textbf{Weibull-\ac{GLM}} nimmt eine Sonderstellung ein: Es lässt sich sowohl als PH-Modell als auch als \textbf{Accelerated Failure Time}-Modell (AFT) interpretieren.
-Da im Engineering die Prädiktion konkreter Ausfallzeiten (Quantile) im Vordergrund steht, wird der AFT-Ansatz gemäß Gleichung~\ref{eq:glm_link} favorisiert, bei dem die Kovariaten die Zeitskala der Lebensdauerverteilung direkt stauchen oder strecken \cite{Rigdon.2022,Nelson.1990}.
+Die asymptotische Varianz-Kovarianz-Matrix $\hat{\sym{V}}$ der Parameterschätzer wird anschließend durch die Inversion der Fisher-Informationsmatrix für $\hat{\sym{theta}}=\sym{theta}$ approximiert \cite{Yang.2007,Rasch.2018}:
+\begin{equation} \label{eq:var_covar_glm}
+    \hat{\sym{V}} \approx {\sym{FIM}_{\sym{idx_O}}}^{-1}=
+    \begin{bmatrix}
+        \hat{\sym{Var}}(\hat{\sym{thet}}_1)                             & \hat{\sym{Cov}}(\hat{\sym{thet}}_1, \hat{\sym{thet}}_2)         & \cdots & \hat{\sym{Cov}}(\hat{\sym{thet}}_1, \hat{\sym{thet}}_{\sym{k}}) \\
+        \hat{\sym{Cov}}(\hat{\sym{thet}}_2, \hat{\sym{thet}}_1)         & \hat{\sym{Var}}(\hat{\sym{thet}}_2)                             & \cdots & \hat{\sym{Cov}}(\hat{\sym{thet}}_2, \hat{\sym{thet}}_{\sym{k}}) \\
+        \vdots                                                          & \vdots                                                          & \ddots & \vdots                                                          \\
+        \hat{\sym{Cov}}(\hat{\sym{thet}}_{\sym{k}}, \hat{\sym{thet}}_1) & \hat{\sym{Cov}}(\hat{\sym{thet}}_{\sym{k}}, \hat{\sym{thet}}_2) & \cdots & \hat{\sym{Var}}(\hat{\sym{thet}}_{\sym{k}})
+    \end{bmatrix}.
+\end{equation}
+Die Hauptdiagonalelemente dieser Matrix liefern die geschätzten Varianzen $\hat{\sym{Var}}(\hat{\symsub{thet}{idx_j}})$ der einzelnen Modellparameter.
+Unter der Annahme der asymptotischen Normalverteilung der \ac{MLE} beschreibt \textcite{Yang.2007} neben weiteren Alternativen aus \textcite{Meeker.2022,Kremer.2019c} die symmetrischen $(1-\sym{alpha})$-Konfidenzintervalle (Wald-Intervalle) wie nachfolgend - vgl. Gleichung~\ref{eq:ci_ln}:
+\begin{equation} \label{eq:wald_ci}
+    [\sym{thet}_{\sym{idx_j},\sym{idx_u}},\sym{thet}_{\sym{idx_j},\sym{idx_o}}] = \hat{\sym{thet}}_{\sym{idx_j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{Var}}(\hat{\sym{thet}}_{\sym{idx_j}})}  \quad \text{bzw.} \cdots =\hat{\sym{thet}}_{\sym{idx_j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}}}{\hat{\sym{thet}}_{\sym{idx_j}}} \right).
+\end{equation}
 
+\subsubsection{Vertrauensbereiche für Funktionswerte und Weibull-\ac{GLM}}
+Oft ist nicht nur die Unsicherheit der Modellparameter selbst, sondern die der daraus abgeleiteten Funktionen - wie der Zuverlässigkeit $\sym{R}(\sym{t})$ oder der Ausfallwahrscheinlichkeit $\sym{F}(\sym{t})$ - von Interesse.
+Zur analytischen Ermittlung dieser sogenannten Fisher-Vertrauensbereiche führt \textcite{Yang.2007} zunächst eine Hilfsgröße $\sym{w_aux}$ ein.
+Diese normiert die logarithmische Abweichung der betrachteten Zeit $\sym{t}$ von der geschätzten charakteristischen Lebensdauer $\hat{\sym{T}}$ mit dem Formparameter $\hat{\sym{b}}$ (vergleiche \textcite{Bain.2017b} für weitere Abschätzungen):
+\begin{equation} \label{eq:conf_aux_w}
+    \sym{w_aux} = \hat{\sym{b}} \cdot \ln \left( \frac{\sym{t}}{\hat{\sym{T}}} \right).
+\end{equation}
+Die Varianz dieser Größe lässt sich mittels Taylor-Reihenentwicklung (Delta-Methode, vgl. Abschnitt~\ref{subsec:schätzer}) approximativ aus den Varianzen und Kovarianzen der Parameterschätzer bestimmen:
+\begin{equation} \label{eq:var_w}
+    \hat{\sym{Var}}(\sym{w_aux}) = \left( \frac{\hat{\sym{b}}}{\hat{\sym{T}}} \right)^2 \hat{\sym{Var}}(\hat{\sym{T}}) + \left( \frac{\sym{w_aux}}{\hat{\sym{b}}} \right)^2 \hat{\sym{Var}}(\hat{\sym{b}}) - \frac{2 \sym{w_aux}}{\hat{\sym{T}}} \hat{\sym{Cov}}(\hat{\sym{T}}, \hat{\sym{b}}).
+\end{equation}
+Basierend auf der asymptotischen Normalverteilung ergeben sich die Vertrauensgrenzen $[\sym{w_aux}_{\sym{idx_u}}, \sym{w_aux}_{\sym{idx_o}}]$ gemäß:
+\begin{equation} \label{eq:conf_bounds_w}
+    [\sym{w_aux}_{\sym{idx_u}}, \sym{w_aux}_{\sym{idx_o}}] = \sym{w_aux} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{Var}}(\sym{w_aux})}.
+\end{equation}
+Die Rücktransformation dieser Grenzen in den Wertebereich der Ausfallwahrscheinlichkeit erfolgt anschließend über die Verteilungsfunktion der kleinsten Extremwerte $\sym{G_func} = 1 - \exp[-\exp(\sym{w_aux})]$, woraus sich direkt die Konfidenzintervalle der Zuverlässigkeit ableiten lassen.
+Im Fall von \ac{GLM} ist zu berücksichtigen, dass die geschätzte charakteristische Lebensdauer $\hat{\sym{T}}$ keine unabhängige Konstante ist, sondern funktional entsprechend Gleichung~\ref{eq:glm_link} von den Kovariaten $\sym{x}$ und dem Parametervektor $\hat{\sym{Beta}}$ abhängt.
+Die für Gleichung~\ref{eq:var_w} benötigte Varianz $\hat{\sym{Var}}(\hat{\sym{T}})$ muss folglich unter Berücksichtigung der gesamten Kovarianzmatrix der Regressionskoeffizienten berechnet werden.
+Dies erfolgt durch die allgemeine Fehlerfortpflanzung nach Gauß:
+\begin{equation} \label{eq:var_T_general}
+    \hat{\sym{Var}}(\hat{\sym{T}}) \approx \sum_{\sym{idx_i}=1}^{\sym{k}} \left( \frac{\partial \hat{\sym{T}}}{\partial \hat{\symsub{beta}{idx_i}}} \right)^2 \hat{\sym{Var}}(\hat{\symsub{beta}{idx_i}})
+    + \sum_{\sym{idx_i}=1}^{\sym{k}} \sum_{\substack{\sym{idx_j}=1 \\ \sym{idx_j} \neq \sym{idx_i}}}^{\sym{k}} \left( \frac{\partial \hat{\sym{T}}}{\partial \hat{\symsub{beta}{idx_i}}} \right) \left( \frac{\partial \hat{\sym{T}}}{\partial \hat{\symsub{beta}{idx_j}}} \right) \hat{\sym{Cov}}(\hat{\symsub{beta}{idx_i}}, \hat{\symsub{beta}{idx_j}}).
+\end{equation}
 
-\textbf{1. Modellauswahl (Weibull-GLM):}
-Das Kernstück bildet die Verknüpfung der linearen Prädiktorfunktion $\eta = \sym{x}'\sym{Beta}$ mit dem charakteristischen Lebensdauerparameter $\sym{T}$ über eine logarithmische Link-Funktion.
-Das \textbf{Weibull-GLM} (auch Cox-Weibull-Modell) modelliert die Abhängigkeit der Lebensdauer $\sym{T}(\sym{x})$ von den Stressfaktoren (z.\,B. Temperatur, Last) üblicherweise als Log-Linear-Beziehung (Arrhenius- oder Inverse-Power-Law-Ansatz):
-
-Der Formparameter $\sym{b}$ wird hierbei häufig als konstant über den Versuchsraum angenommen (konstante Ausfallmechanik), kann jedoch in erweiterten Modellen ebenfalls als funktionale Abhängigkeit modelliert werden \cite{Meeker.2022}.
-
-\textbf{2. Parameterschätzung:}
-Die Bestimmung des unbekannten Koeffizientenvektors $\hat{\sym{Beta}}$ erfolgt mittels \textbf{\ac{MLE}} auf Basis der in Abschnitt~\ref{subsubsec:mle} definierten Log-Likelihood-Funktion $\sym{Lambda}$ für zensierte Daten.
-Da für dieses Gleichungssystem keine geschlossene analytische Lösung existiert, werden iterative numerische Optimierungsverfahren eingesetzt.
-Neben klassischen Gradientenverfahren (Newton-Raphson) haben sich hier insbesondere direkte Suchverfahren wie \textbf{Pattern Search} als robust erwiesen, um das globale Maximum der Likelihood-Funktion auch bei flachen Wirkungsflächen zuverlässig zu identifizieren \cite{Qiao.1994}.
-
-\textbf{3. Signifikanzprüfung:}
-Zur Selektion der relevanten Modellterme (Haupteffekte, Wechselwirkungen) wird der \textbf{Likelihood-Ratio-Test} (\ac{LR-Test}) herangezogen.
-Er vergleicht die Güte eines vollständigen Modells mit der eines reduzierten Modells, indem die Differenz ihrer Log-Likelihood-Werte (die \textit{Devianz}) bewertet wird.
-Der \ac{LR-Test} gilt bei kleinen bis mittleren Stichprobenumfängen, wie sie in der Lebensdauererprobung üblich sind, gegenüber dem approximativen Wald-Test als überlegen und präziser hinsichtlich der Einhaltung des Signifikanzniveaus $\sym{alpha}$ \cite{Rigdon.2022,Nelson.1990}.
-
-\textbf{4. Varianzschätzung und Unsicherheit:}
-Die Präzision der geschätzten Koeffizienten wird über die \textbf{Fisher-Informationsmatrix} quantifiziert.
-Die Invertierung der beobachteten Fisher-Information $\symsub{FIM}{idx_O}$ an der Stelle der \ac{MLE}-Lösung liefert die asymptotische Varianz-Kovarianz-Matrix $\hat{\sym{V}}$ (vgl. Gleichung~\ref{eq:var_covar}).
-Daraus leiten sich die Standardfehler und die \textit{Wald}-Vertrauensbereiche (Fisher-CIs) für die Regressionskoeffizienten ab, welche die Grundlage für die Berechnung der Unsicherheitsbänder in der Prädiktion bilden.
-
-\textbf{5. Modellprädiktion und Zuverlässigkeit:}
-Das final parametrisierte Modell erlaubt die \textbf{Prädiktion} der charakteristischen Lebensdauer $\hat{\sym{y}} = \hat{\sym{T}}(\sym{x}_0)$ an jedem beliebigen Punkt $\sym{x}_0$ des Designraums (Inter- und Extrapolation).
-Durch Einsetzen in die Weibull-Verteilungsfunktion (Gleichung~\ref{eq:weibull_cdf}) resultiert die geschätzte \textbf{Zuverlässigkeitsfunktion} $\hat{\sym{R}}(\sym{t}|\sym{x}_0)$.
-Die zugehörigen Vertrauensbereiche für $\hat{\sym{R}}$ oder spezifische Quantile $\hat{\sym{t}}_q$ werden unter Berücksichtigung der Kovarianzen in $\hat{\sym{V}}$ mittels Delta-Methode approximiert, um die statistische Sicherheit der Aussage für den Anwender transparent auszuweisen.
-
+\subsubsection{Modellgüte und Residuenanalyse}
+Die Beurteilung der Modellgüte bei Lebensdauerdaten erfordert, bedingt durch Nicht-Normalverteilung und Zensierung, eine Anpassung klassischer Residualkonzepte.
+Während in der linearen Regression das Bestimmtheitsmaß $R^2$ dominiert, basiert die Validierung von \acp{GLM} primär auf der Analyse der Abweichung zwischen beobachteter und modellierter kumulativer Hazard-Rate.
+Hierfür haben sich insbesondere die \textbf{Cox-Snell-Residuen }$\sym{resid_CS}$ etabliert \cite{Meeker.2022}.
+Sie transformieren die beobachteten Lebensdauern $\symsub{t}{idx_i}$ unter Verwendung der geschätzten Parameter $\hat{\sym{theta}}$ in einen standardisierten Raum:
+\begin{equation} \label{eq:resid_cox_snell}
+    {\sym{resid_CS}}_{\sym{idx_i}} = - \ln \left( \hat{\sym{R}}(\symsub{t}{idx_i}, \hat{\sym{theta}}) \right) = \left( \frac{\symsub{t}{idx_i}}{\hat{\sym{T}}_{\sym{idx_i}}} \right)^{\hat{\sym{b}}}.
+\end{equation}
+Folgt das angepasste Modell den Daten, so verhalten sich die Residuen $\sym{resid_CS}$ wie eine Stichprobe aus einer Standard-Exponentialverteilung mit Mittelwert 1.
+Diese Eigenschaft erlaubt eine grafische Validierung mittels Probability-Plots: Liegen die geplotteten Residuen auf einer Geraden im Exponential-Wahrscheinlichkeitsnetz, kann von einer adäquaten Modellpassung ausgegangen werden \cite{Nelson.1990}.
+Zur Identifikation von Ausreißern oder einflussreichen Beobachtungen eignen sich hingegen standardisierte Devianz-Residuen $\sym{resid_Dev}$, da diese symmetrischer um Null verteilt sind und asymptotisch einer Standardnormalverteilung folgen \cite{Meeker.2022}:
+\begin{equation} \label{eq:resid_deviance}
+    {\sym{resid_Dev}}_{\sym{idx_i}} = \text{sgn}({\sym{resid_CS}}_{\sym{idx_i}} - 1) \cdot \sqrt{2 \left[ {\sym{resid_CS}}_{\sym{idx_i}} - \symsub{delta}{idx_i} - \symsub{delta}{idx_i} \ln({\sym{resid_CS}}_{\sym{idx_i}}) \right]}.
+\end{equation}
+Eine Betrachtung dieser Residuen über den Index $\sym{idx_i}$ oder gegen die prädizierten Werte erlaubt das Erkennen systematischer Verzerrungen, welche auf nicht berücksichtigte Kovariaten oder eine fehlerhafte Link-Funktion hindeuten.
 
 
 \begin{itemize}
-    \item \colorbox{yellow}{LR-Ratio}
-    \item \colorbox{yellow}{Varianzen}
-    \item \colorbox{yellow}{Modellaufbau}
+
     \item Extrapolation: bedarf in der Praxis / oder sind doch dann mal VPs verfügbar und das modell wird einfach erweitert
 
     \item Risiduen (Cox-Snell \cite{Rigdon.2022})

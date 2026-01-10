@@ -1,0 +1,50 @@
+\section{Ableitungen zur Maximum-Likelihood-Schätzung} \label{app:mle_derivatives}
+
+\section*{A.1 Modell Daefinition (Modell zweiter Ordnung)}
+Für ein System mit $\sym{k}=2$ Einflussfaktoren ($\sym{x}_{1}, \sym{x}_{2}$) basierend auf einem \ac{CCD} ist der lineare Prädiktor $\symsub{eta}{idx_i}$ definiert.
+Er beschreibt den Logarithmus der charakteristischen Lebensdauer wie folgt:
+\begin{equation}
+    \symsub{eta}{idx_i} = \ln(\symsub{T}{idx_i}) = \symsub{beta}{idx_0} + \sym{beta}_{1} \sym{x}_{\sym{idx_i},1} + \sym{beta}_{2} \sym{x}_{\sym{idx_i},2} + \sym{beta}_{12} \sym{x}_{\sym{idx_i},1}\sym{x}_{\sym{idx_i},2} + \sym{beta}_{11} \sym{x}_{\sym{idx_i},1}^2 + \sym{beta}_{22} \sym{x}_{\sym{idx_i},2}^2
+\end{equation}
+Der zugehörige Parametervektor $\sym{Beta}$ und der Regressorvektor $\sym{x}_{\sym{idx_i}}$ lauten:
+\begin{equation}
+    \sym{Beta} = \begin{bmatrix} \symsub{beta}{idx_0} \\ \sym{beta}_{1} \\ \sym{beta}_{2} \\ \sym{beta}_{12} \\ \sym{beta}_{11} \\ \sym{beta}_{22} \end{bmatrix}, \quad
+    \sym{x}_{\sym{idx_i}} = \begin{bmatrix} 1 \\ \sym{x}_{\sym{idx_i},1} \\ \sym{x}_{\sym{idx_i},2} \\ \sym{x}_{\sym{idx_i},1}\sym{x}_{\sym{idx_i},2} \\ \sym{x}_{\sym{idx_i},1}^2 \\ \sym{x}_{\sym{idx_i},2}^2 \end{bmatrix}
+\end{equation}
+
+\section*{A.2 Log-Likelihood-Funktion}
+Wir führen zunächst den Indikator $\symsub{delta}{idx_i}$ ein ($\symsub{delta}{idx_i}=1$ für Ausfall, $0$ für Zensierung).
+Zusätzlich definieren wir die Hilfsvariable $\symsub{z_aux}{idx_i}$:
+\begin{equation}
+    \symsub{z_aux}{idx_i} = \symsub{t}{idx_i}^{\sym{b}} \exp(-\sym{b} \symsub{eta}{idx_i})
+\end{equation}
+Damit lautet die Log-Likelihood-Funktion $\sym{Lambda}$:
+\begin{equation}
+    \sym{Lambda} = \sum_{\sym{idx_i}=1}^{\sym{n}} \left[ \symsub{delta}{idx_i} \left( \ln(\sym{b}) - \sym{b} \symsub{eta}{idx_i} + (\sym{b}-1) \ln(\symsub{t}{idx_i}) \right) - \symsub{z_aux}{idx_i} \right]
+\end{equation}
+
+\section*{A.3 Score-Vektor (Erste Ableitungen)}
+Die partiellen Ableitungen (Gradient) dienen zur Maximierung der Funktion.
+Die Ableitung nach den Regressionskoeffizienten für $\sym{idx_j} \in \{0, 1, 2, 12, 11, 22\}$ lautet:
+\begin{equation}
+    \frac{\partial \sym{Lambda}}{\partial \sym{beta}_{\sym{idx_j}}} = \sym{b} \sum_{\sym{idx_i}=1}^{\sym{n}} (\symsub{z_aux}{idx_i} - \symsub{delta}{idx_i}) \sym{x}_{\sym{idx_i},\sym{idx_j}}
+\end{equation}
+Die Ableitung nach dem Formparameter $\sym{b}$ ergibt sich zu:
+\begin{equation}
+    \frac{\partial \sym{Lambda}}{\partial \sym{b}} = \sum_{\sym{idx_i}=1}^{\sym{n}} \left[ \frac{\symsub{delta}{idx_i}}{\sym{b}} + (\symsub{delta}{idx_i} - \symsub{z_aux}{idx_i}) (\ln(\symsub{t}{idx_i}) - \symsub{eta}{idx_i}) \right]
+\end{equation}
+
+\section*{A.4 Hesse-Matrix (Zweite Ableitungen)}
+Die Elemente der Hesse-Matrix werden für die Fisher-Information und den Newton-Raphson-Algorithmus benötigt.
+Die zweite Ableitung nach den Koeffizienten $\sym{Beta}$ (für Indizes $\sym{idx_j}$ und $\sym{idx_l}$) ist:
+\begin{equation}
+    \frac{\partial^2 \sym{Lambda}}{\partial \sym{beta}_{\sym{idx_j}} \partial \sym{beta}_{\sym{idx_l}}} = - \sym{b}^2 \sum_{\sym{idx_i}=1}^{\sym{n}} \symsub{z_aux}{idx_i} \sym{x}_{\sym{idx_i},\sym{idx_j}} \sym{x}_{\sym{idx_i},\sym{idx_l}}
+\end{equation}
+Die zweite Ableitung nach dem Formparameter $\sym{b}$ lautet:
+\begin{equation}
+    \frac{\partial^2 \sym{Lambda}}{\partial \sym{b}^2} = - \sum_{\sym{idx_i}=1}^{\sym{n}} \left[ \frac{\symsub{delta}{idx_i}}{\sym{b}^2} + \symsub{z_aux}{idx_i} (\ln(\symsub{t}{idx_i}) - \symsub{eta}{idx_i})^2 \right]
+\end{equation}
+Die gemischte Ableitung nach $\sym{Beta}$ und $\sym{b}$ berechnet sich wie folgt:
+\begin{equation}
+    \frac{\partial^2 \sym{Lambda}}{\partial \sym{beta}_{\sym{idx_j}} \partial \sym{b}} = \sum_{\sym{idx_i}=1}^{\sym{n}} \sym{x}_{\sym{idx_i},\sym{idx_j}} \left[ (\symsub{z_aux}{idx_i} - \symsub{delta}{idx_i}) + \sym{b} \symsub{z_aux}{idx_i} (\ln(\symsub{t}{idx_i}) - \symsub{eta}{idx_i}) \right]
+\end{equation}

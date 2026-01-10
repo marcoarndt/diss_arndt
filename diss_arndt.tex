@@ -218,6 +218,7 @@ isbn=true]{biblatex}
 % 1. LATEINISCHE SKALARE (Variablen & Parameter)
 % ===========================================================================
 \glsxtrnewsymbol[type=formulas, description={Weibull-Formparameter (Weibull-Modul)}, text={\ensuremath{b}}]{b}{\ensuremath{b}}
+\glsxtrnewsymbol[type=formulas, description={Anzahl der Freiheitsgrade}, text={\ensuremath{d_{\textnormal{f}}}}]{d_f}{\ensuremath{d_{\textnormal{f}}}}
 \glsxtrnewsymbol[type=formulas, description={Cook's Distanz}, text={\ensuremath{D}}]{D}{\ensuremath{D}}
 \glsxtrnewsymbol[type=formulas, description={Effekt}, text={\ensuremath{E}}]{Eff}{\ensuremath{E}}
 \glsxtrnewsymbol[type=formulas, description={Erwartungswert}, text={\ensuremath{\textit{E}}}]{Er}{\ensuremath{\textit{E}(\cdot)}}
@@ -246,6 +247,8 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Systemantwort, -variable}, text={\ensuremath{y}}]{y}{\ensuremath{y}}
 \glsxtrnewsymbol[type=formulas, description={Quantil der Standardnormalverteilung}, text={\ensuremath{z}}]{z}{\ensuremath{z}}
 \glsxtrnewsymbol[type=formulas, description={Trennschärfe, Power}, text={\ensuremath{power}}]{power}{\ensuremath{power}}
+\glsxtrnewsymbol[type=formulas, description={Likelihood-Ratio}, text={\ensuremath{LR}}]{LR}{\ensuremath{LR}}
+
 
 % ===========================================================================
 % 2. VEKTOREN UND MATRIZEN (Fettgedruckt)
@@ -263,6 +266,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Postion im Parameterraum}, text={\ensuremath{\mathbf{x}}}]{x_loc}{\ensuremath{\mathbf{x}}}
 \glsxtrnewsymbol[type=formulas, description={Versuchsplan-Matrix oder Modellmatrix}, text={\ensuremath{\mathbf{X}}}]{X}{\ensuremath{\mathbf{X}}}
 \glsxtrnewsymbol[type=formulas, description={Antwortmatrix}, text={\ensuremath{\mathbf{y}}}]{Y}{\ensuremath{\mathbf{y}}}
+
 
 % ===========================================================================
 % 3. GRIECHISCHE SKALARE
@@ -284,7 +288,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Varianz der Lebensdauer (theoretisch)}, text={\ensuremath{\sigma^2}}]{sigma_sq}{\ensuremath{\sigma^2}}
 \glsxtrnewsymbol[type=formulas, description={kontinuierliche Zufallsvariable}]{tau}{\ensuremath{\tau}}
 \glsxtrnewsymbol[type=formulas, description={Integrationsvariable (Gamma-Funktion)}, text={\ensuremath{\upsilon}}]{ups}{\ensuremath{\upsilon}}
-
+\glsxtrnewsymbol[type=formulas, description={Chi-Quadrat-Verteilung}, text={\ensuremath{\chi^2}}]{chi_sq}{\ensuremath{\chi^2(\cdot)}}
 
 % ===========================================================================
 % 4. OPERATOREN, FUNKTIONEN & MENGEN
@@ -298,7 +302,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Wahrscheinlichkeit}, text={\ensuremath{\Pr}}]{Pr}{\ensuremath{\Pr}}
 \glsxtrnewsymbol[type=formulas, description={Menge der reellen Zahlen}]{RR}{\ensuremath{\mathbb{R}}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Operator}, text={\ensuremath{\mathrm{Var}}}]{Var}{\ensuremath{\mathrm{Var}[\cdot]}}
-\glsxtrnewsymbol[type=formulas, description={Weibull-Verteilung (Notation)}, text={\ensuremath{\mathcal{W}}}]{W}{\ensuremath{\mathcal{W}(\cdot, \cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Weibull-Verteilung}, text={\ensuremath{\mathcal{W}}}]{W}{\ensuremath{\mathcal{W}(\cdot, \cdot)}}
 
 % ===========================================================================
 % 5. OPTIMALITÄTSKRITERIEN & EFFIZIENZEN
@@ -332,7 +336,14 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Gewichtsmatrix für S-Optimalität (Slope-Momentenmatrix)}, text={\ensuremath{\mathbf{W_s}}}]{W_s}{\ensuremath{\mathbf{W_s}}}
 \glsxtrnewsymbol[type=formulas, description={S-Effizienz (für Schätzung der Steigungen)}, text={\ensuremath{S_{\textnormal{eff}}}}]{eff_S}{\ensuremath{S_{\textnormal{eff}}}}
 
+\glsxtrnewsymbol[type=formulas, description={Hilfsvariable für die Log-Likelihood-Berechnung}, text={\ensuremath{z}}]{z_aux}{\ensuremath{z}}
+\glsxtrnewsymbol[type=formulas, description={Linearer Prädiktor (Logarithmus der charakteristischen Lebensdauer)}, text={\ensuremath{\eta}}]{eta}{\ensuremath{\eta}}
 
+\glsxtrnewsymbol[type=formulas, description={Hilfsgröße zur Berechnung von Vertrauensbereichen (standardisierte Log-Lebensdauer)}, text={\ensuremath{\hat{w}}}]{w_aux}{\ensuremath{\hat{w}}}
+\glsxtrnewsymbol[type=formulas, description={Verteilungsfunktion der kleinsten Extremwerte}, text={\ensuremath{G}}]{G_func}{\ensuremath{G(\cdot)}}
+
+\glsxtrnewsymbol[type=formulas, description={Cox-Snell-Residuum}, text={\ensuremath{r_{\textnormal{CS}}}}]{resid_CS}{\ensuremath{r_{\textnormal{CS}}}}
+\glsxtrnewsymbol[type=formulas, description={Standardisiertes Devianz-Residuum}, text={\ensuremath{r_{\textnormal{Dev}}}}]{resid_Dev}{\ensuremath{r_{\textnormal{Dev}}}}
 
 %  Show page borders (useful for final checks)
 %\usepackage{showframe}
@@ -440,7 +451,7 @@ Thanks for your service.
 
 
 % TODO: nocite prints the whole bib file to the bibliography. This is for testing and should be commented out in your thesis:
-\nocite{*}
+% \nocite{*}
 
 % Bibliography
 \setlength{\emergencystretch}{.5em}
@@ -457,7 +468,8 @@ Thanks for your service.
 \startSMBAppendix
 
 \addcontentsline{toc}{chapter}{Anhang}
-\section{Ein Anhang}
-\subsection{Unteranhang 1}
+\input{chapters/anhang/anhanga/anhanga.tex}
+% \section{Ein Anhang}
+% \subsection{Unteranhang 1}
 
 \end{document}
