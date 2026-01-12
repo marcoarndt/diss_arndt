@@ -190,6 +190,8 @@ isbn=true]{biblatex}
 \newacronym[plural=GLMs, longplural=Generalized Linear Models]{GLM}{GLM}{Generalized Linear Model}
 \newacronym[plural=GLLs, longplural=Generalized Log-Linears]{GLL}{GLL}{Generalized Log-Linear}
 \newacronym[plural=LR-Tests, longplural=Likelihood-Ratio Tests]{LR-Test}{LR-Test}{Likelihood-Ratio Test}
+\newacronym[plural=VDGs, longplural=Variance Dispersion Graphs]{VDG}{VDG}{Variance Dispersion Graph}
+\newacronym{FDS}{FDS}{Fraction of Design Space}
 
 % Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
 
@@ -281,14 +283,15 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Eigenvektor}, text={\ensuremath{\mathbf{v}}}]{eigen_vec}{\ensuremath{\mathbf{v}}}
 \glsxtrnewsymbol[type=formulas, description={Eigenwert (einer Matrix) \newline Transformationsparameter (Box-Cox)},   text={\ensuremath{\lambda}}]{eigen_val}{\ensuremath{\lambda}}
 \glsxtrnewsymbol[type=formulas, description={Log-Likelihood-Funktion}, text={\ensuremath{\Lambda}}]{Lambda}{\ensuremath{\Lambda(\cdot)}}
-\glsxtrnewsymbol[type=formulas, description={Erwartungswert der Lebensdauer (theoretisch)}, text={\ensuremath{\mu}}]{mu}{\ensuremath{\mu}}
+\glsxtrnewsymbol[type=formulas, description={Lageparameter}, text={\ensuremath{\mu}}]{mu}{\ensuremath{\mu}}
 \glsxtrnewsymbol[type=formulas, description={Prädiktionsvarianz an der Stelle $\symsub{x_loc}{idx_0}$ (skaliert)}, text={\ensuremath{\nu(\symsub{x_loc}{idx_0})}}]{pred_var}{\ensuremath{\nu(\symsub{x_loc}{idx_0})}}
 \glsxtrnewsymbol[type=formulas, description={A-Priori-Information/Verteilung}, text={\pi}]{prior}{\ensuremath{\pi(\cdot)}}
-\glsxtrnewsymbol[type=formulas, description={Standardabweichung (theoretisch)}, text={\ensuremath{\sigma}}]{sigma}{\ensuremath{\sigma}}
+\glsxtrnewsymbol[type=formulas, description={Standardabweichung (theoretisch) \newline Skalenparameter}, text={\ensuremath{\sigma}}]{sigma}{\ensuremath{\sigma}}
 \glsxtrnewsymbol[type=formulas, description={Varianz der Lebensdauer (theoretisch)}, text={\ensuremath{\sigma^2}}]{sigma_sq}{\ensuremath{\sigma^2}}
 \glsxtrnewsymbol[type=formulas, description={kontinuierliche Zufallsvariable}]{tau}{\ensuremath{\tau}}
 \glsxtrnewsymbol[type=formulas, description={Integrationsvariable (Gamma-Funktion)}, text={\ensuremath{\upsilon}}]{ups}{\ensuremath{\upsilon}}
 \glsxtrnewsymbol[type=formulas, description={Chi-Quadrat-Verteilung}, text={\ensuremath{\chi^2}}]{chi_sq}{\ensuremath{\chi^2(\cdot)}}
+
 
 % ===========================================================================
 % 4. OPERATOREN, FUNKTIONEN & MENGEN
@@ -303,6 +306,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Menge der reellen Zahlen}]{RR}{\ensuremath{\mathbb{R}}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Operator}, text={\ensuremath{\mathrm{Var}}}]{Var}{\ensuremath{\mathrm{Var}[\cdot]}}
 \glsxtrnewsymbol[type=formulas, description={Weibull-Verteilung}, text={\ensuremath{\mathcal{W}}}]{W}{\ensuremath{\mathcal{W}(\cdot, \cdot)}}
+\glsxtrnewsymbol[type=formulas, description={Verteilung der kleinsten Extremwerte, engl. Smallest Extreme Value}, text={\ensuremath{SEV}}]{SEV}{\ensuremath{SEV(\cdot, \cdot)}}
 
 % ===========================================================================
 % 5. OPTIMALITÄTSKRITERIEN & EFFIZIENZEN
@@ -339,11 +343,13 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Hilfsvariable für die Log-Likelihood-Berechnung}, text={\ensuremath{z}}]{z_aux}{\ensuremath{z}}
 \glsxtrnewsymbol[type=formulas, description={Linearer Prädiktor (Logarithmus der charakteristischen Lebensdauer)}, text={\ensuremath{\eta}}]{eta}{\ensuremath{\eta}}
 
-\glsxtrnewsymbol[type=formulas, description={Hilfsgröße zur Berechnung von Vertrauensbereichen (standardisierte Log-Lebensdauer)}, text={\ensuremath{\hat{w}}}]{w_aux}{\ensuremath{\hat{w}}}
+\glsxtrnewsymbol[type=formulas, description={Hilfsgröße zur Berechnung von Vertrauensbereichen (standardisierte Log-Lebensdauer)}, text={\ensuremath{{w}}}]{w_aux}{\ensuremath{{w}}}
+\glsxtrnewsymbol[type=formulas, description={Standardisierte Variable der Kleinstwertverteilung (SEV); Hilfsgröße für Wald-Konfidenzintervalle (äquivalent zu $\sym{w_aux}$)}, text={\ensuremath{z_{\textnormal{e}}}}]{z_e}{\ensuremath{z_{\textnormal{e}}}}
 \glsxtrnewsymbol[type=formulas, description={Verteilungsfunktion der kleinsten Extremwerte}, text={\ensuremath{G}}]{G_func}{\ensuremath{G(\cdot)}}
 
 \glsxtrnewsymbol[type=formulas, description={Cox-Snell-Residuum}, text={\ensuremath{r_{\textnormal{CS}}}}]{resid_CS}{\ensuremath{r_{\textnormal{CS}}}}
 \glsxtrnewsymbol[type=formulas, description={Standardisiertes Devianz-Residuum}, text={\ensuremath{r_{\textnormal{Dev}}}}]{resid_Dev}{\ensuremath{r_{\textnormal{Dev}}}}
+\glsxtrnewsymbol[type=formulas, description={Standardisiertes Residuum (bezogen auf die SEV-Verteilung)}, text={\ensuremath{r}}]{resid_std}{\ensuremath{r}} 
 
 %  Show page borders (useful for final checks)
 %\usepackage{showframe}
@@ -366,22 +372,22 @@ Thanks for your service.
 \addchap{Kurzfassung/Abstract}
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 \todo{
-  \begin{itemize}
-    \item
-    \item Abstract / Kurzfassung / Danksagung
-    \item Bilder prüfen
-    \item "mark changes after your Oral presentation for review"
-    \item "textcolor blue" in definitions ändern
-    \item "Print" Funktion aktivieren
-    \item "nocite" Funktion deaktivieren in main Z.269
-  \end{itemize}
+    \begin{itemize}
+        \item
+        \item Abstract / Kurzfassung / Danksagung
+        \item Bilder prüfen
+        \item "mark changes after your Oral presentation for review"
+        \item "textcolor blue" in definitions ändern
+        \item "Print" Funktion aktivieren
+        \item "nocite" Funktion deaktivieren in main Z.269
+    \end{itemize}
 }\
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 
 \cleardoublepage
 \ifpdf
-  \phantomsection
-  \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+    \phantomsection
+    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 
