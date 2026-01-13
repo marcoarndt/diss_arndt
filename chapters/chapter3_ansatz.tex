@@ -9,7 +9,13 @@
     \item \cite[Kap. 9.1.4]{Myers.2016}
     \item \cite[Kap. 9.2.1]{Myers.2016}
     \item \colorbox{yellow}{\cite[Chapter. 27]{Cui.2021}}
+    \item Monte-Carlo-Ansatz: \textcite{Escobar.1995}
+    \item \textcite[Kap.13]{Box.2007}
+    \item Evaluierung eines effizienten Versuchsplans vor Versuchsdurchführung: \textcite{Johnson.2011}
+    \item Manipulationen im CCD: \textcite{Ahn.2015,Donev.2004,G.E.P.Box.1951,Ardakani.2011}
+    \item Optimale versuchspäne  \textcite{Jones.2012}
     \item Khuri - 2006 - Design Issues for Generalized Linear Models A Review
+    \item Stufken in Hinkelmann - 2012 - Optimal Designs for Generalized Linear Models with Applications
     \item Yang - 2011 - OPTIMAL DESIGNS FOR GENERALIZED LINEAR MODELS WITH MULTIPLE DESIGN VARIABLES
     \item \cite[Seite 314]{Rigdon.2022}
     \item Monroe, E.M., Pan, R., Anderson-Cook, C. et al. (2011). A generalized linear model approach to designing accelerated life test experiments. Quality and Reliability Engineering International 27: 595-607.
@@ -17,8 +23,6 @@
           The maximum number of support points necessary for an optimal design canbe shown to be p(p + 1)=2 + 1, using Caratheodory's Theorem. The proof is beyond the scope of this book, but is given in Rockafellar (1970, p. 155) or Silvey (1980, p. 77). Pukelsheim (1993, p. 190) showed that, if our interest is in estimating all elements of the parameter vector beta, then this upper limit can be reduced to p(p + 1)=2.
 \end{itemize}
 
-
-\cite{RisbergEllekjr.1998,Bisgaard.2011,Hinkelmann.2012,Khuri.2006,Johnson.2011,Donev.2004,G.E.P.Box.1951,Ardakani.2011,Jones.2012,Jones.2021,Wu.2021,Khuri.2006,Escobar.1995,Modarres.2017,Ahn.2015,Rasch.2018,Xu.2002,Wald.1943,Rencher.2008,Box.2007,Fisher.1935,Myers.2010,Box.1988}
 
 \subsubsection{Besonderheiten der Effizienz in der Lebensdauerprüfung}
 Der Begriff der Effizienz erfährt im Kontext der Planung multivariater Lebensdauertests (\ac{ALT} oder Reliability Demonstration Tests) eine signifikante Erweiterung gegenüber der klassischen linearen Versuchsplanung.
@@ -67,6 +71,37 @@ Die Varianz der Schätzung wird hierbei maßgeblich durch die Anzahl der ausgefa
     \item \textbf{Optimale Versuchspläne für Internet der Dinge (IoT)} (Optimal Designs for Internet of Things (IoT)):
     \item \textbf{Optimale Versuchspläne für Cyber-Physische Systeme} (Optimal Designs for Cyber-Physical Systems):
     \item \textbf{Optimale Versuchspläne für Nachhaltigkeit und Umweltwissenschaften} (Optimal Designs for Sustainability and Environmental Sciences):
+\end{itemize}
+
+
+\subsubsection{Bewertung und Abgrenzung: OMARS vs. CCD}
+Im direkten Vergleich zum etablierten \ac{CCD} bieten \ac{OMARS}-Designs signifikante Vorteile für die Anwendung in der Lebensdauererprobung, die primär in ihrer Flexibilität und Effizienz begründet liegen.
+Während ein \ac{CCD} durch seine geometrische Konstruktion eine starre Anzahl an Versuchen fordert (z.\,B. $N \ge 45$ für $\sym{k}=6$ Faktoren), ermöglichen \ac{OMARS}-Designs eine Entkopplung von Faktoren- und Versuchsanzahl.
+Dies erlaubt die Realisierung von Designs mit geringerem Stichprobenumfang (z.\,B. $N=40$ für $\sym{k}=6$), ohne die Schätzbarkeit quadratischer Effekte zu verlieren.
+Angesichts der hohen Kosten und langen Laufzeiten physikalischer Lebensdauertests stellt diese Reduktion einen erheblichen wirtschaftlichen Hebel dar.
+
+Strategisch repräsentieren beide Ansätze unterschiedliche Philosophien: Der \ac{CCD} folgt oft einer sequentiellen Logik (Augmentierung nach Bedarf), was das Risiko minimiert, aber die Gesamtlaufzeit durch zwei Versuchsphasen verlängert.
+\ac{OMARS}-Designs hingegen verfolgen einen \textit{One-Step}-Ansatz[cite: 376], der Screening und Optimierung integriert.
+Dies ist insbesondere dann vorteilhaft, wenn Rüstzeiten hoch sind oder zeitliche Drifts (Chargeneffekte) zwischen zwei Versuchsphasen vermieden werden sollen.
+Der Preis für diese Effizienz ist ein kontrolliertes Maß an \textit{Aliasing} zwischen Effekten zweiter Ordnung, welches jedoch durch die strikte Orthogonalität der Haupteffekte in der Praxis meist kompensiert wird .
+Zusammenfassend qualifizieren sich \ac{OMARS}-Designs damit als präferierte Wahl für ressourcenbeschränkte Lebensdaueruntersuchungen, bei denen Nichtlinearitäten a priori nicht ausgeschlossen werden können.
+
+\subsection{Methodische Abgrenzung: Warum CCD statt OMARS?}
+Trotz der in der neueren Literatur diskutierten Effizienzvorteile von \ac{OMARS}-Designs (vgl. Abschnitt~\ref{sec:omars}) fiel die Wahl in dieser Arbeit bewusst auf das klassische \ac{CCD}.
+Diese Entscheidung begründet sich in drei spezifischen Anforderungen der vorliegenden Lebensdaueruntersuchung, die von \ac{OMARS}-Designs nicht im gleichen Maße adressiert werden:
+
+\begin{itemize}
+    \item \textbf{Sequentielles Risiko-Management:}
+          Im Gegensatz zum \textit{One-Step}-Ansatz der OMARS-Designs \cite{Goos.2025} ermöglicht das \ac{CCD} eine sequentielle Versuchsführung.
+          Angesichts der Unsicherheit über die physikalische Relevanz quadratischer Effekte erlaubt dies, zunächst mit einem faktoriellen Screening zu starten und Ressourcen für die Augmentierung (Sternpunkte) nur dann freizugeben, wenn Krümmungen signifikant nachgewiesen werden. Dies maximiert die Kontrolle über den Versuchsfortschritt.
+
+    \item \textbf{Rotierbarkeit für Extrapolation:}
+          Da die Lage des Zuverlässigkeitsoptimums a priori unbekannt ist und Prädiktionen oft in den Randbereich oder darüber hinaus (Extrapolation) erfolgen müssen, ist eine richtungsunabhängige Prädiktionsvarianz essenziell.
+          Durch die Wahl des Axialabstands $\alpha$ kann das \ac{CCD} exakt \textit{rotierbar} ausgelegt werden, eine Eigenschaft, die bei OMARS-Designs zugunsten der Orthogonalität oft in den Hintergrund tritt.
+
+    \item \textbf{Geringe Faktorenanzahl:}
+          Der Effizienzvorteil von OMARS-Designs kommt primär bei höheren Faktorenzahlen ($\sym{k} \ge 4$) zum Tragen, wo klassische Pläne unwirtschaftlich werden.
+          Für die hier betrachteten Systeme mit $\sym{k} < 3$ Faktoren bietet das \ac{CCD} ein optimales Verhältnis aus statistischer Power und Versuchsumfang, ohne die Komplexität der Auswertung unnötig zu erhöhen.
 \end{itemize}
 
 \section{Forschungsfragen und Aufbau der Arbeit}

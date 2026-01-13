@@ -1965,7 +1965,6 @@
       \strng{authornamehash}{23959d092ae2a5edd5aa42a886a57cec}
       \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
       \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
-      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -1980,6 +1979,46 @@
       \range{pages}{17}
       \verb{doi}
       \verb 10.1080/09544829208914746
+      \endverb
+    \endentry
+    \entry{RisbergEllekjr.1998}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=f515dcde667f80f75bb5b4dc16172fab}{%
+           family={{Risberg Ellekj{æ}r}},
+           familyi={R\bibinitperiod},
+           given={Marit},
+           giveni={M\bibinitperiod}}}%
+        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
+           family={Bisgaard},
+           familyi={B\bibinitperiod},
+           given={S{ø}ren},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{fullhash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{fullhashraw}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{bibnamehash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{authorbibnamehash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{authornamehash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{authorfullhash}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{authorfullhashraw}{0f0d568b2491039855ed3fe37d54ee0e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1359-8538}
+      \field{journaltitle}{International Journal of Quality Science}
+      \field{number}{3}
+      \field{title}{The use of experimental design in the development of new products}
+      \field{volume}{3}
+      \field{year}{1998}
+      \field{pages}{254\bibrangedash 274}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1108/13598539810229230
+      \endverb
+      \verb{file}
+      \verb Risberg Ellekj{\ae}r, Bisgaard 1998 - The use of experimental design:Attachments/Risberg Ellekj{\ae}r, Bisgaard 1998 - The use of experimental design.pdf:application/pdf
       \endverb
     \endentry
     \entry{Kleppmann.2016}{book}{}{}
@@ -2445,6 +2484,73 @@
       \verb 10.1002/qre.1143
       \endverb
     \endentry
+    \entry{Goos.2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=bd639e8bc0dd4c3689cb8b7cc745dbe5}{%
+           family={Goos},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd639e8bc0dd4c3689cb8b7cc745dbe5}
+      \strng{fullhash}{bd639e8bc0dd4c3689cb8b7cc745dbe5}
+      \strng{fullhashraw}{bd639e8bc0dd4c3689cb8b7cc745dbe5}
+      \strng{bibnamehash}{bd639e8bc0dd4c3689cb8b7cc745dbe5}
+      \strng{authorbibnamehash}{bd639e8bc0dd4c3689cb8b7cc745dbe5}
+      \strng{authornamehash}{bd639e8bc0dd4c3689cb8b7cc745dbe5}
+      \strng{authorfullhash}{bd639e8bc0dd4c3689cb8b7cc745dbe5}
+      \strng{authorfullhashraw}{bd639e8bc0dd4c3689cb8b7cc745dbe5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1939-5108}
+      \field{journaltitle}{WIREs Computational Statistics}
+      \field{number}{2}
+      \field{title}{OMARS Designs for Factor Screening and Response Surface Experimentation in One Step: A Review}
+      \field{volume}{17}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1002/wics.70018
+      \endverb
+    \endentry
+    \entry{NunezAres.2020}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=8336238ff8ac4496950bddb9f7cfb00f}{%
+           family={{Núñez Ares}},
+           familyi={N\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bd639e8bc0dd4c3689cb8b7cc745dbe5}{%
+           family={Goos},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6966f30e0b326cfe660db772ac0d3b3}
+      \strng{fullhash}{a6966f30e0b326cfe660db772ac0d3b3}
+      \strng{fullhashraw}{a6966f30e0b326cfe660db772ac0d3b3}
+      \strng{bibnamehash}{a6966f30e0b326cfe660db772ac0d3b3}
+      \strng{authorbibnamehash}{a6966f30e0b326cfe660db772ac0d3b3}
+      \strng{authornamehash}{a6966f30e0b326cfe660db772ac0d3b3}
+      \strng{authorfullhash}{a6966f30e0b326cfe660db772ac0d3b3}
+      \strng{authorfullhashraw}{a6966f30e0b326cfe660db772ac0d3b3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{1}
+      \field{title}{Enumeration and Multicriteria Selection of Orthogonal Minimally Aliased Response Surface Designs}
+      \field{volume}{62}
+      \field{year}{2020}
+      \field{pages}{21\bibrangedash 36}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1080/00401706.2018.1549103
+      \endverb
+    \endentry
     \entry{Cohen.1988}{book}{}{}
       \name{author}{1}{}{%
         {{hash=eaad07ee1c6ef93a9308150f12c3c2eb}{%
@@ -2481,6 +2587,83 @@
       \endverb
       \verb{file}
       \verb Cohen 1988 - Statistical power analysis:Attachments/Cohen 1988 - Statistical power analysis.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Nelder.1972}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=97a60525676f2f0735b3bace8039e9af}{%
+           family={Nelder},
+           familyi={N\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8ad2a145a372d89fe43afd0935910c82}{%
+           family={Wedderburn},
+           familyi={W\bibinitperiod},
+           given={R.\bibnamedelimi W.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b6d80561d42893f2f06e66779427e0b}
+      \strng{fullhash}{0b6d80561d42893f2f06e66779427e0b}
+      \strng{fullhashraw}{0b6d80561d42893f2f06e66779427e0b}
+      \strng{bibnamehash}{0b6d80561d42893f2f06e66779427e0b}
+      \strng{authorbibnamehash}{0b6d80561d42893f2f06e66779427e0b}
+      \strng{authornamehash}{0b6d80561d42893f2f06e66779427e0b}
+      \strng{authorfullhash}{0b6d80561d42893f2f06e66779427e0b}
+      \strng{authorfullhashraw}{0b6d80561d42893f2f06e66779427e0b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00359238}
+      \field{journaltitle}{Journal of the Royal Statistical Society. Series A (General)}
+      \field{number}{3}
+      \field{title}{Generalized Linear Models}
+      \field{volume}{135}
+      \field{year}{1972}
+      \field{pages}{370}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.2307/2344614
+      \endverb
+    \endentry
+    \entry{McCulloch.2001}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=8cd91e8fa30c0f56dc24d46ee00c937f}{%
+           family={McCulloch},
+           familyi={M\bibinitperiod},
+           given={Charles\bibnamedelima E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=eeb28acba45943fdec39fd9a03909192}{%
+           family={Searle},
+           familyi={S\bibinitperiod},
+           given={S.\bibnamedelimi R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {New York}%
+        {Weinheim}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{34926f54dc20933ff4f45b51173219a6}
+      \strng{fullhash}{34926f54dc20933ff4f45b51173219a6}
+      \strng{fullhashraw}{34926f54dc20933ff4f45b51173219a6}
+      \strng{bibnamehash}{34926f54dc20933ff4f45b51173219a6}
+      \strng{authorbibnamehash}{34926f54dc20933ff4f45b51173219a6}
+      \strng{authornamehash}{34926f54dc20933ff4f45b51173219a6}
+      \strng{authorfullhash}{34926f54dc20933ff4f45b51173219a6}
+      \strng{authorfullhashraw}{34926f54dc20933ff4f45b51173219a6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780471193647}
+      \field{series}{A Wiley-Interscience publication}
+      \field{title}{Generalized, linear, and mixed models}
+      \field{year}{2001}
+      \verb{doi}
+      \verb 59430
       \endverb
     \endentry
     \entry{Arndt.2022}{inproceedings}{}{}
@@ -2778,6 +2961,60 @@
       \verb Dobson, Barnett 2018 - An Introduction to Generalized Linear:Attachments/Dobson, Barnett 2018 - An Introduction to Generalized Linear.pdf:application/pdf
       \endverb
     \endentry
+    \entry{Stufken.2012}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=9ea69f1ef2cb508dec40a1a7e42ac021}{%
+           family={Stufken},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=feb96ca112c179e320db2db693e022b8}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Min},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=f2f71db52401837c018a82537cd40e41}{%
+           family={Hinkelmann},
+           familyi={H\bibinitperiod},
+           given={Klaus},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Interscience}%
+      }
+      \strng{namehash}{cecfc5bbb79d09a761ab9b6a03960e14}
+      \strng{fullhash}{cecfc5bbb79d09a761ab9b6a03960e14}
+      \strng{fullhashraw}{cecfc5bbb79d09a761ab9b6a03960e14}
+      \strng{bibnamehash}{cecfc5bbb79d09a761ab9b6a03960e14}
+      \strng{authorbibnamehash}{cecfc5bbb79d09a761ab9b6a03960e14}
+      \strng{authornamehash}{cecfc5bbb79d09a761ab9b6a03960e14}
+      \strng{authorfullhash}{cecfc5bbb79d09a761ab9b6a03960e14}
+      \strng{authorfullhashraw}{cecfc5bbb79d09a761ab9b6a03960e14}
+      \strng{editorbibnamehash}{f2f71db52401837c018a82537cd40e41}
+      \strng{editornamehash}{f2f71db52401837c018a82537cd40e41}
+      \strng{editorfullhash}{f2f71db52401837c018a82537cd40e41}
+      \strng{editorfullhashraw}{f2f71db52401837c018a82537cd40e41}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Design and analysis of experiments}
+      \field{isbn}{9780470530689}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Optimal Designs for Generalized Linear Models}
+      \field{volume}{3}
+      \field{year}{2012}
+      \field{pages}{137\bibrangedash 164}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1002/9781118147634.ch4
+      \endverb
+    \endentry
     \entry{Aitkin.1980}{article}{}{}
       \name{author}{2}{}{%
         {{hash=fcf82f21e658828c98341af24b04da04}{%
@@ -2813,6 +3050,48 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.2307/2986301
+      \endverb
+    \endentry
+    \entry{Rencher.2008}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=67e3a4b81bdc0419963f493654cb5bc7}{%
+           family={Rencher},
+           familyi={R\bibinitperiod},
+           given={Alvin\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=b13d353211976408dd63543c78de7e42}{%
+           family={Schaalje},
+           familyi={S\bibinitperiod},
+           given={G.\bibnamedelimi Bruce},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Interscience}%
+      }
+      \strng{namehash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{fullhash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{fullhashraw}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{bibnamehash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{authorbibnamehash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{authornamehash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{authorfullhash}{fc004a97c21adebe39252fa234f7b0db}
+      \strng{authorfullhashraw}{fc004a97c21adebe39252fa234f7b0db}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed.}
+      \field{isbn}{9780471754985}
+      \field{title}{Linear models in statistics}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2007024268-b.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2007024268-b.html
       \endverb
     \endentry
     \entry{Rasch.2018}{book}{}{}
@@ -2906,86 +3185,81 @@
       \verb https://www.taylorfrancis.com/books/9780429331527
       \endverb
     \endentry
-    \entry{RisbergEllekjr.1998}{article}{}{}
+    \entry{Escobar.1995}{article}{}{}
       \name{author}{2}{}{%
-        {{hash=f515dcde667f80f75bb5b4dc16172fab}{%
-           family={{Risberg Ellekj{æ}r}},
-           familyi={R\bibinitperiod},
-           given={Marit},
-           giveni={M\bibinitperiod}}}%
-        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
-           family={Bisgaard},
-           familyi={B\bibinitperiod},
-           given={S{ø}ren},
-           giveni={S\bibinitperiod}}}%
+        {{hash=bdbd96adc373ec5f0c64c66857c5272d}{%
+           family={Escobar},
+           familyi={E\bibinitperiod},
+           given={L.\bibnamedelimi A.},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=65f0be4856fac2afe1608213a24a32a9}{%
+           family={Meeker},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi Q.},
+           giveni={W\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
       }
-      \strng{namehash}{0f0d568b2491039855ed3fe37d54ee0e}
-      \strng{fullhash}{0f0d568b2491039855ed3fe37d54ee0e}
-      \strng{fullhashraw}{0f0d568b2491039855ed3fe37d54ee0e}
-      \strng{bibnamehash}{0f0d568b2491039855ed3fe37d54ee0e}
-      \strng{authorbibnamehash}{0f0d568b2491039855ed3fe37d54ee0e}
-      \strng{authornamehash}{0f0d568b2491039855ed3fe37d54ee0e}
-      \strng{authorfullhash}{0f0d568b2491039855ed3fe37d54ee0e}
-      \strng{authorfullhashraw}{0f0d568b2491039855ed3fe37d54ee0e}
+      \strng{namehash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{fullhash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{fullhashraw}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{bibnamehash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{authorbibnamehash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{authornamehash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{authorfullhash}{b41eb607d0cb53e89941a48d5f8c7070}
+      \strng{authorfullhashraw}{b41eb607d0cb53e89941a48d5f8c7070}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{1359-8538}
-      \field{journaltitle}{International Journal of Quality Science}
-      \field{number}{3}
-      \field{title}{The use of experimental design in the development of new products}
-      \field{volume}{3}
-      \field{year}{1998}
-      \field{pages}{254\bibrangedash 274}
-      \range{pages}{21}
-      \verb{doi}
-      \verb 10.1108/13598539810229230
-      \endverb
-      \verb{file}
-      \verb Risberg Ellekj{\ae}r, Bisgaard 1998 - The use of experimental design:Attachments/Risberg Ellekj{\ae}r, Bisgaard 1998 - The use of experimental design.pdf:application/pdf
-      \endverb
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{4}
+      \field{title}{Planning Accelerated Life Tests with Two or More Experimental Factors}
+      \field{volume}{37}
+      \field{year}{1995}
+      \field{pages}{411\bibrangedash 427}
+      \range{pages}{17}
     \endentry
-    \entry{Bisgaard.2011}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=23959d092ae2a5edd5aa42a886a57cec}{%
-           family={Bisgaard},
+    \entry{Box.2007}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=d30289ba50f0f7219fb405bc35b8b71c}{%
+           family={Box},
            familyi={B\bibinitperiod},
-           given={S{ø}ren},
-           giveni={S\bibinitperiod}}}%
+           given={George\bibnamedelimb E.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d341f9df4f1da061d5c4dac8ec1a6444}{%
+           family={Draper},
+           familyi={D\bibinitperiod},
+           given={Norman\bibnamedelima Richard},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {Hoboken, N.J}%
+        {Hoboken, New Jersey}%
       }
       \list{publisher}{1}{%
         {Wiley}%
       }
-      \strng{namehash}{23959d092ae2a5edd5aa42a886a57cec}
-      \strng{fullhash}{23959d092ae2a5edd5aa42a886a57cec}
-      \strng{fullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
-      \strng{bibnamehash}{23959d092ae2a5edd5aa42a886a57cec}
-      \strng{authorbibnamehash}{23959d092ae2a5edd5aa42a886a57cec}
-      \strng{authornamehash}{23959d092ae2a5edd5aa42a886a57cec}
-      \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
-      \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
-      \field{extraname}{2}
+      \strng{namehash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{fullhash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{fullhashraw}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{bibnamehash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{authorbibnamehash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{authornamehash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{authorfullhash}{c41fad29bb532c1a4c0d761a38572952}
+      \strng{authorfullhashraw}{c41fad29bb532c1a4c0d761a38572952}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{An intuition-based approach enables you to master time series analysis with ease Time Series Analysis and Forecasting by Example provides the fundamental techniques in time series analysis using various examples. By introducing necessary theory through examples that showcase the discussed topics, the authors successfully help readers develop an intuitive understanding of seemingly complicated time series models and their implications. The book presents methodologies for time series analysis in a simplified, example-based approach. Using graphics, the authors discuss e Frontmatter -- Time Series Data: Examples and Basic Concepts -- Visualizing Time Series Data Structures: Graphical Tools -- Stationary Models -- Nonstationary Models -- Seasonal Models -- Time Series Model Selection -- Additional Issues in ARIMA Models -- Transfer Function Models -- Additional Topics -- Appendix A: Datasets Used in the Examples -- Appendix B: Datasets Used in the Exercises -- Bibliography -- Index.}
-      \field{isbn}{1118056949}
+      \field{edition}{2. ed.}
+      \field{isbn}{9780470053577}
       \field{series}{Wiley series in probability and statistics}
-      \field{title}{Time series analysis and forecasting by example}
-      \field{year}{2011}
-      \verb{doi}
-      \verb 10.1002/9781118056943
-      \endverb
+      \field{title}{Response surfaces, mixtures, and ridge analyses}
+      \field{year}{2007}
       \verb{urlraw}
-      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781118056943
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2006043975-b.html
       \endverb
       \verb{url}
-      \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781118056943
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2006043975-b.html
       \endverb
     \endentry
     \entry{Johnson.2011}{article}{}{}
@@ -3033,6 +3307,33 @@
       \verb{doi}
       \verb 10.1080/08982112.2011.576203
       \endverb
+    \endentry
+    \entry{Ahn.2015}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e6ca6b3bff2ac6561da420340530dc34}{%
+           family={Ahn},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{fullhash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{fullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{bibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorbibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authornamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorfullhash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorfullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial Engineering}
+      \field{title}{Central Composite Design for the Experiments with Replicate Runs at Factorial and Axial Points}
+      \field{volume}{349}
+      \field{year}{2015}
+      \field{pages}{969\bibrangedash 979}
+      \range{pages}{11}
     \endentry
     \entry{Donev.2004}{article}{}{}
       \name{author}{1}{}{%
@@ -3189,248 +3490,6 @@
       \field{year}{2012}
       \field{pages}{85\bibrangedash 101}
       \range{pages}{17}
-    \endentry
-    \entry{Jones.2021}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=de511b43605b30524c08cd416cf11604}{%
-           family={Jones},
-           familyi={J\bibinitperiod},
-           given={Bradley\bibnamedelima A.},
-           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=7213308a496213a62190648955cd088f}{%
-           family={Allen-Moyer},
-           familyi={A\bibinithyphendelim M\bibinitperiod},
-           given={K.},
-           giveni={K\bibinitperiod}}}%
-        {{hash=bd639e8bc0dd4c3689cb8b7cc745dbe5}{%
-           family={Goos},
-           familyi={G\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{e165621fd636dc69c8af3ffc3f2f7a99}
-      \strng{fullhash}{63c50a1fc911e99823fc3a6cac7aae6d}
-      \strng{fullhashraw}{63c50a1fc911e99823fc3a6cac7aae6d}
-      \strng{bibnamehash}{63c50a1fc911e99823fc3a6cac7aae6d}
-      \strng{authorbibnamehash}{63c50a1fc911e99823fc3a6cac7aae6d}
-      \strng{authornamehash}{e165621fd636dc69c8af3ffc3f2f7a99}
-      \strng{authorfullhash}{63c50a1fc911e99823fc3a6cac7aae6d}
-      \strng{authorfullhashraw}{63c50a1fc911e99823fc3a6cac7aae6d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0022-4065}
-      \field{journaltitle}{Journal of Quality Technology}
-      \field{number}{4}
-      \field{title}{A-optimal versus D-optimal design of screening experiments}
-      \field{volume}{53}
-      \field{year}{2021}
-      \field{pages}{411\bibrangedash 427}
-      \range{pages}{17}
-    \endentry
-    \entry{Escobar.1995}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=bdbd96adc373ec5f0c64c66857c5272d}{%
-           family={Escobar},
-           familyi={E\bibinitperiod},
-           given={L.\bibnamedelimi A.},
-           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=65f0be4856fac2afe1608213a24a32a9}{%
-           family={Meeker},
-           familyi={M\bibinitperiod},
-           given={W.\bibnamedelimi Q.},
-           giveni={W\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
-      }
-      \strng{namehash}{b41eb607d0cb53e89941a48d5f8c7070}
-      \strng{fullhash}{b41eb607d0cb53e89941a48d5f8c7070}
-      \strng{fullhashraw}{b41eb607d0cb53e89941a48d5f8c7070}
-      \strng{bibnamehash}{b41eb607d0cb53e89941a48d5f8c7070}
-      \strng{authorbibnamehash}{b41eb607d0cb53e89941a48d5f8c7070}
-      \strng{authornamehash}{b41eb607d0cb53e89941a48d5f8c7070}
-      \strng{authorfullhash}{b41eb607d0cb53e89941a48d5f8c7070}
-      \strng{authorfullhashraw}{b41eb607d0cb53e89941a48d5f8c7070}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0040-1706}
-      \field{journaltitle}{Technometrics}
-      \field{number}{4}
-      \field{title}{Planning Accelerated Life Tests with Two or More Experimental Factors}
-      \field{volume}{37}
-      \field{year}{1995}
-      \field{pages}{411\bibrangedash 427}
-      \range{pages}{17}
-    \endentry
-    \entry{Ahn.2015}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=e6ca6b3bff2ac6561da420340530dc34}{%
-           family={Ahn},
-           familyi={A\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{fullhash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{fullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{bibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authorbibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authornamehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authorfullhash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authorfullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Industrial Engineering}
-      \field{title}{Central Composite Design for the Experiments with Replicate Runs at Factorial and Axial Points}
-      \field{volume}{349}
-      \field{year}{2015}
-      \field{pages}{969\bibrangedash 979}
-      \range{pages}{11}
-    \endentry
-    \entry{Xu.2002}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=c0614e3cda3d136f04f8e826877d2c3d}{%
-           family={Xu},
-           familyi={X\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{c0614e3cda3d136f04f8e826877d2c3d}
-      \strng{fullhash}{c0614e3cda3d136f04f8e826877d2c3d}
-      \strng{fullhashraw}{c0614e3cda3d136f04f8e826877d2c3d}
-      \strng{bibnamehash}{c0614e3cda3d136f04f8e826877d2c3d}
-      \strng{authorbibnamehash}{c0614e3cda3d136f04f8e826877d2c3d}
-      \strng{authornamehash}{c0614e3cda3d136f04f8e826877d2c3d}
-      \strng{authorfullhash}{c0614e3cda3d136f04f8e826877d2c3d}
-      \strng{authorfullhashraw}{c0614e3cda3d136f04f8e826877d2c3d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0040-1706}
-      \field{journaltitle}{Technometrics}
-      \field{number}{4}
-      \field{title}{An Algorithm for Constructing Orthogonal and Nearly-Orthogonal Arrays with Mixed Levels and Small Runs}
-      \field{volume}{44}
-      \field{year}{2002}
-      \field{pages}{356\bibrangedash 368}
-      \range{pages}{13}
-    \endentry
-    \entry{Wald.1943}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=6eeb37aec54485fe044a9e233abb2183}{%
-           family={Wald},
-           familyi={W\bibinitperiod},
-           given={A.},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{6eeb37aec54485fe044a9e233abb2183}
-      \strng{fullhash}{6eeb37aec54485fe044a9e233abb2183}
-      \strng{fullhashraw}{6eeb37aec54485fe044a9e233abb2183}
-      \strng{bibnamehash}{6eeb37aec54485fe044a9e233abb2183}
-      \strng{authorbibnamehash}{6eeb37aec54485fe044a9e233abb2183}
-      \strng{authornamehash}{6eeb37aec54485fe044a9e233abb2183}
-      \strng{authorfullhash}{6eeb37aec54485fe044a9e233abb2183}
-      \strng{authorfullhashraw}{6eeb37aec54485fe044a9e233abb2183}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The Annals of Mathematical Statistics}
-      \field{number}{2}
-      \field{title}{On the Efficient Design of Statistical Investigations}
-      \field{volume}{14}
-      \field{year}{1943}
-      \field{pages}{134\bibrangedash 140}
-      \range{pages}{7}
-    \endentry
-    \entry{Rencher.2008}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=67e3a4b81bdc0419963f493654cb5bc7}{%
-           family={Rencher},
-           familyi={R\bibinitperiod},
-           given={Alvin\bibnamedelima C.},
-           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=b13d353211976408dd63543c78de7e42}{%
-           family={Schaalje},
-           familyi={S\bibinitperiod},
-           given={G.\bibnamedelimi Bruce},
-           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, NJ}%
-      }
-      \list{publisher}{1}{%
-        {Wiley-Interscience}%
-      }
-      \strng{namehash}{fc004a97c21adebe39252fa234f7b0db}
-      \strng{fullhash}{fc004a97c21adebe39252fa234f7b0db}
-      \strng{fullhashraw}{fc004a97c21adebe39252fa234f7b0db}
-      \strng{bibnamehash}{fc004a97c21adebe39252fa234f7b0db}
-      \strng{authorbibnamehash}{fc004a97c21adebe39252fa234f7b0db}
-      \strng{authornamehash}{fc004a97c21adebe39252fa234f7b0db}
-      \strng{authorfullhash}{fc004a97c21adebe39252fa234f7b0db}
-      \strng{authorfullhashraw}{fc004a97c21adebe39252fa234f7b0db}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{2. ed.}
-      \field{isbn}{9780471754985}
-      \field{title}{Linear models in statistics}
-      \field{year}{2008}
-      \verb{urlraw}
-      \verb http://www.loc.gov/catdir/enhancements/fy0826/2007024268-b.html
-      \endverb
-      \verb{url}
-      \verb http://www.loc.gov/catdir/enhancements/fy0826/2007024268-b.html
-      \endverb
-    \endentry
-    \entry{Box.2007}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=d30289ba50f0f7219fb405bc35b8b71c}{%
-           family={Box},
-           familyi={B\bibinitperiod},
-           given={George\bibnamedelimb E.\bibnamedelimi P.},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=d341f9df4f1da061d5c4dac8ec1a6444}{%
-           family={Draper},
-           familyi={D\bibinitperiod},
-           given={Norman\bibnamedelima Richard},
-           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, New Jersey}%
-      }
-      \list{publisher}{1}{%
-        {Wiley}%
-      }
-      \strng{namehash}{c41fad29bb532c1a4c0d761a38572952}
-      \strng{fullhash}{c41fad29bb532c1a4c0d761a38572952}
-      \strng{fullhashraw}{c41fad29bb532c1a4c0d761a38572952}
-      \strng{bibnamehash}{c41fad29bb532c1a4c0d761a38572952}
-      \strng{authorbibnamehash}{c41fad29bb532c1a4c0d761a38572952}
-      \strng{authornamehash}{c41fad29bb532c1a4c0d761a38572952}
-      \strng{authorfullhash}{c41fad29bb532c1a4c0d761a38572952}
-      \strng{authorfullhashraw}{c41fad29bb532c1a4c0d761a38572952}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{2. ed.}
-      \field{isbn}{9780470053577}
-      \field{series}{Wiley series in probability and statistics}
-      \field{title}{Response surfaces, mixtures, and ridge analyses}
-      \field{year}{2007}
-      \verb{urlraw}
-      \verb http://www.loc.gov/catdir/enhancements/fy0826/2006043975-b.html
-      \endverb
-      \verb{url}
-      \verb http://www.loc.gov/catdir/enhancements/fy0826/2006043975-b.html
-      \endverb
     \endentry
     \entry{Englert.2012}{incollection}{}{}
       \name{author}{5}{}{%

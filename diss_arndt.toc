@@ -27,33 +27,35 @@
 \contentsline {subsubsection}{\nonumberline $2^{\glsadd {k}\glslink {k}{\textcolor {blue}{\ensuremath {\ensuremath {k}}}}-\glsadd {p_f}\glslink {p_f}{\textcolor {blue}{\ensuremath {\ensuremath {p_{\textnormal {f}}}}}}}$ Fraktionell Faktorielle Versuchspläne}{26}{subsubsection*.27}%
 \contentsline {subsubsection}{\nonumberline Wirkungsflächenversuchspläne}{27}{subsubsection*.29}%
 \contentsline {subsubsection}{\nonumberline Strategische Vorgehensweisen}{30}{subsubsection*.32}%
-\contentsline {subsubsection}{\nonumberline Metriken zur optimalen Versuchsplanung}{31}{subsubsection*.35}%
-\contentsline {subsubsection}{\nonumberline Signifikanz und Trennschärfe}{39}{subsubsection*.37}%
-\contentsline {subsection}{\numberline {2.2.3}Statistische Modellbildung}{41}{subsection.2.2.3}%
-\contentsline {subsubsection}{\nonumberline Weibull-\cgls {GLM}}{42}{subsubsection*.39}%
-\contentsline {subsubsection}{\nonumberline Signifikanzanalyse}{44}{subsubsection*.42}%
-\contentsline {subsubsection}{\nonumberline Erwartungswerte und Konfidenzintervalle}{44}{subsubsection*.44}%
-\contentsline {subsubsection}{\nonumberline Vertrauensbereiche für Funktionswerte und Weibull-\cgls {GLM}}{45}{subsubsection*.46}%
-\contentsline {subsubsection}{\nonumberline Modellgüte und Residuenanalyse}{47}{subsubsection*.48}%
-\contentsline {chapter}{\numberline {3}Effiziente Testplanung für die multivariate Lebensdauererprobung}{49}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Bewertung des Standes der Forschung und Technik}{49}{section.3.1}%
-\contentsline {subsubsection}{\nonumberline Besonderheiten der Effizienz in der Lebensdauerprüfung}{50}{subsubsection*.50}%
-\contentsline {subsubsection}{\nonumberline Abgrenzung zu weiteren Themen in der \cgls {RSM}}{51}{subsubsection*.52}%
-\contentsline {section}{\numberline {3.2}Forschungsfragen und Aufbau der Arbeit}{52}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Parameter-Screening für multifaktorielle Lebensdauertests}{53}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Identifikation potenzieller Einflussgrößen}{53}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Kreativmethoden zum Auswahlprozesse im \\ Parameter-Screening}{53}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Randbedingungen in der Parameterauswahl für die Zuverlässigkeitsmodellierung}{53}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Vorgehen zum heuristische Screening für die Zuverlässigkeitsmodellierung}{53}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Zusammenfassung}{53}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Effiziente multivariate Versuchspläne für Lebensdaueruntersuchungen}{55}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Fallstudie}{57}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{59}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Key Findings}{59}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Diskussion}{59}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Ausblick}{59}{section.7.3}%
-\contentsline {chapter}{\nonumberline Literatur}{61}{chapter*.53}%
-\contentsline {chapter}{Anhang}{71}{chapter*.53}%
-\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{71}{section.Alph0.1}%
+\contentsline {subsubsection}{\nonumberline Optimale Versuchsplanung und Bewertungskriterien}{31}{subsubsection*.35}%
+\contentsline {subsubsection}{\nonumberline Signifikanz und Trennschärfe}{40}{subsubsection*.37}%
+\contentsline {subsection}{\numberline {2.2.3}Statistische Modellbildung}{42}{subsection.2.2.3}%
+\contentsline {subsubsection}{\nonumberline Weibull-\cgls {GLM}}{43}{subsubsection*.39}%
+\contentsline {subsubsection}{\nonumberline Signifikanzanalyse}{45}{subsubsection*.42}%
+\contentsline {subsubsection}{\nonumberline Erwartungswerte und Konfidenzintervalle}{45}{subsubsection*.44}%
+\contentsline {subsubsection}{\nonumberline Vertrauensbereiche für Funktionswerte und Weibull-\cgls {GLM}}{46}{subsubsection*.46}%
+\contentsline {subsubsection}{\nonumberline Modellgüte und Residuenanalyse}{48}{subsubsection*.48}%
+\contentsline {chapter}{\numberline {3}Effiziente Testplanung für die multivariate Lebensdauererprobung}{51}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Bewertung des Standes der Forschung und Technik}{51}{section.3.1}%
+\contentsline {subsubsection}{\nonumberline Besonderheiten der Effizienz in der Lebensdauerprüfung}{52}{subsubsection*.50}%
+\contentsline {subsubsection}{\nonumberline Abgrenzung zu weiteren Themen in der \cgls {RSM}}{53}{subsubsection*.52}%
+\contentsline {subsubsection}{\nonumberline Bewertung und Abgrenzung: OMARS vs. CCD}{55}{subsubsection*.54}%
+\contentsline {subsection}{\numberline {3.1.1}Methodische Abgrenzung: Warum CCD statt OMARS?}{55}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Forschungsfragen und Aufbau der Arbeit}{56}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Parameter-Screening für multifaktorielle Lebensdauertests}{57}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Identifikation potenzieller Einflussgrößen}{57}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Kreativmethoden zum Auswahlprozesse im \\ Parameter-Screening}{57}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Randbedingungen in der Parameterauswahl für die Zuverlässigkeitsmodellierung}{57}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Vorgehen zum heuristische Screening für die Zuverlässigkeitsmodellierung}{57}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Zusammenfassung}{57}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Effiziente multivariate Versuchspläne für Lebensdaueruntersuchungen}{59}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Fallstudie}{61}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{63}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Key Findings}{63}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Diskussion}{63}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Ausblick}{63}{section.7.3}%
+\contentsline {chapter}{\nonumberline Literatur}{65}{chapter*.55}%
+\contentsline {chapter}{Anhang}{75}{chapter*.55}%
+\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{75}{section.Alph0.1}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
