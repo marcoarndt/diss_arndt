@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Stand der Forschung und Technik} \label{chap:stand}
 
-Dieses Kapitel stellt die für diese Arbeit erforderlichen technischen und methodischen Grundlagen bereit. Zunächst werde in Abschnitt~\ref{sec:zuv} zentrale Begriffe und Konzepte der Zuverlässigkeitstechnik sowie das grundlegende statistische Verfahren zur Lebensdauer-Datenanalyse in Kombination mit Versuchsplänen erläutert.
+Dieses Kapitel stellt die für diese Arbeit erforderlichen technischen und methodischen Grundlagen bereit. Zunächst werden in Abschnitt~\ref{sec:zuv} zentrale Begriffe und Konzepte der Zuverlässigkeitstechnik sowie das grundlegende statistische Verfahren zur Lebensdauer-Datenanalyse in Kombination mit Versuchsplänen erläutert.
 Darauf aufbauend folgen in Abschnitt~\ref{sec:doe} die Einführung und die Einordnung von \acs{DoE} für Lebensdaueruntersuchungen sowie der multivariaten Lebensdauermodellierung aus dem Stand der Technik und der Wissenschaft, die beide für die Entwicklung effizienter Lebensdauerversuchspläne maßgeblich sind.
 Im Kontext der Lebensdauererprobung umfasst dies insbesondere typische, statistische Versuchspläne sowie Metriken und Indikatoren zur allgemeinen Bewertung der Versuchspläne.
 
@@ -20,6 +20,8 @@ Weiterführende Konzepte und vertiefte methodische Ansätze zur Zuverlässigkeit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Begriffe und Definitionen} \label{subsec:begriffezuv}
+Der Ausfall markiert das Lebensdauerende (\ac{EoL}), definiert durch den Verlust der geforderten Funktionalität unter spezifischen Randbedingungen. Maßgeblich hierfür sind äußere Belastungen (z.,B. Kräfte) und die resultierenden inneren Beanspruchungen (Spannungen). Die Ausfallzeit wird als kontinuierliche Zufallsvariable $\sym{tau}>0$ modelliert, deren Verteilungsfunktion $\sym{F}(\sym{t})=\sym{Pr}(\sym{tau}\leq \sym{t})$ die Ausfallwahrscheinlichkeit beschreibt. Komplementär dazu quantifiziert die Zuverlässigkeit $\sym{R}(\sym{t}) = 1 - \sym{F}(\sym{t})$ die Überlebenswahrscheinlichkeit eines nicht reparierbaren Systems \cite{Bertsche.2022}.
+
 Der \textbf{Ausfall} eines technischen Produkts bezeichnet den Zeitpunkt innerhalb seiner Lebensdauer, zu dem die geforderte Funktionalität unter definierten Umgebungs- und Randbedingungen nicht mehr erfüllt ist - also das Lebensdauerende - engl. \textbf{\ac{EoL}}.
 Als \textbf{Belastung} werden die von außen auf ein Produkt einwirkenden Einflussparameter - Kräfte und Momente im mechanischen Kontext - bezeichnet.
 \textit{Einzelne} oder zeitgleich \textit{mehrere} Einflussparameter induzieren infolge der Produktgestalt daraus \textbf{Beanspruchungen}: innere Kräfte, Momente und lokale Spannungen.
@@ -51,7 +53,7 @@ Mathematisch ist sie als das Verhältnis der \ac{pdf} zur Zuverlässigkeitsfunkt
 \begin{equation} \label{eq:hazarddef}
     \sym{lambda}(\sym{t}) = \lim_{\Delta \sym{t} \to 0} \frac{\sym{Pr}(\sym{t} < \sym{tau} \leq \sym{t} + \Delta \sym{t} | \sym{tau} > \sym{t})}{\Delta \sym{t}} = \frac{1}{\sym{R}(\sym{t})} \left[ - \frac{d\sym{R}(\sym{t})}{d\sym{t}} \right] = \frac{\sym{f}(\sym{t})}{\sym{R}(\sym{t})} .
 \end{equation}
-Die Ausfallrate $\sym{lambda}(\sym{t})$ ist von zentraler Bedeutung, da ihr zeitlicher Verlauf (z.B. konstant, steigend, fallend) direkte Rückschlüsse auf zugrundeliegende Ausfallmechanismen wie Frühausfälle, Zufallsausfälle oder Verschleiß (vgl. "Badewannenkurve") zulässt \cite{Bertsche.2022,Yang.2007,Rigdon.2022}.
+Die Ausfallrate $\sym{lambda}(\sym{t})$ ist von zentraler Bedeutung, da ihr zeitlicher Verlauf (z.B. konstant, steigend, fallend) direkte Rückschlüsse auf zugrundeliegende Ausfallmechanismen wie Frühausfälle, Zufallsausfälle oder Verschleiß (vgl. Badewannenkurve) zulässt \cite{Bertsche.2022,Yang.2007,Rigdon.2022}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -417,7 +419,7 @@ Demzufolge kann auch ein Lebensdauer-beeinflussendes Parameterset -  beispielhaf
     \caption{Standard voll-faktorieller Versuchsplan}
     \label{fig:abb2.05_vfdesign}
 \end{figure}
-Ein derartiges Setup erlaubt es, die perspektivische Differenz erreichbarer \ac{EoL}-Werte durch tiefe und hohe Beanspruchungswerte der Faktoren zu beobachten \cite{Yang.2007,Meeker.2022}.
+Ein derartiges Setup erlaubt es, die perspektivische Differenz erreichbarer \ac{EoL}-Werte durch niedrige und hohe Beanspruchungswerte der Faktoren zu beobachten \cite{Yang.2007,Meeker.2022}.
 Der voll-faktorielle Versuchsplan bildet somit den Standard-Versuchsplan im \ac{DoE} und fordert bei einmaliger Durchführung (\textbf{Replikation} $\sym{m}=1$)
 \begin{equation}
     \sym{n}=2^{\sym{k}}
@@ -898,6 +900,8 @@ Aus Tabelle~\ref{tab:2.1_optimalitaeten} lassen sich die \textbf{\textit{A}-Effi
     \\
 \end{longtable}
 }
+
+\subsubsection{Forschungsschwerpunkte in der \ac{RSM}}
 Während die klassische sequentielle Strategie (Screening gefolgt von Augmentierung zum \ac{CCD} oder Anpassung von Parameterräumen mit optimalen Versuchsplänen) die methodischen Risiken minimiert, erfordert sie oft einen hohen administrativen und zeitlichen Aufwand durch mehrere Versuchsphasen - insbesondere bei technischen Versuchsanlagen mit hohem Rüst-Aufwand.
 Als Antwort darauf entwickelten \textcite{Jones.2011} zunächst die Klasse der \textbf{\acp{DSD}}, um auch bei größeren Faktorenzahlen (typisch $\sym{k} \geq 4$) Haupteffekte von nicht-linearen Effekten in einem Schritt zu trennen.
 Da \acp{DSD} jedoch eine starre Struktur aufweisen und oft nur eine geringe statistische Power zur Schätzung quadratischer Effekte bieten, etablierte sich in jüngster Forschung die umfassendere Klasse der \textbf{\ac{OMARS}-Designs} (\textit{Orthogonal Minimally Aliased Response Surface Designs}), zu der \textcite{Goos.2025} zuletzt eine detaillierte Übersichtsarbeit vorlegten.
@@ -907,11 +911,31 @@ Dazu basieren sie auf der Variation aller quantitativen Faktoren auf drei Stufen
 Die statistische Konstruktion garantiert dabei zwei fundamentale Orthogonalitätseigenschaften, die sie von klassischen Optimal-Designs abgrenzen:
 Erstens sind alle Haupteffekte orthogonal zueinander, was eine unabhängige Schätzung der linearen Einflüsse sichert.
 Zweitens sind die Haupteffekte vollständig unkorreliert mit sämtlichen Effekten zweiter Ordnung (sowohl Zweifach-Wechselwirkungen als auch quadratische Terme).
-Das verbleibende Aliasing (Vermengung) beschränkt sich somit ausschließlich auf die Gruppe der Effekte zweiter Ordnung untereinander und wird algorithmisch minimiert (\textit{Minimally Aliased}).
+Das verbleibende Aliasing (Vermengung) beschränkt sich somit ausschließlich auf die Gruppe der Effekte zweiter Ordnung untereinander und wird algorithmisch minimiert (engl. \textit{Minimally Aliased}).
 Dies erlaubt eine signifikante Flexibilisierung der Stichprobengröße im Vergleich zu starr definierten Plänen wie dem \ac{CCD}, bei gleichzeitigem Erhalt der robusten Schätzbarkeit der primären Haupteffekte.
+Die Generierung eines solchen \ac{OMARS}-DesignsST erfolgt dabei nicht über geometrische Konstruktionsvorschriften (wie beim \ac{CCD}), sondern algorithmisch durch die Lösung eines ganzzahligen linearen Optimierungsproblems (engl. \textbf{\ac{ILP}}).
+Basierend auf der Kandidatenmenge \sym{cand_set} (üblicherweise entsprechend einem voll-faktoriellen $3^{\sym{num_fac}}$ Plan) wird ein Vektor binärer Entscheidungsvariablen $\sym{dec_var} \in \{0,1\}^{|\sym{cand_set}|}$ gesucht, der folgende mathematische Restriktionen simultan erfüllt:
 
+\begin{itemize}
+    \item \textbf{Einhaltung des Stichprobenumfangs:}
+          Die Summe der ausgewählten Versuchspunkte muss exakt der gewünschten Anzahl $\sym{n}$ entsprechen:
+          \begin{equation} \label{eq:omars_n}
+              \sum_{\sym{idx_i}=1}^{|\sym{cand_set}|} \symsub{dec_var}{idx_i} = \sym{n}.
+          \end{equation}
 
+    \item \textbf{Orthogonalität der Haupteffekte:}
+          Jedes Paar von Haupteffekt-Spalten $\sym{idx_j}$ und $\sym{idx_l}$ muss unkorreliert sein. Für die kodierten Faktorstufen $\sym{x}_{\sym{idx_i}\sym{idx_j}} \in \{-1, 0, +1\}$ des $\sym{idx_i}$-ten Kandidaten gilt:
+          \begin{equation} \label{eq:omars_ortho_me}
+              \sum_{\sym{idx_i}=1}^{|\sym{cand_set}|} \symsub{dec_var}{idx_i} \cdot \sym{x}_{\sym{idx_i}\sym{idx_j}} \cdot \sym{x}_{\sym{idx_i}\sym{idx_l}} = 0 \quad \forall \, 1 \le \sym{idx_j} < \sym{idx_l} \le \sym{num_fac}.
+          \end{equation}
 
+    \item \textbf{OMARS-Eigenschaft (Orthogonalität Haupteffekt zu Effekten zweiter Ordnung):}
+          Dies ist das definierende Merkmal. Jeder Haupteffekt $\sym{idx_j}$ muss orthogonal zu jedem Effekt zweiter Ordnung (Interaktion $\sym{x}_{\sym{idx_l}}\sym{x}_{\sym{idx_k}}$ oder quadratischer Term $\sym{x}_{\sym{idx_l}}^2$) sein:
+          \begin{equation} \label{eq:omars_ortho_soe}
+              \sum_{\sym{idx_i}=1}^{|\sym{cand_set}|} \symsub{dec_var}{idx_i} \cdot \sym{x}_{\sym{idx_i}\sym{idx_j}} \cdot (\sym{x}_{\sym{idx_i}\sym{idx_l}} \cdot \sym{x}_{\sym{idx_i}\sym{idx_k}}) = 0 \quad \forall \, \sym{idx_j}, \sym{idx_l}, \sym{idx_k} \in \{1, \dots, \sym{num_fac}\}.
+          \end{equation}
+\end{itemize}
+Unter Einhaltung dieser harten Nebenbedingungen wird anschließend jene Design-Variante ausgewählt, welche die Aliasing-Struktur der Effekte zweiter Ordnung untereinander minimiert (z.\,B. durch Maximierung von \sym{D_opt}, vgl. Gleichung~\ref{eq:opt_D}).
 
 
 

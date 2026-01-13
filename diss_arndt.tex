@@ -194,6 +194,7 @@ isbn=true]{biblatex}
 \newacronym{FDS}{FDS}{Fraction of Design Space}
 \newacronym{OMARS}{OMARS}{Orthogonal Minimally Aliased Response Surface}
 \newacronym[plural=DSDs, longplural=Definitive Screening Designs]{DSD}{DSD}{VDefinitive Screening Design}
+\newacronym{ILP}{ILP}{Integer Linear Programming}
 
 % Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
 
@@ -217,6 +218,7 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_error}{type=indices, name={\ensuremath{\textnormal{error}}}, description={Fehler 2. Art (Wahrscheinlichkeit für ein falsch-negatives Ergebnis)}}
 \newglossaryentry{idx_MC}{type=indices, name={\ensuremath{\textnormal{MC}}}, description={Monte-Carlo-Simulation}}
 \newglossaryentry{idx_BC}{type=indices, name={\ensuremath{\textnormal{BC}}}, description={Box-Cox-Transformation}}
+\newglossaryentry{idx_k}{type=indices, name={\ensuremath{k}}, description={Laufvariable (für Faktor-Indizierung)}}
 
 % ===========================================================================
 % 1. LATEINISCHE SKALARE (Variablen & Parameter)
@@ -352,6 +354,11 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Cox-Snell-Residuum}, text={\ensuremath{r_{\textnormal{CS}}}}]{resid_CS}{\ensuremath{r_{\textnormal{CS}}}}
 \glsxtrnewsymbol[type=formulas, description={Standardisiertes Devianz-Residuum}, text={\ensuremath{r_{\textnormal{Dev}}}}]{resid_Dev}{\ensuremath{r_{\textnormal{Dev}}}}
 \glsxtrnewsymbol[type=formulas, description={Standardisiertes Residuum (bezogen auf die SEV-Verteilung)}, text={\ensuremath{r}}]{resid_std}{\ensuremath{r}} 
+
+% Neue Definitionen für OMARS-Generierung (ILP)
+\glsxtrnewsymbol[type=formulas, description={Kandidatenmenge (Menge aller möglichen Faktorstufenkombinationen)}, text={\ensuremath{\Omega}}]{cand_set}{\ensuremath{\Omega}}
+\glsxtrnewsymbol[type=formulas, description={Binäre Entscheidungsvariable für die Design-Optimierung (1 = Versuchspunkt ausgewählt)}, text={\ensuremath{\gamma}}]{dec_var}{\ensuremath{\gamma}}
+\glsxtrnewsymbol[type=formulas, description={Anzahl der Faktoren (Dimension)}, text={\ensuremath{k_{\textnormal{f}}}}]{num_fac}{\ensuremath{k_{\textnormal{f}}}}
 
 %  Show page borders (useful for final checks)
 %\usepackage{showframe}
