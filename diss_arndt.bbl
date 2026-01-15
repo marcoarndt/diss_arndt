@@ -109,39 +109,6 @@
       \endverb
       \warn{\item misc entry 'dat.2025' (bibliography.bib): Invalid format '13.06.2025' of date field 'urldate' - ignoring}
     \endentry
-    \entry{Birolini.2017}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=ecf114aa7badca10474bfa02e9cccde1}{%
-           family={Birolini},
-           familyi={B\bibinitperiod},
-           given={Alessandro},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Berlin, Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer Berlin Heidelberg}%
-      }
-      \strng{namehash}{ecf114aa7badca10474bfa02e9cccde1}
-      \strng{fullhash}{ecf114aa7badca10474bfa02e9cccde1}
-      \strng{fullhashraw}{ecf114aa7badca10474bfa02e9cccde1}
-      \strng{bibnamehash}{ecf114aa7badca10474bfa02e9cccde1}
-      \strng{authorbibnamehash}{ecf114aa7badca10474bfa02e9cccde1}
-      \strng{authornamehash}{ecf114aa7badca10474bfa02e9cccde1}
-      \strng{authorfullhash}{ecf114aa7badca10474bfa02e9cccde1}
-      \strng{authorfullhashraw}{ecf114aa7badca10474bfa02e9cccde1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-3-662-54208-8}
-      \field{title}{Reliability Engineering}
-      \field{year}{2017}
-      \verb{doi}
-      \verb 10.1007/978-3-662-54209-5
-      \endverb
-    \endentry
     \entry{Meeker.2022}{book}{}{}
       \name{author}{3}{}{%
         {{hash=06c9248ef411ccbabea6465250ba6c45}{%
@@ -174,8 +141,8 @@
       \strng{authornamehash}{3108999677b731b9b6ef01ad029f17fc}
       \strng{authorfullhash}{5bbe4ce7176f019d042db7c48104aad0}
       \strng{authorfullhashraw}{5bbe4ce7176f019d042db7c48104aad0}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{"}This book improves Meeker and Escobar (1998, Wiley) not only in terms of organization and presentation, but also in extensions and modifications to the technical material. It presents state-of-the-art, computer-based statistical methods for reliability data analysis and for test planning of industrial products. It also improves long time established techniques as it demonstrates how to apply the new graphical, numerical, or simulation-based methods to a broad range of models encountered in reliability data analysis. Bayesian methods in solving practical problems (e.g. models involving random effects or censoring that arises in reliability studies) are now incorporated where appropriate; the computations are done with WinBUGS. Ample exercises that extend and strengthen the concepts in the book are included. The criterion for integrating material in the book is that the authors have in-hand or have seen real applications for the methodology. The book is specifically geared for a one-semester course on the topic in either a statistics or engineering department at either the upper-undergraduate or beginning graduate levels. R functions and subroutines, along with an extensive list of data sets, are included on a massive web site that is meticulously maintained by the authors{"}--}
@@ -184,6 +151,39 @@
       \field{series}{Wiley series in probability and statistics}
       \field{title}{Statistical methods for reliability data}
       \field{year}{2022}
+    \endentry
+    \entry{Birolini.2017}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ecf114aa7badca10474bfa02e9cccde1}{%
+           family={Birolini},
+           familyi={B\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{fullhash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{fullhashraw}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{bibnamehash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{authorbibnamehash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{authornamehash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{authorfullhash}{ecf114aa7badca10474bfa02e9cccde1}
+      \strng{authorfullhashraw}{ecf114aa7badca10474bfa02e9cccde1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-662-54208-8}
+      \field{title}{Reliability Engineering}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1007/978-3-662-54209-5
+      \endverb
     \endentry
     \entry{Yang.2007}{book}{}{}
       \name{author}{1}{}{%
@@ -207,8 +207,8 @@
       \strng{authornamehash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
       \strng{authorfullhash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
       \strng{authorfullhashraw}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780471715290}
@@ -220,6 +220,49 @@
       \verb{url}
       \verb http://www.loc.gov/catdir/enhancements/fy0740/2006019150-b.html
       \endverb
+    \endentry
+    \entry{Modarres.2017}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=bddac90398a742fd034cd242b83cd90d}{%
+           family={Modarres},
+           familyi={M\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2e0c848cf44f536f5651e691c3d6868e}{%
+           family={Nuri-Amiri},
+           familyi={N\bibinithyphendelim A\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=59a1d0dd030cb397b9e2c9de64c3e2cf}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Beverly, MA}%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{2}{%
+        {Scrivener Publishing}%
+        {John Wiley {\&} Sons Inc}%
+      }
+      \strng{namehash}{360122917dc07abd38b27440bffeda7a}
+      \strng{fullhash}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{fullhashraw}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{bibnamehash}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{authorbibnamehash}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{authornamehash}{360122917dc07abd38b27440bffeda7a}
+      \strng{authorfullhash}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \strng{authorfullhashraw}{4f6b0ad12b1a228cf6e95e4ed4091377}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781119388630}
+      \field{series}{Performability engineering series}
+      \field{title}{Probabilistic physics of failure approach to reliability: Modeling, accelerated testing, prognosis and reliability assessment}
+      \field{year}{2017}
     \endentry
     \entry{Rigdon.2022}{book}{}{}
       \name{author}{4}{}{%
@@ -427,8 +470,8 @@
       \strng{authornamehash}{ec8317a15ab9b47e1eacf21fc05589c1}
       \strng{authorfullhash}{ec8317a15ab9b47e1eacf21fc05589c1}
       \strng{authorfullhashraw}{ec8317a15ab9b47e1eacf21fc05589c1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The Most Comprehensive Book on the Subject Chronicles the Development of the Weibull Distribution in Statistical Theory and Applied Statistics Exploring one of the most important distributions in statistics, The Weibull Distribution: A Handbook focuses on its origin, statistical properties, and related distributions. The book also presents various approaches to estimate the parameters of the Weibull distribution under all possible situations of sampling data as well as approaches to parameter and goodness-of-fit testing. Describes the Statistical Methods, Concepts, Theories, and Applications of This Distribution Compiling findings from dozens of scientific journals and hundreds of research papers, the author first gives a careful and thorough mathematical description of the Weibull distribution and all of its features. He then deals with Weibull analysis, using classical and Bayesian approaches along with graphical and linear maximum likelihood techniques to estimate the three Weibull parameters. The author also explores the inference of Weibull processes, Weibull parameter testing, and different types of goodness-of-fit tests and methods. Successfully Apply the Weibull Model By using inferential procedures for estimating, testing, forecasting, and simulating data, this self-contained, detailed handbook shows how to solve statistical life science and engineering problems. Cover -- Title -- Copyright -- Contents -- Preface -- List of Figures -- List of Tables -- Part I: Genesis, theory and description -- Chapter 1: History and meaning of the WEIBULL distribution -- Chapter 2: Definition and properties of the WEIBULL distribution -- Chapter 3: Related distributions -- Chapter 4: WEIBULL processes and WEIBULL renewal theory -- Chapter 5: Order statistics and related variables -- Chapter 6: Characterizations -- Part II: Applications and inference -- Chapter 7: WEIBULL applications and aids in doing WEIBULL analysis -- Chapter 8: Collecting life data -- Chapter 9: Parameter estimation - Graphical approaches -- Chapter 10: Parameter estimation - Least squares and linear approaches -- Chapter 11: Parameter estimation - Maximum likelihood approaches -- Chapter 12: Parameter estimation - Methods of moments -- Chapter 13: Parameter estimation - More classical approaches and comparisons -- Chapter 14: Parameter estimation - BAYESIAN approaches -- Chapter 15: Parameter estimation - Further approaches -- Chapter 16: Parameter estimation in accelerated life testing -- Chapter 17: Parameter estimation for mixed WEIBULL models -- Chapter 18: Inference of WEIBULL processes -- Chapter 19: Estimation of percentiles and reliability including tolerance limits -- Chapter 20: Prediction of future random quantities -- Chapter 21: WEIBULL parameter testing -- Chapter 22: WEIBULL goodness-of-fit testing and related problems -- Part III: Appendices -- Table of the gamma, digamma and trigamma functions -- Abbreviations -- Mathematical and statistical notations -- Bibliography -- Author index -- Subject index.}
@@ -465,8 +508,8 @@
       \strng{authornamehash}{2e1bd4c711f964987d8fef154f2ba2f0}
       \strng{authorfullhash}{2e1bd4c711f964987d8fef154f2ba2f0}
       \strng{authorfullhashraw}{2e1bd4c711f964987d8fef154f2ba2f0}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This volume includes the binomial tests of comparison and up-to-date information on Accept-Reject Tests, the Sequential Probability Ratio Test, Bayesian MTBF and Reliability Demonstration Tests, as well as other very important accelerated tests such as Arrhenius, Eyring, Bazovsky, and Inverse Power Law}
@@ -1347,8 +1390,8 @@
       \strng{authornamehash}{1a0880c02579e3839e4eccae94c06260}
       \strng{authorfullhash}{1a0880c02579e3839e4eccae94c06260}
       \strng{authorfullhashraw}{1a0880c02579e3839e4eccae94c06260}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1st}
@@ -1482,8 +1525,8 @@
       \strng{authornamehash}{f784da2389a332859e32df8d9d618d14}
       \strng{authorfullhash}{f784da2389a332859e32df8d9d618d14}
       \strng{authorfullhashraw}{f784da2389a332859e32df8d9d618d14}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Zentraler Gegenstand dieser Arbeit ist der Nachweis der Zuverlässigkeit von Systemen und die Planung der dazu notwendigen Tests. Selbst einfache Produkte können durch mehrere Ursachen und Mechanismen ausfallen und besitzen dazu meist mehrere Komponenten und Subsysteme. Diese Arbeit behandelt die Planung von Tests für den effizienten Nachweis der Systemzuverlässigkeit, welche die Systemstruktur und die Komponenten mit der Kombina- tion von Tests dieser Elemente berücksichtigt. Dazu wird die Probability of Test Success als zentrale, objektive Bewertungsmetrik verwendet. Sie ist fähig, die Wahrscheinlichkeit für einen erfolgreichen Zuverlässigkeitsnachweis anzugeben und erlaubt damit beispielsweise auch die Frage nach dem erforderlichen Stichprobenumfang bei ausfallbasierten Tests zu beantworten. Durch die vorgenommene Einordnung der Probability of Test Success in den statistischen Kontext eines Hypothesentests kann die Probability of Test Success auch als Trennschärfe verstanden werden. Dadurch werden Berechnungsmethoden entwickelt, die diesen Kontext ausnutzen. Ebenso ermöglicht dies die notwendige Erweiterung auf Systeme mit mehreren Ausfallmoden sowie die Berücksichtigung der Unsicherheit in der Vorkenntnis und die zusätzliche Berücksichtigung der Vorkenntnis mit dem Satz von Bayes. Ein ganzheitliches Vorgehen zeigt auf, wie im individuellen Fall der effizienteste Test identifiziert werden kann. Das hei{ß}t ein Test, welcher sowohl den Nachweis mit hoher Wahrscheinlichkeit erbringt, als auch die gesetzten Grenzen bezüglich des zur Verfügung stehenden Budgets einhält und die Ressourcen dabei möglichst effizient einsetzt. Untersuchungen zeigen, dass sich daraus ein grundsätzliches Verständnis zu den Tests, der Vorkenntnis und den Systemen ableiten lässt. Beispielsweise sind ausfallfreie Tests auf Komponentenebene den ausfallbasierten Tests aus statistischer Sicht fast immer unterlegen. Zudem verhält sich der Effekt von hohem Aufwand auf die Güte des Tests bei ausfallbasierten und ausfallfreien Tests gegensätzlich. Werden bei einem ausfallbasierten Test mehr Prüflinge verwendet, so steigt die Wahrscheinlichkeit für einen erfolgreichen Nachweis. Bei den ausfallfreien Tests sinkt dagegen die Wahrscheinlichkeit für einen erfolgreichen Nachweis. Das bedeutet, dass ausfallfreie Testverfahren nur dann mit hoher Wahrscheinlichkeit einen Nachweis erbringen können, wenn die dabei gewonnene Aussage von schlechter statistischer Güte ist. Zudem sind sie unfähig, Zuverlässigkeitsnachweise für Systeme zu erbringen, welche die Anforderung nur wenig übererfüllen. Werden die Komponenten des Systems ausfallbasiert getestet, um den Nachweis zu erbringen, so ermöglichen die entwickelten Methoden eine optimale Aufteilung der Prüflinge zu berechnen. Neben der Auswahl der Testart erlaubt diese Arbeit demnach die Untersuchung der optimalen Testgestaltung, sodass der Nachweis mit grö{ß}tmöglicher Wahrscheinlichkeit erbracht werden kann. Hierzu zählen auch Kombinationen verschiedener Testtypen und Komponenten des Systems. Es lassen sich beispielsweise ausfallbasierte Komponententests mit ausfallfreien Dauerlauftests auf Systemebene kombinieren und hinsichtlich deren Eignung für den Zuverlässigkeitsnachweis bewerten. Durch die zusätzliche Berücksichtigung der Vorkenntnis mittels des Satzes von Bayes lassen sich Testaufwände einsparen. Die Bewertung solcher Tests ist durch die erarbeiteten Methoden ebenso möglich und stellt sicher, dass der effizienteste Test zum Nachweis der Zuverlässigkeit gefunden werden kann. Weitere Untersuchungen ergeben ergänzende Erkenntnisse. Die Anwendung des ganzheitlichen Verfahrens am Fallbeispiel eines Synchronmotors demonstriert zusätzlich den Nutzen der entwickelten Methoden und Prozesse. Die Arbeit leistet damit einen Beitrag zur umfassenden und statistisch fundierten Planung von Zuverlässigkeitstests zum Nachweis von Systemen. Sie konzentriert sich dabei auf die statistischen Aspekte und erlaubt den objektiven Vergleich und Bewertung von Tests verschiedener Systemebenen und Arten, sowie Kombinationen davon zum Nachweis der Systemzuverlässigkeit. Um möglichst effiziente Tests zu ermöglichen, wird eine Methode mit dem Satz von Bayes integriert. Die Güte der Planung selbst wird durch die Berücksichtigung der Unsicherheit der Eingangsdaten mitbewertet.}
@@ -2806,49 +2849,6 @@
       \verb{doi}
       \verb 10.1007/978-3-031-12409-9
       \endverb
-    \endentry
-    \entry{Modarres.2017}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=bddac90398a742fd034cd242b83cd90d}{%
-           family={Modarres},
-           familyi={M\bibinitperiod},
-           given={Mohammad},
-           giveni={M\bibinitperiod}}}%
-        {{hash=2e0c848cf44f536f5651e691c3d6868e}{%
-           family={Nuri-Amiri},
-           familyi={N\bibinithyphendelim A\bibinitperiod},
-           given={Mehdi},
-           giveni={M\bibinitperiod}}}%
-        {{hash=59a1d0dd030cb397b9e2c9de64c3e2cf}{%
-           family={Jackson},
-           familyi={J\bibinitperiod},
-           given={Christopher},
-           giveni={C\bibinitperiod}}}%
-      }
-      \list{location}{2}{%
-        {Beverly, MA}%
-        {Hoboken, NJ}%
-      }
-      \list{publisher}{2}{%
-        {Scrivener Publishing}%
-        {John Wiley {\&} Sons Inc}%
-      }
-      \strng{namehash}{360122917dc07abd38b27440bffeda7a}
-      \strng{fullhash}{4f6b0ad12b1a228cf6e95e4ed4091377}
-      \strng{fullhashraw}{4f6b0ad12b1a228cf6e95e4ed4091377}
-      \strng{bibnamehash}{4f6b0ad12b1a228cf6e95e4ed4091377}
-      \strng{authorbibnamehash}{4f6b0ad12b1a228cf6e95e4ed4091377}
-      \strng{authornamehash}{360122917dc07abd38b27440bffeda7a}
-      \strng{authorfullhash}{4f6b0ad12b1a228cf6e95e4ed4091377}
-      \strng{authorfullhashraw}{4f6b0ad12b1a228cf6e95e4ed4091377}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9781119388630}
-      \field{series}{Performability engineering series}
-      \field{title}{Probabilistic physics of failure approach to reliability: Modeling, accelerated testing, prognosis and reliability assessment}
-      \field{year}{2017}
     \endentry
     \entry{Kremer.2020}{inproceedings}{}{}
       \name{author}{3}{}{%
