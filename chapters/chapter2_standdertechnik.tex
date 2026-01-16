@@ -368,7 +368,7 @@ wobei $\sym{Beta}$ als $\sym{p}\times 1$ Vektor der Regressionskoeffizienten ($\
 Sollen zunächst perspektivisch relevante Faktoren für eine versuchstechnische Untersuchung identifiziert werden, kann ein \textbf{Parameter-Screening} durchgeführt werden.
 Dessen Durchführung kann sowohl heuristisch als auch versuchstechnisch erfolgen.
 
-\subsubsection{Parameter-Screening} \label{subsubsec:screening}
+\subsection{Parameter-Screening} \label{subsec:screening}
 Angesichts der potenziell hohen Komplexität durch Wechselwirkungen und Nichtlinearitäten sind die in Abbildung~\ref{fig:ma_abb2.02_doe_steps} beschriebenen \textit{Schritte~2-3} als propädeutische Arbeiten für ein effizientes Testdesign zu interpretieren.
 Methodisch lassen sich diese unter dem Terminus \textbf{Screening} subsumieren.
 Screening-Schritte sind zwischen der Definition des Untersuchungsziels und der Durchführung der physischen Screening-Experimente angeordnet (vgl. \textit{Schritt~3} in Abbildung~\ref{fig:ma_abb2.02_doe_steps} sowie Abschnitt~\ref{subsec:pläne}).
@@ -553,7 +553,7 @@ Zudem ist es bei korrekter Wahl der Zentralpunkte alias-optimal gegenüber kubis
 Stoßen Standard-Designs (\ac{CCD}, Box-Behnken) aufgrund von Restriktionen im Versuchsraum (\textbf{Constraints}), nicht-standardmäßigen Modellierungszielen oder ungewöhnlichen Stichprobenumfängen an ihre Grenzen, empfiehlt sich der Einsatz von \textbf{Optimalen Versuchsplänen}, vergleiche übernächsten Abschnitt.
 Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche Vorhersagevarianz über den gesamten Designraum und können Standard-Designs in ihrer Prädiktionsgüte oft übertreffen \cite{Goos.2011,Montgomery.2020}.
 
-\subsubsection{Strategische Vorgehensweisen}
+\subsection{Strategische Vorgehensweisen} \label{subsec:strategie}
 In der Praxis entsteht ein \ac{CCD} häufig im Rahmen einer \textbf{sequenziellen Versuchsstrategie}: Zeigt das initiale lineare Modell Anpassungsmängel (\textbf{Lack-of-Fit}), wird der bestehende faktorielle Plan um die Sternpunkte augmentiert, um ein Modell zweiter Ordnung zu fitten \cite{Myers.2016}.
 Modelle zweiter Ordnung sind insbesondere in der Lebensdauer- und Zuverlässigkeitstechnik vermehrt von Bedeutung, da sie die Existenz von lokalen Extrema (Minima oder Maxima) der Systemantwort im Versuchsraum detaillierter abbilden können \cite{Rigdon.2022,Dean.2017}.
 Prinzipielle Vorgehensweisen, die ein erfolgreiches Umsetzen von \ac{DoE} bzw. \ac{L-DoE} begünstigen sollten, wie \textbf{Blockbildung} oder \textbf{Randomisierung} (vgl. \cite{Siebertz.2017,Kleppmann.2020}) seien hier bereits vorausgesetzt.
@@ -624,13 +624,19 @@ Daraufhin werden \textbf{Zentralpunkte} ergänzt, um das Vorhandensein von Krüm
 Abschließend werden bei Bedarf die \textbf{Sternpunkte} hinzugefügt, um ein vollständiges \ac{CCD} zu realisieren.
 Insbesondere in der Lebensdauererprobung ist eine derartige schrittweise Vorgehensweise sinnvoll, um den Versuchsumfang zu minimieren und dennoch eine fundierte Modellierung der Systemantwort zu gewährleisten.
 Gleichzeitig erlaubt diese Strategie eine flexible Anpassung an unerwartete Ergebnisse in den einzelnen Phasen der Untersuchung, während lokale Optima von Zuverlässigkeiten im Sinne von \ac{DfR} im Vorfeld ohnehin nicht bekannt sind.
-So kann beispielsweise auf Basis der Ergebnisse des teil-faktoriellen Plans entschieden werden, ob eine Erweiterung zum voll-faktoriellen Plan überhaupt notwendig ist, oder ob direkt zu den Zentralpunkten übergegangen wird.
+In Abhängigkeit der Anpassung zur Wahl eines geeigneten Modells, linear oder quadratisch, kann die Versuchsplanung so stets an die aktuellen Erkenntnisse angepasst werden.
+Dies folgt im Wesentlichen einer übergeordneten Logik der Modellkomplexität:
+Gemäß \textcite{Russell.2019} korrespondiert die minimale Anzahl notwendiger Versuchspunkte direkt mit der Anzahl der zu schätzenden Modellparameter $\sym{p}$.
+Intuitiv erfordert bereits die Bestimmung der Parameter einer einfachen Geraden ($\symsub{beta}{idx_0}, \sym{beta}_1$) mindestens zwei unterschiedliche Stützstellen.
+Soll hingegen ein quadratischer Zusammenhang ($\symsub{beta}{idx_0}, \sym{beta}_1, \sym{beta}_{11}$) abgebildet werden, sind zwingend mindestens drei Stützstellen erforderlich, um das Gleichungssystem zu lösen.
+Im Kontext optimaler Versuchspläne definiert nach \textcite{Pukelsheim.2006} der Maßerweiterungssatz von Carathéodory dabei eine theoretische Obergrenze für die notwendigen Stützstellen von $\sym{p}(\sym{p} + 1)/2 + 1$, beziehungsweise $\sym{p}(\sym{p} + 1)/2$, sofern das Interesse der Schätzung aller Elemente des Parametervektors $\sym{Beta}$ gilt \cite{Russell.2019}.
+Es kann beispielsweise auf Basis der Ergebnisse des teil-faktoriellen Plans entschieden werden, ob eine Erweiterung zum voll-faktoriellen Plan überhaupt notwendig ist.
 Genauso kann die Anzahl der Zentralpunkte an die beobachtete Streuung der Lebensdauerdaten angepasst werden, um eine robuste Schätzung des Fehlers zu gewährleisten.
 Ist dann eine Extrapolation in Richtung a-priori unbekannter Beanspruchungsniveaus geplant, verfügt der \ac{CCD} über die notwendigen Stützstellen, um eine adäquate Exploration des Versuchsraums zu ermöglichen.
 Zuletzt kann selbst bei Extrapolation über die Grenzen des Versuchsraums hinaus auf Basis der modellierten Krümmungen eine fundierte Abschätzung der Systemantwort erfolgen \cite{Myers.2016,Montgomery.2020} und sogar mit Validierungsversuchen unter realen Einsatzbedingungen hinterlegt werden \cite{Dean.2017}.
 So wird eine effiziente und zugleich robuste Lebensdauererprobung ermöglicht, die den Anforderungen der \ac{DfR} gerecht wird und wirtschaftlich abbildbar bleibt \cite{RisbergEllekjr.1998}.
 
-\subsubsection{Optimale Versuchsplanung und Bewertungskriterien} \label{subsubsec:optimal}
+\subsection{Optimale Versuchsplanung und Bewertungskriterien} \label{subsec:optimal}
 Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, können \textbf{optimale Versuchspläne} einen leistungsfähigen, \textit{effizienten} Lösungsansatz für \textit{multivariate} Versuchsplanung bieten \cite{Kleppmann.2016,Montgomery.2020,Myers.2016}.
 Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der (um die Versuchsanzahl $\sym{N}$ \textbf{skalierten}) \textbf{Prädiktionsvarianz}, engl. \textbf{\ac{SPV}},
 \begin{equation}
@@ -1031,7 +1037,7 @@ Folglich wird eine zufallsverteilte Lebensdauer $\sym{tau}$ für ein Weibull-\ac
     \sym{f}(\sym{t}, \sym{X}) = \sym{b} \cdot \sym{t}^{\sym{b}-1} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} \right)}
     \cdot e^{-\sym{t}^{\sym{b}} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} \right)}}, \quad \sym{t} > 0.
 \end{equation}
-beschrieben und analog zu Gleichungen~\ref{eq:mle_likelihood_simple}--\ref{eq:mle_loglikelihood_censored} in die \textbf{\ac{GLL}-Funktion} überführt, \cite{Russell.2019,Yang.2007,Aitkin.1980}:
+beschrieben und analog zu Gleichungen~\ref{eq:mle_likelihood_simple}--\ref{eq:mle_loglikelihood_censored} in die \textbf{\ac{GLL}-Funktion} überführt \cite{Russell.2019,Yang.2007,Aitkin.1980}:
 \begin{equation} \label{eq:log_likelihood_explicit}
     \begin{split}
         \sym{Lambda} & = \ln \left( \sym{L_like}(\symsub{t}{idx_i}; \sym{b}, \symsub{beta}{idx_0}, \dots, \symsub{beta}{k}) \right)                                                                                                                                                                                                                                                                                                        \\

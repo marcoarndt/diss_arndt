@@ -2024,6 +2024,92 @@
       \verb 10.1080/09544829208914746
       \endverb
     \endentry
+    \entry{Russell.2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=5b6d82aee353f8f289b23762f039622f}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={Kenneth\bibnamedelima G.},
+           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{3}{%
+        {Boca Raton}%
+        {London}%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press Taylor {\&} Francis Group}%
+      }
+      \strng{namehash}{5b6d82aee353f8f289b23762f039622f}
+      \strng{fullhash}{5b6d82aee353f8f289b23762f039622f}
+      \strng{fullhashraw}{5b6d82aee353f8f289b23762f039622f}
+      \strng{bibnamehash}{5b6d82aee353f8f289b23762f039622f}
+      \strng{authorbibnamehash}{5b6d82aee353f8f289b23762f039622f}
+      \strng{authornamehash}{5b6d82aee353f8f289b23762f039622f}
+      \strng{authorfullhash}{5b6d82aee353f8f289b23762f039622f}
+      \strng{authorfullhashraw}{5b6d82aee353f8f289b23762f039622f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Cover; Half Title; Series Page; Title Page; Copyright Page; Dedication; Contents; Preface; 1. Generalized Linear Models; 1.1 Introduction; 1.2 Mathematics of the general linear model; 1.3 Towards the generalized linear model; 1.4 Generalized linear models; 1.5 Estimating the values of the model parameters; 2. Background Material; 2.1 Introduction; 2.2 Maximisation or minimisation of a function; 2.2.1 A function of one variable; 2.2.2 A function of more than one variable; 2.3 Restrictions on independent variables; 2.4 Constrained optimisation in R; 2.4.1 The function constrOptim}
+      \field{isbn}{9780429057489}
+      \field{series}{Chapman and Hall/CRC Interdisciplinary Statistics Ser}
+      \field{title}{Design of experiments for generalized linear models}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1201/9780429057489
+      \endverb
+      \verb{file}
+      \verb Russell 2019 - Design of experiments for generalized:Attachments/Russell 2019 - Design of experiments for generalized.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.taylorfrancis.com/books/9780429057489
+      \endverb
+      \verb{url}
+      \verb https://www.taylorfrancis.com/books/9780429057489
+      \endverb
+    \endentry
+    \entry{Pukelsheim.2006}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=49813af522fea15c0ac8ee3cfd8d3931}{%
+           family={Pukelsheim},
+           familyi={P\bibinitperiod},
+           given={Friedrich},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Society for Industrial and Applied Mathematics}%
+      }
+      \list{location}{1}{%
+        {Philadelphia, Pa.}%
+      }
+      \list{publisher}{1}{%
+        {Society for Industrial and Applied Mathematics (SIAM 3600 Market Street Floor 6 Philadelphia PA 19104)}%
+      }
+      \strng{namehash}{49813af522fea15c0ac8ee3cfd8d3931}
+      \strng{fullhash}{49813af522fea15c0ac8ee3cfd8d3931}
+      \strng{fullhashraw}{49813af522fea15c0ac8ee3cfd8d3931}
+      \strng{bibnamehash}{49813af522fea15c0ac8ee3cfd8d3931}
+      \strng{authorbibnamehash}{49813af522fea15c0ac8ee3cfd8d3931}
+      \strng{authornamehash}{49813af522fea15c0ac8ee3cfd8d3931}
+      \strng{authorfullhash}{49813af522fea15c0ac8ee3cfd8d3931}
+      \strng{authorfullhashraw}{49813af522fea15c0ac8ee3cfd8d3931}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Optimal Design of Experiments offers a rare blend of linear algebra, convex analysis, and statistics. The optimal design for statistical experiments is first formulated as a concave matrix optimization problem. Using tools from convex analysis, the problem is solved generally for a wide class of optimality criteria such as D-, A-, or E-optimality. The book then offers a complementary approach that calls for the study of the symmetry properties of the design problem, exploiting such notions as matrix majorization and the Kiefer information matrix ordering. The results are illustrated with optimal designs for polynomial fit models, Bayes designs, balanced incomplete block designs, exchangeable designs on the cube, rotatable designs on the sphere, and many other examples. Since the book's initial publication in 1993, readers have used its methods to derive optimal designs on the circle, optimal mixture designs, and optimal designs in other statistical models. Using local linearization techniques, the methods described in the book prove useful even for nonlinear cases, in identifying practical designs of experiments. Audience: anyone involved in planning statistical experiments, including mathematical statisticians, applied statisticians, and mathematicians interested in matrix optimization problems Includes bibliographical references (p. 432-447) and index Optimal Design of Experiments offers a rare blend of linear algebra, convex analysis, and statistics. The optimal design for statistical experiments is first formulated as a concave matrix optimization problem. Using tools from convex analysis, the problem is solved generally for a wide class of optimality criteria such as D-, A-, or E-optimality. The book then offers a complementary approach that calls for the study of the symmetry properties of the design problem, exploiting such notions as matrix majorization and the Kiefer information matrix ordering. The results are illustrated with optimal designs for polynomial fit models, Bayes designs, balanced incomplete block designs, exchangeable designs on the cube, rotatable designs on the sphere, and many other examples. Since the book's initial publication in 1993, readers have used its methods to derive optimal designs on the circle, optimal mixture designs, and optimal designs in other statistical models. Using local linearization techniques, the methods described in the book prove useful even for nonlinear cases, in identifying practical designs of experiments. Audience: anyone involved in planning statistical experiments, including mathematical statisticians, applied statisticians, and mathematicians interested in matrix optimization problems}
+      \field{edition}{Classic ed.}
+      \field{isbn}{9780898716047}
+      \field{series}{Classics in applied mathematics}
+      \field{title}{Optimal design of experiments: Originally published: New York : J. Wiley, 1993}
+      \field{volume}{50}
+      \field{year}{2006}
+      \verb{doi}
+      \verb 10.1137/1.9780898719109
+      \endverb
+    \endentry
     \entry{RisbergEllekjr.1998}{article}{}{}
       \name{author}{2}{}{%
         {{hash=f515dcde667f80f75bb5b4dc16172fab}{%
@@ -2354,52 +2440,6 @@
       \endverb
       \verb{url}
       \verb http://www.loc.gov/catdir/description/cam041/2003063284.html
-      \endverb
-    \endentry
-    \entry{Russell.2019}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=5b6d82aee353f8f289b23762f039622f}{%
-           family={Russell},
-           familyi={R\bibinitperiod},
-           given={Kenneth\bibnamedelima G.},
-           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-      }
-      \list{location}{3}{%
-        {Boca Raton}%
-        {London}%
-        {New York}%
-      }
-      \list{publisher}{1}{%
-        {CRC Press Taylor {\&} Francis Group}%
-      }
-      \strng{namehash}{5b6d82aee353f8f289b23762f039622f}
-      \strng{fullhash}{5b6d82aee353f8f289b23762f039622f}
-      \strng{fullhashraw}{5b6d82aee353f8f289b23762f039622f}
-      \strng{bibnamehash}{5b6d82aee353f8f289b23762f039622f}
-      \strng{authorbibnamehash}{5b6d82aee353f8f289b23762f039622f}
-      \strng{authornamehash}{5b6d82aee353f8f289b23762f039622f}
-      \strng{authorfullhash}{5b6d82aee353f8f289b23762f039622f}
-      \strng{authorfullhashraw}{5b6d82aee353f8f289b23762f039622f}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Cover; Half Title; Series Page; Title Page; Copyright Page; Dedication; Contents; Preface; 1. Generalized Linear Models; 1.1 Introduction; 1.2 Mathematics of the general linear model; 1.3 Towards the generalized linear model; 1.4 Generalized linear models; 1.5 Estimating the values of the model parameters; 2. Background Material; 2.1 Introduction; 2.2 Maximisation or minimisation of a function; 2.2.1 A function of one variable; 2.2.2 A function of more than one variable; 2.3 Restrictions on independent variables; 2.4 Constrained optimisation in R; 2.4.1 The function constrOptim}
-      \field{isbn}{9780429057489}
-      \field{series}{Chapman and Hall/CRC Interdisciplinary Statistics Ser}
-      \field{title}{Design of experiments for generalized linear models}
-      \field{year}{2019}
-      \verb{doi}
-      \verb 10.1201/9780429057489
-      \endverb
-      \verb{file}
-      \verb Russell 2019 - Design of experiments for generalized:Attachments/Russell 2019 - Design of experiments for generalized.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.taylorfrancis.com/books/9780429057489
-      \endverb
-      \verb{url}
-      \verb https://www.taylorfrancis.com/books/9780429057489
       \endverb
     \endentry
     \entry{Atkinson.1970}{article}{}{}
@@ -3079,8 +3119,8 @@
       \strng{authornamehash}{fc004a97c21adebe39252fa234f7b0db}
       \strng{authorfullhash}{fc004a97c21adebe39252fa234f7b0db}
       \strng{authorfullhashraw}{fc004a97c21adebe39252fa234f7b0db}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. ed.}
@@ -3124,13 +3164,162 @@
       \strng{authornamehash}{e91d83cc311fae6b023556eae85bbd5d}
       \strng{authorfullhash}{e91d83cc311fae6b023556eae85bbd5d}
       \strng{authorfullhashraw}{e91d83cc311fae6b023556eae85bbd5d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781119385288}
       \field{title}{Mathematical statistics}
       \field{year}{2018}
+    \endentry
+    \entry{Ahn.2015}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e6ca6b3bff2ac6561da420340530dc34}{%
+           family={Ahn},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{fullhash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{fullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{bibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorbibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authornamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorfullhash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorfullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial Engineering}
+      \field{title}{Central Composite Design for the Experiments with Replicate Runs at Factorial and Axial Points}
+      \field{volume}{349}
+      \field{year}{2015}
+      \field{pages}{969\bibrangedash 979}
+      \range{pages}{11}
+    \endentry
+    \entry{Donev.2004}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=b71bd38e2484817468107b12da236bbc}{%
+           family={Donev},
+           familyi={D\bibinitperiod},
+           given={Alexander\bibnamedelima N.},
+           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{b71bd38e2484817468107b12da236bbc}
+      \strng{fullhash}{b71bd38e2484817468107b12da236bbc}
+      \strng{fullhashraw}{b71bd38e2484817468107b12da236bbc}
+      \strng{bibnamehash}{b71bd38e2484817468107b12da236bbc}
+      \strng{authorbibnamehash}{b71bd38e2484817468107b12da236bbc}
+      \strng{authornamehash}{b71bd38e2484817468107b12da236bbc}
+      \strng{authorfullhash}{b71bd38e2484817468107b12da236bbc}
+      \strng{authorfullhashraw}{b71bd38e2484817468107b12da236bbc}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Planning and Inference}
+      \field{number}{2}
+      \field{title}{Design of experiments in the presence of errors in factor levels}
+      \field{volume}{126}
+      \field{year}{2004}
+      \field{pages}{569\bibrangedash 585}
+      \range{pages}{17}
+    \endentry
+    \entry{G.E.P.Box.1951}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=002f69bf140cceda97f81a168d86ceec}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={G.\bibnamedelimi E.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=fea4d1df36147bc314c5ca612e925ec9}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={K.\bibnamedelimi B.},
+           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{fullhash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{fullhashraw}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{bibnamehash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{authorbibnamehash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{authornamehash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{authorfullhash}{6eb96cefa94addb37eb003547b1710b5}
+      \strng{authorfullhashraw}{6eb96cefa94addb37eb003547b1710b5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00359246}
+      \field{journaltitle}{Journal of the Royal Statistical Society. Series B (Methodological)}
+      \field{number}{1}
+      \field{title}{On the Experimental Attainment of Optimum Conditions}
+      \field{urlday}{23}
+      \field{urlmonth}{3}
+      \field{urlyear}{2023}
+      \field{volume}{13}
+      \field{year}{1951}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 45}
+      \range{pages}{45}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2983966
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2983966
+      \endverb
+    \endentry
+    \entry{Ardakani.2011}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=882f38cda5f44951d8ee2e746f5274bb}{%
+           family={Ardakani},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=9254dd6932e7308133e2d455e201149e}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=07b8775e0626a75d2f1881ff27e7531d}{%
+           family={Wulf},
+           familyi={W\bibinitperiod},
+           given={S.\bibnamedelimi S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f711b3e628e92e9165e20db290a88684}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={T.\bibnamedelimi J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd67122f44d94b81ea483acf74cc3cb9}
+      \strng{fullhash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{fullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{bibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{authorbibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{authornamehash}{fd67122f44d94b81ea483acf74cc3cb9}
+      \strng{authorfullhash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{authorfullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Commun. in Statistics}
+      \field{number}{9}
+      \field{title}{Estimation in Second-Order Models with Errors in the Factor Levels}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2023}
+      \field{volume}{40}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{1573\bibrangedash 1590}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1080/03610921003637421
+      \endverb
     \endentry
     \entry{Cui.2021}{book}{}{}
       \name{editor}{3}{}{%
@@ -3306,155 +3495,6 @@
       \range{pages}{15}
       \verb{doi}
       \verb 10.1080/08982112.2011.576203
-      \endverb
-    \endentry
-    \entry{Ahn.2015}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=e6ca6b3bff2ac6561da420340530dc34}{%
-           family={Ahn},
-           familyi={A\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{fullhash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{fullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{bibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authorbibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authornamehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authorfullhash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authorfullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Industrial Engineering}
-      \field{title}{Central Composite Design for the Experiments with Replicate Runs at Factorial and Axial Points}
-      \field{volume}{349}
-      \field{year}{2015}
-      \field{pages}{969\bibrangedash 979}
-      \range{pages}{11}
-    \endentry
-    \entry{Donev.2004}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=b71bd38e2484817468107b12da236bbc}{%
-           family={Donev},
-           familyi={D\bibinitperiod},
-           given={Alexander\bibnamedelima N.},
-           giveni={A\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-      }
-      \strng{namehash}{b71bd38e2484817468107b12da236bbc}
-      \strng{fullhash}{b71bd38e2484817468107b12da236bbc}
-      \strng{fullhashraw}{b71bd38e2484817468107b12da236bbc}
-      \strng{bibnamehash}{b71bd38e2484817468107b12da236bbc}
-      \strng{authorbibnamehash}{b71bd38e2484817468107b12da236bbc}
-      \strng{authornamehash}{b71bd38e2484817468107b12da236bbc}
-      \strng{authorfullhash}{b71bd38e2484817468107b12da236bbc}
-      \strng{authorfullhashraw}{b71bd38e2484817468107b12da236bbc}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Statistical Planning and Inference}
-      \field{number}{2}
-      \field{title}{Design of experiments in the presence of errors in factor levels}
-      \field{volume}{126}
-      \field{year}{2004}
-      \field{pages}{569\bibrangedash 585}
-      \range{pages}{17}
-    \endentry
-    \entry{G.E.P.Box.1951}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=002f69bf140cceda97f81a168d86ceec}{%
-           family={Box},
-           familyi={B\bibinitperiod},
-           given={G.\bibnamedelimi E.\bibnamedelimi P.},
-           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=fea4d1df36147bc314c5ca612e925ec9}{%
-           family={Wilson},
-           familyi={W\bibinitperiod},
-           given={K.\bibnamedelimi B.},
-           giveni={K\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
-      }
-      \strng{namehash}{6eb96cefa94addb37eb003547b1710b5}
-      \strng{fullhash}{6eb96cefa94addb37eb003547b1710b5}
-      \strng{fullhashraw}{6eb96cefa94addb37eb003547b1710b5}
-      \strng{bibnamehash}{6eb96cefa94addb37eb003547b1710b5}
-      \strng{authorbibnamehash}{6eb96cefa94addb37eb003547b1710b5}
-      \strng{authornamehash}{6eb96cefa94addb37eb003547b1710b5}
-      \strng{authorfullhash}{6eb96cefa94addb37eb003547b1710b5}
-      \strng{authorfullhashraw}{6eb96cefa94addb37eb003547b1710b5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{00359246}
-      \field{journaltitle}{Journal of the Royal Statistical Society. Series B (Methodological)}
-      \field{number}{1}
-      \field{title}{On the Experimental Attainment of Optimum Conditions}
-      \field{urlday}{23}
-      \field{urlmonth}{3}
-      \field{urlyear}{2023}
-      \field{volume}{13}
-      \field{year}{1951}
-      \field{urldateera}{ce}
-      \field{pages}{1\bibrangedash 45}
-      \range{pages}{45}
-      \verb{urlraw}
-      \verb http://www.jstor.org/stable/2983966
-      \endverb
-      \verb{url}
-      \verb http://www.jstor.org/stable/2983966
-      \endverb
-    \endentry
-    \entry{Ardakani.2011}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=882f38cda5f44951d8ee2e746f5274bb}{%
-           family={Ardakani},
-           familyi={A\bibinitperiod},
-           given={M.\bibnamedelimi K.},
-           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=9254dd6932e7308133e2d455e201149e}{%
-           family={Das},
-           familyi={D\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=07b8775e0626a75d2f1881ff27e7531d}{%
-           family={Wulf},
-           familyi={W\bibinitperiod},
-           given={S.\bibnamedelimi S.},
-           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=f711b3e628e92e9165e20db290a88684}{%
-           family={Robinson},
-           familyi={R\bibinitperiod},
-           given={T.\bibnamedelimi J.},
-           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \strng{namehash}{fd67122f44d94b81ea483acf74cc3cb9}
-      \strng{fullhash}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{fullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{bibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{authorbibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{authornamehash}{fd67122f44d94b81ea483acf74cc3cb9}
-      \strng{authorfullhash}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{authorfullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Commun. in Statistics}
-      \field{number}{9}
-      \field{title}{Estimation in Second-Order Models with Errors in the Factor Levels}
-      \field{urlday}{24}
-      \field{urlmonth}{3}
-      \field{urlyear}{2023}
-      \field{volume}{40}
-      \field{year}{2011}
-      \field{urldateera}{ce}
-      \field{pages}{1573\bibrangedash 1590}
-      \range{pages}{18}
-      \verb{doi}
-      \verb 10.1080/03610921003637421
       \endverb
     \endentry
     \entry{Jones.2012}{article}{}{}
