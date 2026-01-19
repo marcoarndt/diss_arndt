@@ -1,12 +1,12 @@
 \babel@toc {ngerman}{}\relax 
 \contentsline {chapter}{\nonumberline Vorwort}{iii}{chapter*.1}%
 \contentsline {chapter}{\nonumberline Kurzfassung/Abstract}{v}{chapter*.2}%
-\contentsline {chapter}{\nonumberline Nomenklatur}{ix}{chapter*.6}%
-\contentsline {section}{Abkürzungen}{ix}{section*.7}%
-\contentsline {section}{Indizes}{x}{section*.8}%
-\contentsline {section}{Formelzeichen}{xi}{section*.9}%
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{xvii}{chapter*.10}%
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{xix}{chapter*.11}%
+\contentsline {chapter}{\nonumberline Nomenklatur}{xi}{chapter*.6}%
+\contentsline {section}{Abkürzungen}{xi}{section*.7}%
+\contentsline {section}{Indizes}{xii}{section*.8}%
+\contentsline {section}{Formelzeichen}{xiii}{section*.9}%
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{xix}{chapter*.10}%
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{xxi}{chapter*.11}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Forschungsperspektive und Problembeschreibung}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Beitrag dieser Arbeit}{3}{section.1.2}%
@@ -39,26 +39,33 @@
 \contentsline {subsubsection}{\nonumberline Modellgüte und Residuenanalyse}{48}{subsubsection*.44}%
 \contentsline {chapter}{\numberline {3}Effiziente Testplanung für die multivariate Lebensdauererprobung}{51}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Bewertung des Standes der Forschung und Technik}{51}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Limitationen optimaler Versuchspläne für GLMs}{52}{subsection.3.1.1}%
-\contentsline {subsubsection}{\nonumberline Besonderheiten der Effizienz in der Lebensdauerprüfung}{54}{subsubsection*.48}%
-\contentsline {subsubsection}{\nonumberline Abgrenzung zu weiteren Themen in der \cgls {RSM}}{55}{subsubsection*.50}%
-\contentsline {subsubsection}{\nonumberline Bewertung und Abgrenzung: OMARS vs. CCD}{57}{subsubsection*.52}%
-\contentsline {subsection}{\numberline {3.1.2}Forschungsfragen und Aufbau der Arbeit}{57}{subsection.3.1.2}%
-\contentsline {subsubsection}{\nonumberline Aufbau der Arbeit}{59}{subsubsection*.54}%
-\contentsline {chapter}{\numberline {4}Parameter-Screening für multifaktorielle Lebensdauertests}{61}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Identifikation potenzieller Einflussgrößen}{61}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Kreativmethoden zum Auswahlprozesse im \\ Parameter-Screening}{61}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Randbedingungen in der Parameterauswahl für die Zuverlässigkeitsmodellierung}{61}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Vorgehen zum heuristische Screening für die Zuverlässigkeitsmodellierung}{61}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Zusammenfassung}{61}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Effiziente multivariate Versuchspläne für Lebensdaueruntersuchungen}{63}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Fallstudie}{65}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{67}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Key Findings}{67}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Diskussion}{67}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Ausblick}{67}{section.7.3}%
-\contentsline {chapter}{\nonumberline Literatur}{69}{chapter*.55}%
-\contentsline {chapter}{Anhang}{79}{chapter*.55}%
-\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{79}{section.Alph0.1}%
+\contentsline {subsection}{\numberline {3.1.1}Eignung klassischer Response Surface Designs}{51}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Limitierungen und Effizienzbegriffe moderner Versuchsplanung}{52}{subsection.3.1.2}%
+\contentsline {subsubsection}{\nonumberline Modellabhängigkeit und Lokale Optimalität}{52}{subsubsection*.46}%
+\contentsline {subsubsection}{\nonumberline Zeitliche und Strukturelle Effizienz}{53}{subsubsection*.48}%
+\contentsline {subsection}{\numberline {3.1.3}Schlussfolgerung für die Testplanung}{53}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Forschungsfragen und Aufbau der Arbeit}{54}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Aufbau der Arbeit}{56}{subsection.3.2.1}%
+\contentsline {chapter}{\numberline {4}Parameter-Screening für multifaktorielle Lebensdauertests}{59}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Identifikation potenzieller Einflussgrößen}{59}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Kreativmethoden zum Auswahlprozesse im \\ Parameter-Screening}{60}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Strukturierungsmethoden}{61}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Bewertungsmethoden (Decision Making)}{61}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Design-Structure-Matrix (DSM)}{61}{subsubsection*.52}%
+\contentsline {subsubsection}{\nonumberline Grid-Analyse (Portfolio-Analyse)}{62}{subsubsection*.54}%
+\contentsline {section}{\numberline {4.3}Randbedingungen in der Parameterauswahl für die Zuverlässigkeitsmodellierung}{62}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Unterscheidung: Robustheit vs. Zuverlässigkeit}{62}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Anforderungen aus dem Versuchsplan (L-DoE)}{63}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Vorgehen zum heuristischen Screening für die Zuverlässigkeitsmodellierung}{64}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Zusammenfassung}{65}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Effiziente multivariate Versuchspläne für Lebensdaueruntersuchungen}{67}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Fallstudie}{69}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{71}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Key Findings}{71}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Diskussion}{71}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Ausblick}{71}{section.7.3}%
+\contentsline {chapter}{\nonumberline Literatur}{73}{chapter*.61}%
+\contentsline {chapter}{Anhang}{83}{chapter*.61}%
+\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{83}{section.Alph0.1}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
