@@ -47,7 +47,7 @@ Insbesondere basierend auf Arbeiten von \textcite{Gundlach.2004,Kremer.2018b,May
 Nachdem durch die vorangegangenen Schritte der Informationsbeschaffung eine möglichst vollständige Sammlung aller potenziellen Systemparameter, Inputs und Outputs generiert wurde, bedarf es einer systematischen Strukturierung auf Basis eines vertieften Systemverständnisses.
 Dieser Schritt darf sich nicht auf eine reine Clusterung in Parametergruppen beschränken.
 Vielmehr gilt es, die \textit{gegenseitigen Beeinflussungen} der Größen zu identifizieren und zu offenbaren.
-Insbesondere für die Lebensdaueranalyse stellt dies einen entscheidenden Mehrwert dar, der im Einklang mit den Prinzipien des \ac{L-DoEDoE} steht \cite{Montgomery.2020,Kremer.2021}: Phänomene wie Alterungseffekte oder die zeitvariante Änderung von Materialeigenschaften sind physikalisch oft nicht trivial durch Einzelgrößen beschreibbar, sondern resultieren maßgeblich aus Interaktionen (vgl. \colorbox{yellow}{Abbildung}).
+Insbesondere für die Lebensdaueranalyse stellt dies einen entscheidenden Mehrwert dar, der im Einklang mit den Prinzipien des \ac{L-DoE} steht \cite{Montgomery.2020,Kremer.2021}: Phänomene wie Alterungseffekte oder die zeitvariante Änderung von Materialeigenschaften sind physikalisch oft nicht trivial durch Einzelgrößen beschreibbar, sondern resultieren maßgeblich aus Interaktionen (vgl. Abbildung~\ref{fig:degradation_scheme}).
 Um diese komplexen, teils zeitabhängigen Zusammenhänge für die weitere Selektion greifbar zu machen, eignen sich primär grafische Methoden, die über die reine Auflistung hinausgehen:
 
 \begin{itemize}
@@ -55,9 +55,9 @@ Um diese komplexen, teils zeitabhängigen Zusammenhänge für die weitere Selekt
 
     \item \textbf{Mind-Mapping:} Diese Methode ermöglicht eine hierarchische Gliederung der Einflussgrößen ausgehend vom Untersuchungsziel (Wurzel) über Haupt- zu Nebenparametern (Äste). Der entscheidende Vorteil für das Screening liegt in der Möglichkeit, \textit{Querbeziehungen} durch Verbindungslinien zwischen den Ästen zu visualisieren, wodurch Interdependenzen abseits der direkten Hierarchie offensichtlich werden \cite{Buzan.2010}.
 
-    \item \textbf{Erweitertes Ishikawa-Diagramm:} Das klassische Ursache-Wirkungs-Diagramm (Fischgräten-Diagramm) strukturiert Parameter traditionell nach $6M$ (Mensch, Maschine, Material, Methode, Mitwelt, Messung). Für das heuristische Screening wird es dahingehend modifiziert, dass nicht nur statische Haupteffekte, sondern explizit \textbf{Interaktionen} durch Querverbindungen zwischen den Ästen visualisiert werden (vgl. \colorbox{yellow}{Abbildung}). Dies ist essenziell, da Lebensdauer-Effekte oft erst durch die Kombination von Lasten (z.B. Temperatur + Vibration) entstehen \cite{Arndt.2022}.
+    \item \textbf{Erweitertes Ishikawa-Diagramm:} Das klassische Ursache-Wirkungs - Diagramm (Fischgräten-Diagramm) strukturiert Parameter traditionell nach $6M$ (Mensch, Maschine, Material, Methode, Mitwelt, Messung). Für das heuristische Screening wird es dahingehend modifiziert, dass nicht nur statische Haupteffekte, sondern explizit \textbf{Interaktionen} durch \textit{Querverbindungen} zwischen den Ästen visualisiert werden (vgl. Abbildung~\ref{fig:ishikawa_interactions}) \cite{Arndt.2022,Daenzer.2002}.
 
-    \item \textbf{Interdependenz-Netzwerke (Vernetztes Denken):} Für hochkomplexe Systeme bietet sich die Modellierung als gerichteter Graph an. Hierbei werden Parameter als Knoten und ihre Wirkbeziehungen als Kanten dargestellt. Dies erlaubt nicht nur die Abbildung der Wirkrichtung (positiv/negativ), sondern auch die Integration zeitlicher Dynamiken und Intensitäten, was für die Modellierung von Degradationsprozessen vorteilhaft ist \cite{Tittmann.2019}.
+    \item \textbf{Interdependenz-Netzwerke (Vernetztes Denken):} Für hochkomplexe Systeme bietet sich die Modellierung als gerichteter Graph an. Hierbei werden Parameter als Knoten und ihre Wirkbeziehungen als Kanten dargestellt \cite{Tittmann.2019}. Dies erlaubt nicht nur die Abbildung der Wirkrichtung (positiv/negativ), sondern auch die Integration zeitlicher Dynamiken und Intensitäten, was für die Modellierung von Degradationsprozessen vorteilhaft ist.
 
     \item \textbf{ABC-Analyse:} Zur Reduktion der Komplexität klassifiziert die ABC-Analyse die Parameter nach dem Pareto-Prinzip in Klassen hoher (A), mittlerer (B) und geringer (C) Relevanz. Dies dient als erster Filter, um den Fokus auf die vermuteten Haupttreiber der Lebensdauer zu lenken \cite{Montgomery.2020}.
 \end{itemize}
@@ -66,35 +66,51 @@ Um diese komplexen, teils zeitabhängigen Zusammenhänge für die weitere Selekt
     \centering
     \def\svgwidth{0.95\textwidth}
     % \import{plots/}{J22-arndt-Ishi.pdf_tex}
-    \caption{Erweitertes Ishikawa-Diagramm zur Visualisierung von Interaktionen zwischen Einflussfaktoren (adaptiert nach \textcite{Arndt.2022})}
+    \caption{Erweitertes Ishikawa-Diagramm zur Visualisierung von Interaktionen zwischen Einflussfaktoren (adaptiert nach \cite{Arndt.2022})}
     \label{fig:ishikawa_interactions}
 \end{figure}
 
 Die hierdurch erreichte Transparenz über die Vernetzung der Parameter bildet die notwendige Basis für den nächsten Schritt: Die Überführung der qualitativen Struktur in eine quantitative Priorisierung, um die finalen Faktoren für den Versuchsplan zu selektieren.
 
-\subsection{Bewertungsmethoden (Decision Making)}
-Um aus der strukturierten Liste die finalen Faktoren für den \ac{DoE}-Plan auszuwählen, sind Bewertungswerkzeuge notwendig, die eine Priorisierung ermöglichen.
-
-\subsubsection{Design-Structure-Matrix (DSM)}
-Die \ac{DSM} ist eine $\sym{n} \times \sym{n}$-Matrix, die alle $N$ gesammelten Parameter sowohl in den Zeilen als auch in den Spalten auflistet.
-Ein Eintrag $\sym{y}_{{idx_i}{idx_i}}$ in der Matrix markiert, dass der Parameter in Zeile $i$ einen Einfluss auf den Parameter in Spalte $j$ hat (oder umgekehrt, je nach Konvention).
-Für das Screening wird die Matrix um eine Zielgrößen-Spalte (Lebensdauer/Zuverlässigkeit) erweitert.
+\subsection{Bewertungsmethoden (Decision Making)} \label{subsec:Decision}
+Aufbauend auf der qualitativen Strukturierung der Einflussgrößen (vgl. Abschnitt \ref{subsec:Strukturierungsmethoden}) ist nun eine analytische Bewertung erforderlich, um die \textit{Vital Few} von den \textit{Trivial Many} zu separieren.
+Ziel ist es, die gesammelten Parameter in eine Rangfolge zu bringen, die sowohl deren vermutete Relevanz für die Lebensdauer als auch deren Interaktionspotenzial widerspiegelt.
+Hierfür eignen sich matrixbasierte Ansätze, die eine systematische Paarvergleichung erzwingen und subjektive Einschätzungen objektivierbar machen.
+\subsubsection{Design-Structure-Matrix (\ac{DSM})} \label{subsubsec:dsm}
+Die \ac{DSM} ist eine quadratische $\sym{n} \times \sym{n}$-Matrix, in der alle $\sym{n}$ identifizierten Systemparameter sowohl in den Zeilen als auch in den Spalten aufgetragen sind.
+Ein Eintrag $\sym{y}_{\sym{idx_i}\sym{idx_j}}$ in der Matrix symbolisiert dabei eine gerichtete Abhängigkeit: Der Parameter in Zeile $\sym{idx_i}$ beeinflusst den Parameter in Spalte $\sym{idx_j}$.
+Für das Screening im Kontext der Zuverlässigkeit wird die Matrix häufig um eine Zielgrößen-Spalte erweitert, um den direkten Einfluss auf die Lebensdauer $\sym{t}$ zu erfassen.
+Die Bewertung kann auf zwei Detailebenen erfolgen:
 \begin{itemize}
-    \item \textbf{Binäre DSM:} Erfasst lediglich die Existenz einer Interaktion (Ja/Nein). Dies eignet sich für frühe Phasen mit geringem Detailwissen.
-    \item \textbf{Numerische DSM:} Gewichtet die Stärke des Einflusses (z.B. Skala 0--3).
+    \item \textbf{Binäre DSM:} Erfasst lediglich die Existenz einer Interaktion ($\sym{y}_{\sym{idx_i}\sym{idx_j}} \in \{0, 1\}$). Dies eignet sich für frühe Phasen mit geringem Detailwissen, um prinzipielle Vernetzungen aufzudecken.
+    \item \textbf{Numerische DSM:} Gewichtet die Stärke des Einflusses, z.B. auf einer Skala von 0 (kein Einfluss) bis 3 (starker Einfluss). Dies erlaubt eine differenzierte Priorisierung.
 \end{itemize}
-Die \ac{DSM} zwingt das Expertenteam, systematisch jede Paarung von Parametern auf mögliche Wechselwirkungen zu prüfen, was die Gefahr "vergessener" Interaktionen minimiert \cite{Lindemann.2008}.
-
-\subsubsection{Grid-Analyse (Portfolio-Analyse)}
-Basierend auf der \ac{DSM} kann eine Grid-Analyse durchgeführt werden (vgl. Abbildung~\ref{fig:grid_analysis}).
-Hierbei werden für jeden Parameter zwei Summen gebildet:
+Ein wesentlicher Vorteil der \ac{DSM} ist die Aufdeckung von Asymmetrien: Ein Parameter A kann Parameter B stark beeinflussen, ohne dass B signifikant auf A zurückwirkt ($\sym{y}_{\text{AB}}\neq\sym{y}_{\text{BA}}$).
+Solche "aktiven" Parameter sind potenzielle Steuergrößen für den Versuchsplan.
+Zudem ermöglicht die Matrix durch algorithmische Partitionierung (Clustering) das Identifizieren von Parametergruppen, die eng miteinander interagieren, was Hinweise auf physikalische Wirkmechanismen liefert \cite{Lindemann.2008}.
+\begin{figure}[htbp]
+    \centering
+    \def\svgwidth{0.8\textwidth}
+    % \import{plots/}{J22-arndt-B-DSM.pdf_tex}
+    \caption{Beispielhafte Darstellung einer binären DSM zur Identifikation von Interaktionen zwischen Systemparametern (adaptiert nach \cite{Arndt.2022})}
+    \label{fig:dsm_example}
+\end{figure}
+\subsubsection{Grid-Analyse (Portfolio-Analyse)} \label{subsubsec:grid}
+Die Grid-Analyse visualisiert die Ergebnisse der numerischen \ac{DSM} in einem zweidimensionalen Portfolio-Diagramm (vgl. Abbildung~\ref{fig:grid_analysis}).
+Hierfür werden für jeden Parameter $\sym{idx_i}$ zwei Kennzahlen berechnet \cite{Mayers.1997}:
 \begin{enumerate}
-    \item \textbf{Aktivsumme (Active Sum):} Wie stark beeinflusst dieser Parameter andere Größen oder das Systemverhalten?
-    \item \textbf{Passivsumme (Passive Sum):} Wie stark wird dieser Parameter selbst von anderen Größen beeinflusst?
+    \item \textbf{Aktivsumme (Active Sum):} Die Summe der Zeileneinträge ($\sum_{\sym{idx_j}} \sym{y}_{\sym{idx_i}\sym{idx_j}}$). Sie ist ein Maß dafür, wie stark der Parameter das Gesamtsystem treibt.
+    \item \textbf{Passivsumme (Passive Sum):} Die Summe der Spalteneinträge ($\sum_{\sym{idx_i}} \sym{y}_{\sym{idx_i}\sym{idx_j}}$). Sie beschreibt, wie stark der Parameter selbst von anderen Größen beeinflusst wird (Reaktivität).
 \end{enumerate}
-Parameter im Quadranten "Kritisch" oder "Aktiv" (hohe Aktivsumme) sind primäre Kandidaten für Steuerfaktoren ($\sym{x}$) im Versuchsplan. Parameter mit hoher Passivsumme sind oft eher als Antwortgrößen oder Indikatoren geeignet.
-Unsicherheiten in der Bewertung können durch Konfidenz-Vektoren visualisiert werden, was den Bedarf für experimentelle Voruntersuchungen aufzeigt.
-
+Die Positionierung im Diagramm erlaubt eine Klassifizierung in vier Quadranten, aus denen sich direkte Handlungsempfehlungen für das \ac{DoE} ableiten lassen:
+\begin{itemize}
+    \item \textbf{Aktive Parameter (hohe Aktiv-, niedrige Passivsumme):} Diese Größen sind die idealen Steuerfaktoren ($\sym{x}$) für den Versuchsplan, da sie das System dominieren, ohne selbst instabil zu sein.
+    \item \textbf{Kritische Parameter (hohe Aktiv- und Passivsumme):} Diese Faktoren sind stark vernetzt. Sie sind relevant für die Lebensdauer, bergen aber aufgrund ihrer Abhängigkeiten ein hohes Risiko für unerwünschte Wechselwirkungen. Sie müssen im Versuch besonders genau überwacht werden.
+    \item \textbf{Passive Parameter (niedrige Aktiv-, hohe Passivsumme):} Diese Größen eignen sich weniger als Steuerfaktoren, sondern vielmehr als Indikatoren oder Antwortgrößen ($\sym{y}$), da sie empfindlich auf Änderungen im System reagieren.
+    \item \textbf{Träge Parameter (niedrige Summen):} Diese Faktoren spielen eine untergeordnete Rolle und können im Screening oft vernachlässigt oder als Konstanten fixiert werden.
+\end{itemize}Um die Unsicherheit heuristischer Schätzungen abzubilden, kann die Grid-Analyse um Konfidenz-Vektoren erweitert werden.
+Dabei geben Experten für jede Bewertung an, ob diese auf gesichertem Wissen (Daten, Literatur) oder Intuition beruht.
+Große Differenzen zwischen \textit{gesicherter} und \textit{intuitiver} Position im Grid weisen auf Wissenslücken hin, die zwingend durch experimentelle Voruntersuchungen geschlossen werden müssen, bevor der Parameter in ein aufwendiges \ac{L-DoE} aufgenommen wird.
 \begin{figure}[htbp]
     \centering
     \def\svgwidth{0.8\textwidth}
@@ -102,13 +118,18 @@ Unsicherheiten in der Bewertung können durch Konfidenz-Vektoren visualisiert we
     \caption{Grid-Analyse zur Klassifizierung von Parametern in aktive, kritische, passive und träge Faktoren}
     \label{fig:grid_analysis}
 \end{figure}
+\subsubsection{Finale Parameter-Diskussion}
+Die Ergebnisse aus \ac{DSM} und Grid-Analyse dienen als Entscheidungsgrundlage für die finale Selektion der Versuchs-Faktoren.
+In diesem Diskurs müssen die heuristischen Erkenntnisse gegen die harten Restriktionen des Versuchsplans (Budget, Machbarkeit, Messbarkeit) abgewogen werden.
+Es gilt, einen Kompromiss zu finden zwischen der vollständigen Abbildung aller wirksamen Mechanismen (Modellgüte) und der Reduktion auf eine handhabbare Anzahl an Faktoren (Effizienz).
+Faktoren, die als relevant identifiziert wurden, aber aus Budgetgründen nicht variiert werden können, müssen explizit als Konstanten dokumentiert oder als Noise-Faktoren in einer Robustheitsbetrachtung berücksichtigt werden.
 
 \section{Randbedingungen in der Parameterauswahl für die Zuverlässigkeitsmodellierung} \label{sec:screening_randbedingungen}
 Die Anwendung der oben genannten Methoden muss im Kontext der Lebensdaueranalyse spezifische Randbedingungen berücksichtigen, die sich fundamental von der klassischen Robustheitsoptimierung unterscheiden.
 
 \subsection{Unterscheidung: Robustheit vs. Zuverlässigkeit}
 Ein häufiges Missverständnis im Screening ist die Gleichsetzung von initialer Performance-Streuung mit Lebensdauer-Streuung.
-Wie in Abbildung~\ref{fig:degradation_scheme} dargestellt, betrachtet die klassische Robustheitsanalyse (Taguchi/Shainin) oft nur die Verteilung der Systemantwort zum Zeitpunkt $\sym{t}=0$ (Bereich A).
+Wie in Abbildung~\ref{fig:degradation_scheme} dargestellt, betrachtet die klassische Robustheitsanalyse nach \textcite{Klein.2014} im Verständnis von \textit{Taguchi}/\textit{Shainin} oft nur die Verteilung der Systemantwort zum Zeitpunkt $\sym{t}=0$ (Bereich A).
 Die Zuverlässigkeitstechnik fokussiert jedoch auf die \textbf{Degradation} über die Zeit (Bereich B).
 Ein Faktor, der die initiale Performance kaum beeinflusst (z.B. Korrosionsschutzschicht-Dicke), kann für die Lebensdauer $\sym{t}$ dominant sein.
 Heuristisches Screening für \ac{L-DoE} muss daher explizit Parameter priorisieren, die \textit{zeitabhängige} Schädigungsmechanismen (Verschleiß, Alterung, Ermüdung) treiben, selbst wenn sie initial "inaktiv" erscheinen.
