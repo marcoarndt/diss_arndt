@@ -1165,6 +1165,7 @@
       \strng{authornamehash}{7d4a838891cb5c31eb1e3e089777efa0}
       \strng{authorfullhash}{7d4a838891cb5c31eb1e3e089777efa0}
       \strng{authorfullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
+      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -1556,6 +1557,7 @@
       \strng{authornamehash}{ab1e473436714f07a37d7a30b43f0cb0}
       \strng{authorfullhash}{ab1e473436714f07a37d7a30b43f0cb0}
       \strng{authorfullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
+      \field{extraname}{1}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -2778,6 +2780,7 @@
       \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
       \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
       \strng{authorfullhashraw}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -3363,6 +3366,108 @@
       \verb 10.5705/ss.2009.115
       \endverb
     \endentry
+    \entry{Arndt.2023c}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a8792b60927a47d7d27d6e577f06d803}{%
+           family={Raither},
+           familyi={R\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
+           family={Bertsche},
+           familyi={B\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{fullhash}{f4be653f312765a5dc616d9a112196cf}
+      \strng{fullhashraw}{f4be653f312765a5dc616d9a112196cf}
+      \strng{bibnamehash}{f4be653f312765a5dc616d9a112196cf}
+      \strng{authorbibnamehash}{f4be653f312765a5dc616d9a112196cf}
+      \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{authorfullhash}{f4be653f312765a5dc616d9a112196cf}
+      \strng{authorfullhashraw}{f4be653f312765a5dc616d9a112196cf}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For the investigation of influence of various parameters on properties and outputs of components or systems, Design of Experiments (DOE) offers the most efficient approach to create a{\&}nbsp;comprehensive empirical insight into product performance. However, especially if product lifetime is treated as the investigation objective, the main focus of attention must be placed on the efficiency of testing---if only to comply with the principle of DOE, even before testing begins. Without actual test runs, a{\&}nbsp;pre-selection of relevant factors influencing the target quantity can be performed here and strategically adjusted in scale compared to the subsequent method. In this work, common heuristic tools and methods are analyzed and evaluated with respect to a{\&}nbsp;deliberate preselection of influencing factors versus the challenges in lifetime testing and degradation behaviors. Several factors as well as their interactions are taken into account to achieve this. For this purpose, these methods are partially extended and adapted in their focus in order to finally be made applicable in a{\&}nbsp;suitable procedure. An illustration of this is also provided in a{\&}nbsp;selected use case with limited empirical and experimental prior-knowledge, in which a{\&}nbsp;sample of relevant influences is identified through qualitative heuristic decision making with respect to parameters that influence product lifetime.}
+      \field{issn}{0015-7899}
+      \field{journaltitle}{Forschung im Ingenieurwesen}
+      \field{number}{4}
+      \field{title}{Parameter assessment for reliability modeling of machine components using heuristic screening}
+      \field{volume}{87}
+      \field{year}{2023}
+      \field{pages}{1347\bibrangedash 1370}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1007/s10010-023-00711-5
+      \endverb
+      \verb{file}
+      \verb Arndt, Dazer et al. 2023 - Parameter assessment for reliability modeling (5):Attachments/Arndt, Dazer et al. 2023 - Parameter assessment for reliability modeling (5).pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.1007/s10010-023-00711-5#citeas
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.1007/s10010-023-00711-5#citeas
+      \endverb
+    \endentry
+    \entry{Krallmann.2013}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=ab1e99aafe79e38c865654048d69e2c9}{%
+           family={Krallmann},
+           familyi={K\bibinitperiod},
+           given={Hermann},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4f8a4bb4517674ff3c46d03547c88134}{%
+           family={Bobrik},
+           familyi={B\bibinitperiod},
+           given={Annette},
+           giveni={A\bibinitperiod}}}%
+        {{hash=aec517b4b10c0d0167d84b3e3c06f5b0}{%
+           family={Levina},
+           familyi={L\bibinitperiod},
+           given={Olga},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Oldenbourg-Verl.}%
+      }
+      \strng{namehash}{0e80095edc36972de9e2a1faba5e937d}
+      \strng{fullhash}{7c9bc1529ee6d25cf37a652f98781dbe}
+      \strng{fullhashraw}{7c9bc1529ee6d25cf37a652f98781dbe}
+      \strng{bibnamehash}{7c9bc1529ee6d25cf37a652f98781dbe}
+      \strng{authorbibnamehash}{7c9bc1529ee6d25cf37a652f98781dbe}
+      \strng{authornamehash}{0e80095edc36972de9e2a1faba5e937d}
+      \strng{authorfullhash}{7c9bc1529ee6d25cf37a652f98781dbe}
+      \strng{authorfullhashraw}{7c9bc1529ee6d25cf37a652f98781dbe}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6., überarb. und erw. Aufl.}
+      \field{isbn}{978-3-486-72982-5}
+      \field{title}{Systemanalyse im Unternehmen: Prozessorientierte Methoden der Wirtschaftsinformatik}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.1524/9783486729825
+      \endverb
+    \endentry
     \entry{Wallace.2007}{book}{}{}
       \name{editor}{6}{}{%
         {{hash=5cae9f0f5604562303e38287160cf9d9}{%
@@ -3423,6 +3528,289 @@
       \endverb
       \verb{url}
       \verb http://site.ebrary.com/lib/librarytitles/docDetail.action?docID=10230457
+      \endverb
+    \endentry
+    \entry{Montgomery.2020b}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{fullhash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{fullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{bibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorbibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authornamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorfullhash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorfullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Eighth edition, EMEA edition}
+      \field{isbn}{9781119657118}
+      \field{title}{Introduction to statistical quality control}
+      \field{year}{2020}
+    \endentry
+    \entry{Bruckner.2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=b34e283d2d96594abe1958a8c2ef78de}{%
+           family={Brückner},
+           familyi={B\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Hanser}%
+      }
+      \strng{namehash}{b34e283d2d96594abe1958a8c2ef78de}
+      \strng{fullhash}{b34e283d2d96594abe1958a8c2ef78de}
+      \strng{fullhashraw}{b34e283d2d96594abe1958a8c2ef78de}
+      \strng{bibnamehash}{b34e283d2d96594abe1958a8c2ef78de}
+      \strng{authorbibnamehash}{b34e283d2d96594abe1958a8c2ef78de}
+      \strng{authornamehash}{b34e283d2d96594abe1958a8c2ef78de}
+      \strng{authorfullhash}{b34e283d2d96594abe1958a8c2ef78de}
+      \strng{authorfullhashraw}{b34e283d2d96594abe1958a8c2ef78de}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2., vollständig überarbeitete und erweiterte Auflage}
+      \field{isbn}{978-3-446-45575-7}
+      \field{title}{Qualitätsmanagement: Das Praxishandbuch für die Automobilindustrie}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.3139/9783446459724
+      \endverb
+    \endentry
+    \entry{Breiing.1997}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=608756c1af646d73b472832f7c02bccc}{%
+           family={Breiing},
+           familyi={B\bibinitperiod},
+           given={Alois},
+           giveni={A\bibinitperiod}}}%
+        {{hash=14d252c9850b2922747dd3a4cb651149}{%
+           family={Knosala},
+           familyi={K\bibinitperiod},
+           given={Ryszard},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Berlin}%
+        {Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c2ea1f8d0398fab3a435afb00eaea2da}
+      \strng{fullhash}{c2ea1f8d0398fab3a435afb00eaea2da}
+      \strng{fullhashraw}{c2ea1f8d0398fab3a435afb00eaea2da}
+      \strng{bibnamehash}{c2ea1f8d0398fab3a435afb00eaea2da}
+      \strng{authorbibnamehash}{c2ea1f8d0398fab3a435afb00eaea2da}
+      \strng{authornamehash}{c2ea1f8d0398fab3a435afb00eaea2da}
+      \strng{authorfullhash}{c2ea1f8d0398fab3a435afb00eaea2da}
+      \strng{authorfullhashraw}{c2ea1f8d0398fab3a435afb00eaea2da}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-642-63908-1}
+      \field{title}{Bewerten technischer Systeme: Theoretische und methodische Grundlagen bewertungstechnischer Entscheidungshilfen}
+      \field{year}{1997}
+      \verb{doi}
+      \verb 10.1007/978-3-642-59229-4
+      \endverb
+    \endentry
+    \entry{Albers.2005}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=906a3ac09a59f152230c19d503021c04}{%
+           family={Albers},
+           familyi={A\bibinitperiod},
+           given={Sönke},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{2}{%
+        {Wiesbaden}%
+        {s.l.}%
+      }
+      \list{publisher}{1}{%
+        {Gabler Verlag}%
+      }
+      \strng{namehash}{906a3ac09a59f152230c19d503021c04}
+      \strng{fullhash}{906a3ac09a59f152230c19d503021c04}
+      \strng{fullhashraw}{906a3ac09a59f152230c19d503021c04}
+      \strng{bibnamehash}{906a3ac09a59f152230c19d503021c04}
+      \strng{authorbibnamehash}{906a3ac09a59f152230c19d503021c04}
+      \strng{authornamehash}{906a3ac09a59f152230c19d503021c04}
+      \strng{authorfullhash}{906a3ac09a59f152230c19d503021c04}
+      \strng{authorfullhashraw}{906a3ac09a59f152230c19d503021c04}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{1: Einführung -- Technologie-und Innovationsmanagement -- Dimensionen der Innovation -- Bedeutung von Innovationen für die Wettbewerbsfähigkeit -- Management des Wissens als Hauptaufgabe des Technologie-und Innovationsmanagements -- 2: Strategisches Management von Innovationen -- Forschungs-und Entwicklungsstrategien -- Technologietransfer -- Technologie-Frühaufklärung -- Corporate Venturing -- Management von Technologieallianzen und Kooperationen -- Strategisches Patentmanagement -- Produktimitation als Innovationsstrategie -- Globales Management von Innovation -- 3: Forschung und Entwicklung als Produktion von Innovationen -- Technologiemanagement -- Neuproduktentwicklungsmanagement -- Quellen für Neuproduktideen -- Kreativitätstechniken -- Werkzeuge für Entwicklungsmethodiken -- IT- Unterstützung bei der Innovationsentwicklung -- Experimentation Strategies and Technological Change -- 4: Vermarktung von Innovationen -- Präferenzforschung für Innovationen -- Planung der Produkteigenschaften -- Timing der Markteinführung von Innovationen -- Diffusion und Adoption von Innovationen -- Prognose des Markterfolgs von Produktinnovationen -- 5: Organisation von Innovationen -- Schlüsselpersonen der Innovation -- Initiativen für Innovationen -- Projektmanagement -- Führung von Innovationsteams -- Schnittstellenmanagement im Innovationsprozess -- Inkubatoren für die Kommerzialisierung neuer Technologien -- 6: Finanzierung und Controlling von Innovationen -- F{\&}E Controlling -- Innovationscontrolling -- Innovationsfinanzierung und Venture Capital Markt -- 7: Trends im Technologie- und Innovationsmanagement -- Innovationsnetzwerke -- Systementwickler und Modullieferanten -- Service-Innovation -- Innovationsmanagement in der Net Economy --- E-Business -- Open Source {\&} Co.: Innovative User-Netzwerke -- Betriebswirtschaftliche Perspektiven des Ubiquitous Computing -- 8: Praxis-Beispiele -- Innovationsportfolio-Management -- Kunden als Innovationsmotor bei Henkel -- Strategisches Innovations-Management bei Siemens -- Empathic Design in der BMW Group -- Technologie-Portfoliomanagement in der Pharmaindustrie -- Intellectual Property Management in der Finanzdienstleistungsbranche -- Stichwortverzeichnis. Die Anforderungen an das Management von Innovation haben sich in den letzten Jahren deutlich verändert: Weitere Globalisierung des Wettbewerbs, Fragmentierung der Märkte und zunehmende Individualisierung der Kundenwünsche erfordern eine höhere Produktvielfalt und oft kürzere Innovationszyklen. Demgegenüber steigen Komplexität und Dynamik der Technologieentwicklung stark an. Renommierte Wissenschaftler aus dem internationalen Umfeld und Führungskräfte aus unterschiedlichen Branchen geben in 45 Beiträgen Antwort auf aktuelle Fragen wie: - Wie sollen neue Technologien und Innovation geführt werden? - Welche Technologien soll man auswählen? - Wie wird Innovation organisiert? - Wie werden Innovationsprozesse effektiv und effizient geführt? - Wie soll man Innovationen vermarkten? - Welche Methoden stehen zur Verfügung, welche haben sich bewährt? - Wie lässt sich Innovation wirksam schützen? Die Autoren dokumentieren auf einer breiten, interdisziplinären Basis den derzeitigen Erkenntnisstand aus der Sicht unterschiedlicher Wissenschaften und stellen darüber hinaus die zukünftigen Hauptentwicklungsrichtungen im Technologie- und Innovationsmanagement vor. In Unternehmensbeispielen werden aktuelle Themen aufgegriffen und deren Umsetzung in die Praxis beschrieben. Das {"}Handbuch Technologie- und Innovationsmanagement{"} richtet sich an Führungskräfte, die für Innovationsaktivitäten und Unternehmensentwicklung verantwortlich sind oder diese planen. Dozenten und Studierenden liefert es Anregungen für die eigene Arbeit.}
+      \field{isbn}{978-3-322-90787-5}
+      \field{series}{SpringerLink Bücher}
+      \field{title}{Handbuch Technologie- und Innovationsmanagement: Strategie --- Umsetzung --- Controlling}
+      \field{year}{2005}
+      \verb{doi}
+      \verb 10.1007/978-3-322-90786-8
+      \endverb
+    \endentry
+    \entry{Thompson.1999}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=60343ddaf7c0fa7ddcdc58e5a0a7ece8}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={Graham},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {London}%
+      }
+      \list{publisher}{1}{%
+        {Professional Engineering Publ}%
+      }
+      \strng{namehash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
+      \strng{fullhash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
+      \strng{fullhashraw}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
+      \strng{bibnamehash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
+      \strng{authorbibnamehash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
+      \strng{authornamehash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
+      \strng{authorfullhash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
+      \strng{authorfullhashraw}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1860581358}
+      \field{title}{Improving maintainability and reliability through design}
+      \field{year}{1999}
+    \endentry
+    \entry{Kremer.2018b}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{fullhash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{fullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{bibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorbibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authornamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorfullhash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorfullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{antriebstechnik}
+      \field{number}{11}
+      \field{title}{Ermittlung von lebensdauerbeeinflussenden Faktoren bei Zahnriemengetrieben}
+      \field{volume}{2018}
+      \field{pages}{148\bibrangedash 153}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb https://digital.antriebstechnik.de/antriebstechnik-11-2018/62195350
+      \endverb
+      \verb{url}
+      \verb https://digital.antriebstechnik.de/antriebstechnik-11-2018/62195350
+      \endverb
+      \warn{\item article entry 'Kremer.2018b' (bibliography.bib): Invalid format '22.01.2026' of date field 'urldate' - ignoring}
+    \endentry
+    \entry{Buzan.2010}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=5e421b673a9a8ebf1fef8443bedc3036}{%
+           family={Buzan},
+           familyi={B\bibinitperiod},
+           given={Tony},
+           giveni={T\bibinitperiod}}}%
+        {{hash=731a13c27f66472eaf245e1c51925ca7}{%
+           family={Buzan},
+           familyi={B\bibinitperiod},
+           given={Barry},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Harlow u.a.}%
+      }
+      \list{publisher}{1}{%
+        {Pearson, BBC Active}%
+      }
+      \strng{namehash}{ae9ecf9af164a1dd2398717b74ab18b6}
+      \strng{fullhash}{ae9ecf9af164a1dd2398717b74ab18b6}
+      \strng{fullhashraw}{ae9ecf9af164a1dd2398717b74ab18b6}
+      \strng{bibnamehash}{ae9ecf9af164a1dd2398717b74ab18b6}
+      \strng{authorbibnamehash}{ae9ecf9af164a1dd2398717b74ab18b6}
+      \strng{authornamehash}{ae9ecf9af164a1dd2398717b74ab18b6}
+      \strng{authorfullhash}{ae9ecf9af164a1dd2398717b74ab18b6}
+      \strng{authorfullhashraw}{ae9ecf9af164a1dd2398717b74ab18b6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1. publ}
+      \field{isbn}{9781406647167}
+      \field{title}{The mind map book: Unlock your creativity, boost your memory, change your life}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://permalink.obvsg.at/AC11808619
+      \endverb
+      \verb{url}
+      \verb https://permalink.obvsg.at/AC11808619
+      \endverb
+    \endentry
+    \entry{Tittmann.2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=10afebe382e3dcea7a3e463c31573265}{%
+           family={Tittmann},
+           familyi={T\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Hanser}%
+      }
+      \strng{namehash}{10afebe382e3dcea7a3e463c31573265}
+      \strng{fullhash}{10afebe382e3dcea7a3e463c31573265}
+      \strng{fullhashraw}{10afebe382e3dcea7a3e463c31573265}
+      \strng{bibnamehash}{10afebe382e3dcea7a3e463c31573265}
+      \strng{authorbibnamehash}{10afebe382e3dcea7a3e463c31573265}
+      \strng{authornamehash}{10afebe382e3dcea7a3e463c31573265}
+      \strng{authorfullhash}{10afebe382e3dcea7a3e463c31573265}
+      \strng{authorfullhashraw}{10afebe382e3dcea7a3e463c31573265}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3., aktualisierte Auflage}
+      \field{isbn}{978-3-446-46052-2}
+      \field{series}{Mathematik-Studienhilfen}
+      \field{title}{Graphentheorie: Eine anwendungsorientierte Einführung : mit 115 Bildern, zahlreichen Beispielen und 92 Aufgaben}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.3139/9783446465039
       \endverb
     \endentry
   \enddatalist

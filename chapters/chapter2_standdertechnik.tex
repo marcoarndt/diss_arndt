@@ -942,7 +942,7 @@ Basierend auf der Kandidatenmenge \sym{cand_set} (üblicherweise entsprechend ei
               \sum_{\sym{idx_i}=1}^{|\sym{cand_set}|} \symsub{dec_var}{idx_i} \cdot \sym{x}_{\sym{idx_i}\sym{idx_j}} \cdot \sym{x}_{\sym{idx_i}\sym{idx_l}} = 0 \quad \forall \, 1 \le \sym{idx_j} < \sym{idx_l} \le \sym{num_fac}.
           \end{equation}
 
-    \item \textbf{OMARS-Eigenschaft (Orthogonalität Haupteffekt zu Effekten zweiter Ordnung):}
+    \item \textbf{\ac{OMARS}-Eigenschaft (Orthogonalität Haupteffekt zu Effekten zweiter Ordnung):}
           Dies ist das definierende Merkmal. Jeder Haupteffekt $\sym{idx_j}$ muss orthogonal zu jedem Effekt zweiter Ordnung (Interaktion $\sym{x}_{\sym{idx_l}}\sym{x}_{\sym{idx_k}}$ oder quadratischer Term $\sym{x}_{\sym{idx_l}}^2$) sein:
           \begin{equation} \label{eq:omars_ortho_soe}
               \sum_{\sym{idx_i}=1}^{|\sym{cand_set}|} \symsub{dec_var}{idx_i} \cdot \sym{x}_{\sym{idx_i}\sym{idx_j}} \cdot (\sym{x}_{\sym{idx_i}\sym{idx_l}} \cdot \sym{x}_{\sym{idx_i}\sym{idx_k}}) = 0 \quad \forall \, \sym{idx_j}, \sym{idx_l}, \sym{idx_k} \in \{1, \dots, \sym{num_fac}\}.

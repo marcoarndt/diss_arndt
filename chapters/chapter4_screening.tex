@@ -5,23 +5,24 @@
 
 Die in Kapitel~\ref{chap:ansatz} hergeleitete Notwendigkeit effizienter Testdesigns setzt voraus, dass die Anzahl der zu untersuchenden Faktoren $\sym{k}$ auf ein handhabbares Maß begrenzt ist.
 Da die Komplexität und der Versuchsumfang exponentiell mit der Anzahl der Faktoren steigen (vgl. Gleichung~\ref{eq:ffvp_n}), ist eine präzise Vorselektion der Einflussgrößen entscheidend.
-Klassische Ansätze der Versuchsplanung setzen hierfür oft auf experimentelle Screening-Pläne (z.\,B. Plackett-Burman).
-Im Kontext der Lebensdauererprobung führen diese jedoch zu einem Paradoxon: Um experimentell zu prüfen, ob ein Parameter die Lebensdauer beeinflusst, müssten bereits zeitintensive \ac{EoL}-Tests durchgeführt werden, was den Effizienzvorteil des Screenings zunichtemacht.
+Klassische Ansätze der Versuchsplanung setzen hierfür oft auf experimentelle Screening-Pläne.
+Im Kontext der Lebensdauererprobung führen diese jedoch zu einem Paradoxon: Um experimentell zu prüfen, ob ein Parameter die Lebensdauer beeinflusst, müssten gleichermaßen bei konventionellen Screeningdesigns (z.B. $2^{\sym{k}-\sym{p_f}}$ Designs, Plackett-Burman-Designs) sowie modernen \acp{RSD} (z.B. \ac{OMARS}-Designs) bereits zeitintensive \ac{EoL}-Tests durchgeführt werden, was den Effizienzvorteil des Screenings zunichtemacht.
 
-Dieses Kapitel stellt daher einen methodischen Ansatz zum \textbf{heuristischen Screening} vor.
-Ziel ist es, basierend auf Expertenwissen und systematischer Analyse eine qualitative Reduktion des Parameterraums vorzunehmen, \textit{bevor} physische Versuche gestartet werden.
+Dieses Kapitel stellt daher einen effizienten methodischen Ansatz zum \textbf{heuristischen Screening} vor.
+Ziel ist es, basierend auf Expertenwissen und systematischer Analyse eine qualitative Reduktion des Parameterraums vorzunehmen, \textit{bevor} physische Versuche gestartet werden \cite{Arndt.2023c}.
 Dabei liegt der Fokus explizit auf der Unterscheidung zwischen bloßer Robustheit (zum Zeitpunkt $\sym{t}=0$) und echter Zuverlässigkeit (über die Zeit $\sym{t}>0$).
-Lebensdauer-beeinflussende Parameter und solche, die die Zuverlässigkeit terminieren, sind inherent dem zeitlichen Einfluss ausgesetzt und können schließlich als solche auch wechselwirkend oder nicht-linear agieren.
-Die vorgestellten Methoden kombinieren klassische Kreativtechniken (z.,B. Brainstorming, Ishikawa-Diagramme) mit strukturierten Bewertungswerkzeugen (z.,B. Design-Structure-Matrix, Grid-Analyse), um eine fundierte Auswahl der kritischen Einflussgrößen zu treffen.
+Aus der Perspektive der Zeitdomäne ist die differenzierte Klassifizierung der Einflussfaktoren für die Konzeption zuverlässigkeitstechnischer Untersuchungen von entscheidender Bedeutung.
+Schließlich sind stochastische Degradationspfade entsprechend Abschnitt~\ref{subsec:begriffezuv} und die daraus resultierende Überlebenswahrscheinlichkeit $\sym{R}(\sym{t})$ nicht statisch zu betrachten, sondern zeitvarianten Interaktionsstrukturen und einer sich verschiebenden Effekthierarchie unterlegen.
+Folglich kann das Parameterset, welches das Systemverhalten in fortgeschrittenen Phasen des Lebensdauerzyklus determiniert, signifikant von jenen Faktoren divergieren, die lediglich die initiale Performanceverteilung des Systems bei $\sym{t}=0$ dominieren.
+Die Auswahl der relevanten Kovariaten ist somit inhärent dem Einfluss der Zeit ausgesetzt.
+Um dieser Dynamik gerecht zu werden, synergiert der vorgestellte Ansatz teils bestens etablierte Kreativtechniken (z.B. Brainstorming, Fehlerbaum-Analysen - engl. \ac{FTA}, Ishikawa-Diagramme) mit strukturierten Bewertungswerkzeugen (z.B. \ac{DSM}, Grid-Analyse), um eine belastbare Identifikation und Priorisierung der kritischen Einflussgrößen zu gewährleisten.
 
 \section{Identifikation potenzieller Einflussgrößen} \label{sec:screening_identifikation}
 Die Basis eines jeden Screenings bildet die vollständige Erfassung aller potenziellen Einflussgrößen.
-Um eine lückenlose Identifikation zu gewährleisten, ist eine strukturierte Systemanalyse unerlässlich, wie sie in der Zuverlässigkeitstechnik etabliert ist \cite{Bertsche.2022}.
-
-Ein zentrales Werkzeug hierfür ist das \textbf{Funktionsblockdiagramm} (engl. \ac{FBD}).
-Es abstrahiert das technische System auf seine Ein- und Ausgangsgrößen, klassifiziert nach den Flussgrößen \textit{Energie}, \textit{Stoff} und \textit{Signal} (vgl. Abbildung~\ref{fig:fbd_structure}).
+Um eine lückenlose Identifikation zu gewährleisten, ist eine strukturierte Systemanalyse unerlässlich, wie sie in der Zuverlässigkeitstechnik nach \textcite{Bertsche.2022} etabliert ist.
+Ein zentrales Werkzeug hierfür ist das \textbf{Funktionsblockdiagramm}, engl. \textbf{\ac{FBD}} \cite{Lindemann.2008,Krallmann.2013,Gundlach.2004}.
+Es abstrahiert das technische System auf seine Ein- und Ausgangsgrößen, klassifiziert nach den Flussgrößen \textit{Energie}, \textit{Stoff} und \textit{Signal} (vgl. Abbildung~\ref{fig:fbd_structure}) \cite{Pahl.2007}.
 Innerhalb der Systemgrenzen werden Haupt- und Nebenfunktionen definiert, deren Nichterfüllung direkt zu potenziellen Ausfallmechanismen führt.
-
 \begin{figure}[htbp]
     \centering
     \def\svgwidth{0.9\textwidth}
@@ -29,27 +30,36 @@ Innerhalb der Systemgrenzen werden Haupt- und Nebenfunktionen definiert, deren N
     \caption{Funktionsstruktur mit Haupt-, Neben- und Teilfunktionen zur Identifikation von Einflussgrößen (nach \textcite{Wallace.2007})}
     \label{fig:fbd_structure}
 \end{figure}
-
-Zur initialen Sammlung der Parameter (Informationsbeschaffung) eignen sich, aufbauend auf dem \ac{FBD}, klassische Methoden des Qualitätsmanagements (Q7/M7):
+Zur initialen Sammlung der Parameter (Informationsbeschaffung) eignen sich, aufbauend auf dem \ac{FBD}, entsprechend \textcite{Montgomery.2020b,Bruckner.2019} klassische Methoden des Qualitätsmanagements (\ac{Q7} and \ac{M7}) sowie etliche Kreativtechniken:
 \begin{itemize}
-    \item \textbf{Literaturrecherche:} Analyse bestehender Ausfallmodi und physikalischer Wirkmechanismen (z.\,B. Arrhenius, Wöhler) aus vergleichbaren Anwendungen.
-    \item \textbf{Kreativtechniken:} Methoden wie \textbf{Brainstorming} oder die \textbf{Methode 6-3-5} ermöglichen es interdisziplinären Expertenteams, intuitives Erfahrungswissen zu explizieren.
+    \item \textbf{Literaturrecherche:} Analyse bestehender Ausfallmodi und physikalischer Wirkmechanismen (z.B. Arrhenius, Wöhler) aus vergleichbaren Anwendungen aber auch simulativen Untersuchungen (\ac{FEA}) \cite{Breiing.1997}.
+    \item \textbf{Brainstorming} bzw. \textbf{ABC-Brainstorming} ermöglichen es interdisziplinären Expertenteams, intuitives Erfahrungswissen zu explizieren \cite{Daenzer.2002,Mayers.1997}.
     \item \textbf{Delphi-Methode:} Durch mehrstufige, anonymisierte Befragungen von Experten können subjektive Einschätzungen objektiviert und Konsens über potenzielle Einflussgrößen erzielt werden \cite{Daenzer.2002}.
-    \item \textbf{Morphologische Analyse:} Durch die Zerlegung des Systems in Teilfunktionen und die Variation von Lösungsprinzipien werden systematisch konstruktive Einflussparameter aufgedeckt.
+    \item \textbf{Morphologische Analyse:} Durch die Zerlegung des Systems in Teilfunktionen und die Variation von Lösungsprinzipien werden systematisch konstruktive Einflussparameter aufgedeckt \cite{Albers.2005,Thompson.1999}.
 \end{itemize}
 Das Ergebnis dieses Schrittes ist eine unsortierte, aber möglichst vollständige Liste (Parameter-Pool) aller Größen, die potenziell auf das System einwirken.
 
-\section[\texorpdfstring{Kreativmethoden zum Auswahlprozesse im \\ Parameter-Screening}{Kreativmethoden}]
- {Kreativmethoden zum Auswahlprozess im Parameter-Screening} \label{sec:screening_kreativ}
+\section{Kreativmethoden zum Auswahlprozesse im Parameter-Screening} \label{sec:kreativmethoden}
+{Kreativmethoden zum Auswahlprozess im Parameter-Screening} \label{sec:screening_kreativ}
+Nach der Identifikation muss der Parameter-Pool zunächst strukturiert und anschließend bewertet werden, um die vitalen Einflussgrößen (\textit{vital few}) von den trivialen (\textit{trivial many}) zu trennen, vergleiche \textcite{Arndt.2023c}.
+Insbesondere basierend auf Arbeiten von \textcite{Gundlach.2004,Kremer.2018b,Mayers.1997} werden im Folgenden geeignete Methoden vorgestellt, die sich für das heuristische Screening im Kontext von zeitvarianten Parametersets in der Lebensdaueranalyse eignen und darüber hinaus auf Randbedingungen der Versuchsplanung Rücksicht nehmen.
+\subsection{Strukturierungsmethoden} \label{subsec:Strukturierungsmethoden}
+Nachdem durch die vorangegangenen Schritte der Informationsbeschaffung eine möglichst vollständige Sammlung aller potenziellen Systemparameter, Inputs und Outputs generiert wurde, bedarf es einer systematischen Strukturierung auf Basis eines vertieften Systemverständnisses.
+Dieser Schritt darf sich nicht auf eine reine Clusterung in Parametergruppen beschränken.
+Vielmehr gilt es, die \textit{gegenseitigen Beeinflussungen} der Größen zu identifizieren und zu offenbaren.
+Insbesondere für die Lebensdaueranalyse stellt dies einen entscheidenden Mehrwert dar, der im Einklang mit den Prinzipien des \ac{L-DoEDoE} steht \cite{Montgomery.2020,Kremer.2021}: Phänomene wie Alterungseffekte oder die zeitvariante Änderung von Materialeigenschaften sind physikalisch oft nicht trivial durch Einzelgrößen beschreibbar, sondern resultieren maßgeblich aus Interaktionen (vgl. \colorbox{yellow}{Abbildung}).
+Um diese komplexen, teils zeitabhängigen Zusammenhänge für die weitere Selektion greifbar zu machen, eignen sich primär grafische Methoden, die über die reine Auflistung hinausgehen:
 
-Nach der Identifikation muss der Parameter-Pool strukturiert und bewertet werden, um die vitalen Einflussgrößen ("Vital Few") von den trivialen ("Trivial Many") zu trennen.
-Für die spezifische Anforderung der Lebensdaueranalyse, bei der Wechselwirkungen (\textbf{Interaktionen}) eine dominante Rolle spielen, müssen die klassischen Methoden erweitert werden.
-
-\subsection{Strukturierungsmethoden}
-Zur Visualisierung von Zusammenhängen eignen sich primär grafische Methoden:
 \begin{itemize}
-    \item \textbf{Mind-Mapping und Affinitätsdiagramme:} Diese dienen der Clusterung von Parametern zu logischen Gruppen (z.\,B. Lasten, Geometrie, Umwelt). Sie sind jedoch oft statisch und bilden dynamische Wechselwirkungen nur unzureichend ab.
-    \item \textbf{Erweitertes Ishikawa-Diagramm:} Das klassische Ursache-Wirkungs-Diagramm (Fischgräten-Diagramm) wird für das heuristische Screening so modifiziert, dass nicht nur statische Haupteffekte, sondern explizit \textbf{Interaktionen} durch Querverbindungen zwischen den Ästen visualisiert werden (vgl. Abbildung~\ref{fig:ishikawa_interactions}). Dies ist essenziell, da Lebensdauer-Effekte oft erst durch die Kombination von Lasten (z.B. Temperatur + Vibration) entstehen.
+    \item \textbf{Affinitätsdiagramm:} Als Werkzeug der \textit{M7} dient es der thematischen Clusterung der oft unstrukturierten Ergebnisse aus Brainstorming-Sessions \cite{Bruckner.2019}. Es ordnet Parameter übergeordneten Kategorien zu und deckt erste logische Gruppierungen auf, womit es als ideale Vorstufe für detailliertere Analysen (z.B. Ishikawa) fungiert.
+
+    \item \textbf{Mind-Mapping:} Diese Methode ermöglicht eine hierarchische Gliederung der Einflussgrößen ausgehend vom Untersuchungsziel (Wurzel) über Haupt- zu Nebenparametern (Äste). Der entscheidende Vorteil für das Screening liegt in der Möglichkeit, \textit{Querbeziehungen} durch Verbindungslinien zwischen den Ästen zu visualisieren, wodurch Interdependenzen abseits der direkten Hierarchie offensichtlich werden \cite{Buzan.2010}.
+
+    \item \textbf{Erweitertes Ishikawa-Diagramm:} Das klassische Ursache-Wirkungs-Diagramm (Fischgräten-Diagramm) strukturiert Parameter traditionell nach $6M$ (Mensch, Maschine, Material, Methode, Mitwelt, Messung). Für das heuristische Screening wird es dahingehend modifiziert, dass nicht nur statische Haupteffekte, sondern explizit \textbf{Interaktionen} durch Querverbindungen zwischen den Ästen visualisiert werden (vgl. \colorbox{yellow}{Abbildung}). Dies ist essenziell, da Lebensdauer-Effekte oft erst durch die Kombination von Lasten (z.B. Temperatur + Vibration) entstehen \cite{Arndt.2022}.
+
+    \item \textbf{Interdependenz-Netzwerke (Vernetztes Denken):} Für hochkomplexe Systeme bietet sich die Modellierung als gerichteter Graph an. Hierbei werden Parameter als Knoten und ihre Wirkbeziehungen als Kanten dargestellt. Dies erlaubt nicht nur die Abbildung der Wirkrichtung (positiv/negativ), sondern auch die Integration zeitlicher Dynamiken und Intensitäten, was für die Modellierung von Degradationsprozessen vorteilhaft ist \cite{Tittmann.2019}.
+
+    \item \textbf{ABC-Analyse:} Zur Reduktion der Komplexität klassifiziert die ABC-Analyse die Parameter nach dem Pareto-Prinzip in Klassen hoher (A), mittlerer (B) und geringer (C) Relevanz. Dies dient als erster Filter, um den Fokus auf die vermuteten Haupttreiber der Lebensdauer zu lenken \cite{Montgomery.2020}.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -60,16 +70,18 @@ Zur Visualisierung von Zusammenhängen eignen sich primär grafische Methoden:
     \label{fig:ishikawa_interactions}
 \end{figure}
 
+Die hierdurch erreichte Transparenz über die Vernetzung der Parameter bildet die notwendige Basis für den nächsten Schritt: Die Überführung der qualitativen Struktur in eine quantitative Priorisierung, um die finalen Faktoren für den Versuchsplan zu selektieren.
+
 \subsection{Bewertungsmethoden (Decision Making)}
 Um aus der strukturierten Liste die finalen Faktoren für den \ac{DoE}-Plan auszuwählen, sind Bewertungswerkzeuge notwendig, die eine Priorisierung ermöglichen.
 
 \subsubsection{Design-Structure-Matrix (DSM)}
-Die \ac{DSM} ist eine $N \times N$-Matrix, die alle $N$ gesammelten Parameter sowohl in den Zeilen als auch in den Spalten auflistet.
-Ein Eintrag $y_{ij}$ in der Matrix markiert, dass der Parameter in Zeile $i$ einen Einfluss auf den Parameter in Spalte $j$ hat (oder umgekehrt, je nach Konvention).
+Die \ac{DSM} ist eine $\sym{n} \times \sym{n}$-Matrix, die alle $N$ gesammelten Parameter sowohl in den Zeilen als auch in den Spalten auflistet.
+Ein Eintrag $\sym{y}_{{idx_i}{idx_i}}$ in der Matrix markiert, dass der Parameter in Zeile $i$ einen Einfluss auf den Parameter in Spalte $j$ hat (oder umgekehrt, je nach Konvention).
 Für das Screening wird die Matrix um eine Zielgrößen-Spalte (Lebensdauer/Zuverlässigkeit) erweitert.
 \begin{itemize}
     \item \textbf{Binäre DSM:} Erfasst lediglich die Existenz einer Interaktion (Ja/Nein). Dies eignet sich für frühe Phasen mit geringem Detailwissen.
-    \item \textbf{Numerische DSM:} Gewichtet die Stärke des Einflusses (z.\,B. Skala 0--3).
+    \item \textbf{Numerische DSM:} Gewichtet die Stärke des Einflusses (z.B. Skala 0--3).
 \end{itemize}
 Die \ac{DSM} zwingt das Expertenteam, systematisch jede Paarung von Parametern auf mögliche Wechselwirkungen zu prüfen, was die Gefahr "vergessener" Interaktionen minimiert \cite{Lindemann.2008}.
 
