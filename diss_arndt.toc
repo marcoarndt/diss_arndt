@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {1.1}Forschungsperspektive und Problembeschreibung}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Beitrag dieser Arbeit}{3}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{4}{section.1.3}%
-\contentsline {chapter}{\numberline {2}Stand der Forschung und Technik}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Stand der Technik und Forschung}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Zuverlässigkeitstechnik und Wahrscheinlichkeitstheorie}{7}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Begriffe und Definitionen}{8}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Deskriptive Statistik für Lebensdauerdaten}{8}{subsection.2.1.2}%
@@ -53,20 +53,29 @@
 \contentsline {subsection}{\numberline {4.2.2}Bewertungsmethoden (Decision Making)}{63}{subsection.4.2.2}%
 \contentsline {subsubsection}{\nonumberline Design-Structure-Matrix (\cgls {DSM})}{63}{subsubsection*.52}%
 \contentsline {subsubsection}{\nonumberline Grid-Analyse (Portfolio-Analyse)}{64}{subsubsection*.55}%
-\contentsline {subsubsection}{\nonumberline Finale Parameter-Diskussion}{65}{subsubsection*.58}%
+\contentsline {subsection}{\numberline {4.2.3}Finale Parameter-Diskussion}{65}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Randbedingungen in der Parameterauswahl für die Zuverlässigkeitsmodellierung}{65}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Unterscheidung: Robustheit vs. Zuverlässigkeit}{66}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Anforderungen aus dem Versuchsplan (L-DoE)}{66}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}Vorgehen zum heuristischen Screening für die Zuverlässigkeitsmodellierung}{67}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Zusammenfassung}{68}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Effiziente multivariate Versuchspläne für Lebensdaueruntersuchungen}{69}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Fallstudie}{71}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{73}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Key Findings}{73}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Diskussion}{73}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Ausblick}{73}{section.7.3}%
-\contentsline {chapter}{\nonumberline Literatur}{75}{chapter*.64}%
-\contentsline {chapter}{Anhang}{87}{chapter*.64}%
-\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{87}{section.Alph0.1}%
+\contentsline {subsection}{\numberline {4.4.1}Phase I: Systemanalyse und Fehlerdefinition}{67}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Phase II: Heuristische Filterung und Interaktionsanalyse}{68}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Phase III: Abgleich mit dem Versuchsdesign}{68}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Zusammenfassung}{69}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Entwicklung und Bewertung effizienter Versuchsplan-Designs}{71}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Analyse generischer Design-Abweichungen und Orthogonalitätsverlust}{71}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Ökonomische Bewertung: Das Kostenmodell}{72}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Erweiterte Methoden zur Prädiktions-Visualisierung}{73}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Simulative Validierung und Methodennachweis}{73}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Simulationssetup}{73}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Ergebnisse und Effizienzbewertung}{74}{subsection.5.4.2}%
+\contentsline {chapter}{\numberline {6}Fallstudie}{75}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{77}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Key Findings}{77}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Diskussion}{77}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Ausblick}{77}{section.7.3}%
+\contentsline {chapter}{\nonumberline Literatur}{79}{chapter*.60}%
+\contentsline {chapter}{Anhang}{91}{chapter*.60}%
+\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{91}{section.Alph0.1}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

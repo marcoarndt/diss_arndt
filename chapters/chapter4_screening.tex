@@ -73,12 +73,12 @@ Um diese komplexen, teils zeitabhängigen Zusammenhänge für die weitere Selekt
 Die hierdurch erreichte Transparenz über die Vernetzung der Parameter bildet die notwendige Basis für den nächsten Schritt: Die Überführung der qualitativen Struktur in eine quantitative Priorisierung, um die finalen Faktoren für den Versuchsplan zu selektieren.
 
 \subsection{Bewertungsmethoden (Decision Making)} \label{subsec:Decision}
-Aufbauend auf der qualitativen Strukturierung der Einflussgrößen (vgl. Abschnitt \ref{subsec:Strukturierungsmethoden}) ist nun eine analytische Bewertung erforderlich, um die \textit{Vital Few} von den \textit{Trivial Many} zu separieren.
+Aufbauend auf der qualitativen Strukturierung der Einflussgrößen (vgl. Abschnitt \ref{subsec:Strukturierungsmethoden}) ist nun eine analytische Bewertung erforderlich, um die \textit{vital few} von den \textit{trivial many} zu separieren.
 Ziel ist es, die gesammelten Parameter in eine Rangfolge zu bringen, die sowohl deren vermutete Relevanz für die Lebensdauer als auch deren Interaktionspotenzial widerspiegelt.
 Hierfür eignen sich matrixbasierte Ansätze, die eine systematische Paarvergleichung erzwingen und subjektive Einschätzungen objektivierbar machen.
 \subsubsection{Design-Structure-Matrix (\ac{DSM})} \label{subsubsec:dsm}
 Die \ac{DSM} ist eine quadratische $\sym{n} \times \sym{n}$-Matrix, in der alle $\sym{n}$ identifizierten Systemparameter sowohl in den Zeilen als auch in den Spalten aufgetragen sind.
-Ein Eintrag $\sym{y}_{\sym{idx_i}\sym{idx_j}}$ in der Matrix symbolisiert dabei eine gerichtete Abhängigkeit: Der Parameter in Zeile $\sym{idx_i}$ beeinflusst den Parameter in Spalte $\sym{idx_j}$.
+Ein Eintrag $\sym{y}_{\sym{idx_i}\sym{idx_j}}$ in der Matrix symbolisiert dabei eine gerichtete Abhängigkeit: Der Parameter in Zeile $\sym{idx_i}$ beeinflusst den Parameter in Spalte $\sym{idx_j}$ \cite{Kremer.2018b,Lindemann.2008}.
 Für das Screening im Kontext der Zuverlässigkeit wird die Matrix häufig um eine Zielgrößen-Spalte erweitert, um den direkten Einfluss auf die Lebensdauer $\sym{t}$ zu erfassen.
 Die Bewertung kann auf zwei Detailebenen erfolgen:
 \begin{itemize}
@@ -86,7 +86,7 @@ Die Bewertung kann auf zwei Detailebenen erfolgen:
     \item \textbf{Numerische DSM:} Gewichtet die Stärke des Einflusses, z.B. auf einer Skala von 0 (kein Einfluss) bis 3 (starker Einfluss). Dies erlaubt eine differenzierte Priorisierung.
 \end{itemize}
 Ein wesentlicher Vorteil der \ac{DSM} ist die Aufdeckung von Asymmetrien: Ein Parameter A kann Parameter B stark beeinflussen, ohne dass B signifikant auf A zurückwirkt ($\sym{y}_{\text{AB}}\neq\sym{y}_{\text{BA}}$).
-Solche "aktiven" Parameter sind potenzielle Steuergrößen für den Versuchsplan.
+Solche \textit{aktiven} Parameter sind potenzielle Steuergrößen für den Versuchsplan \cite{Kremer.2021,Arndt.2023c}.
 Zudem ermöglicht die Matrix durch algorithmische Partitionierung (Clustering) das Identifizieren von Parametergruppen, die eng miteinander interagieren, was Hinweise auf physikalische Wirkmechanismen liefert \cite{Lindemann.2008}.
 \begin{figure}[htbp]
     \centering
@@ -102,38 +102,37 @@ Hierfür werden für jeden Parameter $\sym{idx_i}$ zwei Kennzahlen berechnet \ci
     \item \textbf{Aktivsumme (Active Sum):} Die Summe der Zeileneinträge ($\sum_{\sym{idx_j}} \sym{y}_{\sym{idx_i}\sym{idx_j}}$). Sie ist ein Maß dafür, wie stark der Parameter das Gesamtsystem treibt.
     \item \textbf{Passivsumme (Passive Sum):} Die Summe der Spalteneinträge ($\sum_{\sym{idx_i}} \sym{y}_{\sym{idx_i}\sym{idx_j}}$). Sie beschreibt, wie stark der Parameter selbst von anderen Größen beeinflusst wird (Reaktivität).
 \end{enumerate}
-Die Positionierung im Diagramm erlaubt eine Klassifizierung in vier Quadranten, aus denen sich direkte Handlungsempfehlungen für das \ac{DoE} ableiten lassen:
+Die Positionierung im Diagramm erlaubt eine Klassifizierung in vier Quadranten, aus denen sich direkte Handlungsempfehlungen für das \ac{DoE} ableiten:
 \begin{itemize}
-    \item \textbf{Aktive Parameter (hohe Aktiv-, niedrige Passivsumme):} Diese Größen sind die idealen Steuerfaktoren ($\sym{x}$) für den Versuchsplan, da sie das System dominieren, ohne selbst instabil zu sein.
-    \item \textbf{Kritische Parameter (hohe Aktiv- und Passivsumme):} Diese Faktoren sind stark vernetzt. Sie sind relevant für die Lebensdauer, bergen aber aufgrund ihrer Abhängigkeiten ein hohes Risiko für unerwünschte Wechselwirkungen. Sie müssen im Versuch besonders genau überwacht werden.
-    \item \textbf{Passive Parameter (niedrige Aktiv-, hohe Passivsumme):} Diese Größen eignen sich weniger als Steuerfaktoren, sondern vielmehr als Indikatoren oder Antwortgrößen ($\sym{y}$), da sie empfindlich auf Änderungen im System reagieren.
-    \item \textbf{Träge Parameter (niedrige Summen):} Diese Faktoren spielen eine untergeordnete Rolle und können im Screening oft vernachlässigt oder als Konstanten fixiert werden.
-\end{itemize}Um die Unsicherheit heuristischer Schätzungen abzubilden, kann die Grid-Analyse um Konfidenz-Vektoren erweitert werden.
-Dabei geben Experten für jede Bewertung an, ob diese auf gesichertem Wissen (Daten, Literatur) oder Intuition beruht.
-Große Differenzen zwischen \textit{gesicherter} und \textit{intuitiver} Position im Grid weisen auf Wissenslücken hin, die zwingend durch experimentelle Voruntersuchungen geschlossen werden müssen, bevor der Parameter in ein aufwendiges \ac{L-DoE} aufgenommen wird.
+    \item \textbf{Aktive Parameter (hohe Aktiv-, niedrige Passivsumme):} Diese Größen qualifizieren sich als ideale Steuerfaktoren ($\sym{x}$) für den Versuchsplan, da sie das System dominieren, ohne selbst instabil zu sein.
+    \item \textbf{Kritische Parameter (hohe Aktiv- und Passivsumme):} Diese Faktoren weisen eine starke Vernetzung auf. Sie sind relevant für die Lebensdauer, bergen aber aufgrund ihrer Abhängigkeiten ein hohes Risiko für unerwünschte Wechselwirkungen. Ihre Überwachung im Versuch ist von besonderer Bedeutung.
+    \item \textbf{Passive Parameter (niedrige Aktiv-, hohe Passivsumme):} Diese Größen eignen sich primär als Indikatoren oder Antwortgrößen ($\sym{y}$), da sie empfindlich auf Änderungen im System reagieren, während ihre Eignung als Steuerfaktoren als gering einzustufen ist.
+    \item \textbf{Träge Parameter (niedrige Summen):} Diese Faktoren spielen eine untergeordnete Rolle und lassen sich im Screening oft vernachlässigen oder als Konstanten fixieren.
+\end{itemize}
+Zur Abbildung der Unsicherheit heuristischer Schätzungen ist eine Erweiterung der Grid-Analyse um Konfidenz-Vektoren möglich \cite{Arndt.2023c}.
+Hierbei geben Experten für jede Bewertung an, ob diese auf gesichertem Wissen (Daten, Literatur) oder Intuition beruht.
+Große Differenzen zwischen \textit{gesicherter} und \textit{intuitiver} Position im Grid indizieren Wissenslücken, deren Schließung durch experimentelle Voruntersuchungen vor der Aufnahme des Parameters in ein aufwendiges \ac{L-DoE} erforderlich ist.
 \begin{figure}[htbp]
-    \centering
-    \def\svgwidth{0.8\textwidth}
+    \centering\def\svgwidth{0.8\textwidth}
     % \import{plots/}{J22-arndt-Grid.pdf_tex}
     \caption{Grid-Analyse zur Klassifizierung von Parametern in aktive, kritische, passive und träge Faktoren}
     \label{fig:grid_analysis}
 \end{figure}
-\subsubsection{Finale Parameter-Diskussion}
-Die Ergebnisse aus \ac{DSM} und Grid-Analyse dienen als Entscheidungsgrundlage für die finale Selektion der Versuchs-Faktoren.
-In diesem Diskurs müssen die heuristischen Erkenntnisse gegen die harten Restriktionen des Versuchsplans (Budget, Machbarkeit, Messbarkeit) abgewogen werden.
-Es gilt, einen Kompromiss zu finden zwischen der vollständigen Abbildung aller wirksamen Mechanismen (Modellgüte) und der Reduktion auf eine handhabbare Anzahl an Faktoren (Effizienz).
-Faktoren, die als relevant identifiziert wurden, aber aus Budgetgründen nicht variiert werden können, müssen explizit als Konstanten dokumentiert oder als Noise-Faktoren in einer Robustheitsbetrachtung berücksichtigt werden.
 
+\subsection{Finale Parameter-Diskussion}
+Die Ergebnisse aus \ac{DSM} und Grid-Analyse bilden die Entscheidungsgrundlage für die finale Selektion der Versuchs-Faktoren \cite{Arndt.2023c}.
+In diesem Diskurs erfolgt eine Abwägung der heuristischen Erkenntnisse gegen die harten Restriktionen des Versuchsplans (Budget, Planungsumfang, Messbarkeit).
+Ziel ist ein Kompromiss zwischen der vollständigen Abbildung aller wirksamen Mechanismen (Modellgüte) und der Reduktion auf eine handhabbare Anzahl an Faktoren (Effizienz).
+Als relevant identifizierte, aber aus Budgetgründen nicht variierbare Faktoren sind explizit als Konstanten zu dokumentieren oder als Noise-Faktoren in einer Robustheitsbetrachtung zu berücksichtigen.
 \section{Randbedingungen in der Parameterauswahl für die Zuverlässigkeitsmodellierung} \label{sec:screening_randbedingungen}
-Die Anwendung der oben genannten Methoden muss im Kontext der Lebensdaueranalyse spezifische Randbedingungen berücksichtigen, die sich fundamental von der klassischen Robustheitsoptimierung unterscheiden.
+Die Anwendung der oben genannten Methoden muss im Kontext der Lebensdaueranalyse spezifische Randbedingungen berücksichtigen, die sich fundamental von der klassischen Robustheitsoptimierung unterscheiden \cite{Gundlach.2004,Mayers.1997,Klein.2011}.
 
 \subsection{Unterscheidung: Robustheit vs. Zuverlässigkeit}
-Ein häufiges Missverständnis im Screening ist die Gleichsetzung von initialer Performance-Streuung mit Lebensdauer-Streuung.
-Wie in Abbildung~\ref{fig:degradation_scheme} dargestellt, betrachtet die klassische Robustheitsanalyse nach \textcite{Klein.2014} im Verständnis von \textit{Taguchi}/\textit{Shainin} oft nur die Verteilung der Systemantwort zum Zeitpunkt $\sym{t}=0$ (Bereich A).
-Die Zuverlässigkeitstechnik fokussiert jedoch auf die \textbf{Degradation} über die Zeit (Bereich B).
-Ein Faktor, der die initiale Performance kaum beeinflusst (z.B. Korrosionsschutzschicht-Dicke), kann für die Lebensdauer $\sym{t}$ dominant sein.
-Heuristisches Screening für \ac{L-DoE} muss daher explizit Parameter priorisieren, die \textit{zeitabhängige} Schädigungsmechanismen (Verschleiß, Alterung, Ermüdung) treiben, selbst wenn sie initial "inaktiv" erscheinen.
-
+Ein häufiges Missverständnis im Screening ist die Gleichsetzung von initialer Streuung der Produktperformance mit Lebensdauerstreuung.
+Wie in Abbildung~\ref{fig:degradation_scheme} dargestellt, betrachtet die klassische Robustheitsanalyse nach \textcite{Klein.2014} im Verständnis von \textit{Taguchi}/\textit{Shainin} oft nur die Verteilung der Systemantwort zum Zeitpunkt $\sym{t}=0$.
+Die Zuverlässigkeitstechnik fokussiert jedoch auf die \textbf{Degradation} über die Zeit.
+Faktoren, die initial kaum Einfluss auf die Performance haben (z.B. Materialalterung, Verschleiß, Wechselwirkungen), können im Zeitverlauf dominante Treiber für Ausfallmechanismen werden.
+Heuristisches Screening für \ac{L-DoE} muss daher explizit Parameter priorisieren, die \textit{zeitabhängige} Schädigungsmechanismen  treiben, selbst wenn sie initial \textit{inaktiv} erscheinen.
 \begin{figure}[htbp]
     \centering
     \def\svgwidth{0.9\textwidth}
@@ -143,17 +142,21 @@ Heuristisches Screening für \ac{L-DoE} muss daher explizit Parameter priorisier
 \end{figure}
 
 \subsection{Anforderungen aus dem Versuchsplan (L-DoE)}
-Die im heuristischen Prozess ausgewählten Faktoren müssen später im statistischen Versuchsplan (\ac{DoE}) verarbeitet werden. Daraus ergeben sich harte Restriktionen für die Auswahl:
+Die im heuristischen Prozess ausgewählten Faktoren müssen später im statistischen Versuchsplan (\ac{DoE}) schließlich verarbeitet werden.
+Daraus ergeben sich harte Restriktionen für die Auswahl:
 \begin{itemize}
-    \item \textbf{Einstellbarkeit (Controllability):} Nur Parameter, die im Versuch aktiv und präzise auf verschiedene Niveaus (Levels) eingestellt werden können, qualifizieren sich als Faktoren. Nicht steuerbare Größen müssen als Noise oder Co-Faktoren behandelt werden.
-    \item \textbf{Beschleunigbarkeit:} Für \ac{ALT} müssen Faktoren gewählt werden, die eine physikalische Beschleunigung der Schädigung ermöglichen (z.\,B. Temperatur, Spannung), ohne den Fehlermechanismus zu verändern.
-    \item \textbf{Kosten und Komplexität:} Da der Stichprobenumfang bei voll-faktoriellen Plänen mit $\sym{n} \propto \sym{m}^{\sym{k}}$ wächst, zwingt die Ökonomie zur drastischen Reduktion von $\sym{k}$. Das Screening muss daher einen "Cut-Off" definieren, der oft bei $\sym{k} \le 5 \dots 7$ Faktoren liegt.
-    \item \textbf{Design Resolution (Auflösung):} Wenn viele Faktoren im Screening verbleiben, müssen fraktionelle Pläne (Teilfaktoriell) genutzt werden. Das Screening muss vorab klären, welche Interaktionen physikalisch plausibel sind, um eine geeignete Auflösung (Resolution III, IV oder V) zu wählen und Aliasing von Haupteffekten mit wichtigen Wechselwirkungen zu vermeiden.
+    \item \textbf{Einstell- und Regelbarkeit:} Nur Parameter, die im Versuch aktiv und präzise auf verschiedene Stufen Levels eingestellt werden können, qualifizieren sich als Faktoren. Nicht steuerbare Größen lassen sich sonst in \textit{Noise} oder \textit{Co-Faktoren} einordnen.
+    \item \textbf{Beschleunigbarkeit:} Für \ac{ALT} müssen Faktoren gewählt werden, die eine physikalische Beschleunigung der Schädigung ermöglichen (z.B. Temperatur, Mechanische Spannung), ohne den Fehlermechanismus zu verändern.
+    \item \textbf{Kosten und Komplexität:} Da der Stichprobenumfang bei voll-faktoriellen Plänen mit $\sym{n} \propto {\sym{m}\cdot\sym{N}}^{\sym{k}}$ wächst, vergleiche Abschnitte~\ref{subsec:pläne},\ref{subsec:strategie}, zwingt die Ökonomie zur drastischen Reduktion von $\sym{k}$. Das heuristische Screening definiert bestenfalls also ein wirtschaftlich abbildbares Maximum an umsetzbaren Faktoren $\sym{k}_{\max} \le 2 \dots 4$, vgl. \cite{Montgomery.2020,Siebertz.2017}.
+    \item \textbf{Design Resolution (Auflösung):} Wenn viele Faktoren im Screening verbleiben, verbleiben nur Screening-Designs für experimentell empirische Analyse. Das Screening muss vorab klären, welche Interaktionen physikalisch plausibel sind, um eine geeignete Auflösung (Resolution III, IV oder V) zu wählen und Aliasing von Haupteffekten mit wichtigen Wechselwirkungen zu vermeiden.
 \end{itemize}
 
+Mit den genannten Anforderungen zur methodischen Anwendung von \ac{L-DoE} ermöglichen schließlich die in Abschnitt~\ref{sec:screening_kreativ} identifizierten heuristischen Methoden für das Parameter-Screening ein strukturiertes Vorgehen zur effizienten Auswahl relevanter Einflussgrößen \cite{Arndt.2023c}.
+
+
 \section{Vorgehen zum heuristischen Screening für die Zuverlässigkeitsmodellierung} \label{sec:screening_vorgehen}
-Basierend auf der Analyse der Methoden und Randbedingungen wird folgendes prozedurales Vorgehen für das Parameter-Screening in der Zuverlässigkeitsmodellierung vorgeschlagen (vgl. Abbildung~\ref{fig:screening_procedure}).
-Dieser Ansatz stellt eine "Firewall" vor den eigentlichen kostenintensiven Lebensdauerversuch dar.
+Basierend auf der Analyse der Methoden und Randbedingungen wird in Anlehnung an \textcite{Arndt.2023c} folgendes prozedurales Vorgehen für das Parameter-Screening in der Zuverlässigkeitsmodellierung vorgeschlagen (vgl. Abbildung~\ref{fig:screening_procedure}).
+Dieser Ansatz fungiert als methodische Barriere vor dem eigentlichen ressourcenintensiven Lebensdauerversuch, um die Effizienz der Datenerhebung zu maximieren.
 
 \begin{figure}[htbp]
     \centering
@@ -163,31 +166,42 @@ Dieser Ansatz stellt eine "Firewall" vor den eigentlichen kostenintensiven Leben
     \label{fig:screening_procedure}
 \end{figure}
 
-\subsection*{Phase I: Systemanalyse und Failure-Mode-Definition}
-Der Prozess beginnt nicht mit den Parametern, sondern mit dem Fehlermechanismus.
-Basierend auf dem \ac{FBD} (Abschnitt~\ref{sec:screening_identifikation}) wird definiert, welcher spezifische \textbf{Failure Mode} untersucht werden soll (z.\,B. "Zahnbruch" vs. "Abrieb" bei einem Riemen).
-Unterschiedliche Fehlermodi werden oft von unterschiedlichen Parametersets getrieben.
-Eine Vermischung führt zu Rauschen in den Daten.
+\subsection{Phase I: Systemanalyse und Fehlerdefinition}
+Der Prozess initiiert nicht mit der isolierten Betrachtung von Parametern, sondern mit der Identifikation des relevanten Ausfallmechanismus.
+Basierend auf dem \ac{FBD} (Abschnitt~\ref{sec:screening_identifikation}) erfolgt die Definition des spezifischen \textbf{Failure Mode} (z.B. Zahnbruch vs. Abrieb bei einem Riemen).
+Da unterschiedliche Fehlermodi in der Regel von divergenten Parametersets getrieben werden, führt eine Vermischung unweigerlich zu Rauschen in den Daten und ist zu vermeiden.
 
-\subsection*{Phase II: Heuristische Filterung}
-Im zweiten Schritt wird der Parameter-Pool durch die in Abschnitt~\ref{sec:screening_kreativ} vorgestellten Methoden (z.\,B. Ishikawa + Grid-Analyse) gefiltert.
-Kritisch ist hier die Bewertung der \textbf{Interaktionsdichte}.
-Faktoren, die im Ishikawa-Diagramm oder der \ac{DSM} viele Vernetzungen aufweisen (hohe Aktivsumme), werden priorisiert, da sie wahrscheinlich Katalysatoren für Degradationsprozesse sind.
-Das Ergebnis ist ein Ranking der Faktoren nach ihrer vermuteten Relevanz für die Lebensdauer.
+\subsection{Phase II: Heuristische Filterung und Interaktionsanalyse}
+Im zweiten Schritt unterliegt der Parameter-Pool einer Filterung durch die in Abschnitt~\ref{sec:screening_kreativ} vorgestellten Methoden (z.B. Ishikawa-Diagramm in Kombination mit Grid-Analyse).
+\textcite{Arndt.2023c} stellen hierzu durch Bewertung der Eignung der Methoden im Kontext der Lebensdaueranalyse fest, dass vornehmlich die Kombination aus erweitertem Ishikawa-Diagramm (zur Visualisierung von Interaktionen) und \ac{DSM} (zur quantitativen Bewertung der Vernetzung) eine belastbare Grundlage für die Priorisierung der Faktoren darstellt.
+Kritisch ist hierbei die Bewertung der Interaktionsdichte in Bezug auf die Lebensdauer als Zielgröße.
+Faktoren, die im Ishikawa-Diagramm oder der \ac{DSM} eine hohe Vernetzung aufweisen (korrespondierend mit einer hohen Aktivsumme), erfahren eine Priorisierung, da sie mit hoher Wahrscheinlichkeit - insbesondere wechselwirkend über jedenfalls Abschnitte der Lebensdauer - als Katalysatoren für Degradationsprozesse fungieren.
+Das Ergebnis dieses Prozessschrittes ist eine hierarchische Ordnung der Faktoren nach ihrer vermuteten Relevanz für die Lebensdauer.
 
-\subsection*{Phase III: Test-Design-Matching}
-Im letzten Schritt wird die Top-Liste der Faktoren gegen die Restriktionen des gewählten \ac{DoE}-Plans (siehe Kapitel 3 und Abschnitt~\ref{sec:screening_randbedingungen}) abgeglichen.
+\subsection{Phase III: Abgleich mit dem Versuchsdesign}
+Im finalen Schritt erfolgt der Abgleich der priorisierten Faktorenliste mit den Restriktionen des gewählten \ac{L-DoE} (vgl. Kapitel~\ref{chap:screening} und Abschnitt~\ref{sec:screening_randbedingungen}).
+Hierbei sind folgende Prüffragen essenziell:
 \begin{itemize}
-    \item Ist die Anzahl $\sym{k}$ kompatibel mit dem Budget für $\sym{n}$ Versuche?
-    \item Sind die Faktoren physikalisch unabhängig voneinander einstellbar (Orthogonalität)?
-    \item Erlauben die gewählten Stufenabstände eine signifikante Änderung der Lebensdauer (Power $> 80\%$)?
+    \item Korrespondiert die Anzahl der Faktoren $\sym{k}$ mit dem verfügbaren Budget für $\sym{n}$ Versuche?
+    \item Ist die physikalische Unabhängigkeit der Faktoreinstellung (Orthogonalität) gewährleistet?
+    \item Ermöglichen die gewählten Stufenabstände eine signifikante, detektierbare Änderung der Lebensdauer (Power $> 80\%$), vgl. Abschnitt~\ref{subsec:begriffedoe}?
 \end{itemize}
-Nur Faktoren, die diesen Filter passieren, werden in das finale \ac{L-DoE}-Modell aufgenommen.
-Parameter, die als "mittelwichtig" eingestuft wurden aber aus Budgetgründen entfallen, werden als konstante Randbedingungen dokumentiert oder als Noise-Faktoren in Robustheits-Analysen ausgelagert.
+Lediglich Faktoren, die diesen Filter passieren, werden in das finale \ac{L-DoE}-Modell integriert.
+Parameter, die als relevant klassifiziert wurden, jedoch aus Budgetgründen entfallen, sind als konstante Randbedingungen zu dokumentieren oder als Noise-Faktoren in Robustheitsanalysen auszulagern.
 
+Das Resultat dieses dreistufigen Vorgehens ist eine kondensierte Parametermenge, die das Optimum zwischen notwendigem Informationsgehalt und vertretbarem experimentellem Aufwand repräsentiert.
+Wie in Abbildung~\ref{fig:screening_procedure_volume} visualisiert, wird das Volumen der zu betrachtenden Einflussgrößen von der initialen Systemanalyse (Gesamtmenge) über die heuristische Bewertung bis hin zum finalen Design-Matching kontinuierlich auf das für das \ac{L-DoE} essenzielle Maß verdichtet.
+
+\begin{figure}[htbp]
+    \centering
+    \def\svgwidth{0.95\textwidth}
+    % \import{plots/}{J22-arndt-Procedure.pdf_tex}
+    \caption{Prozedurale Volumenreduktion des Parameterraums im heuristischen Screening für \ac{L-DoE} (adaptiert nach \textcite{Arndt.2023c})}
+    \label{fig:screening_procedure_volume}
+\end{figure}
 \section{Zusammenfassung}
-Das in diesem Kapitel vorgestellte heuristische Screening schließt die Lücke zwischen der qualitativen Systemanalyse und der quantitativen Versuchsplanung.
-Indem Expertenwissen strukturiert genutzt wird (z.\,B. durch \ac{DSM} und erweiterte Ishikawa-Diagramme), kann die Anzahl der Versuchs-Faktoren $\sym{k}$ drastisch reduziert werden, ohne relevante Interaktionen zu übersehen.
-Entscheidend ist dabei der Perspektivwechsel von der initialen Performance-Streuung hin zur zeitabhängigen Degradation.
-Dieses Vorgehen ermöglicht es, die in Kapitel 3 diskutierten effizienten Versuchspläne (wie CCD oder OMARS) überhaupt erst anwendbar zu machen, da diese nur mit einer begrenzten Anzahl an Faktoren ($\sym{k} \approx 3 \dots 7$) wirtschaftlich operieren.
-Die methodische Vorarbeit des Screenings ist somit der Hebel für die Effizienz des gesamten Lebensdauerversuchs.
+Das in diesem Kapitel vorgestellte heuristische Screening schließt die methodische Lücke zwischen der qualitativen Systemanalyse und der quantitativen Versuchsplanung.
+Durch die strukturierte Nutzung von Expertenwissen (z.B. mittels \ac{DSM} und erweiterten Ishikawa-Diagrammen) lässt sich die Anzahl der Versuchs-Faktoren $\sym{k}$ signifikant reduzieren, ohne relevante Interaktionen zu vernachlässigen.
+Entscheidend ist dabei der vollzogene Perspektivwechsel von der Betrachtung der initialen Performance-Streuung hin zur Analyse der zeitabhängigen Degradation.
+Dieses Vorgehen schafft die notwendige Voraussetzung für die Anwendbarkeit der in Kapitel~\ref{chap:ansatz} diskutierten effizienten Versuchspläne, da diese ihre Stärken erst bei einer begrenzten Anzahl an Faktoren ($\sym{k} \approx 3 \dots 5$) wirtschaftlich ausspielen.
+Die methodische Vorarbeit des Screenings fungiert somit als zentraler Hebel für die Effizienz des gesamten Lebensdauerversuchs.

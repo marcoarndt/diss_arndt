@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Kapitel 2 - Stand der Forschung und Technik %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Stand der Forschung und Technik} \label{chap:stand}
+\chapter{Stand der Technik und Forschung} \label{chap:stand}
 
 Dieses Kapitel stellt die für diese Arbeit erforderlichen technischen und methodischen Grundlagen bereit. Zunächst werden in Abschnitt~\ref{sec:zuv} zentrale Begriffe und Konzepte der Zuverlässigkeitstechnik sowie das grundlegende statistische Verfahren zur Lebensdauer-Datenanalyse in Kombination mit Versuchsplänen erläutert.
 Darauf aufbauend folgen in Abschnitt~\ref{sec:doe} die Einführung und die Einordnung von \acs{DoE} für Lebensdaueruntersuchungen sowie der multivariaten Lebensdauermodellierung aus dem Stand der Technik und der Wissenschaft, die beide für die Entwicklung effizienter Lebensdauerversuchspläne maßgeblich sind.
@@ -627,9 +627,9 @@ Gleichzeitig erlaubt diese Strategie eine flexible Anpassung an unerwartete Erge
 In Abhängigkeit der Anpassung zur Wahl eines geeigneten Modells, linear oder quadratisch, kann die Versuchsplanung so stets an die aktuellen Erkenntnisse angepasst werden.
 Dies folgt im Wesentlichen einer übergeordneten Logik der Modellkomplexität:
 Gemäß \textcite{Russell.2019} korrespondiert die minimale Anzahl notwendiger Versuchspunkte direkt mit der Anzahl der zu schätzenden Modellparameter $\sym{p}$.
-Intuitiv erfordert bereits die Bestimmung der Parameter einer einfachen Geraden ($\symsub{beta}{idx_0}, \sym{beta}_1$) mindestens zwei unterschiedliche Stützstellen.
+Intuitiv erfordert bereits die Bestimmung der Parameter einer einfachen Geraden ($\symsub{beta}{idx_0}, \sym{beta}_1$) mindestens $\sym{N}=2$ unterschiedliche Stützstellen.
 Soll hingegen ein quadratischer Zusammenhang ($\symsub{beta}{idx_0}, \sym{beta}_1, \sym{beta}_{11}$) abgebildet werden, sind zwingend mindestens drei Stützstellen erforderlich, um das Gleichungssystem zu lösen.
-Im Kontext optimaler Versuchspläne definiert nach \textcite{Pukelsheim.2006} der Maßerweiterungssatz von Carathéodory dabei eine theoretische Obergrenze für die notwendigen Stützstellen von $\sym{p}(\sym{p} + 1)/2 + 1$, beziehungsweise $\sym{p}(\sym{p} + 1)/2$, sofern das Interesse der Schätzung aller Elemente des Parametervektors $\sym{Beta}$ gilt \cite{Russell.2019}.
+Im Kontext optimaler Versuchspläne definiert nach \textcite{Pukelsheim.2006} der Maßerweiterungssatz von Carathéodory dabei eine theoretische Obergrenze für die notwendigen Stützstellen von $\sym{N}=\sym{p}(\sym{p} + 1)/2 + 1$, beziehungsweise $\sym{N}=\sym{p}(\sym{p} + 1)/2$, sofern das Interesse der Schätzung aller Elemente des Parametervektors $\sym{Beta}$ gilt \cite{Russell.2019}.
 Es kann beispielsweise auf Basis der Ergebnisse des teil-faktoriellen Plans entschieden werden, ob eine Erweiterung zum voll-faktoriellen Plan überhaupt notwendig ist.
 Genauso kann die Anzahl der Zentralpunkte an die beobachtete Streuung der Lebensdauerdaten angepasst werden, um eine robuste Schätzung des Fehlers zu gewährleisten.
 Ist dann eine Extrapolation in Richtung a-priori unbekannter Beanspruchungsniveaus geplant, verfügt der \ac{CCD} über die notwendigen Stützstellen, um eine adäquate Exploration des Versuchsraums zu ermöglichen.

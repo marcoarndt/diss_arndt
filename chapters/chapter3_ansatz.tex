@@ -21,25 +21,27 @@ Der Begriff der Effizienz erfährt hierbei jedoch im Kontext multivariater Leben
 
 \subsubsection{Modellabhängigkeit und Lokale Optimalität}
 Erstens stößt die zugrundeliegende Modellierung mittels Weibull-\acp{GLM} auf ein fundamentales Problem, das von \textcite{Khuri.2006} und \textcite{Stufken.2012} diskutiert wird.
-Im Gegensatz zu klassischen linearen Modellen (unter Normalverteilungsannahme) hängt die Fisher-Informationsmatrix $\sym{FIM}$ bei \acp{GLM} nicht allein von den Einstellungen der Faktoren $\sym{X}$ ab, sondern vollständig von den wahren, aber unbekannten Modellparametern $\sym{theta}$ (z.B. Formparameter $\sym{b}$ und Lageparameter via Link-Funktion $\hat{\sym{T}}$):
+Im Gegensatz zu klassischen linearen Modellen (unter Normalverteilungsannahme) hängt die Fisher-Informationsmatrix $\sym{FIM}$ bei \acp{GLM} nicht allein von den Einstellungen der Faktoren $\sym{X}$ ab, sondern vollständig von den wahren, aber unbekannten Modellparametern $\sym{theta}$ (insbesondere dem Formparameter $\hat{\sym{b}}$ und via der Link-Funktion dem Lageparameter $\hat{\sym{T}}$):
 \begin{equation}
     \sym{M}(\sym{X}, \sym{theta}) = \sym{E} \left[ - \frac{\partial^2 \sym{L_like}(\sym{theta})}{\partial \sym{theta}^2} \right].
     \label{eq:fisher_info_depend}
 \end{equation}
-Daraus resultiert das Paradoxon, dass zur Konstruktion eines optimalen Plans bereits Kenntnisse über die zu ermittelnden Parameter vorliegen müssen.
+Daraus resultiert das Paradoxon, dass zur Konstruktion eines optimalen Plans bereits Kenntnisse über die zu ermittelnden Parameter vorliegen müssten.
 Zwar existieren auf Basis von Exponential- oder Poissonverteilung diverse Algorithmen zur numerischen Bestimmung optimaler Versuchspläne für \acp{GLM} \cite{Khuri.2006}, und auch für Experimente mit binärer Antwortstruktur (logistische oder Probit-Modelle) wurden Ansätze entwickelt \cite{Yang.2011}.
 Diese Verfahren setzen jedoch stets voraus, dass die wahren Parameterwerte $\sym{theta}$ bekannt sind oder verlässlich geschätzt (\textit{best guess}) werden können.
-Folglich sind solche Designs, wie \textcite{Stufken.2012} ausführen, stets nur \textbf{lokal optimal}.
-Da die Parameter (insbesondere Weibull-$\sym{b}$ und $\sym{T}$) im Vorfeld einer Lebensdaueruntersuchung unbekannt sind, existieren keine universell optimalen \ac{GLM}-Designs für die Weibull-Lebensdauermodellierung.
+Folglich sind solche Designs, wie \textcite{Stufken.2012} ausführen, allenfalls nur \textbf{lokal optimal}.
+Da die Parameter im Vorfeld einer Lebensdaueruntersuchung unbekannt sind, existieren keine universell optimalen \ac{GLM}-Designs für die Weibull-Lebensdauermodellierung.
 Ein Design, das für einen angenommenen Parametersatz optimal ist, kann sich bei Abweichung der realen Werte als ineffizient erweisen („The designs may be poor if the choice of values is far from the true parameter values“, \textcite{Stufken.2012}).
 
 \subsubsection{Zeitliche und Strukturelle Effizienz}
 Zweitens muss die \textbf{zeitliche Effizienz} berücksichtigt werden.
 Da die Information in Lebensdauertests stochastisch über die Zeit generiert wird und oft durch Zensierung limitiert ist, wird die Varianz der Schätzung maßgeblich durch die Anzahl der tatsächlich ausgefallenen Einheiten getrieben \cite{Nelson.2005}.
 Ein Versuchsplan gilt folglich nur dann als effizient, wenn er die erwartete Testdauer bei gegebener Präzision minimiert.
-Drittens bietet die Klasse der \ac{OMARS}-Designs eine Antwort auf die Forderung nach \textbf{struktureller Effizienz} und Flexibilität.Im direkten Vergleich zum etablierten \ac{CCD}, das durch seine geometrische Konstruktion eine starre Anzahl an Versuchen fordert, ermöglichen \ac{OMARS}-Designs eine Entkopplung von Faktoren- und Versuchsanzahl (z.B. $\sym{N}=40$ statt $\sym{N} \ge 45$ für $\sym{k}=6$).
+Drittens bietet die Klasse der \ac{OMARS}-Designs eine Antwort auf die Forderung nach \textbf{struktureller Effizienz} und Flexibilität.
+Im direkten Vergleich zum etablierten \ac{CCD}, das durch seine geometrische Konstruktion eine starre Anzahl an Versuchen fordert, ermöglichen \ac{OMARS}-Designs eine Entkopplung von Faktoren- und Versuchsanzahl (z.B. $\sym{N}=40$ statt $\sym{N} \ge 45$ für $\sym{k}=6$).
 Strategisch verfolgen sie einen \textit{One-Step}-Ansatz \cite{Goos.2025}, der Screening und Optimierung integriert, um Rüstzeiten und zeitliche Drifts zu vermeiden.
-Der Preis für diese Effizienz ist ein kontrolliertes Maß an \textit{Aliasing} zwischen Effekten zweiter Ordnung. Damit qualifizieren sich diese Designs insbesondere für ressourcenbeschränkte Untersuchungen, wenngleich das \ac{CCD} seine Stärke in der Robustheit und sequenziellen Kontrollierbarkeit behält.
+Der Preis für diese Effizienz ist ein kontrolliertes Maß an \textit{Aliasing} zwischen Effekten zweiter Ordnung.
+Damit qualifizieren sich diese Designs insbesondere für ressourcenbeschränkte Untersuchungen, wenngleich das \ac{CCD} seine Stärke in der Robustheit und sequenziellen Kontrollierbarkeit behält.
 
 \subsection{Schlussfolgerung für die Testplanung}
 Aus der Diskrepanz zwischen theoretischem Anspruch (optimale \ac{GLM}-Designs) und praktischer Anwendbarkeit (unbekannte Parameter) leitet sich die Notwendigkeit einer pragmatischen und zugleich statistisch fundierten Vorgehensweise ab.
@@ -84,10 +86,7 @@ Darauf aufbauend widmet sich \colorbox{yellow}{\textbf{Kapitel 5}} der generisch
 In diesem Kontext werden ein Kostenmodell sowie ein neu entwickeltes Tool zur Bewertung der Prädiktionsgüte in Abhängigkeit der \ac{SPV} eingeführt.
 Daraus abgeleitet werden konkrete Strategieempfehlungen für die Anpassung von \acp{CCD}, etwa zur Optimierung der Extrapolationsfähigkeit, vorgestellt und diskutiert.
 Abschließend ist in \colorbox{yellow}{\textbf{Kapitel 6}} die Vorstellung einer Fallstudie (Case Study) vorgesehen, um die erarbeitete Methodik an einem praxisnahen Anwendungsbeispiel zu validieren und die theoretischen Erkenntnisse in den operativen Kontext zu transferieren.
-
-
 % \subsubsection{Abgrenzung zu weiteren Themen in der \ac{RSM}} \label{subsubsec:abgrenzung}
-
 % \begin{itemize}
 %     \item \textbf{\ac{GLM} Mixed Models}, \textbf{Random Effects} (Generalized Linear Mixed Models) \cite[Myers 2010 Kap.7.1.2]{Myers.2010}
 %     \item \textbf{Robuste Versuchspläne} (Robust Designs):
@@ -115,8 +114,6 @@ Abschließend ist in \colorbox{yellow}{\textbf{Kapitel 6}} die Vorstellung einer
 %     \item \textbf{Optimale Versuchspläne für Cyber-Physische Systeme} (Optimal Designs for Cyber-Physical Systems):
 %     \item \textbf{Optimale Versuchspläne für Nachhaltigkeit und Umweltwissenschaften} (Optimal Designs for Sustainability and Environmental Sciences):
 % \end{itemize}
-
-
 % \begin{itemize}
 %     \item \cite[Kap. 9.1.4]{Myers.2016}
 %     \item \cite[Kap. 9.2.1]{Myers.2016}

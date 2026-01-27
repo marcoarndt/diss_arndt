@@ -1,6 +1,74 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Kapitel 4 - Entwurf %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Kapitel 5 - Entwurf %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\chapter{Entwicklung und Bewertung effizienter Versuchsplan-Designs} \label{chap:entwurf}
 
-\chapter{Effiziente multivariate Versuchspläne für Lebensdaueruntersuchungen} \label{chap:entwurf}
+Nach der in Kapitel~\ref{chap:screening} beschriebenen qualitativen Vorselektion der Einflussgrößen steht nun die quantitative Auslegung des Versuchsplans im Fokus.
+Das Ziel ist die Entwicklung einer Methodik, die es erlaubt, etablierte Standard-Designs gezielt an die Anforderungen der Lebensdauerprognose anzupassen, ohne deren statistische Integrität unzulässig zu kompromittieren.
+Dabei gilt die Prämisse, dass insbesondere das \textbf{\ac{CCD}} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ Linear $\to$ Quadratisch) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorteil gegenüber starreren Designs wie \acp{DSD} oder \ac{OMARS}-Designs bietet.
+Letztere mögen in spezifischen Ein-Schritt-Szenarien effizient sein, das \ac{CCD} erlaubt jedoch das flexible Reagieren auf Zwischenergebnisse – eine essenzielle Eigenschaft bei der oft unwägbaren Dauer von Lebensdauertests.
+
+Dieses Kapitel untersucht zunächst systematisch die Auswirkungen geometrischer Design-Abweichungen auf die statistische Güte (Abschnitt~\ref{sec:abweichungen}).
+Darauf aufbauend wird ein Kostenmodell eingeführt, das die monetären Konsequenzen solcher Anpassungen quantifiziert (Abschnitt~\ref{sec:kostenmodell}).
+Zur Bewertung der Prognosegüte wird eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik abschließend in einer Monte-Carlo-Simulationsstudie an einem generischen Referenzsystem validiert wird (Abschnitt~\ref{sec:simulation}).
+
+\section{Analyse generischer Design-Abweichungen und Orthogonalitätsverlust} \label{sec:abweichungen}
+Moderne Versuchsplanung für die Zuverlässigkeitstechnik erfordert oft ein Abweichen von der idealen Lehrbuch-Geometrie.
+Sei es durch physikalische Restriktionen des Prüfstands, die eine symmetrische Platzierung der Sternpunkte verhindern, oder durch die bewusste Manipulation des Versuchsraums, um die Extrapolationsgüte in Richtung einer spezifischen Anwendungsbelastung zu steigern.
+Jede dieser geometrischen Verzerrungen führt zwangsläufig zu einem Verlust der Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
+
+Um die Robustheit des \ac{CCD} gegenüber solchen Eingriffen zu charakterisieren, werden folgende typische Abweichungskategorien untersucht:
+\begin{itemize}
+    \item \textbf{Asymmetrische Sternpunkte:} Verschiebung einzelner $\symsub{alpha}{idx_D}$-Werte, um den Testraum in eine Vorzugsrichtung (z.\,B. höhere Temperatur für \ac{ALT}) zu erweitern.
+    \item \textbf{Reduktion der Zentralpunkte:} Minimierung von $\symsub{n}{idx_C}$ zugunsten von Randpunkten, unter Inkaufnahme einer schlechteren Lack-of-Fit-Diagnose.
+    \item \textbf{Verschiebung faktorieller Eckpunkte:} Anpassung der $\pm 1$-Niveaus aufgrund technischer Machbarkeitsgrenzen.
+\end{itemize}
+
+Die Auswirkung dieser Manipulationen auf die Modellgüte lässt sich analytisch über die Konditionszahl der Informationsmatrix $\sym{M}$ und die \acp{VIF} bewerten.
+Während orthogonale Designs per Definition $\text{\ac{VIF}} = 1$ aufweisen, führen Abweichungen zu $\text{\ac{VIF}} > 1$, was eine Inflation der Varianz der Regressionskoeffizienten $\sym{beta}$ und damit eine Reduktion der Teststärke (\sym{power}) zur Folge hat.
+Es gilt zu identifizieren, bis zu welchem Grad an Abweichung (z.\,B. $\text{\ac{VIF}} < 5$) die Parameterschätzung stabil bleibt und ab wann das Design "kollabiert".
+
+\section{Ökonomische Bewertung: Das Kostenmodell} \label{sec:kostenmodell}
+Eine rein statistische Bewertung greift in der industriellen Praxis zu kurz.
+Eine Design-Modifikation, die die Prädiktionsvarianz um 5\,\% senkt, aber die Versuchskosten verdoppelt, ist ineffizient.
+Daher wird ein Kostenmodell eingeführt, das die monetären Aufwände eines Lebensdauerversuchs in Abhängigkeit der Design-Parameter abbildet.
+% Die Gesamtkosten $\sym{C}_{\text{total}}$ setzen sich additiv aus fixen und variablen Anteilen zusammen:
+% \begin{equation} \label{eq:kostenmodell}
+%     \sym{C}_{\text{total}} = \sym{C}_{\text{fix}} + \left( \sym{n} \cdot \sym{C}_{\text{spec}} \right) + \left( \sum_{i=1}^{\sym{n}} \sym{t}_{\text{test},i}(\sym{x}_i) \cdot \sym{C}_{\text{time}} \right) + \sym{C}_{\text{fail}}.
+% \end{equation}
+% Hierbei beschreibt $\sym{C}_{\text{fix}}$ die Rüstkosten, $\sym{C}_{\text{spec}}$ die Herstellkosten pro Prüfling und $\sym{C}_{\text{time}}$ die laufenden Betriebskosten des Prüfstands pro Zeiteinheit.
+% Der Term $\sym{t}_{\text{test},i}(\sym{x}_i)$ ist die entscheidende, vom Versuchsplan abhängige Größe: Durch \ac{ALT} (hohe Lastniveaus $\sym{x}$) sinkt die Prüfzeit, was $\sym{C}_{\text{total}}$ reduziert.
+% Gleichzeitig steigt jedoch durch aggressive Lasten potenziell der Energiebedarf oder das Risiko nicht-repräsentativer Ausfallmechanismen ($\sym{C}_{\text{fail}}$).
+% Dieses Modell ermöglicht es, Design-Alternativen nicht nur nach ihrer statistischen Effizienz (D-, G-Effizienz), sondern nach ihrer \textit{ökonomischen Effizienz} (Information pro Euro) zu bewerten.
+
+\section{Erweiterte Methoden zur Prädiktions-Visualisierung} \label{sec:visualisierung}
+Zur Beurteilung der Vorhersagegüte im gesamten Versuchsraum haben sich der \textbf{\ac{VDG}} und der \textbf{\ac{FDS}-Plot} etabliert.
+Diese Metriken bewerten die Verteilung der skalierten Prädiktionsvarianz (\ac{SPV}) jedoch oft global oder über sphärische Distanzen gemittelt.
+Für die Lebensdauerprognose, bei der oft eine Extrapolation in einen spezifischen, eng begrenzten Anwendungsbereich ("Corner Case") von Interesse ist, sind diese globalen Maße oft unzureichend.
+
+Daher wird in dieser Arbeit eine neue, erweiterte Auswertungsmethode vorgestellt: Das \textbf{Extrapolations-spezifische SPV-Mapping}.
+Im Gegensatz zum klassischen VDG, der die Varianz über Radien mittelt, visualisiert diese Methode die Isolinien der Prädiktionsvarianz explizit in Richtung der relevanten Belastungsvektoren.
+Dies ermöglicht die gezielte Bewertung der Design-Güte exakt in jenen Bereichen des Parameterraums, in denen die spätere Feldprognose erfolgen soll, und deckt Schwachstellen auf, die in globalen FDS-Plots verborgen blieben.
+
+\section{Simulative Validierung und Methodennachweis} \label{sec:simulation}
+Aufgrund der unendlichen Kombinationsmöglichkeiten von Einflussfaktoren, Lastniveaus und physikalischen Modellen ist eine generische Sensitivitätsanalyse für alle denkbaren Anwendungsfälle nicht zielführend.
+Stattdessen wird die Anwendbarkeit und Leistungsfähigkeit der vorgeschlagenen Methodik am Beispiel eines generischen Referenzsystems mittels Monte-Carlo-Simulation (MC) nachgewiesen.
+
+\subsection{Simulationssetup}
+Als Referenzsystem dient ein Weibull-verteiltes System ($\sym{b}=2, \sym{T}=1000\,\text{h}$), dessen Lebensdauerverhalten durch ein log-lineares Modell mit zwei Hauptfaktoren und einer Wechselwirkung beschrieben wird.
+Im Rahmen der MC-Simulation werden $\symsub{n}{idx_MC} = 10.000$ virtuelle Versuchsreihen erzeugt, wobei für jeden Lauf:
+1.  Lebensdauerdaten basierend auf dem definierten Modell und den Versuchsplan-Stützstellen (modifiziertes CCD vs. Benchmark-CCD) generiert werden.
+2.  Eine stochastische Streuung sowie Zensierung (Typ I/II) aufgeprägt wird.
+3.  Die Modellparameter mittels \ac{MLE} zurückgeschätzt werden.
+
+\subsection{Ergebnisse und Effizienzbewertung}
+Die Auswertung erfolgt multidimensional anhand der in den vorangegangenen Abschnitten definierten Metriken:
+\begin{itemize}
+    \item \textbf{Power:} Wie hoch ist die Wahrscheinlichkeit, die definierten Effekte trotz Design-Manipulation korrekt zu detektieren?
+    \item \textbf{Parameterschätzgüte:} Wie verhalten sich Bias und Varianz der Schätzer ($\hat{\sym{b}}, \hat{\sym{T}}$) bei Verlust der Orthogonalität?
+    \item \textbf{Ökonomische Bilanz:} Welches Design liefert die geforderte Präzision bei minimalen Gesamtkosten gemäß Gleichung~\ref{eq:kostenmodell}?
+\end{itemize}
+Durch den Vergleich der gesampleten Versuchszeiten (Time-to-Failure) kann valide auf die Effizienz im \ac{ALT}-Kontext geschlossen werden.
+Es wird gezeigt, dass ein gezielt manipuliertes CCD, bei dem Sternpunkte in Richtung der Hauptbelastung verschoben werden, die Prognoseunsicherheit im Anwendungsbereich signifikant senken kann, ohne die maximale Versuchsanzahl oder das Budget des konventionellen Benchmarks zu überschreiten.
+Damit wird der Nachweis erbracht, dass die entwickelte Methodik zur Bewertung und Anpassung von Versuchsplänen (Kostenmodell + SPV-Visualisierung + Orthogonalitäts-Check) ein robustes Werkzeug zur Steigerung der Testeffizienz darstellt.
