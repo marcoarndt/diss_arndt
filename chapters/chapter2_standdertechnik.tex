@@ -13,92 +13,91 @@ Ziel ist die statistische Modellierung des Ausfallverhaltens unter Berücksichti
 Eine zentrale Aufgabe besteht somit in der statistischen Charakterisierung des Ausfallbegriffs mithilfe deskriptiver Statistik sowie in der Parametrisierung geeigneter Verteilungen zur Abbildung des Lebensdauerverhaltens.
 Die Modellierung kann - abhängig von den Randbedingungen - auf Basis \textit{einer einzelnen} Belastungsgröße oder \textit{mehrerer} Beanspruchungsparameter erfolgen, die gemeinsam den Produktausfall determinieren.
 Ein grundlegendes Verständnis des Umgangs mit zufallsverteilten Lebensdauerereignissen ist daher eine elementare Voraussetzung für die statistische Versuchsplanung im Rahmen der Zuverlässigkeitstechnik.
-Weiterführende Konzepte und vertiefte methodische Ansätze zur Zuverlässigkeitstechnik sowie zur statistischen Testplanung sind allen voran in der Standardliteratur von \textcite{Bertsche.2022} dargelegt, an deren Vorgehensweise sich die nachfolgenden Ausführungen orientieren.
+Weiterführende Konzepte und vertiefte methodische Ansätze zur Zuverlässigkeitstechnik sowie zur statistischen Testplanung sind allen voran in der Standardliteratur von \textcite{Bertsche.2022} dargelegt, an deren Vorgehensweise sich die nachfolgende Übersicht orientiert.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Begriffe und Definitionen} \label{subsec:begriffezuv}
-Der \textbf{Ausfall}, engl. \textbf{\ac{EoL}}, eines Produkts bezeichnet das Ende der Lebensdauer durch Verlust der geforderten Funktionalität. Maßgeblich hierfür sind von außen einwirkende \textbf{Belastungen} (\textit{Einzelne} oder zeitgleich \textit{mehrere} Einflussparameter - Kräfte und Momente im mechanischen Kontext) sowie die daraus resultierenden inneren \textbf{Beanspruchungen} (innere Kräfte, Momente und lokale Spannungen).
-Die Ausfallzeit wird als kontinuierliche Zufallsvariable $\sym{tau}>0$ modelliert.
-Die fundamentalen Funktionen zur probabilistischen Beschreibung des Lebensdauerverhaltens sind in Tabelle~\ref{tab:zuv_definitionen} zusammengefasst \cite{Bertsche.2022,Meeker.2022,Birolini.2017}.
+Der \textbf{Ausfall}, engl. \textbf{\ac{EoL}}, eines Produkts bezeichnet das Ende der Lebensdauer durch Verlust der geforderten Funktionalität.
+Maßgeblich hierfür sind von außen einwirkende \textbf{Belastungen} (\textit{einzelne} oder zeitgleich \textit{mehrere} Einflussparameter - Kräfte und Momente im mechanischen Kontext) sowie die daraus resultierenden inneren \textbf{Beanspruchungen} (innere Kräfte, Momente und lokale Spannungen).
+Die Ausfallzeit wird als kontinuierliche Zufallsvariable $\sym{tau}>0$ verstanden.
+Die fundamentalen Funktionen zur probabilistischen Beschreibung des Lebensdauerverhaltens sind gemeinsam mit deskriptiven Statistiken in Tabelle~\ref{tab:mathdefs} zusammengefasst \cite{Bertsche.2022,Meeker.2022,Birolini.2017}.
+{
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{@{} p{\textwidth} @{}}
+    \caption{Mathematische Definitionen der Zuverlässigkeitsfunktionen}
+    \label{tab:mathdefs}                                                                                                                                           \\
+    \toprule
+    \endfirsthead
+    \caption*{Tabelle \ref{tab:mathdefs} (\textit{Fortsetzung}): Mathematische Definitionen}                                                                       \\
+    \toprule
+    \endhead
+    \bottomrule
+    \endlastfoot
+
+    \textbf{Ausfallwahrscheinlichkeit} (engl. \textbf{\ac{cdf}}): \newline
+    Wahrscheinlichkeit eines Ausfalls bis zum Zeitpunkt $\sym{t}$.
+    \begin{equation} \label{eq:probdef}
+        \sym{F}(\sym{t}) = \sym{Pr}(\sym{tau}\leq \sym{t}) = \int_{0}^{\sym{t}} \sym{f}(\sym{t}) \,d\sym{t}
+    \end{equation}                                                             \\
+
+    \textbf{Zuverlässigkeit} (engl. Reliability): \newline
+    Überlebenswahrscheinlichkeit über den Zeitpunkt $\sym{t}$ hinaus.
+    \begin{equation} \label{eq:reldef}
+        \sym{R}(\sym{t}) = 1 - \sym{F}(\sym{t}) = \int_{\sym{t}}^{\infty} \sym{f}(\sym{t}) \,d\sym{t}
+    \end{equation}                                                    \\
+
+    \textbf{Wahrscheinlichkeitsdichte} (engl. \textbf{\ac{pdf}}): \newline
+    Änderungsrate der Ausfallwahrscheinlichkeit (Ausfallintensität).
+    \begin{equation} \label{eq:pdfdef}
+        \sym{f}(\sym{t}) = \frac{d}{d\sym{t}}\sym{F}(\sym{t}) = \frac{d}{d\sym{t}}\sym{Pr}(\sym{tau} \leq \sym{t}), \quad \sym{t} \geq 0.
+    \end{equation} \\
+
+    \textbf{Ausfallrate} (engl. Hazard-Function): \newline
+    Momentanes Ausfallrisiko, bedingt auf das Überleben bis $\sym{t}$.
+    \begin{equation} \label{eq:hazarddef}
+        \sym{lambda} = \lim_{\Delta \sym{t} \to 0} \frac{\sym{Pr}(\sym{t} < \sym{tau} \leq \sym{t} + \Delta \sym{t} | \sym{tau} > \sym{t})}{\Delta \sym{t}} = \frac{\sym{f}(\sym{t})}{\sym{R}(\sym{t})}
+    \end{equation}
+\end{longtable}
+}
+
+
 \subsection{Deskriptive Statistik für Lebensdauerdaten} \label{subsec:stat1}
 Um die theoretischen Parameter der Grundgesamtheit in der Praxis nutzbar zu machen, müssen diese auf Basis empirisch ermittelter Lebensdauerdaten (Stichprobe vom Umfang $\sym{n}$ mit Werten $\sym{x}_{1}, \dots, \symsub{x}{n}$) approximiert werden.
 Die deskriptive Statistik liefert hierfür Methoden zur Berechnung von \textbf{Lageparametern} (Zentrum) und \textbf{Streuungsmaßen} (Breite).
-Tabelle~\ref{tab:deskriptive_statistik} fasst die theoretischen Definitionen der Zufallsvariable $\sym{tau}$ und ihre korrespondierenden empirischen Schätzer zusammen.
+Tabelle~\ref{tab:deskriptive_statistik} fasst die theoretischen Definitionen der Zufallsvariable $\sym{tau}$ sowie die grundlegenden Zuverlässigkeitsfunktionen und ihre korrespondierenden empirischen Schätzer kompakt zusammen.
     {
-        \renewcommand{\arraystretch}{1.2}
+        \renewcommand{\arraystretch}{1.5}
         \begin{longtable}{@{} p{\textwidth} @{}}
-            \caption{Mathematische Definitionen der Zuverlässigkeitsfunktionen} \label{tab:zuv_definitionen}                                                                                                                                                         \\
+            \caption{Deskriptive Kennzahlen im Kontext der Lebensdaueranalyse}
+            \label{tab:deskriptive_statistik}                                                                                                                                                                                                                                  \\
             \toprule
             \endfirsthead
-            \caption*{Tabelle \ref{tab:zuv_definitionen} (\textit{Fortsetzung}): Mathematische Definitionen}                                                                                                                                                         \\
+            \caption*{Tabelle \ref{tab:deskriptive_statistik} (\textit{Fortsetzung}): Deskriptive Kennzahlen}                                                                                                                                                                  \\
             \toprule
             \endhead
             \bottomrule
             \endlastfoot
-            \textbf{Ausfallwahrscheinlichkeit} (engl. \textbf{\ac{cdf}}) \newline
-            Wahrscheinlichkeit eines Ausfalls bis zum Zeitpunkt $\sym{t}$.
-            \begin{equation} \label{eq:probdef}
-                \sym{F}(\sym{t}) = \sym{Pr}(\sym{tau}\leq \sym{t}) = \int_{0}^{\sym{t}} \sym{f}(\sym{t}) \,d\sym{t}
-            \end{equation}                                                                                                                                                       \\
-            \textbf{Zuverlässigkeit} (Reliability) \newline
-            Wahrscheinlichkeit des Überlebens über den Zeitpunkt $\sym{t}$ hinaus.
-            \begin{equation} \label{eq:reldef}
-                \sym{R}(\sym{t}) = 1 - \sym{F}(\sym{t}) = \int_{\sym{t}}^{\infty} \sym{f}(\sym{t}) \,d\sym{t}
-            \end{equation}                                                                                                                                              \\
 
-            \textbf{Wahrscheinlichkeitsdichte} (engl. \textbf{\ac{pdf}}) \newline
-            Änderungsrate der Ausfallwahrscheinlichkeit (Ausfallintensität).
-            \begin{equation} \label{eq:pdfdef}
-                \sym{f}(\sym{t}) = \frac{d}{d\sym{t}}\sym{F}(\sym{t}) = \frac{d}{d\sym{t}}\sym{Pr}(\sym{tau} \leq \sym{t}), \quad \sym{t} \geq 0.
-            \end{equation}                                                                                           \\
-
-            \textbf{Ausfallrate} (engl. Hazard-Function) \newline
-            Momentanes Ausfallrisiko, bedingt auf das Überleben bis $\sym{t}$.
-            \begin{equation} \label{eq:hazarddef}
-                \sym{lambda} = \lim_{\Delta \sym{t} \to 0} \frac{\sym{Pr}(\sym{t} < \sym{tau} \leq \sym{t} + \Delta \sym{t} | \sym{tau} > \sym{t})}{\Delta \sym{t}} = \frac{1}{\sym{R}(\sym{t})} \left[ - \frac{d\sym{R}(\sym{t})}{d\sym{t}} \right] = \frac{\sym{f}(\sym{t})}{\sym{R}(\sym{t})}
-            \end{equation} \\
-        \end{longtable}
-    }
-Die Zuverlässigkeit $\sym{R}(\sym{t}): \sym{RR}_{\geq 0} \rightarrow [0,1] \subset \sym{RR}$ ist dabei keine universelle Konstante, sondern eine Funktion der spezifischen mechanischen, elektrischen oder thermischen Betriebsbedingungen \cite{Yang.2007,Modarres.2017}.
-Der zeitliche Verlauf der Ausfallrate $\sym{lambda}$ ist von zentraler Bedeutung, da er direkte Rückschlüsse auf die physikalischen Ausfallmechanismen (Frühausfälle, Zufallsausfälle oder Verschleiß) zulässt.  Dieses Verhalten wird in der Literatur häufig als \textbf{Badewannenkurve} beschrieben \cite{Bertsche.2022,Rigdon.2022,Yang.2007}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Deskriptive Statistik für Lebensdauerdaten} \label{subsec:stat1}
-Um die theoretischen Parameter der Grundgesamtheit in der Praxis nutzbar zu machen, müssen diese auf Basis empirisch ermittelter Lebensdauerdaten (Stichprobe vom Umfang $\sym{n}$ mit Werten $\sym{x}_{1}, \dots, \symsub{x}{n}$) approximiert werden.
-Die deskriptive Statistik liefert hierfür Methoden zur Berechnung von \textbf{Lageparametern} und \textbf{Streuungsmaßen}.
-Tabelle~\ref{tab:deskriptive_statistik} fasst die theoretischen Definitionen der Zufallsvariable $\sym{tau}$ und ihre korrespondierenden empirischen Schätzer zusammen.
-    {
-        \renewcommand{\arraystretch}{1.5}
-        \begin{longtable}{@{} p{\textwidth} @{}}
-            \caption{Theoretische und empirische Kennzahlen der deskriptiven Statistik} \label{tab:deskriptive_statistik}                                                                                                                                                      \\
-            \toprule
-            \endfirsthead
-            \caption*{Tabelle \ref{tab:deskriptive_statistik} (\textit{Fortsetzung}): Deskriptive Statistik}                                                                                                                                                                   \\
-            \toprule
-            \endhead
-            \endlastfoot
-            \textbf{Erwartungswert und Mittelwert} \newline
-            Der Erwartungswert $\sym{mu}$ ist der theoretische Lageparameter der Grundgesamtheit. Der arithmetische Mittelwert $\sym{x_bar}$ kann als üblicher, \textbf{empirischer Schätzer} für eine endliche Stichprobe dienen.
+            \textbf{Erwartungswert und Mittelwert}: \newline
+            Erwartungswert $\sym{mu}$ des theoretischen Lageparameters der Grundgesamtheit. Der arithmetische Mittelwert $\sym{x_bar}$ dient als üblicher, \textbf{empirischer Schätzer} für eine endliche Stichprobe.
             \begin{equation} \label{eq:theo_mean}
                 \sym{mu} = \sym{E}[\sym{tau}] = \int_{0}^{\infty} \sym{t} \cdot \sym{f}(\sym{t}) d\sym{t} \quad \text{geschätzt durch} \quad \sym{x_bar} = \frac{1}{\sym{n}} \sum_{\sym{idx_i}=1}^{\sym{n}} \symsub{x}{idx_i}
             \end{equation} \\
-            \textbf{Quantile und Median} \newline
+
+            \textbf{Quantile und Median}: \newline
             Das Quantil $\symsub{t}{idx_q}$ definiert den Zeitpunkt, an dem die Verteilung $\sym{F}(\sym{t})$ den Anteil $\sym{q} \in [0,1]$ erreicht. Der Median $\sym{t}_{0.5}$ teilt die Fläche unter der \ac{pdf} in zwei Hälften \cite{Yang.2007,Fahrmeir.2016}.
             \begin{equation} \label{eq:quantildef}
                 \sym{F}(\symsub{t}{idx_q}) = \sym{q} \quad \text{bzw. für Median:} \quad \sym{F}(\sym{t}_{0.5}) = 0.5
             \end{equation}                                                                                                                                                               \\
-            \textbf{Varianz und Standardabweichung} \newline
+
+            \textbf{Varianz und Standardabweichung}: \newline
             Die theoretische Varianz $\sym{sigma_sq}$ (mittlere quadratische Abweichung) wird durch die erwartungstreue empirische Varianz $\sym{s_sq}$ geschätzt. Die empirische Standardabweichung folgt daraus zu $\sym{s} = \sqrt{\sym{s_sq}}$.
             \begin{equation} \label{eq:theo_variance}
                 \sym{sigma_sq} = \sym{E}[(\sym{tau} - \sym{mu})^2] \quad \approx \quad \sym{s_sq} = \frac{1}{\sym{n}-1} \sum_{\sym{idx_i}=1}^{\sym{n}} (\symsub{x}{idx_i} - \sym{x_bar})^2
-            \end{equation}      \\
-            \bottomrule
+            \end{equation}
         \end{longtable}
     }
 
@@ -155,7 +154,7 @@ Die Einheit des Skalenparameters $\sym{T}$ entspricht der des Messwertes. Die ch
             \vspace{-0.5em}
             \begin{equation} \label{eq:weibull_variance}
                 \sym{sigma_sq} = \sym{T}^2 \left[ \sym{Gamma}\left(1 + \frac{2}{\sym{b}}\right) - \sym{Gamma}^2\left(1 + \frac{1}{\sym{b}}\right) \right]
-            \end{equation}                                                            \\
+            \end{equation}                                                             \\
             \bottomrule
         \end{longtable}
     }
@@ -1148,7 +1147,7 @@ Die Validität eines parametrischen Lebensdauermodells (hier Weibull-\ac{GLM}) b
 Erstens folgen die Lebensdauern der angenommenen Verteilung.
 Zweitens sind die Lebensdauern statistisch unabhängig.
 Drittens besteht ein log-linearer Zusammenhang zwischen dem Skalenparameter und den Einflussgrößen, wobei der Formparameter in einfachen Modellen als konstant über den gesamten Versuchsraum angenommen wird.
-Die Beurteilung dieser Modellgüte erfordert bei Lebensdauerdaten, bedingt durch Nicht-Normalverteilung und Zensierung, eine Anpassung klassischer Residualkonzepte ($\sym{y} - \hat{\sym{y}}$) \cite{Kleppmann.2020,Siebertz.2017}.
+Die Beurteilung dieser Modellgüte erfordert bei Lebensdauerdaten, bedingt durch Nicht-Normalverteilung und Zensierung, eine Anpassung klassischer Konzepte zur Residuenanalyse ($\sym{y} - \hat{\sym{y}}$) \cite{Kleppmann.2020,Siebertz.2017}.
 Stattdessen werden transformierte Residuen betrachtet, die den Bezug zur Verteilung der kleinsten Extremwerte \sym{SEV} herstellen, welcher der logarithmierten Weibull-Verteilung zugrunde liegt.
 Analog zur $\sym{z}$-Transformation bei der Normalverteilung lassen sich für jede Beobachtung $\symsub{t}{idx_i}$ standardisierte Residuen $\sym{resid_std}_{\sym{idx_i}}$ berechnen.
 Dabei ersetzt der logarithmierte Schätzwert der charakteristischen Lebensdauer $\ln(\hat{\sym{T}}_{\sym{idx_i}})$ (vgl. Gleichung~\ref{eq:glm_link}) den Lageparameter $\sym{mu}$ und der Kehrwert des Formparameters $1/\hat{\sym{b}}$ die Skalierung $\sym{sigma}$.

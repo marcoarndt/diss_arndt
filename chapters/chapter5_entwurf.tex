@@ -26,21 +26,22 @@ Um die Robustheit des \ac{CCD} gegenüber solchen Eingriffen zu charakterisieren
 \end{itemize}
 
 Die Auswirkung dieser Manipulationen auf die Modellgüte lässt sich analytisch über die Konditionszahl der Informationsmatrix $\sym{M}$ und die \acp{VIF} bewerten.
-Während orthogonale Designs per Definition $\text{\ac{VIF}} = 1$ aufweisen, führen Abweichungen zu $\text{\ac{VIF}} > 1$, was eine Inflation der Varianz der Regressionskoeffizienten $\sym{beta}$ und damit eine Reduktion der Teststärke (\sym{power}) zur Folge hat.
+Während orthogonale Designs definitionsgemäß $\text{\ac{VIF}} = 1$ aufweisen, führen Abweichungen zu $\text{\ac{VIF}} > 1$, was eine Inflation der Varianz der Regressionskoeffizienten $\sym{beta}$ und damit eine Reduktion der Teststärke (\sym{power}) zur Folge hat.
 Es gilt zu identifizieren, bis zu welchem Grad an Abweichung (z.\,B. $\text{\ac{VIF}} < 5$) die Parameterschätzung stabil bleibt und ab wann das Design "kollabiert".
 
 \section{Ökonomische Bewertung: Das Kostenmodell} \label{sec:kostenmodell}
 Eine rein statistische Bewertung greift in der industriellen Praxis zu kurz.
-Eine Design-Modifikation, die die Prädiktionsvarianz um 5\,\% senkt, aber die Versuchskosten verdoppelt, ist ineffizient.
+Eine Design-Modifikation, die die Prädiktionsvarianz um 5\% senkt, aber die Versuchskosten verdoppelt, ist ineffizient.
 Daher wird ein Kostenmodell eingeführt, das die monetären Aufwände eines Lebensdauerversuchs in Abhängigkeit der Design-Parameter abbildet.
-% Die Gesamtkosten $\sym{C}_{\text{total}}$ setzen sich additiv aus fixen und variablen Anteilen zusammen:
-% \begin{equation} \label{eq:kostenmodell}
-%     \sym{C}_{\text{total}} = \sym{C}_{\text{fix}} + \left( \sym{n} \cdot \sym{C}_{\text{spec}} \right) + \left( \sum_{i=1}^{\sym{n}} \sym{t}_{\text{test},i}(\sym{x}_i) \cdot \sym{C}_{\text{time}} \right) + \sym{C}_{\text{fail}}.
-% \end{equation}
-% Hierbei beschreibt $\sym{C}_{\text{fix}}$ die Rüstkosten, $\sym{C}_{\text{spec}}$ die Herstellkosten pro Prüfling und $\sym{C}_{\text{time}}$ die laufenden Betriebskosten des Prüfstands pro Zeiteinheit.
-% Der Term $\sym{t}_{\text{test},i}(\sym{x}_i)$ ist die entscheidende, vom Versuchsplan abhängige Größe: Durch \ac{ALT} (hohe Lastniveaus $\sym{x}$) sinkt die Prüfzeit, was $\sym{C}_{\text{total}}$ reduziert.
-% Gleichzeitig steigt jedoch durch aggressive Lasten potenziell der Energiebedarf oder das Risiko nicht-repräsentativer Ausfallmechanismen ($\sym{C}_{\text{fail}}$).
-% Dieses Modell ermöglicht es, Design-Alternativen nicht nur nach ihrer statistischen Effizienz (D-, G-Effizienz), sondern nach ihrer \textit{ökonomischen Effizienz} (Information pro Euro) zu bewerten.
+Die Gesamtkosten $\symsub{C}{idx_total}$ setzen sich additiv aus fixen und variablen Anteilen zusammen:
+\begin{equation} \label{eq:kostenmodell}
+    \symsub{C}{idx_total} = \symsub{C}{idx_fix} + \left( \sym{n} \cdot \symsub{C}{idx_spec} \right) + \left( \sum_{\sym{idx_i}=1}^{\sym{n}} \symsub{t}{idx_test}_{\sym{idx_i}}(\symsub{x}{idx_i}) \cdot \symsub{C}{idx_time} \right) + \symsub{C}{idx_fail}.
+\end{equation}
+Hierbei beschreibt $\symsub{C}{idx_fix}$ die Rüstkosten, $\symsub{C}{idx_spec}$ die Herstellkosten pro Prüfling und $\symsub{C}{idx_time}$ die laufenden Betriebskosten des Prüfstands pro Zeiteinheit.
+Der Term $\symsub{t}{idx_test}_{\sym{idx_i}}(\symsub{x}{idx_i})$ ist die entscheidende, vom Versuchsplan abhängige Größe: Durch \ac{ALT} (hohe Lastniveaus $\sym{x}$) sinkt die Prüfzeit, was $\symsub{C}{idx_total}$ reduziert.
+Gleichzeitig steigt jedoch durch aggressive Lasten potenziell der Energiebedarf oder das Risiko nicht-repräsentativer Ausfallmechanismen ($\symsub{C}{idx_fail}$).
+Dieses Modell ermöglicht es, Design-Alternativen nicht nur nach ihrer statistischen Effizienz (D-, G-Effizienz), sondern nach ihrer \textit{ökonomischen Effizienz} (Information pro Euro) zu bewerten.
+Dieses Modell ermöglicht es, Design-Alternativen nicht nur nach ihrer statistischen Effizienz (D-, G-Effizienz), sondern nach ihrer \textit{ökonomischen Effizienz} (Information pro Euro) zu bewerten.
 
 \section{Erweiterte Methoden zur Prädiktions-Visualisierung} \label{sec:visualisierung}
 Zur Beurteilung der Vorhersagegüte im gesamten Versuchsraum haben sich der \textbf{\ac{VDG}} und der \textbf{\ac{FDS}-Plot} etabliert.
