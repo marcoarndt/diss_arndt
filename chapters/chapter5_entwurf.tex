@@ -2,20 +2,33 @@
 %% Kapitel 5 - Entwurf %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Entwicklung und Bewertung effizienter Versuchsplan-Designs} \label{chap:entwurf}
+\chapter{Effizienz adäquater Lebensdauerversuchsplanung} \label{chap:entwurf}
 
-Nach der in Kapitel~\ref{chap:screening} beschriebenen qualitativen Vorselektion der Einflussgrößen steht nun die quantitative Auslegung des Versuchsplans im Fokus.
+Nach der in Kapitel~\ref{chap:screening} beschriebenen qualitativen Vorselektion der Einflussgrößen ist nun die quantitative Planung durch Entwicklung adäquater, effizienter und multivariater Versuchspläne erforderlich.
 Das Ziel ist die Entwicklung einer Methodik, die es erlaubt, etablierte Standard-Designs gezielt an die Anforderungen der Lebensdauerprognose anzupassen, ohne deren statistische Integrität unzulässig zu kompromittieren.
-Dabei gilt die Prämisse, dass insbesondere das \textbf{\ac{CCD}} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ Linear $\to$ Quadratisch) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorteil gegenüber starreren Designs wie \acp{DSD} oder \ac{OMARS}-Designs bietet.
-Letztere mögen in spezifischen Ein-Schritt-Szenarien effizient sein, das \ac{CCD} erlaubt jedoch das flexible Reagieren auf Zwischenergebnisse – eine essenzielle Eigenschaft bei der oft unwägbaren Dauer von Lebensdauertests.
+In Anlehnung an die Ausführungen aus Abschnitt~\ref{subsec:forschungsfragen} gilt fortwährend die Prämisse, dass insbesondere das \textbf{\ac{CCD}} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ lineares Modell $\to$ quadratische Modellterme) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorteil gegenüber starreren bzw. optimalen Designs wie beispielsweise \ac{OMARS}-Designs bietet.
+Letztere mögen in spezifischen Ein-Schritt-Szenarien effizient sein, das \ac{CCD} erlaubt jedoch das flexible Reagieren auf Zwischenergebnisse - eine essenzielle Eigenschaft bei der oft unwägbaren Dauer von Lebensdauertests.
 
 Dieses Kapitel untersucht zunächst systematisch die Auswirkungen geometrischer Design-Abweichungen auf die statistische Güte (Abschnitt~\ref{sec:abweichungen}).
 Darauf aufbauend wird ein Kostenmodell eingeführt, das die monetären Konsequenzen solcher Anpassungen quantifiziert (Abschnitt~\ref{sec:kostenmodell}).
-Zur Bewertung der Prognosegüte wird eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik abschließend in einer Monte-Carlo-Simulationsstudie an einem generischen Referenzsystem validiert wird (Abschnitt~\ref{sec:simulation}).
+Zur Bewertung der Prognosegüte wird eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik abschließend in einer numerischen Simulationsstudie generalisiert wird (Abschnitt~\ref{sec:simulation}).
 
-\section{Analyse generischer Design-Abweichungen und Orthogonalitätsverlust} \label{sec:abweichungen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Analyse generischer Design-Abweichungen} \label{sec:abweichungen}
 Moderne Versuchsplanung für die Zuverlässigkeitstechnik erfordert oft ein Abweichen von der idealen Lehrbuch-Geometrie.
-Sei es durch physikalische Restriktionen des Prüfstands, die eine symmetrische Platzierung der Sternpunkte verhindern, oder durch die bewusste Manipulation des Versuchsraums, um die Extrapolationsgüte in Richtung einer spezifischen Anwendungsbelastung zu steigern.
+Sei es durch physikalische Restriktionen des Prüfstands, die eine orthogonale Positionierung der Versuchspunkte generell oder spezifisch die symmetrische Platzierung der Sternpunkte verhindern, oder durch die bewusste Manipulation des Versuchsraums, um die Extrapolationsgüte in Richtung einer spezifischen Anwendungsbelastung zu steigern.
+Insbesondere im Kontext der Lebensdauerprognose sind solche Eingriffe aus der Praxis begründet gängig.
+Beispielsweise kann die Verschiebung des Löwenanteils der Versuchsumfänge in Richtung höherer Lastniveaus die Prüfzeit verkürzen, was die Gesamtkosten des Versuchs reduziert (vgl. Abschnitt~\ref{sec:kostenmodell}).
+Andererseits kann die gezielte Erweiterung des Testraums in Richtung einer bevorzugten Belastungskombination (z.\,B. höhere Temperaturen bei \ac{ALT}) die Prädiktionsvarianz im relevanten Anwendungsbereich signifikant senken (vgl. Abschnitt~\ref{sec:visualisierung}).
+Konträr ermöglicht die Verortung der Versuchspunkte näher zum Operationsbereich eine verbesserte Modellanpassung und reduziert die Extrapolationsunsicherheit, steigert aber in der Regel die Prüfzeit.
+
+Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
+Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht (vgl. Abschnitt~\ref{subsec:design_matrix}).
 Jede dieser geometrischen Verzerrungen führt zwangsläufig zu einem Verlust der Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
 
 Um die Robustheit des \ac{CCD} gegenüber solchen Eingriffen zu charakterisieren, werden folgende typische Abweichungskategorien untersucht:
@@ -28,6 +41,11 @@ Um die Robustheit des \ac{CCD} gegenüber solchen Eingriffen zu charakterisieren
 Die Auswirkung dieser Manipulationen auf die Modellgüte lässt sich analytisch über die Konditionszahl der Informationsmatrix $\sym{M}$ und die \acp{VIF} bewerten.
 Während orthogonale Designs definitionsgemäß $\text{\ac{VIF}} = 1$ aufweisen, führen Abweichungen zu $\text{\ac{VIF}} > 1$, was eine Inflation der Varianz der Regressionskoeffizienten $\sym{beta}$ und damit eine Reduktion der Teststärke (\sym{power}) zur Folge hat.
 Es gilt zu identifizieren, bis zu welchem Grad an Abweichung (z.\,B. $\text{\ac{VIF}} < 5$) die Parameterschätzung stabil bleibt und ab wann das Design "kollabiert".
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Ökonomische Bewertung: Das Kostenmodell} \label{sec:kostenmodell}
 Eine rein statistische Bewertung greift in der industriellen Praxis zu kurz.

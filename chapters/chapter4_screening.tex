@@ -166,19 +166,19 @@ Dieser Ansatz fungiert als methodische Barriere vor dem eigentlichen ressourceni
     \label{fig:screening_procedure}
 \end{figure}
 
-\subsection{Phase I: Systemanalyse und Fehlerdefinition}
+\subsection{\textit{Phase I}: Systemanalyse und Fehlerdefinition}
 Der Prozess initiiert nicht mit der isolierten Betrachtung von Parametern, sondern mit der Identifikation des relevanten Ausfallmechanismus.
 Basierend auf dem \ac{FBD} (Abschnitt~\ref{sec:screening_identifikation}) erfolgt die Definition des spezifischen \textbf{Failure Mode} (z.B. Zahnbruch vs. Abrieb bei einem Riemen).
 Da unterschiedliche Fehlermodi in der Regel von divergenten Parametersets getrieben werden, führt eine Vermischung unweigerlich zu Rauschen in den Daten und ist zu vermeiden.
 
-\subsection{Phase II: Heuristische Filterung und Interaktionsanalyse}
+\subsection{\textit{Phase II}: Heuristische Filterung und Interaktionsanalyse}
 Im zweiten Schritt unterliegt der Parameter-Pool einer Filterung durch die in Abschnitt~\ref{sec:screening_kreativ} vorgestellten Methoden (z.B. Ishikawa-Diagramm in Kombination mit Grid-Analyse).
 \textcite{Arndt.2023c} stellen hierzu durch Bewertung der Eignung der Methoden im Kontext der Lebensdaueranalyse fest, dass vornehmlich die Kombination aus erweitertem Ishikawa-Diagramm (zur Visualisierung von Interaktionen) und \ac{DSM} (zur quantitativen Bewertung der Vernetzung) eine belastbare Grundlage für die Priorisierung der Faktoren darstellt.
 Kritisch ist hierbei die Bewertung der Interaktionsdichte in Bezug auf die Lebensdauer als Zielgröße.
 Faktoren, die im Ishikawa-Diagramm oder der \ac{DSM} eine hohe Vernetzung aufweisen (korrespondierend mit einer hohen Aktivsumme), erfahren eine Priorisierung, da sie mit hoher Wahrscheinlichkeit - insbesondere wechselwirkend über jedenfalls Abschnitte der Lebensdauer - als Katalysatoren für Degradationsprozesse fungieren.
 Das Ergebnis dieses Prozessschrittes ist eine hierarchische Ordnung der Faktoren nach ihrer vermuteten Relevanz für die Lebensdauer.
 
-\subsection{Phase III: Abgleich mit dem Versuchsdesign}
+\subsection{\textit{Phase III}: Abgleich mit dem Versuchsdesign}
 Im finalen Schritt erfolgt der Abgleich der priorisierten Faktorenliste mit den Restriktionen des gewählten \ac{L-DoE} (vgl. Kapitel~\ref{chap:screening} und Abschnitt~\ref{sec:screening_randbedingungen}).
 Hierbei sind folgende Prüffragen essenziell:
 \begin{itemize}
