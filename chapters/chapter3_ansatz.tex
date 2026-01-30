@@ -17,7 +17,9 @@ Eine systematische Methodik zur gezielten Manipulation einzelner Versuchspunktka
 
 \subsection{Limitierungen und Effizienzbegriffe moderner Versuchsplanung}
 Die Anwendung computergenerierter optimaler Versuchspläne erscheint zunächst als logische Konsequenz, um maßgeschneiderte Designs für Lebensdauererprobungen zu entwerfen.
-Der Begriff der Effizienz erfährt hierbei jedoch im Kontext multivariater Lebensdauertests (\ac{ALT}) eine signifikante Komplexitätssteigerung gegenüber der klassischen linearen Versuchsplanung, die sich in drei Dimensionen gliedert: Modellabhängigkeit, zeitliche Dynamik und strukturelle Flexibilität.
+Der Begriff der \textbf{Effizienz} erfährt hierbei jedoch im Kontext multivariater Lebensdauertests (\ac{ALT}) eine signifikante Komplexitätssteigerung gegenüber der klassischen linearen Versuchsplanung, die sich in drei Dimensionen gliedert: Modellabhängigkeit, zeitliche Dynamik und strukturelle Flexibilität.
+Grundlegend definiert sich die Effizienz eines Versuchsplans einerseits dennoch spezifisch über $\sym{M}(\sym{X}, \sym{theta})$ \cite{Khuri.2006,Stufken.2012}, andererseits generisch über die Leistungsfähigkeit zur Informationsbeschaffung, wenngleich sie im Grundsatz widersprüchlich zum Grundsatz der Vollständigkeit steht \cite{Thommen.2022}.
+Sie trägt damit einen unmittelbaren Einfluss auf die \textbf{Effektivität} und Wirtschaftlichkeit der Lebensdauererprobung - in letzter Instanz damit auf die Verlässlichkeit der Modellierung (vgl. Abschnitt~\ref{subsec:optimal}: \sym{power}) und Prognosefähigkeit der Zuverlässigkeit $\sym{R}(\sym{t})$.
 
 \subsubsection{Modellabhängigkeit und Lokale Optimalität}
 Erstens stößt die zugrundeliegende Modellierung mittels Weibull-\acp{GLM} auf ein fundamentales Problem, das von \textcite{Khuri.2006} und \textcite{Stufken.2012} diskutiert wird.
@@ -53,7 +55,7 @@ Dabei müssen die etablierten Optimalitätskriterien jedoch nicht als alleiniges
 \end{itemize}
 Eine effiziente Testplanung für die multivariate Lebensdauererprobung muss folglich einen Kompromiss finden: Sie muss flexibel genug sein, um Extrapolationen durch \ac{ALT} gezielt zu unterstützen (z.B. durch Anpassung des \ac{CCD}), und gleichzeitig robust genug, um Unsicherheiten der nicht-linearen \ac{GLM}-Parameterschätzung abzufangen.
 
-\section{Forschungsfragen und Aufbau der Arbeit} \label{subsec:forschungsfragen}
+\section{Forschungsfragen und Aufbau der Arbeit} \label{sec:forschungsfragen}
 Das übergeordnete Ziel dieser Arbeit, die Entwicklung effizienter multivariater Lebensdauerversuche, fußt auf der Prämisse, dass etablierte Standard-Designs nicht zwingend durch vollkommen neuartige Algorithmen ersetzt, sondern vielmehr intelligent adaptiert werden müssen.
 Als methodischer Anker und Referenzpunkt dient hierbei das \textbf{\ac{CCD}}.
 Dieser Konsens begründet sich auf einer Synthese aus verfahrenstechnischen, physikalischen und statistischen Vorzügen, die das \ac{CCD} für die Zuverlässigkeitsmodellierung im Maschinen- und Fahrzeugbau prädestinieren.
@@ -73,8 +75,8 @@ Ausgehend von diesem Status quo zielt die vorliegende Arbeit darauf ab, dieses b
 
 Zur Beantwortung dieser Hauptfragestellung werden folgende Teilfragestellungen abgeleitet:
 \begin{enumerate}
-    \item \textbf{Adaptionsbedarf und -strategie:} Wie können konventionelle Planungsstrategien und Testdesigns dediziert angepasst werden?
-    \item \textbf{Bewertungsmethodik:} Wie können die Auswirkungen derartiger Manipulationen an \acp{CCD} auf die Prognosegüte quantitativ charakterisiert und vergleichbar bewertet werden?
+    \item \textbf{Adaptionsbedarf und -strategie:} Wie können konventionelle Planungsstrategien und Testdesigns - allen voran \acp{CCD} - adäquat zum Zweck der beschleunigten Lebensdauererprobung (\ac{ALT}) angepasst werden?
+    \item \textbf{Bewertungsmethodik:} Wie können die Auswirkungen derartiger Anpassungen (Manipulationen) an \acp{CCD} auf die Prognosegüte quantitativ charakterisiert und vergleichbar bewertet werden?
 \end{enumerate}
 
 \subsection{Aufbau der Arbeit}

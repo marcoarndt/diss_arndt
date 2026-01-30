@@ -5,13 +5,16 @@
 \chapter{Effizienz adäquater Lebensdauerversuchsplanung} \label{chap:entwurf}
 
 Nach der in Kapitel~\ref{chap:screening} beschriebenen qualitativen Vorselektion der Einflussgrößen ist nun die quantitative Planung durch Entwicklung adäquater, effizienter und multivariater Versuchspläne erforderlich.
-Das Ziel ist die Entwicklung einer Methodik, die es erlaubt, etablierte Standard-Designs gezielt an die Anforderungen der Lebensdauerprognose anzupassen, ohne deren statistische Integrität unzulässig zu kompromittieren.
-In Anlehnung an die Ausführungen aus Abschnitt~\ref{subsec:forschungsfragen} gilt fortwährend die Prämisse, dass insbesondere das \textbf{\ac{CCD}} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ lineares Modell $\to$ quadratische Modellterme) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorteil gegenüber starreren bzw. optimalen Designs wie beispielsweise \ac{OMARS}-Designs bietet.
-Letztere mögen in spezifischen Ein-Schritt-Szenarien effizient sein, das \ac{CCD} erlaubt jedoch das flexible Reagieren auf Zwischenergebnisse - eine essenzielle Eigenschaft bei der oft unwägbaren Dauer von Lebensdauertests.
+Das Ziel ist die Entwicklung einer Methodik, die es ermöglicht \textit{und} erlaubt, etablierte Standard-\acp{RSD} gezielt an die Anforderungen der Lebensdauerprognose anzupassen, ohne deren statistische Integrität unzulässig zu kompromittieren.
+In Anlehnung an die Ausführungen aus Abschnitt~\ref{sec:forschungsfragen} gilt fortwährend die Prämisse, dass insbesondere das \ac{CCD} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ lineares Modell $\to$ quadratische Modellterme, vgl. Abbildung~\ref{fig:abb2.08_strategy}) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorteil gegenüber starreren bzw. optimalen Designs wie beispielsweise \ac{OMARS}-Designs bietet.
+Letztere mögen in spezifischen Ein-Schritt-Szenarien effizient sein, das \ac{CCD} erlaubt jedoch entsprechend den Ausführungen in Abschnitt~\ref{sec:bewertung_stand} das flexible Reagieren auf Zwischenergebnisse - eine essenzielle Eigenschaft bei der oft unwägbaren Dauer von Lebensdauertests.
 
-Dieses Kapitel untersucht zunächst systematisch die Auswirkungen geometrischer Design-Abweichungen auf die statistische Güte (Abschnitt~\ref{sec:abweichungen}).
-Darauf aufbauend wird ein Kostenmodell eingeführt, das die monetären Konsequenzen solcher Anpassungen quantifiziert (Abschnitt~\ref{sec:kostenmodell}).
-Zur Bewertung der Prognosegüte wird eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik abschließend in einer numerischen Simulationsstudie generalisiert wird (Abschnitt~\ref{sec:simulation}).
+Dieses Kapitel untersucht daher zunächst systematisch die Auswirkungen geometrischer Design-Abweichungen auf die statistische Güte (Abschnitt~\ref{sec:abweichungen}).
+Eine Durchführung dieser Analyse erfolgt dabei am Beispiel des \ac{CCD}, da dieses als Referenzdesign fungiert.
+Zunächst unabhängig von einer möglichen Beschleunigung durch \ac{ALT} wird analysiert, inwieweit typische Manipulationen der Design-Geometrie (z.B. Durchführungen oder Replikationen der Versuchspunkte) oder mangelnde Robustheit der Versuchspunkt-Einstellungen (z.B. Varianzen in der Steuerung unabhängiger Versuchsparameter) die Orthogonalität und damit die Parameterschätzgüte beeinträchtigen.
+Darauf aufbauend wird ein Kostenmodell eingeführt, das die monetären Konsequenzen derartiger Modifikationen quantifiziert (Abschnitt~\ref{sec:kostenmodell}).
+In der Ermittlung der Leistungsfähigkeit und damit der Effizienz eines Versuchsplans bilden diese neben den Optimalitäten demnach den Quotienten im Verhältnis des Informationsgewinns zum monetären Aufwand.
+Zur Bewertung der Prognosegüte wird eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik abschließend in einer numerischen Simulationsstudie bewertet wird (Abschnitt~\ref{sec:simulation}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -21,11 +24,10 @@ Zur Bewertung der Prognosegüte wird eine Erweiterung bestehender Visualisierung
 
 \section{Analyse generischer Design-Abweichungen} \label{sec:abweichungen}
 Moderne Versuchsplanung für die Zuverlässigkeitstechnik erfordert oft ein Abweichen von der idealen Lehrbuch-Geometrie.
-Sei es durch physikalische Restriktionen des Prüfstands, die eine orthogonale Positionierung der Versuchspunkte generell oder spezifisch die symmetrische Platzierung der Sternpunkte verhindern, oder durch die bewusste Manipulation des Versuchsraums, um die Extrapolationsgüte in Richtung einer spezifischen Anwendungsbelastung zu steigern.
+Sei es durch physikalische Restriktionen des Prüfstands oder der physikalischen Performance des Systems im \ac{ALT}, die eine orthogonale Positionierung der Versuchspunkte generell oder spezifisch die symmetrische Platzierung der Sternpunkte verhindern, oder durch die bewusste Manipulation des Versuchsraums, um die Extrapolationsgüte in Richtung einer spezifischen Anwendungsbelastung zu steigern.
 Insbesondere im Kontext der Lebensdauerprognose sind solche Eingriffe aus der Praxis begründet gängig.
-Beispielsweise kann die Verschiebung des Löwenanteils der Versuchsumfänge in Richtung höherer Lastniveaus die Prüfzeit verkürzen, was die Gesamtkosten des Versuchs reduziert (vgl. Abschnitt~\ref{sec:kostenmodell}).
-Andererseits kann die gezielte Erweiterung des Testraums in Richtung einer bevorzugten Belastungskombination (z.\,B. höhere Temperaturen bei \ac{ALT}) die Prädiktionsvarianz im relevanten Anwendungsbereich signifikant senken (vgl. Abschnitt~\ref{sec:visualisierung}).
-Konträr ermöglicht die Verortung der Versuchspunkte näher zum Operationsbereich eine verbesserte Modellanpassung und reduziert die Extrapolationsunsicherheit, steigert aber in der Regel die Prüfzeit.
+Beispielsweise kann die Verschiebung des Löwenanteils der Versuchsumfänge in Richtung höherer Lastniveaus die Prüfzeit verkürzen, was die Gesamtkosten des Versuchsumfangs weiter reduziert (vgl. Abschnitt~\ref{sec:kostenmodell}).
+Konträr ermöglicht die Verortung der Versuchspunkte näher zum Operationsbereich als Brücke zwischen Test- und Feldraum eine verbesserte Modellanpassung und reduziert die Extrapolationsunsicherheit, steigert aber in der Regel die Prüfzeit.
 
 Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
 Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht (vgl. Abschnitt~\ref{subsec:design_matrix}).
@@ -60,6 +62,26 @@ Der Term $\symsub{t}{idx_test}_{\sym{idx_i}}(\symsub{x}{idx_i})$ ist die entsche
 Gleichzeitig steigt jedoch durch aggressive Lasten potenziell der Energiebedarf oder das Risiko nicht-repräsentativer Ausfallmechanismen ($\symsub{C}{idx_fail}$).
 Dieses Modell ermöglicht es, Design-Alternativen nicht nur nach ihrer statistischen Effizienz (D-, G-Effizienz), sondern nach ihrer \textit{ökonomischen Effizienz} (Information pro Euro) zu bewerten.
 Dieses Modell ermöglicht es, Design-Alternativen nicht nur nach ihrer statistischen Effizienz (D-, G-Effizienz), sondern nach ihrer \textit{ökonomischen Effizienz} (Information pro Euro) zu bewerten.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Evaluierung vielversprechender Design-Alternativen} \label{sec:design_alternativen}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Bewertung der Versuchsplananpassung mittels Orthogonalitäts-Check} \label{sec:orthogonalitaets_check}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Erweiterte Methoden zur Prädiktions-Visualisierung} \label{sec:visualisierung}
 Zur Beurteilung der Vorhersagegüte im gesamten Versuchsraum haben sich der \textbf{\ac{VDG}} und der \textbf{\ac{FDS}-Plot} etabliert.

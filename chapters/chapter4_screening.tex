@@ -132,7 +132,7 @@ Ein häufiges Missverständnis im Screening ist die Gleichsetzung von initialer 
 Wie in Abbildung~\ref{fig:degradation_scheme} dargestellt, betrachtet die klassische Robustheitsanalyse nach \textcite{Klein.2014} im Verständnis von \textit{Taguchi}/\textit{Shainin} oft nur die Verteilung der Systemantwort zum Zeitpunkt $\sym{t}=0$.
 Die Zuverlässigkeitstechnik fokussiert jedoch auf die \textbf{Degradation} über die Zeit.
 Faktoren, die initial kaum Einfluss auf die Performance haben (z.B. Materialalterung, Verschleiß, Wechselwirkungen), können im Zeitverlauf dominante Treiber für Ausfallmechanismen werden.
-Heuristisches Screening für \ac{L-DoE} muss daher explizit Parameter priorisieren, die \textit{zeitabhängige} Schädigungsmechanismen  treiben, selbst wenn sie initial \textit{inaktiv} erscheinen.
+Heuristisches Screening für \ac{L-DoE} muss daher explizit Parameter priorisieren, die \textit{zeitabhängige} Schädigungsmechanismen  treiben, selbst wenn sie \textit{initial inaktiv} erscheinen.
 \begin{figure}[htbp]
     \centering
     \def\svgwidth{0.9\textwidth}
@@ -141,21 +141,21 @@ Heuristisches Screening für \ac{L-DoE} muss daher explizit Parameter priorisier
     \label{fig:degradation_scheme}
 \end{figure}
 
-\subsection{Anforderungen aus dem Versuchsplan (L-DoE)}
-Die im heuristischen Prozess ausgewählten Faktoren müssen später im statistischen Versuchsplan (\ac{DoE}) schließlich verarbeitet werden.
-Daraus ergeben sich harte Restriktionen für die Auswahl:
+\subsection{Anforderungen aus dem Versuchsplan (L-DoE)} \label{subsec:anforderungen}
+Die im heuristischen Prozess ausgewählten Faktoren werden darauffolgend im statistischen Versuchsplan (\ac{DoE}) schließlich verarbeitet.
+Daraus ergeben sich zunächst harte Restriktionen für die Auswahl:
 \begin{itemize}
-    \item \textbf{Einstell- und Regelbarkeit:} Nur Parameter, die im Versuch aktiv und präzise auf verschiedene Stufen Levels eingestellt werden können, qualifizieren sich als Faktoren. Nicht steuerbare Größen lassen sich sonst in \textit{Noise} oder \textit{Co-Faktoren} einordnen.
-    \item \textbf{Beschleunigbarkeit:} Für \ac{ALT} müssen Faktoren gewählt werden, die eine physikalische Beschleunigung der Schädigung ermöglichen (z.B. Temperatur, Mechanische Spannung), ohne den Fehlermechanismus zu verändern.
-    \item \textbf{Kosten und Komplexität:} Da der Stichprobenumfang bei voll-faktoriellen Plänen mit $\sym{n} \propto {\sym{m}\cdot\sym{N}}^{\sym{k}}$ wächst, vergleiche Abschnitte~\ref{subsec:pläne},\ref{subsec:strategie}, zwingt die Ökonomie zur drastischen Reduktion von $\sym{k}$. Das heuristische Screening definiert bestenfalls also ein wirtschaftlich abbildbares Maximum an umsetzbaren Faktoren $\sym{k}_{\max} \le 2 \dots 4$, vgl. \cite{Montgomery.2020,Siebertz.2017}.
-    \item \textbf{Design Resolution (Auflösung):} Wenn viele Faktoren im Screening verbleiben, verbleiben nur Screening-Designs für experimentell empirische Analyse. Das Screening muss vorab klären, welche Interaktionen physikalisch plausibel sind, um eine geeignete Auflösung (Resolution III, IV oder V) zu wählen und Aliasing von Haupteffekten mit wichtigen Wechselwirkungen zu vermeiden.
+    \item \textbf{Einstell- und Regelbarkeit:} Nur Parameter, die im Versuch aktiv und präzise auf verschiedene Stufen eingestellt werden können, qualifizieren sich als Faktoren. Nicht steuerbare Größen lassen sich sonst in \textit{Noise} oder \textit{Co-Faktoren} einordnen.
+    \item \textbf{Beschleunigbarkeit:} Für \ac{ALT} werden schließlich nur Faktoren gewählt, die eine physikalische Beschleunigung der Schädigung ermöglichen (z.B. Temperatur, mechanische Spannung), ohne den Fehlermechanismus zu verändern.
+    \item \textbf{Kosten und Komplexität:} Da der Stichprobenumfang bei voll-faktoriellen Plänen mit $\sym{n} \propto {\sym{m}\cdot\sym{N}}^{\sym{k}}$ wächst, vergleiche Abschnitte~\ref{subsec:pläne},\ref{subsec:strategie}, zwingt die Ökonomie zur drastischen Reduktion von $\sym{k}$. Gleiches Verhalten zeigt sich wie schon erwähnt auch bei konventionellen und modernisierten Algorithmen von \acp{RSD}. Das heuristische Screening definiert bestenfalls also ein wirtschaftlich abbildbares Maximum an umsetzbaren Faktoren $\sym{k}_{\max} \le 2 \dots 4$, vgl. \cite{Montgomery.2020,Siebertz.2017}.
+    \item \textbf{Design Resolution (Auflösung):} Für den Fall, dass ultimativ dennoch viele vermeintlich relevante Faktoren aus dem Screening-Prozess resultieren, verbleiben nur Screening-Designs für die weitere experimentell empirische Analyse. Das Screening muss vorab klären, welche Interaktionen physikalisch plausibel sind, um eine geeignete Auflösung (Resolution III, IV oder V) oder Konfiguration von Screening-\acp{RSD} zu wählen und Aliasing von Haupteffekten mit wichtigen Wechselwirkungen zu minimieren bzw. zu vermeiden.
 \end{itemize}
 
 Mit den genannten Anforderungen zur methodischen Anwendung von \ac{L-DoE} ermöglichen schließlich die in Abschnitt~\ref{sec:screening_kreativ} identifizierten heuristischen Methoden für das Parameter-Screening ein strukturiertes Vorgehen zur effizienten Auswahl relevanter Einflussgrößen \cite{Arndt.2023c}.
 
 
 \section{Vorgehen zum heuristischen Screening für die Zuverlässigkeitsmodellierung} \label{sec:screening_vorgehen}
-Basierend auf der Analyse der Methoden und Randbedingungen wird in Anlehnung an \textcite{Arndt.2023c} folgendes prozedurales Vorgehen für das Parameter-Screening in der Zuverlässigkeitsmodellierung vorgeschlagen (vgl. Abbildung~\ref{fig:screening_procedure}).
+Basierend auf der Analyse der Methoden und Randbedingungen wird in Anlehnung an \textcite{Arndt.2023c} folgendes prozedurales Vorgehen für das Parameter-Screening in der Zuverlässigkeitsmodellierung vorgeschlagen - vergleiche auch Abbildung~\ref{fig:screening_procedure}:.
 Dieser Ansatz fungiert als methodische Barriere vor dem eigentlichen ressourcenintensiven Lebensdauerversuch, um die Effizienz der Datenerhebung zu maximieren.
 
 \begin{figure}[htbp]
@@ -166,12 +166,12 @@ Dieser Ansatz fungiert als methodische Barriere vor dem eigentlichen ressourceni
     \label{fig:screening_procedure}
 \end{figure}
 
-\subsection{\textit{Phase I}: Systemanalyse und Fehlerdefinition}
+\subsection{\textit{Phase I}: Systemanalyse und Fehlermechanismen}
 Der Prozess initiiert nicht mit der isolierten Betrachtung von Parametern, sondern mit der Identifikation des relevanten Ausfallmechanismus.
 Basierend auf dem \ac{FBD} (Abschnitt~\ref{sec:screening_identifikation}) erfolgt die Definition des spezifischen \textbf{Failure Mode} (z.B. Zahnbruch vs. Abrieb bei einem Riemen).
 Da unterschiedliche Fehlermodi in der Regel von divergenten Parametersets getrieben werden, führt eine Vermischung unweigerlich zu Rauschen in den Daten und ist zu vermeiden.
 
-\subsection{\textit{Phase II}: Heuristische Filterung und Interaktionsanalyse}
+\subsection{\textit{Phase II}: Heuristische Parameterassessment und Interaktionsanalyse}
 Im zweiten Schritt unterliegt der Parameter-Pool einer Filterung durch die in Abschnitt~\ref{sec:screening_kreativ} vorgestellten Methoden (z.B. Ishikawa-Diagramm in Kombination mit Grid-Analyse).
 \textcite{Arndt.2023c} stellen hierzu durch Bewertung der Eignung der Methoden im Kontext der Lebensdaueranalyse fest, dass vornehmlich die Kombination aus erweitertem Ishikawa-Diagramm (zur Visualisierung von Interaktionen) und \ac{DSM} (zur quantitativen Bewertung der Vernetzung) eine belastbare Grundlage für die Priorisierung der Faktoren darstellt.
 Kritisch ist hierbei die Bewertung der Interaktionsdichte in Bezug auf die Lebensdauer als Zielgröße.
@@ -179,7 +179,7 @@ Faktoren, die im Ishikawa-Diagramm oder der \ac{DSM} eine hohe Vernetzung aufwei
 Das Ergebnis dieses Prozessschrittes ist eine hierarchische Ordnung der Faktoren nach ihrer vermuteten Relevanz für die Lebensdauer.
 
 \subsection{\textit{Phase III}: Abgleich mit dem Versuchsdesign}
-Im finalen Schritt erfolgt der Abgleich der priorisierten Faktorenliste mit den Restriktionen des gewählten \ac{L-DoE} (vgl. Kapitel~\ref{chap:screening} und Abschnitt~\ref{sec:screening_randbedingungen}).
+Im finalen Schritt erfolgt der Abgleich der priorisierten Faktorenliste mit den Restriktionen des gewählten \ac{L-DoE} (vgl. Abschnitt~\ref{sec:forschungsfragen} sowie Abschnitt~\ref{subsec:anforderungen}).
 Hierbei sind folgende Prüffragen essenziell:
 \begin{itemize}
     \item Korrespondiert die Anzahl der Faktoren $\sym{k}$ mit dem verfügbaren Budget für $\sym{n}$ Versuche?
@@ -201,7 +201,7 @@ Wie in Abbildung~\ref{fig:screening_procedure_volume} visualisiert, wird das Vol
 \end{figure}
 \section{Zusammenfassung}
 Das in diesem Kapitel vorgestellte heuristische Screening schließt die methodische Lücke zwischen der qualitativen Systemanalyse und der quantitativen Versuchsplanung.
-Durch die strukturierte Nutzung von Expertenwissen (z.B. mittels \ac{DSM} und erweiterten Ishikawa-Diagrammen) lässt sich die Anzahl der Versuchs-Faktoren $\sym{k}$ signifikant reduzieren, ohne relevante Interaktionen zu vernachlässigen.
-Entscheidend ist dabei der vollzogene Perspektivwechsel von der Betrachtung der initialen Performance-Streuung hin zur Analyse der zeitabhängigen Degradation.
-Dieses Vorgehen schafft die notwendige Voraussetzung für die Anwendbarkeit der in Kapitel~\ref{chap:ansatz} diskutierten effizienten Versuchspläne, da diese ihre Stärken erst bei einer begrenzten Anzahl an Faktoren ($\sym{k} \approx 3 \dots 5$) wirtschaftlich ausspielen.
+Durch die strukturierte Nutzung von Expertenwissen (z.B. mittels \ac{DSM} und erweiterten Ishikawa-Diagrammen) lässt sich die Anzahl der Versuchs-Faktoren $\sym{k}$ rational reduzieren, ohne relevante Interaktionen zu vernachlässigen.
+Entscheidend ist dabei der vollzogene Perspektivwechsel von der Betrachtung der initialen Performance-Streuung hin zur Analyse der zeitabhängigen Degradation eines Performancemerkmals.
+Dieses Vorgehen schafft die notwendige Voraussetzung für die Anwendbarkeit der in Kapitel~\ref{chap:ansatz} diskutierten effizienten Versuchspläne für Lebensdauererprobungen, da diese ihre Stärken erst bei einer begrenzten Anzahl an Faktoren ($\sym{k} \approx 3 \dots 5$) wirtschaftlich ausspielen.
 Die methodische Vorarbeit des Screenings fungiert somit als zentraler Hebel für die Effizienz des gesamten Lebensdauerversuchs.
