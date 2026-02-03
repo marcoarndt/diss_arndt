@@ -51,15 +51,18 @@ Damit qualifizieren sich diese Designs insbesondere für ressourcenbeschränkte 
 
 \subsection{Schlussfolgerung für die Testplanung}
 Aus der Diskrepanz zwischen theoretischem Anspruch (optimale \ac{GLM}-Designs) und praktischer Anwendbarkeit (unbekannte Parameter) leitet sich die Notwendigkeit einer pragmatischen und zugleich statistisch fundierten Vorgehensweise ab.
-Anstatt sich auf die Suche nach einem theoretisch „optimalen“ \ac{GLM}-Design zu versteifen, das aufgrund der Parameterabhängigkeit in der Praxis kaum robust umsetzbar ist, erscheint die Adaption bewährter Standard-Designs (\ac{CCD}) vielversprechender.
-Dabei müssen die etablierten Optimalitätskriterien jedoch nicht als alleiniges Entwurfsziel, sondern als Benchmark-Metriken herangezogen werden:
+Anstatt sich auf die Suche nach einem theoretisch \textbf{\textit{optimalen} \ac{GLM}-Design} zu versteifen, das aufgrund der Parameterabhängigkeit in der Praxis kaum robust umsetzbar ist, erscheint die Adaption bewährter Standard-Designs (\ac{CCD}) vielversprechender.
+Dabei dürfen die etablierten Optimalitätskriterien jedoch nicht als alleiniges Entwurfsziel fungieren, sondern müssen durch praxisrelevante Benchmark-Metriken ergänzt werden:
 \begin{itemize}
     \item \textbf{Modellierungsgüte (A-, D-Kriterien):} Diese Metriken sichern ab, dass die Parameterschätzung (Bestimmung von $\sym{theta}$) auch im modifizierten Design statistisch solide und präzise bleibt.
     \item \textbf{Prognosefähigkeit (G-, I-, V-Kriterien):} Diese Metriken gewinnen im Kontext der Lebensdauererprobung an primärer Bedeutung, da das Ziel die präzise Vorhersage der Zuverlässigkeit $\sym{R}(\sym{t})$ unter Einsatzbedingungen (Extrapolation) ist.
-    \item \textbf{Testdauer und Ressourceneffizienz:} Diese Metriken berücksichtigen die praktischen Rahmenbedingungen von Lebensdauertests, indem sie die erwartete Testdauer und den Ressourcenverbrauch minimieren, ohne die statistische Aussagekraft zu beeinträchtigen.
-    \item \textbf{Trennschärfe:} Die Fähigkeit, signifikante Effekte zuverlässig zu identifizieren, ist essenziell, um valide Schlussfolgerungen über die Einflussfaktoren auf die Lebensdauer zu ziehen. Die Trennschärfe muss auch bei Extrapolation in den Anwendungsraum gewährleistet sein und darf als Garantie für einen erfolgreichen Testausgang nicht vernachlässigt werden.
+    \item \textbf{Testdauer und Ressourceneffizienz:} Diese Metriken berücksichtigen die praktischen Rahmenbedingungen von Lebensdauertests, indem sie die erwartete Testdauer und den Ressourcenverbrauch minimieren, ohne die statistische Aussagekraft unzulässig zu beschneiden.
+    \item \textbf{Trennschärfe (Power):} Sie fungiert als die entscheidende „Erfolgsgarantie“ des Tests. Insbesondere bei kostenintensiven \ac{EoL}-Versuchen ist es ökonomisch riskant, ein Design zu wählen, das zwar theoretisch optimal schätzt, aber praktisch relevante Effekte mit hoher Wahrscheinlichkeit übersieht. Die Power muss daher als primäres Entscheidungskriterium gegen Einsparpotenziale abgewogen werden.
 \end{itemize}
-Eine effiziente Testplanung für die multivariate Lebensdauererprobung muss folglich einen Kompromiss finden: Sie muss flexibel genug sein, um Extrapolationen durch \ac{ALT} gezielt zu unterstützen, und gleichzeitig robust genug, um Unsicherheiten der nicht-linearen \ac{GLM}-Parameterschätzung abzufangen.
+
+Eine effiziente Testplanung für die multivariate Lebensdauererprobung erfordert folglich weit mehr als die Maximierung theoretischer Informationsmaße.
+Sie verlangt einen strategischen Kompromiss: Das Design muss flexibel genug sein, um Extrapolationen durch \ac{ALT} gezielt zu unterstützen (Prognosegüte), robust genug, um die Unsicherheiten der nicht-linearen \ac{GLM}-Parameterschätzung abzufangen (Modellierungsgüte), und dabei eine statistische Trennschärfe gewährleisten, die das Investitionsrisiko des Versuchs rechtfertigt.
+Nur wenn die Wahrscheinlichkeit der Effektdetektion (\ac{power}) in einem ökonomisch vertretbaren Verhältnis zu den Testkosten steht, ist die Bedingung der Effizienz erfüllt.
 
 \section{Forschungsfragen und Aufbau der Arbeit} \label{sec:forschungsfragen}
 Das übergeordnete Ziel dieser Arbeit, die Entwicklung effizienter multivariater Lebensdauerversuche, fußt damit auf der Prämisse, dass etablierte Standard-Designs nicht zwingend durch vollkommen neuartige Algorithmen ersetzt, sondern vielmehr intelligent adaptiert werden müssen.

@@ -992,7 +992,7 @@ Die Power folglich ist definiert als das Komplement dieses Fehlers ($1 - \symsub
 \end{equation}
 Im Kontext der Lebensdauerdatenanalyse, bei der nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten nicht über klassische \textbf{t-Tests} berechnen.
 Aus der Arbeit von \textcite{Nelder.1972} kommen hier \textbf{Verallgemeinerte Lineare Modelle}, engl. \textbf{\acp{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\sym{beta}_j$ vorzugsweise über \textbf{\acp{LR-Test}} (oder approximativ über \textbf{Wald-Tests }- vergleiche hierzu Arbeiten von \textcite{Rigdon.2022,Meeker.2022,Montgomery.2020,McCulloch.2001} ermittelt wird.
-Da für diese komplexen Verteilungsmodelle bei kleinen Stichprobenumfängen $\sym{n}$ keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung gerne numerisch mittels \textbf{Monte-Carlo-Simulation} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
+Da für diese komplexen Verteilungsmodelle bei kleinen Stichprobenumfängen $\sym{n}$ keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung gerne numerisch mittels \textbf{\ac{MCS}} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
 Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.\,B. $\symsub{n}{idx_MC}=10^4$ Simulationsläufe).
 Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht bzw. mit Streuung überlagert und/oder zensiert.
 Anschließend erfolgt die Modellbildung und Hypothesenprüfung.

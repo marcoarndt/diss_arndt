@@ -6,14 +6,22 @@
 
 Nach der in Kapitel~\ref{chap:screening} beschriebenen qualitativen Vorselektion der Einflussgrößen ist nun die quantitative Planung durch Entwicklung adäquater, effizienter und multivariater Versuchspläne erforderlich.
 Das Ziel ist die Entwicklung einer Methodik, die es ermöglicht \textit{und} erlaubt, etablierte Standard-\acp{RSD} gezielt an die Anforderungen der Lebensdauerprognose anzupassen, ohne deren statistische Integrität unzulässig zu kompromittieren.
-In Anlehnung an die Ausführungen aus Abschnitt~\ref{sec:forschungsfragen} gilt fortwährend die Prämisse, dass insbesondere das \ac{CCD} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ lineares Modell $\to$ quadratische Modellterme, vgl. Abbildung~\ref{fig:abb2.08_strategy}) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorteil gegenüber starreren bzw. optimalen Designs wie beispielsweise \ac{OMARS}-Designs bietet.
+In Anlehnung an die Ausführungen aus Abschnitt~\ref{sec:forschungsfragen} gilt fortwährend die Prämisse, dass insbesondere das \ac{CCD} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ lineares Modell $\to$ quadratische Modellterme, vgl. Abbildung~\ref{fig:abb2.08_strategy}) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorteil gegenüber starreren bzw. optimalen Designs wie beispielsweise \ac{OMARS}-Designs bieten kann und daher für die vorliegende Untersuchung und den praktischen Kontext als relevant gilt.
 Letztere mögen in spezifischen Ein-Schritt-Szenarien effizient sein, das \ac{CCD} erlaubt jedoch entsprechend den Ausführungen in Abschnitt~\ref{sec:bewertung_stand} das flexible Reagieren auf Zwischenergebnisse - eine essenzielle Eigenschaft bei der oft unwägbaren Dauer von Lebensdauertests.
 
-Dieses Kapitel untersucht daher zunächst systematisch die Auswirkungen geometrischer Design-Abweichungen auf die statistische Güte (Abschnitt~\ref{sec:abweichungen}).
-Zunächst unabhängig von einer möglichen Beschleunigung durch \ac{ALT} wird analysiert, inwieweit typische Manipulationen der Design-Geometrie (z.B. Durchführungen oder Replikationen der Versuchspunkte) oder mangelnde Robustheit der Versuchspunkt-Einstellungen (z.B. Varianzen in der Steuerung unabhängiger Versuchsparameter) die Orthogonalität und damit die Parameterschätzgüte beeinträchtigen.
+Dieses Kapitel untersucht daher vorab systematisch die Auswirkungen geometrischer Design-Abweichungen auf die statistische Güte (Abschnitt~\ref{sec:abweichungen}).
+Zunächst unabhängig von einer möglichen Beschleunigung durch \ac{ALT} wird analysiert, inwieweit typische Manipulationen der Design-Geometrie (z.B. Anzahl der Durchführungen oder Replikationen der Versuchspunkte) oder mangelnde Robustheit der Versuchspunkt-Einstellungen (z.B. Varianzen in der Steuerung unabhängiger Versuchsparameter) die Orthogonalität, die Parameterschätzgüte und damit übergeordnet die Versuchsplan-Performance beeinträchtigen.
 Darauf aufbauend wird ein Kostenmodell eingeführt, das die monetären Konsequenzen derartiger Modifikationen quantifiziert (Abschnitt~\ref{sec:kostenmodell}).
-In der Ermittlung der Leistungsfähigkeit und damit der Effizienz eines Versuchsplans bilden diese neben den Optimalitäten demnach den Quotienten im Verhältnis des Informationsgewinns zum monetären Aufwand.
-Zur Bewertung der Prognosegüte wird eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik abschließend in einer numerischen Simulationsstudie bewertet wird (Abschnitt~\ref{sec:simulation}).
+
+Die Bewertung der Versuchspläne erfolgt dabei streng nach der Kerndefinition von Effizienz als Maß für die \textit{Leistungsfähigkeit}: Welche Information wird perspektivisch generiert und welcher monetäre Aufwand steht dem gegenüber?
+Während die Informationsgüte konventionell über die Varianz der Parameterschätzung oder Prognoseunsicherheit - also Optimalitätskriterien - und die Kosten über das Modell quantifiziert werden, erweitert der hier verfolgte makroskopische Ansatz die Betrachtung entscheidend um die \textbf{statistische Trennschärfe \ac{power}}.
+Diese fungiert als sensibler Indikator für die Erfolgsgarantie der perspektivischen Testagenda: Sie beziffert die Wahrscheinlichkeit, mit der real existierende Effekte tatsächlich signifikant erkannt werden.
+Was in der allgemeinen \ac{DoE}-Methodik oft als nachgeordnete Größe behandelt wird, avanciert bei kostenintensiven \ac{EoL}-Tests zum kritischen Faktor.
+Jede Manipulation des Designs - sei es zur Anpassung an \ac{ALT}-Niveaus oder aufgrund von Versuchsraum-Restriktionen - muss daher zwingend gegen den Verlust an Detektionswahrscheinlichkeit abgewogen werden, was in der ökonomischen Leitfrage mündet: \textit{Wie viel Trennschärfe ist finanzierbar?}
+Um diese komplexen Abhängigkeiten generisch und losgelöst von spezifischen Produktdaten abzuleiten, sind numerische Simulationen erforderlich.
+Mithilfe von \acp{MCS} und zunächst fiktiven physikalischen Modellen wird die Entwicklung dieser Verhältnismäßigkeiten in dieser Studie systematisch untersucht und aufgezeigt.
+
+Zur Bewertung der Prognosegüte wird eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik abschließend in der numerischen Simulationsstudie bewertet wird (Abschnitt~\ref{sec:simulation}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,15 +30,57 @@ Zur Bewertung der Prognosegüte wird eine Erweiterung bestehender Visualisierung
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Analyse generischer Design-Abweichungen} \label{sec:abweichungen}
-Moderne Versuchsplanung für die Zuverlässigkeitstechnik erfordert oft ein Abweichen von der idealen Lehrbuch-Geometrie.
+Moderne Versuchsplanung für die Zuverlässigkeitstechnik erfordert oft ein Abweichen vom idealen Lehrbuch-Design.
 Sei es durch physikalische Restriktionen des Prüfstands oder der physikalischen Performance des Systems im \ac{ALT}, die eine orthogonale Positionierung der Versuchspunkte generell oder spezifisch die symmetrische Platzierung der Sternpunkte verhindern, oder durch die bewusste Manipulation des Versuchsraums, um die Extrapolationsgüte in Richtung einer spezifischen Anwendungsbelastung zu steigern.
 Insbesondere im Kontext der Lebensdauerprognose sind solche Eingriffe aus der Praxis begründet gängig.
-Beispielsweise kann die Verschiebung des Löwenanteils der Versuchsumfänge in Richtung höherer Lastniveaus die Prüfzeit verkürzen, was die Gesamtkosten des Versuchsumfangs weiter reduziert (vgl. Abschnitt~\ref{sec:kostenmodell}).
+Beispielsweise kann die Verschiebung der Majorität der Versuchsumfänge in Richtung höherer Lastniveaus die Prüfzeit verkürzen, was die Gesamtkosten des Versuchsumfangs weiter reduziert (vgl. Abschnitt~\ref{sec:kostenmodell}).
 Konträr ermöglicht die Verortung der Versuchspunkte näher zum Operationsbereich als Brücke zwischen Test- und Feldraum eine verbesserte Modellanpassung und reduziert die Extrapolationsunsicherheit, steigert aber in der Regel die Prüfzeit.
 
 Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
-Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht (vgl. Abschnitt~\ref{subsec:design_matrix}).
+Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht (vgl. Abschnitt~\ref{subsubsec:rsm}).
 Jede dieser geometrischen Verzerrungen führt zwangsläufig zu einem Verlust der Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
+
+Auswirkungen peripherer Parametersetups erscheinen in sequentiellen Versuchsplänen besonders kritisch - aber chronologisch erst zu einem späteren Zeitpunkt erkennbar.
+Erst nach vollständiger Durchführung der initialen Screening-Phase sowie der faktoriellen Versuchsdurchführung wird das Design um die Stern- und Zentralpunkte erweitert.
+Im Umkehrschluss bedeutet dies, dass erst hier die volle Auswirkung von Design-Abweichungen auf die Modellgüte und Prognoseunsicherheit sichtbar wird, insbesondere dann, wenn extreme Parametereinstellungen zur Anwendung kommen.
+Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design-Abweichungen systematisch zu untersuchen, was im Folgenden dokumentiert wird.
+
+\subsection{Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
+
+Um die Robustheit des \ac{CCD} gegenüber den eingangs erwähnten Abweichungen quantitativ zu bewerten, dient eine umfassende Sensitivitätsanalyse.
+Der methodische Ansatz folgt hierbei einem "\ac{DoE} on Design"-Konzept:Die Eigenschaften des Versuchsplans sowie der Systemantwort selbst werden als Faktoren eines übergeordneten \ac{DoE} betrachtet, um deren Haupteffekte und Wechselwirkungen auf die Performance-Metriken (Power, Parameterschätzfehler $\Delta\beta$, mittlere \ac{SPV}) zu isolieren.
+Als Screening-Design kommt ein $2_{\text{IV}}^{7-3}$ teil-faktorieller Versuchsplan mit drei Zentralpunkten (insgesamt 19 Versuche) zum Einsatz, der eine konfliktfreie Schätzung der Haupteffekte gewährleistet.
+
+In dieser Untersuchung werden sieben Faktoren definiert, die sowohl deterministische geometrische Manipulationen als auch stochastische Störgrößen abbilden:
+
+\begin{itemize}
+    \item \textbf{Faktor A (Co-axialer Shift):} Eine asymmetrische Verschiebung eines Sternpunkt-Paares entlang einer Achse. Das Niveau variiert von $0$ (symmetrisch) bis $0,5$ (starke Asymmetrie), was einen systematischen Offset in der Lastaufbringung simuliert.
+    \item \textbf{Faktor B (Axialer Abstand):} Die Variation des Abstands $\symsub{alpha}{idx_D}$ der Sternpunkte zum Zentrum. Untersucht wird der Bereich von $1$ (flächenzentriert, Face Centered) bis $\sqrt{2}$ (rotierbar/sphärisch), um den Einfluss der Raumausdehnung abzubilden.
+    \item \textbf{Faktor C (Anzahl Zentralpunkte):} Die Variation von $\symsub{n}{idx_C}$ zwischen $1$ und $5$. Dies beeinflusst direkt die Schätzung des reinen Fehlers und die Stabilität der Prädiktionsvarianz im Design-Zentrum.
+    \item \textbf{Faktor D (Vollständigkeit der Sternpunkte):} Die Reduktion der Anzahl $\symsub{n}{idx_S}$ der Sternpunkte von $4$ (vollständig) auf $3$ (ein fehlender Punkt), was dem Szenario eines vorzeitigen Proben-Ausfalls entspricht.
+    \item \textbf{Faktor E (Varianz der Koeffizienten):} Die Änderung der Streuung $\sigma_{\beta}$, die auf die wahren Koeffizienten des Simulationsmodells beaufschlagt wird, im Bereich von $0,1$ bis $0,5$. Dies prüft die Sensitivität gegenüber schwankenden Effektstärken.
+    \item \textbf{Faktor F (Effekt-Verhältnis):} Variation des Verhältnisses der Haupteffekte $\beta_1 / \beta_2$ von $1$ (gleichstark) bis $5$ (ein dominanter Faktor). Hiermit wird untersucht, ob die Dominanz eines Faktors die Detektion schwächerer Effekte bei Design-Verzerrung maskiert.
+    \item \textbf{Faktor G (Messfehler-Niveau):} Variation der Standardabweichung des überlagerten Rauschens $\sigma_{y}$ relativ zur Effektgröße (Bereich $0,1$ bis $0,5$). Dies repräsentiert die Güte der Messkette bzw. das Signal-Rausch-Verhältnis.
+\end{itemize}
+
+Die Auswertung dieser Sensitivitätsanalyse mittels Pareto-Charts liefert differenzierte Erkenntnisse über die Hebelwirkung der verschiedenen Einflussgrößen und offenbart eine klare Dichotomie zwischen Schätzgüte und Prädiktionsqualität:
+
+Hinsichtlich der Genauigkeit der Koeffizientenbestimmung (Bias $\Delta\beta$) und der statistischen Power erweisen sich die geometrischen Faktoren (A bis D) als signifikant robust.
+Weder Verletzungen der Orthogonalität durch asymmetrische Verschiebungen (Faktor A) noch das Fehlen einzelner Sternpunkte (Faktor D) führen zu einem signifikanten Einbruch der Teststärke.
+Dominant sind hier fast ausschließlich die stochastischen Faktoren: Das Signal-Rausch-Verhältnis (Faktor G) weist den stärksten negativen Einfluss auf, gefolgt von der Varianz der Koeffizienten (Faktor E).
+Dies impliziert für die Praxis der Lebensdauererprobung, dass ein geometrisch „unsauberes“ Design - etwa durch Anpassungen im \ac{ALT} - tolerierbar ist, solange die Messstreuung und die Prozessvarianz kontrolliert bleiben.
+
+Im Gegensatz dazu wird die Prädiktionsvarianz (\ac{SPV}) maßgeblich durch die geometrischen Faktoren getrieben.
+Hier zeigen insbesondere der axiale Abstand (Faktor B) und die Anzahl der Zentralpunkte (Faktor C) die größten Haupteffekte.
+Eine Vergrößerung des Versuchsraums ($\alpha \to \sqrt{2}$) und eine Erhöhung der Zentralpunkte reduzieren die mittlere Prädiktionsvarianz signifikant.
+Daraus lässt sich schlussfolgern, dass geometrische Manipulationen zwar kaum Einfluss auf die Identifikation der Wirkmechanismen (Qualitative Modellbildung) haben, jedoch kritisch für die Präzision der Lebensdauerprognose (Quantitative Vorhersage) sind.
+Werden Sternpunkte manipuliert, muss dies zwingend durch eine Analyse der \ac{SPV}-Verteilung im Prognosebereich kompensiert werden, da hier keine Robustheit durch das Verfahren selbst gegeben ist.
+\textbf{Schlussfolgerung für die Adaptionsstrategie:}
+Aus diesen Erkenntnissen lässt sich ableiten, dass die bloße stochastische Unsicherheit in der Versuchsdurchführung für die Planungseffizienz vernachlässigbar ist, solange die geometrische Grundstruktur erhalten bleibt.
+Kritisch für die Effizienz sind hingegen Eingriffe, die die \textit{Position} oder das \textit{Vorhandensein} von Stützstellen verändern.
+Daraus folgt zwingend, dass sich die Entwicklung effizienter Lebensdauerversuchspläne auf die gezielte Modifikation der Design-Struktur konzentrieren muss.
+Im Fokus stehen dabei insbesondere die \textbf{Sternpunkte} (Axial Points), da diese maßgeblich den Versuchsraum aufspannen und - wie die Studie indiziert - bei Manipulation (Verschiebung oder Weglassen) den größten Hebel auf die Prognosegüte besitzen.
+Die spezifischen Auswirkungen solcher Sternpunkt-Manipulationen werden daher im folgenden Abschnitt detailliert analysiert.
 
 Um die Robustheit des \ac{CCD} gegenüber solchen Eingriffen zu charakterisieren, werden folgende typische Abweichungskategorien untersucht:
 \begin{itemize}

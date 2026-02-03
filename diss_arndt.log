@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  30 JAN 2026 17:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  3 FEB 2026 01:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1651,17 +1651,22 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 63.
 Package tocbasic Info: Using my definition of `\numberline' on input line 64.
 Package tocbasic Info: Using my definition of `\numberline' on input line 65.
 Package tocbasic Info: Using my definition of `\numberline' on input line 66.
+
+Overfull \hbox (3.80106pt too wide) in paragraph at lines 66--66
+ [][] []\T1/qpl/m/n/12 (-10) Sensitivitätsanalyse geo-me-tri-scher und sto-chas-ti-scher Ein-fluss- 
+ []
+
 Package tocbasic Info: Using my definition of `\numberline' on input line 67.
 Package tocbasic Info: Using my definition of `\numberline' on input line 68.
 
-Overfull \hbox (5.74927pt too wide) in paragraph at lines 68--68
+
+[8]
+Package tocbasic Info: Using my definition of `\numberline' on input line 69.
+
+Overfull \hbox (5.74927pt too wide) in paragraph at lines 69--69
  [][] []\T1/qpl/m/n/12 (-10) Bewertung der Ver-suchs-pla-nan-pas-sung mit-tels Orthogonalitäts-Check [][]  
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 69.
-
-
-[8]
 Package tocbasic Info: Using my definition of `\numberline' on input line 70.
 Package tocbasic Info: Using my definition of `\numberline' on input line 71.
 Package tocbasic Info: Using my definition of `\numberline' on input line 72.
@@ -1673,6 +1678,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 77.
 Package tocbasic Info: Using my definition of `\numberline' on input line 78.
 Package tocbasic Info: Using my definition of `\numberline' on input line 79.
 Package tocbasic Info: Using my definition of `\numberline' on input line 80.
+Package tocbasic Info: Using my definition of `\numberline' on input line 81.
 )
 \tf@toc=\write11
 \openout11 = `diss_arndt.toc'.
@@ -1707,7 +1713,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--163
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--171
  [] [] 
  []
 
@@ -1735,7 +1741,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--85
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--88
  [] [] 
  []
 
@@ -1760,20 +1766,20 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 []|\T1/qpl/m/n/12 (+10) Orthogonale Pro-jek-ti-ons-ma-trix, Prä-dik-ti-ons-ma-trix, Hat-
  []
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 260.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 264.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 2173) in paragraph at lines 381--381
+Underfull \hbox (badness 2173) in paragraph at lines 385--385
 []|\T1/qpl/m/n/12 (+10) Standardisierte Va-ria-ble der Kleinst-wert-ver-tei-lung (SEV);
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--382
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--386
  [] [] 
  []
 
@@ -1907,48 +1913,48 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 [17]
 
 [18] (plots/ma_abb2.02_doe_steps.pdf_tex
-<plots/ma_abb2.02_doe_steps.pdf, id=1226, page=1, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1229, page=1, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1227, page=2, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1230, page=2, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page2 used on input line 59.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1228, page=3, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1231, page=3, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page3 used on input line 62.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1229, page=4, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1232, page=4, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page4 used on input line 65.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1230, page=5, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1233, page=5, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page5 used on input line 68.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1231, page=6, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1234, page=6, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page6 used on input line 71.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1232, page=7, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1235, page=7, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page7 used on input line 74.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
 ) (plots/ma_abb2.03_p_diagramm.pdf_tex
-<plots/ma_abb2.03_p_diagramm.pdf, id=1244, page=1, 266.19023pt x 171.65889pt>
+<plots/ma_abb2.03_p_diagramm.pdf, id=1247, page=1, 266.19023pt x 171.65889pt>
 File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
 <use plots/ma_abb2.03_p_diagramm.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
-<plots/ma_abb2.03_p_diagramm.pdf, id=1245, page=2, 266.19023pt x 171.65889pt>
+<plots/ma_abb2.03_p_diagramm.pdf, id=1248, page=2, 266.19023pt x 171.65889pt>
 File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
 <use plots/ma_abb2.03_p_diagramm.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page2 used on input line 67.
@@ -2123,29 +2129,29 @@ chapter 3.
 [54]
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
 
 
 
-[56]) (chapters/chapter4_screening.tex
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+) (chapters/chapter4_screening.tex
 
 [57]
 
-[58
-
-
-]
+[58]
 chapter 4.
 
 
-[59]
+[59
+
+
+]
 Overfull \hbox (3.82832pt too wide) in paragraph at lines 35--36
 []\T1/qpl/b/n/12 (-10) Literaturrecherche: \T1/qpl/m/n/12 (-10) Ana-ly-se be-ste-hen-der Aus-fallm-odi und phy-si-ka-li-scher Wirk-
  []
@@ -2181,42 +2187,51 @@ chapter 5.
 
 [71]
 
-LaTeX Warning: Reference `subsec:design_matrix' on page 72 undefined on input line 32.
-
-
-
 [72]
 
 [73]
+Overfull \hbox (11.73332pt too wide) in paragraph at lines 57--58
+[]\T1/qpl/b/n/12 (-10) Faktor A (Co-axia^^?ler Shift): \T1/qpl/m/n/12 (-10) Ei-ne asym-me-tri-sche Ver-schie-bung ei-nes Sternpunkt-
+ []
+
+
 
 [74]
-Overfull \hbox (1.08061pt too wide) in paragraph at lines 108--109
+
+[75]
+
+[76]
+
+[77]
+Overfull \hbox (1.08061pt too wide) in paragraph at lines 158--159
 []\T1/qpl/b/n/12 (-10) Power: \T1/qpl/m/n/12 (-10) Wie hoch ist die Wahr-schein-lich-keit, die de-fi-nier-ten Ef-fek-te trotz Design-
  []
 
 ) (chapters/chapter6_casestudy.tex
 
-[75]
+[78]
 
-[76
+[79]
+
+[80
 
 
 ]
 chapter 6.
 ) (chapters/chapter7_zusammenfassung.tex
 
-[77]
+[81]
 
-[78
+[82
 
 
 ]
 chapter 7.
 )
 
-[79]
+[83]
 
-[80
+[84
 
 
 ]
@@ -2238,15 +2253,7 @@ Overfull \hbox (3.11346pt too wide) in paragraph at lines 499--499
 
 
 
-[81{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
-
-[82]
-
-[83]
-
-[84]
-
-[85]
+[85{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
 
 [86]
 
@@ -2257,22 +2264,30 @@ Overfull \hbox (3.11346pt too wide) in paragraph at lines 499--499
 [89]
 
 [90]
+
+[91]
+
+[92]
+
+[93]
+
+[94]
 Overfull \hbox (27.99475pt too wide) in paragraph at lines 499--499
 \T1/qpl/m/it/12 (-10) Bil^^?dern, zahl^^?rei^^?chen Bei^^?spie^^?len und 92 Auf^^?ga^^?ben\T1/qpl/m/n/12 (-10) . 3., ak-tua-li-sier-te Auf-la-ge. Mathematik-
  []
 
 
 
-[91]
+[95]
 
-[92
+[96
 
 
 ] (chapters/anhang/anhanga/anhanga.tex
 
-[93])
+[97])
 
-[94] (diss_arndt.aux)
+[98] (diss_arndt.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2288,17 +2303,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 74905 strings out of 473577
- 1738316 string characters out of 5716318
- 3806136 words of memory out of 5000000
- 96115 multiletter control sequences out of 15000+600000
+ 74950 strings out of 473577
+ 1738948 string characters out of 5716318
+ 3806772 words of memory out of 5000000
+ 96154 multiletter control sequences out of 15000+600000
  725543 words of font info for 380 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,20n,121p,10947b,3730s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (116 pages, 1351637 bytes).
+Output written on diss_arndt.pdf (120 pages, 1371157 bytes).
 PDF statistics:
- 4021 PDF objects out of 4296 (max. 8388607)
- 593 named destinations out of 1000 (max. 500000)
- 85146 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 4064 PDF objects out of 4296 (max. 8388607)
+ 599 named destinations out of 1000 (max. 500000)
+ 85154 words of extra memory for PDF output out of 89155 (max. 10000000)
 
