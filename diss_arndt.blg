@@ -1,20 +1,20 @@
-[0] Config.pm:308> INFO - This is Biber 2.20
-[0] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
-[66] biber-MSWIN64:340> INFO - === 
-[88] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
-[229] Biber.pm:994> INFO - Found 100 citekeys in bib section 0
-[238] Biber.pm:4463> INFO - Processing section 0
-[246] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[283] bibtex.pm:1713> INFO - LaTeX decoding ...
-[505] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[792] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[792] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[792] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[792] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[832] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[865] bbl.pm:779> INFO - Output to diss_arndt.bbl
-[865] Biber.pm:131> WARN - legacy year field '11.03.1996' in entry 'Koselka.1996' is not an integer - this will probably not sort properly.
-[865] Biber.pm:131> WARN - legacy year field 'Februar 2025' in entry 'dat.2025' is not an integer - this will probably not sort properly.
-[865] Biber.pm:131> WARN - misc entry 'dat.2025' (bibliography.bib): Invalid format '13.06.2025' of date field 'urldate' - ignoring
-[865] Biber.pm:131> WARN - article entry 'Kremer.2018b' (bibliography.bib): Invalid format '22.01.2026' of date field 'urldate' - ignoring
-[865] Biber.pm:133> INFO - WARNINGS: 4
+[0] Config.pm:307> INFO - This is Biber 2.19
+[1] Config.pm:310> INFO - Logfile is 'diss_arndt.blg'
+[258] biber-MSWIN64:340> INFO - === 
+[339] Biber.pm:419> INFO - Reading 'diss_arndt.bcf'
+[840] Biber.pm:979> INFO - Found 100 citekeys in bib section 0
+[877] Biber.pm:4419> INFO - Processing section 0
+[906] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[1021] bibtex.pm:1713> INFO - LaTeX decoding ...
+[2046] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[3405] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3405] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3405] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[3405] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[3619] bbl.pm:660> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[3758] bbl.pm:763> INFO - Output to diss_arndt.bbl
+[3758] Biber.pm:131> WARN - legacy year field '11.03.1996' in entry 'Koselka.1996' is not an integer - this will probably not sort properly.
+[3759] Biber.pm:131> WARN - legacy year field 'Februar 2025' in entry 'dat.2025' is not an integer - this will probably not sort properly.
+[3760] Biber.pm:131> WARN - misc entry 'dat.2025' (bibliography.bib): Invalid format '13.06.2025' of date field 'urldate' - ignoring
+[3760] Biber.pm:131> WARN - article entry 'Kremer.2018b' (bibliography.bib): Invalid format '22.01.2026' of date field 'urldate' - ignoring
+[3760] Biber.pm:133> INFO - WARNINGS: 4

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.11" bltxversion="3.20" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.10" bltxversion="3.19" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -502,7 +502,6 @@
     <bcf:option datatype="xml">inheritance</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">uniquenametemplate</bcf:option>
-    <bcf:option datatype="xml">namehashtemplate</bcf:option>
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
@@ -749,10 +748,9 @@
   </bcf:optionscope>
   <bcf:optionscope type="ENTRY">
     <bcf:option datatype="string">noinherit</bcf:option>
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
     <bcf:option datatype="string" backendout="1">indexing</bcf:option>
@@ -829,10 +827,9 @@
     <bcf:option datatype="integer" backendout="1">minalphanames</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAMELIST">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquelist</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
@@ -846,10 +843,9 @@
     <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAME">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
-    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
     <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
@@ -1063,13 +1059,6 @@
     <bcf:namepart order="2" base="1">family</bcf:namepart>
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
-  <!-- NAME HASH TEMPLATES -->
-  <bcf:namehashtemplate name="global">
-    <bcf:namepart order="1" hashscope="full">family</bcf:namepart>
-    <bcf:namepart order="2" hashscope="full">given</bcf:namepart>
-    <bcf:namepart order="3" hashscope="full">prefix</bcf:namepart>
-    <bcf:namepart order="4" hashscope="full">suffix</bcf:namepart>
-  </bcf:namehashtemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
   <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
@@ -2532,217 +2521,3 @@
     <bcf:citekey order="106" intorder="1">Kleppmann.2020</bcf:citekey>
     <bcf:citekey order="106" intorder="2">Wu.2021</bcf:citekey>
     <bcf:citekey order="106" intorder="3">Siebertz.2017</bcf:citekey>
-    <bcf:citekey order="107" intorder="1">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="107" intorder="2">Siebertz.2017</bcf:citekey>
-    <bcf:citekey order="107" intorder="3">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="108" intorder="1">Montgomery.2021</bcf:citekey>
-    <bcf:citekey order="108" intorder="2">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="109" intorder="1">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="110" intorder="1">Box.1957</bcf:citekey>
-    <bcf:citekey order="110" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="111" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="112" intorder="1">Box.1960</bcf:citekey>
-    <bcf:citekey order="113" intorder="1">Jones.2011</bcf:citekey>
-    <bcf:citekey order="114" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="114" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="115" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="116" intorder="1">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="116" intorder="2">Dean.2017</bcf:citekey>
-    <bcf:citekey order="117" intorder="1">Siebertz.2017</bcf:citekey>
-    <bcf:citekey order="117" intorder="2">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="118" intorder="1">Box.1988</bcf:citekey>
-    <bcf:citekey order="118" intorder="2">Bisgaard.1992</bcf:citekey>
-    <bcf:citekey order="119" intorder="1">Box.1988</bcf:citekey>
-    <bcf:citekey order="119" intorder="2">Bisgaard.1992</bcf:citekey>
-    <bcf:citekey order="120" intorder="1">Box.1988</bcf:citekey>
-    <bcf:citekey order="120" intorder="2">Bisgaard.1992</bcf:citekey>
-    <bcf:citekey order="121" intorder="1">Box.1988</bcf:citekey>
-    <bcf:citekey order="121" intorder="2">Bisgaard.1992</bcf:citekey>
-    <bcf:citekey order="122" intorder="1">Russell.2019</bcf:citekey>
-    <bcf:citekey order="123" intorder="1">Russell.2019</bcf:citekey>
-    <bcf:citekey order="124" intorder="1">Pukelsheim.2006</bcf:citekey>
-    <bcf:citekey order="125" intorder="1">Pukelsheim.2006</bcf:citekey>
-    <bcf:citekey order="126" intorder="1">Russell.2019</bcf:citekey>
-    <bcf:citekey order="127" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="127" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="128" intorder="1">Dean.2017</bcf:citekey>
-    <bcf:citekey order="129" intorder="1">RisbergEllekjr.1998</bcf:citekey>
-    <bcf:citekey order="130" intorder="1">Kleppmann.2016</bcf:citekey>
-    <bcf:citekey order="130" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="130" intorder="3">Myers.2016</bcf:citekey>
-    <bcf:citekey order="131" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="131" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="132" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="133" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="133" intorder="2">Myers.2016</bcf:citekey>
-    <bcf:citekey order="134" intorder="1">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="134" intorder="2">Myers.2010</bcf:citekey>
-    <bcf:citekey order="135" intorder="1">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="135" intorder="2">Myers.2010</bcf:citekey>
-    <bcf:citekey order="136" intorder="1">Zahran.2003</bcf:citekey>
-    <bcf:citekey order="136" intorder="2">GiovannittiJensen.1989</bcf:citekey>
-    <bcf:citekey order="137" intorder="1">Zahran.2003</bcf:citekey>
-    <bcf:citekey order="137" intorder="2">GiovannittiJensen.1989</bcf:citekey>
-    <bcf:citekey order="138" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="138" intorder="2">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="139" intorder="1">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="139" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="140" intorder="1">Montgomery.2021</bcf:citekey>
-    <bcf:citekey order="140" intorder="2">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="141" intorder="1">Siebertz.2017</bcf:citekey>
-    <bcf:citekey order="142" intorder="1">Siebertz.2017</bcf:citekey>
-    <bcf:citekey order="142" intorder="2">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="143" intorder="1">Hedderich.2020</bcf:citekey>
-    <bcf:citekey order="144" intorder="1">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="144" intorder="2">Montgomery.2021</bcf:citekey>
-    <bcf:citekey order="145" intorder="1">Siebertz.2017</bcf:citekey>
-    <bcf:citekey order="145" intorder="2">Montgomery.2021</bcf:citekey>
-    <bcf:citekey order="146" intorder="1">Belsley.2004</bcf:citekey>
-    <bcf:citekey order="146" intorder="2">Montgomery.2021</bcf:citekey>
-    <bcf:citekey order="147" intorder="1">Fahrmeir.2009</bcf:citekey>
-    <bcf:citekey order="147" intorder="2">Belsley.2004</bcf:citekey>
-    <bcf:citekey order="148" intorder="1">Belsley.2004</bcf:citekey>
-    <bcf:citekey order="148" intorder="2">Montgomery.2021</bcf:citekey>
-    <bcf:citekey order="149" intorder="1">Belsley.2004</bcf:citekey>
-    <bcf:citekey order="150" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="150" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="151" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="151" intorder="2">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="152" intorder="1">Boyd.2004</bcf:citekey>
-    <bcf:citekey order="152" intorder="2">Russell.2019</bcf:citekey>
-    <bcf:citekey order="153" intorder="1">Russell.2019</bcf:citekey>
-    <bcf:citekey order="153" intorder="2">Boyd.2004</bcf:citekey>
-    <bcf:citekey order="154" intorder="1">Atkinson.1970</bcf:citekey>
-    <bcf:citekey order="155" intorder="1">Atkinson.1970</bcf:citekey>
-    <bcf:citekey order="156" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="157" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="158" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="158" intorder="2">Atkinson.2007</bcf:citekey>
-    <bcf:citekey order="158" intorder="3">Myers.2016</bcf:citekey>
-    <bcf:citekey order="159" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="159" intorder="2">Myers.2016</bcf:citekey>
-    <bcf:citekey order="159" intorder="3">Atkinson.2007</bcf:citekey>
-    <bcf:citekey order="160" intorder="1">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="160" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="160" intorder="3">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="161" intorder="1">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="161" intorder="2">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="161" intorder="3">Myers.2016</bcf:citekey>
-    <bcf:citekey order="161" intorder="4">Atkinson.2007</bcf:citekey>
-    <bcf:citekey order="162" intorder="1">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="162" intorder="2">Myers.2016</bcf:citekey>
-    <bcf:citekey order="162" intorder="3">Russell.2019</bcf:citekey>
-    <bcf:citekey order="163" intorder="1">Monroe.2011</bcf:citekey>
-    <bcf:citekey order="163" intorder="2">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="163" intorder="3">Atkinson.2007</bcf:citekey>
-    <bcf:citekey order="164" intorder="1">Goos.2011</bcf:citekey>
-    <bcf:citekey order="164" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="164" intorder="3">Myers.2010</bcf:citekey>
-    <bcf:citekey order="165" intorder="1">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="166" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="166" intorder="2">Goos.2011</bcf:citekey>
-    <bcf:citekey order="167" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="167" intorder="2">Goos.2011</bcf:citekey>
-    <bcf:citekey order="168" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="169" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="170" intorder="1">Myers.2016</bcf:citekey>
-    <bcf:citekey order="171" intorder="1">Jones.2011</bcf:citekey>
-    <bcf:citekey order="172" intorder="1">Jones.2011</bcf:citekey>
-    <bcf:citekey order="173" intorder="1">Goos.2025</bcf:citekey>
-    <bcf:citekey order="174" intorder="1">Goos.2025</bcf:citekey>
-    <bcf:citekey order="175" intorder="1">NunezAres.2020</bcf:citekey>
-    <bcf:citekey order="176" intorder="1">NunezAres.2020</bcf:citekey>
-    <bcf:citekey order="177" intorder="1">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="177" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="177" intorder="3">Goos.2011</bcf:citekey>
-    <bcf:citekey order="178" intorder="1">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="178" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="178" intorder="3">Goos.2011</bcf:citekey>
-    <bcf:citekey order="179" intorder="1">Siebertz.2017</bcf:citekey>
-    <bcf:citekey order="179" intorder="2">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="180" intorder="1">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="180" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="181" intorder="1">Cohen.1988</bcf:citekey>
-    <bcf:citekey order="181" intorder="2">Myers.2016</bcf:citekey>
-    <bcf:citekey order="182" intorder="1">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="182" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="183" intorder="1">Nelder.1972</bcf:citekey>
-    <bcf:citekey order="184" intorder="1">Nelder.1972</bcf:citekey>
-    <bcf:citekey order="185" intorder="1">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="185" intorder="2">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="185" intorder="3">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="185" intorder="4">McCulloch.2001</bcf:citekey>
-    <bcf:citekey order="186" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="186" intorder="2">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="186" intorder="3">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="186" intorder="4">McCulloch.2001</bcf:citekey>
-    <bcf:citekey order="187" intorder="1">Kremer.2021</bcf:citekey>
-    <bcf:citekey order="187" intorder="2">Arndt.2022</bcf:citekey>
-    <bcf:citekey order="187" intorder="3">Khuri.2006</bcf:citekey>
-    <bcf:citekey order="188" intorder="1">Yang.2007</bcf:citekey>
-    <bcf:citekey order="188" intorder="2">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="188" intorder="3">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="189" intorder="1">Box.1964</bcf:citekey>
-    <bcf:citekey order="189" intorder="2">Montgomery.2021</bcf:citekey>
-    <bcf:citekey order="190" intorder="1">Montgomery.2021</bcf:citekey>
-    <bcf:citekey order="190" intorder="2">Box.1964</bcf:citekey>
-    <bcf:citekey order="191" intorder="1">Wu.2021</bcf:citekey>
-    <bcf:citekey order="191" intorder="2">Yang.2007</bcf:citekey>
-    <bcf:citekey order="192" intorder="1">Yang.2007</bcf:citekey>
-    <bcf:citekey order="192" intorder="2">Wu.2021</bcf:citekey>
-    <bcf:citekey order="193" intorder="1">Wu.2021</bcf:citekey>
-    <bcf:citekey order="193" intorder="2">Yang.2007</bcf:citekey>
-    <bcf:citekey order="193" intorder="3">Wuthrich.2023</bcf:citekey>
-    <bcf:citekey order="194" intorder="1">Modarres.2017</bcf:citekey>
-    <bcf:citekey order="194" intorder="2">Kremer.2020</bcf:citekey>
-    <bcf:citekey order="195" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="195" intorder="2">Wu.2021</bcf:citekey>
-    <bcf:citekey order="195" intorder="3">Yang.2007</bcf:citekey>
-    <bcf:citekey order="195" intorder="4">Dobson.2018</bcf:citekey>
-    <bcf:citekey order="195" intorder="5">Kremer.2020</bcf:citekey>
-    <bcf:citekey order="195" intorder="6">Stufken.2012</bcf:citekey>
-    <bcf:citekey order="195" intorder="7">Myers.2010</bcf:citekey>
-    <bcf:citekey order="196" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="196" intorder="2">Yang.2007</bcf:citekey>
-    <bcf:citekey order="196" intorder="3">Wu.2021</bcf:citekey>
-    <bcf:citekey order="196" intorder="4">Myers.2010</bcf:citekey>
-    <bcf:citekey order="196" intorder="5">Kremer.2020</bcf:citekey>
-    <bcf:citekey order="196" intorder="6">Dobson.2018</bcf:citekey>
-    <bcf:citekey order="196" intorder="7">Stufken.2012</bcf:citekey>
-    <bcf:citekey order="197" intorder="1">Russell.2019</bcf:citekey>
-    <bcf:citekey order="197" intorder="2">Yang.2007</bcf:citekey>
-    <bcf:citekey order="197" intorder="3">Aitkin.1980</bcf:citekey>
-    <bcf:citekey order="198" intorder="1">Yang.2007</bcf:citekey>
-    <bcf:citekey order="198" intorder="2">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="199" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="199" intorder="2">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="199" intorder="3">Modarres.2017</bcf:citekey>
-    <bcf:citekey order="200" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="200" intorder="2">Rigdon.2022</bcf:citekey>
-    <bcf:citekey order="200" intorder="3">Modarres.2017</bcf:citekey>
-    <bcf:citekey order="201" intorder="1">Yang.2007</bcf:citekey>
-    <bcf:citekey order="201" intorder="2">Qiao.1994</bcf:citekey>
-    <bcf:citekey order="202" intorder="1">Kremer.2019b</bcf:citekey>
-    <bcf:citekey order="203" intorder="1">Kremer.2019b</bcf:citekey>
-    <bcf:citekey order="204" intorder="1">Kremer.2021</bcf:citekey>
-    <bcf:citekey order="204" intorder="2">Kremer.2019c</bcf:citekey>
-    <bcf:citekey order="205" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="205" intorder="2">Rencher.2008</bcf:citekey>
-    <bcf:citekey order="206" intorder="1">Fisher.1935</bcf:citekey>
-    <bcf:citekey order="206" intorder="2">Rasch.2018</bcf:citekey>
-    <bcf:citekey order="207" intorder="1">Yang.2007</bcf:citekey>
-    <bcf:citekey order="207" intorder="2">Rasch.2018</bcf:citekey>
-    <bcf:citekey order="208" intorder="1">Yang.2007</bcf:citekey>
-    <bcf:citekey order="209" intorder="1">Yang.2007</bcf:citekey>
-    <bcf:citekey order="210" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="210" intorder="2">Kremer.2019c</bcf:citekey>
-    <bcf:citekey order="211" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="211" intorder="2">Kremer.2019c</bcf:citekey>
-    <bcf:citekey order="212" intorder="1">Yang.2007</bcf:citekey>
-    <bcf:citekey order="213" intorder="1">Yang.2007</bcf:citekey>
-    <bcf:citekey order="214" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="215" intorder="1">Meeker.2022</bcf:citekey>
-    <bcf:citekey order="216" intorder="1">Bain.2017b</bcf:citekey>
-    <bcf:citekey order="217" intorder="1">Bain.2017b</bcf:citekey>
-    <bcf:citekey order="218" intorder="1">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="218" intorder="2">Siebertz.2017</bcf:citekey>
