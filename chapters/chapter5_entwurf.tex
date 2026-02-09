@@ -2,151 +2,30 @@
 % %% Kapitel 5 - Entwurf %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \chapter{Effizienz und Effektivität in der multivariaten Versuchsplanung} \label{chap:entwurf}
-
-% Nach der in Kapitel~\ref{chap:screening} beschriebenen qualitativen Vorselektion der Einflussgrößen ist nun die quantitative Planung durch die Entwicklung adäquater, effizienter und multivariater Versuchspläne erforderlich.
-% Ziel ist es, etablierte Standard-\acp{RSD} gezielt an die spezifischen Anforderungen der Lebensdauererprobung sowie -prognose anzupassen, ohne deren statistische Integrität unzulässig zu kompromittieren.
-% In Anlehnung an die Ausführungen aus Abschnitt~\ref{sec:forschungsfragen} gilt dabei fortwährend die Prämisse, dass insbesondere das \ac{CCD} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ lineares Modell $\to$ quadratische Modellterme, vgl. Abbildung~\ref{fig:abb2.08_strategy}) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorzug bietet und daher im Fokus der vorliegenden Untersuchung steht.
-
-% Dieses Kapitel widmet sich zunächst der systematischen Analyse geometrischer Abweichungen des Designs und deren Auswirkung auf die statistische Güte (Abschnitt~\ref{sec:abweichungen}).
-% Unabhängig von einer möglichen Beschleunigung durch \ac{ALT} wird untersucht, inwieweit typische Manipulationen der Design-Geometrie (Orthogonalitätsabweichungen durch variierende Koordinaten der Versuchspunkte oder asymmetrische Replikationen) sowie mangelnde Robustheit in der Versuchssteuerung die Performance beeinflussen.
-% Um hierbei valide Aussagen über die \textit{Effektivität} einer Konfiguration zu treffen, wird die \textbf{statistische Trennschärfe (\ac{power})} als übergeordnete Metrik herangezogen.
-% Sie fungiert als Indikator für die Erfolgsgarantie der Testagenda, indem sie die Wahrscheinlichkeit beziffert, mit der real existierende Effekte tatsächlich als signifikant erkannt werden.
-% Was in der allgemeinen \ac{DoE}-Methodik oft als nachgeordnete Größe behandelt wird, avanciert bei kostenintensiven \ac{EoL}-Tests zum kritischen Faktor: Jede Manipulation des Designs muss zwingend gegen den potenziellen Verlust an Detektionswahrscheinlichkeit abgewogen werden.
-% Gelgingt dies hinsichtlich einer praktikablen Designmanipulation, so ist die \textbf{Effizienz} des Versuchsplans im nächsten Schritt ökonomisch zu bewerten.
-
-% So führt Abschnitt~\ref{sec:kostenmodell} ein Kostenmodell ein, um die monetären Konsequenzen derartiger Modifikationen zu quantifizieren.
-% Die Bewertung der Versuchspläne erfolgt dabei streng nach der Kerndefinition von \textit{Effizienz} als Maß für die Leistungsfähigkeit, vgl. Abschnitt~\ref{sec:forschungsfragen}: Welche Information wird perspektivisch generiert und welcher monetäre Aufwand steht dem gegenüber?
-% Daraus leitet sich die zentrale ökonomische Leitfrage ab: \textit{Wie viel Trennschärfe ist finanzierbar?}
-% Um diese komplexen Abhängigkeiten generisch und losgelöst von spezifischen Produktdaten zu untersuchen, ist der Einsatz numerischer Simulationen erforderlich.
-% Mithilfe von \acp{MCS} und fiktiven physikalischen Modellen wird die Entwicklung dieser Verhältnismäßigkeiten in dieser Studie systematisch aufgezeigt.
-
-% Zur Bewertung der Prognosegüte wird abschließend eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik in der numerischen Simulationsstudie final bewertet wird (Abschnitt~\ref{sec:simulation}).
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \section{Analyse generischer Design-Abweichungen} \label{sec:abweichungen}
-% Unabhängig davon, ob ein Abweichen vom idealen Lehrbuch-Design durch physikalische Restriktionen des Prüfstands oder der funktional-physikalischen Performance des Systems im \ac{ALT}, die eine orthogonale Positionierung der Versuchspunkte generell oder spezifisch die symmetrische Platzierung der Sternpunkte verhindern, oder durch die bewusste Manipulation des Versuchsraums, um die Extrapolationsgüte in Richtung einer spezifischen Anwendungsbelastung zu steigern.
-% Insbesondere im Kontext der Lebensdauerprognose sind solche Eingriffe aus der Praxis begründet nachvollziehbar.
-% Beispielsweise kann die Verschiebung der Majorität der Versuchsumfänge in Richtung höherer Lastniveaus die Prüfzeit verkürzen, was die Gesamtkosten des Versuchsumfangs weiter reduziert (vgl. Abschnitt~\ref{sec:kostenmodell}).
-% Konträr ermöglicht die Verortung der Versuchspunkte näher zum Operationsbereich als Brücke zwischen Test- und Feldraum eine verbesserte Modellanpassung und reduziert die Extrapolationsunsicherheit, steigert aber in der Regel die Prüfzeit.
-
-% Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
-% Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht (vgl. Abschnitt~\ref{subsubsec:rsm}).
-% Jede dieser geometrischen Verzerrungen führt zwangsläufig zu einem Verlust der Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
-% Ein Umstand der mit möglicher Unwissenheit über perspektivisch optimale Versuchsraumbereiche wie in Abschnitt~\ref{sec:screening} geschildert direkt einhergeht.
-
-% Auswirkungen peripherer Parameterstufen-Kombinationen, also Sternpunkte,  erscheinen in sequentiellen Versuchsplänen besonders kritisch - wenngleich chronologisch erst zu einem späteren Zeitpunkt erkennbar.
-% Erst nach vollständiger Durchführung der initialen Screening-Phase sowie der faktoriellen Versuchsdurchführung wird das Design um die Stern- und Zentralpunkte erweitert.
-% Im Umkehrschluss bedeutet dies, dass erst hier die volle Auswirkung von Design-Abweichungen unmittelbar auf die Modellgüte und Prognoseunsicherheit sowie mittelbar auf die $\sym{power}$ in der Praxis sichtbar werden kann, insbesondere dann, wenn extreme Parametereinstellungen zur Anwendung kommen.
-% Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design-Abweichungen systematisch zu untersuchen, was im Folgenden dokumentiert wird.
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \subsection{Methodik der stochastischen Simulation und Modellbildung} \label{subsec:simulationsmethodik}
-
-% Um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bedarf es einer kontrollierten Untersuchungsumgebung, in der - im Gegensatz zu physischen Experimenten - die \textit{wahre} Natur des Systems bereits bekannt ist und folglich vorgegeben werden kann.
-% Nur durch den Vergleich der Analyseergebnisse mit einer vorab definierten Wahrheit (\textit{Ground Truth}) lassen sich Metriken wie die Schätzpräzision und besonders die $\sym{power}$ valide bestimmen.
-% Zu diesem Zweck wird eine Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert.\\
-
-% \textbf{Pseudo-physikalisches Simulationsmodell} \\
-% Das zugrundeliegende Systemverhalten wird - hier, sowie auch in späteren Auseinandersetzungen mit Messungen der Trennschärfe - durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert und vorgegeben.
-% Dies entspricht der Struktur, die auch als Ergebnis der \ac{RSM}-Untersuchung erwartet wird (vgl. Gleichung~\ref{eq:quadric_std_model}).
-% Um die Anforderungen an eine multivariate Untersuchung ($\sym{k} \ge 2$) zu erfüllen und gleichzeitig die Komplexität handhabbar zu halten, wird im Basisszenario von $\sym{k}=2$ Faktoren $\sym{x}_1$ und $\sym{x}_2$ ausgegangen.
-% Es wird angenommen, dass sich die hierbei gewonnenen Erkenntnisse prinzipiell auf höherdimensionale Räume übertragen lassen.
-% Das Modell berücksichtigt neben den Haupteffekten explizit die für die Lebensdaueranalyse kritischen Wechselwirkungen ersten Grades sowie quadratische Terme zur Abbildung von Nichtlinearitäten analog zu Gleichung~\ref{eq:quadric_std_model}:
-% \begin{equation} \label{eq:simulation_model}
-%     \sym{y}_{\sym{idx_sim}} = \sym{beta}_{0} + \sym{beta}_{1}\sym{x}_{1} + \sym{beta}_{2}\sym{x}_{2} + \sym{beta}_{12}\sym{x}_{1}\sym{x}_{2} + \sym{beta}_{11}\sym{x}_{1}^2 + \sym{beta}_{22}\sym{x}_{2}^2 + \sym{epsilon}.
-% \end{equation}
-% Um ein realistisches, stochastisches Verhalten abzubilden, sind die Modellparameter nicht deterministisch fixiert.
-% Den Regressionskoeffizienten $\symsub{beta}{idx_j}$ werden zwar nominale Startwerte zugewiesen, diese werden jedoch in jedem Simulationslauf mit einer definierten Streuung überlagert.
-% Zusätzlich wird die resultierende Systemantwort $\sym{y}_{\sym{idx_sim}}$ mit einer Reststreuung $\sym{epsilon}$ beaufschlagt.
-% Durch beides wird dabei die inhärente \textit{aleatorische Unsicherheit} des Systems modelliert, die nicht durch die erklärenden Variablen abgedeckt wird (z.B. Messfehler, unbekannte Einflussgrößen).
-% Dieses Vorgehen stellt sicher, dass für jede Kombination aus Faktor-Einstellung und Koeffizienten-Set eine stochastisch variable Systemantwort erzeugt wird.\\
-
-% \textbf{Simulationsalgorithmus und Monte-Carlo-Ansatz}\\
-% Dieses Modell wird anschließend mit den zu untersuchenden Versuchsplänen gekoppelt.
-% Für jeden Stützpunkt des Versuchsplans (sei es ein ideales Standard-\ac{CCD} oder ein geometrisch manipuliertes Design mit verschobenen oder entfallenen Punkten) werden die korrespondierenden Systemantworten simuliert.
-% Verfügt der Versuchsplan über den vollständigen Vektor an Systemantworten, erfolgt die Rückrechnung (Schätzung) des Regressionsmodells mittels \ac{MLE} oder \ac{OLS}.
-
-% Da ein einzelner Durchlauf aufgrund der Stochastik lediglich eine Momentaufnahme darstellt, wird das Verfahren in eine **Monte-Carlo-Simulation** mit $\symsub{n}{idx_MC} = 10.000$ Iterationen eingebettet.
-% Dieser Ansatz erlaubt die generische Bewertung der Design-Qualität anhand zweier zentraler Kriterien:
-
-% \begin{enumerate}
-%     \item \textbf{Präzision der Parameterschätzung:} Durch den Vergleich der im Versuch geschätzten Parameter $\hat{\sym{beta}}$ mit den im Simulationsschritt vorgegebenen „wahren“ Koeffizienten $\sym{beta}_{\text{true}}$ lässt sich die durchschnittliche Abweichung (Bias) und Varianz der Schätzung ermitteln. Dies erfolgt normiert über die absichtlich induzierten Varianzen, um die reine geometrische Güte des Designs zu isolieren.
-
-%     \item \textbf{Bestimmung der Trennschärfe (Power):} Von übergeordneter Bedeutung ist die Auswertung der Signifikanztests. Für jeden der $\symsub{n}{idx_MC}$ Läufe und jeden Koeffizienten wird der zugehörige $\sym{p-Wert}$ berechnet.
-%           Die empirische \ac{power} ergibt sich aus dem Verhältnis der Fälle, in denen der Effekt korrekt als signifikant erkannt wurde, zur Gesamtzahl der Simulationen:
-%           \begin{equation} \label{eq:sim_power}
-%               \sym{power} = \frac{1}{\symsub{n}{idx_MC}} \sum_{i=1}^{\symsub{n}{idx_MC}} \mathbb{I}(\sym{p-Wert}_i < \sym{alpha}).
-%           \end{equation}
-% \end{enumerate}
-
-% Die Implementierung dieses fiktiven Systems ist eine notwendige Voraussetzung, um den Einfluss von Design-Modifikationen auf die \ac{power} überhaupt messbar zu machen.
-% Da die Trennschärfe jedoch nicht nur von der Geometrie des Versuchsplans, sondern maßgeblich vom Verhältnis aus Effektstärke zu Rauschen abhängt, muss eine umfassende Sensitivitätsanalyse (vgl. nachfolgenden Abschnitt) nicht nur geometrische Merkmale variieren, sondern auch die Parameter des scheinbar-physikalischen Modells selbst (z.\,B. Signal-Rausch-Verhältnis) als Einflussfaktoren berücksichtigen.
-
-% \subsection{Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
-
-% Um die Robustheit des \ac{CCD} gegenüber den eingangs erwähnten Abweichungen quantitativ zu bewerten, wurde eine umfassende Simulationsstudie durchgeführt.
-% Der methodische Ansatz folgt einem \textit{\ac{DoE} on Experimental Design}-Konzept: Die Eigenschaften des zu untersuchenden Versuchsplans sowie der Systemantwort werden als Faktoren eines übergeordneten Meta-Designs variiert.
-% Im Gegensatz zu reinen Screening-Ansätzen kam hierfür ein **Zentral-Zusammengesetzter Versuchsplan (CCD) mit Blockbildung** zum Einsatz (vgl. Kapitel 4.1 der zugrundeliegenden Studie).
-% Die Wahl dieses Designs ermöglichte nicht nur die Identifikation linearer Haupteffekte, sondern auch die Analyse nicht-linearer (quadratischer) Einflüsse der Störgrößen auf die Performance-Metriken. Durch die Aufteilung in orthogonale Blöcke konnte der umfangreiche Parameterraum von acht Einflussfaktoren (a bis h) effizient und statistisch abgesichert untersucht werden.
-
-% Die in der Studie definierten acht Faktoren bilden sowohl deterministische geometrische Manipulationen am Versuchsplan als auch stochastische Störgrößen und Modellparameter ab:
-
-% \begin{itemize}
-%     \item \textbf{Faktor a (Sternpunkt-Abstand $\alpha$):} Variation des Abstands der Sternpunkte zum Zentrum, um den Einfluss der Raumausdehnung (z.\,B. flächenzentriert vs. rotierbar) zu prüfen.
-%     \item \textbf{Faktor b (Sternpunkt-Shift):} Asymmetrische Verschiebung eines Sternpunkts in Richtung eines anderen Faktors, was eine geometrische Verzerrung simuliert.
-%     \item \textbf{Faktor c (Zentralpunkte):} Variation der Anzahl der Zentralpunkte (Center Points Omitted).
-%     \item \textbf{Faktor d (Sternpunkte):} Variation durch das Weglassen von Sternpunkten (Star Points Omitted), z.\,B. durch Ausfall eines Probekörpers.
-%     \item \textbf{Faktor e (System-Rauschen):} Das Verhältnis zwischen dem Modellkoeffizienten und der Standardabweichung des Systems (Systemfehler).
-%     \item \textbf{Faktor f (Effekt-Verhältnis):} Das Verhältnis zweier Haupteffekte zueinander (Dominanz eines Faktors).
-%     \item \textbf{Faktor g (Mess-Rauschen):} Das Verhältnis zwischen dem Modellkoeffizienten und dem überlagerten Messfehler.
-%     \item \textbf{Faktor h (Signifikanzniveau):} Das für den Hypothesentest gewählte $\alpha$-Niveau.
-% \end{itemize}
-
-% Die Auswertung der Simulationsergebnisse mittels Varianzanalyse (ANOVA) und Wirkungsflächenanalyse offenbart eine signifikante Dichotomie in der Sensitivität der Zielgrößen:
-
-% Hinsichtlich der **statistischen Power** dominieren eindeutig die stochastischen und methodischen Faktoren.
-% Insbesondere Faktor **g** (Messfehler) und Faktor **h** (Signifikanzniveau) sowie Faktor **e** (Systemfehler) weisen die stärksten Effekte auf. Dies bestätigt, dass die Detektionswahrscheinlichkeit eines Effekts primär durch das Signal-Rausch-Verhältnis limitiert wird.
-% Die geometrischen Design-Faktoren (**a, b, c**) zeigten im untersuchten Bereich – selbst unter Berücksichtigung quadratischer Terme – einen vergleichsweise geringen Einfluss auf die Power.
-% Selbst die Reduktion der Sternpunkte (Faktor **d**) führte nicht zwangsläufig zu einem kritischen Einbruch der Trennschärfe, solange das Rauschen kontrolliert blieb.
-
-% Bezüglich der **Schätzgüte** (Differenz zwischen wahrem und geschätztem Koeffizienten) gewinnen die geometrischen Faktoren jedoch an Bedeutung.
-% Hier konnte durch das CCD-Meta-Design nachgewiesen werden, dass insbesondere die Anzahl der Zentralpunkte (Faktor **c**) einen nicht-linearen Einfluss auf die Schätzung quadratischer Modellterme hat. Auch Interaktionen zwischen geometrischen Faktoren (z.\,B. **a** und **b**) traten deutlicher hervor, was auf die Sensitivität der Modellierung gegenüber der Orthogonalität hinweist.
-
-% Zusammenfassend lässt die Studie den Schluss zu, dass das \ac{CCD} eine hohe Robustheit bezüglich der reinen Effektdetektion (Power) aufweist, selbst wenn die Geometrie „unsauber“ ist.
-% Die Präzision der Modellierung (Schätzgüte) reagiert jedoch sensibler auf geometrische Eingriffe.
-% Für die Praxis der Lebensdauererprobung bedeutet dies: Anpassungen an \ac{ALT}-Restriktionen sind vertretbar, wenn das primäre Ziel der Nachweis eines Effekts ist; für präzise Prognosemodelle ist die geometrische Integrität jedoch strikter zu wahren.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Kapitel 5 - Entwurf %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \chapter{Effizienz und Effektivität in der multivariaten Versuchsplanung} \label{chap:entwurf}
 
 Nach der in Kapitel~\ref{chap:screening} beschriebenen qualitativen Vorselektion der Einflussgrößen ist nun die quantitative Planung durch die Entwicklung adäquater, effizienter und multivariater Versuchspläne erforderlich.
 Ziel ist es, etablierte Standard-\acp{RSD} gezielt an die spezifischen Anforderungen der Lebensdauerprognose anzupassen, ohne deren statistische Integrität unzulässig zu kompromittieren.
 In Anlehnung an die Ausführungen aus Abschnitt~\ref{sec:forschungsfragen} gilt dabei fortwährend die Prämisse, dass insbesondere das \ac{CCD} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ lineares Modell $\to$ quadratische Modellterme, vgl. Abbildung~\ref{fig:abb2.08_strategy}) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorzug bietet und daher im Fokus der vorliegenden Untersuchung steht.
 
-Dieses Kapitel widmet sich zunächst der systematischen Analyse geometrischer Design-Abweichungen und deren Auswirkung auf die statistische Güte (siehe Abschnitt~\ref{sec:abweichungen}).
-Unabhängig von einer möglichen Beschleunigung durch \ac{ALT} wird untersucht, inwieweit typische Manipulationen der Design-Geometrie wie variierende Koordinaten oder asymmetrische Replikationen sowie mangelnde Robustheit in der Versuchssteuerung die Performance beeinflussen.
-Um hierbei valide Aussagen über die \textbf{Effektivität} einer Konfiguration zu treffen, wird die \textbf{statistische Trennschärfe (\ac{power})} als übergeordnete Metrik herangezogen.
+Dieses Kapitel widmet sich  in zwei Schritten zunächst der systematischen Analyse geometrischer Design-Abweichungen und deren Auswirkung auf die statistische Güte (siehe Abschnitt~\ref{sec:abweichungen}).
+Unabhängig von einer möglichen Beschleunigung durch \ac{ALT} wird zuerst untersucht, inwieweit typische Manipulationen der Design-Geometrie wie variierende Koordinaten oder asymmetrische Replikationen der Versuchspunkte sowie mangelnde Robustheit in der Versuchssteuerung die Performance beeinflussen.
+Um diese komplexen Abhängigkeiten generisch und losgelöst von spezifischen Produktdaten zu untersuchen, ist der Einsatz numerischer Simulationen erforderlich.
+Mithilfe von \acp{MCS} und fiktiven physikalischen Modellen wird die Entwicklung dieser Verhältnismäßigkeiten in dieser Studie systematisch aufgezeigt, siehe Abschnitt~\ref{subsec:simulationsmethodik}.
+In einem zweiten Schritt werden als signifikant erfasste Einflüsse durch Design-Modifikationen hinsichtlich ihrer generischen Auswirkung auf die Modellierung bewertet (Abschnitt~\ref{subsec:sensitivitaetsanalyse}).
+Sie sollen im weiteren Verlauf der Untersuchung als Grundlage für die Auswahl vielversprechender Design-Alternativen dienen, die im Anschluss ökonomisch bewertet werden.
+Um hierbei valide Aussagen über die \textbf{Effektivität} einer Konfiguration zu treffen, wird neben der bloßen Schätzgüte die \textbf{statistische Trennschärfe (\ac{power})} als übergeordnete Metrik herangezogen.
 Sie fungiert als Indikator für die Erfolgsgarantie der Testagenda, indem sie die Wahrscheinlichkeit beziffert, mit der real existierende Effekte tatsächlich als signifikant erkannt werden, vgl. Abschnitt~\ref{subsec:optimal}.
-Was in der allgemeinen \ac{DoE}-Methodik oft als nachgeordnete Größe behandelt wird, avanciert bei kostenintensiven \ac{EoL}-Tests zum \ac{KPI}: Jede Manipulation des Designs muss zwingend gegen den potenziellen Verlust an Detektionswahrscheinlichkeit abgewogen werden.
+Was in der allgemeinen \ac{DoE}-Methodik oft als nachgeordnete Größe behandelt wird \cite{Rigdon.2022,Montgomery.2020}, avanciert bei kostenintensiven \ac{EoL}-Tests zum \ac{KPI}: Jede Manipulation des Designs muss zwingend gegen den potenziellen Verlust an Detektionswahrscheinlichkeit hinsichtlich der Effekte auf die Lebensdauer abgewogen werden (entsprechend Abschnitt~\ref{subsec:orthogonalitaetsabweichungen}).
 
 Darauf aufbauend führt Abschnitt~\ref{sec:kostenmodell} ein Kostenmodell ein, um die monetären Konsequenzen derartiger Modifikationen zu quantifizieren.
 Die Bewertung der Versuchspläne erfolgt dabei streng nach der Kerndefinition von \textbf{Effizienz} als Maß für die Leistungsfähigkeit: Welche Information wird perspektivisch generiert und welcher monetäre Aufwand steht dem gegenüber?
 Daraus leitet sich die zentrale ökonomische Leitfrage ab: \textit{Wie viel Trennschärfe ist finanzierbar?}
+Erst so wird quantifiziert, inwiefern zufällige oder möglicherweise bewusste Design-Modifikationen die Effizienz des Versuchsplans verändern und zu welchem Maß die Effektivität (Trennschärfe) dabei beeinträchtigt wird.
 
-Um diese komplexen Abhängigkeiten generisch und losgelöst von spezifischen Produktdaten zu untersuchen, ist der Einsatz numerischer Simulationen erforderlich.
-Mithilfe von \acp{MCS} und fiktiven physikalischen Modellen wird die Entwicklung dieser Verhältnismäßigkeiten in dieser Studie systematisch aufgezeigt.
+
 Zur Bewertung der Prognosegüte wird abschließend eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik in der numerischen Simulationsstudie final bewertet wird (Abschnitt~\ref{sec:simulation}).
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analyse generischer Design-Abweichungen} \label{sec:abweichungen}
@@ -157,7 +36,7 @@ Insbesondere im Kontext der Lebensdauerprognose sind solche Eingriffe praxisrele
 Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
 Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht (vgl. Abschnitt~\ref{subsubsec:rsm}).
 Geometrische Verzerrungen führen zwangsläufig zu einem Verlust dieser Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
-Besonders kritisch ist, dass die Auswirkungen peripherer Parameterstufen (Sternpunkte) oft erst spät im sequenziellen Prozess sichtbar werden – nämlich dann, wenn das initiale faktorielle Design erweitert wird.
+Besonders kritisch ist, dass die Auswirkungen peripherer Parameterstufen (Sternpunkte) oft erst spät im sequenziellen Prozess sichtbar werden - nämlich dann, wenn das initiale faktorielle Design erweitert wird.
 Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design-Abweichungen systematisch zu quantifizieren.
 
 \subsection{Methodik der stochastischen Simulation und Modellbildung} \label{subsec:simulationsmethodik}
@@ -222,7 +101,7 @@ Für die Praxis bedeutet dies: Anpassungen an \ac{ALT}-Restriktionen sind vertre
 
 
 
-\subsection{Praktische Orthogonalitäts-Abweichungen im CCD} \label{subsec:orthogonalitaetsabweichungen}
+\subsection{Fazit zu Orthogonalitäts-Abweichungen im CCD} \label{subsec:orthogonalitaetsabweichungen}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -248,7 +127,7 @@ Dieses Modell ermöglicht es, Design-Alternativen nicht nur nach ihrer statistis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Evaluierung vielversprechender Design-Alternativen} \label{sec:design_alternativen}
+\section{Orthogonalitäts-Abweichungen in der Zuverlässigkeitsprognose} \label{sec:design_alternativen}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -256,14 +135,7 @@ Dieses Modell ermöglicht es, Design-Alternativen nicht nur nach ihrer statistis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Bewertung der Versuchsplananpassung mittels Orthogonalitäts-Check} \label{sec:orthogonalitaets_check}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Erweiterte Methoden zur Prädiktions-Visualisierung} \label{sec:visualisierung}
+\section{Extrapolation Variance Graph (EVG)} \label{sec:visualisierung}
 Zur Beurteilung der Vorhersagegüte im gesamten Versuchsraum haben sich der \textbf{\ac{VDG}} und der \textbf{\ac{FDS}-Plot} etabliert.
 Diese Metriken bewerten die Verteilung der skalierten Prädiktionsvarianz (\ac{SPV}) jedoch oft global oder über sphärische Distanzen gemittelt.
 Für die Lebensdauerprognose, bei der oft eine Extrapolation in einen spezifischen, eng begrenzten Anwendungsbereich ("Corner Case") von Interesse ist, sind diese globalen Maße oft unzureichend.
@@ -271,6 +143,14 @@ Für die Lebensdauerprognose, bei der oft eine Extrapolation in einen spezifisch
 Daher wird in dieser Arbeit eine neue, erweiterte Auswertungsmethode vorgestellt: Das \textbf{Extrapolations-spezifische SPV-Mapping}.
 Im Gegensatz zum klassischen VDG, der die Varianz über Radien mittelt, visualisiert diese Methode die Isolinien der Prädiktionsvarianz explizit in Richtung der relevanten Belastungsvektoren.
 Dies ermöglicht die gezielte Bewertung der Design-Güte exakt in jenen Bereichen des Parameterraums, in denen die spätere Feldprognose erfolgen soll, und deckt Schwachstellen auf, die in globalen FDS-Plots verborgen blieben.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Zuverlässigkeitsmodellierung mit Vertrauensbereichen} \label{sec:zuv_vb}
+
 
 \section{Simulative Validierung und Methodennachweis} \label{sec:simulation}
 Aufgrund der unendlichen Kombinationsmöglichkeiten von Einflussfaktoren, Lastniveaus und physikalischen Modellen ist eine generische Sensitivitätsanalyse für alle denkbaren Anwendungsfälle nicht zielführend.

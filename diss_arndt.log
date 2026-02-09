@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  6 FEB 2026 17:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  10 FEB 2026 00:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1664,11 +1664,6 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 68.
 Package tocbasic Info: Using my definition of `\numberline' on input line 69.
 Package tocbasic Info: Using my definition of `\numberline' on input line 70.
 Package tocbasic Info: Using my definition of `\numberline' on input line 71.
-
-Overfull \hbox (5.74927pt too wide) in paragraph at lines 71--71
- [][] []\T1/qpl/m/n/12 (-10) Bewertung der Ver-suchs-pla-nan-pas-sung mit-tels Orthogonalitäts-Check [][]  
- []
-
 Package tocbasic Info: Using my definition of `\numberline' on input line 72.
 Package tocbasic Info: Using my definition of `\numberline' on input line 73.
 Package tocbasic Info: Using my definition of `\numberline' on input line 74.
@@ -1772,16 +1767,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--140
 []|\T1/qpl/m/n/12 (+10) Orthogonale Pro-jek-ti-ons-ma-trix, Prä-dik-ti-ons-ma-trix, Hat-
  []
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 265.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 264.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 2173) in paragraph at lines 388--388
+Underfull \hbox (badness 2173) in paragraph at lines 387--387
 []|\T1/qpl/m/n/12 (+10) Standardisierte Va-ria-ble der Kleinst-wert-ver-tei-lung (SEV);
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--389
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--388
  [] [] 
  []
 
@@ -2195,7 +2190,7 @@ chapter 5.
 
 [73]
 
-LaTeX Warning: Reference `eq:sim_power' on page 74 undefined on input line 188.
+LaTeX Warning: Reference `eq:sim_power' on page 74 undefined on input line 67.
 
 
 
@@ -2206,7 +2201,7 @@ LaTeX Warning: Reference `eq:sim_power' on page 74 undefined on input line 188.
 [76]
 
 [77]
-Overfull \hbox (1.08061pt too wide) in paragraph at lines 289--290
+Overfull \hbox (1.08061pt too wide) in paragraph at lines 169--170
 []\T1/qpl/b/n/12 (-10) Power: \T1/qpl/m/n/12 (-10) Wie hoch ist die Wahr-schein-lich-keit, die de-fi-nier-ten Ef-fek-te trotz Design-
  []
 
@@ -2303,16 +2298,16 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  75024 strings out of 473577
- 1740149 string characters out of 5716318
- 3808318 words of memory out of 5000000
+ 1740133 string characters out of 5716318
+ 3808296 words of memory out of 5000000
  96223 multiletter control sequences out of 15000+600000
  725543 words of font info for 380 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,20n,121p,10947b,3730s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (118 pages, 1372337 bytes).
+Output written on diss_arndt.pdf (118 pages, 1373514 bytes).
 PDF statistics:
- 4076 PDF objects out of 4296 (max. 8388607)
+ 4080 PDF objects out of 4296 (max. 8388607)
  604 named destinations out of 1000 (max. 500000)
  85170 words of extra memory for PDF output out of 89155 (max. 10000000)
 
