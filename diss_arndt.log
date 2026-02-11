@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  10 FEB 2026 00:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  11 FEB 2026 01:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1475,6 +1475,13 @@ Package biblatex Warning: Biber reported the following issues
 (biblatex)                with 'Kremer.2018b':
 (biblatex)                - article entry 'Kremer.2018b' (bibliography.bib): Invalid format '22.01.2026' of date field 'urldate' - ignoring.
 
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                G.E.P.Box.1951
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
 )
 Package biblatex Info: Reference section=0 on input line 391.
 Package biblatex Info: Reference segment=0 on input line 391.
@@ -1710,7 +1717,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--172
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--174
  [] [] 
  []
 
@@ -1771,12 +1778,12 @@ LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 2
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 2173) in paragraph at lines 387--387
+Underfull \hbox (badness 2173) in paragraph at lines 388--388
 []|\T1/qpl/m/n/12 (+10) Standardisierte Va-ria-ble der Kleinst-wert-ver-tei-lung (SEV);
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--388
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--389
  [] [] 
  []
 
@@ -1830,6 +1837,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 9.
 Package tocbasic Info: Using my definition of `\numberline' on input line 10.
 Package tocbasic Info: Using my definition of `\numberline' on input line 11.
 Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 )
 \tf@lot=\write13
 \openout13 = `diss_arndt.lot'.
@@ -1912,48 +1920,48 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 [17]
 
 [18] (plots/ma_abb2.02_doe_steps.pdf_tex
-<plots/ma_abb2.02_doe_steps.pdf, id=1235, page=1, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1237, page=1, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1236, page=2, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1238, page=2, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page2 used on input line 59.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1237, page=3, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1239, page=3, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page3 used on input line 62.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1238, page=4, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1240, page=4, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page4 used on input line 65.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1239, page=5, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1241, page=5, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page5 used on input line 68.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1240, page=6, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1242, page=6, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page6 used on input line 71.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1241, page=7, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1243, page=7, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page7 used on input line 74.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
 ) (plots/ma_abb2.03_p_diagramm.pdf_tex
-<plots/ma_abb2.03_p_diagramm.pdf, id=1253, page=1, 266.19023pt x 171.65889pt>
+<plots/ma_abb2.03_p_diagramm.pdf, id=1255, page=1, 266.19023pt x 171.65889pt>
 File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
 <use plots/ma_abb2.03_p_diagramm.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
-<plots/ma_abb2.03_p_diagramm.pdf, id=1254, page=2, 266.19023pt x 171.65889pt>
+<plots/ma_abb2.03_p_diagramm.pdf, id=1256, page=2, 266.19023pt x 171.65889pt>
 File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
 <use plots/ma_abb2.03_p_diagramm.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page2 used on input line 67.
@@ -2018,11 +2026,7 @@ Overfull \hbox (27.31906pt too wide) in paragraph at lines 159--500
 
 
 
-[28]
-
-LaTeX Warning: Reference `fig:ma_abb2.08_strategy' on page 29 undefined on input line 559.
-
-(plots/ma_abb2.08.1_strategy.tex)
+[28] (plots/ma_abb2.08.1_strategy.tex)
 Overfull \hbox (37.25467pt too wide) in paragraph at lines 51--571
  [][] 
  []
@@ -2115,6 +2119,9 @@ Overfull \hbox (7.04196pt too wide) in paragraph at lines 1127--1129
 [50]
 chapter 3.
 
+LaTeX Warning: Citation 'G.E.P.Box.1951' on page 51 undefined on input line 16.
+
+
 
 [51
 
@@ -2187,12 +2194,13 @@ chapter 5.
 [71]
 
 [72]
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+
 
 [73]
-
-LaTeX Warning: Reference `eq:sim_power' on page 74 undefined on input line 67.
-
-
 
 [74]
 
@@ -2201,31 +2209,35 @@ LaTeX Warning: Reference `eq:sim_power' on page 74 undefined on input line 67.
 [76]
 
 [77]
-Overfull \hbox (1.08061pt too wide) in paragraph at lines 169--170
+Overfull \hbox (1.08061pt too wide) in paragraph at lines 187--188
 []\T1/qpl/b/n/12 (-10) Power: \T1/qpl/m/n/12 (-10) Wie hoch ist die Wahr-schein-lich-keit, die de-fi-nier-ten Ef-fek-te trotz Design-
  []
 
-) (chapters/chapter6_casestudy.tex
 
-[78]
-chapter 6.
-) (chapters/chapter7_zusammenfassung.tex
 
-[79
+[78]) (chapters/chapter6_casestudy.tex
+
+[79]
+
+[80
 
 
 ]
+chapter 6.
+) (chapters/chapter7_zusammenfassung.tex
 
-[80
+[81]
+
+[82
 
 
 ]
 chapter 7.
 )
 
-[81]
+[83]
 
-[82
+[84
 
 
 ]
@@ -2247,11 +2259,7 @@ Overfull \hbox (3.11346pt too wide) in paragraph at lines 500--500
 
 
 
-[83{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
-
-[84]
-
-[85]
+[85{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
 
 [86]
 
@@ -2266,30 +2274,30 @@ Overfull \hbox (3.11346pt too wide) in paragraph at lines 500--500
 [91]
 
 [92]
+
+[93]
+
+[94]
 Overfull \hbox (27.99475pt too wide) in paragraph at lines 500--500
 \T1/qpl/m/it/12 (-10) Bil^^?dern, zahl^^?rei^^?chen Bei^^?spie^^?len und 92 Auf^^?ga^^?ben\T1/qpl/m/n/12 (-10) . 3., ak-tua-li-sier-te Auf-la-ge. Mathematik-
  []
 
 
 
-[93]
+[95]
 
-[94
+[96
 
 
 ] (chapters/anhang/anhanga/anhanga.tex
 
-[95])
+[97])
 
-[96] (diss_arndt.aux)
+[98] (diss_arndt.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `diss_arndt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
@@ -2297,17 +2305,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 75024 strings out of 473577
- 1740133 string characters out of 5716318
- 3808296 words of memory out of 5000000
- 96223 multiletter control sequences out of 15000+600000
+ 75035 strings out of 473577
+ 1740433 string characters out of 5716318
+ 3810341 words of memory out of 5000000
+ 96229 multiletter control sequences out of 15000+600000
  725543 words of font info for 380 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,20n,121p,10947b,3730s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (118 pages, 1373514 bytes).
+Output written on diss_arndt.pdf (120 pages, 1382292 bytes).
 PDF statistics:
- 4080 PDF objects out of 4296 (max. 8388607)
- 604 named destinations out of 1000 (max. 500000)
+ 4114 PDF objects out of 4296 (max. 8388607)
+ 609 named destinations out of 1000 (max. 500000)
  85170 words of extra memory for PDF output out of 89155 (max. 10000000)
 

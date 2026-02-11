@@ -2550,10 +2550,12 @@
     <bcf:citekey order="116" intorder="2">Dean.2017</bcf:citekey>
     <bcf:citekey order="117" intorder="1">Siebertz.2017</bcf:citekey>
     <bcf:citekey order="117" intorder="2">Kleppmann.2020</bcf:citekey>
-    <bcf:citekey order="118" intorder="1">Box.1988</bcf:citekey>
-    <bcf:citekey order="118" intorder="2">Bisgaard.1992</bcf:citekey>
-    <bcf:citekey order="119" intorder="1">Box.1988</bcf:citekey>
-    <bcf:citekey order="119" intorder="2">Bisgaard.1992</bcf:citekey>
+    <bcf:citekey order="118" intorder="1">Box.1951</bcf:citekey>
+    <bcf:citekey order="118" intorder="2">Box.1988</bcf:citekey>
+    <bcf:citekey order="118" intorder="3">Bisgaard.1992</bcf:citekey>
+    <bcf:citekey order="119" intorder="1">Box.1951</bcf:citekey>
+    <bcf:citekey order="119" intorder="2">Box.1988</bcf:citekey>
+    <bcf:citekey order="119" intorder="3">Bisgaard.1992</bcf:citekey>
     <bcf:citekey order="120" intorder="1">Box.1988</bcf:citekey>
     <bcf:citekey order="120" intorder="2">Bisgaard.1992</bcf:citekey>
     <bcf:citekey order="121" intorder="1">Box.1988</bcf:citekey>
@@ -2759,7 +2761,6 @@
     <bcf:citekey order="225" intorder="3">G.E.P.Box.1951</bcf:citekey>
     <bcf:citekey order="226" intorder="1">Ahn.2015</bcf:citekey>
     <bcf:citekey order="226" intorder="2">Donev.2004</bcf:citekey>
-    <bcf:citekey order="226" intorder="3">G.E.P.Box.1951</bcf:citekey>
     <bcf:citekey order="227" intorder="1">Ardakani.2011</bcf:citekey>
     <bcf:citekey order="228" intorder="1">Ardakani.2011</bcf:citekey>
     <bcf:citekey order="229" intorder="1">Khuri.2006</bcf:citekey>
@@ -2868,6 +2869,14 @@
     <bcf:citekey order="301" intorder="1">Arndt.2023c</bcf:citekey>
     <bcf:citekey order="302" intorder="1">Rigdon.2022</bcf:citekey>
     <bcf:citekey order="302" intorder="2">Montgomery.2020</bcf:citekey>
+    <bcf:citekey order="303" intorder="1">Box.1963</bcf:citekey>
+    <bcf:citekey order="303" intorder="2">Ahn.2015</bcf:citekey>
+    <bcf:citekey order="303" intorder="3">Donev.2004</bcf:citekey>
+    <bcf:citekey order="303" intorder="4">Zhang.2021</bcf:citekey>
+    <bcf:citekey order="304" intorder="1">Ahn.2015</bcf:citekey>
+    <bcf:citekey order="304" intorder="2">Donev.2004</bcf:citekey>
+    <bcf:citekey order="304" intorder="3">Box.1963</bcf:citekey>
+    <bcf:citekey order="304" intorder="4">Zhang.2021</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

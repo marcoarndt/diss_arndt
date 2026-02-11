@@ -10,27 +10,26 @@ In Anlehnung an die Ausführungen aus Abschnitt~\ref{sec:forschungsfragen} gilt 
 
 Dieses Kapitel widmet sich  in zwei Schritten zunächst der systematischen Analyse geometrischer Design-Abweichungen und deren Auswirkung auf die statistische Güte (siehe Abschnitt~\ref{sec:abweichungen}).
 Unabhängig von einer möglichen Beschleunigung durch \ac{ALT} wird zuerst untersucht, inwieweit typische Manipulationen der Design-Geometrie wie variierende Koordinaten oder asymmetrische Replikationen der Versuchspunkte sowie mangelnde Robustheit in der Versuchssteuerung die Performance beeinflussen.
-Um diese komplexen Abhängigkeiten generisch und losgelöst von spezifischen Produktdaten zu untersuchen, ist der Einsatz numerischer Simulationen erforderlich.
-Mithilfe von \acp{MCS} und fiktiven physikalischen Modellen wird die Entwicklung dieser Verhältnismäßigkeiten in dieser Studie systematisch aufgezeigt, siehe Abschnitt~\ref{subsec:simulationsmethodik}.
-In einem zweiten Schritt werden als signifikant erfasste Einflüsse durch Design-Modifikationen hinsichtlich ihrer generischen Auswirkung auf die Modellierung bewertet (Abschnitt~\ref{subsec:sensitivitaetsanalyse}).
+Um diese komplexen Abhängigkeiten generisch und losgelöst von spezifischen Produktdaten zu untersuchen, ist der Einsatz numerischer Simulationen immer dann erforderlich, wenn die Parameterschätzung betreffende Metriken erfasst werden sollen.
+Mithilfe von \acp{MCS} und fiktiven physikalischen Modellen wird die Entwicklung dieser Verhältnismäßigkeiten somit systematisch aufgezeigt, siehe Abschnitt~\ref{subsec:simulationsmethodik}.
+In einem zweiten Schritt werden daraus als signifikant erfasste Einflüsse durch Design-Modifikationen hinsichtlich ihrer generischen Auswirkung auf die Modellierung bewertet (Abschnitt~\ref{subsec:sensitivitaetsanalyse}).
 Sie sollen im weiteren Verlauf der Untersuchung als Grundlage für die Auswahl vielversprechender Design-Alternativen dienen, die im Anschluss ökonomisch bewertet werden.
-Um hierbei valide Aussagen über die \textbf{Effektivität} einer Konfiguration zu treffen, wird neben der bloßen Schätzgüte die \textbf{statistische Trennschärfe (\ac{power})} als übergeordnete Metrik herangezogen.
-Sie fungiert als Indikator für die Erfolgsgarantie der Testagenda, indem sie die Wahrscheinlichkeit beziffert, mit der real existierende Effekte tatsächlich als signifikant erkannt werden, vgl. Abschnitt~\ref{subsec:optimal}.
-Was in der allgemeinen \ac{DoE}-Methodik oft als nachgeordnete Größe behandelt wird \cite{Rigdon.2022,Montgomery.2020}, avanciert bei kostenintensiven \ac{EoL}-Tests zum \ac{KPI}: Jede Manipulation des Designs muss zwingend gegen den potenziellen Verlust an Detektionswahrscheinlichkeit hinsichtlich der Effekte auf die Lebensdauer abgewogen werden (entsprechend Abschnitt~\ref{subsec:orthogonalitaetsabweichungen}).
+Um hierbei valide Aussagen über die \textbf{Effektivität} einer Konfiguration zu treffen, wird neben der bloßen Versuchsplan-Performance oder Schätzgüte die \textbf{statistische Trennschärfe (\ac{power})} als übergeordnete Metrik herangezogen.
+Sie fungiert als Indikator für die Erfolgsgarantie der Testagenda, indem sie die Wahrscheinlichkeit beziffert, mit der real existierende Effekte tatsächlich mithilfe des jeweiligen Versuchsplans als signifikant erkannt werden, vgl. Abschnitt~\ref{subsec:optimal}.
+Was in der allgemeinen \ac{DoE}-Methodik oft als nachgeordnete Größe behandelt wird \cite{Rigdon.2022,Montgomery.2020}, avanciert bei kostenintensiven \ac{EoL}-Tests zum \ac{KPI}: Jede Manipulation des Designs muss zwingend gegen den potenziellen Verlust an der Detektionswahrscheinlichkeit hinsichtlich der Effekte auf die Lebensdauer innerhalb des \ac{GLM} abgewogen werden (entsprechend Abschnitt~\ref{subsec:orthogonalitaetsabweichungen}).
 
-Darauf aufbauend führt Abschnitt~\ref{sec:kostenmodell} ein Kostenmodell ein, um die monetären Konsequenzen derartiger Modifikationen zu quantifizieren.
+Darauf aufbauend führt Abschnitt~\ref{sec:kostenmodell} ein Kostenmodell ein, um außerdem die monetären Konsequenzen derartiger Modifikationen zu quantifizieren.
 Die Bewertung der Versuchspläne erfolgt dabei streng nach der Kerndefinition von \textbf{Effizienz} als Maß für die Leistungsfähigkeit: Welche Information wird perspektivisch generiert und welcher monetäre Aufwand steht dem gegenüber?
 Daraus leitet sich die zentrale ökonomische Leitfrage ab: \textit{Wie viel Trennschärfe ist finanzierbar?}
-Erst so wird quantifiziert, inwiefern zufällige oder möglicherweise bewusste Design-Modifikationen die Effizienz des Versuchsplans verändern und zu welchem Maß die Effektivität (Trennschärfe) dabei beeinträchtigt wird.
+Erst so wird quantifiziert, inwiefern zufällige oder möglicherweise bewusste Design-Modifikationen die Effizienz des \ac{RSD} verändern und zu welchem Maß die Effektivität dabei beeinträchtigt wird.
 
-
-Zur Bewertung der Prognosegüte wird abschließend eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik in der numerischen Simulationsstudie final bewertet wird (Abschnitt~\ref{sec:simulation}).
+Zur Bewertung der Prognosegüte wird abschließend eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik in der numerischen Simulationsstudie anhand der Zuverlässigkeitsmodellierung mit Aussagesicherheit final bewertet wird (Abschnitt~\ref{sec:zuv_vb}).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analyse generischer Design-Abweichungen} \label{sec:abweichungen}
-Versuchsplanung für die Zuverlässigkeitstechnik kann aus praktischen Gründen abweichen vom idealen Lehrbuch-Design.
-Ursachen hierfür können physikalische Restriktionen des Prüfstands, die spezifische Performance des Systems im \ac{ALT} oder eine bewusste Manipulation des Versuchsraums zur Steigerung der Extrapolationsgüte sein.
+Die Versuchsplanung für die Zuverlässigkeitstechnik kann aus praktischen Gründen abweichen vom idealen Lehrbuch-Design.
+Ursachen hierfür können physikalische Restriktionen des Prüfstands, die spezifische Performance des Systems prinzipiell oder bei \ac{ALT} oder eine bewusste Manipulation des Versuchsraums zur Steigerung der Extrapolationsgüte sein.
 Insbesondere im Kontext der Lebensdauerprognose sind solche Eingriffe praxisrelevant und begründet: Die Verschiebung der Versuchspunkte in Richtung höherer Lastniveaus verkürzt die Prüfzeit und senkt die Kosten, während eine Verortung nahe dem Operationsbereich die Modellanpassung verbessert und die Extrapolationsunsicherheit reduziert.
 
 Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
@@ -38,11 +37,12 @@ Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander
 Geometrische Verzerrungen führen zwangsläufig zu einem Verlust dieser Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
 Besonders kritisch ist, dass die Auswirkungen peripherer Parameterstufen (Sternpunkte) oft erst spät im sequenziellen Prozess sichtbar werden - nämlich dann, wenn das initiale faktorielle Design erweitert wird.
 Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design-Abweichungen systematisch zu quantifizieren.
+Entgegen vergleichbarer Untersuchungen durch \textcite{Box.1963, Ahn.2015,Donev.2004,Zhang.2021} oder vergleichbarer liegt der Fokus hier nicht auf der reinen geometrischen Verzerrung, sondern auf der quantitativen Bewertung der Auswirkungen auf die Schätzpräzision und insbesondere die Trennschärfe im Kontext von Lebensdauerprognosen, was eine stochastische Simulation mit einem pseudo-physikalischen Modell erforderlich macht.
 
 \subsection{Methodik der stochastischen Simulation und Modellbildung} \label{subsec:simulationsmethodik}
 Um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bedarf es einer kontrollierten Untersuchungsumgebung, in der - im Gegensatz zu physischen Experimenten - die \textit{wahre} Natur des Systems bekannt ist.
-Nur durch den Vergleich der Analyseergebnisse mit einer vorab definierten Wahrheit (\textit{Ground Truth}) lassen sich Metriken wie die Schätzpräzision und insbesondere die \ac{power} valide bestimmen.
-Zu diesem Zweck wird eine Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert.
+Nur durch den Vergleich der Analyseergebnisse mit einer vorab definierten Wahrheit (engl. \textbf{Ground Truth}) lassen sich Metriken wie die Schätzpräzision und hauptsächlich die \ac{power} valide bestimmen.
+Zu diesem Zweck wird eine Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert.\\
 
 \textbf{Pseudo-physikalisches Simulationsmodell} \\
 Das zugrundeliegende Systemverhalten wird durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert.
@@ -52,19 +52,37 @@ Das Modell berücksichtigt neben den Haupteffekten explizit die für die Lebensd
 \begin{equation} \label{eq:simulation_model}
     \sym{y}_{\sym{idx_sim}} = \sym{beta}_{0} + \sym{beta}_{1}\sym{x}_{1} + \sym{beta}_{2}\sym{x}_{2} + \sym{beta}_{12}\sym{x}_{1}\sym{x}_{2} + \sym{beta}_{11}\sym{x}_{1}^2 + \sym{beta}_{22}\sym{x}_{2}^2 + \sym{epsilon}.
 \end{equation}
+
 Um ein realistisches, stochastisches Verhalten abzubilden, sind die Modellparameter nicht deterministisch fixiert.
-Den Regressionskoeffizienten $\symsub{beta}{idx_j}$ werden zwar nominale Startwerte zugewiesen, diese werden jedoch in jedem Simulationslauf mit einer definierten Streuung überlagert.
-Zusätzlich wird die resultierende Systemantwort $\sym{y}_{\text{sim}}$ mit einer Reststreuung $\sym{epsilon}$ beaufschlagt, um die inhärente aleatorische Unsicherheit des Systems (Messfehler, unbekannte Einflüsse) abzubilden.
+Den Regressionskoeffizienten $\symsub{beta}{idx_j}$ werden zwar nominale Startwerte zugewiesen (vgl. Tabelle~\ref{tab:simulation_parameters}), diese werden jedoch in jedem Simulationslauf mit einer definierten Streuung überlagert.
+Zusätzlich wird die resultierende Systemantwort $\sym{y}_{\sym{idx_sim}}$ mit einer Reststreuung $\sym{epsilon}$ beaufschlagt, um die inhärente aleatorische Unsicherheit des Systems (Messfehler, unbekannte Einflüsse) abzubilden.
+Die Default-Werte für die Koeffizienten sowie die vorgegebene Standardabweichung $\sym{sigma}_{\sym{idx_sim}}$, welche als Streuparameter für das stochastische Basis-Verhalten dient, sind in Tabelle~\ref{tab:simulation_parameters} zusammengefasst.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Nominale Startwerte und Streuparameter des pseudo-physikalischen Simulationsmodells}
+    \label{tab:simulation_parameters}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{@{}ll@{}}
+        \toprule
+        \textbf{Modellparameter}                                                           & \textbf{Default-Wert} \\
+        \midrule
+        Regressionskonstante $\sym{beta}_{0}$                                              & $30$                  \\
+        Regressionskoeffizienten $\symsub{beta}{idx_j}$ (für $j \in \{1, 2, 12, 11, 22\}$) & $10$                  \\
+        Standardabweichung der Systemantwort $\symsub{sigma}{idx_sim}$                     & $1$                   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 \textbf{Simulationsalgorithmus und Monte-Carlo-Ansatz} \\
 Dieses Modell wird mit den zu untersuchenden Versuchsplänen gekoppelt.
 Für jeden Stützpunkt des Versuchsplans werden die korrespondierenden Systemantworten simuliert.
-Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels \ac{MLE} oder \ac{OLS}.
-Um statistisch belastbare Aussagen zu treffen, wird das Verfahren in eine **Monte-Carlo-Simulation** mit $\symsub{n}{idx_MC} = 10.000$ Iterationen eingebettet.
+Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels \ac{MLE}, entsprechend der ausgeführten Methodik aus Abschnitt~\ref{subsubsec:mle}.
+Um statistisch belastbare Aussagen zu treffen, wird das Verfahren in eine \ac{MCS} mit $\symsub{n}{idx_MC} = 10.000$ Iterationen eingebettet.
 Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
 \begin{enumerate}
     \item \textbf{Präzision der Parameterschätzung:} Durch den Vergleich der geschätzten Parameter $\hat{\sym{beta}}$ mit den „wahren“ Koeffizienten $\sym{beta}_{\text{true}}$ lassen sich Bias und Varianz der Schätzung ermitteln.
-    \item \textbf{Bestimmung der Trennschärfe (Power):} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis der Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:sim_power}).
+    \item \textbf{Bestimmung der Trennschärfe (Power):} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis der Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:power}).
 \end{enumerate}
 
 \subsection{Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
