@@ -37,12 +37,14 @@ Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander
 Geometrische Verzerrungen führen zwangsläufig zu einem Verlust dieser Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
 Besonders kritisch ist, dass die Auswirkungen peripherer Parameterstufen (Sternpunkte) oft erst spät im sequenziellen Prozess sichtbar werden - nämlich dann, wenn das initiale faktorielle Design erweitert wird.
 Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design-Abweichungen systematisch zu quantifizieren.
-Entgegen vergleichbarer Untersuchungen durch \textcite{Box.1963, Ahn.2015,Donev.2004,Zhang.2021} oder vergleichbarer liegt der Fokus hier nicht auf der reinen geometrischen Verzerrung, sondern auf der quantitativen Bewertung der Auswirkungen auf die Schätzpräzision und insbesondere die Trennschärfe im Kontext von Lebensdauerprognosen, was eine stochastische Simulation mit einem pseudo-physikalischen Modell erforderlich macht.
+Entgegen bereits erfolgter Untersuchungen durch \textcite{Box.1963}, \textcite{Ahn.2015}, \textcite{Donev.2004}, \textcite{Zhang.2021} sowie \textcite{Jang.2002} oder vergleichbarer liegt der Fokus hierbei allerdings nicht auf der reinen geometrischen Verzerrung und der Analyse sowie Bewertung durch geeignete Optimalitätskriterien (entsprechend Abschnitt~\ref{subsec:optimal}), sondern auf der quantitativen Bewertung der Auswirkungen auf die Schätzpräzision und insbesondere die Trennschärfe im Kontext von Lebensdauerprognosen.
+Die Bewertung mittels Optimalitätskriterien wäre aus genannten Gründen ohnehin nicht zielführend, da im Umkehrschluss die Erfüllung der Kriterien im Planungsprozess erneut Unkenntniss über die tatsächlichen Auswirkungen auf die Schätzpräzision und Trennschärfe erzeugen würde.
+Somit wird eine stochastische Simulation mit pseudo-physikalischen Modellen erforderlich.
 
 \subsection{Methodik der stochastischen Simulation und Modellbildung} \label{subsec:simulationsmethodik}
 Um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bedarf es einer kontrollierten Untersuchungsumgebung, in der - im Gegensatz zu physischen Experimenten - die \textit{wahre} Natur des Systems bekannt ist.
-Nur durch den Vergleich der Analyseergebnisse mit einer vorab definierten Wahrheit (engl. \textbf{Ground Truth}) lassen sich Metriken wie die Schätzpräzision und hauptsächlich die \ac{power} valide bestimmen.
-Zu diesem Zweck wird eine Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert.\\
+Nur durch den Vergleich der Analyseergebnisse mit einer vorab definierten Wahrheit (engl. \textbf{Ground Truth}) lassen sich Metriken wie die Schätzpräzision und primär die \ac{power} erst bestimmen.
+Zu diesem Zweck wird für die Untersuchungen eine allgemeingültige Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert.\\
 
 \textbf{Pseudo-physikalisches Simulationsmodell} \\
 Das zugrundeliegende Systemverhalten wird durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert.
@@ -63,7 +65,7 @@ Die Default-Werte für die Koeffizienten sowie die vorgegebene Standardabweichun
     \caption{Nominale Startwerte und Streuparameter des pseudo-physikalischen Simulationsmodells}
     \label{tab:simulation_parameters}
     \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{@{}ll@{}}
+    \begin{tabular}{@{}lr@{}}
         \toprule
         \textbf{Modellparameter}                                                           & \textbf{Default-Wert} \\
         \midrule
@@ -81,42 +83,98 @@ Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels \ac{MLE},
 Um statistisch belastbare Aussagen zu treffen, wird das Verfahren in eine \ac{MCS} mit $\symsub{n}{idx_MC} = 10.000$ Iterationen eingebettet.
 Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
 \begin{enumerate}
-    \item \textbf{Präzision der Parameterschätzung:} Durch den Vergleich der geschätzten Parameter $\hat{\sym{beta}}$ mit den „wahren“ Koeffizienten $\sym{beta}_{\text{true}}$ lassen sich Bias und Varianz der Schätzung ermitteln.
+    \item \textbf{Präzision der Parameterschätzung:} Durch den Vergleich der geschätzten Parameter $\hat{\sym{Beta}}$ mit den \textit{wahren} Koeffizienten $\sym{Beta}_{\text{true}}$ lassen sich Bias und Varianz der Schätzung ermitteln.
     \item \textbf{Bestimmung der Trennschärfe (Power):} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis der Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:power}).
 \end{enumerate}
 
 \subsection{Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
-Um die Robustheit des \ac{CCD} gegenüber den eingangs erwähnten Abweichungen quantitativ zu bewerten, wurde eine umfassende Simulationsstudie durchgeführt.
-Der methodische Ansatz folgt einem \textit{Design of Experiments on Experiments}-Konzept: Die Eigenschaften des Versuchsplans sowie der Systemantwort werden als Faktoren eines übergeordneten Meta-Designs variiert.
-Im Gegensatz zu reinen Screening-Ansätzen kam hierfür ein **Zentral-Zusammengesetzter Versuchsplan (CCD) mit Blockbildung** zum Einsatz.
-Dies ermöglichte nicht nur die Identifikation linearer Haupteffekte, sondern auch die Analyse nicht-linearer Einflüsse der Störgrößen auf die Performance-Metriken.
+Um die Robustheit des \ac{CCD} gegenüber den eingangs erwähnten Abweichungen quantitativ zu bewerten, folgt der methodische Ansatz einem \textit{\ac{DoE} on Experimental Design}-Konzept: Die Eigenschaften der Versuchsplanung sowie der \textit{Ground Truth} werden als Faktoren eines übergeordneten Meta-Designs variiert.
+Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl geometrische Manipulationen als auch stochastische Einflüsse sowie methodische Parameter und deren Interaktionen: die Manipulation von Sternpunkten über deren axialen Abstand sowie Co-Faktorielle Korrelation, die Anzahl der Zentralpunkte, die Anzahl der Sternpunkte, das Verhältnis von Effektstärken untereinander, das Verhältnis von System- zu Messrauschen sowie das Signifikanzniveau selbst.
+Insbesondere die Berücksichtigung der Verhältnismäßigkeit von Effektstärken sowie der Rauschparameter ist von zentraler Bedeutung, da sie die Signal-zu-Rausch-Verhältnisse im Modell direkt beeinflussen und damit die Detektionswahrscheinlichkeit der Effekte maßgeblich steuern, gleichzeitig aber eine gegen unendlich tendierende Variationsmöglichkeit bieten, die in einem reinen Screening-Ansatz nicht abgedeckt werden könnte.
+Zur formalen Beschreibung des Untersuchungsraums werden diese acht Einflussgrößen, welche sowohl deterministische geometrische Manipulationen als auch stochastische Störgrößen abbilden, im Vektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]'$ zusammengefasst und in Tabelle~\ref{tab:sensitivitaetsfaktoren} definiert.
+Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation der faktoriellen Versuchspunkte oder die Einführung von Lebensdauermodellen werden bewusst ausgeschlossen, um die Komplexität des Meta-Designs handhabbar zu halten und die Interpretation der Ergebnisse zu erleichtern.
+\begin{table}[htbp]
+    \centering
+    \caption{Definition und Parametrisierung der Untersuchungsfaktoren für die Sensitivitätsanalyse}
+    \label{tab:sensitivitaetsfaktoren}
+    \renewcommand{\arraystretch}{1.3} % Etwas mehr Abstand für bessere Lesbarkeit
+    \begin{tabular}{@{}l p{0.45\textwidth} l l@{}}
+        \toprule
+         & \textbf{Beschreibung}                           & \textbf{Wertebereich} & \textbf{Charakteristik} \\
+        \midrule
 
-In der Untersuchung wurden acht Faktoren (a bis h) definiert, die sowohl deterministische geometrische Manipulationen als auch stochastische Störgrößen abbilden:
-\begin{itemize}
-    \item \textbf{Faktor a (Sternpunkt-Abstand $\alpha$):} Variation des Abstands der Sternpunkte zum Zentrum (z.\,B. flächenzentriert vs. rotierbar).
-    \item \textbf{Faktor b (Sternpunkt-Shift):} Asymmetrische Verschiebung eines Sternpunkts zur Simulation geometrischer Verzerrungen.
-    \item \textbf{Faktor c (Zentralpunkte):} Variation der Anzahl der Zentralpunkte.
-    \item \textbf{Faktor d (Sternpunkte):} Variation durch das Weglassen von Sternpunkten (z.\,B. durch Ausfall).
-    \item \textbf{Faktor e (System-Rauschen):} Verhältnis zwischen Modellkoeffizient und Systemabweichung.
-    \item \textbf{Faktor f (Effekt-Verhältnis):} Verhältnis zweier Haupteffekte zueinander.
-    \item \textbf{Faktor g (Mess-Rauschen):} Verhältnis zwischen Modellkoeffizient und Messfehler.
-    \item \textbf{Faktor h (Signifikanzniveau):} Das gewählte $\alpha$-Niveau für den Hypothesentest.
-\end{itemize}
+        $\symsub{xi_factor}{idx_fac_a}$
+         & \textbf{Sternpunkt-Abstand ($\alpha$)} \newline
+        Variation des Abstands der Sternpunkte zum Zentrum (z.\,B. flächenzentriert, rotierbar und extendiert).
+         & $[1,00;\, 2\cdot\symsub{alpha}{idx_D}]$
+         & Kont. (\ac{CCD})                                                                                  \\
+        \addlinespace
 
+        $\symsub{xi_factor}{idx_fac_b}$
+         & \textbf{Sternpunkt-Shift} \newline
+        Asymmetrische / Co-Faktorielle Verschiebung eines Sternpunkts zur Simulation geometrischer Verzerrungen und Faktoren-Korrelation.
+         & $[0,10;\, \symsub{alpha}{idx_D}]$
+         & Kont. (\ac{CCD})                                                                                  \\
+        \addlinespace
+
+        $\symsub{xi_factor}{idx_fac_c}$
+         & \textbf{Zentralpunkte} \newline
+        Variation der Anzahl der Zentralpunkte $\symsub{n}{idx_C}>0$.
+         & $[1,00;\, 8,00]$
+         & Diskret (Faktoriell)                                                                              \\
+        \addlinespace
+
+        $\symsub{xi_factor}{idx_fac_d}$
+         & \textbf{Sternpunkte} \newline
+        Variation durch Entfall von maximal $50\,\%$ der Sternpunkte (z.\,B. durch Zensierung oder Funktionalitätsverlust).
+         & $[2,00;\, 4,00]$
+         & Diskret (Faktoriell)                                                                              \\
+        \addlinespace
+
+        $\symsub{xi_factor}{idx_fac_e}$
+         & \textbf{System-Rauschen} \newline
+        Verhältnis zwischen pseudo-physikalischem Modellkoeffizienten und Systemabweichung bzw. Effektstreuung.
+         & $[0,80;\, 1,20]$
+         & Kont. (\ac{CCD})                                                                                  \\
+        \addlinespace
+
+        $\symsub{xi_factor}{idx_fac_f}$
+         & \textbf{Effekt-Verhältnis} \newline
+        Verhältnis zweier Haupteffekte zueinander: zwischen gleichwertiger Effektstärke oder einem Anteil von $10\,\%$.
+         & $[0,10;\, 1,00]$
+         & Kont. (\ac{CCD})                                                                                  \\
+        \addlinespace
+
+        $\symsub{xi_factor}{idx_fac_g}$
+         & \textbf{Mess-Rauschen} \newline
+        Verhältnis zwischen den Modellkoeffizienten und dem Wert des Streuparameters der Systemantwort.
+         & $[0,80;\, 1,20]$
+         & Kont. (\ac{CCD})                                                                                  \\
+        \addlinespace
+
+        $\symsub{xi_factor}{idx_fac_h}$
+         & \textbf{Signifikanzniveau} \newline
+        Das gewählte Signifikanzniveau.
+         & $[0,02;\, 0,08]$
+         & Kont. (\ac{CCD})                                                                                  \\
+
+        \bottomrule
+    \end{tabular}
+\end{table}
+Im Gegensatz zu reinen Screening-Ansätzen kommt für dieses Meta-Design daher erneut ein \ac{CCD} mit dedizierter Blockbildung zum Einsatz.
+Dies ermöglicht nicht nur die Identifikation linearer Haupteffekte, sondern auch die Analyse nicht-linearer Einflüsse der Faktoren auf die Performance-\acp{KPI} über diskrete Einstellungen wie beispielsweise ganzzahlige Umfänge von Zentralpunkten.
 Die Auswertung der Simulationsergebnisse offenbart eine signifikante Dichotomie in der Sensitivität der Zielgrößen.
-Hinsichtlich der **statistischen Power** dominieren eindeutig die stochastischen und methodischen Faktoren.
-Insbesondere Faktor **g** (Messfehler) und Faktor **h** (Signifikanzniveau) sowie Faktor **e** (Systemfehler) weisen die stärksten Effekte auf.
-Die geometrischen Design-Faktoren (**a, b, c**) zeigten im untersuchten Bereich einen vergleichsweise geringen Einfluss auf die Power.
-Selbst die Reduktion der Sternpunkte (Faktor **d**) führte nicht zwangsläufig zu einem kritischen Einbruch der Trennschärfe, solange das Rauschen kontrolliert blieb.
-
-Bezüglich der **Schätzgüte** gewinnen die geometrischen Faktoren jedoch an Bedeutung.
-Hier konnte nachgewiesen werden, dass insbesondere die Anzahl der Zentralpunkte (Faktor **c**) einen nicht-linearen Einfluss auf die Schätzung quadratischer Modellterme hat.
-Auch Interaktionen zwischen geometrischen Faktoren (z.\,B. **a** und **b**) traten deutlicher hervor.
+Hinsichtlich der \textbf{statistischen Power} dominieren dabei stochastische sowie methodische Faktoren.
+Insbesondere Faktor $\symsub{xi_factor}{idx_fac_g}$ (Messfehler) und Faktor $\symsub{xi_factor}{idx_fac_h}$ (Signifikanzniveau) sowie Faktor $\symsub{xi_factor}{idx_fac_e}$ (Systemfehler) weisen die stärksten Effekte auf.
+Die geometrischen Design-Faktoren ($\symsub{xi_factor}{idx_fac_a}, \symsub{xi_factor}{idx_fac_b}, \symsub{xi_factor}{idx_fac_c}$) zeigten im untersuchten Bereich einen vergleichsweise geringen Einfluss auf die Power.
+Selbst die Reduktion der Sternpunkte (Faktor $\symsub{xi_factor}{idx_fac_d}$) führte nicht zwangsläufig zu einem kritischen Einbruch der Trennschärfe, solange das Rauschen kontrolliert blieb.
+Bezüglich der \textbf{Schätzgüte} gewinnen die geometrischen Faktoren jedoch an Bedeutung.
+Hier konnte nachgewiesen werden, dass insbesondere die Anzahl der Zentralpunkte (Faktor $\symsub{xi_factor}{idx_fac_c}$) einen nicht-linearen Einfluss auf die Schätzung quadratischer Modellterme zeigt.
+Auch Interaktionen zwischen geometrischen Faktoren (z.\,B. $\symsub{xi_factor}{idx_fac_a}$ und $\symsub{xi_factor}{idx_fac_b}$) traten deutlicher hervor.
 
 Zusammenfassend lässt die Studie den Schluss zu, dass das \ac{CCD} eine hohe Robustheit bezüglich der reinen Effektdetektion (Power) aufweist, selbst bei moderaten geometrischen Abweichungen.
 Die Präzision der Modellierung reagiert jedoch sensibler auf Eingriffe.
 Für die Praxis bedeutet dies: Anpassungen an \ac{ALT}-Restriktionen sind vertretbar, wenn das primäre Ziel der Nachweis eines Effekts ist; für präzise Prognosemodelle ist die geometrische Integrität jedoch strikter zu wahren.
-
 
 
 \subsection{Fazit zu Orthogonalitäts-Abweichungen im CCD} \label{subsec:orthogonalitaetsabweichungen}
