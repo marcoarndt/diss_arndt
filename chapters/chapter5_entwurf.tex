@@ -88,12 +88,12 @@ Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
 \end{enumerate}
 
 \subsection{Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
-Um die Robustheit des \ac{CCD} gegenüber den eingangs erwähnten Abweichungen quantitativ zu bewerten, folgt der methodische Ansatz einem \textit{\ac{DoE} on Experimental Design}-Konzept:
+Um die Robustheit des \ac{CCD} gegenüber den eingangs erwähnten Abweichungen quantitativ zu bewerten, folgt der methodische Ansatz einem \textbf{\ac{DoE} on Experimental Design}-Konzept:
 Die Eigenschaften der Versuchsplanung sowie der \textit{Ground Truth} werden ebenfalls als Faktoren eines übergeordneten Meta-Designs variiert.
-Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl geometrische Manipulationen als auch stochastische Einflüsse sowie methodische Parameter und deren Interaktionen: die Manipulation von Sternpunkten über deren axialen Abstand sowie durch co-faktorielle Korrelation, die Variation der Anzahl der Zentralpunkte sowie der Sternpunkte, das relative Verhältnis von Effektstärken untereinander, das Verhältnis von System- zu Messrauschen sowie das Signifikanzniveau selbst.
+Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl geometrische Manipulationen als auch stochastische Einflüsse sowie methodische Parameter und deren Interaktionen: die Manipulation von Sternpunkten über deren axialen Abstand sowie durch co-faktorielle Korrelation, die Variation der Anzahl der Zentralpunkte sowie der Sternpunkte, die Änderung des relativen Verhältnisses von Effektstärken untereinander sowie von System- zu Messrauschen und zuletzt die Variation des Signifikanzniveaus selbst.
 Insbesondere die Berücksichtigung der Verhältnismäßigkeit von Effektstärken sowie der Rauschparameter ist von zentraler Bedeutung, da sie die Signal-zu-Rausch-Verhältnisse im Modell direkt beeinflussen und damit die Detektionswahrscheinlichkeit der Effekte maßgeblich steuern, gleichzeitig aber eine gegen unendlich tendierende Variationsmöglichkeit bieten, die in einem reinen Screening-Ansatz nicht abgedeckt werden könnte.
-Zur formalen Beschreibung des Untersuchungsraums werden diese acht Einflussgrößen, welche sowohl deterministische geometrische Manipulationen als auch stochastische kontinuierliche Störgrößen abbilden, im Vektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]'$ zusammengefasst und in Tabelle~\ref{tab:sensitivitaetsfaktoren} definiert.
-Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation der faktoriellen Versuchspunkte oder die Einführung von Lebensdauermodellen werden bewusst ausgeschlossen, um die Komplexität des Meta-Designs handhabbar zu halten und die Interpretation der Ergebnisse durch eine pragmatische Auswahl zu erleichtern.
+Zur formalen Beschreibung des Untersuchungsraums werden diese acht Einflussgrößen, welche sowohl deterministische geometrische Manipulationen als auch stochastische kontinuierliche Einflussgrößen abbilden, im Vektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]'$ zusammengefasst und in Tabelle~\ref{tab:sensitivitaetsfaktoren} definiert.
+Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation der faktoriellen Versuchspunkte oder die Einführung von Lebensdauermodellen werden dabei bewusst ausgeschlossen, um die Komplexität des Meta-Designs handhabbar zu halten und die Interpretation der Ergebnisse durch eine pragmatische Auswahl und im Fokus der in Kapitel~\ref{chap:ansatz} postulierten Zielsetzung zu erleichtern.
 \begin{table}[htbp]
     \centering
     \caption{Definition und Parametrisierung der Untersuchungsfaktoren für die Sensitivitätsanalyse}
@@ -163,67 +163,71 @@ Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation
     \end{tabular}
 \end{table}
 
-So werden schließlich Haupteffekte, Interaktionen sowie quadratische Effekte der Faktoren auf die Zielgrößen Performance-\acp{KPI} und damit Metriken für Effizienz und Effektivität - Power und Schätzgüte - ermittelt.
-
-Die Auswertung der Simulationsergebnisse offenbart eine signifikante Dichotomie in der Sensitivität der Zielgrößen.
-Hinsichtlich der \textbf{statistischen Power} dominieren dabei stochastische sowie methodische Faktoren.
-Insbesondere Faktor $\symsub{xi_factor}{idx_fac_g}$ (Messfehler) und Faktor $\symsub{xi_factor}{idx_fac_h}$ (Signifikanzniveau) sowie Faktor $\symsub{xi_factor}{idx_fac_e}$ (Systemfehler) weisen die stärksten Effekte auf.
-Die geometrischen Design-Faktoren ($\symsub{xi_factor}{idx_fac_a}, \symsub{xi_factor}{idx_fac_b}, \symsub{xi_factor}{idx_fac_c}$) zeigten im untersuchten Bereich einen vergleichsweise geringen Einfluss auf die Power.
-Selbst die Reduktion der Sternpunkte (Faktor $\symsub{xi_factor}{idx_fac_d}$) führte nicht zwangsläufig zu einem kritischen Einbruch der Trennschärfe, solange das Rauschen kontrolliert blieb.
-Bezüglich der \textbf{Schätzgüte} gewinnen die geometrischen Faktoren jedoch an Bedeutung.
-Hier konnte nachgewiesen werden, dass insbesondere die Anzahl der Zentralpunkte (Faktor $\symsub{xi_factor}{idx_fac_c}$) einen nicht-linearen Einfluss auf die Schätzung quadratischer Modellterme zeigt.
-Auch Interaktionen zwischen geometrischen Faktoren (z.\,B. $\symsub{xi_factor}{idx_fac_a}$ und $\symsub{xi_factor}{idx_fac_b}$) traten deutlicher hervor.
-
-Zusammenfassend lässt die Studie den Schluss zu, dass das \ac{CCD} eine hohe Robustheit bezüglich der reinen Effektdetektion (Power) aufweist, selbst bei moderaten geometrischen Abweichungen.
-Die Präzision der Modellierung reagiert jedoch sensibler auf Eingriffe.
-Für die Praxis bedeutet dies: Anpassungen an \ac{ALT}-Restriktionen sind vertretbar, wenn das primäre Ziel der Nachweis eines Effekts ist; für präzise Prognosemodelle ist die geometrische Integrität jedoch strikter zu wahren.
-
-
-% \subsection{Fazit zu Orthogonalitäts-Abweichungen im CCD} \label{subsec:orthogonalitaetsabweichungen}
+So werden schließlich Haupteffekte, Interaktionen sowie quadratische Effekte auf die Trennschärfe als wesentlicher Performance-\ac{KPI} und damit Metrik zur Effektivität ermittelt.
 
 \subsection{Ergebnisse der Sensitivitätsanalyse und Quantifizierung der Trennschärfe} \label{subsec:ergebnisse_sensitivitaet}
 
-Die simulative Untersuchung der Trennschärfe (\ac{power}) über den durch $\sym{xi_vek}$ definierten Untersuchungsraum offenbart signifikante Abhängigkeiten zwischen der Versuchsplan-Topologie und der Detektionswahrscheinlichkeit modellierter Effekte.
-In Abbildung~\ref{fig:power_results} sind die Ergebnisse der \ac{MCS} differenziert nach den diskreten Stufen der Zentralpunkte ($\symsub{xi_factor}{idx_fac_c}$) und Sternpunkte ($\symsub{xi_factor}{idx_fac_d}$) dargestellt.
+Die simulative Untersuchung der Trennschärfe (\ac{power}) über den durch $\sym{xi_vek}$ definierten Untersuchungsraum offenbart eine signifikante Dichotomie der Einflussgrößen.
+Es muss zwischen \textbf{dispositiven Designfaktoren} (Geometrie $\symsub{xi_factor}{idx_fac_a}$, Stützstellen $\symsub{xi_factor}{idx_fac_c}, \symsub{xi_factor}{idx_fac_d}$), welche durch den Versuchsplaner aktiv modifiziert werden können, und \textbf{externen Restriktionen} (Rauschen $\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$, Signifikanzniveau $\symsub{xi_factor}{idx_fac_h}$), die durch das physikalische Testsystem oder normative Vorgaben als unveränderlich zu betrachten sind, unterschieden werden.
 
-Es zeigt sich, dass die \textbf{Modell-Power} ($\sym{power}_{\text{Model}}$) über nahezu alle Konfigurationen hinweg eine hohe Robustheit aufweist und im Mittel Werte von $\bar{\sym{power}} > 0,99$ erreicht.
-Diese pauschale Metrik verdeckt jedoch kritische Defizite bei der Identifikation spezifischer Regressionskoeffizienten.
-Während die Haupteffekte ($\sym{beta}_1, \sym{beta}_2$) eine moderate Trennschärfe im Bereich von $0,63$ bis $0,80$ aufweisen, reagieren insbesondere die quadratischen Terme ($\sym{beta}_{11}, \sym{beta}_{22}$) sowie die Wechselwirkung ($\sym{beta}_{12}$) hochsensitiv auf die Reduktion von Versuchsstützpunkten.
-Eine Verringerung der Anzahl der Zentralpunkte ($\symsub{n}{idx_C}$) sowie der Sternpunkte ($\symsub{n}{idx_D}$) korreliert unmittelbar mit einer signifikanten Degradation der Trennschärfe, wobei für quadratische Terme Minima von $\sym{power} \approx 0,33$ verzeichnet werden. Dies unterstreicht die Notwendigkeit einer hinreichenden Besetzung der peripheren Design-Regionen zur Absicherung der Modellkrümmung.
+Betrachtet man zunächst die globale \textbf{Modell-Power} ($\sym{power}_{\text{Model}}$), so zeigt sich eine extrem hohe Robustheit gegenüber allen Variationen mit einem Mittelwert von $\overline{\sym{power}} > 99,7\,\%$.
+Diese pauschale Metrik verdeckt jedoch, dass die Identifikation spezifischer Einzel-Effekte -- insbesondere der für die Lebensdauerprognose kritischen quadratischen Terme -- deutlich sensitiver reagiert.
+Wie Tabelle~\ref{tab:summary_power_sensitivity} zeigt, liegt die mittlere Trennschärfe für quadratische Terme ($\sym{beta}_{11}, \sym{beta}_{22}$) nur noch im Bereich von $70\,\%$ bis $79\,\%$.
 
-Hinsichtlich der Quantifizierung der Einflüsse durch die Meta-Faktoren $a$ bis $h$ ergibt die Regressionsanalyse des Meta-Designs folgende zentrale Erkenntnisse (vgl. Tabelle~\ref{tab:effekt_quantifizierung}):
-
-\begin{itemize}
-    \item \textbf{Dominanz der Rauschparameter ($g, h$):} Die Faktoren für Messrauschen ($g$) und das gewählte Signifikanzniveau ($h$) stellen die dominantesten Einflussgrößen auf die \ac{power} dar. Mit Effektstärken von bis zu $2,15$ auf die Schätzgüte von $\sym{beta}_2$ überlagern sie teilweise die geometrischen Modifikationen.
-    \item \textbf{Geometrische Sensitivität ($a$):} Der axiale Abstand der Sternpunkte ($a$) zeigt eine selektive, aber massive Auswirkung auf die Präzision der quadratischen Terme, insbesondere auf $\sym{beta}_{22}$ (Effektstärke $3,72$). Eine Manipulation der Design-Ausdehnung zur Prozessbeschleunigung ist somit unmittelbar gegen den massiven Verlust an Schätzpräzision der Nichtlinearitäten abzuwägen.
-    \item \textbf{Stochastische Interaktionen:} Es lassen sich signifikante Wechselwirkungen zwischen dem System-Rauschen ($e$) und der Detektion des Achsenabschnitts ($\sym{beta}_0$) sowie zwischen dem Effekt-Verhältnis ($f$) und der Trennschärfe von $\sym{beta}_2$ nachweisen.
-\end{itemize}
+Die entscheidende Erkenntnis liefert jedoch der Blick auf die \textbf{Sensitivitätsindizes} (Spalte "Dominante Sensitivität").
+Für die Mehrheit der untersuchten Koeffizienten ($\sym{power}_{\text{Model}}, \sym{beta}_1, \sym{beta}_{12}, \sym{beta}_{11}$) ist nicht etwa eine Reduktion der Versuchspunkte der limitierende Faktor, sondern das \textbf{Messrauschen ($\symsub{xi_factor}{idx_fac_g}$)}.
+Mit einem Sensitivitätsindex von bis zu $1,99$ (bei $\sym{beta}_{11}$) dominiert die Güte der Messtechnik die Erfolgswahrscheinlichkeit des Tests.
+Da das Rauschen ($\symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_e}$) sowie das Signifikanzniveau ($\symsub{xi_factor}{idx_fac_h}$) in der praktischen Anwendung bei \ac{EoL}-Tests an bestehenden Prüfständen meist feste Randbedingungen darstellen, definieren sie eine natürliche Obergrenze der erreichbaren Trennschärfe, die auch durch maximale Versuchspläne nicht durchbrochen werden kann.
 
 \begin{table}[htbp]
     \centering
-    \caption{Zusammenfassende Statistik der Trennschärfe und Identifikation der Haupt-Einflussfaktoren (Main Drivers) über alle Design-Varianten}
+    \caption{Zusammenfassende Statistik der Trennschärfe und Identifikation der Haupt-Einflussfaktoren. Trennung in unveränderliche Systemgrößen vs. modifizierbare Designgrößen.}
     \label{tab:summary_power_sensitivity}
     \renewcommand{\arraystretch}{1.2}
     \small
-    \begin{tabular}{@{}l ccc l r@{}}
+    \begin{tabular}{@{}l c c l r@{}}
         \toprule
-        \textbf{Koeffizient}            & \multicolumn{3}{c}{\textbf{Trennschärfe ($\sym{power}$)}} & \multicolumn{2}{c}{\textbf{Dominante Sensitivität}}                                                                          \\
-        \cmidrule(lr){2-4} \cmidrule(lr){5-6}
-                                        & $\bar{\sym{power}}$                                       & $\sym{power}_{\text{min}}$                          & $\sym{power}_{\text{max}}$ & \textbf{Faktor}          & \textbf{Index} \\
+        \textbf{Koeffizient}            & \textbf{Mittelwert}      & \textbf{Wertebereich}        & \multicolumn{2}{c}{\textbf{Dominante Sensitivität}}                      \\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+                                        & $\overline{\sym{power}}$ & $[\text{min}; \text{max}]\%$ & \textbf{Faktor (Kategorie)}                         & \textbf{\sym{Eff}} \\
         \midrule
-        $\sym{power}_{\text{Model}}$    & $99,70\,\%$                                               & $94,51\,\%$                                         & $100,00\,\%$               & Messrauschen ($g$)       & $0,104$        \\
-        $\sym{power}_{\sym{beta}_0}$    & $97,86\,\%$                                               & $76,85\,\%$                                         & $100,00\,\%$               & Systemrauschen ($e$)     & $0,515$        \\
-        $\sym{power}_{\sym{beta}_1}$    & $78,55\,\%$                                               & $59,99\,\%$                                         & $90,77\,\%$                & Messrauschen ($g$)       & $1,496$        \\
-        $\sym{power}_{\sym{beta}_2}$    & $65,98\,\%$                                               & $37,34\,\%$                                         & $84,06\,\%$                & Effekt-Verhältnis ($f$)  & $2,530$        \\
-        $\sym{power}_{\sym{beta}_{12}}$ & $72,58\,\%$                                               & $52,47\,\%$                                         & $85,90\,\%$                & Messrauschen ($g$)       & $1,930$        \\
-        $\sym{power}_{\sym{beta}_{11}}$ & $70,94\,\%$                                               & $32,59\,\%$                                         & $86,81\,\%$                & Messrauschen ($g$)       & $1,988$        \\
-        $\sym{power}_{\sym{beta}_{22}}$ & $79,31\,\%$                                               & $33,37\,\%$                                         & $100,00\,\%$               & Sternpunkt-Abstand ($a$) & $3,724$        \\
+        $\sym{power}_{\sym{idx_M}}$     & $99,70\,\%$              & $[94,51; 100,00]$            & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $0,104$            \\
+        $\sym{power}_{\sym{beta}_0}$    & $97,86\,\%$              & $[76,85; 100,00]$            & $\symsub{xi_factor}{idx_fac_e}$ (System)            & $0,515$            \\
+        $\sym{power}_{\sym{beta}_1}$    & $78,55\,\%$              & $[59,99; \phantom{0}90,77]$  & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,496$            \\
+        $\sym{power}_{\sym{beta}_2}$    & $65,98\,\%$              & $[37,34; \phantom{0}84,06]$  & $\symsub{xi_factor}{idx_fac_f}$ (System)            & $2,530$            \\
+        $\sym{power}_{\sym{beta}_{12}}$ & $72,58\,\%$              & $[52,47; \phantom{0}85,90]$  & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,930$            \\
+        $\sym{power}_{\sym{beta}_{11}}$ & $70,94\,\%$              & $[32,59; \phantom{0}86,81]$  & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,988$            \\
+        \addlinespace
+        $\sym{power}_{\sym{beta}_{22}}$ & $79,31\,\%$              & $[33,37; 100,00]$            & $\symsub{xi_factor}{idx_fac_a}$ (Design)            & $3,724$            \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Zusammenfassend lässt sich konstatieren, dass die Effektivität eines \ac{CCD} im Kontext der Lebensdauerprognose maßgeblich durch die stochastischen Rahmenbedingungen ($g, h$) limitiert wird, während die geometrische Gestaltung ($a, c, d$) den entscheidenden Hebel zur gezielten Absicherung quadratischer Modellanteile darstellt.
-Für die weitere ökonomische Bewertung (Abschnitt~\ref{sec:kostenmodell}) ist festzuhalten, dass eine Reduktion der Versuchsstützpunkte zwar die Effizienz steigern mag, die Effektivität bei der Detektion von Ermüdungsphänomenen (Quadratische Terme) jedoch überproportional beeinträchtigt.
+Dies birgt ein erhebliches ökonomisches Potenzial: Wenn die Trennschärfe ohnehin primär durch das Systemrauschen limitiert wird, ist zu prüfen, ob Design-Vereinfachungen (Reduktion von $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$) überhaupt zu einer \textit{signifikanten} weiteren Verschlechterung führen.
+Tabelle~\ref{tab:impact_cd} quantifiziert diesen "Design-Penalty".
+Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_c}$) und Sternpunkte ($\symsub{xi_factor}{idx_fac_d}$) zwar die Power reduziert (z.\,B. $\Delta \sym{power} \approx -13\,\%$ für $\sym{beta}_{11}$), dieser Einfluss jedoch in der gleichen Größenordnung liegt wie die unvermeidbaren Rauscheffekte.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Systematischer Power-Verlust bei Reduktion der Versuchsstützpunkte (Vergleich Augmentiertes Design vs. Minimal-Design)}
+    \label{tab:impact_cd}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{@{}l rr@{}}
+        \toprule
+        \textbf{Koeffizient}            & \textbf{Effekt $\symsub{xi_factor}{idx_fac_c}$ (8 $\to$ 1 CP)} & \textbf{Effekt $\symsub{xi_factor}{idx_fac_d}$ (4 $\to$ 2 SP)} \\
+        \midrule
+        $\sym{power}_{\sym{beta}_0}$    & $-4,45\,\%$                                                    & $-0,30\,\%$                                                    \\
+        $\sym{power}_{\sym{beta}_1}$    & $-2,43\,\%$                                                    & $-5,99\,\%$                                                    \\
+        $\sym{power}_{\sym{beta}_2}$    & $+1,07\,\%^*$                                                  & $-7,95\,\%$                                                    \\
+        $\sym{power}_{\sym{beta}_{11}}$ & $-13,87\,\%$                                                   & $-12,80\,\%$                                                   \\
+        $\sym{power}_{\sym{beta}_{22}}$ & n.\,a.                                                         & $-6,07\,\%$                                                    \\
+        \bottomrule
+        \multicolumn{3}{l}{\footnotesize $^*$ Positiver Wert resultiert aus Varianzverschiebungen bei instabilen Designs.}
+    \end{tabular}
+\end{table}
+
+Einzig der quadratische Koeffizient $\sym{beta}_{22}$ bildet eine Ausnahme: Hier ist der geometrische Abstand der Sternpunkte ($\symsub{xi_factor}{idx_fac_a}$) mit einem extremen Index von $3,72$ der dominierende Faktor (vgl. Tabelle~\ref{tab:summary_power_sensitivity}).
+Für alle anderen Terme gilt: Da die Power durch die Systemparameter ($\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$) bereits maßgeblich vorbestimmt ist, besteht Spielraum zur Anpassung der Faktoren $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$ in Bereiche, die aus Aspekten der Versuchszeit und des Budgets attraktiv sind, ohne die Effektivität des Tests unverhältnismäßig stärker zu kompromittieren, als es das Messsystem ohnehin tut.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
