@@ -29,7 +29,7 @@ Zur Bewertung der Prognosegüte wird abschließend eine Erweiterung bestehender 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Analyse generischer Design-Abweichungen} \label{sec:abweichungen}
+\section{Effektivität von Versuchsplänen mit Orthogonalitäts-Abweichungen} \label{sec:abweichungen}
 Generell können sich Orthogonalitäts-Abweichungen durch physikalische Restriktionen der technischen Versuchsausführung, die spezifische Performance und Funktionalität des Systems oder Produkts prinzipiell oder bei \ac{ALT} durch möglicherweise bewusste Manipulation des Versuchsraums zur Steigerung der Extrapolationsgüte sein.
 Insbesondere im Kontext der Lebensdauerprognose sind solche Eingriffe praxisrelevant und begründet: Die Verschiebung der Versuchspunkte in Richtung höherer Lastniveaus verkürzt die Prüfzeit und senkt die Kosten, während eine Verortung nahe dem Operationsbereich die Modellanpassung verbessert und die Extrapolationsunsicherheit reduziert.
 
@@ -108,13 +108,19 @@ Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl 
     \item Variation des Signifikanzniveaus.
 \end{enumerate}
 Insbesondere die Berücksichtigung der Verhältnismäßigkeit von Effektstärken sowie der Rauschparameter ist von zentraler Bedeutung, da sie die Signal-zu-Rausch-Verhältnisse im Modell direkt beeinflussen und damit die Detektionswahrscheinlichkeit der Effekte maßgeblich steuern, gleichzeitig aber eine gegen unendlich tendierende Variationsmöglichkeit bieten, die in einem reinen Screening-Ansatz nicht abgedeckt werden könnte.
-Zur formalen Beschreibung des Untersuchungsraums werden diese acht Einflussgrößen, welche sowohl deterministische geometrische Manipulationen als auch stochastische kontinuierliche Einflussgrößen abbilden, im Vektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]'$ zusammengefasst und in Tabelle~\ref{tab:sensitivitaetsfaktoren} definiert.
+Zur formalen Beschreibung des Untersuchungsraums werden diese acht Einflussgrößen im Vektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]^\top$ zusammengefasst und in Tabelle~\ref{tab:sensitivitaetsfaktoren} definiert.
+Die Integration dieser Faktoren in das Meta-Design erfolgt dabei methodisch differenziert: Während die kontinuierlichen Stör- und Geometrieparameter ($\symsub{xi_factor}{idx_fac_a}, \symsub{xi_factor}{idx_fac_b}, \symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_f}, \symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_h}$) den Versuchsraum eines \ac{CCD} aufspannen, um stetige Sensitivitäten (Regressionskoeffizienten) zu schätzen, werden die strukturellen Designgrößen der Stützstellenanzahl ($\symsub{xi_factor}{idx_fac_c}, \symsub{xi_factor}{idx_fac_d}$) als kategoriale Blockfaktoren über drei diskrete Stufen behandelt.
+Diese Trennung ist zwingend geboten, da Variationen in der Stützstellenanzahl die topologische Struktur der Design-Matrix $\sym{X}$ und deren Freiheitsgrade diskontinuierlich verändern.
+Ein rein kontinuierliches Meta-Modell würde hier zu unzulässigen Interpolationen über strukturelle Singularitäten hinweg führen -- beispielsweise beim vollständigen Verlust der Schätzbarkeit quadratischer Terme bei extremer Ausdünnung.
+Folglich werden die kontinuierlichen Sensitivitäten der Rauschparameter stets \textit{innerhalb} konsistenter topologischer Design-Strukturen ermittelt, während der Haupteffekt der Stützstellenreduktion separat über die diskreten Mittelwertverschiebungen (Level-Shifts) der \ac{power} zwischen den Blöcken quantifiziert wird.
+Weiter erfüllt der \ac{DoE}-Ansatz mittels \ac{CCD} den Anspruch, für die Sensitivitätsanalyse effiziente eine notwendige statistische Inferenz und Kausalität zu identifizieren, wohingegen alternative Ansätze wie die reine Korrelationsanalyse, \textit{Space-Filling Designs} (wie \textit{Latin Hypercube Sampling} oder \textit{Sobol}-Sequenzen) oder die Anwendung von \ac{ML}-Modellen zur Schätzung von Sensitivitäten darüber hinaus Assoziationen für explorative Prädiktionen liefern würden \cite{Zio.2013,Kleppmann.2020}.
+
 Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation der faktoriellen Versuchspunkte oder die Einführung von Lebensdauermodellen werden dabei bewusst ausgeschlossen, um die Komplexität des Meta-Designs handhabbar zu halten und die Interpretation der Ergebnisse durch eine pragmatische Auswahl und im Fokus der in Kapitel~\ref{chap:ansatz} postulierten Zielsetzung zu erleichtern.
 \begin{table}[htbp]
     \centering
     \caption{Definition und Parametrisierung der Untersuchungsfaktoren für die Sensitivitätsanalyse}
     \label{tab:sensitivitaetsfaktoren}
-    \renewcommand{\arraystretch}{1.3} % Etwas mehr Abstand für bessere Lesbarkeit
+    \renewcommand{\arraystretch}{1.3}
     \begin{tabular}{@{}l p{0.45\textwidth} l l@{}}
         \toprule
          & \textbf{Beschreibung}                                          & \textbf{Wertebereich} & \textbf{Charakteristik} \\
@@ -122,7 +128,7 @@ Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation
 
         $\symsub{xi_factor}{idx_fac_a}$
          & \textbf{Sternpunkt-Abstand ($\symsub{alpha}{idx_D}$)} \newline
-        Variation des Abstands der Sternpunkte zum Zentrum (z.\,B. flächenzentriert, rotierbar und extendiert).
+        Variation des Abstands der Sternpunkte zum Zentrum (z.B. flächenzentriert, rotierbar und extendiert).
          & $[1,00;\, 2\cdot\symsub{alpha}{idx_D}]$
          & Kont. (\ac{CCD})                                                                                                 \\
         \addlinespace
@@ -143,7 +149,7 @@ Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation
 
         $\symsub{xi_factor}{idx_fac_d}$
          & \textbf{Sternpunkte} \newline
-        Variation durch Entfall von maximal $50\,\%$ der Sternpunkte (z.\,B. durch Zensierung oder Funktionalitätsverlust).
+        Variation durch Entfall von maximal $50\,\%$ der Sternpunkte (z.B. durch Zensierung oder Funktionalitätsverlust).
          & $[2,00;\, 4,00]$
          & Diskret (Faktoriell)                                                                                             \\
         \addlinespace
@@ -186,8 +192,12 @@ So werden schließlich Haupteffekte, Interaktionen sowie quadratische Effekte au
 Die simulative Untersuchung der Trennschärfe (\ac{power}) über den durch $\sym{xi_vek}$ definierten Untersuchungsraum offenbart eine signifikante Dichotomie der Einflussgrößen.
 Es muss zwischen \textbf{dispositiven Designfaktoren} (Geometrie $\symsub{xi_factor}{idx_fac_a}$, Stützstellen $\symsub{xi_factor}{idx_fac_c}, \symsub{xi_factor}{idx_fac_d}$), die vom Versuchsplaner aktiv modifiziert werden können, und \textbf{externen Restriktionen} (Rauschen $\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$, Signifikanzniveau $\symsub{xi_factor}{idx_fac_h}$), die durch das physikalische Testsystem oder normative Vorgaben als unveränderlich zu betrachten sind, unterschieden werden.
 
+Tabelle~\ref{tab:summary_power_sensitivity} zeigt dazu entsprechende Ergebnisse der Sensitivitätsanalyse aus Abschnitt~\ref{subsec:sensitivitaetsanalyse} in Form von Mittelwerten, Wertebereichen sowie den dominanten Einflussfaktoren für die Trennschärfe der einzelnen Modellparameter.
+Die Werte wurden durch eine \ac{ANOVA} des Meta-Designs ermittelt, wobei die Effektstärke $\sym{Eff}$ als Maß für die Dominanz eines Faktors auf die Trennschärfe herangezogen wird, sofern dieser als signifikant identifiziert und der im Model geschätzte Zusammenhang der Daten entsprechend erfolgreich auf Plausibilität (Residuenanalyse, Bestimmtheitsmaß, etc.) geprüft wurde.
+Tabelle~\ref{tab:summary_power_sensitivity} bildet dabei eine zusammenfassende Übersicht über die Ergebnisse, wobei weiterführende Details zu den einzelnen Effekten und deren Interaktionen in \colorbox{yellow}{Anhang~-} zu finden sind.
+
 Betrachtet man zunächst die globale \textbf{Modell-Power} ($\sym{power}_{\sym{idx_M}}$), so zeigt sich eine extrem hohe Robustheit gegenüber allen Variationen mit einem Mittelwert von $\overline{\sym{power}} > 99,7\,\%$.
-Diese pauschale Metrik verdeckt jedoch, dass das Verhalten spezifischer Einzel-Effekte -- insbesondere die Identifikation der für die Lebensdauerprognose kritischen quadratischen Terme -- deutlich sensitiver ausfällt.
+Diese pauschale Metrik verdeckt jedoch, dass das Verhalten spezifischer Einzel-Effekte - insbesondere die Identifikation der für die Lebensdauerprognose kritischen quadratischen Terme - deutlich sensitiver ausfällt.
 Wie Tabelle~\ref{tab:summary_power_sensitivity} zeigt, liegt die mittlere Trennschärfe für quadratische Terme ($\sym{power}_{\sym{beta}_{11}}, \sym{power}_{\sym{beta}_{22}}$) nur noch im Bereich von $70\,\%$ bis $79\,\%$.
 
 Die entscheidende Erkenntnis liefert jedoch der Blick auf die \textbf{Sensitivitätsindizes} (Spalte „Dominante Sensitivität“).
@@ -197,53 +207,85 @@ Da das Rauschen ($\symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_e}$)
 
 \begin{table}[htbp]
     \centering
-    \caption{Zusammenfassende Statistik der Trennschärfe und Identifikation der Haupt-Einflussfaktoren. Trennung in unveränderliche Systemgrößen vs. modifizierbare Designgrößen.}
+    \caption{Zusammenfassende Statistik der Trennschärfe und Identifikation der dominanten Einflussfaktoren. Die Ergebnisse demonstrieren, dass die Power maßgeblich durch unveränderliche Systemgrößen (Rauschen) und nur im Ausnahmefall durch modifizierbare Designgrößen limitiert wird.}
     \label{tab:summary_power_sensitivity}
     \renewcommand{\arraystretch}{1.2}
     \small
-    \begin{tabular}{@{}l c c l r@{}}
+    \begin{tabular}{@{}l r r c r@{}}
         \toprule
-        \textbf{Koeffizient}            & \textbf{Mittelwert}      & \textbf{Wertebereich}          & \multicolumn{2}{c}{\textbf{Dominante Sensitivität}}                      \\
+        \textbf{Koeffizient}            & \textbf{Mittelwert}      & \textbf{Wertebereich}          & \multicolumn{2}{c}{\textbf{Dominante Sensitivität}}                                    \\
         \cmidrule(lr){2-3} \cmidrule(lr){4-5}
-                                        & $\overline{\sym{power}}$ & $[\text{min}; \text{max}]\,\%$ & \textbf{Faktor (Kategorie)}                         & \textbf{\sym{Eff}} \\
+                                        & $\overline{\sym{power}}$ & $[\text{min}; \text{max}]\,\%$ & \textbf{Einflussfaktor $\symsub{xi_factor}{idx_i}$ (Kategorie)} & \textbf{$\sym{Eff}$} \\
         \midrule
-        $\sym{power}_{\sym{idx_M}}$     & $99,70\,\%$              & $[94,51; 100,00]$              & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $0,104$            \\
-        $\sym{power}_{\sym{beta}_0}$    & $97,86\,\%$              & $[76,85; 100,00]$              & $\symsub{xi_factor}{idx_fac_e}$ (System)            & $0,515$            \\
-        $\sym{power}_{\sym{beta}_1}$    & $78,55\,\%$              & $[59,99; \phantom{0}90,77]$    & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,496$            \\
-        $\sym{power}_{\sym{beta}_2}$    & $65,98\,\%$              & $[37,34; \phantom{0}84,06]$    & $\symsub{xi_factor}{idx_fac_f}$ (System)            & $2,530$            \\
-        $\sym{power}_{\sym{beta}_{12}}$ & $72,58\,\%$              & $[52,47; \phantom{0}85,90]$    & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,930$            \\
-        $\sym{power}_{\sym{beta}_{11}}$ & $70,94\,\%$              & $[32,59; \phantom{0}86,81]$    & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,988$            \\
+        \multicolumn{5}{c}{\textit{Globale Modellgüte:}}                                                                                                                                     \\
+        $\sym{power}_{\sym{idx_M}}$     & $99,7\,\%$               & $[94,5; 100,0]$                & $\symsub{xi_factor}{idx_fac_g}$ (System)                        & $0,10$               \\
         \addlinespace
-        $\sym{power}_{\sym{beta}_{22}}$ & $79,31\,\%$              & $[33,37; 100,00]$              & $\symsub{xi_factor}{idx_fac_a}$ (Design)            & $3,724$            \\
+        \midrule
+        \multicolumn{5}{c}{\textit{Spezifische Modelleffekte:}}                                                                                                                              \\
+        $\sym{power}_{\sym{beta}_0}$    & $97,9\,\%$               & $[76,9; 100,0]$                & $\symsub{xi_factor}{idx_fac_e}$ (System)                        & $0,52$               \\
+        $\sym{power}_{\sym{beta}_1}$    & $78,6\,\%$               & $[60,0; \phantom{0}90,8]$      & $\symsub{xi_factor}{idx_fac_g}$ (System)                        & $1,50$               \\
+        $\sym{power}_{\sym{beta}_2}$    & $66,0\,\%$               & $[37,3; \phantom{0}84,1]$      & $\symsub{xi_factor}{idx_fac_f}$ (System)                        & $2,53$               \\
+        $\sym{power}_{\sym{beta}_{12}}$ & $72,6\,\%$               & $[52,5; \phantom{0}85,9]$      & $\symsub{xi_factor}{idx_fac_g}$ (System)                        & $1,93$               \\
+        $\sym{power}_{\sym{beta}_{11}}$ & $70,9\,\%$               & $[32,6; \phantom{0}86,8]$      & $\symsub{xi_factor}{idx_fac_g}$ (System)                        & $1,99$               \\
+        $\sym{power}_{\sym{beta}_{22}}$ & $79,3\,\%$               & $[33,4; 100,0]$                & $\symsub{xi_factor}{idx_fac_a}$ \textbf{(Design)}               & $3,72$               \\
         \bottomrule
+        \multicolumn{5}{@{}l}{\footnotesize $\sym{Eff}$: Absoluter Effekt des Faktors auf die Power (aus ANOVA zum Meta-Design).}
     \end{tabular}
 \end{table}
 
 Dies birgt ein erhebliches ökonomisches Potenzial: Wenn die Trennschärfe ohnehin primär durch das System- und Messrauschen limitiert wird, ist zu prüfen, ob Design-Vereinfachungen (Reduktion von $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$) überhaupt zu einer \textit{signifikanten} weiteren Verschlechterung führen.
-Tabelle~\ref{tab:impact_cd} quantifiziert diesen „Design-Penalty“.
-Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_c}$) und Sternpunkte ($\symsub{xi_factor}{idx_fac_d}$) zwar die Power reduziert (z.\,B. $\Delta \sym{power} \approx -13\,\%$ für $\sym{power}_{\sym{beta}_{11}}$), dieser Einfluss jedoch in der gleichen Größenordnung liegt wie die unvermeidbaren Rauscheffekte.
+Tabelle~\ref{tab:impact_cd} quantifiziert diesen „\textit{Design-Penalty}“:
+Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_c}$) und Sternpunkte ($\symsub{xi_factor}{idx_fac_d}$) zwar die Trennschärfe reduziert (z.B. $\Delta \sym{power} \approx -13\,\%$ für $\sym{power}_{\sym{beta}_{11}}$), dieser Einfluss jedoch in der gleichen Größenordnung liegt wie die unvermeidbaren Rauscheffekte (\textit{Noise}).
+
+% \begin{table}[htbp]
+%     \centering
+%     \caption{Systematischer Power-Verlust bei Reduktion der Versuchsstützpunkte (Vergleich Augmentiertes Design vs. Minimal-Design)}
+%     \label{tab:impact_cd}
+%     \renewcommand{\arraystretch}{1.2}
+%     \begin{tabular}{@{}l rr@{}}
+%         \toprule
+%         \textbf{Koeffizient}            & \textbf{Effekt $\symsub{xi_factor}{idx_fac_c}$ (8 $\to$ 1 CP)} & \textbf{Effekt $\symsub{xi_factor}{idx_fac_d}$ (4 $\to$ 2 SP)} \\
+%         \midrule
+%         $\sym{power}_{\sym{beta}_0}$    & $-4,45\,\%$                                                    & $-0,30\,\%$                                                    \\
+%         $\sym{power}_{\sym{beta}_1}$    & $-2,43\,\%$                                                    & $-5,99\,\%$                                                    \\
+%         $\sym{power}_{\sym{beta}_2}$    & $+1,07\,\%^*$                                                  & $-7,95\,\%$                                                    \\
+%         $\sym{power}_{\sym{beta}_{11}}$ & $-13,87\,\%$                                                   & $-12,80\,\%$                                                   \\
+%         $\sym{power}_{\sym{beta}_{22}}$ & n.\,a.                                                         & $-6,07\,\%$                                                    \\
+%         \bottomrule
+%         \multicolumn{3}{l}{\footnotesize $^*$ Positiver Wert resultiert aus Varianzverschiebungen bei instabilen Designs.}
+%     \end{tabular}
+% \end{table}
 
 \begin{table}[htbp]
     \centering
-    \caption{Systematischer Power-Verlust bei Reduktion der Versuchsstützpunkte (Vergleich Augmentiertes Design vs. Minimal-Design)}
+    \caption{Systematischer Trennschärfe-Verlust ($\Delta \sym{power}$) bei Reduktion der Versuchsstützpunkte. Während lineare Haupteffekte relativ robust gegenüber einer Design-Ausdünnung bleiben, zeigt sich der primäre \textit{Design-Penalty} in der Schätzung der quadratischen Terme.}
     \label{tab:impact_cd}
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{@{}l rr@{}}
         \toprule
-        \textbf{Koeffizient}            & \textbf{Effekt $\symsub{xi_factor}{idx_fac_c}$ (8 $\to$ 1 CP)} & \textbf{Effekt $\symsub{xi_factor}{idx_fac_d}$ (4 $\to$ 2 SP)} \\
+        \textbf{Koeffizient}            & \multicolumn{2}{c}{\textbf{Durchschnittlicher Trennschärfe-Verlust ($\Delta \sym{power}$)}}                                                                              \\
+        \cmidrule(l){2-3}
+                                        & \textbf{bei $\symsub{xi_factor}{idx_fac_c}$ ($\symsub{n}{idx_C}=8 \to 1$)}                  & \textbf{bei $\symsub{xi_factor}{idx_fac_d}$ ($\symsub{n}{idx_S}=4 \to 2$)} \\
         \midrule
-        $\sym{power}_{\sym{beta}_0}$    & $-4,45\,\%$                                                    & $-0,30\,\%$                                                    \\
-        $\sym{power}_{\sym{beta}_1}$    & $-2,43\,\%$                                                    & $-5,99\,\%$                                                    \\
-        $\sym{power}_{\sym{beta}_2}$    & $+1,07\,\%^*$                                                  & $-7,95\,\%$                                                    \\
-        $\sym{power}_{\sym{beta}_{11}}$ & $-13,87\,\%$                                                   & $-12,80\,\%$                                                   \\
-        $\sym{power}_{\sym{beta}_{22}}$ & n.\,a.                                                         & $-6,07\,\%$                                                    \\
+        \multicolumn{3}{@{}c}{\textit{Konstante \& Haupteffekte}}                                                                                                                                                  \\
+        $\sym{power}_{\sym{beta}_0}$    & $-4,5\,\%$                                                                                  & $-0,3\,\%$                                                                 \\
+        $\sym{power}_{\sym{beta}_1}$    & $-2,4\,\%$                                                                                  & $-6,0\,\%$                                                                 \\
+        $\sym{power}_{\sym{beta}_2}$    & $+1,1\,\%$\rlap{$^*$}                                                                       & $-8,0\,\%$                                                                 \\
+        \addlinespace
+        \midrule
+        \multicolumn{3}{@{}c}{\textit{Quadratische Effekte}}                                                                                                                                                       \\
+        $\sym{power}_{\sym{beta}_{11}}$ & $-13,9\,\%$                                                                                 & $-12,8\,\%$                                                                \\
+        $\sym{power}_{\sym{beta}_{22}}$ & n.\,a.\rlap{$^{**}$}                                                                        & $-6,1\,\%$                                                                 \\
         \bottomrule
-        \multicolumn{3}{l}{\footnotesize $^*$ Positiver Wert resultiert aus Varianzverschiebungen bei instabilen Designs.}
+        \multicolumn{3}{l}{\footnotesize $^*$ \phantom{$^*$}Positiver Wert resultiert aus Varianzverschiebungen bei instabilen Designs.}                                                                           \\
+        \multicolumn{3}{l}{\footnotesize $^{**}$ Nicht auswertbar, da Singularität in quadratischem Term bei $\symsub{n}{idx_C}$.}
     \end{tabular}
 \end{table}
 
-Einzig der quadratische Koeffizient $\sym{power}_{\sym{beta}_{22}}$ bildet eine Ausnahme: Hier ist der geometrische Abstand der Sternpunkte ($\symsub{xi_factor}{idx_fac_a}$) mit einem extremen Index von $3,72$ der dominierende Faktor (vgl. Tabelle~\ref{tab:summary_power_sensitivity}).
-Für alle anderen Terme gilt: Da die Power durch die physikalischen Randbedingungen ($\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$) maßgeblich vorbestimmt ist, besteht Spielraum zur Anpassung der Faktoren $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$ in Bereiche, die aus Aspekten der Versuchszeit und des Budgets attraktiv sind, ohne die Effektivität des Tests unverhältnismäßig stärker zu kompromittieren, als es das Messsystem ohnehin tut.
+Einzig der quadratische Koeffizient $\sym{power}_{\sym{beta}_{22}}$ bildet eine Ausnahme:
+Hier ist der geometrische Abstand der Sternpunkte ($\symsub{xi_factor}{idx_fac_a}$) mit einem extremen Index von $3,72$ der dominierende Faktor (vgl. Tabelle~\ref{tab:summary_power_sensitivity}).
+Für alle anderen Terme gilt:
+Da die $\sym{power}$ durch die physikalischen Randbedingungen ($\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$) maßgeblich vorbestimmt ist, besteht Spielraum zur Anpassung der Faktoren $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$ in Bereiche, die aus Aspekten der Versuchszeit und des Budgets attraktiv sein können - ohne die Effektivität des Tests unverhältnismäßig stärker zu kompromittieren, als es das Messsystem ohnehin schon tut.
 
 \subsection{Generische Auswirkungen relevanter Orthogonalitäts-Abweichungen} \label{subsec:ergebnisse_generic}
 \subsection{Fazit: Statistische Effektivität und ökonomische Relevanz} \label{subsec:fazit_sensitivitaet}
