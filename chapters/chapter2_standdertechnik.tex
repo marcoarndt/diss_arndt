@@ -950,35 +950,19 @@ Basierend auf der Kandidatenmenge \sym{cand_set} (üblicherweise entsprechend ei
 Unter Einhaltung dieser harten Nebenbedingungen wird anschließend jene Design-Variante ausgewählt, welche die Aliasing-Struktur der Effekte zweiter Ordnung untereinander minimiert (z.\,B. durch Maximierung von \sym{D_opt}, vgl. Gleichung~\ref{eq:opt_D}).
 
 
-
-
-
-% Die \textbf{\textit{A}-Effizienz} $\sym{eff_A}$ misst die durchschnittliche Präzision der Parameterschätzung im Vergleich zu einem idealen orthogonalen Design gleicher Größe:
-% \begin{equation} \label{eq:eff_A}
-%     \sym{eff_A} = 100 \cdot \frac{\sym{p}}{\text{spur} (\sym{N} \cdot \sym{M}^{-1})}.
-% \end{equation}
-% Die \textbf{\textit{D}-Effizienz }$\sym{eff_D}$ beschreibt die Güte der Parameterschätzung im Vergleich zu einem idealen orthogonalen Design gleicher Größe. Hohe Werte (nahe $100\,\%$) stehen für eine effiziente Ausnutzung der Versuche:
-% \begin{equation} \label{eq:eff_D}
-%     \sym{eff_D} = 100 \cdot \left( \frac{\det(\sym{M})^{1/\sym{p}}}{\sym{N}} \right).
-% \end{equation}
-% Die \textbf{\textit{G}-Effizienz} $\sym{eff_G}$ bewertet die Robustheit der Vorhersage. Sie setzt die theoretisch minimal erreichbare Prädiktionsvarianz ($\sym{p}/\sym{n}$) ins Verhältnis zum tatsächlichen Worst-Case-Wert $\sym{G_opt}$ des Designs:
-% \begin{equation} \label{eq:eff_G}
-%     \sym{eff_G} = 100 \cdot \frac{\sym{p}}{\sym{pred_var}_{\max}}.
-% \end{equation}\
-
-
 \subsubsection{Signifikanz und Trennschärfe}
 Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. $\sym{power}$) verfügt.
 Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens (vergleiche \textbf{\sym{t}-Statistik}, \textbf{Signal-to-Noise Ratio}, \textbf{Signifikanztests} nach \textcite{Kleppmann.2020,Montgomery.2020,Goos.2011}) korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2017,Kleppmann.2020}.
-Insofern ist ein Effekt in praktischem Umfeld natürlich problemabhängig (Streuungscharakteristik der Lebensdauer, realisierbare Stichprobengröße, etc.) und meist von Bedeutung für $\sym{Eff} \geq 2\sym{sigma}$, wobei Trennschärfewerte $\geq 80\%$ als befriedigend gelten \cite{Rigdon.2022,Montgomery.2020}.
+Insofern ist ein Effekt in praktischem Umfeld natürlich problemabhängig (Streuungscharakteristik der Lebensdauer, realisierbare Stichprobengröße, etc.) und meist von Bedeutung für $\sym{Eff} \geq 2\sym{sigma}$, wobei Trennschärfewerte $\geq 80\,\%$ als befriedigend gelten \cite{Rigdon.2022,Montgomery.2020}.
 Insbesondere bei reduzierten Versuchsplänen und unter dem Einfluss stochastischer Lebensdauerstreuung ist die Power-Analyse jedoch essenziell, um das Risiko von falsch-negativen Schlussfolgerungen zu minimieren.
 Letztendlich kann die Trennschärfe somit als Garantiemetrik verstanden werden, die sicherstellt, dass ein geplanter Versuchsaufbau in der Lage ist, Effekte von praktischer Relevanz zu detektieren \cite{Cohen.1988,Myers.2016} - was vornehmlich in Bezug auf Lebensdauertests aufgrund genannter wirtschaftlicher Randbedingungen von hoher Bedeutung ist.
+
 Formalisiert wird dies im Rahmen \textbf{statistischer Hypothesentests} \cite{Kleppmann.2020,Montgomery.2020}.
 Die Zielsetzung besteht darin, den Nachweis zu erbringen, ob ein bestimmter Faktor $\symsub{x}{idx_j}$ einen signifikanten Einfluss auf die Systemantwort $\sym{y}$ ausübt.
 Dazu werden zwei konkurrierende Hypothesen formuliert:
 Die \textbf{Nullhypothese} $\sym{H0}$ unterstellt, dass kein Zusammenhang besteht, der korrespondierende Regressionskoeffizient $\symsub{beta}{idx_j}$ (vgl. Abschnitt~\ref{subsec:modellbildung}) also den Wert Null annimmt:
 \begin{equation} \label{eq:hypotheses}
-    \sym{H0}: \sym{beta}_j = 0 \quad \text{gegen} \quad \sym{H1}: \sym{beta}_j \neq 0.
+    \sym{H0}: \symsub{beta}{idx_j} = 0 \quad \text{gegen} \quad \sym{H1}: \symsub{beta}{idx_j} \neq 0.
 \end{equation}
 Die \textbf{Alternativhypothese} $\sym{H1}$ postuliert hingegen einen signifikanten Effekt ($\symsub{beta}{idx_j} \neq 0$).
 Die Entscheidung über die Annahme oder Ablehnung von $\sym{H0}$ basiert auf dem $\sym{p-Wert}$.
@@ -990,13 +974,35 @@ Die Power folglich ist definiert als das Komplement dieses Fehlers ($1 - \symsub
 \begin{equation} \label{eq:power}
     \sym{power} = \sym{Pr}(\sym{H0} \text{ ablehnen} \mid \sym{H1} \text{ ist wahr}) = 1 - \symsub{beta}{idx_error}.
 \end{equation}
-Im Kontext der Lebensdauerdatenanalyse, bei der nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten nicht über klassische \textbf{t-Tests} berechnen.
-Aus der Arbeit von \textcite{Nelder.1972} kommen hier \textbf{Verallgemeinerte Lineare Modelle}, engl. \textbf{\acp{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\sym{beta}_j$ vorzugsweise über \textbf{\acp{LR-Test}} (oder approximativ über \textbf{Wald-Tests }- vergleiche hierzu Arbeiten von \textcite{Rigdon.2022,Meeker.2022,Montgomery.2020,McCulloch.2001} ermittelt wird.
-Da für diese komplexen Verteilungsmodelle bei kleinen Stichprobenumfängen $\sym{n}$ keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung gerne numerisch mittels \textbf{\ac{MCS}} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
-Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.\,B. $\symsub{n}{idx_MC}=10^4$ Simulationsläufe).
+
+In idealisierten, orthogonalen Standard-Versuchsplänen unter der Annahme normalverteilter Residuen $\sym{epsilon} \sim \mathcal{N}(0, \sym{sigma}^2)$ lässt sich die Trennschärfe für klassische \ac{OLS}-Regressionsmodelle exakt analytisch bestimmen.
+Die \sym{power} für den Signifikanztest eines einzelnen Regressionskoeffizienten $\symsub{beta}{idx_j}$ berechnet sich aus der Wahrscheinlichkeit, dass die Teststatistik den kritischen Wert der zentralen Prüfverteilung überschreitet.
+Unter der Gültigkeit der Alternativhypothese $\sym{H1}$ folgt die Teststatistik jedoch einer verschobenen, \textit{nicht-zentralen} Verteilung (z.B. der nicht-zentralen \sym{t}-Verteilung).
+Der Grad dieser Verschiebung wird durch den sogenannten \textbf{Nichtzentralitätsparameter} $\symsub{delta}{idx_nc}$ quantifiziert \cite{Montgomery.2020,Kutner.2005}.
+Für die Überprüfung eines individuellen Modellparameters ist dieser definiert als:
+\begin{equation} \label{eq:non_centrality}
+    \symsub{delta}{idx_nc} = \frac{|\symsub{beta}{idx_j}|}{\sym{sigma} \sqrt{\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}}}
+\end{equation}
+wobei $|\symsub{beta}{idx_j}|$ die zu detektierende wahre Effektstärke, $\sym{sigma}$ die Standardabweichung des experimentellen Rauschens und $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$ das $\sym{idx_j}$-te Diagonalelement der inversen Informationsmatrix $\sym{M}^{-1}$ (vgl. Abschnitt~\ref{subsec:optimal}) darstellt \cite{Cohen.1988,Myers.2016}.
+Anhand von Gleichung~\ref{eq:non_centrality} wird der mathematische Zusammenhang der Effektivität deutlich: Die Trennschärfe, welche monoton mit $\symsub{delta}{idx_nc}$ wächst, steigt bei größeren Effekten und sinkt bei stärkerem Rauschen.
+
+Die entscheidende Rolle des Versuchsplans manifestiert sich im Term $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$.
+In einem vollständig orthogonalen Versuchsplan ist die Informationsmatrix $\sym{M} = \sym{X}'\sym{X}$ eine reine Diagonalmatrix.
+Die Schätzer der Koeffizienten sind somit linear unabhängig und das Diagonalelement der Inversen minimiert sich.
+Sobald jedoch geometrische Verzerrungen auftreten und die Orthogonalität verloren geht, entstehen signifikante Kovarianzen (Werte abseits der Hauptdiagonalen in $\sym{M}$).
+Bei der Invertierung der Matrix führt dies zu einer Inflation der Varianzen, wodurch der Wert $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$ anwächst.
+Dies vergrößert den Nenner in Gleichung~\ref{eq:non_centrality}, reduziert den Nichtzentralitätsparameter $\symsub{delta}{idx_nc}$ und mindert somit unmittelbar die analytische Trennschärfe.
+
+Solche analytischen Berechnungen, die auf der exakten Bestimmung von $\symsub{delta}{idx_nc}$ beruhen, verkomplizieren sich erheblich, sobald asymmetrische Design-Modifikationen und Mehrfach-Korrelationen greifen.
+Im Kontext der Lebensdauerdatenanalyse, bei der zudem nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten folglich ohnehin nicht mehr über klassische \textbf{t-Tests} ableiten.
+Aus der Arbeit von \textcite{Nelder.1972} kommen hier \textbf{Verallgemeinerte Lineare Modelle}, engl. \textbf{\acp{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\symsub{beta}{idx_j}$ vorzugsweise über den \textbf{\ac{LR-Test}} (oder approximativ über \textbf{Wald-Tests} - vergleiche hierzu Arbeiten von \textcite{Rigdon.2022,Meeker.2022,Montgomery.2020,McCulloch.2001}) ermittelt wird.
+Da für diese komplexen Verteilungsmodelle - insbesondere unter dem Einfluss von Orthogonalitätsabweichungen und bei kleinen Stichprobenumfängen $\sym{n}$ - keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung in der modernen Praxis numerisch mittels \textbf{\ac{MCS}} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
+Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.B. $\symsub{n}{idx_MC}=10^4$ Simulationsläufe).
 Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht bzw. mit Streuung überlagert und/oder zensiert.
 Anschließend erfolgt die Modellbildung und Hypothesenprüfung.
 Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant ($\sym{p-Wert} < \sym{alpha}$) erkannt wird, entspricht der geschätzten $\sym{power}$ des Designs.
+
+
 
 \subsection{Statistische Modellbildung} \label{subsec:modellbildung}
 Die statistische Modellbildung transformiert die durch den Versuchsplan generierte Datenbasis in einen funktionalen, empirisch basierten Zusammenhang zwischen den Einflussfaktoren $\symsub{x}{idx_i}$ und der Lebensdauerantwort.

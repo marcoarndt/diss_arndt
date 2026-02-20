@@ -2675,6 +2675,59 @@
       \verb Cohen 1988 - Statistical power analysis:Attachments/Cohen 1988 - Statistical power analysis.pdf:application/pdf
       \endverb
     \endentry
+    \entry{Kutner.2005}{book}{}{}
+      \name{author}{4}{}{%
+        {{hash=f20de387d6341cbd5058ddb4eb7223d7}{%
+           family={Kutner},
+           familyi={K\bibinitperiod},
+           given={Michael\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=816bcd6921f6bc62230351ab3eff3e1a}{%
+           family={Nachtsheim},
+           familyi={N\bibinitperiod},
+           given={Christopher\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=1ad29adfd24079278098723ad43f7654}{%
+           family={Neter},
+           familyi={N\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fa8aa34b1374a5f35c1008767cb1eb56}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston, Mass.}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill Irwin}%
+      }
+      \strng{namehash}{8a64a5d1d5ef7bd2ba4b5c70d2cf4157}
+      \strng{fullhash}{92b26a15379452b615c2737ec7b743c2}
+      \strng{fullhashraw}{92b26a15379452b615c2737ec7b743c2}
+      \strng{bibnamehash}{92b26a15379452b615c2737ec7b743c2}
+      \strng{authorbibnamehash}{92b26a15379452b615c2737ec7b743c2}
+      \strng{authornamehash}{8a64a5d1d5ef7bd2ba4b5c70d2cf4157}
+      \strng{authorfullhash}{92b26a15379452b615c2737ec7b743c2}
+      \strng{authorfullhashraw}{92b26a15379452b615c2737ec7b743c2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5. ed.}
+      \field{isbn}{0072386886}
+      \field{series}{McGraw-Hill/Irwin series Operations and decision sciences}
+      \field{title}{Applied Linear Statistical Models}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/bios/mh042/2004052447.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/bios/mh042/2004052447.html
+      \endverb
+    \endentry
     \entry{Nelder.1972}{article}{}{}
       \name{author}{2}{}{%
         {{hash=97a60525676f2f0735b3bace8039e9af}{%
@@ -4057,6 +4110,81 @@
       \range{pages}{12}
       \verb{doi}
       \verb 10.1081/STA-120002649
+      \endverb
+    \endentry
+    \entry{Arndt.2023}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{fullhash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{fullhashraw}{06de43da47c8b5ca086684bf9c477217}
+      \strng{bibnamehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authorbibnamehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authornamehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authorfullhash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authorfullhashraw}{06de43da47c8b5ca086684bf9c477217}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{6th International Conference on Design of Experiments (ICODOE 2022)}
+      \field{title}{Power and Accuracy Characterization of Regression Models in The Presence of Orthogonality Deviations in CCDs. In: 6th International Conference on Design of Experiments (ICODOE 2022)}
+      \field{year}{08.-11.05.2023}
+      \verb{urlraw}
+      \verb https://www.memphis.edu/msci/icodoe22/index.php
+      \endverb
+      \verb{url}
+      \verb https://www.memphis.edu/msci/icodoe22/index.php
+      \endverb
+    \endentry
+    \entry{Arndt.2022c}{incollection}{}{}
+      \name{author}{3}{}{%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1bd42f23ad4c4d4311ca8cd8a0966357}{%
+           family={Mell},
+           familyi={M\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{fullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \strng{fullhashraw}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \strng{bibnamehash}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \strng{authorbibnamehash}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \strng{authorfullhashraw}{f938eb5ea778b1893dcdfbcde1ea455d}
+      \field{extraname}{3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Probabilistic Safety Assessment and Management PSAM 16, June 26-July 1, 2022, Honolulu, Hawaii}
+      \field{title}{Generic effects of deviations from test design orthogonality on test power and regression modelling of Central-Composite Designs}
+      \verb{urlraw}
+      \verb https://www.iapsam.org/PSAM16/papers/MA19-PSAM16.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.iapsam.org/PSAM16/papers/MA19-PSAM16.pdf
       \endverb
     \endentry
   \enddatalist

@@ -8,47 +8,50 @@ Nach der in Kapitel~\ref{chap:screening} beschriebenen qualitativen Vorselektion
 Ziel ist es, etablierte Standard-\acp{RSD} gezielt an die spezifischen Anforderungen der Lebensdauerprognose anzupassen, ohne deren statistische Integrität unzulässig zu kompromittieren.
 In Anlehnung an die Ausführungen aus Abschnitt~\ref{sec:forschungsfragen} gilt dabei fortwährend die Prämisse, dass insbesondere das \ac{CCD} aufgrund seiner sequenziellen Augmentierbarkeit (Screening $\to$ lineares Modell $\to$ quadratische Modellterme, vgl. Abbildung~\ref{fig:abb2.08_strategy}) im Kontext kostenintensiver \ac{EoL}-Tests einen entscheidenden operativen Vorzug bietet und daher im Fokus der vorliegenden Untersuchung steht.
 
-Dieses Kapitel widmet sich  in zwei Schritten zunächst der systematischen Analyse geometrischer Design-Abweichungen und deren Auswirkung auf die statistische Güte (siehe Abschnitt~\ref{sec:abweichungen}).
+Dieses Kapitel widmet sich  in zwei Schritten zunächst der systematischen Analyse geometrischer Design-Abweichungen und deren Auswirkung auf die statistische Güte \colorbox{yellow}{(siehe Abschnitt~\ref{sec:abweichungen})}.
 Unabhängig von einer möglichen Beschleunigung durch \ac{ALT} wird zuerst untersucht, inwieweit typische Manipulationen der Design-Geometrie wie variierende Koordinaten oder asymmetrische Replikationen der Versuchspunkte sowie mangelnde Robustheit in der Versuchssteuerung die Performance beeinflussen.
 Um diese komplexen Abhängigkeiten generisch und losgelöst von spezifischen Produktdaten zu untersuchen, ist der Einsatz numerischer Simulationen immer dann erforderlich, wenn die Parameterschätzung betreffende Metriken erfasst werden sollen.
-Mithilfe von \acp{MCS} und fiktiven physikalischen Modellen wird die Entwicklung dieser Verhältnismäßigkeiten somit systematisch aufgezeigt, siehe Abschnitt~\ref{subsec:simulationsmethodik}.
-In einem zweiten Schritt werden daraus als signifikant erfasste Einflüsse durch Design-Modifikationen hinsichtlich ihrer generischen Auswirkung auf die Modellierung bewertet (Abschnitt~\ref{subsec:sensitivitaetsanalyse}).
-Sie sollen im weiteren Verlauf der Untersuchung als Grundlage für die Auswahl vielversprechender Design-Alternativen dienen, die im Anschluss ökonomisch bewertet werden.
-Um hierbei valide Aussagen über die \textbf{Effektivität} einer Konfiguration zu treffen, wird neben der bloßen Versuchsplan-Performance oder Schätzgüte die \textbf{statistische Trennschärfe (\ac{power})} als übergeordnete Metrik herangezogen.
-Sie fungiert als Indikator für die Erfolgsgarantie der Testagenda, indem sie die Wahrscheinlichkeit beziffert, mit der real existierende Effekte tatsächlich mithilfe des jeweiligen Versuchsplans als signifikant erkannt werden, vgl. Abschnitt~\ref{subsec:optimal}.
-Was in der allgemeinen \ac{DoE}-Methodik oft als nachgeordnete Größe behandelt wird \cite{Rigdon.2022,Montgomery.2020}, avanciert bei kostenintensiven \ac{EoL}-Tests zum \ac{KPI}: Jede Manipulation des Designs muss zwingend gegen den potenziellen Verlust an der Detektionswahrscheinlichkeit hinsichtlich der Effekte auf die Lebensdauer innerhalb des \ac{GLM} abgewogen werden (entsprechend Abschnitt~\ref{subsec:orthogonalitaetsabweichungen}).
+Mithilfe von \acp{MCS} und fiktiven physikalischen Modellen wird die Entwicklung dieser Verhältnismäßigkeiten somit systematisch aufgezeigt, siehe \colorbox{yellow}{Abschnitt~\ref{subsec:simulationsmethodik}}.
+Erst so werden \textbf{Auswirkungen von Orthogonalitäts-Abweichungen} quantifizierbar und damit die Grundlage für die Auswahl von Design-Alternativen geschaffen.
 
-Darauf aufbauend führt Abschnitt~\ref{sec:kostenmodell} ein Kostenmodell ein, um außerdem die monetären Konsequenzen derartiger Modifikationen zu quantifizieren.
-Die Bewertung der Versuchspläne erfolgt dabei streng nach der Kerndefinition von \textbf{Effizienz} als Maß für die Leistungsfähigkeit: Welche Information wird perspektivisch generiert und welcher monetäre Aufwand steht dem gegenüber?
+In einem zweiten Schritt werden als signifikant und dominant erfasste Einflüsse durch Design-Modifikationen hinsichtlich ihrer generischen Auswirkung auf die Modellierung bewertet \colorbox{yellow}{(Abschnitt~\ref{subsec:sensitivitaetsanalyse})}.
+Sie sollen im weiteren Verlauf der Untersuchung als Grundlage für die Auswahl vielversprechender Design-Alternativen dienen und im Anschluss ökonomisch bewertet.
+Um hierbei valide Aussagen über die Effektivität einer Konfiguration zu treffen, wird neben der bloßen Versuchsplan-Performance oder Schätzgüte maßgeblich die \textbf{statistische Trennschärfe (\ac{power})} als übergeordnete Metrik herangezogen.
+Sie fungiert als Indikator für die Erfolgsgarantie der Testagenda, indem sie die Wahrscheinlichkeit beziffert, mit der real existierende Effekte tatsächlich mithilfe des jeweiligen Versuchsplans als signifikant erkannt werden, vgl. \colorbox{yellow}{Abschnitt~\ref{subsec:optimal}}.
+Was in der allgemeinen \ac{DoE}-Methodik oft als nachgeordnete Größe behandelt wird \cite{Rigdon.2022,Montgomery.2020}, avanciert bei kostenintensiven \ac{EoL}-Tests zum \ac{KPI}: Jede Manipulation des Designs muss zwingend gegen den potenziellen Verlust an der Detektionswahrscheinlichkeit hinsichtlich der Effekte auf die Lebensdauer innerhalb des \ac{GLM} abgewogen werden.
+
+Darauf aufbauend führt \colorbox{yellow}{Abschnitt~\ref{sec:kostenmodell}} ein Kostenmodell ein, um die monetären Konsequenzen derartiger Modifikationen zu quantifizieren.
+Die Bewertung der Versuchspläne erfolgt dabei streng nach der Kerndefinition von Effizienz als Maß für die Leistungsfähigkeit: Welche Information wird perspektivisch generiert und welcher monetäre Aufwand steht dem gegenüber?
 Daraus leitet sich die zentrale ökonomische Leitfrage ab: \textit{Wie viel Trennschärfe ist finanzierbar?}
-Erst so wird quantifiziert, inwiefern zufällige oder möglicherweise bewusste Design-Modifikationen die Effizienz des \ac{RSD} verändern und zu welchem Maß die Effektivität dabei beeinträchtigt wird.
+Erst so wird quantifiziert, inwiefern zufällige oder möglicherweise bewusste Design-Modifikationen die \textbf{Effizienz} des \ac{RSD} verändern und zu welchem Maß die \textbf{Effektivität} dabei beeinträchtigt wird.
 
-Zur Bewertung der Prognosegüte wird abschließend eine Erweiterung bestehender Visualisierungsmethoden vorgestellt (Abschnitt~\ref{sec:visualisierung}), bevor die Gesamtmethodik in der numerischen Simulationsstudie anhand der Zuverlässigkeitsmodellierung mit Aussagesicherheit final bewertet wird (Abschnitt~\ref{sec:zuv_vb}).
+Zur Bewertung der Prognosegüte wird abschließend eine Erweiterung bestehender Visualisierungsmethoden vorgestellt \colorbox{yellow}{(Abschnitt~\ref{sec:visualisierung})}, bevor die Gesamtmethodik in der numerischen Simulationsstudie anhand der Zuverlässigkeitsmodellierung mit Aussagesicherheit final bewertet wird \colorbox{yellow}{(Abschnitt~\ref{sec:zuv_vb})}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Analyse generischer Design-Abweichungen} \label{sec:abweichungen}
-Die Versuchsplanung für die Zuverlässigkeitstechnik kann aus praktischen Gründen abweichen vom idealen Lehrbuch-Design.
-Ursachen hierfür können physikalische Restriktionen des Prüfstands, die spezifische Performance des Systems prinzipiell oder bei \ac{ALT} oder eine bewusste Manipulation des Versuchsraums zur Steigerung der Extrapolationsgüte sein.
+Generell können sich Orthogonalitäts-Abweichungen durch physikalische Restriktionen der technischen Versuchsausführung, die spezifische Performance und Funktionalität des Systems oder Produkts prinzipiell oder bei \ac{ALT} durch möglicherweise bewusste Manipulation des Versuchsraums zur Steigerung der Extrapolationsgüte sein.
 Insbesondere im Kontext der Lebensdauerprognose sind solche Eingriffe praxisrelevant und begründet: Die Verschiebung der Versuchspunkte in Richtung höherer Lastniveaus verkürzt die Prüfzeit und senkt die Kosten, während eine Verortung nahe dem Operationsbereich die Modellanpassung verbessert und die Extrapolationsunsicherheit reduziert.
 
 Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
-Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht (vgl. Abschnitt~\ref{subsubsec:rsm}).
+Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht - vgl. Abschnitt~\ref{subsubsec:rsm}.
 Geometrische Verzerrungen führen zwangsläufig zu einem Verlust dieser Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
-Besonders kritisch ist, dass die Auswirkungen peripherer Parameterstufen (Sternpunkte) oft erst spät im sequenziellen Prozess sichtbar werden - nämlich dann, wenn das initiale faktorielle Design erweitert wird.
+Besonders kritisch ist, dass die Auswirkungen peripherer Parameterstufen (Sternpunkte) im augmentierten Ansatz erst spät im sequenziellen Prozess sichtbar werden - nämlich dann, wenn das initiale faktorielle Design erweitert wird.
 Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design-Abweichungen systematisch zu quantifizieren.
-Entgegen bereits erfolgter Untersuchungen durch \textcite{Box.1963}, \textcite{Ahn.2015}, \textcite{Donev.2004}, \textcite{Zhang.2021} sowie \textcite{Jang.2002} oder vergleichbarer liegt der Fokus hierbei allerdings nicht auf der reinen geometrischen Verzerrung und der Analyse sowie Bewertung durch geeignete Optimalitätskriterien (entsprechend Abschnitt~\ref{subsec:optimal}), sondern auf der quantitativen Bewertung der Auswirkungen auf die Schätzpräzision und insbesondere die Trennschärfe im Kontext von Lebensdauerprognosen.
-Die Bewertung mittels Optimalitätskriterien wäre aus genannten Gründen ohnehin nicht zielführend, da im Umkehrschluss die Erfüllung der Kriterien im Planungsprozess erneut Unkenntniss über die tatsächlichen Auswirkungen auf die Schätzpräzision und Trennschärfe erzeugen würde.
-Somit wird eine stochastische Simulation mit pseudo-physikalischen Modellen erforderlich.
+Entgegen bereits erfolgter Untersuchungen durch \textcite{Box.1963}, \textcite{Ahn.2015}, \textcite{Donev.2004}, \textcite{Zhang.2021} sowie \textcite{Jang.2002} oder vergleichbarer liegt der Fokus hierbei allerdings nicht auf der reinen geometrischen Verzerrung und der Analyse sowie Bewertung durch geeignete Optimalitätskriterien (entsprechend Abschnitt~\ref{subsec:optimal}).
+Die hier erwähnten Beiträge konzentrieren sich primär auf die geometrische Charakterisierung der Design-Abweichungen und deren Einfluss auf die Struktur der Design-Matrix bzw. geeigneter Optimalätskriterien.
+Vielmehr erfolgt hier eine Quantifizierung der Auswirkungen auf die Schätzpräzision und insbesondere die Trennschärfe im Kontext von Lebensdauerprognosen.
+Die Bewertung mittels Optimalitätskriterien wäre aus genannten Gründen ohnehin nicht zielführend, da im Umkehrschluss die Erfüllung der Kriterien im Planungsprozess erneut Unkenntnis über die tatsächlichen Auswirkungen auf die Schätzpräzision und Trennschärfe erzeugen würde.
+Dies hat zur Folge, dass zunächst eine numerische Simulation erforderlich ist, um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bevor überhaupt eine Bewertung der Design-Alternativen erfolgen kann.
 
-\subsection{Methodik zur simulativen Ermittlung von Auswirkungen durch Orthogonalitätsabweichungen} \label{subsec:simulationsmethodik}
+\subsection{Methodik zur simulativen Ermittlung von Auswirkungen durch Orthogonalitäts-Abweichungen} \label{subsec:simulationsmethodik}
 Um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bedarf es einer kontrollierten Untersuchungsumgebung, in der - im Gegensatz zu physischen Experimenten - die \textit{wahre} Natur des Systems bekannt ist.
-Nur durch den Vergleich von beiderseits Modellierungs- als auch Analyse-Ergebnissen mit einer vorab definierten Wahrheit (engl. \textbf{Ground Truth}) lassen sich Metriken wie die Schätzpräzision und allen voran die \ac{power} bestimmen.
-Zu diesem Zweck wird für die Untersuchungen eine allgemeingültige Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert.\\
+Durch den Vergleich von beiderseits Modellierungs- als auch Analyse-Ergebnissen mit einer vorab definierten Wahrheit (engl. \textit{Ground Truth} lassen sich \acp{KPI} wie die Schätzpräzision und allen voran die \ac{power} bestimmen.
+Zu diesem Zweck wird für die Untersuchungen eine allgemeingültige Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert \cite{Arndt.2023,Arndt.2022c}.\\
 
 \textbf{Pseudo-physikalisches Simulationsmodell} \\
-Das zugrundeliegende Systemverhalten wird durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert.
-Dies entspricht der Struktur, die auch als Ergebnis der \ac{RSM}-Untersuchung erwartet wird (vgl. Gleichung~\ref{eq:quadric_std_model}).
+Das zugrundeliegende Systemverhalten im Sinne einer \textit{Ground Truth} wird \colorbox{yellow}{global} durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert.
+Dies entspricht der Struktur, die auch als Ergebnis der \ac{RSM}-Untersuchung erwartet wird (vgl. Gleichung~\ref{eq:quadric_std_model}) und möglicherweise im Zuge einer Zuverlässigkeitsuntersuchung eines technischen Produktes resultieren kann.
 Um die Anforderungen an eine multivariate Untersuchung ($\sym{k} \ge 2$) zu erfüllen und die Komplexität handhabbar zu halten, wird im Basisszenario von zwei Faktoren ($\sym{x}_1, \sym{x}_2$) ausgegangen.
 Das Modell berücksichtigt neben den Haupteffekten explizit die für die Lebensdaueranalyse kritischen Wechselwirkungen ersten Grades sowie quadratische Terme zur Abbildung von Nichtlinearitäten:
 \begin{equation} \label{eq:simulation_model}
@@ -77,20 +80,33 @@ Die Default-Werte für die Koeffizienten sowie die vorgegebene Standardabweichun
 \end{table}
 
 \textbf{Simulationsalgorithmus und Monte-Carlo-Ansatz} \\
-Dieses Modell wird mit den zu untersuchenden Versuchsplänen gekoppelt.
-Für jeden Stützpunkt des Versuchsplans werden die korrespondierenden Systemantworten simuliert.
+Das Modell der \textit{Ground Truth} wird zunächst mit den zu untersuchenden Versuchsplänen gekoppelt.
+Für jeden Stützpunkt des Versuchsplans (Versuchspunkte) werden die korrespondierenden Systemantworten simuliert.
 Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels \ac{MLE}, entsprechend der ausgeführten Methodik aus Abschnitt~\ref{subsubsec:mle}.
-Um statistisch belastbare Aussagen zu treffen und \textbf{epistemische Unsicherheiten} auf einen minimalen numerischen Approximationsfehler zu reduzieren, wird das Verfahren in eine \ac{MCS} mit $\symsub{n}{idx_MC} = 10.000$ Iterationen eingebettet.
+Um statistisch belastbare Aussagen zu treffen und \textbf{epistemische Unsicherheiten} auf einen minimalen numerischen Approximationsfehler zu reduzieren, wird das Verfahren in eine \ac{MCS} mit $\symsub{n}{idx_MC} = 10.000$ Iterationen eingebettet - vergleiche Abschnitt~\ref{subsec:optimal} für entsprechende Hintergründe.
 Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
 \begin{enumerate}
-    \item \textbf{Präzision der Parameterschätzung:} Durch den Vergleich der geschätzten Parameter $\hat{\sym{Beta}}$ mit den \textit{wahren} Koeffizienten $\sym{Beta}_{\text{true}}$ lassen sich Bias und Varianz der Schätzung ermitteln.
+    \item \textbf{Präzision der Parameterschätzung:} Durch den (Mittelwert-) Vergleich der geschätzten Parameter $\hat{\sym{Beta}}$ mit den \textit{wahren} Koeffizienten $\sym{Beta}_{\text{true}}$ lassen sich Bias und Varianz der Schätzung ermitteln.
     \item \textbf{Bestimmung der Trennschärfe $\sym{power}$:} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis der Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:power}).
 \end{enumerate}
 
+
 \subsection{Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
-Um die Robustheit des \ac{CCD} gegenüber den eingangs erwähnten Abweichungen quantitativ zu bewerten, folgt der methodische Ansatz einem \textbf{\ac{DoE} on Experimental Design}-Konzept:
-Die Eigenschaften der Versuchsplanung sowie der \textit{Ground Truth} werden ebenfalls als Faktoren eines übergeordneten Meta-Designs variiert.
-Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl geometrische Manipulationen als auch stochastische Einflüsse sowie methodische Parameter und deren Interaktionen: die Manipulation von Sternpunkten über deren axialen Abstand sowie durch co-faktorielle Korrelation, die Variation der Anzahl der Zentralpunkte sowie der Sternpunkte, die Änderung des relativen Verhältnisses von Effektstärken untereinander sowie von System- zu Messrauschen und zuletzt die Variation des Signifikanzniveaus selbst.
+Um zunächst die Robustheit des methodischen Ansatzes gegenüber den eingangs erwähnten Einflussgrößen zu bewerten, wird eine Sensitivitätsanalyse durchgeführt, welche methodische einem \textbf{\ac{DoE} on Experimental Design}-Ansatz folgt:
+Die Eigenschaften des Versuchsplans sowie die der \textit{Ground Truth} werden als Faktoren eines übergeordneten Meta-Designs derart variiert, sodass deren Einfluss auf die Effektivität der Schätzung und damit insbesondere die Trennschärfe der Effekte im \ac{GLM} quantifiziert werden kann \cite{Arndt.2023}.
+Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl geometrische Manipulationen als auch stochastische Einflüsse sowie methodische Parameter und deren Interaktionen:
+\begin{enumerate}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Manipulation von Sternpunkten über deren axialen Abstand,
+    \item Manipulation von Sternpunkten durch co-faktorielle Korrelation,
+    \item Variation der Anzahl der Zentralpunkte,
+    \item Variation der Anzahl der Sternpunkte,
+    \item Variation der Standardabweichung der Effektstärken (System-Rauschen),
+    \item Änderung des relativen Verhältnisses von Effektstärken untereinander,
+    \item Variation der Standardabweichung der Systemantwort (Mess-Rauschen),
+    \item Variation des Signifikanzniveaus.
+\end{enumerate}
 Insbesondere die Berücksichtigung der Verhältnismäßigkeit von Effektstärken sowie der Rauschparameter ist von zentraler Bedeutung, da sie die Signal-zu-Rausch-Verhältnisse im Modell direkt beeinflussen und damit die Detektionswahrscheinlichkeit der Effekte maßgeblich steuern, gleichzeitig aber eine gegen unendlich tendierende Variationsmöglichkeit bieten, die in einem reinen Screening-Ansatz nicht abgedeckt werden könnte.
 Zur formalen Beschreibung des Untersuchungsraums werden diese acht Einflussgrößen, welche sowohl deterministische geometrische Manipulationen als auch stochastische kontinuierliche Einflussgrößen abbilden, im Vektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]'$ zusammengefasst und in Tabelle~\ref{tab:sensitivitaetsfaktoren} definiert.
 Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation der faktoriellen Versuchspunkte oder die Einführung von Lebensdauermodellen werden dabei bewusst ausgeschlossen, um die Komplexität des Meta-Designs handhabbar zu halten und die Interpretation der Ergebnisse durch eine pragmatische Auswahl und im Fokus der in Kapitel~\ref{chap:ansatz} postulierten Zielsetzung zu erleichtern.
@@ -101,63 +117,63 @@ Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation
     \renewcommand{\arraystretch}{1.3} % Etwas mehr Abstand für bessere Lesbarkeit
     \begin{tabular}{@{}l p{0.45\textwidth} l l@{}}
         \toprule
-         & \textbf{Beschreibung}                           & \textbf{Wertebereich} & \textbf{Charakteristik} \\
+         & \textbf{Beschreibung}                                          & \textbf{Wertebereich} & \textbf{Charakteristik} \\
         \midrule
 
         $\symsub{xi_factor}{idx_fac_a}$
-         & \textbf{Sternpunkt-Abstand ($\alpha$)} \newline
+         & \textbf{Sternpunkt-Abstand ($\symsub{alpha}{idx_D}$)} \newline
         Variation des Abstands der Sternpunkte zum Zentrum (z.\,B. flächenzentriert, rotierbar und extendiert).
          & $[1,00;\, 2\cdot\symsub{alpha}{idx_D}]$
-         & Kont. (\ac{CCD})                                                                                  \\
+         & Kont. (\ac{CCD})                                                                                                 \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_b}$
          & \textbf{Sternpunkt-Shift} \newline
         Asymmetrische / Co-Faktorielle Verschiebung eines Sternpunkts zur Simulation geometrischer Verzerrungen und Faktoren-Korrelation.
          & $[0,10;\, \symsub{alpha}{idx_D}]$
-         & Kont. (\ac{CCD})                                                                                  \\
+         & Kont. (\ac{CCD})                                                                                                 \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_c}$
          & \textbf{Zentralpunkte} \newline
         Variation der Anzahl der Zentralpunkte $\symsub{n}{idx_C}>0$.
          & $[1,00;\, 8,00]$
-         & Diskret (Faktoriell)                                                                              \\
+         & Diskret (Faktoriell)                                                                                             \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_d}$
          & \textbf{Sternpunkte} \newline
         Variation durch Entfall von maximal $50\,\%$ der Sternpunkte (z.\,B. durch Zensierung oder Funktionalitätsverlust).
          & $[2,00;\, 4,00]$
-         & Diskret (Faktoriell)                                                                              \\
+         & Diskret (Faktoriell)                                                                                             \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_e}$
          & \textbf{System-Rauschen} \newline
         Verhältnis zwischen pseudo-physikalischem Modellkoeffizienten und Systemabweichung bzw. Effektstreuung.
          & $[0,80;\, 1,20]$
-         & Kont. (\ac{CCD})                                                                                  \\
+         & Kont. (\ac{CCD})                                                                                                 \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_f}$
          & \textbf{Effekt-Verhältnis} \newline
         Verhältnis zweier Haupteffekte zueinander: zwischen gleichwertiger Effektstärke oder einem Anteil von $10\,\%$.
          & $[0,10;\, 1,00]$
-         & Kont. (\ac{CCD})                                                                                  \\
+         & Kont. (\ac{CCD})                                                                                                 \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_g}$
          & \textbf{Mess-Rauschen} \newline
         Verhältnis zwischen den Modellkoeffizienten und dem Wert des Streuparameters der Systemantwort.
          & $[0,80;\, 1,20]$
-         & Kont. (\ac{CCD})                                                                                  \\
+         & Kont. (\ac{CCD})                                                                                                 \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_h}$
          & \textbf{Signifikanzniveau} \newline
         Das gewählte Signifikanzniveau.
          & $[0,02;\, 0,08]$
-         & Kont. (\ac{CCD})                                                                                  \\
+         & Kont. (\ac{CCD})                                                                                                 \\
 
         \bottomrule
     \end{tabular}
@@ -168,15 +184,15 @@ So werden schließlich Haupteffekte, Interaktionen sowie quadratische Effekte au
 \subsection{Ergebnisse der Sensitivitätsanalyse und Quantifizierung der Trennschärfe} \label{subsec:ergebnisse_sensitivitaet}
 
 Die simulative Untersuchung der Trennschärfe (\ac{power}) über den durch $\sym{xi_vek}$ definierten Untersuchungsraum offenbart eine signifikante Dichotomie der Einflussgrößen.
-Es muss zwischen \textbf{dispositiven Designfaktoren} (Geometrie $\symsub{xi_factor}{idx_fac_a}$, Stützstellen $\symsub{xi_factor}{idx_fac_c}, \symsub{xi_factor}{idx_fac_d}$), welche durch den Versuchsplaner aktiv modifiziert werden können, und \textbf{externen Restriktionen} (Rauschen $\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$, Signifikanzniveau $\symsub{xi_factor}{idx_fac_h}$), die durch das physikalische Testsystem oder normative Vorgaben als unveränderlich zu betrachten sind, unterschieden werden.
+Es muss zwischen \textbf{dispositiven Designfaktoren} (Geometrie $\symsub{xi_factor}{idx_fac_a}$, Stützstellen $\symsub{xi_factor}{idx_fac_c}, \symsub{xi_factor}{idx_fac_d}$), die vom Versuchsplaner aktiv modifiziert werden können, und \textbf{externen Restriktionen} (Rauschen $\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$, Signifikanzniveau $\symsub{xi_factor}{idx_fac_h}$), die durch das physikalische Testsystem oder normative Vorgaben als unveränderlich zu betrachten sind, unterschieden werden.
 
-Betrachtet man zunächst die globale \textbf{Modell-Power} ($\sym{power}_{\text{Model}}$), so zeigt sich eine extrem hohe Robustheit gegenüber allen Variationen mit einem Mittelwert von $\overline{\sym{power}} > 99,7\,\%$.
-Diese pauschale Metrik verdeckt jedoch, dass die Identifikation spezifischer Einzel-Effekte -- insbesondere der für die Lebensdauerprognose kritischen quadratischen Terme -- deutlich sensitiver reagiert.
-Wie Tabelle~\ref{tab:summary_power_sensitivity} zeigt, liegt die mittlere Trennschärfe für quadratische Terme ($\sym{beta}_{11}, \sym{beta}_{22}$) nur noch im Bereich von $70\,\%$ bis $79\,\%$.
+Betrachtet man zunächst die globale \textbf{Modell-Power} ($\sym{power}_{\sym{idx_M}}$), so zeigt sich eine extrem hohe Robustheit gegenüber allen Variationen mit einem Mittelwert von $\overline{\sym{power}} > 99,7\,\%$.
+Diese pauschale Metrik verdeckt jedoch, dass das Verhalten spezifischer Einzel-Effekte -- insbesondere die Identifikation der für die Lebensdauerprognose kritischen quadratischen Terme -- deutlich sensitiver ausfällt.
+Wie Tabelle~\ref{tab:summary_power_sensitivity} zeigt, liegt die mittlere Trennschärfe für quadratische Terme ($\sym{power}_{\sym{beta}_{11}}, \sym{power}_{\sym{beta}_{22}}$) nur noch im Bereich von $70\,\%$ bis $79\,\%$.
 
-Die entscheidende Erkenntnis liefert jedoch der Blick auf die \textbf{Sensitivitätsindizes} (Spalte "Dominante Sensitivität").
-Für die Mehrheit der untersuchten Koeffizienten ($\sym{power}_{\text{Model}}, \sym{beta}_1, \sym{beta}_{12}, \sym{beta}_{11}$) ist nicht etwa eine Reduktion der Versuchspunkte der limitierende Faktor, sondern das \textbf{Messrauschen ($\symsub{xi_factor}{idx_fac_g}$)}.
-Mit einem Sensitivitätsindex von bis zu $1,99$ (bei $\sym{beta}_{11}$) dominiert die Güte der Messtechnik die Erfolgswahrscheinlichkeit des Tests.
+Die entscheidende Erkenntnis liefert jedoch der Blick auf die \textbf{Sensitivitätsindizes} (Spalte „Dominante Sensitivität“).
+Für die Mehrheit der untersuchten Koeffizienten ($\sym{power}_{\sym{idx_M}}, \sym{power}_{\sym{beta}_1}, \sym{power}_{\sym{beta}_{12}}, \sym{power}_{\sym{beta}_{11}}$) ist nicht etwa eine Reduktion der Versuchspunkte der limitierende Faktor, sondern das \textbf{Messrauschen ($\symsub{xi_factor}{idx_fac_g}$)}.
+Mit einem Sensitivitätsindex von bis zu $\sym{Eff}=1,99$ (bei $\sym{power}_{\sym{beta}_{11}}$) dominiert die Güte der Messtechnik die Erfolgswahrscheinlichkeit des Tests.
 Da das Rauschen ($\symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_e}$) sowie das Signifikanzniveau ($\symsub{xi_factor}{idx_fac_h}$) in der praktischen Anwendung bei \ac{EoL}-Tests an bestehenden Prüfständen meist feste Randbedingungen darstellen, definieren sie eine natürliche Obergrenze der erreichbaren Trennschärfe, die auch durch maximale Versuchspläne nicht durchbrochen werden kann.
 
 \begin{table}[htbp]
@@ -187,25 +203,25 @@ Da das Rauschen ($\symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_e}$)
     \small
     \begin{tabular}{@{}l c c l r@{}}
         \toprule
-        \textbf{Koeffizient}            & \textbf{Mittelwert}      & \textbf{Wertebereich}        & \multicolumn{2}{c}{\textbf{Dominante Sensitivität}}                      \\
+        \textbf{Koeffizient}            & \textbf{Mittelwert}      & \textbf{Wertebereich}          & \multicolumn{2}{c}{\textbf{Dominante Sensitivität}}                      \\
         \cmidrule(lr){2-3} \cmidrule(lr){4-5}
-                                        & $\overline{\sym{power}}$ & $[\text{min}; \text{max}]\%$ & \textbf{Faktor (Kategorie)}                         & \textbf{\sym{Eff}} \\
+                                        & $\overline{\sym{power}}$ & $[\text{min}; \text{max}]\,\%$ & \textbf{Faktor (Kategorie)}                         & \textbf{\sym{Eff}} \\
         \midrule
-        $\sym{power}_{\sym{idx_M}}$     & $99,70\,\%$              & $[94,51; 100,00]$            & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $0,104$            \\
-        $\sym{power}_{\sym{beta}_0}$    & $97,86\,\%$              & $[76,85; 100,00]$            & $\symsub{xi_factor}{idx_fac_e}$ (System)            & $0,515$            \\
-        $\sym{power}_{\sym{beta}_1}$    & $78,55\,\%$              & $[59,99; \phantom{0}90,77]$  & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,496$            \\
-        $\sym{power}_{\sym{beta}_2}$    & $65,98\,\%$              & $[37,34; \phantom{0}84,06]$  & $\symsub{xi_factor}{idx_fac_f}$ (System)            & $2,530$            \\
-        $\sym{power}_{\sym{beta}_{12}}$ & $72,58\,\%$              & $[52,47; \phantom{0}85,90]$  & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,930$            \\
-        $\sym{power}_{\sym{beta}_{11}}$ & $70,94\,\%$              & $[32,59; \phantom{0}86,81]$  & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,988$            \\
+        $\sym{power}_{\sym{idx_M}}$     & $99,70\,\%$              & $[94,51; 100,00]$              & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $0,104$            \\
+        $\sym{power}_{\sym{beta}_0}$    & $97,86\,\%$              & $[76,85; 100,00]$              & $\symsub{xi_factor}{idx_fac_e}$ (System)            & $0,515$            \\
+        $\sym{power}_{\sym{beta}_1}$    & $78,55\,\%$              & $[59,99; \phantom{0}90,77]$    & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,496$            \\
+        $\sym{power}_{\sym{beta}_2}$    & $65,98\,\%$              & $[37,34; \phantom{0}84,06]$    & $\symsub{xi_factor}{idx_fac_f}$ (System)            & $2,530$            \\
+        $\sym{power}_{\sym{beta}_{12}}$ & $72,58\,\%$              & $[52,47; \phantom{0}85,90]$    & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,930$            \\
+        $\sym{power}_{\sym{beta}_{11}}$ & $70,94\,\%$              & $[32,59; \phantom{0}86,81]$    & $\symsub{xi_factor}{idx_fac_g}$ (System)            & $1,988$            \\
         \addlinespace
-        $\sym{power}_{\sym{beta}_{22}}$ & $79,31\,\%$              & $[33,37; 100,00]$            & $\symsub{xi_factor}{idx_fac_a}$ (Design)            & $3,724$            \\
+        $\sym{power}_{\sym{beta}_{22}}$ & $79,31\,\%$              & $[33,37; 100,00]$              & $\symsub{xi_factor}{idx_fac_a}$ (Design)            & $3,724$            \\
         \bottomrule
     \end{tabular}
 \end{table}
 
-Dies birgt ein erhebliches ökonomisches Potenzial: Wenn die Trennschärfe ohnehin primär durch das Systemrauschen limitiert wird, ist zu prüfen, ob Design-Vereinfachungen (Reduktion von $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$) überhaupt zu einer \textit{signifikanten} weiteren Verschlechterung führen.
-Tabelle~\ref{tab:impact_cd} quantifiziert diesen "Design-Penalty".
-Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_c}$) und Sternpunkte ($\symsub{xi_factor}{idx_fac_d}$) zwar die Power reduziert (z.\,B. $\Delta \sym{power} \approx -13\,\%$ für $\sym{beta}_{11}$), dieser Einfluss jedoch in der gleichen Größenordnung liegt wie die unvermeidbaren Rauscheffekte.
+Dies birgt ein erhebliches ökonomisches Potenzial: Wenn die Trennschärfe ohnehin primär durch das System- und Messrauschen limitiert wird, ist zu prüfen, ob Design-Vereinfachungen (Reduktion von $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$) überhaupt zu einer \textit{signifikanten} weiteren Verschlechterung führen.
+Tabelle~\ref{tab:impact_cd} quantifiziert diesen „Design-Penalty“.
+Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_c}$) und Sternpunkte ($\symsub{xi_factor}{idx_fac_d}$) zwar die Power reduziert (z.\,B. $\Delta \sym{power} \approx -13\,\%$ für $\sym{power}_{\sym{beta}_{11}}$), dieser Einfluss jedoch in der gleichen Größenordnung liegt wie die unvermeidbaren Rauscheffekte.
 
 \begin{table}[htbp]
     \centering
@@ -226,8 +242,20 @@ Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_
     \end{tabular}
 \end{table}
 
-Einzig der quadratische Koeffizient $\sym{beta}_{22}$ bildet eine Ausnahme: Hier ist der geometrische Abstand der Sternpunkte ($\symsub{xi_factor}{idx_fac_a}$) mit einem extremen Index von $3,72$ der dominierende Faktor (vgl. Tabelle~\ref{tab:summary_power_sensitivity}).
-Für alle anderen Terme gilt: Da die Power durch die Systemparameter ($\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$) bereits maßgeblich vorbestimmt ist, besteht Spielraum zur Anpassung der Faktoren $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$ in Bereiche, die aus Aspekten der Versuchszeit und des Budgets attraktiv sind, ohne die Effektivität des Tests unverhältnismäßig stärker zu kompromittieren, als es das Messsystem ohnehin tut.
+Einzig der quadratische Koeffizient $\sym{power}_{\sym{beta}_{22}}$ bildet eine Ausnahme: Hier ist der geometrische Abstand der Sternpunkte ($\symsub{xi_factor}{idx_fac_a}$) mit einem extremen Index von $3,72$ der dominierende Faktor (vgl. Tabelle~\ref{tab:summary_power_sensitivity}).
+Für alle anderen Terme gilt: Da die Power durch die physikalischen Randbedingungen ($\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$) maßgeblich vorbestimmt ist, besteht Spielraum zur Anpassung der Faktoren $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$ in Bereiche, die aus Aspekten der Versuchszeit und des Budgets attraktiv sind, ohne die Effektivität des Tests unverhältnismäßig stärker zu kompromittieren, als es das Messsystem ohnehin tut.
+
+\subsection{Generische Auswirkungen relevanter Orthogonalitäts-Abweichungen} \label{subsec:ergebnisse_generic}
+\subsection{Fazit: Statistische Effektivität und ökonomische Relevanz} \label{subsec:fazit_sensitivitaet}
+
+Aus den numerischen Analysen lässt sich ein zentrales Fazit für die Lebensdauererprobung ableiten: Das \ac{CCD} erweist sich als äußerst robust gegenüber moderaten geometrischen Modifikationen.
+Die statistische Effektivität, repräsentiert durch die globale und modellspezifische Trennschärfe, wird primär durch nicht beeinflussbare, exogene System- und Messrauschen-Parameter limitiert.
+Eine gezielte Reduktion der Versuchsumfänge - wie der partielle Wegfall von Zentral- oder Sternpunkten - bewirkt zwar einen messbaren isolierten Verlust an Trennschärfe, diesen \textit{Design-Penalty} gilt es jedoch stets in Relation zur ohnehin limitierenden Wirkung des experimentellen Rauschens zu setzen.
+
+Für die praktische \ac{EoL}-Versuchsplanung bedeutet dies einen Paradigmenwechsel: Anstatt \acp{RSD} um jeden Preis auf strenge geometrische Orthogonalität und eine maximale Stützstellenanzahl zu trimmen, können und sollten Versuchspläne flexibel an betriebliche Limitierungen adaptiert werden.
+Der bewusste Tausch einer geringfügig reduzierten statistischen Trennschärfe gegen eine potenziell massive Einsparung an Versuchszeit und finanziellen Ressourcen stellt folglich einen validen Optimierungsansatz dar.
+Damit ist die methodische Grundlage geschaffen, um Modifikationen am Versuchsplan im folgenden Abschnitt in einem dedizierten Kostenmodell monetär zu bewerten und der statistischen Leistungsfähigkeit gegenüberzustellen. Das Ziel ist eine holistische Bewertungsmetrik, die den Informationsgewinn direkt mit dem wirtschaftlichen Aufwand verknüpft.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

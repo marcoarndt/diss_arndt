@@ -1,0 +1,1215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Kapitel 2 - Stand der Forschung und Technik %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Stand der Technik und Forschung} \label{chap:stand}
+
+Dieses Kapitel stellt die für diese Arbeit erforderlichen technischen und methodischen Grundlagen bereit. Zunächst werden in Abschnitt~\ref{sec:zuv} zentrale Begriffe und Konzepte der Zuverlässigkeitstechnik sowie das grundlegende statistische Verfahren zur Lebensdauer-Datenanalyse in Kombination mit Versuchsplänen erläutert.
+Darauf aufbauend folgen in Abschnitt~\ref{sec:doe} die Einführung und die Einordnung von \acs{DoE} für Lebensdaueruntersuchungen sowie der multivariaten Lebensdauermodellierung aus dem Stand der Technik und der Wissenschaft, die beide für die Entwicklung effizienter Lebensdauerversuchspläne maßgeblich sind.
+Im Kontext der Lebensdauererprobung umfasst dies insbesondere typische, statistische Versuchspläne sowie Metriken und Indikatoren zur allgemeinen Bewertung der Versuchspläne.
+
+\section{Zuverlässigkeitstechnik und Wahrscheinlichkeitstheorie} \label{sec:zuv}
+Die Zuverlässigkeitstechnik befasst sich mit der probabilistischen Beschreibung der Lebensdauer technischer Produkte und Systeme sowie der strategischen und statistischen Planung von Lebensdauertests.
+Ziel ist die statistische Modellierung des Ausfallverhaltens unter Berücksichtigung der Funktionalität des Produkts bei relevanten Randbedingungen.
+Eine zentrale Aufgabe besteht somit in der statistischen Charakterisierung des Ausfallbegriffs mithilfe deskriptiver Statistik sowie in der Parametrisierung geeigneter Verteilungen zur Abbildung des Lebensdauerverhaltens.
+Die Modellierung kann - abhängig von den Randbedingungen - auf Basis \textit{einer einzelnen} Belastungsgröße oder \textit{mehrerer} Beanspruchungsparameter erfolgen, die gemeinsam den Produktausfall determinieren.
+Ein grundlegendes Verständnis des Umgangs mit zufallsverteilten Lebensdauerereignissen ist daher eine elementare Voraussetzung für die statistische Versuchsplanung im Rahmen der Zuverlässigkeitstechnik.
+Weiterführende Konzepte und vertiefte methodische Ansätze zur Zuverlässigkeitstechnik sowie zur statistischen Testplanung sind allen voran in der Standardliteratur von \textcite{Bertsche.2022} dargelegt, an deren Vorgehensweise sich die nachfolgende Übersicht orientiert.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Begriffe und Definitionen} \label{subsec:begriffezuv}
+Der \textbf{Ausfall}, engl. \textbf{\ac{EoL}}, eines Produkts bezeichnet das Ende der Lebensdauer durch Verlust der geforderten Funktionalität.
+Maßgeblich hierfür sind von außen einwirkende \textbf{Belastungen} (\textit{einzelne} oder zeitgleich \textit{mehrere} Einflussparameter - Kräfte und Momente im mechanischen Kontext) sowie die daraus resultierenden inneren \textbf{Beanspruchungen} (innere Kräfte, Momente und lokale Spannungen).
+Die Ausfallzeit wird als kontinuierliche Zufallsvariable $\sym{tau}>0$ verstanden.
+Die fundamentalen Funktionen zur probabilistischen Beschreibung des Lebensdauerverhaltens sind gemeinsam mit deskriptiven Statistiken in Tabelle~\ref{tab:mathdefs} zusammengefasst \cite{Bertsche.2022,Meeker.2022,Birolini.2017}.
+{
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{@{} p{\textwidth} @{}}
+    \caption{Mathematische Definitionen der Zuverlässigkeitsfunktionen}
+    \label{tab:mathdefs}                                                                                                                                           \\
+    \toprule
+    \endfirsthead
+    \caption*{Tabelle \ref{tab:mathdefs} (\textit{Fortsetzung}): Mathematische Definitionen}                                                                       \\
+    \toprule
+    \endhead
+    \bottomrule
+    \endlastfoot
+
+    \textbf{Ausfallwahrscheinlichkeit} (engl. \textbf{\ac{cdf}}): \newline
+    Wahrscheinlichkeit eines Ausfalls bis zum Zeitpunkt $\sym{t}$.
+    \begin{equation} \label{eq:probdef}
+        \sym{F}(\sym{t}) = \sym{Pr}(\sym{tau}\leq \sym{t}) = \int_{0}^{\sym{t}} \sym{f}(\sym{t}) \,d\sym{t}
+    \end{equation}                                                             \\
+
+    \textbf{Zuverlässigkeit} (engl. Reliability): \newline
+    Überlebenswahrscheinlichkeit über den Zeitpunkt $\sym{t}$ hinaus.
+    \begin{equation} \label{eq:reldef}
+        \sym{R}(\sym{t}) = 1 - \sym{F}(\sym{t}) = \int_{\sym{t}}^{\infty} \sym{f}(\sym{t}) \,d\sym{t}
+    \end{equation}                                                    \\
+
+    \textbf{Wahrscheinlichkeitsdichte} (engl. \textbf{\ac{pdf}}): \newline
+    Änderungsrate der Ausfallwahrscheinlichkeit (Ausfallintensität).
+    \begin{equation} \label{eq:pdfdef}
+        \sym{f}(\sym{t}) = \frac{d}{d\sym{t}}\sym{F}(\sym{t}) = \frac{d}{d\sym{t}}\sym{Pr}(\sym{tau} \leq \sym{t}), \quad \sym{t} \geq 0.
+    \end{equation} \\
+
+    \textbf{Ausfallrate} (engl. Hazard-Function): \newline
+    Momentanes Ausfallrisiko, bedingt auf das Überleben bis $\sym{t}$.
+    \begin{equation} \label{eq:hazarddef}
+        \sym{lambda} = \lim_{\Delta \sym{t} \to 0} \frac{\sym{Pr}(\sym{t} < \sym{tau} \leq \sym{t} + \Delta \sym{t} | \sym{tau} > \sym{t})}{\Delta \sym{t}} = \frac{\sym{f}(\sym{t})}{\sym{R}(\sym{t})}
+    \end{equation}
+\end{longtable}
+}
+
+
+\subsection{Deskriptive Statistik für Lebensdauerdaten} \label{subsec:stat1}
+Um die theoretischen Parameter der Grundgesamtheit in der Praxis nutzbar zu machen, müssen diese auf Basis empirisch ermittelter Lebensdauerdaten (Stichprobe vom Umfang $\sym{n}$ mit Werten $\sym{x}_{1}, \dots, \symsub{x}{n}$) approximiert werden.
+Die deskriptive Statistik liefert hierfür Methoden zur Berechnung von \textbf{Lageparametern} (Zentrum) und \textbf{Streuungsmaßen} (Breite).
+Tabelle~\ref{tab:deskriptive_statistik} fasst die theoretischen Definitionen der Zufallsvariable $\sym{tau}$ sowie die grundlegenden Zuverlässigkeitsfunktionen und ihre korrespondierenden empirischen Schätzer kompakt zusammen.
+    {
+        \renewcommand{\arraystretch}{1.5}
+        \begin{longtable}{@{} p{\textwidth} @{}}
+            \caption{Deskriptive Kennzahlen im Kontext der Lebensdaueranalyse}
+            \label{tab:deskriptive_statistik}                                                                                                                                                                                                                                  \\
+            \toprule
+            \endfirsthead
+            \caption*{Tabelle \ref{tab:deskriptive_statistik} (\textit{Fortsetzung}): Deskriptive Kennzahlen}                                                                                                                                                                  \\
+            \toprule
+            \endhead
+            \bottomrule
+            \endlastfoot
+
+            \textbf{Erwartungswert und Mittelwert}: \newline
+            Erwartungswert $\sym{mu}$ des theoretischen Lageparameters der Grundgesamtheit. Der arithmetische Mittelwert $\sym{x_bar}$ dient als üblicher, \textbf{empirischer Schätzer} für eine endliche Stichprobe.
+            \begin{equation} \label{eq:theo_mean}
+                \sym{mu} = \sym{E}[\sym{tau}] = \int_{0}^{\infty} \sym{t} \cdot \sym{f}(\sym{t}) d\sym{t} \quad \text{geschätzt durch} \quad \sym{x_bar} = \frac{1}{\sym{n}} \sum_{\sym{idx_i}=1}^{\sym{n}} \symsub{x}{idx_i}
+            \end{equation} \\
+
+            \textbf{Quantile und Median}: \newline
+            Das Quantil $\symsub{t}{idx_q}$ definiert den Zeitpunkt, an dem die Verteilung $\sym{F}(\sym{t})$ den Anteil $\sym{q} \in [0,1]$ erreicht. Der Median $\sym{t}_{0.5}$ teilt die Fläche unter der \ac{pdf} in zwei Hälften \cite{Yang.2007,Fahrmeir.2016}.
+            \begin{equation} \label{eq:quantildef}
+                \sym{F}(\symsub{t}{idx_q}) = \sym{q} \quad \text{bzw. für Median:} \quad \sym{F}(\sym{t}_{0.5}) = 0.5
+            \end{equation}                                                                                                                                                               \\
+
+            \textbf{Varianz und Standardabweichung}: \newline
+            Die theoretische Varianz $\sym{sigma_sq}$ (mittlere quadratische Abweichung) wird durch die erwartungstreue empirische Varianz $\sym{s_sq}$ geschätzt. Die empirische Standardabweichung folgt daraus zu $\sym{s} = \sqrt{\sym{s_sq}}$.
+            \begin{equation} \label{eq:theo_variance}
+                \sym{sigma_sq} = \sym{E}[(\sym{tau} - \sym{mu})^2] \quad \approx \quad \sym{s_sq} = \frac{1}{\sym{n}-1} \sum_{\sym{idx_i}=1}^{\sym{n}} (\symsub{x}{idx_i} - \sym{x_bar})^2
+            \end{equation}
+        \end{longtable}
+    }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Parametrische Lebensdauermodelle} \label{subsec:paramleben}
+
+Während die deskriptiven Statistiken $\sym{x_bar}$ und $\sym{s_sq}$ die zentrale Tendenz und die Streuung der vorliegenden Stichprobe quantifizieren, erlauben sie keine Extrapolation oder die Modellierung der zugrundeliegenden Funktionen $\sym{F}(\sym{t})$ und $\sym{f}(\sym{t})$ der Grundgesamtheit.
+Um eine prädiktive, mathematische Beschreibung des stochastischen Ausfallverhaltens zu erhalten, müssen die in Abschnitt~\ref{subsec:begriffezuv} definierten Lebensdauerfunktionen durch geeignete parametrische Verteilungsmodelle approximiert werden.
+Andernfalls können nur nichtparametrische Modellierungsansätze zur Schätzung der kumulierten Wahrscheinlichkeit in Überlebensfunktionen wie beispielsweise nach \textcite{Kaplan.1958} genutzt werden \cite{Rigdon.2022,Meeker.2022}.
+Die Verteilungsmodelle hingegen bieten eine geschlossene mathematische Form für \ac{cdf} und \ac{pdf} und ermöglichen es, das komplexe Ausfallverhalten durch eine geringe Anzahl von Parametern zu charakterisieren.\
+
+\subsubsection{Weibull-Verteilung} \label{subsubsec:weibull}
+In der Zuverlässigkeitstechnik hat sich die \textbf{Weibull-Verteilung} aufgrund ihrer hohen Flexibilität als das am häufigsten verwendete Modell etabliert.
+Je nach zugrundeliegendem physikalischen Ausfallmechanismus finden jedoch auch andere statistische Verteilungen Anwendung, wie beispielsweise die \textbf{Lognormal-Verteilung} (häufig bei Ermüdungs-, Korrosions- oder Diffusionsprozessen), die \textbf{Exponentialverteilung} (zur Modellierung von Zufallsausfällen ohne Alterungseffekte) oder die \textbf{Beta-Verteilung} (allgemein zur formenreichen Modellierung von $\sym{R}$ über dem festen Intervall $[0,1]$).
+Für weitere Ausführungen dazu sei an dieser Stelle jedoch auf bereits ausreichend diskutierte Aufbereitungen von \textcite{Bertsche.2022,Birolini.2017,Yang.2007,Hedderich.2020,Rigdon.2022} verwiesen.
+
+Die (zweiparametrige) Weibull-Verteilung ist das Standardmodell zur Beschreibung der Lebensdauer von technischen Produkten ohne die Berücksichtigung eines möglichen dritten Parameters - der ausfallfreien Zeit \symsub{t}{idx_0}.
+Sie wird durch den \textbf{Formparameter}  $\sym{b} > 0$ (Weibull-Modul) und die \textbf{charakteristische Lebensdauer} $\sym{T} > 0$ (Skalenparameter), welche dem $63,2$-ten Perzentil $\sym{t}_{0,632}$ entspricht, beschrieben.
+Unabhängig von $\sym{b}$ gilt hier somit: $\sym{F}(\sym{T})=1-e^{-1} \approx 63,2 \%$.
+Folgt die Lebensdauer-Zufallsvariable $\sym{tau}$ dieser Verteilung, wird dies mathematisch als $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ notiert.
+Damit ist sie in der Lage, alle drei Phasen der "Badewannenkurve" (Frühausfälle mit $\sym{b}<1$, Zufallsausfälle $\sym{b}\approx 1$, Verschleißausfälle mit $\sym{b}>1$) durch die Wahl ihrer Parametrisierung abzubilden, vgl. \textcite{Bertsche.2022}.
+Die Einheit des Skalenparameters $\sym{T}$ entspricht der des Messwertes. Die charakteristischen Funktionen und statistischen Momente der Weibull-Verteilung sind in Tabelle~\ref{tab:weibull_formeln} zusammengefasst.
+    {
+        \renewcommand{\arraystretch}{1.5}
+        \begin{longtable}{@{} p{\textwidth} @{}}
+            \caption{Funktionen und Kennzahlen der Weibull-Verteilung} \label{tab:weibull_formeln}                                                                                                                \\
+            \toprule
+            \endfirsthead
+            \caption*{Tabelle \ref{tab:weibull_formeln} (\textit{Fortsetzung}): Weibull-Verteilung}                                                                                                               \\
+            \toprule
+            \endhead
+            \endlastfoot
+
+            \textbf{Dichte- und Verteilungsfunktion} (\ac{pdf} \& \ac{cdf}) \newline
+            \begin{equation} \label{eq:weibull_pdf}
+                \sym{f}(\sym{t}) = \frac{\sym{b}}{\sym{T}^{\sym{b}}} \sym{t}^{\sym{b}-1} \exp\left[ - \left(\frac{\sym{t}}{\sym{T}}\right)^{\sym{b}} \right], \quad \sym{t} > 0
+            \end{equation}
+            \vspace{-0.5em} % Kleiner vertikaler Abzug zwischen den Formeln im gleichen Block
+            \begin{equation} \label{eq:weibull_cdf}
+                \sym{F}(\sym{t}) = 1 - \exp\left[ - \left(\frac{\sym{t}}{\sym{T}}\right)^{\sym{b}} \right], \quad \sym{t} > 0
+            \end{equation}                            \\
+            \textbf{Ausfallrate} (Hazard-Funktion) \newline
+            \begin{equation} \label{eq:weibull_hazard}
+                \sym{lambda} = \frac{\sym{b}}{\sym{T}} \left(\frac{\sym{t}}{\sym{T}}\right)^{\sym{b}-1}, \quad \sym{t} > 0
+            \end{equation} \\
+            \textbf{Momente und Gamma-Funktion} \newline
+            Mit der Gamma-Funktion \refstepcounter{equation}(\theequation)\label{eq:gamma_func} $\displaystyle \sym{Gamma}(x) = \int_{0}^{\infty} \sym{ups}^{x-1} e^{-\sym{ups}} \,d\sym{ups}$ ergeben sich Erwartungswert $\sym{mu}$ (vgl. Gleichung~\eqref{eq:theo_mean}) und Varianz $\sym{sigma_sq}$ (vgl. Gleichung~\eqref{eq:theo_variance}) der Weibull-verteilten Lebensdauer $\sym{tau}$:
+            \begin{equation} \label{eq:weibull_mean}
+                \sym{mu} = \sym{T} \cdot \sym{Gamma}\left(1 + \frac{1}{\sym{b}}\right)
+            \end{equation}
+            \vspace{-0.5em}
+            \begin{equation} \label{eq:weibull_variance}
+                \sym{sigma_sq} = \sym{T}^2 \left[ \sym{Gamma}\left(1 + \frac{2}{\sym{b}}\right) - \sym{Gamma}^2\left(1 + \frac{1}{\sym{b}}\right) \right]
+            \end{equation}                                                             \\
+            \bottomrule
+        \end{longtable}
+    }
+Die Flexibilität der Verteilung zeigt sich in den Spezialfällen des Formparameters: Für $\sym{b}=1$ geht sie in die Exponentialverteilung über ($\sym{lambda} = \text{konst.}$), während sie sich für $\sym{b} \approx 3,6$ einer Normalverteilung annähert (vgl. Abb.~\ref{fig:abb2.1_weibull}) \cite{Rinne.2008, Kececioglu.2002}.
+\begin{figure}[htbp]
+    \centering
+    \input{plots/ma_abb2.01_weibull}
+    \caption{Weibull $\sym{f}(\sym{t})$ für ausgewählte Werte von $\sym{T}$ und $\sym{b}$. }
+    \label{fig:abb2.1_weibull}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Parameterschätzverfahren} \label{subsec:schätzer}
+Soll eine geschlossene mathematische Beschreibung des stochastischen Ausfallverhaltens eines Produktes gefunden werden, ist das im vorherigen Abschnitten~\ref{subsec:paramleben} definierte parametrische Verteilungsmodell $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ zu schätzen.
+Die Modellparameter der Grundgesamtheit sind in der praktischen Anwendung jedoch unbekannt.
+Die zentrale Problemstellung der \textbf{Parameterschätzung} besteht somit darin, aus der empirischen Stichprobe bestehend aus $\sym{n}$ Realisierungen $\sym{t}_{1}, \dots, \symsub{t}{n}$ der Zufallsvariable $\sym{tau}$ statistisch fundierte Schätzwerte $\hat{\sym{T}}$ und $\hat{\sym{b}}$ zu gewinnen.
+Diese sind Voraussetzung, um das Lebensdauermodell (z.B. Gleichung~\eqref{eq:weibull_cdf}) zu quantifizieren und prädiktive Aussagen zu Quantilen oder der Zuverlässigkeit $\sym{R}(\sym{t})$ zu ermöglichen.
+Eine wesentliche Komplikation hierbei sind jedoch das mögliche Auftreten von unvollständigen bzw. \textbf{zensierten} Daten sowie \textit{multivariate} Abhängigkeiten der Belastungen zur Messgröße.
+Während für die Schätzung von Verteilungsparametern einfache Verfahren, wie die \textbf{Momentenmethode} oder die \textbf{Methode der kleinsten Fehlerquadrate} - engl. \textbf{\ac{OLS}}, die beispielsweise bei der \textbf{\ac{MMR}} im Wahrscheinlichkeitsnetz Anwendung findet, existieren, sind diese für die umfassende Analyse vielschichtiger Lebensdauerdaten in der Regel unzureichend und hier nur der Vollständigkeit wegen erwähnt - vgl. \cite{Bertsche.2022,Montgomery.2021}.
+Das universell anwendbare und robuste Verfahren, das Herausforderungen wie zensierte Daten und multivariate Modelle inhärent behandelt, ist die \textbf{\ac{MLE}} \cite{Meeker.2022,Nelson.1990}.
+
+\subsubsection{Maximum-Likelihood-Estimation} \label{subsubsec:mle}
+Das Grundprinzip der \ac{MLE} besteht darin, diejenigen Parameterwerte (z.B. $\hat{\sym{T}}, \hat{\sym{b}}$) als Schätzwerte auszuwählen, welche die Wahrscheinlichkeit (engl. Likelihood) maximieren, die empirisch beobachtete Stichprobe (bestehend aus unabhängigen Ausfällen und Zensierungen) zu erhalten.
+Mathematisch wird die Wahrscheinlichkeit der Realisierung von $\sym{t_vec} = (\sym{t}_{1}, \dots, \symsub{t}{n})$ einer Stichprobe durch die \textbf{Likelihood-Funktion} $\sym{L_like}$ bestimmt. Diese ist eine Funktion des unbekannten Parametervektors $\sym{theta}$, der $\sym{k}$ zu schätzende Parameter enthält (z.B. $\sym{theta} = (\sym{T}, \sym{b})$ mit $\sym{k}=2$).\
+
+Für den vereinfachten Fall, dass die Stichprobe ausschließlich aus $\sym{n}$ exakten Ausfallereignissen (vollständige Daten) besteht, ist die Likelihood-Funktion $\sym{L_like}$ das Produkt der einzelnen Wahrscheinlichkeitsdichten $\sym{f}(\cdot)$:
+\begin{equation} \label{eq:mle_likelihood_simple}
+    \sym{L_like}(\sym{t_vec} | \sym{theta}) \propto \prod_{\sym{idx_i}=1}^{\sym{n}} \sym{f}(\symsub{t}{idx_i} | \sym{theta}).
+\end{equation}
+Zur Vereinfachung der numerischen Berechnung wird in der Anwendung die \textbf{Log-Likelihood-Funktion} $\sym{Lambda}$ verwendet. Durch die Logarithmierung wird das Produkt (Gleichung~\eqref{eq:mle_likelihood_simple}) in eine äquivalente, leichter zu maximierende Summe überführt:
+\begin{equation} \label{eq:mle_loglikelihood_simple}
+    \sym{Lambda} \defeq \ln\left( \sym{L_like}(\sym{theta}) \right) \propto \sum_{\sym{idx_i}=1}^{\sym{n}} \ln \left[ \sym{f}(\symsub{t}{idx_i} | \sym{theta}) \right].
+\end{equation}
+Wie zuvor dargelegt, ist dieser vereinfachte Ansatz für Lebensdauerdaten jedoch oft unzureichend, da er das Auftreten von zensierten Daten vernachlässigt.
+Für die praktische Anwendung existiert jedoch die entsprechende Erweiterung der Likelihood-Funktion um die Differenzierung etwaiger Testausgänge als \textit{Durchläufer}.
+Dazu wird die Stichprobe als Paarung von $\symsub{t}{idx_i}, \symsub{delta}{idx_i}$ für $\sym{t_vec}$ definiert, wobei $\symsub{t}{idx_i}$ der beobachteten Zeit und $\symsub{delta}{idx_i}$ einem Statusindikator ($\symsub{delta}{idx_i}=1$ für einen exakten Ausfall; $\symsub{delta}{idx_i}=0$ für eine Rechts-Zensierung) entspricht \cite{Meeker.2022,Kalbfleisch.2002}.
+$\sym{L_like}$ für rechts-zensierte Lebensdauerdaten lautet somit:
+\begin{equation} \label{eq:mle_likelihood_censored}
+    \sym{L_like}(\sym{t_vec} | \sym{theta}) \propto \prod_{\sym{idx_i}=1}^{\sym{n}} \left[ \sym{f}(\symsub{t}{idx_i} | \sym{theta})^{\symsub{delta}{idx_i}} \cdot \sym{R}(\symsub{t}{idx_i} | \sym{theta})^{1 - \symsub{delta}{idx_i}} \right]
+\end{equation}
+und definiert die Log-Likelihood Funktion als:
+\begin{equation} \label{eq:mle_loglikelihood_censored}
+    \sym{Lambda} \defeq \ln\left(\sym{L_like}(\sym{t_vec} | \sym{theta})\right) \propto \sum_{\sym{idx_i}=1}^{\sym{n}} \left[ \symsub{delta}{idx_i} \cdot \ln \sym{f}(\symsub{t}{idx_i} | \sym{theta}) + (1 - \symsub{delta}{idx_i}) \cdot \ln \sym{R}(\symsub{t}{idx_i} | \sym{theta}) \right].
+\end{equation}
+
+Der Parametervektor $\hat{\sym{theta}}$, der den Wert von $\sym{Lambda}(\sym{theta})$ maximiert, liefert die \ac{MLE}-Werte.
+Die Schätzwerte repräsentieren die (asymptotisch) effizientesten Schätzwerte für die Parameter der Grundgesamtheit.
+Dies erfolgt mathematisch durch Nullsetzen $\sym{k}$ partieller Ableitungen von $\sym{Lambda}$, sofern mathematisch entsprechende Schätzwerte in geschlossener Form durch $\partial\sym{Lambda}/\partial \sym{theta} \stackrel{!}{=} 0$ identifiziert werden können \cite{Nelson.2005,Rinne.2008}.
+Andernfalls werden numerische Optimierungsalgorithmen, vgl. Newton-Raphson-Verfahren, Patternsearch und vergleichbare, dafür herangezogen - siehe weiterführend \cite{Nelson.2005,Qiao.1994} sowie detaillierte Untersuchungen von \textcite{Kremer.2019b}.
+An dieser Stelle sei erwähnt, dass systematische Verzerrungen (engl. \textbf{Bias}) in $\hat{\sym{theta}}$ aufgrund kleiner Stichprobenumfänge auftreten können \cite{Abernethy.2006} - jedoch auch korrigierbar sind, vgl. Arbeiten von \textcite{Hirose.1999,Ross.1996}.
+
+Die Qualität der Parameterschätzung beeinflusst daraus nicht nur die Prädiktionsgüte zur Schätzung der Lebensdauer oder Zuverlässigkeit - sie bedingt schließlich auch die Effizienz des Schätzverfahrens.
+Wird im Sinne eines effizienten Verfahrens zur multivariaten Lebensdauermodellbildung eine Methodik gesucht, ist auch die Qualität der Parameterschätzung damit entscheidend.
+Vertrauensbereiche, oder engl. \textbf{\acp{CI}}, können eine Metrik für die Qualität der Modellierung einnehmen, da sie die Unsicherheit oder \textit{Unschärfe} in der Prädiktion bemessen.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\subsubsection{Vertrauensbereiche} \label{subsubsec:ci}
+Die \ac{MLE} liefert nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern auch die Quantifizierung von deren statistischer Unsicherheit (Präzision).
+Obwohl verschiedene Ansätze, wie die numerisch anspruchsvolleren Berechnungen nach Likelihood-Ratio-Methode, Bootstrap-Perzentil-Methode oder Monte-Carlo-Approximation existieren, ist das gängigste Verfahren zur Berechnung von \acp{CI} die Approximation mittels asymptotischer Normalverteilung der \ac{MLE}-Schätzer $\hat{\sym{theta}}$ \cite{Bertsche.2022,Nelson.1990}.
+Dies erfolgt über die \textbf{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß \textcite{Kremer.2019c} bezüglich des Rechenaufwands und resultierender Modellqualität vergleichsweise effizient quantifiziert.
+So wird diese Methodik auch in gängiger Applikationen als Standard angewandt, vgl. \cite{Nelson.2005,Nelson.1990,Yang.2007}.
+In der praktischen Anwendung wird die Fisher-Informationsmatrix auf Basis der resultierenden Schätzwerte $\hat{\sym{theta}} = \sym{theta}$ so als Schätzung zur Beobachtung nach $\symsub{FIM}{idx_O}$ verwendet \cite{Nelson.1990,Lawless.2003}.
+Diese ist definiert als die negative \textbf{Hesse-Matrix} $\sym{H}$ der Log-Likelihood-Funktion, ausgewertet an der Stelle der \ac{MLE}-Schätzwerte
+$\hat{\sym{theta}}$:
+\begin{equation} \label{eq:fim_o}
+    \symsub{FIM}{idx_O} \defeq - \sym{H}(\hat{\sym{theta}}) = - \left[ \frac{\partial^2 \sym{Lambda}(\sym{theta})}{\partial \symsub{thet}{idx_j} \partial \symsub{thet}{idx_l}} \right]_{\sym{theta} = \hat{\sym{theta}}}.
+\end{equation}
+Die Matrix $\sym{H}$ entspricht der ($\sym{k} \times \sym{k}$)-Matrix der $\sym{k}$ zweiten partiellen Ableitungen von $\sym{Lambda}$ (vgl. Gl.~\eqref{eq:mle_loglikelihood_censored}).
+Eine Invertierung ${\hat{\sym{FIM}}_{\sym{idx_O}}}^{-1}$ ergibt die geschätzte \textbf{Varianz-Kovarianz-Matrix} $\hat{\sym{V}}$:
+\begin{equation} \label{eq:var_covar}
+    \hat{\sym{V}} \approx {\hat{\sym{FIM}}_{\sym{idx_O}}}^{-1}.
+\end{equation}
+Die Diagonalelemente dieser Matrix $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}$ entsprechen den Varianzen $\sym{Var}(\hat{\sym{thet}}_{\sym{idx_j}})$ der einzelnen Parameterschätzwerte \cite{Nelson.1990}.
+Die Nicht-Diagonalelemente $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_l}}$ (für $\sym{idx_j} \neq \sym{idx_l}$) repräsentieren die \textbf{Kovarianzen} $\sym{Cov}(\hat{\sym{thet}}_{\sym{idx_j}}, \hat{\sym{thet}}_{\sym{idx_l}})$ \cite{Nelson.1990,Yang.2007}.
+Diese Kovarianzen sind von entscheidender Bedeutung, da sie die statistische Abhängigkeit zwischen den Schätzwerten (z.B. zwischen $\hat{\sym{T}}$ und $\hat{\sym{b}}$) quantifizieren, welche für die Berechnung der \acp{CI} von abgeleiteten Funktionen wie $\hat{\sym{R}}(\sym{t})$ erforderlich sind \cite{Meeker.2022}.
+Basierend auf der Annahme der asymptotischen Normalität der Schätzer wird ein zweiseitiges $(1-\sym{alpha})$-\ac{CI} für einen einzelnen Parameter $\hat{\sym{thet}}_{\sym{idx_j}}$ direkt aus dessen Varianz approximiert durch:
+\begin{equation} \label{eq:ci_normal}
+    [\sym{thet}_{\sym{idx_j},\sym{idx_u}},\sym{thet}_{\sym{idx_j},\sym{idx_o}}]  = \hat{\sym{thet}}_{\sym{idx_j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}},
+\end{equation}
+wobei $\sym{z}_{1-\sym{alpha}/2}$ dem $(1-\sym{alpha}/2)$-Quantil der Standardnormalverteilung entspricht.
+Da Lebensdauerparameter (z.B. $\sym{T}, \sym{b}$) üblicherweise auf $\sym{RR}_{>0}$ beschränkt sind, werden \acp{CI} robust über eine Log-Transformation der Parameter berechnet, um physikalisch unmögliche (negative) Intervallgrenzen zu vermeiden \cite{Meeker.2022,Yang.2007,Nelson.1990}:
+\begin{equation} \label{eq:ci_ln}
+    [\sym{thet}_{\sym{idx_j},\sym{idx_u}}, \sym{thet}_{\sym{idx_j},\sym{idx_o}}] = \hat{\sym{thet}}_{\sym{idx_j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}}}{\hat{\sym{thet}}_{\sym{idx_j}}} \right).
+\end{equation}
+
+Die Berechnung dieser \acp{CI} für Schätzwerte $\sym{g_func}(\hat{\sym{theta}})$ zu Größen wie $\hat{\sym{R}}(\sym{t})$ oder $\hat{\sym{t}}_{\sym{idx_q}}$  erfolgt mittels \textbf{Delta-Methode} \cite{Nelson.1990,Meeker.2022}.
+Dieses auf einer Taylor-Reihenentwicklung basierende Verfahren (Gauß'sche Fehlerfortpflanzung) approximiert die Varianz der Funktion $\hat{\sym{g_func}}=\sym{g_func}(\hat{\sym{theta}})$ unter Einbeziehung der gesamten Varianz-Kovarianz-Matrix.
+Dazu wird der \textbf{Gradientenvektor} $\sym{g_grad}$ der Funktion $\sym{g_func}$ (z.B. $\sym{g_func} = \sym{R}(\sym{t})$) bezüglich des $\sym{k}$-dimensionalen Parametervektors $\sym{theta}$ gebildet:
+\begin{equation} \label{eq:delta_method_gradient}
+    \sym{g_grad} \defeq \left[ \frac{\partial \sym{g_func}(\sym{theta})}{\partial \sym{thet}_{1}}, \dots, \frac{\partial \sym{g_func}(\sym{theta})}{\partial \symsub{thet}{k}} \right]^T_{\sym{theta} = \hat{\sym{theta}}}.
+\end{equation}
+Die approximierte Varianz $\sym{Var}(\hat{\sym{g_func}})$ der Funktion ergibt sich dann aus:
+\begin{equation} \label{eq:delta_method_variance}
+    \sym{Var}(\hat{\sym{g_func}}) \approx \sym{g_grad}^T \hat{\sym{V}} \sym{g_grad}.
+\end{equation}
+Das Vertrauensintervall für die Funktion $\hat{\sym{g_func}}$ wird anschließend unter Verwendung dieser Varianz (bzw. des Standardfehlers $\sqrt{\sym{Var}(\hat{\sym{g_func}})}$) analog zu Gleichung~\eqref{eq:ci_normal} berechnet \cite{Bain.2017b,Yang.2007,Nelson.1990}:
+\begin{equation} \label{eq:ci_rel}
+    [\sym{g_func}_{\sym{idx_u}},\sym{g_func}_{\sym{idx_o}}]  = \hat{\sym{g_func}} \pm \sym{z}_{1-\sym{alpha}/2} \sqrt{\sym{Var}(\hat{\sym{g_func}})}.
+\end{equation}
+Sollen auch hier nur positive Werte für $\sym{g_func}$ berücksichtigt werden, kann eine Logarithmierung in der Berechnung der Vertrauensbereiche analog zu Gl.~\ref{eq:ci_ln} erfolgen \cite{Yang.2007}.
+
+\section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
+Multivariate Lebensdauertests erfordern definitionsgemäß die Betrachtung mehrerer $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter.
+Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten - auch unter dem Begriff \textbf{\ac{L-DoE}} zusammengefasst - sowie der darauffolgenden Lebensdauermodellbildung.
+Während detaillierte Übersichten zur Historie von \ac{DoE} von anfänglichen einschlägigen Beschreibungen durch \textcite{Fisher.1935}, außerdem maßgebliche Weiterentwicklungen durch \textcite{Box.1978} oder evolutionäre Schritte durch \textcite{Taguchi.2005} ausgiebig in Werken von \textcite{Kleppmann.2020,Rigdon.2022,Montgomery.2020} beschrieben sind, wird im Folgenden auf die wesentlichen Inhalte für die Forschungsschwerpunkte eingegangen.
+
+Der primäre Anspruch von \ac{DoE} besteht in der effizienten Planung empirischer Datenerhebungen, um Zielgrößen in Abhängigkeit erklärender Variablen zunächst robust zu modellieren und schließlich zu optimieren.
+Dieses Paradigma lässt sich auch unter der Begrifflichkeit \ac{DfR} unmittelbar wiedererkennen und so auf die Analyse von Lebensdauer und Zuverlässigkeit übertragen \cite{Yang.2007,Wu.2021}.
+Da das lokale oder globale Optimum der Lebensdauer- bzw. Zuverlässigkeitsfunktion eines Produktes a priori meist unbekannt ist, erfordert dessen Identifikation eine systematische Exploration des Parameterraumes.
+Eine besondere Herausforderung stellt hierbei zusätzlich die Integration von \ac{ALT} dar: Die Diskrepanz zwischen dem hochbelasteten Testraum (engl. \textbf{Design Space}) und dem regulären \textbf{Prädiktionsraum} (engl. Use Space oder \textbf{Field Space}) kann eine \textbf{Extrapolation} erforderlich machen, welche die Anforderungen an die Daten- und somit auch an die Designqualität deutlich verschärft.
+Für umfassendere Ausführungen zu Forschungserkenntnissen in \ac{ALT} sei hierbei insbesondere auf Arbeiten von \textcite{Meeker.1993,Meeker.2022,Nelson.1990, Elsayed.2007} verwiesen.
+Das Unwissen zur tatsächlichen Lage optimaler Antwortwerte und die Möglichkeit, per se einen systematischen Offset zwischen Design- und Field-Space durch \ac{ALT} vorzufinden, stellen Teststrategien nach Best-Guess Ansätzen nachteilig.
+Hier wird in der industriellen Praxis häufig fälschlicherweise ein \textbf{\ac{OFAT}}-Testing Ansatz gewählt - unabhängig, ob vom Vorhandensein von Lebensdauer- oder anderen Daten, welcher schlichtweg die Wahrscheinlichkeit, Optimalstellen im Parameterraum systematisch zu treffen, senkt und somit gegenüber \ac{L-DoE} nachteilig ist, vgl. \cite{Montgomery.2020,Siebertz.2017}.
+Da nun die geometrische Struktur eines Versuchsplans die erreichbare Modellierungsqualität deterministisch begrenzt, ist eine präzise Bewertung der Plangüte anhand genau dieser Eigenschaft im Vorfeld unerlässlich.
+Hierfür können objektive \textbf{Performance-Indikatoren} sowie mathematische \textbf{Optimalitätskriterien} dienen, vgl. \cite{Montgomery.2020,Goos.2011}.
+Ergänzend zu rationalen Metriken wie der statistischen \textbf{Trennschärfe} (engl. \textbf{Power}) und dem Schätzergebnis einer \textbf{Koeffizienten}- bzw. Parameterschätzung sind diese Größen damit bestimmend für effiziente multivariate Lebensdauertests.
+
+Vor diesem Hintergrund fokussiert sich dieser Abschnitt auf eine gezielte Auswahl an Grundbegriffen und Metriken für multivariate Testpläne im Kontext von \ac{L-DoE} sowie auf eine Übersicht der für Lebensdauertests geeigneten Versuchspläne, bevor abschließend die statistische Modellbildung beleuchtet wird.
+
+Für eine grundsätzlichere Auseinandersetzung mit konventionellen Methoden und Werkzeugen von \ac{DoE} sei, mit Blick auf den Fokus der vorliegenden Arbeit, hingegen auf die einschlägige Literatur von \textcite{Kleppmann.2020}, \textcite{Siebertz.2017}, \textcite{Hinkelmann.2012} sowie vornehmlich \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
+Diese Werke behandeln intensiv die Inhalte grundsätzlicher statistischer Versuchsplanung, welche um Perspektiven zu \ac{L-DoE} bereits durch am \ac{IMA} entstandene Dissertationen von \textcite{Dazer.2019}, \textcite{Herzig.2021}, \textcite{Grundler.2024} und maßgeblich durch \textcite{Kremer.2021} fortschreitend ergänzt wurden.
+Konsequenterweise werden Hintergründe zum Umgang mit normalverteilten Daten oder Abweichungen davon im Rahmen des \ac{DoE}, die Diskussion zu einschlägigen Vor- und Nachteilen auch unter Abgrenzung zu Alternativen wie \ac{OFAT}, die Regressionsmodellierung auf Basis der \textbf{\ac{ANOVA}}, konventionelle Hypothesentests sowie fundamentale Ausführungen zu \ac{ALT} in den nachfolgenden Ausführungen nicht explizit betrachtet, sondern als bekannt vorausgesetzt.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Grundlagen zur statistischen Versuchsplanung} \label{subsec:begriffedoe}
+Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette entlang mehrerer Prozessschritte  \cite{Coleman.1993,Montgomery.2020}, die beginnend von einer spezifischen Aufgabendefinition in einer statistisch abgesicherten Testentscheidung und Datenmodellierung mündet, vgl. Abbildung~\ref{fig:ma_abb2.02_doe_steps}.
+\begin{figure}[htbp]
+    \centering
+    \def\svgwidth{0.9\textwidth}
+    \input{plots/ma_abb2.02_doe_steps.pdf_tex}
+    \caption{\ac{DoE} Steps gemäß \cite{Coleman.1993}}
+    \label{fig:ma_abb2.02_doe_steps}
+\end{figure}
+Das erklärte Ziel ist es, den kausalen Zusammenhang zwischen Einflussfaktoren und Systemantwort funktional abzubilden.
+Darin abgebildete Einflussfaktoren sollen also per se \textbf{statistisch signifikant} und somit relevant für das Systemverhalten sein.
+So kann beispielsweise die zufallsverteilte Lebensdauer $\sym{tau}$ in Abhängigkeit von $\sym{k} \geq 2$ technischen Beanspruchungen zunächst empirisch untersucht und anschließend modelliert sowie optimiert werden (\textit{Schritt~1} in Abbildung~\ref{fig:ma_abb2.02_doe_steps}).
+
+Im Zentrum der Betrachtung steht damit generell ein technisches \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der \textbf definiert.
+Die zu untersuchende oder zu optimierende Ausgangsgröße wird als \textbf{Systemantwort} $\sym{y}$ (engl. \textbf{Response}) bezeichnet.
+Die gezielt kontrollierbaren und variierten Eingangsgrößen sind \textbf{Faktoren} (\textbf{Steuergrößen}), während nicht kontrollierbare oder unbekannte Einflüsse als \textbf{Störgrößen} (engl. \textbf{Noise}) klassifiziert werden (\textit{Schritt~2}, vgl. \cite{Kleppmann.2020}).
+Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Parameterdiagramm, kurz \textbf{P-Diagramm}, in Abbildung~\ref{fig:ma_abb2.03_p_diagramm} entnommen werden \cite{Montgomery.2020}.
+\begin{figure}[htbp]
+    \centering
+    \def\svgwidth{0.8\textwidth}
+    \input{plots/ma_abb2.03_p_diagramm.pdf_tex}
+    \caption{Parameter-Diagramm (P-Diagramm)}
+    \label{fig:ma_abb2.03_p_diagramm}
+\end{figure}
+Um das Systemverhalten zu charakterisieren, werden die Faktoren als kategoriale oder kontinuierliche Parameter im Versuch auf diskreten Werten, den sogenannten \textbf{Faktorstufen} (engl. \textbf{Level}), variiert (\textit{Schritt~3}).
+Dies erfolgt in aller Regel in kodierter Darstellung, so entsprechen gemäß der gängigsten Konvention die Stufe \textit{-1} der niedrigen und \textit{+1} der hohen Einstellstufe.
+Die planerische Kombination verschiedener Faktorstufen äußert sich in spezifischen \textbf{Versuchspunkten} innerhalb des Parameterraums und entspricht der Versuchsplan-Matrix \cite{Kleppmann.2020,Siebertz.2017}.
+Der \textbf{Versuchsraum} (engl. \textbf{Design Space}) wird hierbei durch die Gesamtheit der technisch realisierbaren und im Versuch einstellbaren Parameterkombinationen aufgespannt.
+Die Auswahl geeigneter statistischer Versuchspläne (\textit{Schritt~4}) für die Durchführung (\textit{Schritt~5}) wird in Abschnitt~\ref{subsec:pläne} detailliert behandelt.
+
+Die aus der Variation resultierende Änderung der Systemantwort quantifiziert den Einfluss des Faktors, der statistisch als \textbf{Effekt} $\sym{Eff}$ bezeichnet wird und den Mittelwertunterschiede zweier Faktorstufen beschreibt (\textit{Schritte~6-7}).
+Mittels \textbf{Kontrastmethode} wird also die Änderung der Systemantwort über alle durchgeführten Versuche mit jeweiligen Faktorstufen registriert \cite{Kleppmann.2020,Montgomery.2020}:
+\begin{equation} \label{eq:eff}
+    \sym{Eff}=\frac{1}{\sym{n}|_{+1}}\sum{\sym{y}|_{+1}} - \frac{1}{\sym{n}|_{-1}}\sum{\sym{y}|_{-1}}
+\end{equation}
+So können mittels \ac{DoE} strukturiert, effizient und verbindlich Informationen gewonnen werden, die über die direkten Effekte hinausgehen und differenziert Aufschluss über \textbf{Haupteffekte} sowie etwaige \textbf{Wechselwirkungen} der Faktoren auf die Antwort des Systems geben - vergleiche Abb.~\ref{fig:ma_abb2.04_effekt} sowie \textcite{Montgomery.2020,Kleppmann.2020,Siebertz.2017,Kremer.2021}.
+Abbildung~\ref{fig:ma_abb2.04_effekt} visualisiert derartige Effekte.
+So gibt die Darstellung eines Haupteffekts in Abhängigkeit des Vorzeichens und der Steigung (\textbf{positiver} oder \textbf{negativer} Haupteffekt) sozusagen die Einflussstärke und -richtung wieder, während bei Wechselwirkung der Effekt in Abhängigkeit der Einstellung eines \textbf{Co-Faktors} dargestellt wird.
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \setlength\figurewidth{0.9\linewidth}
+        \setlength\figureheight{4cm}
+        \input{plots/ma_abb2.04.1_effekt.tex}
+        \caption{Positiver Haupteffekt $\sym{Eff}_1$}
+        \label{fig:ma_abb2.04.1_effekt}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \setlength\figurewidth{0.9\linewidth}
+        \setlength\figureheight{4cm}
+        \input{plots/ma_abb2.04.2_effekt.tex}
+        \caption{Wechselwirkungseffekte $\sym{Eff}_2$ und $\sym{Eff}_3$}
+        \label{fig:ma_abb2.04.2_effekt}
+    \end{subfigure}
+    \caption{Schematische Darstellung der Effekte: (a) positiver Haupteffekt von Faktor $\sym{x}_1$, (b) Wechselwirkungseffekte zwischen $\sym{x}_1$ und $\sym{x}_2$.}
+    \label{fig:ma_abb2.04_effekt}
+\end{figure}
+Diese Zusammenhänge können mathematisch positiv oder negativ beschrieben sowie durch Polynomfunktionen höherer Ordnung approximiert werden, um zusätzlich beispielsweise \textbf{quadratische Effekte} oder \textbf{Mehrfachwechselwirkungen} abzubilden.
+In einem einfachen Fall wird für die lineare Beschreibung des Einflusses von Faktoren auf eine Antwortvariable ein durchschnittlicher Effekt durch eine Regressionskonstante $\symsub{beta}{idx_0}$ sowie Haupteffekte durch die Regressionskoeffizienten $\symsub{beta}{idx_j}, \sym{idx_j}=0,1,\dots,\sym{k}$ zu einem Regressionsmodell erster Ordnung geschätzt.
+Falls relevant, erfolgt die Ergänzung um die jeweilige Wechselwirkung und einen Fehlerterm $\sym{epsilon}$ als Zufallsvariable für Abweichungen durch Mess- und Streufehler \cite{Montgomery.2020,Myers.2016,Rigdon.2022}.
+Beispielhaft $\sym{k}=2$ Faktoren resultiert daraus:
+\begin{equation} \label{eq:linear_std_model}
+    \sym{y}=\symsub{beta}{idx_0}+\sym{beta}_{1}\sym{x}_1+\sym{beta}_{2}\sym{x}_2+\sym{beta}_{12}\sym{x}_1\sym{x}_2+\sym{epsilon}.
+\end{equation}
+Ein Modell zweiter Ordnung enthält zudem quadratische Terme, welche üblicherweise in Optimierungsaufgaben - so auch in der Lebensdauer- und Zuverlässigkeitsanalyse - relevant werden können:
+\begin{equation} \label{eq:quadric_std_model}
+    \sym{y}=\symsub{beta}{idx_0}+\sym{beta}_{1}\sym{x}_1+\sym{beta}_{2}\sym{x}_2+\sym{beta}_{12}\sym{x}_1\sym{x}_2+\sym{beta}_{11}\sym{x}^2_1+\sym{beta}_{22}\sym{x}^2_2+\sym{epsilon}.
+\end{equation}
+Die Gleichung der Modellierung kann so zur einfacheren Handhabung auch in Matrixnotation notiert werden und resultiert in:
+\begin{equation} \label{eq:matrixmod}
+    \sym{Y}=\sym{X}\sym{Beta} + \sym{Epsilon},
+\end{equation}
+wobei $\sym{Beta}$ als $\sym{p}\times 1$ Vektor der Regressionskoeffizienten ($\sym{p}=\sym{k}+1$) durch den $\sym{n}\times 1$ Vektor $\sym{Y}$ aller Beobachtungen sowie durch die Versuchsplan-Matrix $\sym{X}$ ($\sym{n}\times\sym{p}$ Einträge) unter Zuhilfenahme eines geeigneten Schätzverfahrens (vgl. Abschnitt~\ref{subsec:schätzer}) zu ermittelten ist \cite{Yang.2007,Nelson.2005}.
+Sollen zunächst perspektivisch relevante Faktoren für eine versuchstechnische Untersuchung identifiziert werden, kann ein \textbf{Parameter-Screening} durchgeführt werden.
+Dessen Durchführung kann sowohl heuristisch als auch versuchstechnisch erfolgen.
+
+\subsection{Parameter-Screening} \label{subsec:screening}
+Angesichts der potenziell hohen Komplexität durch Wechselwirkungen und Nichtlinearitäten sind die in Abbildung~\ref{fig:ma_abb2.02_doe_steps} beschriebenen \textit{Schritte~2-3} als propädeutische Arbeiten für ein effizientes Testdesign zu interpretieren.
+Methodisch lassen sich diese unter dem Terminus \textbf{Screening} subsumieren.
+Screening-Schritte sind zwischen der Definition des Untersuchungsziels und der Durchführung der physischen Screening-Experimente angeordnet (vgl. \textit{Schritt~3} in Abbildung~\ref{fig:ma_abb2.02_doe_steps} sowie Abschnitt~\ref{subsec:pläne}).
+Daraus folgend dienen Screening-Methoden und -Versuchspläne dem Ziel, Informationsverluste bei einer minimalen Anzahl an Versuchsläufen zu begrenzen und die vitalen (\textit{Steuergrößen}) von den trivialen (\textit{Störgrößen}) Faktoren zu separieren, vgl. Abbildung~\ref{fig:ma_abb2.03_p_diagramm}.
+
+Im Hinblick auf die Realisierung eines unter Zeit- und Kostenrestriktionen hochgradig effizienten \ac{DoE} ist die effiziente Ausgestaltung der Screening-Strategie selbst schon von primärem Interesse.
+In traditionellen \ac{DoE}-Ansätzen impliziert dies den Einsatz von \textbf{Kreativmethoden}, wie sie Standardliteratur von \textcite{Montgomery.2020} aufführen oder exemplarisch durch \textcite{Kremer.2021} und \textcite{Gundlach.2004} zusammengefasst werden.
+Hierbei ist ein Rückgriff auf Ergebnisse aus Experimenten, die explizit für das Forschungsziel ausgelegt wären, in dieser Phase unter Umständen noch nicht möglich.
+Es gilt damit zunächst, qualitativ eine rein rational erlesene Sammlung an potenziellen Einflussparameter zu erstellen, um diese dann anhand ihrer geschätzten Einflüsse auf die Systemantwort zu priorisieren.
+Ansätze aus der Kreativmethodik können dazu genutzt werden und fundieren auf der technischen \textbf{Systemanalyse}, die sowohl mit als auch ohne spezifisches Vorwissen über das System erfolgen kann \cite{Bertsche.2022}.
+Hilfsmittel zur Priorisierung einer hier erstellten Parametersammlung können beispielsweise Entscheidungsfindungsprotokolle, wie die \ac{DSM}, und Methoden aus dem Komplexitätsmanagement, z.B. \textbf{Ishikawa-Diagramm}, sein - siehe hierzu auch weiterführende Werke von \textcite{Mayers.1997}, \textcite{Pahl.2007},\textcite{Wu.2021, Daenzer.2002} sowie \textcite{Lindemann.2008}.
+Das Screening liefert somit eine rational festgestellte Auswahl an möglichst wenigen Einflussparametern, die mutmaßlich den entscheidenden Anteil an statistisch begründeter Manipulation der Systemantwort tragen und sich daher für eine Untersuchung in Versuchsplänen qualifizieren.
+Entsprechend ist daraufhin ein geeigneter Versuchsplan für die physischen Datenerhebungen zu wählen.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Statistische Versuchsplanung zur Lebensdauererprobung} \label{subsec:pläne}
+Standardprotokolle aus dem \ac{DoE} wie der \textbf{$2^{\sym{k}}$ voll-faktorielle Versuchsplan} eignen sich grundsätzlich auch für Lebensdaueruntersuchungen, da sich hier analog zu vergleichbar statistisch verteilter Datenlage Effekte stets als (Mittelwert-) Unterschiede in der Beobachtung der Systemantwort aus dem Vergleich zweier Einstellstufen eines oder mehrerer Faktoren ergeben \cite{Kleppmann.2020}.
+
+\subsubsection{$2^{\sym{k}}$ Faktorielle Versuchspläne} \label{subsubsec:voll}
+Demzufolge kann auch ein Lebensdauer-beeinflussendes Parameterset -  beispielhaft $(\sym{x}_1,\sym{x}_2)$ - voll-faktoriell auf zwei Stufen variiert und vollständig kombiniert werden, vgl. Abbildung~\ref{fig:abb2.05_vfdesign}.
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \setlength\figurewidth{0.9\linewidth}
+        \setlength\figureheight{\figurewidth}
+        \input{plots/ma_abb2.05_FF_design.tex}
+        \caption{Versuchsplan}
+        \label{fig:abb2.05.1_vfdesign_plot}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.55\textwidth}
+        \centering
+        \vspace*{1cm}
+        \begin{tabular}{cccc}
+            \toprule
+            \multicolumn{1}{c}{Faktorstufen-} & \multicolumn{3}{c}{Faktoren und}                                         \\
+            \multicolumn{1}{c}{Kombination}   & \multicolumn{3}{c}{Wechselwirkung}                                       \\
+            \cmidrule(r){1-1} \cmidrule(l){2-4}
+            \#                                & $\sym{x}_1$                        & $\sym{x}_2$ & $\sym{x}_1 \sym{x}_2$ \\
+            \midrule
+            1                                 & $-1$                               & $-1$        & $+1$                  \\
+            2                                 & $+1$                               & $-1$        & $-1$                  \\
+            3                                 & $-1$                               & $+1$        & $-1$                  \\
+            4                                 & $+1$                               & $+1$        & $+1$                  \\
+            \bottomrule
+        \end{tabular}
+        \vspace*{1.5cm}
+        \caption{Versuchsplanmatrix zu Abb.~\ref{fig:abb2.05.1_vfdesign_plot}}
+        \label{fig:abb2.05.2_vfdesign_matrix}
+    \end{subfigure}
+    \caption{Standard voll-faktorieller Versuchsplan}
+    \label{fig:abb2.05_vfdesign}
+\end{figure}
+Ein derartiges Setup erlaubt es, die perspektivische Differenz erreichbarer \ac{EoL}-Werte durch niedrige und hohe Beanspruchungswerte der Faktoren zu beobachten \cite{Yang.2007,Meeker.2022}.
+Der voll-faktorielle Versuchsplan bildet somit den Standard-Versuchsplan im \ac{DoE} und fordert bei einmaliger Durchführung (\textbf{Replikation} $\sym{m}=1$)
+\begin{equation}
+    \sym{n}=2^{\sym{k}}
+    \label{eq:ffvp_n}
+\end{equation}
+Versuche.
+Dieser Stichprobenumfang stellt sicher, dass das resultierende Gleichungssystem \textbf{gesättigt} ist: Mit $\sym{n}$ Versuchen lassen sich $\sym{n}-1$ Effekte für Hauptfaktoren und Wechselwirkungen eindeutig bestimmen.
+Von entscheidender Bedeutung für die Aussagekraft des Versuchsplans ist die Wahl der Faktorstufen (vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand}).
+Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, sodass signifikante Effekte sicher detektiert werden („\textbf{Signal-to-Noise}“), wobei gleichzeitig zu geringe Abstände (Rauschen) sowie zu große Intervalle (Gefahr unerkannter Nichtlinearitäten) zu vermeiden sind - vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand} sowie \textcite{Wu.2021,Siebertz.2017,Kleppmann.2020}.
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{4cm}
+    \input{plots/ma_abb2.06_effektabstand.tex}
+    \caption{Einfluss der Schrittweite auf die Approximation des Effekts $\sym{Eff}$}
+    \label{fig:ma_abb2.06_effektabstand}
+\end{figure}
+Auf Basis eines solchen zweistufigen Setups lässt sich der Zusammenhang zwischen Einflussgrößen und Lebensdauer interpolieren und in einem linearen Modell abbilden, welches zudem die Schätzung von Wechselwirkungen erlaubt.
+Werden davon abweichende Modellterme zur Abbildung der Systemantwort erwartet, berücksichtigen alternative Versuchspläne typischerweise drei bis fünf Faktorstufen.
+Der voll-faktorielle Versuchsplan nimmt dabei eine entscheidende Schlüsselrolle in der strategischen Modellbildung ein - insbesondere im Hinblick auf Lebensdauerdaten und Zuverlässigkeitstechnik.\
+Darin aufgeführte Versuchspunkte können auf Basis der Struktur ihrer Zuordnung üblicherweise ideal aus Voruntersuchungen übernommen oder durch weiterführende Untersuchungen nachfolgend erweitert werden.
+Ausgehend vom qualitativen Parameter-Screening (vgl. Abschnitt~\ref{subsec:begriffedoe}) ist ohne initiale Experimente oft unklar, welche Faktoren die Antwortvariable, also beispielsweise die Lebensdauer eines Systems, nun tatsächlich signifikant beeinflussen.
+Folglich ist es essenziell, diese Fragestellung vor der eigentlichen Versuchsplanumsetzung effizient zu klären.
+
+\subsubsection{$2^{\sym{k}-\sym{p_f}}$ Fraktionell Faktorielle Versuchspläne}
+Sind nach Anwendung der Kreativmethoden (qualitatives Screening) weiterhin so viele Einflussfaktoren als relevant eingestuft, dass ein voll-faktorieller Ansatz gemäß Gleichung~\ref{eq:ffvp_n} zu einem wirtschaftlich nicht vertretbaren Versuchsumfang führen würde, muss die Strategie hin zu physikalischen Screening-Tests verschärft werden.
+Dies empfiehlt sich insbesondere für Systeme mit $\sym{k} > 5$ Faktoren, um die experimentelle Effizienz zu gewährleisten.
+Zur Veranschaulichung der Notwendigkeit: Bereits eine einzelne Replikation eines voll-faktoriellen Experiments mit $\sym{k}=8$ Faktoren würde $2^8 = 256$ Versuchsdurchläufe erfordern, was in der Lebensdauererprobung meist illusorisch ist.
+
+Für derartige Selektionsaufgaben eignen sich daher \textbf{Screening-Versuchspläne}, wie der \textbf{teil-faktorielle Versuchsplan} (Fractional Factorial Design) oder alternativ der \textbf{Plackett-Burman-Plan} \cite{Kleppmann.2020,Siebertz.2017,Montgomery.2020}.
+Bei diesem Ansatz wird lediglich eine selektive Teilmenge (Fraktion) der voll-faktoriellen Versuchsagenda umgesetzt, um mit minimalem Informationsverlust die für den Anwendungsfall signifikanten Effekte zu beschreiben.
+Mathematisch wird die Anzahl der Versuche dabei auf
+\begin{equation} \label{eq:teilfakt_n}
+    \sym{n} = 2^{\sym{k}-\sym{p_f}}
+\end{equation}
+reduziert, wobei $\sym{p_f}$ den Grad der Fraktionierung (die Anzahl der Generatoren) angibt.
+Die Validität dieses Vorgehens stützt sich auf zwei fundamentale empirische Postulate \cite{Montgomery.2021,Rigdon.2022}:
+\begin{itemize}
+    \item Die \textbf{Effekthierarchie} besagt, dass Effekte niedrigerer Ordnung -- primär Haupteffekte -- in der Regel eine größere Amplitude aufweisen und mit höherer Wahrscheinlichkeit signifikant sind als Effekte höherer Ordnung.
+    \item Die \textbf{Effektvererbung} impliziert, dass das Auftreten signifikanter Wechselwirkungen oder quadratischer Terme strukturell an die Signifikanz ihrer korrespondierenden Haupteffekte gekoppelt ist.
+\end{itemize}
+Eine direkte Konsequenz dieser Reduktion („Der Preis der Einsparung“) ist jedoch, dass sich in teil-faktoriellen Versuchsplänen bestimmte Effekte nicht mehr isoliert betrachten lassen (vgl. Abbildung~\ref{fig:abb2.05.1_vfdesign_plot} für den Fall einer Fraktionierung).
+So sind beispielsweise Haupteffekte unter Umständen nicht mehr zweifelsfrei von Wechselwirkungen höherer Ordnung zu unterscheiden. Da sich diese Effekte statistisch überlagern, spricht man von einer \textbf{Vermengung} (engl. \textbf{Aliasing}).
+Die Schwere dieser Vermengung wird dabei über die \textbf{Auflösung} (engl. Resolution) des Versuchsplans klassifiziert (z.\,B. Auflösung III, IV oder V).
+Wird dieser Informationsverlust jedoch bewusst in Kauf genommen und ingenieurwissenschaftlich bewertet, ermöglicht dies eine signifikante Reduktion des Versuchsumfangs, um effizient die dominanten Faktoren aus der initialen Parametermenge zu isolieren.
+Diese Vorgehensweise ist von hoher Relevanz, da Lebensdauertests -- ob als beschleunigte Prüfung mittels \ac{ALT} oder unter Feldbedingungen -- durch die inhärente Zeitabhängigkeit der Systemantwort erhebliche Kapazitäten binden und Ergebnisse nicht ad hoc verfügbar sind.
+Im Sinne einer ressourceneffizienten Gesamtstrategie sollten die Screening-Versuche daher idealerweise so konzipiert sein, dass sie nahtlos in einen nachfolgenden, höher aufgelösten Versuchsplan integriert (\textbf{augmentiert}) werden können.
+
+\subsubsection{Wirkungsflächenversuchspläne} \label{subsubsec:rsm}
+Die bisher diskutierten Versuchspläne beschränken sich auf die Untersuchung von Faktoren auf jeweils zwei Stufen ($\pm 1$). Dies ermöglicht zwar eine effiziente Darstellung linearer Beziehungen und Interaktionen, jedoch ist die Modellierung komplexerer, nicht-linearer Effekte aufgrund fehlender Stützstellen im Versuchsraum damit physikalisch nicht möglich.
+Perspektivisch ist daher entscheidend, wie die bestehende Datenbasis weitergenutzt und augmentiert werden kann, falls die Systemantwort signifikante \textbf{Krümmungen} (engl. \textbf{Curvature}) aufweist und die quantitativen Beziehungen zwischen Faktoren und Zielgröße für eine Optimierung detaillierter beschrieben werden müssen.
+
+Die \textbf{\ac{RSM}} behandelt als Teildisziplin des \ac{DoE} derartige Herangehensweisen und bietet hierfür spezielle \textbf{Wirkungsflächenversuchspläne} - engl. \textbf{\acp{RSD}} - an.
+Der erste Schritt zur Detektion von Nichtlinearitäten besteht in der Integration von $\symsub{n}{idx_C}$ sogenannten \textbf{Zentralpunkten}, engl. \textbf{\acp{CP}}, in den faktoriellen Basisplan. Hierbei werden alle Faktoren auf die kodierte Stufe \textit{0} (die Mitte des Versuchsraums) gesetzt.
+Weicht der Mittelwert der Systemantwort in den Zentralpunkten signifikant vom Mittelwert über die faktoriellen Eckpunkte ab, deutet dies auf eine Krümmung der Antwortfläche hin \cite{Montgomery.2020}.
+
+Um diese quadratischen Zusammenhänge explizit zu bestimmen, gilt der \textbf{Zentral-Zusammengesetzte-Versuchsplan}, engl. \textbf{\ac{CCD}}, als etablierter Standard.
+Ein \ac{CCD} entsteht durch die Augmentierung des ursprünglichen voll- (oder teil-)faktoriellen Plans (den $\symsub{n}{idx_F}$ Eckpunkten), vgl. Abbildung~\ref{fig:abb2.07_ccd_design}, um:
+\begin{itemize}
+    \item eine definierte Anzahl $\symsub{n}{idx_C}$ an wiederholten Zentralpunkten (üblicherweise $3 \leq \symsub{n}{idx_C} \leq 5$ zur Abschätzung des reinen Fehlers) sowie
+    \item $\symsub{n}{idx_S} = 2 \cdot \sym{k}$ zusätzliche \textbf{Sternpunkte} (engl. \textbf{Axial Points} oder \textbf{Star Points}), die auf den Achsen des Koordinatensystems im Abstand $\pm \symsub{alpha}{idx_D}$ vom Zentrum liegen.
+\end{itemize}
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \vspace*{0.5cm}
+        \setlength\figurewidth{0.9\linewidth}
+        \setlength\figureheight{\figurewidth}
+
+        \input{plots/ma_abb2.07_CCD_design.tex}
+        \caption{Versuchsplan (CCD)}
+        \label{fig:abb2.07.1_ccd_plot}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.55\textwidth}
+        \centering
+        \vspace*{0.1cm}
+        \begin{tabular}{ccc}
+            \toprule
+            \multicolumn{1}{c}{Versuchs-} & \multicolumn{2}{c}{Faktorstufen}                            \\
+
+            \#                            & $\sym{x}_1$                      & $\sym{x}_2$              \\
+            \midrule
+
+            1                             & $-1$                             & $-1$                     \\
+            2                             & $+1$                             & $-1$                     \\
+            3                             & $-1$                             & $+1$                     \\
+            4                             & $+1$                             & $+1$                     \\
+            5                             & $-\symsub{alpha}{idx_D}$         & $0$                      \\
+            6                             & $+\symsub{alpha}{idx_D}$         & $0$                      \\
+            7                             & $0$                              & $-\symsub{alpha}{idx_D}$ \\
+            8                             & $0$                              & $+\symsub{alpha}{idx_D}$ \\
+            9                             & $0$                              & $0$                      \\
+            10                            & $0$                              & $0$                      \\
+            11                            & $0$                              & $0$                      \\
+            12                            & $0$                              & $0$                      \\
+            13                            & $0$                              & $0$                      \\
+            \bottomrule
+        \end{tabular}
+        \vspace*{0.5cm}
+        \caption{Versuchsplanmatrix (Stufen) zu Abb.~\ref{fig:abb2.07.1_ccd_plot}}
+        \label{fig:abb2.07.2_ccd_matrix}
+    \end{subfigure}
+    \caption{Zentral zusammengesetzter Versuchsplan (CCD) mit $\sym{k}=2$}
+    \label{fig:abb2.07_ccd_design}
+\end{figure}
+Während die Zentralpunkte das Vorhandensein quadratischer Effekte validieren, ermöglichen die Sternpunkte deren Wertbestimmung.
+Die Wahl des Abstands $\symsub{alpha}{idx_D}$ wird primär durch die Geometrie des interessierenden Versuchsraums (\textbf{Region of Interest}) diktiert.
+Betrachtet man diesen Raum als Kugel (\textbf{sphärisch}), ist die \textbf{Drehbarkeit} (\textbf{Rotierbarkeit}, engl. \textbf{Rotatability}) ein wesentliches Qualitätsmerkmal.
+Sie stellt sicher, dass die Varianz der Vorhersage nur vom Abstand zum Zentrum abhängt und invariant gegenüber einer Rotation des Koordinatensystems ist.
+Um diese Eigenschaft zu gewährleisten, berechnet sich der Abstand $\symsub{alpha}{idx_D}$ in Abhängigkeit der faktoriellen Versuchspunkte $\symsub{n}{idx_F}$ zu \cite{Box.1957,Montgomery.2020}:
+\begin{equation} \label{eq:ccd_alpha}
+    \symsub{alpha}{idx_D} = (\symsub{n}{idx_F})^{1/4}.
+\end{equation}
+Alternativ kann für sphärische Räume auch $\symsub{alpha}{idx_D} = \sqrt{\sym{k}}$ gewählt werden (\textbf{Sphärisches \ac{CCD}}), wodurch alle Versuchs- und Sternpunkte auf einer Kugeloberfläche liegen \cite{Myers.2016}.
+Ist der Versuchsraum hingegen durch harte physikalische Grenzen (z.B. maximale Temperatur) kubisch beschränkt, bietet sich der \textbf{flächenzentrierte \ac{CCD}} (\textbf{Face Centered \ac{CCD}}) an.
+Hierbei wird $\symsub{alpha}{idx_D} = 1$ gesetzt, sodass die Sternpunkte direkt auf den Flächenmitten des Würfels liegen.
+Dies vereinfacht die Durchführung, da nur drei Faktorstufen ($-1$, $0$, $+1$) benötigt werden, opfert jedoch die Eigenschaft der Rotierbarkeit.
+Eine effiziente Alternative zum \ac{CCD} stellt das \textbf{Box-Behnken-Design} dar \cite{Box.1960}.
+Dieses Design kombiniert $2^{\sym{k}}$-Faktorielle mit unvollständigen Blockplänen und platziert Versuchspunkte auf den Kantenmitten des Versuchsraums, vermeidet jedoch die extremen faktoriellen Versuchspunkte.
+Dies kann vorteilhaft für Lebensdauertests sein, bei denen extreme Ecken oft zu verfrühten Ausfällen führen können.
+Zudem ist es bei korrekter Wahl der Zentralpunkte alias-optimal gegenüber kubischen Modellen \cite{Jones.2011}.
+Stoßen Standard-Designs (\ac{CCD}, Box-Behnken) aufgrund von Restriktionen im Versuchsraum (\textbf{Constraints}), nicht-standardmäßigen Modellierungszielen oder ungewöhnlichen Stichprobenumfängen an ihre Grenzen, empfiehlt sich der Einsatz von \textbf{Optimalen Versuchsplänen}, vergleiche übernächsten Abschnitt.
+Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche Vorhersagevarianz über den gesamten Designraum und können Standard-Designs in ihrer Prädiktionsgüte oft übertreffen \cite{Goos.2011,Montgomery.2020}.
+
+\subsection{Strategische Vorgehensweisen} \label{subsec:strategie}
+In der Praxis entsteht ein \ac{CCD} häufig im Rahmen einer \textbf{sequenziellen Versuchsstrategie}: Zeigt das initiale lineare Modell Anpassungsmängel (\textbf{Lack-of-Fit}), wird der bestehende faktorielle Plan um die Sternpunkte augmentiert, um ein Modell zweiter Ordnung zu fitten \cite{Myers.2016}.
+Modelle zweiter Ordnung sind insbesondere in der Lebensdauer- und Zuverlässigkeitstechnik vermehrt von Bedeutung, da sie die Existenz von lokalen Extrema (Minima oder Maxima) der Systemantwort im Versuchsraum detaillierter abbilden können \cite{Rigdon.2022,Dean.2017}.
+Prinzipielle Vorgehensweisen, die ein erfolgreiches Umsetzen von \ac{DoE} bzw. \ac{L-DoE} begünstigen sollten, wie \textbf{Blockbildung} oder \textbf{Randomisierung} (vgl. \cite{Siebertz.2017,Kleppmann.2020}) seien hier bereits vorausgesetzt.
+Abbildung~\ref{fig:abb2.08_strategy} fasst eine derartige strategische Vorgehensweise zur Realisierung eines \ac{CCD} zusammen, wie sie beispielsweise \textcite{Box.1951,Box.1988,Bisgaard.1992} vorschlagen.
+
+\begin{figure}[htbp]
+    \centering
+
+    \setlength\figurewidth{0.15\textwidth}
+    \setlength\figureheight{0.15\textwidth}
+
+    % --- 1. Teilfaktoriell ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.1_strategy.tex}
+    \end{minipage}
+    \hfill
+    % --- Pfeil 1 ---
+    \begin{minipage}[b]{0.05\textwidth}
+        \centering
+        \raisebox{2.25cm}{
+            \hspace*{0.3cm}
+            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
+        }
+    \end{minipage}
+    \hfill
+    % --- 2. Vollfaktoriell ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.2_strategy.tex}
+    \end{minipage}
+    \hfill
+    % --- Pfeil 2 ---
+    \begin{minipage}[b]{0.02\textwidth}
+        \centering
+        \raisebox{2.25cm}{
+            \hspace*{0.0cm}
+            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
+        }
+    \end{minipage}
+    \hfill
+    % --- 3. Zentralpunkt ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.3_strategy.tex}
+    \end{minipage}
+    \hfill
+    % --- Pfeil 3 ---
+    \begin{minipage}[b]{0.01\textwidth}
+        \centering
+        \raisebox{2.25cm}{
+            \hspace*{0.00cm}
+            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
+        }
+    \end{minipage}
+    \hfill
+    % --- 4. CCD ---
+    \begin{minipage}[b]{0.2\textwidth}
+        \centering
+        \input{plots/ma_abb2.08.4_strategy.tex}
+    \end{minipage}
+    \caption{Strategischer Ansatz zu augmentierter Versuchsplanung für die Lebensdauererprobung nach \cite{Box.1988,Bisgaard.1992}}
+    \label{fig:abb2.08_strategy}
+\end{figure}
+Um effizient Versuchspunkte zu allokieren und für sequentiell fortlaufende Versuche weiterverwendet zu werden, wird in Abgleich mit Abbildung~\ref{fig:ma_abb2.02_doe_steps} zunächst ein \textbf{teil-faktorieller Versuchsplan} zur Identifikation signifikanter Faktoren durchgeführt.
+Anschließend wird der Plan zu einem \textbf{voll-faktoriellen Versuchsplan} erweitert, um alle Haupteffekte und Wechselwirkungen erster Ordnung zu schätzen.
+Daraufhin werden \textbf{Zentralpunkte} ergänzt, um das Vorhandensein von Krümmungen zu validieren.
+Abschließend werden bei Bedarf die \textbf{Sternpunkte} hinzugefügt, um ein vollständiges \ac{CCD} zu realisieren.
+Insbesondere in der Lebensdauererprobung ist eine derartige schrittweise Vorgehensweise sinnvoll, um den Versuchsumfang zu minimieren und dennoch eine fundierte Modellierung der Systemantwort zu gewährleisten.
+Gleichzeitig erlaubt diese Strategie eine flexible Anpassung an unerwartete Ergebnisse in den einzelnen Phasen der Untersuchung, während lokale Optima von Zuverlässigkeiten im Sinne von \ac{DfR} im Vorfeld ohnehin nicht bekannt sind.
+In Abhängigkeit der Anpassung zur Wahl eines geeigneten Modells, linear oder quadratisch, kann die Versuchsplanung so stets an die aktuellen Erkenntnisse angepasst werden.
+Dies folgt im Wesentlichen einer übergeordneten Logik der Modellkomplexität:
+Gemäß \textcite{Russell.2019} korrespondiert die minimale Anzahl notwendiger Versuchspunkte direkt mit der Anzahl der zu schätzenden Modellparameter $\sym{p}$.
+Intuitiv erfordert bereits die Bestimmung der Parameter einer einfachen Geraden ($\symsub{beta}{idx_0}, \sym{beta}_1$) mindestens $\sym{N}=2$ unterschiedliche Stützstellen.
+Soll hingegen ein quadratischer Zusammenhang ($\symsub{beta}{idx_0}, \sym{beta}_1, \sym{beta}_{11}$) abgebildet werden, sind zwingend mindestens drei Stützstellen erforderlich, um das Gleichungssystem zu lösen.
+Im Kontext optimaler Versuchspläne definiert nach \textcite{Pukelsheim.2006} der Maßerweiterungssatz von Carathéodory dabei eine theoretische Obergrenze für die notwendigen Stützstellen von $\sym{N}=\sym{p}(\sym{p} + 1)/2 + 1$, beziehungsweise $\sym{N}=\sym{p}(\sym{p} + 1)/2$, sofern das Interesse der Schätzung aller Elemente des Parametervektors $\sym{Beta}$ gilt \cite{Russell.2019}.
+Es kann beispielsweise auf Basis der Ergebnisse des teil-faktoriellen Plans entschieden werden, ob eine Erweiterung zum voll-faktoriellen Plan überhaupt notwendig ist.
+Genauso kann die Anzahl der Zentralpunkte an die beobachtete Streuung der Lebensdauerdaten angepasst werden, um eine robuste Schätzung des Fehlers zu gewährleisten.
+Ist dann eine Extrapolation in Richtung a-priori unbekannter Beanspruchungsniveaus geplant, verfügt der \ac{CCD} über die notwendigen Stützstellen, um eine adäquate Exploration des Versuchsraums zu ermöglichen.
+Zuletzt kann selbst bei Extrapolation über die Grenzen des Versuchsraums hinaus auf Basis der modellierten Krümmungen eine fundierte Abschätzung der Systemantwort erfolgen \cite{Myers.2016,Montgomery.2020} und sogar mit Validierungsversuchen unter realen Einsatzbedingungen hinterlegt werden \cite{Dean.2017}.
+So wird eine effiziente und zugleich robuste Lebensdauererprobung ermöglicht, die den Anforderungen der \ac{DfR} gerecht wird und wirtschaftlich abbildbar bleibt \cite{RisbergEllekjr.1998}.
+
+\subsection{Optimale Versuchsplanung und Bewertungskriterien} \label{subsec:optimal}
+Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, können \textbf{optimale Versuchspläne} einen leistungsfähigen, \textit{effizienten} Lösungsansatz für \textit{multivariate} Versuchsplanung bieten \cite{Kleppmann.2016,Montgomery.2020,Myers.2016}.
+Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der (um die Versuchsanzahl $\sym{N}$ \textbf{skalierten}) \textbf{Prädiktionsvarianz}, engl. \textbf{\ac{SPV}},
+\begin{equation}
+    \sym{pred_var}= \frac{\sym{N} \sym{Var}[\hat{\sym{y}}(\symsub{x_loc}{idx_0})]}{\sym{sigma_sq}}
+    = \symsub{x_loc}{idx_0}' \left( \frac{\sym{M}}{\sym{N}} \right)^{-1} \symsub{x_loc}{idx_0}
+    = \sym{N} \symsub{x_loc}{idx_0}' \sym{M}^{-1} \symsub{x_loc}{idx_0}
+    \label{eq:pred_variance_scaled}
+\end{equation}
+optimiert werden \cite{Myers.2016,Montgomery.2020}.
+Die Prädiktionsvarianz ist ein dimensionsloses Maß, das ausschließlich über die geometrische Anordnung der \sym{N} Versuchspunkte (der Matrix $\sym{X}$) in der \textbf{Informationsmatrix} (auch \textbf{\textit{M}omentenmatrix})
+\begin{equation}
+    \sym{M}\stackrel{\sym{m}=1}{=} \sym{X}'\sym{X}
+    \label{eq:informationsmatrix}
+\end{equation}
+definiert und damit positionsabhängig von einer Referenz $\symsub{x_loc}{idx_0}'=[1,\sym{x}_{01},\cdots,\sym{x}_{0\sym{k}}]$ im Parameterraum ist \cite{Myers.2016}.
+Sie ist damit unabhängig von der tatsächlichen Streuung der Messdaten ($\sym{sigma_sq}$).
+Weiter wird sie über die Anzahl der Versuchspunkte $\sym{N}$ skaliert, um Vergleiche zwischen Versuchsplänen mit unterschiedlicher Stichprobengröße zu ermöglichen \cite{Goos.2011,Myers.2016} - kann aber auch unskaliert betrachtet werden: als \textbf{\ac{UPV}} $=\sym{Var} [\hat{\sym{y}}(\symsub{x_loc}{idx_0})] / \sym{sigma_sq} = \symsub{x_loc}{idx_0}' \sym{M}^{-1} \symsub{x_loc}{idx_0}$, vgl. \textcite{Montgomery.2020,Myers.2010}.
+Zusammen mit der Varianz des Versuchsfehlers $\sym{sigma_sq}$ (vgl. Gleichung~\ref{eq:dispersion}) erlaubt die Prädiktionsvarianz somit eine direkte Quantifizierung der \textbf{Unsicherheit in der Modellvorhersage} $\sym{Var} [\hat{\sym{y}}(\symsub{x_loc}{idx_0})]$ an einer beliebigen Stelle $\symsub{x_loc}{idx_0}$ im Versuchsraum.
+Um sie über verschiedene Stellen im Parameterraum zu bewerten, konnten allen voran \textcite{Zahran.2003,GiovannittiJensen.1989} mit dem \textbf{\ac{VDG}} oder \textbf{\ac{FDS}-Plot} Visualisierungsstrategien entwickeln.
+Eine effiziente Versuchsplanung für multivariate Lebensdaueruntersuchungen muss sich neben pragmatischen Beweggründen maßgeblich an diesen Größen orientieren, weshalb im Folgenden eine Übersicht der gängigen Metriken und Qualitätsmerkmale gegeben wird.\
+
+
+Der Einsatz optimaler Versuchspläne ist zunächst prädestiniert für Szenarien, in denen klassische Pläne an ihre Grenzen stoßen - sei es durch physikalische Randbedingungen welche bestimmte Faktorstufenkombinationen ausschließen, oder durch strikte Limitierungen der verfügbaren Versuchskapazität \cite{Goos.2011,Kleppmann.2020}.
+Derart klassische Versuchspläne wie der voll-faktorielle Versuchsplan sind aufgrund ihrer Versuchspunktanordnung stets \textbf{orthogonal} \cite{Rigdon.2022,Montgomery.2020}.
+Ein Versuchsplan wird als orthogonal bezeichnet, wenn keine Korrelation zwischen jeweils zwei Spalten der Versuchsplan-Matrix vorliegt - deren Skalarprodukte also jeweils null ergeben:
+\begin{equation}
+    \langle \symsub{x}{idx_i}, \symsub{x}{idx_j} \rangle = 0 \quad \text{für alle } \sym{idx_i} \neq \sym{idx_j}.
+    \label{eq:skalar}
+\end{equation}
+Oder in anderen Worten: entspricht die Informationsmatrix $\sym{M}$ einer Diagonalmatrix, ist der Versuchsplan orthogonal \cite{Montgomery.2021,Rigdon.2022}.
+So können Effekte eindeutig identifiziert werden - die Vektoren der Faktorstufenkombinationen sind linear unabhängig und Effekte lassen sich unverzerrt schätzen.
+Dies stellt einen Versuchsplan also zunächst einmal qualitativ günstig dar.
+
+
+Zudem liegt \textbf{Ausgewogenheit} vor, sofern für einen jeweiligen Faktor alle anderen Faktoreinstellungen gleichmäßig aufgeteilt sind \cite{Siebertz.2017}.
+Damit wird Varianzhomogenität und Gleichbehandlung der Faktoren gewährleistet, sodass die Schätzung der Effekte unverzerrt erfolgt.
+
+Mathematisch fundiert die Bewertung der Schätzgenauigkeit auf der Inversen der Informationsmatrix, welche als \textbf{Varianz-Kovarianz-Matrix} (oder \textbf{Dispersionsmatrix}) $(\sym{X}'\sym{X})^{-1}$ der Regressionskoeffizienten definiert ist:
+\begin{equation}
+    \sym{Var}(\hat{\sym{Beta}}) = \sym{sigma_sq} (\sym{X}'\sym{X})^{-1},
+    \label{eq:dispersion}
+\end{equation}
+wobei wie gehabt $\sym{sigma_sq}$ die Varianz des Versuchsfehlers darstellt.
+Die Diagonalelemente der Matrix $(\sym{X}'\sym{X})^{-1}$ stehen hierbei in direktem Zusammenhang mit dem \textbf{\ac{VIF}} \cite{Siebertz.2017,Kleppmann.2020}.
+Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.
+Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Kleppmann.2020,Montgomery.2021}.
+
+
+Ergänzend zur globalen Bewertung der Multikollinearität durch den \ac{VIF} erlaubt die Betrachtung der sogenannten \textbf{Prädiktionsmatrix} (engl. auch \textbf{Hat-Matrix})
+\begin{equation}
+    \sym{Hat} = \sym{X}(\sym{X}'\sym{X})^{-1}\sym{X}'
+    \label{eq:hat_matrix}
+\end{equation}
+eine lokale Diagnose der Versuchspunkte.
+Die Diagonalelemente $\sym{h}_{\sym{idx_i}\sym{idx_i}} \in \left[ \frac{1}{\sym{n}}, 1 \right]$ dieser Projektionsmatrix, bezeichnet als \textbf{Hebelwerte} (engl. \textbf{Leverage}), quantifizieren den Einfluss eines einzelnen Versuchslaufs auf die Modellvorhersage.
+Punkte mit hohen Hebelwerten (typischerweise $\sym{h}_{\sym{idx_i}\sym{idx_i}}> 2\sym{p}/\sym{n}$) befinden sich geometrisch weit vom Zentrum des Versuchsraums entfernt und dominieren die Regression, was den Plan anfällig für Ausreißer in diesen spezifischen Einstellungen macht \cite{Siebertz.2017,Montgomery.2021}.
+
+Während Hebelwerte jedoch lediglich das \textit{Potenzial} einer Beobachtung zur Modellbeeinflussung aufgrund ihrer geometrischen Exponiertheit indizieren, quantifizieren Einflussstatistiken die \textit{tatsächliche} Auswirkung auf die Regressionsparameter und die Vorhersagegüte.
+Die Identifikation solcher Beobachtungen erfolgt methodisch durch den iterativen Ausschluss des $i$-ten Datensatzes (\textit{Leave-One-Out}-Methodik) und den Vergleich der resultierenden Modellstatistiken mit dem ursprünglichen Modell basierend auf $\sym{n}$ Beobachtungen \cite{Belsley.2004, Montgomery.2021}.
+Als globales Maß für den Einfluss der $i$-ten Beobachtung auf den Vektor aller geschätzten Regressionskoeffizienten $\hat{\sym{Beta}}$ dient die \textbf{Cook-Distanz} ($\sym{D}_i$).
+Sie verknüpft die Information des intern studentisierten Residuums $\symsub{resid}{idx_i}$ mit dem Hebelwert $\sym{h}_{\sym{idx_i}\sym{idx_i}}$:
+% ...
+\begin{equation}
+    \symsub{D}{idx_i} = \frac{\sym{resid}_{\sym{idx_i}}^2}{\sym{p}} \cdot \frac{\sym{h}_{\sym{idx_i}\sym{idx_i}}}{1-\sym{h}_{\sym{idx_i}\sym{idx_i}}}.
+    \label{eq:cooks_d}
+\end{equation}
+% ...
+Ein hoher Wert (typischerweise $\symsub{D}{idx_i} > 1$ oder $\symsub{D}{idx_i} > 4/\sym{n}$) signalisiert, dass das Entfernen der Beobachtung zu einer signifikanten Verschiebung der Modellparameter führen würde, da der Punkt sowohl weit vom Zentrum liegt als auch einen großen Fehler aufweist \cite{Fahrmeir.2009,Belsley.2004}.
+
+Für eine differenzierte Analyse auf Ebene der einzelnen Modellterme wird die Metrik $\sym{dfbetas}$ (Difference in Betas, Standardized) herangezogen.
+Sie misst die standardisierte Änderung eines spezifischen Regressionskoeffizienten $\sym{beta}_{\sym{idx_j}}$ bei Ausschluss der $\sym{idx_i}$-ten Beobachtung:
+\begin{equation}
+    \sym{dfbetas}_{\sym{idx_j},\sym{idx_i}} = \frac{\hat{\sym{beta}}_{\sym{idx_j}} - \hat{\sym{beta}}_{\sym{idx_j}(-\sym{idx_i})}}{\sqrt{\hat{\sym{sigma}}_{(-\sym{idx_i})}^2 (\sym{X}'\sym{X})^{-1}_{\sym{idx_j}\sym{idx_j}}}},
+    \label{eq:dfbetas}
+\end{equation}
+wobei $\hat{\sym{beta}}_{\sym{idx_j}(-\sym{idx_i})}$ den Koeffizienten ohne die $\sym{idx_i}$-te Beobachtung und $\hat{\sym{sigma}}_{(-\sym{idx_i})}^2$ die entsprechende Fehlerquadratschätzung darstellt.
+Hiermit lässt sich prüfen, ob einzelne Versuche die Schätzung eines Effekt-Terms verzerren (kritischer Schwellenwert oft $> 2/\sqrt{\sym{n}}$) \cite{Belsley.2004,Montgomery.2021}.
+
+Ergänzend beschreibt $\sym{dffits}$ (Difference in Fits) die Änderung des Vorhersagewertes an der Stelle $\sym{idx_i}$ selbst, normiert auf die Standardabweichung der Anpassung:
+\begin{equation}
+    \sym{dffits}_{\sym{idx_i}} = \frac{\hat{\sym{y}}_{\sym{idx_i}} - \hat{\sym{y}}_{\sym{idx_i}(-\sym{idx_i})}}{\sqrt{\hat{\sym{sigma}}_{(-\sym{idx_i})}^2 \sym{h}_{\sym{idx_i}\sym{idx_i}}}}.
+    \label{eq:dffits}
+\end{equation}
+
+Abschließend bewertet die $\sym{covratio}$ den Einfluss auf die Präzision der Schätzung.
+Sie setzt die Determinante der Varianz-Kovarianz-Matrix ohne die $\sym{idx_i}$-te Beobachtung ins Verhältnis zur ursprünglichen Matrix:
+\begin{equation}
+    \sym{covratio}_{\sym{idx_i}} = \frac{\det((\sym{X}_{(-\sym{idx_i})}'\sym{X}_{(-\sym{idx_i})})^{-1})}{\det((\sym{X}'\sym{X})^{-1})}.
+    \label{eq:covratio}
+\end{equation}
+Werte, die signifikant von $1$ abweichen (Grenzen $1 \pm 3\sym{p}/\sym{n}$), zeigen an, dass die Beobachtung die Konfidenzbereiche der Koeffizienten unverhältnismäßig beeinflusst \cite{Belsley.2004}.
+
+Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix $(\sym{X}'\sym{X})^{-1}$ den Informationsgehalt trotz Korrelationen zu maximieren.
+Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
+Eine Übersicht der einschlägigen \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten} - welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}.
+Sie bilden mitunter die Grundlage für diverse weitere Optimalitäten und hybride Ansätze und lassen sich prinzipiell in Modellierungskriterien (\textit{\textbf{A}}-, \textit{\textbf{D}}-~Optimalität) und Prädiktionskriterien (\textit{\textbf{G}}-, \textit{\textbf{I}}-, \textit{\textbf{U}}-, \textit{\textbf{V}}\textbf{-~Optimalität}) unterteilen \cite{Myers.2016,Rigdon.2022}.
+
+Jenseits praktischer Kriterien sind hier der Vollständigkeit halber auch eine Teilmenge eher theoretischerer Optimalitäten zu nennen.
+Die \textbf{\textit{E}-Optimalität}, führt zur Minimierung des maximalen Eigenwerts der Dispersionsmatrix, was eine Worst-Case-Absicherung zur Varianzschätzung begünstigt - vergleiche \textcite{Boyd.2004,Russell.2019}.
+Für explorative Zielsetzungen ohne starre Modellannahmen kann nach \textcite{Atkinson.1970} die \textit{\textbf{S}}\textbf{-Optimalität} relevant sein, da hier durch die Maximierung der euklidischen Abstände benachbarter Punkte eine gleichmäßige Raumfüllung (\textit{Space-Filling}) sichergestellt werden kann.
+So können für sich ändernde Modelle entlang einzelner Parameter wie beispielsweise $\hat{\sym{T}} \in \hat{\sym{theta}}$ Sensitivatsanalysen effizient durchgeführt werden.
+Eine Verallgemeinerung der prädiktionsorientierten Kriterien stellt die \textit{\textbf{Q}}\textbf{-Optimalität} dar, welche analog zur \textbf{\textit{I}}-Optimalität die integrierte Prädiktionsvarianz minimiert, jedoch mittels Gewichtsfunktionen eine differenzierte Priorisierung spezifischer Regionen im Versuchsraum erlaubt, vgl. \textcite{Goos.2011}.
+Liegt der Fokus hingegen isoliert auf einer Teilmenge der Modellparameter - etwa zur Trennung von Haupteffekten und Blockeffekten oder von Termen erster und zweiter Ordnung - ermöglicht die \textit{\textbf{D}}$_{\textit{\textbf{S}}}$\textbf{-Optimalität} als Derivat der \textit{\textbf{D}}-Optimalität eine gezielte Maximierung der Schätzgüte für genau dieses jeweilige \textit{S}ubset der Parametergruppe - siehe auch Werke von \textcite{Goos.2011,Atkinson.2007,Myers.2016}.
+
+{
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\compressEq}{\vspace*{-0.4\baselineskip}}
+\begin{longtable}{@{}lp{0.75\textwidth}@{}}
+
+    \caption{Übersicht, Zielsetzung und mathematische Definition verschiedener Optimalitätskriterien für Versuchspläne}  %
+    \label{tab:2.1_optimalitaeten}                                                                              \\
+    \toprule
+    \textbf{Kriterium}              & \textbf{Zielgröße, Beschreibung und Definition}                           \\
+    \midrule
+    \endfirsthead
+
+    \caption*{Tabelle \ref{tab:2.1_optimalitaeten} (\textit{Fortsetzung}): Übersicht der Optimalitätskriterien} \\
+    \toprule
+    \textbf{Kriterium}              & \textbf{Zielgröße, Beschreibung und Definition}                           \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{2}{r}{\footnotesize\textit{Fortsetzung auf der nächsten Seite...}}                             \\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    \textbf{\textit{A}-Optimalität} &
+    Minimierung der Spur der inversen Informationsmatrix \cite{Kleppmann.2020,Montgomery.2020,Rigdon.2022}. \newline
+    \textit{Ziel: Maximale Präzision der einzelnen Parameter im Durchschnitt.}
+    \compressEq
+    \begin{equation} \label{eq:opt_A}
+        \sym{A_opt} = \min \left( \text{spur} \left(\sym{M}^{-1}\right) \right) = \min \left( \sum_{\sym{idx_j}=1}^{\sym{k}} \sym{Var}\left(\hat{\beta}_{\sym{idx_j}}\right) \right)
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{D}-Optimalität} &
+    Maximierung der Determinante der Informationsmatrix $\sym{M}$. Da das Volumen des Vertrauensellipsoids der Koeffizientenschätzwerte umgekehrt proportional zur Quadratwurzel der Determinante ($\sqrt{\det(\sym{M})}$) ist, minimiert dieses Kriterium das Unsicherheitsvolumen im Parameterraum \cite{Montgomery.2020,Kleppmann.2020,Myers.2016,Atkinson.2007}. \newline
+    \textit{Ziel: Minimierung des Volumens des gemeinsamen Vertrauensbereichs aller Modellparameter.}
+    \compressEq
+    \begin{equation} \label{eq:opt_D}
+        \sym{D_opt} = \max \left( \det(\sym{M}) \right) = \min \left( \det\left(\sym{M}^{-1}\right) \right)
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    % \textbf{\textit{E}-Optimalität} &
+    % Minimierung des maximalen Eigenwerts $\sym{eigen_val}_{\max}$ der inversen Informationsmatrix \cite{Kleppmann.2020,Boyd.2004}. \newline
+    % \textit{Ziel: Worst-Case-Absicherung für den am schlechtesten geschätzten Parameter.}
+    % \compressEq
+    % \begin{equation} \label{eq:opt_E}
+    %     \sym{E_opt} = \min \left( \sym{eigen_val}_{\max}\left(\sym{M}^{-1}\right) \right)
+    % \end{equation}
+    % \compressEq
+    % \\ \addlinespace
+
+    \textbf{\textit{G}-Optimalität} &
+    Minimierung der maximalen skalierten Prädiktionsvarianz $\sym{pred_var}$ im relevanten Parameterraum \cite{Montgomery.2020,Myers.2016,Russell.2019}. \newline
+    \textit{Ziel: Qualität der Vorhersage an der ungünstigsten Stelle sichern.}
+    \compressEq
+    \begin{equation} \label{eq:opt_G}
+        \sym{G_opt} = \min \left( \max_{\symsub{x_loc}{idx_0} \in \sym{RR}^{\sym{k}}} \sym{pred_var} \right)
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{I}-Optimalität} &
+    Minimierung der durchschnittlichen (\textit{integrierten}) Prädiktionsvarianz über den Parameterraum - auch als \textbf{\textit{U}-Optimalität} im ingenieurwissenschaftlich-statistischen Sinn bekannt: Optimierung bzgl. einer \textit{uniformen} Prädiktionsvarianz \cite{Monroe.2011,Rigdon.2022,Atkinson.2007}. \newline
+    \textit{Ziel: Optimale Vorhersagegüte (\ac{SPV}) im Mittel über den gesamten Raum - z.B. bei initialer Parametrisierung eines multivariaten Lebensdauermodells.}
+    \compressEq
+    \begin{equation} \label{eq:opt_I}
+        \sym{I_opt} = \min \left(\frac{\sym{N}}{\int_{\sym{RR}^{\sym{k}}} d\sym{x}} \int_{\sym{RR}^{\sym{k}}} \sym{pred_var} \, d\sym{x} \right)
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+
+    % \textbf{S-Optimalität}       &
+    % Minimierung der Varianz der geschätzten Steigung der Regressionsfunktion an einem spezifischen Punkt $\symsub{x_loc}{idx_0}$. \newline
+    % \textit{Ziel: Maximale Präzision des Grenzeffekts (Slope) an einer kritischen Stelle.}
+    % \compressEq
+    % \begin{equation} \label{eq:opt_S_Atkinson}
+    %     \sym{S_opt} = \min_{\xi} \left( \sym{s_grad}^T \sym{M}^{-1} \sym{s_grad} \right) \text{ mit } \sym{s_grad} = \frac{\partial \sym{f}(\symsub{x_loc}{idx_0})}{\partial \symsub{x_loc}{idx_0}}
+    % \end{equation}
+    % \compressEq
+    % \\ \addlinespace
+
+    \textbf{\textit{V}-Optimalität} &
+    Minimierung der durchschnittlichen Prädiktionsvarianz über ein diskretes Set von $\sym{N}$ Punkten \cite{Goos.2011,Montgomery.2020,Myers.2010}. \newline
+    \textit{Ziel: Optimale Vorhersagegüte (\ac{SPV}) an spezifischen \sym{idx_i} Stellen - z.B. bei \ac{L-DoE}-Versuchspunkten oder spezifischen Nennlasten.}
+    \compressEq
+    \begin{equation} \label{eq:opt_V}
+        \sym{V_opt} = \min \left( \frac{1}{\sym{N}} \sum_{\sym{idx_i}=1}^{\sym{N}} \nu(\symsub{x}{idx_i}) \right)
+    \end{equation}
+    \compressEq
+    \\
+\end{longtable}
+}
+
+
+Zur vergleichbaren Bewertung unterschiedlicher Designs unabhängig von der Skalierung werden normierte \textbf{Effizienzen} herangezogen \cite{Montgomery.2020}.
+Aus Tabelle~\ref{tab:2.1_optimalitaeten} lassen sich die \textbf{\textit{A}-Effizienz} $\sym{eff_A}$, \textbf{\textit{D}-Effizienz} $\sym{eff_D}$, \textbf{\textit{G}-Effizienz} $\sym{eff_G}$, \textbf{\textit{I}-Effizienz} $\sym{eff_I}$ und \textbf{\textit{V}-Effizienz} $\sym{eff_V}$ ableiten, welche jeweils die Güte $[0,1]$ eines Versuchsplans quantifizieren - vergleiche Tabelle~\ref{tab:2.2_effizienzen}.
+{
+\renewcommand{\arraystretch}{1.2}
+\newcommand{\compressEq}{\vspace*{-0.4\baselineskip}}
+\begin{longtable}{@{}lp{0.75\textwidth}@{}}
+
+    \caption{Übersicht, Zielsetzung und mathematische Definition verschiedener Effizienzkriterien für Versuchspläne}
+    \label{tab:2.2_effizienzen}                                                                           \\
+    \toprule
+    \textbf{Kriterium}            & \textbf{Zielgröße, Beschreibung und Definition}                       \\
+    \midrule
+    \endfirsthead
+
+    \caption*{Tabelle \ref{tab:2.2_effizienzen} (\textit{Fortsetzung}): Übersicht der Effizienzkriterien} \\
+    \toprule
+    \textbf{Kriterium}            & \textbf{Zielgröße, Beschreibung und Definition}                       \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{2}{r}{\footnotesize\textit{Fortsetzung auf der nächsten Seite...}}                       \\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    \textbf{\textit{A}-Effizienz} &
+    Maß für die durchschnittliche Präzision der Regressionskoeffizienten. \cite{Myers.2016,Goos.2011}.  \newline
+    \compressEq
+    \begin{equation} \label{eq:eff_A}
+        \sym{eff_A} = 100 \cdot \frac{\sym{p}}{\text{spur} (\sym{N} \cdot \sym{M}^{-1})}
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{D}-Effizienz} &
+    Maß für den Informationsgehalt der Informationsmatrix $\sym{M}$, definiert über die Determinante, umgekehrt proportional zum Volumen des Vertrauensellipsoids der Parameterschätzwerte und durch die Potenzierung mit $1/\sym{p}$ pro Schätzparameter normiert. \cite{Myers.2016,Goos.2011}.
+    \compressEq
+    \begin{equation} \label{eq:eff_D}
+        \sym{eff_D} = 100 \cdot \frac{\det(\sym{M})^{1/\sym{p}}}{\sym{N}}
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{G}-Effizienz} &
+    Maß für die Vorhersagegüte im ungünstigsten Fall innerhalb des Versuchsraums. Da für die maximale \ac{SPV} die theoretische Untergrenze $\sym{pred_var}_{\max} \geq \sym{p}$ gilt, beschreibt dieses Kriterium das Verhältnis zwischen idealer und realisierter maximaler Varianz \cite{Myers.2016}.
+    \compressEq
+    \begin{equation} \label{eq:eff_G}
+        \sym{eff_G} = 100 \cdot \frac{\sym{p}}{\sym{pred_var}_{\max}}
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{I}-Effizienz} &
+    Maß für die durchschnittliche Vorhersagegüte über den gesamten Versuchsraum \cite{Myers.2016}.
+    \compressEq
+    \begin{equation} \label{eq:eff_I}
+        \sym{eff_I} = 100 \cdot \frac{\sym{p}}{\displaystyle \frac{1}{\int_{R} d\sym{x}} \int_{R} \sym{pred_var} \, d\sym{x}}
+    \end{equation}
+    \compressEq
+    \\ \addlinespace
+
+    \textbf{\textit{V}-Effizienz} &
+    Maß für die durchschnittliche Vorhersagegüte über ein diskretes Set von $\sym{N}$ Punkten analog zu Gleichung~\ref{eq:eff_I} \cite{Myers.2016}.
+    \compressEq
+    \begin{equation} \label{eq:eff_V}
+        \sym{eff_V} = 100 \cdot \frac{1}{\sym{N}} \sum_{\sym{idx_i}=1}^{\sym{N}} \frac{\sym{p}}{\sym{pred_var}(\symsub{x}{idx_i})}
+    \end{equation}
+    \compressEq
+    \\
+\end{longtable}
+}
+
+\subsubsection{Forschungsschwerpunkte in der \ac{RSM}}
+Während die klassische sequentielle Strategie (Screening gefolgt von Augmentierung zum \ac{CCD} oder Anpassung von Parameterräumen mit optimalen Versuchsplänen) die methodischen Risiken minimiert, erfordert sie oft einen hohen administrativen und zeitlichen Aufwand durch mehrere Versuchsphasen - insbesondere bei technischen Versuchsanlagen mit hohem Rüst-Aufwand.
+Als Antwort darauf entwickelten \textcite{Jones.2011} zunächst die Klasse der \textbf{\acp{DSD}}, um auch bei größeren Faktorenzahlen (typisch $\sym{k} \geq 4$) Haupteffekte von nicht-linearen Effekten in einem Schritt zu trennen.
+Da \acp{DSD} jedoch eine starre Struktur aufweisen und oft nur eine geringe statistische Power zur Schätzung quadratischer Effekte bieten, etablierte sich in jüngster Forschung die umfassendere Klasse der \textbf{\ac{OMARS}-Designs} (\textit{Orthogonal Minimally Aliased Response Surface Designs}), zu der \textcite{Goos.2025} zuletzt eine detaillierte Übersichtsarbeit vorlegten.
+\textcite{NunezAres.2020} erarbeiteten hierfür einen Katalog verschiedener \ac{OMARS}-Designs, die im Gegensatz zu klassischen Plänen eine flexible Wahl der Versuchsanzahl $\sym{n}$ ermöglichen.
+Diese Designs zielen spezifisch auf den fließenden Übergang von Screening zu \ac{RSD} in einem einzigen experimentellen Schritt ab (\textit{One-Step Approach}).
+Dazu basieren sie auf der Variation aller quantitativen Faktoren auf drei Stufen ($-1, 0, +1$), um quadratische Zusammenhänge prinzipiell abzubilden.
+Die statistische Konstruktion garantiert dabei zwei fundamentale Orthogonalitätseigenschaften, die sie von klassischen Optimal-Designs abgrenzen:
+Erstens sind alle Haupteffekte orthogonal zueinander, was eine unabhängige Schätzung der linearen Einflüsse sichert.
+Zweitens sind die Haupteffekte vollständig unkorreliert mit sämtlichen Effekten zweiter Ordnung (sowohl Zweifach-Wechselwirkungen als auch quadratische Terme).
+Das verbleibende Aliasing (Vermengung) beschränkt sich somit ausschließlich auf die Gruppe der Effekte zweiter Ordnung untereinander und wird algorithmisch minimiert (engl. \textit{Minimally Aliased}).
+Dies erlaubt eine signifikante Flexibilisierung der Stichprobengröße im Vergleich zu starr definierten Plänen wie dem \ac{CCD}, bei gleichzeitigem Erhalt der robusten Schätzbarkeit der primären Haupteffekte.
+Die Generierung eines solchen \ac{OMARS}-DesignsST erfolgt dabei nicht über geometrische Konstruktionsvorschriften (wie beim \ac{CCD}), sondern algorithmisch durch die Lösung eines ganzzahligen linearen Optimierungsproblems (engl. \textbf{\ac{ILP}}).
+Basierend auf der Kandidatenmenge \sym{cand_set} (üblicherweise entsprechend einem voll-faktoriellen $3^{\sym{num_fac}}$ Plan) wird ein Vektor binärer Entscheidungsvariablen $\sym{dec_var} \in \{0,1\}^{|\sym{cand_set}|}$ gesucht, der folgende mathematische Restriktionen simultan erfüllt:
+
+\begin{itemize}
+    \item \textbf{Einhaltung des Stichprobenumfangs:}
+          Die Summe der ausgewählten Versuchspunkte muss exakt der gewünschten Anzahl $\sym{n}$ entsprechen:
+          \begin{equation} \label{eq:omars_n}
+              \sum_{\sym{idx_i}=1}^{|\sym{cand_set}|} \symsub{dec_var}{idx_i} = \sym{n}.
+          \end{equation}
+
+    \item \textbf{Orthogonalität der Haupteffekte:}
+          Jedes Paar von Haupteffekt-Spalten $\sym{idx_j}$ und $\sym{idx_l}$ muss unkorreliert sein. Für die kodierten Faktorstufen $\sym{x}_{\sym{idx_i}\sym{idx_j}} \in \{-1, 0, +1\}$ des $\sym{idx_i}$-ten Kandidaten gilt:
+          \begin{equation} \label{eq:omars_ortho_me}
+              \sum_{\sym{idx_i}=1}^{|\sym{cand_set}|} \symsub{dec_var}{idx_i} \cdot \sym{x}_{\sym{idx_i}\sym{idx_j}} \cdot \sym{x}_{\sym{idx_i}\sym{idx_l}} = 0 \quad \forall \, 1 \le \sym{idx_j} < \sym{idx_l} \le \sym{num_fac}.
+          \end{equation}
+
+    \item \textbf{\ac{OMARS}-Eigenschaft (Orthogonalität Haupteffekt zu Effekten zweiter Ordnung):}
+          Dies ist das definierende Merkmal. Jeder Haupteffekt $\sym{idx_j}$ muss orthogonal zu jedem Effekt zweiter Ordnung (Interaktion $\sym{x}_{\sym{idx_l}}\sym{x}_{\sym{idx_k}}$ oder quadratischer Term $\sym{x}_{\sym{idx_l}}^2$) sein:
+          \begin{equation} \label{eq:omars_ortho_soe}
+              \sum_{\sym{idx_i}=1}^{|\sym{cand_set}|} \symsub{dec_var}{idx_i} \cdot \sym{x}_{\sym{idx_i}\sym{idx_j}} \cdot (\sym{x}_{\sym{idx_i}\sym{idx_l}} \cdot \sym{x}_{\sym{idx_i}\sym{idx_k}}) = 0 \quad \forall \, \sym{idx_j}, \sym{idx_l}, \sym{idx_k} \in \{1, \dots, \sym{num_fac}\}.
+          \end{equation}
+\end{itemize}
+Unter Einhaltung dieser harten Nebenbedingungen wird anschließend jene Design-Variante ausgewählt, welche die Aliasing-Struktur der Effekte zweiter Ordnung untereinander minimiert (z.\,B. durch Maximierung von \sym{D_opt}, vgl. Gleichung~\ref{eq:opt_D}).
+
+
+% \subsubsection{Signifikanz und Trennschärfe}
+% Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. $\sym{power}$) verfügt.
+% Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens (vergleiche \textbf{\sym{t}-Statistik}, \textbf{Signal-to-Noise Ratio}, \textbf{Signifikanztests} nach \textcite{Kleppmann.2020,Montgomery.2020,Goos.2011}) korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2017,Kleppmann.2020}.
+% Insofern ist ein Effekt in praktischem Umfeld natürlich problemabhängig (Streuungscharakteristik der Lebensdauer, realisierbare Stichprobengröße, etc.) und meist von Bedeutung für $\sym{Eff} \geq 2\sym{sigma}$, wobei Trennschärfewerte $\geq 80\%$ als befriedigend gelten \cite{Rigdon.2022,Montgomery.2020}.
+% Insbesondere bei reduzierten Versuchsplänen und unter dem Einfluss stochastischer Lebensdauerstreuung ist die Power-Analyse jedoch essenziell, um das Risiko von falsch-negativen Schlussfolgerungen zu minimieren.
+% Letztendlich kann die Trennschärfe somit als Garantiemetrik verstanden werden, die sicherstellt, dass ein geplanter Versuchsaufbau in der Lage ist, Effekte von praktischer Relevanz zu detektieren \cite{Cohen.1988,Myers.2016} - was vornehmlich in Bezug auf Lebensdauertests aufgrund genannter wirtschaftlicher Randbedingungen von hoher Bedeutung ist.
+% Formalisiert wird dies im Rahmen \textbf{statistischer Hypothesentests} \cite{Kleppmann.2020,Montgomery.2020}.
+% Die Zielsetzung besteht darin, den Nachweis zu erbringen, ob ein bestimmter Faktor $\symsub{x}{idx_j}$ einen signifikanten Einfluss auf die Systemantwort $\sym{y}$ ausübt.
+% Dazu werden zwei konkurrierende Hypothesen formuliert:
+% Die \textbf{Nullhypothese} $\sym{H0}$ unterstellt, dass kein Zusammenhang besteht, der korrespondierende Regressionskoeffizient $\symsub{beta}{idx_j}$ (vgl. Abschnitt~\ref{subsec:modellbildung}) also den Wert Null annimmt:
+% \begin{equation} \label{eq:hypotheses}
+%     \sym{H0}: \sym{beta}_j = 0 \quad \text{gegen} \quad \sym{H1}: \sym{beta}_j \neq 0.
+% \end{equation}
+% Die \textbf{Alternativhypothese} $\sym{H1}$ postuliert hingegen einen signifikanten Effekt ($\symsub{beta}{idx_j} \neq 0$).
+% Die Entscheidung über die Annahme oder Ablehnung von $\sym{H0}$ basiert auf dem $\sym{p-Wert}$.
+% Dieser quantifiziert die Wahrscheinlichkeit, unter der Annahme der Gültigkeit von $\sym{H0}$ die beobachteten Daten (oder extremere Ergebnisse) zu erhalten.
+% Unterschreitet der $\sym{p-Wert}$ das a priori definierte \textbf{Signifikanzniveau} $\sym{alpha}$ (üblicherweise $\sym{alpha} = 0,05$), wird $\sym{H0}$ zugunsten der Alternativhypothese $\sym{H1}$ verworfen.
+% Der Fehler, $\sym{H0}$ fälschlicherweise abzulehnen, obwohl kein Effekt vorliegt, wird als Fehler 1. Art bezeichnet; seine Wahrscheinlichkeit ist durch $\sym{alpha}$ begrenzt.
+% Die \textbf{Trennschärfe} fokussiert hingegen auf den Fehler 2. Art (oft mit $\symsub{beta}{idx_error}$ notiert), welcher das Risiko beschreibt, einen tatsächlich vorhandenen Effekt nicht zu erkennen (falsch-negative Entscheidung).
+% Die Power folglich ist definiert als das Komplement dieses Fehlers ($1 - \symsub{beta}{idx_error}$) und entspricht somit der Wahrscheinlichkeit, $\sym{H0}$ korrekterweise abzulehnen, wenn $\sym{H1}$ wahr ist:
+% \begin{equation} \label{eq:power}
+%     \sym{power} = \sym{Pr}(\sym{H0} \text{ ablehnen} \mid \sym{H1} \text{ ist wahr}) = 1 - \symsub{beta}{idx_error}.
+% \end{equation}
+% Im Kontext der Lebensdauerdatenanalyse, bei der nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten nicht über klassische \textbf{t-Tests} berechnen.
+% Aus der Arbeit von \textcite{Nelder.1972} kommen hier \textbf{Verallgemeinerte Lineare Modelle}, engl. \textbf{\acp{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\sym{beta}_j$ vorzugsweise über \textbf{\acp{LR-Test}} (oder approximativ über \textbf{Wald-Tests }- vergleiche hierzu Arbeiten von \textcite{Rigdon.2022,Meeker.2022,Montgomery.2020,McCulloch.2001} ermittelt wird.
+% Da für diese komplexen Verteilungsmodelle bei kleinen Stichprobenumfängen $\sym{n}$ keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung gerne numerisch mittels \textbf{\ac{MCS}} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
+% Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.\,B. $\symsub{n}{idx_MC}=10^4$ Simulationsläufe).
+% Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht bzw. mit Streuung überlagert und/oder zensiert.
+% Anschließend erfolgt die Modellbildung und Hypothesenprüfung.
+% Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant ($\sym{p-Wert} < \sym{alpha}$) erkannt wird, entspricht der geschätzten $\sym{power}$ des Designs.
+
+\subsubsection{Signifikanz und Trennschärfe}
+Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. $\sym{power}$) verfügt.
+Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens (vergleiche \textbf{\sym{t}-Statistik}, \textbf{Signal-to-Noise Ratio}, \textbf{Signifikanztests} nach \textcite{Kleppmann.2020,Montgomery.2020,Goos.2011}) korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2017,Kleppmann.2020}.
+Insofern ist ein Effekt in praktischem Umfeld natürlich problemabhängig (Streuungscharakteristik der Lebensdauer, realisierbare Stichprobengröße, etc.) und meist von Bedeutung für $\sym{Eff} \geq 2\sym{sigma}$, wobei Trennschärfewerte $\geq 80\,\%$ als befriedigend gelten \cite{Rigdon.2022,Montgomery.2020}.
+Insbesondere bei reduzierten Versuchsplänen und unter dem Einfluss stochastischer Lebensdauerstreuung ist die Power-Analyse jedoch essenziell, um das Risiko von falsch-negativen Schlussfolgerungen zu minimieren.
+Letztendlich kann die Trennschärfe somit als Garantiemetrik verstanden werden, die sicherstellt, dass ein geplanter Versuchsaufbau in der Lage ist, Effekte von praktischer Relevanz zu detektieren \cite{Cohen.1988,Myers.2016} - was vornehmlich in Bezug auf Lebensdauertests aufgrund genannter wirtschaftlicher Randbedingungen von hoher Bedeutung ist.
+
+Formalisiert wird dies im Rahmen \textbf{statistischer Hypothesentests} \cite{Kleppmann.2020,Montgomery.2020}.
+Die Zielsetzung besteht darin, den Nachweis zu erbringen, ob ein bestimmter Faktor $\symsub{x}{idx_j}$ einen signifikanten Einfluss auf die Systemantwort $\sym{y}$ ausübt.
+Dazu werden zwei konkurrierende Hypothesen formuliert:
+Die \textbf{Nullhypothese} $\sym{H0}$ unterstellt, dass kein Zusammenhang besteht, der korrespondierende Regressionskoeffizient $\symsub{beta}{idx_j}$ (vgl. Abschnitt~\ref{subsec:modellbildung}) also den Wert Null annimmt:
+\begin{equation} \label{eq:hypotheses}
+    \sym{H0}: \sym{beta}_j = 0 \quad \text{gegen} \quad \sym{H1}: \sym{beta}_j \neq 0.
+\end{equation}
+Die \textbf{Alternativhypothese} $\sym{H1}$ postuliert hingegen einen signifikanten Effekt ($\symsub{beta}{idx_j} \neq 0$).
+Die Entscheidung über die Annahme oder Ablehnung von $\sym{H0}$ basiert auf dem $\sym{p-Wert}$.
+Dieser quantifiziert die Wahrscheinlichkeit, unter der Annahme der Gültigkeit von $\sym{H0}$ die beobachteten Daten (oder extremere Ergebnisse) zu erhalten.
+Unterschreitet der $\sym{p-Wert}$ das a priori definierte \textbf{Signifikanzniveau} $\sym{alpha}$ (üblicherweise $\sym{alpha} = 0,05$), wird $\sym{H0}$ zugunsten der Alternativhypothese $\sym{H1}$ verworfen.
+Der Fehler, $\sym{H0}$ fälschlicherweise abzulehnen, obwohl kein Effekt vorliegt, wird als Fehler 1. Art bezeichnet; seine Wahrscheinlichkeit ist durch $\sym{alpha}$ begrenzt.
+Die \textbf{Trennschärfe} fokussiert hingegen auf den Fehler 2. Art (oft mit $\symsub{beta}{idx_error}$ notiert), welcher das Risiko beschreibt, einen tatsächlich vorhandenen Effekt nicht zu erkennen (falsch-negative Entscheidung).
+Die Power folglich ist definiert als das Komplement dieses Fehlers ($1 - \symsub{beta}{idx_error}$) und entspricht somit der Wahrscheinlichkeit, $\sym{H0}$ korrekterweise abzulehnen, wenn $\sym{H1}$ wahr ist:
+\begin{equation} \label{eq:power}
+    \sym{power} = \sym{Pr}(\sym{H0} \text{ ablehnen} \mid \sym{H1} \text{ ist wahr}) = 1 - \symsub{beta}{idx_error}.
+\end{equation}
+
+In idealisierten, orthogonalen Standard-Versuchsplänen unter der Annahme normalverteilter Residuen lässt sich die Trennschärfe für klassische \ac{OLS}-Regressionsmodelle exakt analytisch bestimmen.
+Die Grundlage hierfür bildet die Teststatistik des \textbf{t-Tests} zur Überprüfung der Signifikanz eines Koeffizienten $\symsub{beta}{idx_j}$.
+Unter der Annahme der Gültigkeit der Alternativhypothese $\sym{H1}$ folgt diese Prüfgröße einer nichtzentralen t-Verteilung.
+Der Grad der Verschiebung dieser Verteilung - und damit maßgeblich die resultierende Trennschärfe - wird durch den sogenannten \textbf{Nichtzentralitätsparameter} $\symsub{delta}{idx_nc}$ determiniert \cite{Montgomery.2020,Kutner.2005}.
+Dieser berechnet sich in Abhängigkeit der wahren Effektstärke, der experimentellen Fehlervarianz und der geometrischen Struktur des Versuchsplans gemäß:
+\begin{equation} \label{eq:nichtzentralitaet}
+    \symsub{delta}{idx_nc} = \frac{|\symsub{beta}{idx_j}|}{\sym{sigma} \sqrt{\symsub{c}{idx_j\idx_j}}}.
+\end{equation}
+Hierbei repräsentiert $\sym{sigma}$ die Standardabweichung des Modellrauschens und $\symsub{c}{idx_j\idx_j}$ das korrespondierende $j$-te Hauptdiagonalelement der inversen Informationsmatrix $\sym{M}^{-1} = (\sym{X}'\sym{X})^{-1}$.
+Die Trennschärfe ergibt sich analytisch aus der Integration der nichtzentralen Dichtefunktion über den durch das Signifikanzniveau $\sym{alpha}$ und die Freiheitsgrade $\symsub{d}{f}$ definierten kritischen Ablehnungsbereich \cite{Cohen.1988}.
+
+In einem perfekt orthogonalen Versuchsplan ist die Informationsmatrix $\sym{M}$ strikt diagonal, wodurch keine Kovarianzen zwischen den Haupteffekten existieren.
+Das Element $\symsub{c}{idx_j\idx_j}$ minimiert sich in diesem Fall auf den reziproken Wert der Quadratsumme der $j$-ten Designmatrix-Spalte, was den Nichtzentralitätsparameter und folglich die Power maximiert.
+Sobald jedoch geometrische Verzerrungen auftreten und die Orthogonalität verloren geht, weisen die Nebendiagonalelemente von $\sym{M}$ Werte ungleich Null auf.
+Die Invertierung zu $\sym{M}^{-1}$ führt unweigerlich zu einer Erhöhung der Diagonalelemente $\symsub{c}{idx_j\idx_j}$ (bekannt als Varianzinflation).
+Gemäß Gleichung~\ref{eq:nichtzentralitaet} verringert dies den Nichtzentralitätsparameter $\symsub{delta}{idx_nc}$ unmittelbar, was den analytischen Nachweis erbringt, dass Orthogonalitätsverluste zwingend mit einem Verlust an Trennschärfe einhergehen.
+
+Während diese Zusammenhänge für lineare Modelle und normalverteilte Daten noch geschlossen berechenbar sind, verkompliziert sich die Sachlage im Kontext der Lebensdauerdatenanalyse drastisch.
+Da hier nicht-normalverteilte und zensierte Daten vorliegen, lassen sich die Wahrscheinlichkeiten ohnehin nicht mehr über klassische t-Tests ableiten.
+Aus der Arbeit von \textcite{Nelder.1972} kommen hier \textbf{Verallgemeinerte Lineare Modelle}, engl. \textbf{\acp{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\sym{beta}_j$ vorzugsweise über den \textbf{\ac{LR-Test}} (oder approximativ über \textbf{Wald-Tests} - vergleiche hierzu Arbeiten von \textcite{Rigdon.2022,Meeker.2022,Montgomery.2020,McCulloch.2001}) ermittelt wird.
+Da für diese komplexen Verteilungsmodelle -- insbesondere unter dem Einfluss von Orthogonalitätsabweichungen und bei kleinen Stichprobenumfängen $\sym{n}$ -- keine geschlossenen analytischen Lösungen zur exakten Berechnung der Trennschärfe existieren, erfolgt die Untersuchung in der modernen Praxis numerisch mittels \textbf{\ac{MCS}} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
+
+Im Kontext der Lebensdauerdatenanalyse, bei der zudem nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten folglich ohnehin nicht mehr über klassische \textbf{t-Tests} ableiten.
+Aus der Arbeit von \textcite{Nelder.1972} kommen hier \textbf{Verallgemeinerte Lineare Modelle}, engl. \textbf{\acp{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\sym{beta}_j$ vorzugsweise über den \textbf{\ac{LR-Test}} (oder approximativ über \textbf{Wald-Tests} - vergleiche hierzu Arbeiten von \textcite{Rigdon.2022,Meeker.2022,Montgomery.2020,McCulloch.2001}) ermittelt wird.
+Da für diese komplexen Verteilungsmodelle -- insbesondere unter dem Einfluss von Orthogonalitätsabweichungen und bei kleinen Stichprobenumfängen $\sym{n}$ -- keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung in der modernen Praxis numerisch mittels \textbf{\ac{MCS}} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
+Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.\,B. $\symsub{n}{idx_MC}=10^4$ Simulationsläufe).
+Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht bzw. mit Streuung überlagert und/oder zensiert.
+Anschließend erfolgt die Modellbildung und Hypothesenprüfung.
+Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant ($\sym{p-Wert} < \sym{alpha}$) erkannt wird, entspricht der geschätzten $\sym{power}$ des Designs.
+
+
+
+\subsection{Statistische Modellbildung} \label{subsec:modellbildung}
+Die statistische Modellbildung transformiert die durch den Versuchsplan generierte Datenbasis in einen funktionalen, empirisch basierten Zusammenhang zwischen den Einflussfaktoren $\symsub{x}{idx_i}$ und der Lebensdauerantwort.
+Aufgrund der in Abschnitt~\ref{sec:zuv} dargelegten Eigenschaften von Lebensdauerdaten (Nicht-Normalverteilung, Zensierung) sind klassische Regressionsverfahren (\ac{OLS}) hier nicht zulässig.
+Stattdessen kommt i.d.R. das Framework der \ac{GLM} zur Anwendung, welches die lineare Prädiktion mit der zugrundeliegenden Verteilung verknüpft \cite{Yang.2007,Meeker.2022,Rigdon.2022}.
+Hinsichtlich der Modellauswahl können in klassischen Ansätzen der Versuchsplanung dabei oft auf Potenztransformationen der Antwortvariablen in Form $\sym{y}^{(\symsub{eigen_val}{idx_BC})}$ oder $\ln(\sym{y})$ (für $\symsub{eigen_val}{idx_BC} = 0$ mit geometrischem Mittelwert der Beobachtung $\dot{\sym{y}} = \exp \left[ \frac{1}{\sym{n}} \sum_{\sym{idx_i}=1}^{\sym{n}} \ln(\symsub{y}{idx_i}) \right]$) zurückgegriffen werden - wie die \textbf{Box-Cox-Transformation} nach \textcite{Box.1964,Montgomery.2021}.
+So wird Varianzhomogenität und Normalverteilung approximiert zu:
+\begin{equation} \label{eq:box_cox}
+    \symsub{y}{idx_i}^{(\symsub{eigen_val}{idx_BC})} =
+    \begin{cases}
+        \frac{\symsub{y}{idx_i}^{\symsub{eigen_val}{idx_BC}} - 1}{\symsub{eigen_val}{idx_BC} \dot{\sym{y}}^{\symsub{eigen_val}{idx_BC}-1}}, & \text{für } \symsub{eigen_val}{idx_BC} \neq 0, \\
+        \dot{\sym{y}}\ln(\symsub{y}{idx_i}),                                                                                                & \text{für } \symsub{eigen_val}{idx_BC} = 0.
+    \end{cases}
+\end{equation}
+Im Kontext der expliziten Lebensdaueranalyse ist dieser generische Ansatz jedoch weniger gebräuchlich, da die physikalisch motivierte Verteilungsannahme (z.B. Weibull) bereits eine inhärente Transformation der Lebensdauerzeit impliziert - vgl. Abschnitt~\ref{subsec:paramleben}, Gleichung~\ref{eq:weibull_pdf} sowie \textcite{Wu.2021,Yang.2007}.
+Wird also für die Lebensdauerverteilung die Weibull-Verteilung (Abschnitt~\ref{subsec:paramleben}) angenommen, so ergibt sich für $\sym{idx_j}=0,...,\sym{k}$ betrachtete Parameter aus beispielsweise Gleichung~\ref{eq:quadric_std_model} und $\sym{n}$ Beobachtungen analog zu Gleichung~\ref{eq:weibull_pdf} der Erwartungswert der charakteristischen Lebensdauer als \textbf{Link-Funktion} der Einflussfaktoren $\symsub{x}{idx_i}$ und des unbekannten Koeffizientenvektors $\hat{\sym{Beta}}$ \cite{Wu.2021,Yang.2007,Wuthrich.2023}:
+\begin{equation} \label{eq:glm_link}
+    \sym{Er}_{\sym{thet}_{\sym{x}}}\left(\ln(\sym{T})\right) = \sym{y} = \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} + \dots + \sym{epsilon}.
+\end{equation}
+In der Lebensdauer-Datenanalyse werden insbesondere zwei weitere Modellierungsansätze verwendet: neben den \ac{GLM}-Ansätzen insbesondere der \textbf{\ac{PH}-Modell}-Ansatz.
+Jedoch werden \ac{PH}-Modelle vornehmlich in der Biostatistik  verwendet und spielen hier ihre Stärke bei der Abbildung zeitabhängiger Kovariate aus \cite{Modarres.2017,Kremer.2020}:
+\begin{equation} \label{eq:weibull_pdf_cox}
+    \sym{f}(\sym{t}, \sym{X}) = \sym{lambda}(\sym{t}, \sym{X}) \cdot \sym{R}(\sym{t}, \sym{X}) = \sym{b} \cdot \sym{t}^{\sym{b}-1} \cdot e^{\left[ \sym{y} - \sym{t}^{\sym{b}} e^{\sym{y}} \right]}.
+\end{equation}
+
+\subsubsection{Weibull-\ac{GLM}}
+Im ingenieurwissenschaftlichen Kontext - maßgeblich gestützt durch Ausführungen in \textcite{Meeker.2022,Wu.2021,Yang.2007,Dobson.2018,Kremer.2020,Stufken.2012,Myers.2010} - finden hingegen \textbf{Log-Location-Scale-Modelle}, also \acp{GLM}, überwiegend Anwendung.
+Obwohl für die Weibull-Verteilung eine mathematische Äquivalenz zwischen beiden Ansätzen besteht, sprechen drei fundamentale Gründe für deren Verwendung.
+\textbf{Physikalischer Bezug:} Gängige physikalische Beschleunigungsmodelle (Arrhenius, Inverses Potenzgesetz) beschreiben die Änderung der \textit{Zeit} bis zum Ausfall ($\ln(\hat{\sym{T}})$) und nicht der Ausfallrate.
+Die Log-Linearisierung dieser Gesetze führt direkt auf die Regressionsgleichung der Location-Scale-Modelle.
+\textbf{Universalität der Auswertung:} Das Modell bietet einen einheitlichen mathematischen Rahmen, der nicht nur für die Weibull-Verteilung, sondern identisch auch für die Lognormal-Verteilung und Normalverteilung gültig ist.
+Das \ac{PH}-Modell hingegen ist für Lognormal-Verteilungen mathematisch nicht geschlossen anwendbar.
+\textbf{Fokus auf Lebensdauer-Quantile:} Im Engineering und \ac{DfR} liegt das Interesse primär auf der Prädiktion von Ausfallzeiten für geringe Ausfallanteile (z.,B. $\sym{t}_{10}$).
+Diese Größen sind direkte Ergebnisse der Location-Scale-Gleichung, während sie im \ac{PH}-Modell nur indirekt über die Invertierung der Hazard-Funktion zugänglich sind.
+Folglich wird eine zufallsverteilte Lebensdauer $\sym{tau}$ für ein Weibull-\ac{GLM} mit der Dichtefunktion
+\begin{equation} \label{eq:weibull_pdf_glm}
+    \sym{f}(\sym{t}, \sym{X}) = \sym{b} \cdot \sym{t}^{\sym{b}-1} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} \right)}
+    \cdot e^{-\sym{t}^{\sym{b}} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} \right)}}, \quad \sym{t} > 0.
+\end{equation}
+beschrieben und analog zu Gleichungen~\ref{eq:mle_likelihood_simple}--\ref{eq:mle_loglikelihood_censored} in die \textbf{\ac{GLL}-Funktion} überführt \cite{Russell.2019,Yang.2007,Aitkin.1980}:
+\begin{equation} \label{eq:log_likelihood_explicit}
+    \begin{split}
+        \sym{Lambda} & = \ln \left( \sym{L_like}(\symsub{t}{idx_i}; \sym{b}, \symsub{beta}{idx_0}, \dots, \symsub{beta}{k}) \right)                                                                                                                                                                                                                                                                                                        \\
+                     & \propto \sum_{\sym{idx_i}=1}^{\sym{n}} \left[ \ln(\sym{b}) - \sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \sym{x}_{\sym{idx_i}\sym{idx_j}} \right) + (\sym{b}-1) \ln(\symsub{t}{idx_i}) - \symsub{t}{idx_i}^{\sym{b}} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \sym{x}_{\sym{idx_i}\sym{idx_j}} \right)} \right].
+    \end{split}
+\end{equation}
+Werden außerdem (rechts-) zensierte Daten berücksichtigt, so ergibt sich analog zu Gleichung~\ref{eq:mle_loglikelihood_censored} über Gleichung~\ref{eq:log_likelihood_explicit} die erweiterte \ac{GLL}-Funktion \cite{Yang.2007,Meeker.2022}:
+\begin{equation} \label{eq:log_likelihood_explicit_censored}
+    \symsub{Lambda}{idx_z} \propto \sym{Lambda} - (1 - \sym{delta}_{\sym{idx_i}}) \cdot \symsub{t}{idx_i}^{\sym{b}} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \sym{x}_{\sym{idx_i}\sym{idx_j}} \right)}.
+\end{equation}
+Sollen über die rein empirische Datenauswertung hinaus bekannte physikalische Gesetzmäßigkeiten im Modell berücksichtigt werden, ist die lineare Struktur des Prädiktors entsprechend anzupassen.
+Dies erfolgt durch eine Transformation der physikalischen Beanspruchungsgrößen $\sym{x}$ in den Modellraum.
+Anstelle der direkten Verwendung des Einflussfaktors in der \ac{GLL}-Beziehung (Gleichung~\ref{eq:weibull_pdf_glm}) wird eine transformierte Größe $\symsub{x}{idx_V}$ eingesetzt, welche die physikalische Natur des Schädigungsmechanismus abbildet.
+Gängige Transformationen umfassen hierbei die reziproke Anpassung für thermische Lasten oder logarithmische Ansätze für elektrische Potenzmodelle, vgl. Tabelle~\ref{tab:belastungstransformationen}.
+\begin{table}[htbp]
+    \centering
+    \caption{Übersicht gängiger Transformationen der Belastungsgrößen zur Abbildung physikalischer Lebensdauermodelle}
+    \label{tab:belastungstransformationen}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{@{}llll@{}}
+        \toprule
+        \textbf{Art}  & \textbf{Transformation}           & \textbf{Lebensdauermodell} & \textbf{Anwendungsfall} \\
+        \midrule
+        Keine         & $\symsub{x}{idx_V} = \sym{x}$     & Exponential / Wöhler       & mechanisch              \\
+        Reziprok      & $\symsub{x}{idx_V} = 1/\sym{x}$   & Arrhenius                  & thermisch               \\
+        Logarithmisch & $\symsub{x}{idx_V} = e^{\sym{x}}$ & Potenzmodell               & elektrisch              \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+Eine Übersicht verschiedener Modellierungsansätze (z.B. \textbf{Arrhenius-Modell}, \textbf{Inverses Potenzgesetz}, \textbf{Eyring}, \textbf{Coffin-Manson-Modell}, etc.) und deren Einbindung in die \ac{GLM}-Struktur findet sich in den Arbeiten von \textcite{Meeker.2022,Rigdon.2022,Modarres.2017}.
+Die Schätzung der unbekannten Parameter $\hat{\sym{Beta}}$ und $\hat{\sym{b}}$ erfolgt anschließend mittels \ac{MLE} durch Maximierung der Log-Likelihood-Funktion (Gleichung~\ref{eq:log_likelihood_explicit_censored}) mittels beispielsweise \textbf{Newton-Raphson-Verfahren} bzw. \textbf{Pattern-Search-Algorithmen} oder \textbf{Gradientenverfahren}, \cite{Yang.2007,Qiao.1994}.
+Geeignete numerische Optimierungsverfahren wurden in Abschnitt~\ref{subsubsec:mle} erwähnt und unter anderem durch Vorarbeiten von \textcite{Kremer.2019b} evaluiert.
+
+\subsubsection{Signifikanzanalyse}
+Liegen die Parameterschätzungen $\hat{\sym{thet}}_{\sym{idx_i}}$ vor, erfolgt die Bewertung ihrer statistischen Relevanz mittels \ac{LR-Test}.
+Dieses Verfahren stellt das methodische Äquivalent zur \ac{ANOVA} bei normalverteilten Daten dar und prüft, ob die Aufnahme eines Parameters die Modellanpassung signifikant verbessert.
+Der Test basiert auf dem Vergleich der maximalen Likelihoods des vollständigen Modells $\sym{L_like}(\hat{\sym{thet}}_{\sym{idx_i}})$ gegenüber einem reduzierten Modell $\sym{L_like}(\hat{\sym{thet}}_{-\sym{idx_i}})$, aus dem der zu untersuchende Parameter eliminiert wurde \cite{Kremer.2021,Kremer.2019c}.
+Die Teststatistik $\sym{LR}$ quantifiziert den Informationsverlust durch die Modellreduktion und ist definiert als \textbf{Devianz}-Funktion \cite{Meeker.2022,Rencher.2008}:
+\begin{equation} \label{eq:lrt_statistic}
+    \sym{LR} = -2 \ln \left( \frac{\sym{L_like}\left(\hat{\sym{thet}}_{-\sym{idx_i}}\right)}{\sym{L_like}\left(\hat{\sym{thet}}_{\sym{idx_i}}\right)} \right) = 2 \cdot \left[ \ln\left(\sym{L_like}(\hat{\sym{thet}}_{\sym{idx_i}})\right) - \ln\left(\sym{L_like}(\hat{\sym{thet}}_{-\sym{idx_i}})\right) \right].
+\end{equation}
+Unter der Nullhypothese $\sym{H0}$, dass der ausgeschlossene Parameter keinen Einfluss hat, folgt $\sym{LR}$ asymptotisch einer $\sym{chi_sq}$-Verteilung mit $\sym{d_f}$ Freiheitsgraden (Anzahl der ausgeschlossenen Parameter, hier meist $\sym{d_f}=1$).
+Die Signifikanzentscheidung erfolgt über den $\sym{p-Wert}$, der die Wahrscheinlichkeit angibt, einen Testwert $\ge \sym{LR}$ zu beobachten:
+\begin{equation} \label{eq:lrt_p_value}
+    \sym{p-Wert} = \sym{Pr}\left(\sym{chi_sq}\left({\sym{d_f}}\right) \geq \sym{LR}\right).
+\end{equation}
+Ist dieser $\sym{p-Wert}$ kleiner als das definierte Signifikanzniveau $\sym{p-Wert}<\sym{alpha}$, wird der Parameter als signifikant in das Modell aufgenommen.
+
+
+\subsubsection{Erwartungswerte und Konfidenzintervalle}
+Nach der Ermittlung der optimalen Modellparameter $\hat{\sym{theta}}$ ist die Quantifizierung der mit diesen Schätzungen verbundenen Unsicherheit essenziell.
+Analytisch erfolgt dies über die Betrachtung der Krümmung der Log-Likelihood-Funktion $\sym{Lambda}$ im Maximum. Je stärker die Krümmung, desto präziser ist die Schätzung (geringere Varianz).
+Mathematisch erfolgt dies durch die drei Schritte: Wahl der statistischen Zielgröße ($\sym{R}$,$\sym{F}$), Berechnung des Standard-Fehlers (via $\sym{FIM}$ analog zu Gleichung~\ref{eq:fim_o}) und Vertrauensbereich-Schätzung / Wald-Statistik (Gleichung~\ref{eq:ci_normal} bzw.~\ref{eq:ci_ln}).
+So wird dies analog zu Gleichungen~\ref{eq:fim_o}-\ref{eq:var_covar} durch die Hesse-Matrix $\sym{H}$ beschrieben, welche die zweiten partiellen Ableitungen der Log-Likelihood-Funktion nach den Parametern $\symsub{thet}{idx_i}$ (also $\symsub{beta}{idx_j}$ und $\sym{b}$) enthält.
+Der negative Erwartungswert dieser Matrix führt damit zur Erwartung der Fisher-Informationsmatrix $\sym{FIM}$ \cite{Fisher.1935,Rasch.2018}:
+\begin{equation} \label{eq:fim_o_glm}
+    \symsub{FIM}{idx_O} \defeq - \sym{H}(\hat{\sym{theta}}) =
+    \begin{bmatrix}
+        -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_1^2}                             & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_1 \partial \sym{thet}_2}         & \cdots & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_1 \partial \sym{thet}_{\sym{k}}} \\
+        -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_2 \partial \sym{thet}_1}         & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_2^2}                             & \cdots & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_2 \partial \sym{thet}_{\sym{k}}} \\
+        \vdots                                                                               & \vdots                                                                               & \ddots & \vdots                                                                               \\
+        -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}} \partial \sym{thet}_1} & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}} \partial \sym{thet}_2} & \cdots & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}}^2}
+    \end{bmatrix}.
+\end{equation}
+
+Die asymptotische Varianz-Kovarianz-Matrix $\hat{\sym{V}}$ der Parameterschätzer wird anschließend durch die Inversion der Fisher-Informationsmatrix für $\hat{\sym{theta}}=\sym{theta}$ approximiert \cite{Yang.2007,Rasch.2018}:
+\begin{equation} \label{eq:var_covar_glm}
+    \hat{\sym{V}} \approx {\sym{FIM}_{\sym{idx_O}}}^{-1}=
+    \begin{bmatrix}
+        \hat{\sym{Var}}(\hat{\sym{thet}}_1)                             & \hat{\sym{Cov}}(\hat{\sym{thet}}_1, \hat{\sym{thet}}_2)         & \cdots & \hat{\sym{Cov}}(\hat{\sym{thet}}_1, \hat{\sym{thet}}_{\sym{k}}) \\
+        \hat{\sym{Cov}}(\hat{\sym{thet}}_2, \hat{\sym{thet}}_1)         & \hat{\sym{Var}}(\hat{\sym{thet}}_2)                             & \cdots & \hat{\sym{Cov}}(\hat{\sym{thet}}_2, \hat{\sym{thet}}_{\sym{k}}) \\
+        \vdots                                                          & \vdots                                                          & \ddots & \vdots                                                          \\
+        \hat{\sym{Cov}}(\hat{\sym{thet}}_{\sym{k}}, \hat{\sym{thet}}_1) & \hat{\sym{Cov}}(\hat{\sym{thet}}_{\sym{k}}, \hat{\sym{thet}}_2) & \cdots & \hat{\sym{Var}}(\hat{\sym{thet}}_{\sym{k}})
+    \end{bmatrix}.
+\end{equation}
+Die Hauptdiagonalelemente dieser Matrix liefern die geschätzten Varianzen $\hat{\sym{Var}}(\hat{\symsub{thet}{idx_j}})$ der einzelnen Modellparameter.
+Unter der Annahme der asymptotischen Normalverteilung der \ac{MLE} beschreibt \textcite{Yang.2007} neben weiteren Alternativen aus \textcite{Meeker.2022,Kremer.2019c} die symmetrischen $(1-\sym{alpha})$-Konfidenzintervalle (Wald-Intervalle) wie nachfolgend - vgl. Gleichung~\ref{eq:ci_ln}:
+\begin{equation} \label{eq:wald_ci}
+    [\sym{thet}_{\sym{idx_j},\sym{idx_u}},\sym{thet}_{\sym{idx_j},\sym{idx_o}}] = \hat{\sym{thet}}_{\sym{idx_j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{Var}}(\hat{\sym{thet}}_{\sym{idx_j}})}  \quad \text{bzw.} \cdots =\hat{\sym{thet}}_{\sym{idx_j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}}}{\hat{\sym{thet}}_{\sym{idx_j}}} \right).
+\end{equation}
+
+\subsubsection{Vertrauensbereiche für Funktionswerte und Weibull-\ac{GLM}}
+Oft ist nicht nur die Unsicherheit der Modellparameter selbst, sondern die der daraus abgeleiteten Funktionen - wie der Zuverlässigkeit $\sym{R}(\sym{t})$ oder der Ausfallwahrscheinlichkeit $\sym{F}(\sym{t})$ - von Interesse.
+Zur analytischen Ermittlung dieser sogenannten Fisher-Vertrauensbereiche führt \textcite{Yang.2007} zunächst eine Hilfsgröße $\sym{w_aux}$ ein - vergleiche auch $\sym{z_e}$ nach \textcite{Meeker.2022}.
+Diese normiert die logarithmische Abweichung der betrachteten Zeit $\sym{t}$ von der geschätzten charakteristischen Lebensdauer $\hat{\sym{T}}$ mit dem Formparameter $\hat{\sym{b}}$ (vergleiche auch \textcite{Bain.2017b} für weitere Abschätzungen):
+\begin{equation} \label{eq:conf_aux_w}
+    \hat{\sym{w_aux}} = \hat{\sym{b}} \cdot \ln \left( \frac{\sym{t}}{\hat{\sym{T}}} \right).
+\end{equation}
+Die Varianz dieser Größe lässt sich mittels Taylor-Reihenentwicklung (Delta-Methode, vgl. Abschnitt~\ref{subsec:schätzer}) approximativ aus den Varianzen und Kovarianzen der Parameterschätzer  und analog zu Gleichungen~\ref{eq:delta_method_gradient} und~\ref{eq:delta_method_variance} bestimmen:
+\begin{equation} \label{eq:var_w}
+    \hat{\sym{Var}}(\hat{\sym{w_aux}}) = \left( \frac{\hat{\sym{b}}}{\hat{\sym{T}}} \right)^2 \hat{\sym{Var}}(\hat{\sym{T}}) + \left( \frac{\hat{\sym{w_aux}}}{\hat{\sym{b}}} \right)^2 \hat{\sym{Var}}(\hat{\sym{b}}) - \frac{2 \hat{\sym{w_aux}}}{\hat{\sym{T}}} \hat{\sym{Cov}}(\hat{\sym{T}}, \hat{\sym{b}}).
+\end{equation}
+Basierend auf der asymptotischen Normalverteilung ergeben sich die Vertrauensgrenzen $[\hat{\sym{w_aux}}_{\sym{idx_u}}, \hat{\sym{w_aux}}_{\sym{idx_o}}]$ gemäß:
+\begin{equation} \label{eq:conf_bounds_w}
+    [\hat{\sym{w_aux}}_{\sym{idx_u}}, \hat{\sym{w_aux}}_{\sym{idx_o}}] = \hat{\sym{w_aux}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{Var}}(\hat{\sym{w_aux}})}.
+\end{equation}
+Die Rücktransformation dieser Grenzen in den Wertebereich der Ausfallwahrscheinlichkeit erfolgt anschließend über die Verteilungsfunktion der kleinsten Extremwerte $\sym{G_func} = 1 - \exp[-\exp(\hat{\sym{w_aux}})]$, woraus sich direkt die Konfidenzintervalle der Zuverlässigkeit ableiten lassen.
+Im Fall von \ac{GLM} ist zu berücksichtigen, dass die geschätzte charakteristische Lebensdauer $\hat{\sym{T}}$ keine unabhängige Konstante ist, sondern funktional entsprechend Gleichung~\ref{eq:glm_link} von den Kovariaten $\sym{x}$ und dem Parametervektor $\hat{\sym{Beta}}$ abhängt.
+Die für Gleichung~\ref{eq:var_w} benötigte Varianz $\hat{\sym{Var}}(\hat{\sym{T}})$ muss folglich unter Berücksichtigung der gesamten Kovarianzmatrix der Regressionskoeffizienten aus Gleichung~\ref{eq:var_covar_glm} berechnet werden.
+Dies erfolgt durch die allgemeine Fehlerfortpflanzung nach Gauß:
+\begin{equation} \label{eq:var_T_general}
+    \hat{\sym{Var}}(\hat{\sym{T}}) \approx \sum_{\sym{idx_i}=1}^{\sym{k}} \left( \frac{\partial \hat{\sym{T}}}{\partial \hat{\symsub{beta}{idx_i}}} \right)^2 \hat{\sym{Var}}(\hat{\symsub{beta}{idx_i}})
+    + \sum_{\sym{idx_i}=1}^{\sym{k}} \sum_{\substack{\sym{idx_j}=1 \\ \sym{idx_j} \neq \sym{idx_i}}}^{\sym{k}} \left( \frac{\partial \hat{\sym{T}}}{\partial \hat{\symsub{beta}{idx_i}}} \right) \left( \frac{\partial \hat{\sym{T}}}{\partial \hat{\symsub{beta}{idx_j}}} \right) \hat{\sym{Cov}}(\hat{\symsub{beta}{idx_i}}, \hat{\symsub{beta}{idx_j}}).
+\end{equation}
+
+\subsubsection{Modellgüte und Residuenanalyse} \label{subsubsec:residuen}
+Die Validität eines parametrischen Lebensdauermodells (hier Weibull-\ac{GLM}) beruht auf drei fundamentalen Annahmen, die es nach der Parameterschätzung zu verifizieren gilt:
+Erstens folgen die Lebensdauern der angenommenen Verteilung.
+Zweitens sind die Lebensdauern statistisch unabhängig.
+Drittens besteht ein log-linearer Zusammenhang zwischen dem Skalenparameter und den Einflussgrößen, wobei der Formparameter in einfachen Modellen als konstant über den gesamten Versuchsraum angenommen wird.
+Die Beurteilung dieser Modellgüte erfordert bei Lebensdauerdaten, bedingt durch Nicht-Normalverteilung und Zensierung, eine Anpassung klassischer Konzepte zur Residuenanalyse ($\sym{y} - \hat{\sym{y}}$) \cite{Kleppmann.2020,Siebertz.2017}.
+Stattdessen werden transformierte Residuen betrachtet, die den Bezug zur Verteilung der kleinsten Extremwerte \sym{SEV} herstellen, welcher der logarithmierten Weibull-Verteilung zugrunde liegt.
+Analog zur $\sym{z}$-Transformation bei der Normalverteilung lassen sich für jede Beobachtung $\symsub{t}{idx_i}$ standardisierte Residuen $\sym{resid_std}_{\sym{idx_i}}$ berechnen.
+Dabei ersetzt der logarithmierte Schätzwert der charakteristischen Lebensdauer $\ln(\hat{\sym{T}}_{\sym{idx_i}})$ (vgl. Gleichung~\ref{eq:glm_link}) den Lageparameter $\sym{mu}$ und der Kehrwert des Formparameters $1/\hat{\sym{b}}$ die Skalierung $\sym{sigma}$.
+Dies entspricht exakt der in diesem Abschnitt eingeführten Hilfsgröße $\sym{w_aux}$:
+\begin{equation} \label{eq:resid_standardized}
+    \sym{resid_std}_{\sym{idx_i}} = \frac{\ln(\symsub{t}{idx_i}) - \ln(\hat{\sym{T}}_{\sym{idx_i}})}{1/\hat{\sym{b}}} = \hat{\sym{b}} \cdot \ln\left( \frac{\symsub{t}{idx_i}}{\hat{\sym{T}}_{\sym{idx_i}}} \right).
+\end{equation}
+Ist das Modell korrekt spezifiziert, müssen diese Residuen (unter Berücksichtigung der Zensierung) einer Verteilung der kleinsten Extremwerte $\sym{SEV}(\sym{mu}=0,\sym{sigma}=1)$ folgen.
+Eine allgemeinere Form der Validierung bieten die \textbf{Cox-Snell-Residuen} $\sym{resid_CS}$ \cite{Rigdon.2022,Meeker.2022}.
+Sie stellen eine Transformation der standardisierten Residuen dar und entsprechen dem Wert der kumulativen Hazard-Funktion an der Stelle der Beobachtung.
+Für das Weibull-Modell gilt der Zusammenhang:
+\begin{equation} \label{eq:resid_cox_snell}
+    {\sym{resid_CS}}_{\sym{idx_i}} = - \ln \left( \hat{\sym{R}}(\symsub{t}{idx_i}) \right) = \exp(\sym{resid_std}_{\sym{idx_i}}) = \left( \frac{\symsub{t}{idx_i}}{\hat{\sym{T}}_{\sym{idx_i}}} \right)^{\hat{\sym{b}}}.
+\end{equation}
+Folgt das angepasste Modell den Daten, so verhalten sich die Residuen $\sym{resid_CS}$ wie eine Stichprobe aus einer Standard-Exponentialverteilung mit Mittelwert 1.
+Diese Eigenschaft erlaubt eine grafische Validierung mittels Probability-Plots: Liegen die geplotteten Residuen auf einer Geraden im Exponential-Wahrscheinlichkeitsnetz, kann von einer adäquaten Modellpassung ausgegangen werden.
+Zur Identifikation von Ausreißern oder einflussreichen Beobachtungen eignen sich hingegen standardisierte Devianz-Residuen $\sym{resid_Dev}$.
+Im Gegensatz zu den stets positiven Cox-Snell-Residuen sind diese symmetrischer um Null verteilt und folgen asymptotisch einer Standardnormalverteilung:
+\begin{equation} \label{eq:resid_deviance}
+    {\sym{resid_Dev}}_{\sym{idx_i}} = \text{sgn}({\sym{resid_CS}}_{\sym{idx_i}} - 1) \cdot \sqrt{2 \left[ {\sym{resid_CS}}_{\sym{idx_i}} - \symsub{delta}{idx_i} - \symsub{delta}{idx_i} \ln({\sym{resid_CS}}_{\sym{idx_i}}) \right]}.
+\end{equation}
+Neben der Verteilungsprüfung dienen Streudiagramme dieser Residuen zur Aufdeckung struktureller Modelldefizite.
+Dabei werden $\sym{resid_CS}$ oder $\sym{resid_Dev}$ gegen die prädizierten Werte oder gegen einzelne Einflussfaktoren aufgetragen und gegenüber Trendfreiheit und Varianzhomogenität bewertet.
+Besteht initiale Unsicherheit über die zugrundeliegende Physik, ermöglicht zudem der Vergleich den Wahrscheinlichkeitsnetzen der Residuen eine empirische Selektion:
+Dasjenige Modell, dessen Punktegraphen eine geringere Krümmung aufweisen und besser der theoretischen Geraden folgen, ist statistisch zu bevorzugen.
