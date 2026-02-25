@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  24 FEB 2026 23:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  25 FEB 2026 01:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"p:/Dokumente/Arbeit TÃ¤tigkeit/IMA/Promotion_IMA/Diss/01_File/diss_arndt/diss_arndt.tex"
-(p:/Dokumente/Arbeit TÃ¤tigkeit/IMA/Promotion_IMA/Diss/01_File/diss_arndt/diss_arndt.tex
+**p:/Dokumente/Arbeit/IMA/Promotion_IMA/Diss/01_File/diss_arndt/diss_arndt.tex
+(p:/Dokumente/Arbeit/IMA/Promotion_IMA/Diss/01_File/diss_arndt/diss_arndt.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-09>
 (isw_smb_diss.cls
@@ -1463,12 +1463,22 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `diss_arndt.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'diss_arndt.bbl' not found.
+Package biblatex Info: ... file 'diss_arndt.bbl' found.
+ (diss_arndt.bbl
 
-No file diss_arndt.bbl.
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'dat.2025':
+(biblatex)                - misc entry 'dat.2025' (bibliography.bib): Invalid format '13.06.2025' of date field 'urldate' - ignoring.
+
+
+Package biblatex Warning: Biber reported the following issues
+(biblatex)                with 'Kremer.2018b':
+(biblatex)                - article entry 'Kremer.2018b' (bibliography.bib): Invalid format '22.01.2026' of date field 'urldate' - ignoring.
+
+)
 Package biblatex Info: Reference section=0 on input line 406.
 Package biblatex Info: Reference segment=0 on input line 406.
-(C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
+ (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
 File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 406.
@@ -1585,18 +1595,112 @@ Overfull \hbox (32.6245pt too wide) in paragraph at lines 433--435
 
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 441.
- (diss_arndt.toc)
-\tf@toc=\write11
-\openout11 = `diss_arndt.toc'.
-
+ (diss_arndt.toc
+Package tocbasic Info: Using my definition of `\numberline' on input line 2.
+Package tocbasic Info: Using my definition of `\numberline' on input line 3.
+Package tocbasic Info: Using my definition of `\numberline' on input line 4.
+Package tocbasic Info: Using my definition of `\numberline' on input line 5.
+Package tocbasic Info: Using my definition of `\numberline' on input line 6.
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
+Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
+Package tocbasic Info: Using my definition of `\numberline' on input line 17.
+Package tocbasic Info: Using my definition of `\numberline' on input line 18.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
+Package tocbasic Info: Using my definition of `\numberline' on input line 25.
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
+Package tocbasic Info: Using my definition of `\numberline' on input line 30.
 
 
 [7
 
 
 ]
+Package tocbasic Info: Using my definition of `\numberline' on input line 33.
+Package tocbasic Info: Using my definition of `\numberline' on input line 39.
+Package tocbasic Info: Using my definition of `\numberline' on input line 40.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
+Package tocbasic Info: Using my definition of `\numberline' on input line 45.
+Package tocbasic Info: Using my definition of `\numberline' on input line 46.
+Package tocbasic Info: Using my definition of `\numberline' on input line 47.
+Package tocbasic Info: Using my definition of `\numberline' on input line 48.
+Package tocbasic Info: Using my definition of `\numberline' on input line 49.
+Package tocbasic Info: Using my definition of `\numberline' on input line 50.
+Package tocbasic Info: Using my definition of `\numberline' on input line 51.
+Package tocbasic Info: Using my definition of `\numberline' on input line 52.
+Package tocbasic Info: Using my definition of `\numberline' on input line 55.
+Package tocbasic Info: Using my definition of `\numberline' on input line 56.
+Package tocbasic Info: Using my definition of `\numberline' on input line 57.
+Package tocbasic Info: Using my definition of `\numberline' on input line 58.
+Package tocbasic Info: Using my definition of `\numberline' on input line 59.
+Package tocbasic Info: Using my definition of `\numberline' on input line 60.
+Package tocbasic Info: Using my definition of `\numberline' on input line 61.
+Package tocbasic Info: Using my definition of `\numberline' on input line 62.
+Package tocbasic Info: Using my definition of `\numberline' on input line 63.
+Package tocbasic Info: Using my definition of `\numberline' on input line 64.
+Package tocbasic Info: Using my definition of `\numberline' on input line 65.
+Package tocbasic Info: Using my definition of `\numberline' on input line 66.
 
-[8
+Overfull \hbox (9.00552pt too wide) in paragraph at lines 66--66
+ [][] []\T1/qpl/m/n/12 (-10) Methodik zur si-mu-la-ti-ven Er-mitt-lung von Aus-wir-kun-gen durch 
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 67.
+
+Overfull \hbox (3.80106pt too wide) in paragraph at lines 67--67
+ [][] []\T1/qpl/m/n/12 (-10) Sensitivitätsanalyse geo-me-tri-scher und sto-chas-ti-scher Ein-fluss- 
+ []
+
+
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
+
+
+[8]
+Package tocbasic Info: Using my definition of `\numberline' on input line 68.
+Package tocbasic Info: Using my definition of `\numberline' on input line 69.
+
+Overfull \hbox (39.42258pt too wide) in paragraph at lines 69--69
+ [][] []\T1/qpl/m/n/12 (-10) Generische Aus-wir-kun-gen re-le-van-ter Orthogonalitäts-Abweichungen [][]  
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 70.
+Package tocbasic Info: Using my definition of `\numberline' on input line 71.
+Package tocbasic Info: Using my definition of `\numberline' on input line 72.
+Package tocbasic Info: Using my definition of `\numberline' on input line 73.
+Package tocbasic Info: Using my definition of `\numberline' on input line 74.
+Package tocbasic Info: Using my definition of `\numberline' on input line 75.
+Package tocbasic Info: Using my definition of `\numberline' on input line 76.
+Package tocbasic Info: Using my definition of `\numberline' on input line 77.
+Package tocbasic Info: Using my definition of `\numberline' on input line 78.
+Package tocbasic Info: Using my definition of `\numberline' on input line 79.
+Package tocbasic Info: Using my definition of `\numberline' on input line 80.
+Package tocbasic Info: Using my definition of `\numberline' on input line 81.
+Package tocbasic Info: Using my definition of `\numberline' on input line 82.
+Package tocbasic Info: Using my definition of `\numberline' on input line 83.
+Package tocbasic Info: Using my definition of `\numberline' on input line 84.
+Package tocbasic Info: Using my definition of `\numberline' on input line 85.
+Package tocbasic Info: Using my definition of `\numberline' on input line 86.
+)
+\tf@toc=\write11
+\openout11 = `diss_arndt.toc'.
+
+
+
+[9]
+
+[10
 
 
 ]
@@ -1622,11 +1726,11 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--185
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--187
  [] [] 
  []
 
-[9
+[11
 
 
 ]) (diss_arndt.indices-gls
@@ -1656,7 +1760,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--116
 
 
 
-[10] [11{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (diss_arndt.formulas-gls
+[12] [13{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (diss_arndt.formulas-gls
 Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  [] [] 
  []
@@ -1677,7 +1781,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--144
+Underfull \hbox (badness 10000) in paragraph at lines 147--147
 []|\T1/qpl/m/n/12 (+10) Orthogonale Pro-jek-ti-ons-ma-trix, Prä-dik-ti-ons-ma-trix, Hat-
  []
 
@@ -1685,44 +1789,44 @@ LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 2
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 2173) in paragraph at lines 406--406
+Underfull \hbox (badness 2173) in paragraph at lines 407--407
 []|\T1/qpl/m/n/12 (+10) Standardisierte Va-ria-ble der Kleinst-wert-ver-tei-lung (SEV);
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--407
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--408
  [] [] 
  []
 
-[12] [13] [14] [15])
+[14] [15] [16] [17])
 
-[16]
+[18]
 Package tocbasic Info: character protrusion at lof deactivated on input line 487.
- (diss_arndt.lof)
+ (diss_arndt.lof
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
+Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 17.
+Package tocbasic Info: Using my definition of `\numberline' on input line 18.
+Package tocbasic Info: Using my definition of `\numberline' on input line 19.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 21.
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+)
 \tf@lof=\write12
 \openout12 = `diss_arndt.lof'.
 
 
 
-[17
-
-
-
-
-]
-
-[18
-
-
-]
-Package tocbasic Info: character protrusion at lot deactivated on input line 490.
- (diss_arndt.lot)
-\tf@lot=\write13
-\openout13 = `diss_arndt.lot'.
-
-
-
 [19
+
+
 
 
 ]
@@ -1730,29 +1834,55 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 490
 [20
 
 
-] (chapters/chapter1_einleitung.tex
+]
+Package tocbasic Info: character protrusion at lot deactivated on input line 490.
+ (diss_arndt.lot
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
+Package tocbasic Info: Using my definition of `\numberline' on input line 17.
+Package tocbasic Info: Using my definition of `\numberline' on input line 18.
+
+Overfull \hbox (1.71317pt too wide) in paragraph at lines 18--18
+ \T1/qpl/m/n/12 (-10) Power maÿ-geb-lich durch un-ver-än-der-li-che Sys-tem-grö-ÿen (Rau-schen) und 
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 19.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
+Package tocbasic Info: Using my definition of `\numberline' on input line 25.
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
+Package tocbasic Info: Using my definition of `\numberline' on input line 27.
+Package tocbasic Info: Using my definition of `\numberline' on input line 28.
+
+
+[21
+
+
+]
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
+Package tocbasic Info: Using my definition of `\numberline' on input line 32.
+Package tocbasic Info: Using my definition of `\numberline' on input line 33.
+)
+\tf@lot=\write13
+\openout13 = `diss_arndt.lot'.
+
+
+
+[22] (chapters/chapter1_einleitung.tex
 chapter 1.
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 1 undefined on input line 11.
-
 
 
 [1
 
 
+
+
 ]
-
-LaTeX Warning: Citation 'Koselka.1996' on page 2 undefined on input line 16.
-
-
-Overfull \hbox (5.30205pt too wide) in paragraph at lines 15--17
-\T1/qpl/m/n/12 (-10) ge mul-ti-va-ria-bler Test-me-tho-den in der in-dus-tri-el-len Pra-xis her-vor-hob [[]]. 
- []
-
-
-LaTeX Warning: Citation 'dat.2025' on page 2 undefined on input line 25.
-
-
 
 [2]
 
@@ -1768,61 +1898,12 @@ LaTeX Warning: Citation 'dat.2025' on page 2 undefined on input line 25.
 ]
 chapter 2.
 
-LaTeX Warning: Citation 'Bertsche.2022' on page 7 undefined on input line 16.
 
-
-
-[7]
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 8 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 8 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Birolini.2017' on page 8 undefined on input line 26.
-
-[8]
-
-LaTeX Warning: Citation 'Yang.2007' on page 9 undefined on input line 91.
-
-
-LaTeX Warning: Citation 'Fahrmeir.2016' on page 9 undefined on input line 91.
-
-
+[7] [8]
 
 [9]
 
-LaTeX Warning: Citation 'Kaplan.1958' on page 10 undefined on input line 112.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 10 undefined on input line 112.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 10 undefined on input line 112.
-
-
-
 [10]
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Birolini.2017' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Hedderich.2020' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 11 undefined on input line 124.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
@@ -1834,14 +1915,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
 
 
-[11]
-
-LaTeX Warning: Citation 'Rinne.2008' on page 12 undefined on input line 161.
-
-
-LaTeX Warning: Citation 'Kececioglu.2002' on page 12 undefined on input line 161.
-
-(plots/ma_abb2.01_weibull.tex
+[11] (plots/ma_abb2.01_weibull.tex
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 10.42007pt on input line 4047.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1855,276 +1929,67 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 4047.
 )
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 12 undefined on input line 179.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 12 undefined on input line 179.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 12 undefined on input line 180.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 12 undefined on input line 180.
-
-
 
 [12]
 
 [13]
 
-LaTeX Warning: Citation 'Meeker.2022' on page 14 undefined on input line 196.
-
-
-LaTeX Warning: Citation 'Kalbfleisch.2002' on page 14 undefined on input line 196.
-
-
-
 [14]
-
-LaTeX Warning: Citation 'Nelson.2005' on page 15 undefined on input line 208.
-
-
-LaTeX Warning: Citation 'Rinne.2008' on page 15 undefined on input line 208.
-
-
-LaTeX Warning: Citation 'Nelson.2005' on page 15 undefined on input line 209.
-
-
-LaTeX Warning: Citation 'Qiao.1994' on page 15 undefined on input line 209.
-
-
-LaTeX Warning: Citation 'Kremer.2019b' on page 15 undefined on input line 209.
-
-
-LaTeX Warning: Citation 'Abernethy.2006' on page 15 undefined on input line 210.
-
-
-LaTeX Warning: Citation 'Hirose.1999' on page 15 undefined on input line 210.
-
-
-LaTeX Warning: Citation 'Ross.1996' on page 15 undefined on input line 210.
-
-
-Overfull \hbox (12.99716pt too wide) in paragraph at lines 206--211
-[]\T1/qpl/m/n/12 (-10) ]. An-dern-falls wer-den nu-me-ri-sche Op-ti-mie-rungs-al-go-rith-men, vgl. Newton-
- []
-
-
-Overfull \hbox (55.56007pt too wide) in paragraph at lines 206--211
-\T1/qpl/m/n/12 (-10) wei-ter-füh-rend [[], []] so-wie de-tail-lier-te Un-ter-su-chun-gen von [].
- []
-
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 15 undefined on input line 222.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 15 undefined on input line 222.
-
-
-LaTeX Warning: Citation 'Kremer.2019c' on page 15 undefined on input line 223.
-
-
-LaTeX Warning: Citation 'Nelson.2005' on page 15 undefined on input line 224.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 15 undefined on input line 224.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 15 undefined on input line 224.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 15 undefined on input line 225.
-
-
-LaTeX Warning: Citation 'Lawless.2003' on page 15 undefined on input line 225.
-
-
-Overfull \hbox (46.50577pt too wide) in paragraph at lines 221--228
-[]\T1/qpl/m/n/12 (-10) , []]. In der prak-ti-schen An-wen-dung wird die Fisher-Informationsmatrix
- []
-
-
 
 [15]
 
-LaTeX Warning: Citation 'Nelson.1990' on page 16 undefined on input line 236.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 16 undefined on input line 237.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 16 undefined on input line 237.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 16 undefined on input line 238.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 16 undefined on input line 244.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 16 undefined on input line 244.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 16 undefined on input line 244.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 16 undefined on input line 249.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 16 undefined on input line 249.
-
-
-
 [16]
-
-LaTeX Warning: Citation 'Bain.2017b' on page 17 undefined on input line 259.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 17 undefined on input line 259.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 17 undefined on input line 259.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 17 undefined on input line 263.
-
-
-LaTeX Warning: Citation 'Fisher.1935' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Box.1978' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Taguchi.2005' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 17 undefined on input line 271.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 17 undefined on input line 271.
-
-
-LaTeX Warning: Citation 'Meeker.1993' on page 17 undefined on input line 274.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 17 undefined on input line 274.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 17 undefined on input line 274.
-
-
-LaTeX Warning: Citation 'Elsayed.2007' on page 17 undefined on input line 274.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 17 undefined on input line 276.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 17 undefined on input line 276.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 17 undefined on input line 278.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 17 undefined on input line 278.
-
-
 
 [17]
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Hinkelmann.2012' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Dazer.2019' on page 18 undefined on input line 284.
-
-
-LaTeX Warning: Citation 'Herzig.2021' on page 18 undefined on input line 284.
-
-
-LaTeX Warning: Citation 'Grundler.2024' on page 18 undefined on input line 284.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 18 undefined on input line 284.
-
-
-Overfull \hbox (42.18292pt too wide) in paragraph at lines 283--286
-\T1/qpl/m/n/12 (-10) ge-gen auf die ein-schlä-gi-ge Li-te-ra-tur von [], [], []
- []
-
-
-
-[18]
-
-LaTeX Warning: Citation 'Coleman.1993' on page 19 undefined on input line 292.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 19 undefined on input line 292.
-
-(plots/ma_abb2.02_doe_steps.pdf_tex
-<plots/ma_abb2.02_doe_steps.pdf, id=959, page=1, 350.42117pt x 111.38583pt>
+[18] (plots/ma_abb2.02_doe_steps.pdf_tex
+<plots/ma_abb2.02_doe_steps.pdf, id=1282, page=1, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=960, page=2, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1283, page=2, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page2 used on input line 59.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=961, page=3, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1284, page=3, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page3 used on input line 62.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=962, page=4, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1285, page=4, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page4 used on input line 65.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=963, page=5, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1286, page=5, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page5 used on input line 68.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=964, page=6, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1287, page=6, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page6 used on input line 71.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=965, page=7, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1288, page=7, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page7 used on input line 74.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
+) (plots/ma_abb2.03_p_diagramm.pdf_tex
+<plots/ma_abb2.03_p_diagramm.pdf, id=1300, page=1, 266.19023pt x 171.65889pt>
+File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
+<use plots/ma_abb2.03_p_diagramm.pdf, page 1>
+Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
+<plots/ma_abb2.03_p_diagramm.pdf, id=1301, page=2, 266.19023pt x 171.65889pt>
+File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
+<use plots/ma_abb2.03_p_diagramm.pdf, page 2>
+Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page2 used on input line 67.
+(pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
 )
-
-LaTeX Warning: Citation 'Coleman.1993' on page 19 undefined on input line 297.
-
-
-LaTeX Warning: Citation 'Coleman.1993' on page 19 undefined on input line 297.
-
-
 
 [19 <./plots/ma_abb2.02_doe_steps.pdf> <./plots/ma_abb2.02_doe_steps.pdf
 
@@ -2146,54 +2011,10 @@ pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion:
 pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 20 undefined on input line 306.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 20 undefined on input line 307.
-
-(plots/ma_abb2.03_p_diagramm.pdf_tex
-<plots/ma_abb2.03_p_diagramm.pdf, id=984, page=1, 266.19023pt x 171.65889pt>
-File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
-<use plots/ma_abb2.03_p_diagramm.pdf, page 1>
-Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
-<plots/ma_abb2.03_p_diagramm.pdf, id=985, page=2, 266.19023pt x 171.65889pt>
-File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
-<use plots/ma_abb2.03_p_diagramm.pdf, page 2>
-Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page2 used on input line 67.
-(pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
-)
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 20 undefined on input line 317.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 20 undefined on input line 317.
-
-
-
 [20 <./plots/ma_abb2.03_p_diagramm.pdf> <./plots/ma_abb2.03_p_diagramm.pdf
 
 pdfTeX warning: pdflatex (file ./plots/ma_abb2.03_p_diagramm.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 21 undefined on input line 322.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 21 undefined on input line 322.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 21 undefined on input line 326.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 21 undefined on input line 326.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 21 undefined on input line 326.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 21 undefined on input line 326.
-
-(plots/ma_abb2.04.1_effekt.tex)
+>] (plots/ma_abb2.04.1_effekt.tex)
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 336.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -2204,77 +2025,14 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 336.
  (plots/ma_abb2.04.2_effekt.tex)
 
-LaTeX Warning: Citation 'Montgomery.2020' on page 21 undefined on input line 353.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 21 undefined on input line 353.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 21 undefined on input line 353.
-
-
-
 [21]
 
-LaTeX Warning: Citation 'Yang.2007' on page 22 undefined on input line 366.
-
-
-LaTeX Warning: Citation 'Nelson.2005' on page 22 undefined on input line 366.
-
-
-
 [22]
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 23 undefined on input line 377.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 23 undefined on input line 377.
-
-
-LaTeX Warning: Citation 'Gundlach.2004' on page 23 undefined on input line 377.
-
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 23 undefined on input line 380.
-
-
-LaTeX Warning: Citation 'Mayers.1997' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Pahl.2007' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Daenzer.2002' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Lindemann.2008' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 23 undefined on input line 390.
-
-
 
 [23] (plots/ma_abb2.05_FF_design.tex)
 Overfull \hbox (20.4039pt too wide) in paragraph at lines 43--401
  [][] 
  []
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 24 undefined on input line 428.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 24 undefined on input line 428.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 24 undefined on input line 437.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 24 undefined on input line 437.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 24 undefined on input line 437.
 
 (plots/ma_abb2.06_effektabstand.tex)
 
@@ -2282,32 +2040,7 @@ LaTeX Warning: Citation 'Kleppmann.2020' on page 24 undefined on input line 437.
 
 [25]
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 26 undefined on input line 458.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 26 undefined on input line 458.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 26 undefined on input line 458.
-
-
-Overfull \hbox (22.7959pt too wide) in paragraph at lines 458--461
-\T1/qpl/m/n/12 (-10) Bei die-sem An-satz wird le-dig-lich ei-ne se-lek-ti-ve Teil-men-ge (Frak-ti-on) der voll-faktoriellen
- []
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 26 undefined on input line 465.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 26 undefined on input line 465.
-
-
-
 [26]
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 27 undefined on input line 483.
-
-
 
 [27] (plots/ma_abb2.07_CCD_design.tex)
 Overfull \hbox (27.31906pt too wide) in paragraph at lines 159--500
@@ -2315,66 +2048,8 @@ Overfull \hbox (27.31906pt too wide) in paragraph at lines 159--500
  []
 
 
-LaTeX Warning: Citation 'Box.1957' on page 28 undefined on input line 540.
 
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 28 undefined on input line 540.
-
-
-
-[28]
-
-LaTeX Warning: Citation 'Myers.2016' on page 29 undefined on input line 544.
-
-
-LaTeX Warning: Citation 'Box.1960' on page 29 undefined on input line 548.
-
-
-LaTeX Warning: Citation 'Jones.2011' on page 29 undefined on input line 551.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 29 undefined on input line 553.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 29 undefined on input line 553.
-
-
-Overfull \hbox (57.31474pt too wide) in paragraph at lines 543--554
-\T1/qpl/m/n/12 (-10) Behnken) auf-grund von Re-strik-tio-nen im Ver-suchs-raum (\T1/qpl/b/n/12 (-10) Constraints\T1/qpl/m/n/12 (-10) ), nicht-standardmäÿigen
- []
-
-
-Overfull \hbox (31.33167pt too wide) in paragraph at lines 543--554
-\T1/qpl/m/n/12 (-10) Standard-Designs in ih-rer Prä-dik-ti-ons-gü-te oft über-tref-fen [[], []]. 
- []
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 29 undefined on input line 556.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 29 undefined on input line 557.
-
-
-LaTeX Warning: Citation 'Dean.2017' on page 29 undefined on input line 557.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 29 undefined on input line 558.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 29 undefined on input line 558.
-
-
-LaTeX Warning: Citation 'Box.1951' on page 29 undefined on input line 559.
-
-
-LaTeX Warning: Citation 'Box.1988' on page 29 undefined on input line 559.
-
-
-LaTeX Warning: Citation 'Bisgaard.1992' on page 29 undefined on input line 559.
-
-
-
-[29] (plots/ma_abb2.08.1_strategy.tex)
+[28] (plots/ma_abb2.08.1_strategy.tex)
 Overfull \hbox (37.25467pt too wide) in paragraph at lines 51--571
  [][] 
  []
@@ -2406,340 +2081,26 @@ Overfull \hbox (17.53004pt too wide) in paragraph at lines 606--610
 
 (plots/ma_abb2.08.4_strategy.tex)
 
-LaTeX Warning: Citation 'Box.1988' on page 30 undefined on input line 617.
-
-
-LaTeX Warning: Citation 'Bisgaard.1992' on page 30 undefined on input line 617.
-
-
-LaTeX Warning: Citation 'Box.1988' on page 30 undefined on input line 617.
-
-
-LaTeX Warning: Citation 'Bisgaard.1992' on page 30 undefined on input line 617.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 30 undefined on input line 628.
-
-
-LaTeX Warning: Citation 'Pukelsheim.2006' on page 30 undefined on input line 631.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 30 undefined on input line 631.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 30 undefined on input line 635.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 30 undefined on input line 635.
-
-
-LaTeX Warning: Citation 'Dean.2017' on page 30 undefined on input line 635.
-
-
-LaTeX Warning: Citation 'RisbergEllekjr.1998' on page 30 undefined on input line 636.
-
-
+[29]
 
 [30]
-
-LaTeX Warning: Citation 'Kleppmann.2016' on page 31 undefined on input line 639.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 31 undefined on input line 639.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 31 undefined on input line 639.
-
-
 Overfull \hbox (5.89397pt too wide) in paragraph at lines 639--641
 \T1/qpl/m/n/12 (-10) Wird ma-xi-ma-le Fle-xi-bi-li-tät jen-seits star-rer Standard-Designs wie dem voll-faktoriellen
- []
-
-
-Overfull \hbox (23.5481pt too wide) in paragraph at lines 639--641
-\T1/qpl/m/n/12 (-10) gen, \T1/qpl/m/it/12 (-10) ef^^?fi^^?zi^^?en^^?ten \T1/qpl/m/n/12 (-10) Lö-sungs-an-satz für \T1/qpl/m/it/12 (-10) mul^^?ti^^?va^^?ria^^?te \T1/qpl/m/n/12 (-10) Ver-suchs-pla-nung bie-ten [[],
  []
 
 
 
 [31]
 
-LaTeX Warning: Citation 'Myers.2016' on page 32 undefined on input line 647.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 32 undefined on input line 647.
-
-
-Overfull \hbox (0.12688pt too wide) in paragraph at lines 646--649
-\T1/qpl/m/n/12 (-10) Ver-suchs-punk-te (der Ma-trix $[][][][][][][]$) in der \T1/qpl/b/n/12 (-10) In^^?for^^?ma^^?ti^^?ons^^?ma^^?trix \T1/qpl/m/n/12 (-10) (auch \T1/qpl/b/it/12 (-10) M\T1/qpl/b/n/12 (-10) omentenmatrix\T1/qpl/m/n/12 (-10) ) 
- []
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 32 undefined on input line 653.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 32 undefined on input line 655.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 32 undefined on input line 655.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 32 undefined on input line 655.
-
-
-LaTeX Warning: Citation 'Myers.2010' on page 32 undefined on input line 655.
-
-
-LaTeX Warning: Citation 'Zahran.2003' on page 32 undefined on input line 657.
-
-
-LaTeX Warning: Citation 'GiovannittiJensen.1989' on page 32 undefined on input line 657.
-
-
-Overfull \hbox (2.28415pt too wide) in paragraph at lines 652--659
-\T1/qpl/m/n/12 (-10) dem [][][]\T1/qpl/b/n/12 (-10) Va^^?rian^^?ce Di^^?sper^^?si^^?on Graph (VDG)[][] \T1/qpl/m/n/12 (-10) oder [][][]\T1/qpl/b/n/12 (-10) Frac^^?ti^^?on of De^^?sign Space (FDS)[][]-Plot
- []
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 32 undefined on input line 661.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 32 undefined on input line 661.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 32 undefined on input line 662.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 32 undefined on input line 662.
-
-
-Overfull \hbox (23.73244pt too wide) in paragraph at lines 661--664
-\T1/qpl/m/n/12 (-10) strik-te Li-mi-tie-run-gen der ver-füg-ba-ren Ver-suchs-ka-pa-zi-tät [[], []].
- []
-
-
-
 [32]
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 33 undefined on input line 668.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 33 undefined on input line 668.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 33 undefined on input line 673.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 33 undefined on input line 682.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 33 undefined on input line 682.
-
-
-LaTeX Warning: Citation 'Hedderich.2020' on page 33 undefined on input line 683.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 33 undefined on input line 684.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 33 undefined on input line 684.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 33 undefined on input line 694.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 33 undefined on input line 694.
-
-
 
 [33]
 
-LaTeX Warning: Citation 'Belsley.2004' on page 34 undefined on input line 697.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 34 undefined on input line 697.
-
-
-Overfull \hbox (19.01236pt too wide) in paragraph at lines 696--701
-\T1/qpl/m/n/12 (-10) sprüng-li-chen Mo-dell ba-sie-rend auf $[][][][][][][]$ Be-ob-ach-tun-gen [[], []].
- []
-
-
-LaTeX Warning: Citation 'Fahrmeir.2009' on page 34 undefined on input line 706.
-
-
-LaTeX Warning: Citation 'Belsley.2004' on page 34 undefined on input line 706.
-
-
-LaTeX Warning: Citation 'Belsley.2004' on page 34 undefined on input line 715.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 34 undefined on input line 715.
-
-
-
 [34]
 
-LaTeX Warning: Citation 'Belsley.2004' on page 35 undefined on input line 729.
+[35] [36]
 
-
-LaTeX Warning: Citation 'Goos.2011' on page 35 undefined on input line 733.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 35 undefined on input line 733.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 35 undefined on input line 734.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 35 undefined on input line 734.
-
-
-LaTeX Warning: Citation 'Boyd.2004' on page 35 undefined on input line 737.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 35 undefined on input line 737.
-
-
-LaTeX Warning: Citation 'Atkinson.1970' on page 35 undefined on input line 738.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 35 undefined on input line 740.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 35 undefined on input line 741.
-
-
-LaTeX Warning: Citation 'Atkinson.2007' on page 35 undefined on input line 741.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 35 undefined on input line 741.
-
-
-Overfull \hbox (24.96724pt too wide) in paragraph at lines 736--742
-\T1/qpl/m/n/12 (-10) Case-Absicherung zur Va-ri-anz-schät-zung be-güns-tigt - ver-glei-che [], [].
- []
-
-
-Overfull \hbox (9.93452pt too wide) in paragraph at lines 736--742
-\T1/qpl/m/n/12 (-10) Für ex-plo-ra-ti-ve Ziel-set-zun-gen oh-ne star-re Mo-dell-an-nah-men kann nach []
- []
-
-
-
-[35]
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 36 undefined on input line 769.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 36 undefined on input line 769.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 36 undefined on input line 769.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 769--772
-[]|\T1/qpl/m/n/12 (+10) Minimierung der Spur der in-ver-sen In-for-ma-ti-ons-ma-trix
- []
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 36 undefined on input line 779.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 36 undefined on input line 779.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 36 undefined on input line 779.
-
-
-LaTeX Warning: Citation 'Atkinson.2007' on page 36 undefined on input line 779.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 36 undefined on input line 799.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 36 undefined on input line 799.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 36 undefined on input line 799.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 799--802
-[][][][][][][]$ \T1/qpl/m/n/12 (+10) im re-le-van-ten Pa-ra-me-ter-raum [[],
- []
-
-
-LaTeX Warning: Citation 'Monroe.2011' on page 36 undefined on input line 809.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 36 undefined on input line 809.
-
-
-LaTeX Warning: Citation 'Atkinson.2007' on page 36 undefined on input line 809.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 36 undefined on input line 830.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 36 undefined on input line 830.
-
-
-LaTeX Warning: Citation 'Myers.2010' on page 36 undefined on input line 830.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 830--833
-[]|\T1/qpl/m/n/12 (+10) Minimierung der durch-schnitt-li-chen Prä-dik-ti-ons-va-ri-
- []
-
-
-Underfull \hbox (badness 4454) in paragraph at lines 830--833
-\T1/qpl/m/n/12 (+10) anz über ein dis-kre-tes Set von $[][][][][][][]$ Punk-ten [[],
- []
-
-[36]
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 37 undefined on input line 842.
-
-
-Overfull \hbox (13.3319pt too wide) in paragraph at lines 842--847
-\T1/qpl/m/n/12 (-10) Ta-bel-le [][]2.4[][] las-sen sich die \T1/qpl/b/it/12 (-10) A\T1/qpl/b/n/12 (-10) -Effizienz $[][][][][][][]$\T1/qpl/m/n/12 (-10) , \T1/qpl/b/it/12 (-10) D\T1/qpl/b/n/12 (-10) -Effizienz $[][][][][][][]$\T1/qpl/m/n/12 (-10) , \T1/qpl/b/it/12 (-10) G\T1/qpl/b/n/12 (-10) -Effizienz $[][][][][][][]$\T1/qpl/m/n/12 (-10) , \T1/qpl/b/it/12 (-10) I\T1/qpl/b/n/12 (-10) -Effizienz
- []
-
-
-
-[37]
-
-LaTeX Warning: Citation 'Myers.2016' on page 38 undefined on input line 870.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 38 undefined on input line 870.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 38 undefined on input line 879.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 38 undefined on input line 879.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 38 undefined on input line 888.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 38 undefined on input line 897.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 38 undefined on input line 906.
-
-[38]
-
-LaTeX Warning: Citation 'Jones.2011' on page 39 undefined on input line 918.
-
-
-LaTeX Warning: Citation 'Goos.2025' on page 39 undefined on input line 919.
-
-
-LaTeX Warning: Citation 'NunezAres.2020' on page 39 undefined on input line 920.
-
-
+[37] [38]
 
 [39]
 Overfull \hbox (1.25711pt too wide) in paragraph at lines 932--934
@@ -2750,135 +2111,11 @@ Overfull \hbox (1.25711pt too wide) in paragraph at lines 932--934
 
 [40]
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 41 undefined on input line 955.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 41 undefined on input line 955.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 41 undefined on input line 955.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 41 undefined on input line 955.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 41 undefined on input line 955.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 41 undefined on input line 956.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 41 undefined on input line 956.
-
-
-LaTeX Warning: Citation 'Cohen.1988' on page 41 undefined on input line 958.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 41 undefined on input line 958.
-
-
-Overfull \hbox (5.66736pt too wide) in paragraph at lines 954--959
-\T1/qpl/m/n/12 (-10) kor-rekt als \T1/qpl/b/n/12 (-10) si^^?gni^^?fi^^?kan^^?ter \T1/qpl/m/n/12 (-10) Ef-fekt $[][][][][][][]$ iden-ti-fi-ziert wird [[], []].
- []
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 41 undefined on input line 960.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 41 undefined on input line 960.
-
-
-Overfull \hbox (12.29788pt too wide) in paragraph at lines 960--964
-[]\T1/qpl/m/n/12 (-10) Formalisiert wird dies im Rah-men \T1/qpl/b/n/12 (-10) sta^^?tis^^?ti^^?scher Hy^^?po^^?the^^?sen^^?tests \T1/qpl/m/n/12 (-10) [[],
- []
-
-
-
 [41]
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 42 undefined on input line 981.
-
-
-LaTeX Warning: Citation 'Kutner.2005' on page 42 undefined on input line 981.
-
-
-LaTeX Warning: Citation 'Cohen.1988' on page 42 undefined on input line 986.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 42 undefined on input line 986.
-
-
 
 [42]
 
-LaTeX Warning: Citation 'Nelder.1972' on page 43 undefined on input line 998.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 43 undefined on input line 998.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 43 undefined on input line 998.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 43 undefined on input line 998.
-
-
-LaTeX Warning: Citation 'McCulloch.2001' on page 43 undefined on input line 998.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 43 undefined on input line 999.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 43 undefined on input line 999.
-
-
-LaTeX Warning: Citation 'Khuri.2006' on page 43 undefined on input line 999.
-
-
-Overfull \hbox (1.4332pt too wide) in paragraph at lines 996--1004
-[]\T1/qpl/m/n/12 (-10) , [], []) er-mit-telt wird. Da für die-se kom-
- []
-
-
-
 [43]
-
-LaTeX Warning: Citation 'Yang.2007' on page 44 undefined on input line 1010.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 44 undefined on input line 1010.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 44 undefined on input line 1010.
-
-
-LaTeX Warning: Citation 'Box.1964' on page 44 undefined on input line 1011.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 44 undefined on input line 1011.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 44 undefined on input line 1020.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 44 undefined on input line 1020.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 44 undefined on input line 1021.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 44 undefined on input line 1021.
-
-
-LaTeX Warning: Citation 'Wuthrich.2023' on page 44 undefined on input line 1021.
-
-
-LaTeX Warning: Citation 'Modarres.2017' on page 44 undefined on input line 1026.
-
-
-LaTeX Warning: Citation 'Kremer.2020' on page 44 undefined on input line 1026.
-
-
 Overfull \hbox (0.30013pt too wide) in paragraph at lines 1024--1027
 \T1/qpl/m/n/12 (-10) In der Lebensdauer-Datenanalyse wer-den ins-be-son-de-re zwei wei-te-re Mo-del-lie-rungs-
  []
@@ -2887,121 +2124,11 @@ Overfull \hbox (0.30013pt too wide) in paragraph at lines 1024--1027
 
 [44]
 
-LaTeX Warning: Citation 'Meeker.2022' on page 45 undefined on input line 1032.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 45 undefined on input line 1032.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 45 undefined on input line 1032.
-
-
-LaTeX Warning: Citation 'Dobson.2018' on page 45 undefined on input line 1032.
-
-
-LaTeX Warning: Citation 'Kremer.2020' on page 45 undefined on input line 1032.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 45 undefined on input line 1032.
-
-
-LaTeX Warning: Citation 'Myers.2010' on page 45 undefined on input line 1032.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 45 undefined on input line 1045.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 45 undefined on input line 1045.
-
-
-LaTeX Warning: Citation 'Aitkin.1980' on page 45 undefined on input line 1045.
-
-
-
 [45]
-
-LaTeX Warning: Citation 'Yang.2007' on page 46 undefined on input line 1052.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 46 undefined on input line 1052.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 46 undefined on input line 1075.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 46 undefined on input line 1075.
-
-
-LaTeX Warning: Citation 'Modarres.2017' on page 46 undefined on input line 1075.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 46 undefined on input line 1076.
-
-
-LaTeX Warning: Citation 'Qiao.1994' on page 46 undefined on input line 1076.
-
-
-LaTeX Warning: Citation 'Kremer.2019b' on page 46 undefined on input line 1077.
-
-
 
 [46]
 
-LaTeX Warning: Citation 'Kremer.2021' on page 47 undefined on input line 1082.
-
-
-LaTeX Warning: Citation 'Kremer.2019c' on page 47 undefined on input line 1082.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 47 undefined on input line 1083.
-
-
-LaTeX Warning: Citation 'Rencher.2008' on page 47 undefined on input line 1083.
-
-
-LaTeX Warning: Citation 'Fisher.1935' on page 47 undefined on input line 1100.
-
-
-LaTeX Warning: Citation 'Rasch.2018' on page 47 undefined on input line 1100.
-
-
-
 [47]
-
-LaTeX Warning: Citation 'Yang.2007' on page 48 undefined on input line 1111.
-
-
-LaTeX Warning: Citation 'Rasch.2018' on page 48 undefined on input line 1111.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 48 undefined on input line 1122.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 48 undefined on input line 1122.
-
-
-LaTeX Warning: Citation 'Kremer.2019c' on page 48 undefined on input line 1122.
-
-
-Overfull \hbox (2.24017pt too wide) in paragraph at lines 1120--1123
-\T1/qpl/m/n/12 (-10) tei-lung der [][][]MLE[][] be-schreibt [] ne-ben wei-te-ren Al-ter-na-ti-ven aus [],
- []
-
-
-Overfull \hbox (1.00491pt too wide) in paragraph at lines 1120--1123
-[] \T1/qpl/m/n/12 (-10) die sym-me-tri-schen $\OT1/zplm/m/n/12 (\OT1/pplx/m/n/12 1 \OMS/zplm/m/n/12 ^^@ [][][][][][][]\OT1/zplm/m/n/12 )$\T1/qpl/m/n/12 (-10) -Konfidenzintervalle (Wald-Intervalle) wie
- []
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 48 undefined on input line 1129.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 48 undefined on input line 1129.
-
-
-LaTeX Warning: Citation 'Bain.2017b' on page 48 undefined on input line 1130.
-
-
 
 [48]
 Overfull \hbox (7.04196pt too wide) in paragraph at lines 1133--1135
@@ -3011,19 +2138,6 @@ Overfull \hbox (7.04196pt too wide) in paragraph at lines 1133--1135
 
 
 [49]
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 50 undefined on input line 1156.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 50 undefined on input line 1156.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 50 undefined on input line 1165.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 50 undefined on input line 1165.
-
-
 
 [50]) (chapters/chapter3_ansatz.tex
 
@@ -3035,141 +2149,16 @@ LaTeX Warning: Citation 'Meeker.2022' on page 50 undefined on input line 1165.
 ]
 chapter 3.
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 53 undefined on input line 11.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 53 undefined on input line 11.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 53 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'Kremer.2019b' on page 53 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'Kremer.2019c' on page 53 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'Ahn.2015' on page 53 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'Donev.2004' on page 53 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'Box.1951' on page 53 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'Ardakani.2011' on page 53 undefined on input line 16.
-
-
-Overfull \hbox (33.87814pt too wide) in paragraph at lines 11--19
-\T1/qpl/m/n/12 (-10) Stan-dard für die Mo-del-lie-rung nicht-linearer Zu-sam-men-hän-ge be-währt [[],
- []
-
-
 
 [53]
 
-LaTeX Warning: Citation 'Khuri.2006' on page 54 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 54 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'Thommen.2022' on page 54 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'Khuri.2006' on page 54 undefined on input line 28.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 54 undefined on input line 28.
-
-
-
 [54]
-
-LaTeX Warning: Citation 'Khuri.2006' on page 55 undefined on input line 35.
-
-
-LaTeX Warning: Citation 'Yang.2011' on page 55 undefined on input line 35.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 55 undefined on input line 37.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 55 undefined on input line 39.
-
-
-LaTeX Warning: Citation 'Nelson.2005' on page 55 undefined on input line 43.
-
-
-LaTeX Warning: Citation 'Goos.2025' on page 55 undefined on input line 48.
-
-
 
 [55]
 
 [56]
 
-LaTeX Warning: Citation 'Myers.2016' on page 57 undefined on input line 71.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 57 undefined on input line 71.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 57 undefined on input line 71.
-
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 57 undefined on input line 73.
-
-
-
 [57]
-
-LaTeX Warning: Citation 'Meeker.2022' on page 58 undefined on input line 74.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 58 undefined on input line 74.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 58 undefined on input line 75.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 58 undefined on input line 75.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 58 undefined on input line 75.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 58 undefined on input line 76.
-
-
-LaTeX Warning: Citation 'Modarres.2017' on page 58 undefined on input line 76.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 58 undefined on input line 76.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 58 undefined on input line 77.
-
-
-Overfull \hbox (26.42535pt too wide) in paragraph at lines 77--78
-\T1/qpl/m/n/12 (-10) nung ver-läss-li-cher Ver-trau-ens-be-rei-che der Zu-ver-läs-sig-keit es-sen-zi-ell [[]]. 
- []
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 58 undefined on input line 78.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 58 undefined on input line 78.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 58 undefined on input line 79.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 58 undefined on input line 79.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 81--82
 
  []
@@ -3188,283 +2177,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 [60]
 chapter 4.
 
-LaTeX Warning: Citation 'Arndt.2023c' on page 61 undefined on input line 12.
-
-
 
 [61
 
 
 ]
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 62 undefined on input line 22.
-
-
-LaTeX Warning: Citation 'Lindemann.2008' on page 62 undefined on input line 23.
-
-
-LaTeX Warning: Citation 'Krallmann.2013' on page 62 undefined on input line 23.
-
-
-LaTeX Warning: Citation 'Gundlach.2004' on page 62 undefined on input line 23.
-
-
-LaTeX Warning: Citation 'Pahl.2007' on page 62 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'Wallace.2007' on page 62 undefined on input line 30.
-
-
-LaTeX Warning: Citation 'Wallace.2007' on page 62 undefined on input line 30.
-
-
-LaTeX Warning: Citation 'Montgomery.2020b' on page 62 undefined on input line 33.
-
-
-LaTeX Warning: Citation 'Bruckner.2019' on page 62 undefined on input line 33.
-
-
-Overfull \hbox (5.8323pt too wide) in paragraph at lines 21--34
-[] \T1/qpl/m/n/12 (-10) klas-si-sche Me-tho-den des Qua-li-täts-ma-na-ge-ments ([][][]Se-ven Qua-li-ty Tools
- []
-
-
-LaTeX Warning: Citation 'Breiing.1997' on page 62 undefined on input line 35.
-
-
 Overfull \hbox (3.82832pt too wide) in paragraph at lines 35--36
 []\T1/qpl/b/n/12 (-10) Literaturrecherche: \T1/qpl/m/n/12 (-10) Ana-ly-se be-ste-hen-der Aus-fallm-odi und phy-si-ka-li-scher Wirk-
  []
 
 
-Overfull \hbox (54.9076pt too wide) in paragraph at lines 35--36
-\T1/qpl/m/n/12 (-10) aber auch si-mu-la-ti-ven Un-ter-su-chun-gen ([][][]Finite-Elemente-Analyse (FEA)[][]) [[]]. 
- []
-
-
-LaTeX Warning: Citation 'Daenzer.2002' on page 62 undefined on input line 36.
-
-
-LaTeX Warning: Citation 'Mayers.1997' on page 62 undefined on input line 36.
-
-
-Overfull \hbox (55.78517pt too wide) in paragraph at lines 36--37
-\T1/qpl/m/n/12 (-10) Ex-per-ten-teams, in-tui-ti-ves Er-fah-rungs-wis-sen zu ex-pli-zie-ren [[], []]. 
- []
-
-
-LaTeX Warning: Citation 'Daenzer.2002' on page 62 undefined on input line 37.
-
-
 
 [62]
 
-LaTeX Warning: Citation 'Albers.2005' on page 63 undefined on input line 38.
-
-
-LaTeX Warning: Citation 'Thompson.1999' on page 63 undefined on input line 38.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 63 undefined on input line 44.
-
-
-LaTeX Warning: Citation 'Gundlach.2004' on page 63 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'Kremer.2018b' on page 63 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'Mayers.1997' on page 63 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 63 undefined on input line 50.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 63 undefined on input line 50.
-
-
-
 [63]
-
-LaTeX Warning: Citation 'Bruckner.2019' on page 64 undefined on input line 54.
-
-
-Overfull \hbox (38.98218pt too wide) in paragraph at lines 54--55
-\T1/qpl/m/n/12 (-10) rung der oft un-struk-tu-rier-ten Er-geb-nis-se aus Brainstorming-Sessions [[]].
- []
-
-
-LaTeX Warning: Citation 'Buzan.2010' on page 64 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 64 undefined on input line 58.
-
-
-LaTeX Warning: Citation 'Daenzer.2002' on page 64 undefined on input line 58.
-
-
-Overfull \hbox (37.88953pt too wide) in paragraph at lines 58--59
-\T1/qpl/m/n/12 (-10) schen den Äs-ten vi-sua-li-siert wer-den (vgl. Ab-bil-dung [][]4.2[][]) [[], []]. 
- []
-
-
-LaTeX Warning: Citation 'Tittmann.2019' on page 64 undefined on input line 60.
-
-
-Overfull \hbox (26.39862pt too wide) in paragraph at lines 60--61
-\T1/qpl/m/n/12 (-10) me-ter als Kno-ten und ih-re Wirk-be-zie-hun-gen als Kan-ten dar-ge-stellt [[]].
- []
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 64 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 64 undefined on input line 69.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 64 undefined on input line 69.
-
-
 
 [64]
 
-LaTeX Warning: Citation 'Kremer.2018b' on page 65 undefined on input line 81.
-
-
-LaTeX Warning: Citation 'Lindemann.2008' on page 65 undefined on input line 81.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 65 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 65 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Lindemann.2008' on page 65 undefined on input line 90.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 65 undefined on input line 95.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 65 undefined on input line 95.
-
-
-Underfull \hbox (badness 1062) in paragraph at lines 95--95
-[][][]|\T1/qpl/m/n/12 (+10) Bei-spiel-haf-te Dar-stel-lung ei-ner bi-nären DSM zur Iden-ti-fi-ka-ti-on
- []
-
-
-Underfull \hbox (badness 1072) in paragraph at lines 95--95
-\T1/qpl/m/n/12 (+10) von In-ter-ak-tio-nen zwi-schen Sy-stem-pa-ra-me-tern (ad-ap-tiert nach
- []
-
-
-
 [65]
-
-LaTeX Warning: Citation 'Mayers.1997' on page 66 undefined on input line 100.
-
-
 
 [66]
 
-LaTeX Warning: Citation 'Arndt.2023c' on page 67 undefined on input line 112.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 67 undefined on input line 123.
-
-
-LaTeX Warning: Citation 'Gundlach.2004' on page 67 undefined on input line 128.
-
-
-LaTeX Warning: Citation 'Mayers.1997' on page 67 undefined on input line 128.
-
-
-LaTeX Warning: Citation 'Klein.2011' on page 67 undefined on input line 128.
-
-
-Overfull \hbox (11.11545pt too wide) in paragraph at lines 128--129
-\T1/qpl/m/n/12 (-10) der klas-si-schen Ro-bust-heits-op-ti-mie-rung un-ter-schei-den [[], [],
- []
-
-
-
 [67]
-
-LaTeX Warning: Citation 'Klein.2014' on page 68 undefined on input line 132.
-
-
 
 [68]
 
-LaTeX Warning: Citation 'Montgomery.2020' on page 69 undefined on input line 150.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 69 undefined on input line 150.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 69 undefined on input line 154.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 69 undefined on input line 158.
-
-
-
 [69]
 
-LaTeX Warning: Citation 'Arndt.2023c' on page 70 undefined on input line 176.
-
-
-
-[70]
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 71 undefined on input line 199.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 71 undefined on input line 199.
-
-) (chapters/chapter5_entwurf.tex
+[70]) (chapters/chapter5_entwurf.tex
 
 [71]
 
-[72]
-chapter 5.
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 73 undefined on input line 21.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 73 undefined on input line 21.
-
-
-
-[73
+[72
 
 
 ]
+chapter 5.
+
+
+[73]
 
 [74]
-
-LaTeX Warning: Citation 'Box.1963' on page 75 undefined on input line 41.
-
-
-LaTeX Warning: Citation 'Ahn.2015' on page 75 undefined on input line 41.
-
-
-LaTeX Warning: Citation 'Donev.2004' on page 75 undefined on input line 41.
-
-
-LaTeX Warning: Citation 'Zhang.2021' on page 75 undefined on input line 41.
-
-
-LaTeX Warning: Citation 'Jang.2002' on page 75 undefined on input line 41.
-
-
-LaTeX Warning: Citation 'Arndt.2023' on page 75 undefined on input line 50.
-
-
-LaTeX Warning: Citation 'Arndt.2022c' on page 75 undefined on input line 50.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 48--51
 
  []
@@ -3475,18 +2228,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--51
 
 [76]
 
-LaTeX Warning: Citation 'Arndt.2023' on page 77 undefined on input line 96.
-
-
-
 [77]
-
-LaTeX Warning: Citation 'Zio.2013' on page 78 undefined on input line 116.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 78 undefined on input line 116.
-
-
 
 [78]
 Underfull \hbox (badness 3679) in paragraph at lines 130--132
@@ -3553,929 +2295,109 @@ chapter 6.
 chapter 7.
 )
 
-LaTeX Warning: Empty bibliography on input line 515.
-
-
-
 [89]
 
 [90
 
 
-] (chapters/anhang/anhanga/anhanga.tex
+]
+chapter without number
+LaTeX Font Info:    Trying to load font information for T1+DejaVuSansMono-TLF on input line 515.
+(C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/dejavu\t1dejavusansmono-tlf.fd
+File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono-TLF.
+)
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 10.20007pt on input line 515.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `DejaVuSansMono-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
-[91]) (chapters/anhang/anhangb/anhangb.tex
+Overfull \hbox (3.11346pt too wide) in paragraph at lines 515--515
+\T1/qpl/m/it/12 (-10) ments for re^^?lia^^?bi^^?li^^?ty achie^^?ve^^?ment\T1/qpl/m/n/12 (-10) . Ho-bo-ken, NJ: Wi-ley, 2022. \T1/qpl/m/sc/12/50ls (-10) isbn\T1/qpl/m/n/12 (-10) : 9781119237693.
+ []
+
+
+
+[91{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
 
 [92]
-chapter A.
-(tables/table_sens_Cminus_1_Dminus_1.tex
-tables/table_sens_Cminus_1_Dminus_1.tex:5: Misplaced \noalign.
-\midrule ->\noalign 
-                    {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global \@...
-l.5 \midrule
-            
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing } inserted.
-<inserted text> 
-                }
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[93]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[94]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing } inserted.
-<inserted text> 
-                }
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[95]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[96]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing } inserted.
-<inserted text> 
-                }
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[97]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[98]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[99]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[100]
+Overfull \hbox (27.99475pt too wide) in paragraph at lines 515--515
+\T1/qpl/m/it/12 (-10) Bil^^?dern, zahl^^?rei^^?chen Bei^^?spie^^?len und 92 Auf^^?ga^^?ben\T1/qpl/m/n/12 (-10) . 3., ak-tua-li-sier-te Auf-la-ge. Mathematik-
+ []
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[101]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[102] (chapters/anhang/anhanga/anhanga.tex
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[103
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+]) (chapters/anhang/anhangb/anhangb.tex (tables/table_sens_Cplus_1_Dplus_1.tex) (tables/table_sens_Cplus_1_D00.tex) (tables/table_sens_Cplus_1_Dminus_1.tex)
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[104]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[105]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[106]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[107] (tables/table_sens_C00_Dplus_1.tex) (tables/table_sens_C00_D00.tex) (tables/table_sens_C00_Dminus_1.tex)
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[108
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[109]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[110] (tables/table_sens_Cminus_1_Dplus_1.tex) (tables/table_sens_Cminus_1_D00.tex) (tables/table_sens_Cminus_1_Dminus_1.tex))
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[111
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
+[112]
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[113] (diss_arndt.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+Package rerunfilecheck Info: File `diss_arndt.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
+\openout1 = `diss_arndt.run.xml'.
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-I'm guessing that you meant to end an alignment here.
-
-tables/table_sens_Cminus_1_Dminus_1.tex:6: Misplaced \cr.
-<inserted text> \cr 
-                    
-l.6 p
-     ower intercept value & 0.9949 & 0.8035 &  & 0.7330 &  & 0.8378 & 0.9990 \\
-(That makes 100 errors; please try again.) 
+ ) 
 Here is how much of TeX's memory you used:
- 75040 strings out of 473577
- 1733202 string characters out of 5716318
- 3676958 words of memory out of 5000000
- 96343 multiletter control sequences out of 15000+600000
- 727577 words of font info for 367 fonts, out of 8000000 for 9000
+ 75710 strings out of 473577
+ 1755770 string characters out of 5716318
+ 3843629 words of memory out of 5000000
+ 96789 multiletter control sequences out of 15000+600000
+ 738351 words of font info for 399 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 122i,20n,121p,10981b,2461s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,20n,121p,10968b,3730s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on diss_arndt.pdf (135 pages, 1482657 bytes).
+PDF statistics:
+ 4461 PDF objects out of 5155 (max. 8388607)
+ 666 named destinations out of 1000 (max. 500000)
+ 91338 words of extra memory for PDF output out of 106986 (max. 10000000)
 
-tables/table_sens_Cminus_1_Dminus_1.tex:6:  ==> Fatal error occurred, no output PDF file produced!

@@ -1,23 +1,95 @@
-\chapter{Sensitivitätsanalyse}
+\section{Sensitivitätsanalyse}
 \label{app:sensitivity}
 
-In diesem Anhang sind die detaillierten Ergebnisse der Sensitivitätsanalyse für die verschiedenen Parameterkombinationen tabellarisch zusammengefasst.
+In diesem Anhang sind die detaillierten Ergebnisse der Sensitivitätsanalyse für die verschiedenen Parameterkombinationen tabellarisch zusammengefasst. Die Tabellen zeigen die Power des Tests in Abhängigkeit von den Störfaktoren $C$ (Zentrums-Läufe) und $D$ (Stern-Läufe).
 
-\begin{table}[htbp]
+% --- SEKTION: C = +1 ---
+
+\begin{table}[!ht]
     \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration C=-1, D=-1}
-    \label{tab:sens_c-1_d-1}
-    % Um Tabellen, die zu breit sind, an die Textbreite anzupassen:
-    \resizebox{\textwidth}{!}{
-        \input{tables/table_sens_Cminus_1_Dminus_1.tex}
+    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}
+    \label{tab:sens_cplus1_dplus1}
+    \resizebox{\textwidth}{!}{%
+        \input{tables/table_sens_Cplus_1_Dplus_1.tex}
     }
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[!ht]
     \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration C=0, D=0}
+    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}
+    \label{tab:sens_cplus1_d00}
+    \resizebox{\textwidth}{!}{%
+        \input{tables/table_sens_Cplus_1_D00.tex}
+    }
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}
+    \label{tab:sens_cplus1_dminus1}
+    \resizebox{\textwidth}{!}{%
+        \input{tables/table_sens_Cplus_1_Dminus_1.tex}
+    }
+\end{table}
+
+\clearpage % Neue Seite für die nächste Gruppe
+
+% --- SEKTION: C = 0 ---
+
+\begin{table}[!ht]
+    \centering
+    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}
+    \label{tab:sens_c00_dplus1}
+    \resizebox{\textwidth}{!}{%
+        \input{tables/table_sens_C00_Dplus_1.tex}
+    }
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}
     \label{tab:sens_c00_d00}
-    \resizebox{\textwidth}{!}{
+    \resizebox{\textwidth}{!}{%
         \input{tables/table_sens_C00_D00.tex}
+    }
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}
+    \label{tab:sens_c00_dminus1}
+    \resizebox{\textwidth}{!}{%
+        \input{tables/table_sens_C00_Dminus_1.tex}
+    }
+\end{table}
+
+\clearpage
+
+% --- SEKTION: C = -1 ---
+
+\begin{table}[!ht]
+    \centering
+    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}
+    \label{tab:sens_cminus1_dplus1}
+    \resizebox{\textwidth}{!}{%
+        \input{tables/table_sens_Cminus_1_Dplus_1.tex}
+    }
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}
+    \label{tab:sens_cminus1_d00}
+    \resizebox{\textwidth}{!}{%
+        \input{tables/table_sens_Cminus_1_D00.tex}
+    }
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}
+    \label{tab:sens_cminus1_dminus1}
+    \resizebox{\textwidth}{!}{%
+        \input{tables/table_sens_Cminus_1_Dminus_1.tex}
     }
 \end{table}
