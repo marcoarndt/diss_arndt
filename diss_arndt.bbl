@@ -2314,6 +2314,76 @@
       \field{pages}{159\bibrangedash 171}
       \range{pages}{13}
     \endentry
+    \entry{Box.2007}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=002f69bf140cceda97f81a168d86ceec}{%
+           family={Box},
+           familyi={B\bibinitperiod},
+           given={G.\bibnamedelimi E.\bibnamedelimi P.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d341f9df4f1da061d5c4dac8ec1a6444}{%
+           family={Draper},
+           familyi={D\bibinitperiod},
+           given={Norman\bibnamedelima Richard},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, New Jersey}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
+      \strng{fullhash}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
+      \strng{fullhashraw}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
+      \strng{bibnamehash}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
+      \strng{authorbibnamehash}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
+      \strng{authornamehash}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
+      \strng{authorfullhash}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
+      \strng{authorfullhashraw}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed.}
+      \field{isbn}{9780470053577}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Response surfaces, mixtures, and ridge analyses}
+      \field{year}{2007}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2006043975-b.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/enhancements/fy0826/2006043975-b.html
+      \endverb
+    \endentry
+    \entry{Ahn.2015}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e6ca6b3bff2ac6561da420340530dc34}{%
+           family={Ahn},
+           familyi={A\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{fullhash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{fullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{bibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorbibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authornamehash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorfullhash}{e6ca6b3bff2ac6561da420340530dc34}
+      \strng{authorfullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Industrial Engineering}
+      \field{title}{Central Composite Design for the Experiments with Replicate Runs at Factorial and Axial Points}
+      \field{volume}{349}
+      \field{year}{2015}
+      \field{pages}{969\bibrangedash 979}
+      \range{pages}{11}
+    \endentry
     \entry{Belsley.2004}{book}{}{}
       \name{author}{1}{}{%
         {{hash=7bb25e352d186fa63f389be0d951fbb6}{%
@@ -3176,8 +3246,8 @@
       \strng{authornamehash}{0121dff43349d108c5cc99bf210f0f79}
       \strng{authorfullhash}{0121dff43349d108c5cc99bf210f0f79}
       \strng{authorfullhashraw}{0121dff43349d108c5cc99bf210f0f79}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0035-9254}
@@ -3271,33 +3341,6 @@
       \field{isbn}{9781119385288}
       \field{title}{Mathematical statistics}
       \field{year}{2018}
-    \endentry
-    \entry{Ahn.2015}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=e6ca6b3bff2ac6561da420340530dc34}{%
-           family={Ahn},
-           familyi={A\bibinitperiod},
-           given={H.},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{fullhash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{fullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{bibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authorbibnamehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authornamehash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authorfullhash}{e6ca6b3bff2ac6561da420340530dc34}
-      \strng{authorfullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Industrial Engineering}
-      \field{title}{Central Composite Design for the Experiments with Replicate Runs at Factorial and Axial Points}
-      \field{volume}{349}
-      \field{year}{2015}
-      \field{pages}{969\bibrangedash 979}
-      \range{pages}{11}
     \endentry
     \entry{Donev.2004}{article}{}{}
       \name{author}{1}{}{%

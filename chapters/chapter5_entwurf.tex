@@ -98,13 +98,13 @@ Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl 
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
     \setlength{\parskip}{0pt}
-    \item Manipulation von Sternpunkten über deren axialen Abstand,
-    \item Manipulation von Sternpunkten durch co-faktorielle Korrelation,
-    \item Variation der Anzahl der Zentralpunkte,
-    \item Variation der Anzahl der Sternpunkte,
-    \item Variation der Standardabweichung der Effektstärken (System-Rauschen),
-    \item Änderung des relativen Verhältnisses von Effektstärken untereinander,
-    \item Variation der Standardabweichung der Systemantwort (Mess-Rauschen),
+    \item Manipulation von Sternpunkten über deren axialen Abstand;
+    \item Manipulation von Sternpunkten durch co-faktorielle Korrelation;
+    \item Variation der Anzahl der Zentralpunkte;
+    \item Variation der Anzahl der Sternpunkte;
+    \item Variation der Standardabweichung der Effektstärken (System-Rauschen);
+    \item Änderung des relativen Verhältnisses von Effektstärken untereinander;
+    \item Variation der Standardabweichung der Systemantwort (Mess-Rauschen) sowie
     \item Variation des Signifikanzniveaus.
 \end{enumerate}
 Insbesondere die Berücksichtigung der Verhältnismäßigkeit von Effektstärken sowie der Rauschparameter ist von zentraler Bedeutung, da sie die Signal-zu-Rausch-Verhältnisse im Modell direkt beeinflussen und damit die Detektionswahrscheinlichkeit der Effekte maßgeblich steuern, gleichzeitig aber eine gegen unendlich tendierende Variationsmöglichkeit bieten, die in einem reinen Screening-Ansatz nicht abgedeckt werden könnte.
@@ -113,7 +113,7 @@ Die Integration dieser Faktoren in das Meta-Design erfolgt dabei methodisch diff
 Diese Trennung ist zwingend geboten, da Variationen in der Stützstellenanzahl die topologische Struktur der Design-Matrix $\sym{X}$ und deren Freiheitsgrade diskontinuierlich verändern.
 Ein rein kontinuierliches Meta-Modell würde hier zu unzulässigen Interpolationen über strukturelle Singularitäten hinweg führen -- beispielsweise beim vollständigen Verlust der Schätzbarkeit quadratischer Terme bei extremer Ausdünnung.
 Folglich werden die kontinuierlichen Sensitivitäten der Rauschparameter stets \textit{innerhalb} konsistenter topologischer Design-Strukturen ermittelt, während der Haupteffekt der Stützstellenreduktion separat über die diskreten Mittelwertverschiebungen (Level-Shifts) der \ac{power} zwischen den Blöcken quantifiziert wird.
-Weiter erfüllt der \ac{DoE}-Ansatz mittels \ac{CCD} den Anspruch, für die Sensitivitätsanalyse effiziente eine notwendige statistische Inferenz und Kausalität zu identifizieren, wohingegen alternative Ansätze wie die reine Korrelationsanalyse, \textit{Space-Filling Designs} (wie \textit{Latin Hypercube Sampling} oder \textit{Sobol}-Sequenzen) oder die Anwendung von \ac{ML}-Modellen zur Schätzung von Sensitivitäten darüber hinaus Assoziationen für explorative Prädiktionen liefern würden \cite{Zio.2013,Kleppmann.2020}.
+Weiter erfüllt der \ac{DoE}-Ansatz mittels \ac{CCD} den Anspruch, für die Sensitivitätsanalyse eine effiziente und notwendigestatistische Inferenz und Kausalität zu identifizieren, wohingegen alternative Ansätze wie die reine Korrelationsanalyse, \textit{Space-Filling Designs} (wie \textit{Latin Hypercube Sampling} oder \textit{Sobol}-Sequenzen) oder die Anwendung von \ac{ML}-Modellen zur Schätzung von Sensitivitäten darüber hinaus Assoziationen für explorative Prädiktionen liefern würden \cite{Zio.2013,Kleppmann.2020}.
 
 Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation der faktoriellen Versuchspunkte oder die Einführung von Lebensdauermodellen werden dabei bewusst ausgeschlossen, um die Komplexität des Meta-Designs handhabbar zu halten und die Interpretation der Ergebnisse durch eine pragmatische Auswahl und im Fokus der in Kapitel~\ref{chap:ansatz} postulierten Zielsetzung zu erleichtern.
 \begin{table}[htbp]
@@ -123,63 +123,63 @@ Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation
     \renewcommand{\arraystretch}{1.3}
     \begin{tabular}{@{}l p{0.45\textwidth} l l@{}}
         \toprule
-         & \textbf{Beschreibung}                                          & \textbf{Wertebereich} & \textbf{Charakteristik} \\
+         & \textbf{Beschreibung}                                             & \textbf{Wertebereich} & \textbf{Charakteristik} \\
         \midrule
 
         $\symsub{xi_factor}{idx_fac_a}$
          & \textbf{Sternpunkt-Abstand ($\symsub{alpha}{idx_D}$)} \newline
         Variation des Abstands der Sternpunkte zum Zentrum (z.B. flächenzentriert, rotierbar und extendiert).
          & $[1,00;\, 2\cdot\symsub{alpha}{idx_D}]$
-         & Kont. (\ac{CCD})                                                                                                 \\
+         & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_b}$
          & \textbf{Sternpunkt-Shift} \newline
         Asymmetrische / Co-Faktorielle Verschiebung eines Sternpunkts zur Simulation geometrischer Verzerrungen und Faktoren-Korrelation.
          & $[0,10;\, \symsub{alpha}{idx_D}]$
-         & Kont. (\ac{CCD})                                                                                                 \\
+         & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_c}$
-         & \textbf{Zentralpunkte} \newline
+         & \textbf{Zentralpunkte ($\symsub{n}{idx_C}$)} \newline
         Variation der Anzahl der Zentralpunkte $\symsub{n}{idx_C}>0$.
          & $[1,00;\, 8,00]$
-         & Diskret (Faktoriell)                                                                                             \\
+         & Diskret (Faktoriell)                                                                                                \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_d}$
-         & \textbf{Sternpunkte} \newline
+         & \textbf{Sternpunkte ($\symsub{n}{idx_S}$)} \newline
         Variation durch Entfall von maximal $50\,\%$ der Sternpunkte (z.B. durch Zensierung oder Funktionalitätsverlust).
          & $[2,00;\, 4,00]$
-         & Diskret (Faktoriell)                                                                                             \\
+         & Diskret (Faktoriell)                                                                                                \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_e}$
-         & \textbf{System-Rauschen} \newline
+         & \textbf{System-Rauschen ($\sym{sigma}$)} \newline
         Verhältnis zwischen pseudo-physikalischem Modellkoeffizienten und Systemabweichung bzw. Effektstreuung.
          & $[0,80;\, 1,20]$
-         & Kont. (\ac{CCD})                                                                                                 \\
+         & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_f}$
-         & \textbf{Effekt-Verhältnis} \newline
+         & \textbf{Effekt-Verhältnis ($\sym{beta}_1/\sym{beta}_2$)} \newline
         Verhältnis zweier Haupteffekte zueinander: zwischen gleichwertiger Effektstärke oder einem Anteil von $10\,\%$.
          & $[0,10;\, 1,00]$
-         & Kont. (\ac{CCD})                                                                                                 \\
+         & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_g}$
-         & \textbf{Mess-Rauschen} \newline
+         & \textbf{Mess-Rauschen ($\sym{epsilon}$)} \newline
         Verhältnis zwischen den Modellkoeffizienten und dem Wert des Streuparameters der Systemantwort.
          & $[0,80;\, 1,20]$
-         & Kont. (\ac{CCD})                                                                                                 \\
+         & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_h}$
-         & \textbf{Signifikanzniveau} \newline
+         & \textbf{Signifikanzniveau ($\sym{alpha}$)} \newline
         Das gewählte Signifikanzniveau.
          & $[0,02;\, 0,08]$
-         & Kont. (\ac{CCD})                                                                                                 \\
+         & Kont. (\ac{CCD})                                                                                                    \\
 
         \bottomrule
     \end{tabular}
@@ -200,7 +200,7 @@ Betrachtet man zunächst die globale \textbf{Modell-Power} ($\sym{power}_{\sym{i
 Diese pauschale Metrik verdeckt jedoch, dass das Verhalten spezifischer Einzel-Effekte - insbesondere die Identifikation der für die Lebensdauerprognose kritischen quadratischen Terme - deutlich sensitiver ausfällt.
 Wie Tabelle~\ref{tab:summary_power_sensitivity} zeigt, liegt die mittlere Trennschärfe für quadratische Terme ($\sym{power}_{\sym{beta}_{11}}, \sym{power}_{\sym{beta}_{22}}$) nur noch im Bereich von $70\,\%$ bis $79\,\%$.
 
-Die entscheidende Erkenntnis liefert jedoch der Blick auf die \textbf{Sensitivitätsindizes} (Spalte „Dominante Sensitivität“).
+Die entscheidende Erkenntnis liefert jedoch der Blick auf die \textbf{Sensitivitäts-Indizes} (Spalte „Dominante Sensitivität“).
 Für die Mehrheit der untersuchten Koeffizienten ($\sym{power}_{\sym{idx_M}}, \sym{power}_{\sym{beta}_1}, \sym{power}_{\sym{beta}_{12}}, \sym{power}_{\sym{beta}_{11}}$) ist nicht etwa eine Reduktion der Versuchspunkte der limitierende Faktor, sondern das \textbf{Messrauschen ($\symsub{xi_factor}{idx_fac_g}$)}.
 Mit einem Sensitivitätsindex von bis zu $\sym{Eff}=1,99$ (bei $\sym{power}_{\sym{beta}_{11}}$) dominiert die Güte der Messtechnik die Erfolgswahrscheinlichkeit des Tests.
 Da das Rauschen ($\symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_e}$) sowie das Signifikanzniveau ($\symsub{xi_factor}{idx_fac_h}$) in der praktischen Anwendung bei \ac{EoL}-Tests an bestehenden Prüfständen meist feste Randbedingungen darstellen, definieren sie eine natürliche Obergrenze der erreichbaren Trennschärfe, die auch durch maximale Versuchspläne nicht durchbrochen werden kann.
@@ -237,24 +237,6 @@ Dies birgt ein erhebliches ökonomisches Potenzial: Wenn die Trennschärfe ohneh
 Tabelle~\ref{tab:impact_cd} quantifiziert diesen „\textit{Design-Penalty}“:
 Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_c}$) und Sternpunkte ($\symsub{xi_factor}{idx_fac_d}$) zwar die Trennschärfe reduziert (z.B. $\Delta \sym{power} \approx -13\,\%$ für $\sym{power}_{\sym{beta}_{11}}$), dieser Einfluss jedoch in der gleichen Größenordnung liegt wie die unvermeidbaren Rauscheffekte (\textit{Noise}).
 
-% \begin{table}[htbp]
-%     \centering
-%     \caption{Systematischer Power-Verlust bei Reduktion der Versuchsstützpunkte (Vergleich Augmentiertes Design vs. Minimal-Design)}
-%     \label{tab:impact_cd}
-%     \renewcommand{\arraystretch}{1.2}
-%     \begin{tabular}{@{}l rr@{}}
-%         \toprule
-%         \textbf{Koeffizient}            & \textbf{Effekt $\symsub{xi_factor}{idx_fac_c}$ (8 $\to$ 1 CP)} & \textbf{Effekt $\symsub{xi_factor}{idx_fac_d}$ (4 $\to$ 2 SP)} \\
-%         \midrule
-%         $\sym{power}_{\sym{beta}_0}$    & $-4,45\,\%$                                                    & $-0,30\,\%$                                                    \\
-%         $\sym{power}_{\sym{beta}_1}$    & $-2,43\,\%$                                                    & $-5,99\,\%$                                                    \\
-%         $\sym{power}_{\sym{beta}_2}$    & $+1,07\,\%^*$                                                  & $-7,95\,\%$                                                    \\
-%         $\sym{power}_{\sym{beta}_{11}}$ & $-13,87\,\%$                                                   & $-12,80\,\%$                                                   \\
-%         $\sym{power}_{\sym{beta}_{22}}$ & n.\,a.                                                         & $-6,07\,\%$                                                    \\
-%         \bottomrule
-%         \multicolumn{3}{l}{\footnotesize $^*$ Positiver Wert resultiert aus Varianzverschiebungen bei instabilen Designs.}
-%     \end{tabular}
-% \end{table}
 
 \begin{table}[htbp]
     \centering
@@ -267,10 +249,11 @@ Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_
         \cmidrule(l){2-3}
                                         & \textbf{bei $\symsub{xi_factor}{idx_fac_c}$ ($\symsub{n}{idx_C}=8 \to 1$)}                  & \textbf{bei $\symsub{xi_factor}{idx_fac_d}$ ($\symsub{n}{idx_S}=4 \to 2$)} \\
         \midrule
-        \multicolumn{3}{@{}c}{\textit{Konstante \& Haupteffekte}}                                                                                                                                                  \\
+        \multicolumn{3}{@{}c}{\textit{Konstante, Haupt- und Interaktionseffekte}}                                                                                                                                  \\
         $\sym{power}_{\sym{beta}_0}$    & $-4,5\,\%$                                                                                  & $-0,3\,\%$                                                                 \\
         $\sym{power}_{\sym{beta}_1}$    & $-2,4\,\%$                                                                                  & $-6,0\,\%$                                                                 \\
         $\sym{power}_{\sym{beta}_2}$    & $+1,1\,\%$\rlap{$^*$}                                                                       & $-8,0\,\%$                                                                 \\
+        $\sym{power}_{\sym{beta}_{12}}$ & $-1,2\,\%$                                                                                  & $-0,9\,\%$                                                                 \\
         \addlinespace
         \midrule
         \multicolumn{3}{@{}c}{\textit{Quadratische Effekte}}                                                                                                                                                       \\
@@ -281,13 +264,60 @@ Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_
         \multicolumn{3}{l}{\footnotesize $^{**}$ Nicht auswertbar, da Singularität in quadratischem Term bei $\symsub{n}{idx_C}$.}
     \end{tabular}
 \end{table}
-
 Einzig der quadratische Koeffizient $\sym{power}_{\sym{beta}_{22}}$ bildet eine Ausnahme:
 Hier ist der geometrische Abstand der Sternpunkte ($\symsub{xi_factor}{idx_fac_a}$) mit einem extremen Index von $3,72$ der dominierende Faktor (vgl. Tabelle~\ref{tab:summary_power_sensitivity}).
 Für alle anderen Terme gilt:
 Da die $\sym{power}$ durch die physikalischen Randbedingungen ($\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$) maßgeblich vorbestimmt ist, besteht Spielraum zur Anpassung der Faktoren $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$ in Bereiche, die aus Aspekten der Versuchszeit und des Budgets attraktiv sein können - ohne die Effektivität des Tests unverhältnismäßig stärker zu kompromittieren, als es das Messsystem ohnehin schon tut.
 
 \subsection{Generische Auswirkungen relevanter Orthogonalitäts-Abweichungen} \label{subsec:ergebnisse_generic}
+
+Die Ergebnisse der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) haben gezeigt, dass das \ac{CCD} im Hinblick auf die statistische Trennschärfe ein robustes Verhalten gegenüber Modifikationen seiner Stützstellenanzahl aufweist, da im Regelfall das experimentelle System- und Messrauschen den limitierenden Faktor der Effektivität darstellt.
+Für die praktische \ac{EoL}-Versuchsplanung greift dieser generalisierte, kombinatorische Ansatz jedoch noch zu kurz.
+In der Realität am Prüfstand treten Abweichungen von der idealen Design-Matrix technisch bedingt nicht als geplante, systematische Ausdünnung auf, sondern als unvorhergesehene, asymmetrische und meist isolierte Einzelphänomene, ausgelöst durch physikalische oder normative Restriktionen.
+Darüber hinaus eröffnet das Bewusstsein über die geringen \textit{Design-Penalties} aus Abschnitt~\ref{subsec:ergebnisse_sensitivitaet} die Möglichkeit einer gezielten adaptiven Planung:
+Wenn Design-Modifikationen die Effektivität des Nachweises ohnehin nur verhältnismäßig moderat beeinflussen, ist zu prüfen, ob solche Manipulationen zur Kostenoptimierung oder Prüfzeitverkürzung nicht sogar bewusst induziert werden sollten.
+
+Um diese singulären Praxisphänomene systematisch bewerten zu können, ist die kombinatorische Betrachtung des Meta-Designs aus dem vorherigen Abschnitt nicht mehr zielführend.
+Stattdessen werden basierend auf der Simulationsmethodik aus Abschnitt~\ref{subsec:simulationsmethodik} vier spezifische, voneinander isolierte Störszenarien definiert, welche typische Einzelrestriktionen in multivariaten Lebensdauerversuchen abbilden:
+\begin{itemize}
+    \item \textbf{Fall I (Axialer Shift):} Sternpunkte ($\symsub{n}{idx_S}\geq 1$) können aufgrund von Anlagenrestriktionen nicht auf dem nominellen Abstand $\symsub{alpha}{idx_D}$ gefahren werden oder würden einen durch \ac{ALT} induzierten Wechsel des Ausfallmechanismus provozieren. Eine dennoch stringente Umsetzung des Versuchsplans bedingt also, dass sie folglich in ihrer Distanz deterministisch vom Plan abweichen;
+    \item \textbf{Fall II (Co-faktorielle Korrelation):} Ein Sternpunkt ist nicht mehr achsenrein isoliert fahrbar. Spezifische, physikalische Systemfunktionalitäten erzwingen die simultane (parasitäre) Aussteuerung eines zweiten Faktors, wodurch eine direkte geometrische Korrelation im ansonsten orthogonalen Raum entsteht.
+    \item \textbf{Fall III (Stellgrößen-Scatter):} Die Aktorik des Prüfstands erlaubt keine exakte Ansteuerung der Zielkoordinaten, sodass die Sternpunkte einer unbeabsichtigten stochastischen Streuung (Rauschen auf der Eingangsvariablen $\symsub{x}{idx_i}$) unterliegen.
+    \item \textbf{Fall IV (Früh-Ausfall / Zensierung):} Ein extremer Versuchspunkt (Sternpunkt) führt zu einem Frühausfall, einem irrelevanten Durchläufer oder kann aus Zeitgründen nicht abgeschlossen werden. Er entfällt somit vollständig und asymmetrisch aus der finalen Design-Matrix.
+\end{itemize}
+
+Während auch bei dieser isolierten Betrachtung die Auswirkungen auf die Trennschärfe im \ac{GLM} eine zentrale Rolle spielen, rückt hier zusätzlich die Verzerrung der Koeffizientenschätzungen (\textit{Bias}) als sekundäre Metrik in den Fokus.
+Inwiefern dieser Bias durch den Verlust der Orthogonalität und die damit verbundene Multikollinearität induziert wird, ist von entscheidender Bedeutung, da systematische Schätzfehler die Validität der gesamten Lebensdauerprognose kompromittieren.
+
+\subsubsection{Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}
+
+Die Ergebnisse der generalisierten Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) haben belegt, dass bei dominierenden physikalischen Effekten mit einem hohen Signal-Rausch-Verhältnis ($\sym{snr} \gg 1$) Sättigungseffekte auftreten: Die statistische Trennschärfe konvergiert in diesen Fällen weitgehend unabhängig von der Designstruktur gegen $100\,\%$.
+Unter solchen Idealbedingungen ist das Regressionsmodell derart robust, dass selbst signifikante geometrische Verzerrungen des Versuchsplans den Nachweis eines Effekts kaum gefährden.
+In der Praxis der Lebensdauerprognose stellen jedoch selten diese dominanten Einflussgrößen die primäre Herausforderung für den Versuchsplaner dar. Vielmehr sind es subtile Effekte und schwache Degradationserscheinungen, die sich nur knapp vom Systemrauschen abheben.
+
+Um den isolierten Einfluss der Orthogonalitäts-Abweichungen -- den spezifischen \textit{Design-Penalty} -- überhaupt quantifizierbar zu machen, muss die nachfolgende Simulation in einen kritischen Arbeitsbereich überführt werden.
+Hierfür wird das \textit{Ground-Truth}-Modell methodisch kalibriert, indem das Signal-Rausch-Verhältnis gezielt auf $\sym{snr} = 1$ herabgesetzt wird (mit Koeffizientenstärken von $\symsub{beta}{idx_i} = 1$ bei einer Standardabweichung von $\sym{sigma} = 1$).
+
+Diese Parametrisierung macht sich die mathematische Gesetzmäßigkeit zunutze, dass die Trennschärfe-Funktion -- basierend auf den Nichtzentralitätsparametern $\symsub{delta}{idx_nc}$ der zugrundeliegenden Prüfverteilungen -- einen S-förmigen (sigmoidalen) Verlauf aufweist.
+Während die Kurve am unteren Rand für ein $\sym{snr} \approx 0$ gegen das gewählte Signifikanzniveau $\sym{alpha}$ (Erwartungswert des Fehlers 1. Art) und am oberen Rand gegen $100\,\%$ strebt, besitzt sie in der Übergangszone ihre steilste Flanke.
+Die Kalibrierung auf $\sym{snr} = 1$ zwingt das ideale, orthogonale Referenz-Design exakt auf diesen Wendepunkt maximaler Sensitivität, in dem die Basis-Trennschärfe zwischen $70\,\%$ und $80\,\%$ liegt.
+Dieser künstliche Arbeitspunkt fungiert folglich als analytische Lupe: Er eliminiert jeglichen Sättigungseffekt und stellt sicher, dass die infolge von Orthogonalitätsverlust und Multikollinearität auftretende Varianzinflation (gekennzeichnet durch den \ac{VIF}) unmittelbar und hochauflösend als messbarer Trennschärfe-Verlust ($\Delta \sym{power}$) sichtbar wird.
+Nur durch diese Justierung lässt sich valide bewerten, ab welchem Grad eine Praxisrestriktion am Prüfstand die statistische Integrität der Parameteridentifikation real gefährdet.
+
+
+
+Das klassische Maß zur Quantifizierung solcher strukturellen Verzerrungen der Informationsmatrix ist der \textbf{$\sym{A2}$-Indikator} (vgl. Abschnitt~\ref{subsec:optimal}), welcher im Folgenden als Referenzgröße für den direkten Vergleich der generischen Störfälle herangezogen wird.
+
+Die Analyse dieser Praxis-Szenarien offenbart eine deutliche Differenzierung in der Reaktion des Modells:
+Während das globale Modell (Erwartungswert $\sym{beta}_{0}$) und die Haupteffekte nicht-manipulierter Faktoren bei nahezu allen Abweichungsarten (I bis IV) äußerst stabil bleiben, zeigen sich ausgeprägte Schwächen bei korrelierten Störgrößen[cite: 726, 747, 755].
+Insbesondere Fall II (Co-faktorielle Korrelation) forciert durch das Einbringen von Multikollinearität einen markanten Anstieg des $A_2$-Wertes und bewirkt in der Konsequenz signifikante Schätzfehler, speziell bei den gekoppelten quadratischen Termen sowie den Interaktionskoeffizienten[cite: 746, 748, 750, 756].
+Ebenso führt der vollständige, asymmetrische Entfall eines Sternpunkts (Fall IV) zu einer drastischen Reduktion der Detektionswahrscheinlichkeit des zugehörigen linearen Haupteffekts[cite: 733, 749].
+Ein reiner stochastischer Stellgrößen-Scatter (Fall III) verhält sich hingegen vergleichsweise gutmütig und beeinträchtigt die Schätzgüte nur marginal[cite: 732, 751, 757].
+
+Diese Ergebnisse bekräftigen die Argumentation für eine adaptive Versuchsplanung. Sie zeigen jedoch auf, dass nicht jede Art der Design-Reduktion gleichwertig ist[cite: 754].
+Während unpräzise Stellgrößen (Scatter) oder milde axiale Verschiebungen für das \ac{CCD} unkritisch sind, müssen systematische Korrelationen (Fall II) im Versuchsraum zwingend vermieden werden[cite: 756, 757], da sie das Risiko von Typ-II-Fehlern unverhältnismäßig steigern und die Modellierung der Lebensdauer verzerren.
+
+
 \subsection{Fazit: Statistische Effektivität und ökonomische Relevanz} \label{subsec:fazit_sensitivitaet}
 
 Aus den numerischen Analysen lässt sich ein zentrales Fazit für die Lebensdauererprobung ableiten: Das \ac{CCD} erweist sich als äußerst robust gegenüber moderaten geometrischen Modifikationen.

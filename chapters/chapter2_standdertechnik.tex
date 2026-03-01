@@ -635,7 +635,7 @@ Ist dann eine Extrapolation in Richtung a-priori unbekannter Beanspruchungsnivea
 Zuletzt kann selbst bei Extrapolation über die Grenzen des Versuchsraums hinaus auf Basis der modellierten Krümmungen eine fundierte Abschätzung der Systemantwort erfolgen \cite{Myers.2016,Montgomery.2020} und sogar mit Validierungsversuchen unter realen Einsatzbedingungen hinterlegt werden \cite{Dean.2017}.
 So wird eine effiziente und zugleich robuste Lebensdauererprobung ermöglicht, die den Anforderungen der \ac{DfR} gerecht wird und wirtschaftlich abbildbar bleibt \cite{RisbergEllekjr.1998}.
 
-\subsection{Optimale Versuchsplanung und Bewertungskriterien} \label{subsec:optimal}
+\subsection{Bewertung und Optimierung von Versuchsplanung} \label{subsec:optimal}
 Wird maximale Flexibilität jenseits starrer Standard-Designs wie dem voll-faktoriellen Setup oder dem \ac{CCD} verlangt, können \textbf{optimale Versuchspläne} einen leistungsfähigen, \textit{effizienten} Lösungsansatz für \textit{multivariate} Versuchsplanung bieten \cite{Kleppmann.2016,Montgomery.2020,Myers.2016}.
 Diese verfolgen das Ziel, die Versuchspunkte algorithmisch so im Versuchsraum zu positionieren, dass spezifische Qualitätskriterien - allen voran die Verteilung der (um die Versuchsanzahl $\sym{N}$ \textbf{skalierten}) \textbf{Prädiktionsvarianz}, engl. \textbf{\ac{SPV}},
 \begin{equation}
@@ -657,7 +657,7 @@ Zusammen mit der Varianz des Versuchsfehlers $\sym{sigma_sq}$ (vgl. Gleichung~\r
 Um sie über verschiedene Stellen im Parameterraum zu bewerten, konnten allen voran \textcite{Zahran.2003,GiovannittiJensen.1989} mit dem \textbf{\ac{VDG}} oder \textbf{\ac{FDS}-Plot} Visualisierungsstrategien entwickeln.
 Eine effiziente Versuchsplanung für multivariate Lebensdaueruntersuchungen muss sich neben pragmatischen Beweggründen maßgeblich an diesen Größen orientieren, weshalb im Folgenden eine Übersicht der gängigen Metriken und Qualitätsmerkmale gegeben wird.\
 
-
+\subsubsection{Orthogonalität, Ausgewogenheit und Multikollinearität}
 Der Einsatz optimaler Versuchspläne ist zunächst prädestiniert für Szenarien, in denen klassische Pläne an ihre Grenzen stoßen - sei es durch physikalische Randbedingungen welche bestimmte Faktorstufenkombinationen ausschließen, oder durch strikte Limitierungen der verfügbaren Versuchskapazität \cite{Goos.2011,Kleppmann.2020}.
 Derart klassische Versuchspläne wie der voll-faktorielle Versuchsplan sind aufgrund ihrer Versuchspunktanordnung stets \textbf{orthogonal} \cite{Rigdon.2022,Montgomery.2020}.
 Ein Versuchsplan wird als orthogonal bezeichnet, wenn keine Korrelation zwischen jeweils zwei Spalten der Versuchsplan-Matrix vorliegt - deren Skalarprodukte also jeweils null ergeben:
@@ -665,10 +665,18 @@ Ein Versuchsplan wird als orthogonal bezeichnet, wenn keine Korrelation zwischen
     \langle \symsub{x}{idx_i}, \symsub{x}{idx_j} \rangle = 0 \quad \text{für alle } \sym{idx_i} \neq \sym{idx_j}.
     \label{eq:skalar}
 \end{equation}
-Oder in anderen Worten: entspricht die Informationsmatrix $\sym{M}$ einer Diagonalmatrix, ist der Versuchsplan orthogonal \cite{Montgomery.2021,Rigdon.2022}.
+Oder in anderen Worten: entspricht die Informationsmatrix $\sym{M}$ einer reinen Diagonalmatrix, ist der Versuchsplan orthogonal \cite{Montgomery.2021,Rigdon.2022}.
 So können Effekte eindeutig identifiziert werden - die Vektoren der Faktorstufenkombinationen sind linear unabhängig und Effekte lassen sich unverzerrt schätzen.
 Dies stellt einen Versuchsplan also zunächst einmal qualitativ günstig dar.
 
+Um den Grad der Abweichung von diesem Idealzustand - etwa bei asymmetrisch ausgedünnten Designs oder durch praxisbedingte Modifikationen der Versuchsraumgeometrie - quantitativ bewerten zu können, hat sich in der Literatur der \textbf{$\sym{A2}$-Indikator} als globales Maß für Nicht-Orthogonalität etabliert \cite{Box.2007, Ahn.2015}.
+Er berechnet sich als Summe der quadrierten Elemente abseits der Hauptdiagonalen der normierten Informationsmatrix $\sym{M}$:
+\begin{equation} \label{eq:a2_indicator}
+    \sym{A2} = \sum_{\sym{idx_i}=1}^{\sym{p}} \sum_{\substack{\sym{idx_j}=1 \\ \sym{idx_j} \neq \sym{idx_i}}}^{\sym{p}} \sym{corr}_{\sym{idx_i}\sym{idx_j}}^2 \quad \text{mit} \quad \sym{corr}_{\sym{idx_i}\sym{idx_j}} = \frac{\sym{M}_{\sym{idx_i}\sym{idx_j}}}{\sqrt{\sym{M}_{\sym{idx_i}\sym{idx_i}}\sym{M}_{\sym{idx_j}\sym{idx_j}}}},
+\end{equation}
+wobei $\sym{corr}_{\sym{idx_i}\sym{idx_j}}$ den paarweisen Korrelationskoeffizienten zwischen der $\sym{idx_i}$-ten und $\sym{idx_j}$-ten Spalte der Versuchsplan-Matrix repräsentiert.
+Folglich gilt für einen streng orthogonalen Plan $\sym{A2} = 0$.
+Jeder Anstieg dieses Wertes signalisiert zunehmende Multikollinearität im Design, was das Risiko von Fehlschlüssen bei der Identifikation kausaler Haupteffekte und Interaktionen erhöht \cite{Wu.2021}.
 
 Zudem liegt \textbf{Ausgewogenheit} vor, sofern für einen jeweiligen Faktor alle anderen Faktoreinstellungen gleichmäßig aufgeteilt sind \cite{Siebertz.2017}.
 Damit wird Varianzhomogenität und Gleichbehandlung der Faktoren gewährleistet, sodass die Schätzung der Effekte unverzerrt erfolgt.
@@ -679,7 +687,7 @@ Mathematisch fundiert die Bewertung der Schätzgenauigkeit auf der Inversen der 
     \label{eq:dispersion}
 \end{equation}
 wobei wie gehabt $\sym{sigma_sq}$ die Varianz des Versuchsfehlers darstellt.
-Die Diagonalelemente der Matrix $(\sym{X}'\sym{X})^{-1}$ stehen hierbei in direktem Zusammenhang mit dem \textbf{\ac{VIF}} \cite{Siebertz.2017,Kleppmann.2020}.
+Während der $\sym{A2}$-Indikator die Gesamtmatrix bewertet, stehen die Diagonalelemente der Matrix $(\sym{X}'\sym{X})^{-1}$ in direktem Zusammenhang mit dem \textbf{\ac{VIF}} für die Evaluation einzelner Modellterme \cite{Siebertz.2017,Kleppmann.2020}.
 Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.
 Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Kleppmann.2020,Montgomery.2021}.
 
@@ -728,6 +736,7 @@ Sie setzt die Determinante der Varianz-Kovarianz-Matrix ohne die $\sym{idx_i}$-t
 \end{equation}
 Werte, die signifikant von $1$ abweichen (Grenzen $1 \pm 3\sym{p}/\sym{n}$), zeigen an, dass die Beobachtung die Konfidenzbereiche der Koeffizienten unverhältnismäßig beeinflusst \cite{Belsley.2004}.
 
+\subsubsection{Optimalitätskriterien}
 Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix $(\sym{X}'\sym{X})^{-1}$ den Informationsgehalt trotz Korrelationen zu maximieren.
 Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
 Eine Übersicht der einschlägigen \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten} - welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}.
@@ -785,16 +794,6 @@ Liegt der Fokus hingegen isoliert auf einer Teilmenge der Modellparameter - etwa
     \compressEq
     \\ \addlinespace
 
-    % \textbf{\textit{E}-Optimalität} &
-    % Minimierung des maximalen Eigenwerts $\sym{eigen_val}_{\max}$ der inversen Informationsmatrix \cite{Kleppmann.2020,Boyd.2004}. \newline
-    % \textit{Ziel: Worst-Case-Absicherung für den am schlechtesten geschätzten Parameter.}
-    % \compressEq
-    % \begin{equation} \label{eq:opt_E}
-    %     \sym{E_opt} = \min \left( \sym{eigen_val}_{\max}\left(\sym{M}^{-1}\right) \right)
-    % \end{equation}
-    % \compressEq
-    % \\ \addlinespace
-
     \textbf{\textit{G}-Optimalität} &
     Minimierung der maximalen skalierten Prädiktionsvarianz $\sym{pred_var}$ im relevanten Parameterraum \cite{Montgomery.2020,Myers.2016,Russell.2019}. \newline
     \textit{Ziel: Qualität der Vorhersage an der ungünstigsten Stelle sichern.}
@@ -814,17 +813,6 @@ Liegt der Fokus hingegen isoliert auf einer Teilmenge der Modellparameter - etwa
     \end{equation}
     \compressEq
     \\ \addlinespace
-
-
-    % \textbf{S-Optimalität}       &
-    % Minimierung der Varianz der geschätzten Steigung der Regressionsfunktion an einem spezifischen Punkt $\symsub{x_loc}{idx_0}$. \newline
-    % \textit{Ziel: Maximale Präzision des Grenzeffekts (Slope) an einer kritischen Stelle.}
-    % \compressEq
-    % \begin{equation} \label{eq:opt_S_Atkinson}
-    %     \sym{S_opt} = \min_{\xi} \left( \sym{s_grad}^T \sym{M}^{-1} \sym{s_grad} \right) \text{ mit } \sym{s_grad} = \frac{\partial \sym{f}(\symsub{x_loc}{idx_0})}{\partial \symsub{x_loc}{idx_0}}
-    % \end{equation}
-    % \compressEq
-    % \\ \addlinespace
 
     \textbf{\textit{V}-Optimalität} &
     Minimierung der durchschnittlichen Prädiktionsvarianz über ein diskretes Set von $\sym{N}$ Punkten \cite{Goos.2011,Montgomery.2020,Myers.2010}. \newline
