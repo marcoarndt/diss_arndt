@@ -29,6 +29,8 @@ Zur Bewertung der Prognosegüte wird abschließend eine Erweiterung bestehender 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Effektivität von Versuchsplänen mit Orthogonalitäts-Abweichungen} \label{sec:abweichungen}
 Generell können sich Orthogonalitäts-Abweichungen durch physikalische Restriktionen der technischen Versuchsausführung, die spezifische Performance und Funktionalität des Systems oder Produkts prinzipiell oder bei \ac{ALT} durch möglicherweise bewusste Manipulation des Versuchsraums zur Steigerung der Extrapolationsgüte sein.
 Insbesondere im Kontext der Lebensdauerprognose sind solche Eingriffe praxisrelevant und begründet: Die Verschiebung der Versuchspunkte in Richtung höherer Lastniveaus verkürzt die Prüfzeit und senkt die Kosten, während eine Verortung nahe dem Operationsbereich die Modellanpassung verbessert und die Extrapolationsunsicherheit reduziert.
@@ -44,9 +46,13 @@ Vielmehr erfolgt hier eine Quantifizierung der Auswirkungen auf die Schätzpräz
 Die Bewertung mittels Optimalitätskriterien wäre aus genannten Gründen ohnehin nicht zielführend, da im Umkehrschluss die Erfüllung der Kriterien im Planungsprozess erneut Unkenntnis über die tatsächlichen Auswirkungen auf die Schätzpräzision und Trennschärfe erzeugen würde.
 Dies hat zur Folge, dass zunächst eine numerische Simulation erforderlich ist, um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bevor überhaupt eine Bewertung der Design-Alternativen erfolgen kann.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Methodik zur simulativen Ermittlung von Auswirkungen durch Orthogonalitäts-Abweichungen} \label{subsec:simulationsmethodik}
 Um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bedarf es einer kontrollierten Untersuchungsumgebung, in der - im Gegensatz zu physischen Experimenten - die \textit{wahre} Natur des Systems bekannt ist.
-Durch den Vergleich von beiderseits Modellierungs- als auch Analyse-Ergebnissen mit einer vorab definierten Wahrheit (engl. \textit{Ground Truth} lassen sich \acp{KPI} wie die Schätzpräzision und allen voran die \ac{power} bestimmen.
+Durch den Vergleich von beiderseits Modellierungs- als auch Analyse-Ergebnissen mit einer vorab definierten Wahrheit (engl. \textit{Ground Truth}) lassen sich \acp{KPI} wie die Schätzpräzision und allen voran die \ac{power} bestimmen.
 Zu diesem Zweck wird für die Untersuchungen eine allgemeingültige Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert \cite{Arndt.2023,Arndt.2022c}.\\
 
 \textbf{Pseudo-physikalisches Simulationsmodell} \\
@@ -90,6 +96,9 @@ Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
     \item \textbf{Bestimmung der Trennschärfe $\sym{power}$:} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis der Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:power}).
 \end{enumerate}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
 Um zunächst die Robustheit des methodischen Ansatzes gegenüber den eingangs erwähnten Einflussgrößen zu bewerten, wird eine Sensitivitätsanalyse durchgeführt, welche methodische einem \textbf{\ac{DoE} on Experimental Design}-Ansatz folgt:
@@ -269,20 +278,23 @@ Hier ist der geometrische Abstand der Sternpunkte ($\symsub{xi_factor}{idx_fac_a
 Für alle anderen Terme gilt:
 Da die $\sym{power}$ durch die physikalischen Randbedingungen ($\symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_g}$) maßgeblich vorbestimmt ist, besteht Spielraum zur Anpassung der Faktoren $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$ in Bereiche, die aus Aspekten der Versuchszeit und des Budgets attraktiv sein können - ohne die Effektivität des Tests unverhältnismäßig stärker zu kompromittieren, als es das Messsystem ohnehin schon tut.
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Generische Auswirkungen relevanter Orthogonalitäts-Abweichungen} \label{subsec:ergebnisse_generic}
 
 Die Ergebnisse der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) haben gezeigt, dass das \ac{CCD} im Hinblick auf die statistische Trennschärfe ein robustes Verhalten gegenüber Modifikationen seiner Stützstellenanzahl aufweist, da im Regelfall das experimentelle System- und Messrauschen den limitierenden Faktor der Effektivität darstellt.
 Für die praktische \ac{EoL}-Versuchsplanung greift dieser generalisierte, kombinatorische Ansatz jedoch noch zu kurz.
 In der Realität am Prüfstand treten Abweichungen von der idealen Design-Matrix technisch bedingt nicht als geplante, systematische Ausdünnung auf, sondern als unvorhergesehene, asymmetrische und meist isolierte Einzelphänomene, ausgelöst durch physikalische oder normative Restriktionen.
 Darüber hinaus eröffnet das Bewusstsein über die geringen \textit{Design-Penalties} aus Abschnitt~\ref{subsec:ergebnisse_sensitivitaet} die Möglichkeit einer gezielten adaptiven Planung:
-Wenn Design-Modifikationen die Effektivität des Nachweises ohnehin nur verhältnismäßig moderat beeinflussen, ist zu prüfen, ob solche Manipulationen zur Kostenoptimierung oder Prüfzeitverkürzung nicht sogar bewusst induziert werden sollten.
+Wenn Design-Modifikationen die Effektivität des Nachweises ohnehin nur verhältnismäßig moderat beeinflussen, ist zu prüfen, ob solche Manipulationen zur Kostenoptimierung, Prüfzeitverkürzung oder zur Vermeidung irrelevanter Ausfallmechanismen nicht sogar bewusst (\textit{on purpose}) induziert werden sollten.
 
 Um diese singulären Praxisphänomene systematisch bewerten zu können, ist die kombinatorische Betrachtung des Meta-Designs aus dem vorherigen Abschnitt nicht mehr zielführend.
 Stattdessen werden basierend auf der Simulationsmethodik aus Abschnitt~\ref{subsec:simulationsmethodik} vier spezifische, voneinander isolierte Störszenarien definiert, welche typische Einzelrestriktionen in multivariaten Lebensdauerversuchen abbilden:
 \begin{itemize}
-    \item \textbf{Fall I (Axialer Shift):} Sternpunkte ($\symsub{n}{idx_S}\geq 1$) können aufgrund von Anlagenrestriktionen nicht auf dem nominellen Abstand $\symsub{alpha}{idx_D}$ gefahren werden oder würden einen durch \ac{ALT} induzierten Wechsel des Ausfallmechanismus provozieren. Eine dennoch stringente Umsetzung des Versuchsplans bedingt also, dass sie folglich in ihrer Distanz deterministisch vom Plan abweichen;
-    \item \textbf{Fall II (Co-faktorielle Korrelation):} Ein Sternpunkt ist nicht mehr achsenrein isoliert fahrbar. Spezifische, physikalische Systemfunktionalitäten erzwingen die simultane (parasitäre) Aussteuerung eines zweiten Faktors, wodurch eine direkte geometrische Korrelation im ansonsten orthogonalen Raum entsteht.
-    \item \textbf{Fall III (Stellgrößen-Scatter):} Die Aktorik des Prüfstands erlaubt keine exakte Ansteuerung der Zielkoordinaten, sodass die Sternpunkte einer unbeabsichtigten stochastischen Streuung (Rauschen auf der Eingangsvariablen $\symsub{x}{idx_i}$) unterliegen.
+    \item \textbf{Fall I (Axialer Shift):} Sternpunkte ($\symsub{n}{idx_S}\geq 1$) können aufgrund von Anlagenrestriktionen nicht auf dem nominellen Abstand $\symsub{alpha}{idx_D}$ gefahren werden oder würden einen durch \ac{ALT} induzierten Wechsel des Ausfallmechanismus provozieren. Zur methodischen Einordnung wird dieser Fall in drei Stufen simuliert: eine axiale Stauchung auf $80\,\%$, eine Streckung auf $120\,\%$ sowie der Rückzug auf die Nennlasten des rein faktoriellen Würfels (\textit{\ac{FC}}, $\symsub{alpha}{idx_D}=1$).
+    \item \textbf{Fall II (Co-faktorielle Korrelation):} Ein Sternpunkt ist nicht mehr achsenrein isoliert fahrbar. Spezifische, physikalische Systemfunktionalitäten erzwingen die simultane (parasitäre) Aussteuerung eines zweiten Faktors, wodurch eine direkte geometrische Korrelation im ansonsten orthogonalen Raum entsteht. Dieser Fall wird in einer leichten und einer starken Ausprägung untersucht.
+    \item \textbf{Fall III (Stellgrößen-Scatter):} Die Aktorik des Prüfstands erlaubt keine exakte Ansteuerung der Zielkoordinaten, sodass die Sternpunkte einer unbeabsichtigten stochastischen Streuung (uniformes Rauschen von $\pm 10\,\%$ auf der Eingangsvariablen $\symsub{x}{idx_i}$) unterliegen.
     \item \textbf{Fall IV (Früh-Ausfall / Zensierung):} Ein extremer Versuchspunkt (Sternpunkt) führt zu einem Frühausfall, einem irrelevanten Durchläufer oder kann aus Zeitgründen nicht abgeschlossen werden. Er entfällt somit vollständig und asymmetrisch aus der finalen Design-Matrix.
 \end{itemize}
 
@@ -291,32 +303,224 @@ Inwiefern dieser Bias durch den Verlust der Orthogonalität und die damit verbun
 
 \subsubsection{Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}
 
-Die Ergebnisse der generalisierten Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) haben belegt, dass bei dominierenden physikalischen Effekten mit einem hohen Signal-Rausch-Verhältnis ($\sym{snr} \gg 1$) Sättigungseffekte auftreten: Die statistische Trennschärfe konvergiert in diesen Fällen weitgehend unabhängig von der Designstruktur gegen $100\,\%$.
-Unter solchen Idealbedingungen ist das Regressionsmodell derart robust, dass selbst signifikante geometrische Verzerrungen des Versuchsplans den Nachweis eines Effekts kaum gefährden.
-In der Praxis der Lebensdauerprognose stellen jedoch selten diese dominanten Einflussgrößen die primäre Herausforderung für den Versuchsplaner dar. Vielmehr sind es subtile Effekte und schwache Degradationserscheinungen, die sich nur knapp vom Systemrauschen abheben.
+Die Ergebnisse der generalisierten Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) haben belegt, dass bei dominierenden physikalischen Effekten mit einem hohen Signal-Rausch-Verhältnis ($\sym{snr} \gg 1$) Sättigungseffekte auftreten:
+Die statistische Trennschärfe konvergiert in diesen Fällen weitgehend unabhängig von der Designstruktur gegen $\sym{power}=100\,\%$.
+Unter solchen Idealbedingungen ist das Regressionsmodell derart robust, dass selbst signifikante geometrische Verzerrungen des Versuchsplans den Nachweis eines Effekts $\sym{Eff}$ kaum gefährden.
+In der Praxis der Lebensdauerprognose stellen jedoch selten diese dominanten Einflussgrößen die primäre Herausforderung für den Versuchsplaner dar.
+Vielmehr sind es subtile Effekte und schwache Degradationserscheinungen, die sich nur knapp vom Systemrauschen abheben.
 
 Um den isolierten Einfluss der Orthogonalitäts-Abweichungen -- den spezifischen \textit{Design-Penalty} -- überhaupt quantifizierbar zu machen, muss die nachfolgende Simulation in einen kritischen Arbeitsbereich überführt werden.
 Hierfür wird das \textit{Ground-Truth}-Modell methodisch kalibriert, indem das Signal-Rausch-Verhältnis gezielt auf $\sym{snr} = 1$ herabgesetzt wird (mit Koeffizientenstärken von $\symsub{beta}{idx_i} = 1$ bei einer Standardabweichung von $\sym{sigma} = 1$).
 
 Diese Parametrisierung macht sich die mathematische Gesetzmäßigkeit zunutze, dass die Trennschärfe-Funktion -- basierend auf den Nichtzentralitätsparametern $\symsub{delta}{idx_nc}$ der zugrundeliegenden Prüfverteilungen -- einen S-förmigen (sigmoidalen) Verlauf aufweist.
-Während die Kurve am unteren Rand für ein $\sym{snr} \approx 0$ gegen das gewählte Signifikanzniveau $\sym{alpha}$ (Erwartungswert des Fehlers 1. Art) und am oberen Rand gegen $100\,\%$ strebt, besitzt sie in der Übergangszone ihre steilste Flanke.
+Während die Kurve am unteren Rand für ein $\sym{snr} \approx 0$ gegen das gewählte Signifikanzniveau $\sym{alpha}$ (Erwartungswert des Fehlers 1. Art) und am oberen Rand asymptotisch gegen $100\,\%$ strebt, besitzt sie in der Übergangszone ihre steilste Flanke.
 Die Kalibrierung auf $\sym{snr} = 1$ zwingt das ideale, orthogonale Referenz-Design exakt auf diesen Wendepunkt maximaler Sensitivität, in dem die Basis-Trennschärfe zwischen $70\,\%$ und $80\,\%$ liegt.
-Dieser künstliche Arbeitspunkt fungiert folglich als analytische Lupe: Er eliminiert jeglichen Sättigungseffekt und stellt sicher, dass die infolge von Orthogonalitätsverlust und Multikollinearität auftretende Varianzinflation (gekennzeichnet durch den \ac{VIF}) unmittelbar und hochauflösend als messbarer Trennschärfe-Verlust ($\Delta \sym{power}$) sichtbar wird.
+Dieser künstliche Arbeitspunkt fungiert folglich als analytische Lupe: Er eliminiert jeglichen Sättigungseffekt und stellt sicher, dass die infolge von Orthogonalitäts-Verlust und Multikollinearität auftretende Varianzinflation (gekennzeichnet durch den \ac{VIF}) unmittelbar und hochauflösend als messbarer Trennschärfe-Verlust ($\Delta \sym{power}$) sichtbar wird.
 Nur durch diese Justierung lässt sich valide bewerten, ab welchem Grad eine Praxisrestriktion am Prüfstand die statistische Integrität der Parameteridentifikation real gefährdet.
 
+\subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse}
+
+Die simulative Auswertung der definierten Praxis-Szenarien bei einem kritischen Signal-Rausch-Verhältnis ($\sym{snr} = 1$) offenbart eine hochgradig differenzierte Reaktion der klassischen Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}) und der algorithmischen Schätzgüte.
+Zur detaillierten Evaluation wird diese Schätzgüte nachfolgend nach dem systematischen Schätzfehler (Bias, Tabelle~\ref{tab:results_ortho_bias}), der Schätzvarianz (\ac{MSE}, Tabelle~\ref{tab:results_ortho_mse}) sowie dem resultierenden Trennschärfe-Verlust ($\Delta \sym{power}$, Tabelle~\ref{tab:results_ortho_power}) aufgeschlüsselt.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Matrix-Eigenschaften und Optimalitäten der simulierten Störszenarien. Der \ac{VIF} wird für alle Haupt- und quadratischen Terme dargestellt ($\hat{\sym{beta}}_0$ entfällt theoriekonform).}
+    \label{tab:results_ortho_metrics}
+    \renewcommand{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{3.5pt}
+    \footnotesize
+    \begin{tabular}{@{\extracolsep{\fill}}l c rrrrr rrrrr@{}}
+        \toprule
+        \textbf{Szenario (Störfall)}     & \textbf{$\sym{A2}$} & \multicolumn{5}{c}{\textbf{Effizienzen [\%]}} & \multicolumn{5}{c}{\textbf{VIF}}                                                                                                                                                                                 \\
+        \cmidrule(lr){3-7} \cmidrule(l){8-12}
+                                         &                     & $\sym{eff_A}$                                 & $\sym{eff_D}$                    & $\sym{eff_G}$ & $\sym{eff_I}$ & $\sym{eff_V}$ & $\hat{\sym{beta}}_{1}$ & $\hat{\sym{beta}}_{2}$ & $\hat{\sym{beta}}_{12}$ & $\hat{\sym{beta}}_{11}$ & $\hat{\sym{beta}}_{22}$ \\
+        \midrule
+        Referenz (Orthogonal)            & $0{,}000$           & $42{,}9$                                      & $50{,}0$                         & $17{,}6$      & $81{,}2$      & $180{,}0$     & $1{,}00$               & $1{,}00$               & $1{,}00$                & $1{,}00$                & $1{,}00$                \\
+        Fall I: Shift (-20\,\%)          & $0{,}037$           & $40{,}3$                                      & $47{,}0$                         & $15{,}9$      & $76{,}0$      & $181{,}7$     & $1{,}04$               & $1{,}00$               & $1{,}00$                & $1{,}04$                & $1{,}00$                \\
+        Fall I: Shift (+20\,\%)          & $0{,}038$           & $45{,}0$                                      & $53{,}6$                         & $17{,}7$      & $85{,}1$      & $181{,}0$     & $1{,}04$               & $1{,}00$               & $1{,}00$                & $1{,}04$                & $1{,}00$                \\
+        Fall I: Face-Centered            & $0{,}071$           & $39{,}1$                                      & $45{,}9$                         & $15{,}2$      & $73{,}5$      & $184{,}0$     & $1{,}07$               & $1{,}00$               & $1{,}00$                & $1{,}08$                & $1{,}01$                \\
+        Fall II: Korrelation (leicht)    & $0{,}004$           & $42{,}9$                                      & $50{,}0$                         & $17{,}0$      & $81{,}2$      & $180{,}0$     & $1{,}00$               & $1{,}00$               & $1{,}00$                & $1{,}00$                & $1{,}00$                \\
+        Fall II: Korrelation (stark)     & $0{,}352$           & $42{,}5$                                      & $51{,}3$                         & $13{,}9$      & $80{,}3$      & $183{,}5$     & $1{,}16$               & $1{,}07$               & $1{,}23$                & $1{,}18$                & $1{,}07$                \\
+        Fall III: Scatter ($\pm 10\,\%$) & $0{,}007$           & $43{,}8$                                      & $51{,}5$                         & $16{,}6$      & $83{,}0$      & $180{,}2$     & $1{,}00$               & $1{,}00$               & $1{,}00$                & $1{,}00$                & $1{,}00$                \\
+        Fall IV: Ausfall (NaN)           & $0{,}183$           & $37{,}6$                                      & $45{,}3$                         & $14{,}3$      & $69{,}0$      & $197{,}2$     & $1{,}22$               & $1{,}00$               & $1{,}00$                & $1{,}22$                & $1{,}05$                \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Zunächst belegt die Auswertung die fundamentale Erwartungstreue des angewandten OLS-Algorithmus:
+Trotz gravierender struktureller Abweichungen im Versuchsraum verharrt der systematische Schätzfehler für alle Szenarien und über alle Koeffizienten hinweg im marginalen Promillebereich nahe Null (Tabelle~\ref{tab:results_ortho_bias}).
+Eine geometrische Verzerrung im \ac{CCD} führt demnach nicht zu einer inhärent falschen Lebensdauerprognose. Die Schätzer konvergieren erwartungstreu und stabil gegen die wahren Parameter, was durch die Simulationspfade in Abbildung~\ref{fig:ma_abb5.1.4_betakonv} visuell bewiesen wird.
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{3cm}
+    \input{plots/ma_abb5.1.4_betakonv.tex}
+    \caption{Konvergenz der Schätzwerte ($\hat{\sym{beta}}_2$) über die Monte-Carlo-Iterationen. Der systematische Schätzfehler (Bias) tendiert bei allen untersuchten geometrischen Störszenarien asymptotisch gegen Null.}
+    \label{fig:ma_abb5.1.4_betakonv}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Simulationsergebnisse: Systematischer Schätzfehler (Bias) der einzelnen Koeffizienten bei $\sym{snr}=1$.}
+    \label{tab:results_ortho_bias}
+    \renewcommand{\arraystretch}{1.2}
+    \small
+    \begin{tabular}{@{\extracolsep{\fill}}l rrrrrr@{}}
+        \toprule
+        \textbf{Szenario (Störfall)}     & \textbf{$\hat{\sym{beta}}_{0}$} & \textbf{$\hat{\sym{beta}}_{1}$} & \textbf{$\hat{\sym{beta}}_{2}$} & \textbf{$\hat{\sym{beta}}_{12}$} & \textbf{$\hat{\sym{beta}}_{11}$} & \textbf{$\hat{\sym{beta}}_{22}$} \\
+        \midrule
+        Referenz (Orthogonal)            & $+0{,}011$                      & $-0{,}001$                      & $-0{,}007$                      & $+0{,}027$                       & $-0{,}010$                       & $-0{,}003$                       \\
+        Fall I: Shift (-20\,\%)          & $+0{,}009$                      & $-0{,}000$                      & $-0{,}011$                      & $+0{,}003$                       & $+0{,}001$                       & $-0{,}018$                       \\
+        Fall I: Shift (+20\,\%)          & $+0{,}003$                      & $-0{,}013$                      & $+0{,}006$                      & $+0{,}014$                       & $-0{,}005$                       & $+0{,}000$                       \\
+        Fall I: Face-Centered            & $+0{,}019$                      & $+0{,}015$                      & $-0{,}003$                      & $+0{,}015$                       & $-0{,}008$                       & $+0{,}008$                       \\
+        Fall II: Korrelation (leicht)    & $-0{,}018$                      & $+0{,}015$                      & $+0{,}010$                      & $+0{,}011$                       & $+0{,}002$                       & $+0{,}014$                       \\
+        Fall II: Korrelation (stark)     & $-0{,}020$                      & $+0{,}001$                      & $-0{,}032$                      & $-0{,}033$                       & $+0{,}042$                       & $-0{,}010$                       \\
+        Fall III: Scatter ($\pm 10\,\%$) & $+0{,}004$                      & $+0{,}011$                      & $+0{,}023$                      & $-0{,}009$                       & $-0{,}006$                       & $-0{,}005$                       \\
+        Fall IV: Ausfall (NaN)           & $-0{,}007$                      & $+0{,}017$                      & $+0{,}001$                      & $+0{,}033$                       & $+0{,}034$                       & $+0{,}004$                       \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Stattdessen entlädt sich der durch Asymmetrien und Korrelationen erzeugte Fehler theoriekonform fast vollständig in der Schätzvarianz (\ac{MSE}, vgl. Tabelle~\ref{tab:results_ortho_mse}).
+Dies spiegelt sich prägnant in den stark ansteigenden Werten der absoluten \ac{MSE}-Auswertung in Abbildung~\ref{fig:ma_abb5.1.4_msedev} wider.
+In der Praxis der Zuverlässigkeitstechnik führt diese Varianzinflation zu signifikant aufgeweiteten Vertrauensbereichen der Punktschätzungen, was der unmittelbare Abgleich der Fehlerbalken (Konfidenzintervalle) in Abbildung~\ref{fig:ma_abb5.1.4_betadev} eindrucksvoll verdeutlicht.
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{3cm}
+    \input{plots/ma_abb5.1.4_msedev.tex}
+    \caption{Güte der Schätzer (Mean Squared Error). Geometrische Verzerrungen entladen sich primär in der Schätzvarianz, insbesondere beim Wegfall von Freiheitsgraden durch asymmetrische Ausfälle (Fall IV).}
+    \label{fig:ma_abb5.1.4_msedev}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{3cm}
+    \input{plots/ma_abb5.1.4_betadev.tex}
+    \caption{Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle. Die durch Nicht-Orthogonalität induzierte Varianzinflation (\ac{VIF}) führt zu stark aufgeweiteten Vertrauensbereichen.}
+    \label{fig:ma_abb5.1.4_betadev}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Simulationsergebnisse: Schätzvarianz (\ac{MSE}) der einzelnen Koeffizienten bei $\sym{snr}=1$.}
+    \label{tab:results_ortho_mse}
+    \renewcommand{\arraystretch}{1.2}
+    \small
+    \begin{tabular}{@{\extracolsep{\fill}}l rrrrrr@{}}
+        \toprule
+        \textbf{Szenario (Störfall)}     & \textbf{$\hat{\sym{beta}}_{0}$} & \textbf{$\hat{\sym{beta}}_{1}$} & \textbf{$\hat{\sym{beta}}_{2}$} & \textbf{$\hat{\sym{beta}}_{12}$} & \textbf{$\hat{\sym{beta}}_{11}$} & \textbf{$\hat{\sym{beta}}_{22}$} \\
+        \midrule
+        Referenz (Orthogonal)            & $3{,}09$                        & $3{,}10$                        & $3{,}17$                        & $6{,}17$                         & $3{,}13$                         & $3{,}11$                         \\
+        Fall I: Shift (-20\,\%)          & $3{,}05$                        & $3{,}57$                        & $3{,}15$                        & $6{,}20$                         & $4{,}15$                         & $3{,}17$                         \\
+        Fall I: Shift (+20\,\%)          & $3{,}07$                        & $2{,}94$                        & $3{,}14$                        & $6{,}37$                         & $2{,}21$                         & $3{,}06$                         \\
+        Fall I: Face-Centered            & $3{,}06$                        & $3{,}82$                        & $3{,}10$                        & $6{,}30$                         & $4{,}61$                         & $3{,}21$                         \\
+        Fall II: Korrelation (leicht)    & $3{,}06$                        & $3{,}17$                        & $3{,}07$                        & $6{,}22$                         & $3{,}13$                         & $3{,}12$                         \\
+        Fall II: Korrelation (stark)     & $3{,}10$                        & $3{,}59$                        & $3{,}01$                        & $5{,}21$                         & $3{,}83$                         & $3{,}44$                         \\
+        Fall III: Scatter ($\pm 10\,\%$) & $3{,}04$                        & $3{,}18$                        & $2{,}98$                        & $6{,}20$                         & $3{,}27$                         & $2{,}62$                         \\
+        Fall IV: Ausfall (NaN)           & $3{,}18$                        & $5{,}29$                        & $3{,}07$                        & $6{,}17$                         & $5{,}46$                         & $3{,}47$                         \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Die explorative Analyse der Resultate korreliert diese Varianzeffekte direkt mit den klassischen Design-Metriken (Abbildung~\ref{fig:ma_abb5.1.4_korrelation}).
+Auffällig ist hierbei, dass der rein topologische $\sym{A2}$-Indikator kaum linear mit dem tatsächlichen Trennschärfeverlust korreliert (Pearson-Korrelation $\sym{corr} \approx 0{,}38$). Auch der \ac{VIF} zeigt mit $\sym{corr} \approx 0{,}69$ nur eine begrenzte Aussagekraft für die Power.
+Hingegen fungiert die simulierte Schätzvarianz (\ac{MSE}) als nahezu perfekter, inverser Prädiktor für den Power-Erhalt ($\sym{corr} \approx 0{,}99$ zwischen \ac{MSE} und $\Delta \sym{power}$ für den Term $\hat{\sym{beta}}_{11}$).
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.6\textwidth}
+    \setlength\figureheight{3cm}
+    \input{plots/ma_abb5.1.4_korrelation.tex}
+    \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust.}
+    \label{fig:ma_abb5.1.4_korrelation}
+\end{figure}
+
+Gleichzeitig erweist sich im Bereich der theoretischen Optimalitäten die $\sym{I_opt}$ ($\sym{eff_I}$) als verlässlichster Indikator ($\sym{corr} \approx -0{,}97$).
+Volumengetriebene Kriterien wie $\sym{eff_I}$ und $\sym{eff_D}$ skalieren proportional mit der absoluten Ausdehnung des Versuchsraums. So erzielt der nach außen gestreckte Shift (Fall I, $+20\,\%$) Bestwerte in der integrierten Prädiktionsvarianz ($\sym{eff_I} = 85{,}1\,\%$), da die Hebelwirkung der Stützpunkte im Raum steigt.
+Die \textit{G}-Optimalität ($\sym{eff_G}$), welche die Vorhersagegüte am ungünstigsten Ort (\textit{Worst-Case}) absichert, erweist sich hingegen als extrem sensitiv gegenüber geometrischen Asymmetrien.
+In Fall II (starke Korrelation) fällt sie drastisch von $17{,}6\,\%$ auf $13{,}9\,\%$ ab, obwohl das globale Design-Volumen ($\sym{eff_D}$) scheinbar stabil bleibt.
+Dies illustriert den statistischen blinden Fleck multikollinearer Designs (sichtbar am höchsten $\sym{A2}$-Indikator von $0{,}352$):
+Durch parasitäre Abhängigkeiten entstehen schlecht abgetastete Lücken im Parameterraum, welche die Fehlervarianz in diesen Ecken lokal ansteigen lassen.
+
+Der resultierende \textbf{Einfluss auf die Trennschärfe} -- in Tabelle~\ref{tab:results_ortho_power} quantifiziert und in Abbildung~\ref{fig:ma_abb5.1.4_powerdev} detailliert veranschaulicht -- verhält sich in der Konsequenz wie folgt:
+
+\begin{table}[htbp]
+    \centering
+    \caption{Simulationsergebnisse: Durchschnittlicher Trennschärfe-Verlust ($\Delta \sym{power}$) der Koeffizienten bei $\sym{snr}=1$. Ein negatives Vorzeichen indiziert einen Verlust, ein positives Vorzeichen einen Gewinn an Trennschärfe.}
+    \label{tab:results_ortho_power}
+    \renewcommand{\arraystretch}{1.2}
+    \small
+    \begin{tabular}{@{\extracolsep{\fill}}l rrrrrr@{}}
+        \toprule
+        \textbf{Szenario (Störfall)}     & \textbf{$\sym{power}_{\sym{beta}_{0}}$} & \textbf{$\sym{power}_{\sym{beta}_{1}}$} & \textbf{$\sym{power}_{\sym{beta}_{2}}$} & \textbf{$\sym{power}_{\sym{beta}_{12}}$} & \textbf{$\sym{power}_{\sym{beta}_{11}}$} & \textbf{$\sym{power}_{\sym{beta}_{22}}$} \\
+        \midrule
+        Referenz (Orthogonal)            & $-$                                     & $-$                                     & $-$                                     & $-$                                      & $-$                                      & $-$                                      \\
+        Fall I: Shift (-20\,\%)          & $\pm 0{,}0\,\%$                         & $-1{,}2\,\%$                            & $-0{,}0\,\%$                            & $+0{,}0\,\%$                             & $-2{,}8\,\%$                             & $+0{,}0\,\%$                             \\
+        Fall I: Shift (+20\,\%)          & $\pm 0{,}0\,\%$                         & $+0{,}5\,\%$                            & $\pm 0{,}0\,\%$                         & $+0{,}1\,\%$                             & $+2{,}4\,\%$                             & $-0{,}1\,\%$                             \\
+        Fall I: Face-Centered            & $\pm 0{,}0\,\%$                         & $-2{,}1\,\%$                            & $-0{,}0\,\%$                            & $+0{,}1\,\%$                             & $-3{,}6\,\%$                             & $-0{,}0\,\%$                             \\
+        Fall II: Korrelation (leicht)    & $\pm 0{,}0\,\%$                         & $-0{,}0\,\%$                            & $+0{,}0\,\%$                            & $\pm 0{,}0\,\%$                          & $-0{,}0\,\%$                             & $-0{,}0\,\%$                             \\
+        Fall II: Korrelation (stark)     & $\pm 0{,}0\,\%$                         & $-1{,}4\,\%$                            & $+0{,}2\,\%$                            & $+2{,}7\,\%$                             & $-1{,}4\,\%$                             & $-0{,}8\,\%$                             \\
+        Fall III: Scatter ($\pm 10\,\%$) & $\pm 0{,}0\,\%$                         & $-0{,}3\,\%$                            & $+0{,}6\,\%$                            & $+0{,}1\,\%$                             & $-0{,}6\,\%$                             & $+1{,}8\,\%$                             \\
+        Fall IV: Ausfall (NaN)           & $\pm 0{,}0\,\%$                         & $-6{,}0\,\%$                            & $-0{,}2\,\%$                            & $-0{,}3\,\%$                             & $-6{,}9\,\%$                             & $-1{,}0\,\%$                             \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{3cm}
+    \input{plots/ma_abb5.1.4_powerdev.tex}
+    \caption{Statistische Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien. Trotz kritischer Parameterkonstellation ($\sym{snr}=1$) bleiben die Power-Verluste bei Erhalt der Symmetrie gering.}
+    \label{fig:ma_abb5.1.4_powerdev}
+\end{figure}
+
+\begin{enumerate}
+    \item \textbf{Gutmütige Restriktionen (Scatter und Face-Centered):} Ein stochastischer Stellgrößen-Scatter (Fall III) hat mit einem $\sym{A2} = 0{,}007$ kaum messbare Auswirkungen. Der Trennschärfeverlust liegt bei $\le 1\,\%$. Selbst das bewusste Zurückziehen der Sternpunkte auf das strikte physikalische Randniveau der Faktoren (\textit{Face-Centered}, Fall I) generiert lediglich einen vertretbaren Detektionsverlust von $3{,}6\,\%$ in den quadratischen Termen.
+    \item \textbf{Kritische Restriktionen (Ausfall):} Der vollständige Entfall eines Randpunktes (Fall IV) schlägt sich im Kollaps nahezu aller globalen Optimalitäten nieder (z.B. $\sym{eff_I}$ fällt auf $69{,}0\,\%$). Der Verlust von Freiheitsgraden an den Rändern treibt das \ac{VIF} auf über $1{,}2$ und den \ac{MSE} auf massive $5{,}46$ - ein Anstieg der Schätzvarianz um über $70\,\%$. Dies resultiert im stärksten Einbruch der Trennschärfe von fast $7\,\%$.
+\end{enumerate}
+
+Zur umfassenden statistischen Dokumentation ist das iterative Verhalten der Test-Power (Konvergenz) bei zunehmender Stichprobengröße in Abbildung~\ref{fig:ma_abb5.1.4_powerkonv} veranschaulicht. Flankierend sind die resultierenden Wahrscheinlichkeitsdichten der Signifikanztests (p-Werte) für alle Fälle in Abbildung~\ref{fig:ma_abb5.1.4_phisto} grafisch aufbereitet. Weiterführende Sensitivitäts- und Strukturmatrizen können bei Bedarf im Anhang~B eingesehen werden.
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{3cm}
+    \input{plots/ma_abb5.1.4_powerkonv.tex}
+    \caption{Konvergenz der statistischen Trennschärfe für $\sym{beta}_2$ über die Simulationsläufe.}
+    \label{fig:ma_abb5.1.4_powerkonv}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{3cm}
+    \input{plots/ma_abb5.1.4_phisto.tex}
+    \caption{Verteilung der p-Werte für die Signifikanztests der Modellparameter. Die relative Häufigkeit der Werte unterhalb von $\sym{alpha}=0{,}05$ entspricht der berechneten Power.}
+    \label{fig:ma_abb5.1.4_phisto}
+\end{figure}
 
 
-Das klassische Maß zur Quantifizierung solcher strukturellen Verzerrungen der Informationsmatrix ist der \textbf{$\sym{A2}$-Indikator} (vgl. Abschnitt~\ref{subsec:optimal}), welcher im Folgenden als Referenzgröße für den direkten Vergleich der generischen Störfälle herangezogen wird.
+\subsubsection{Synthese: Adaptive Planung und „On Purpose“-Modifikationen}
 
-Die Analyse dieser Praxis-Szenarien offenbart eine deutliche Differenzierung in der Reaktion des Modells:
-Während das globale Modell (Erwartungswert $\sym{beta}_{0}$) und die Haupteffekte nicht-manipulierter Faktoren bei nahezu allen Abweichungsarten (I bis IV) äußerst stabil bleiben, zeigen sich ausgeprägte Schwächen bei korrelierten Störgrößen[cite: 726, 747, 755].
-Insbesondere Fall II (Co-faktorielle Korrelation) forciert durch das Einbringen von Multikollinearität einen markanten Anstieg des $A_2$-Wertes und bewirkt in der Konsequenz signifikante Schätzfehler, speziell bei den gekoppelten quadratischen Termen sowie den Interaktionskoeffizienten[cite: 746, 748, 750, 756].
-Ebenso führt der vollständige, asymmetrische Entfall eines Sternpunkts (Fall IV) zu einer drastischen Reduktion der Detektionswahrscheinlichkeit des zugehörigen linearen Haupteffekts[cite: 733, 749].
-Ein reiner stochastischer Stellgrößen-Scatter (Fall III) verhält sich hingegen vergleichsweise gutmütig und beeinträchtigt die Schätzgüte nur marginal[cite: 732, 751, 757].
+Aus diesen Resultaten lässt sich für die methodische Auslegung von \ac{EoL} Lebensdauerprognosen eine klare handlungsleitende Synthese ableiten.
+Das \ac{CCD} reagiert auf symmetrische, aber suboptimale Hebelweiten (Fall I) sowie auf verrauschte Stellgrößen (Fall III) extrem verzeihend.
+Dieser Umstand legitimiert eine \textbf{gezielte, adaptive Versuchsplanung (\textit{on purpose})}:
+Anstatt bei Prüfständen mit stark eingeschränkten physikalischen Stellbereichen, extremen Kostendrücken oder unpräziser Aktorik kompromisslos auf starren geometrischen Lehrbuchvorgaben (wie der strengen Rotierbarkeit mit exaktem $\symsub{alpha}{idx_D}$) zu beharren, kann und sollte das Design bewusst in den technisch sicheren, \textit{Face-Centered}-Bereich komprimiert werden.
+Die Studie belegt unmissverständlich, dass der resultierende \textit{Design-Penalty} in der statistischen Trennschärfe im niedrigen einstelligen Prozentbereich verbleibt.
+Umgekehrt ermöglicht eine bewusste axiale Streckung sogar eine künstliche Steigerung der Power, sofern das Testobjekt diese Lasten toleriert.
 
-Diese Ergebnisse bekräftigen die Argumentation für eine adaptive Versuchsplanung. Sie zeigen jedoch auf, dass nicht jede Art der Design-Reduktion gleichwertig ist[cite: 754].
-Während unpräzise Stellgrößen (Scatter) oder milde axiale Verschiebungen für das \ac{CCD} unkritisch sind, müssen systematische Korrelationen (Fall II) im Versuchsraum zwingend vermieden werden[cite: 756, 757], da sie das Risiko von Typ-II-Fehlern unverhältnismäßig steigern und die Modellierung der Lebensdauer verzerren.
+Gleichzeitig liefert der asymmetrische Ausfall (Fall IV) die harte methodische Grenze für diese Flexibilität: Der ungeplante Entfall von Extrempunkten zerstört die Stabilität der Informationsmatrix signifikant.
+Daraus folgt die ökonomisch-strategische Konsequenz für die Testplanung: \textit{Modifikationen der Design-Geometrie sind methodisch vertretbar und hochgradig ratsam, wenn sie perspektivisch Prüfzeit und Kosten sparen.
+    Der asymmetrische, ersatzlose Ausfall von Randstützstellen - sei es durch Fehlplanung oder zu hohe Belastungen (Zensierung) - muss operativ jedoch unter allen Umständen verhindert oder durch sofortige Augmentierung kompensiert werden.}
+Dieser Paradigmenwechsel vom starren Lehrbuch-Design hin zu einer kosteneffizienten, risikoadaptierten Versuchsraumgestaltung bildet das notwendige Fundament für das nachfolgend vorgestellte ökonomische Bewertungsmodell.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Fazit: Statistische Effektivität und ökonomische Relevanz} \label{subsec:fazit_sensitivitaet}
 

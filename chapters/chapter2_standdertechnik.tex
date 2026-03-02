@@ -966,7 +966,7 @@ Die Power folglich ist definiert als das Komplement dieses Fehlers ($1 - \symsub
 In idealisierten, orthogonalen Standard-Versuchsplänen unter der Annahme normalverteilter Residuen $\sym{epsilon} \sim \mathcal{N}(0, \sym{sigma}^2)$ lässt sich die Trennschärfe für klassische \ac{OLS}-Regressionsmodelle exakt analytisch bestimmen.
 Die \sym{power} für den Signifikanztest eines einzelnen Regressionskoeffizienten $\symsub{beta}{idx_j}$ berechnet sich aus der Wahrscheinlichkeit, dass die Teststatistik den kritischen Wert der zentralen Prüfverteilung überschreitet.
 Unter der Gültigkeit der Alternativhypothese $\sym{H1}$ folgt die Teststatistik jedoch einer verschobenen, \textit{nicht-zentralen} Verteilung (z.B. der nicht-zentralen \sym{t}-Verteilung).
-Der Grad dieser Verschiebung wird durch den sogenannten \textbf{Nichtzentralitätsparameter} $\symsub{delta}{idx_nc}$ quantifiziert \cite{Montgomery.2020,Kutner.2005}.
+Der Grad dieser Verschiebung wird durch den sogenannten \textbf{Nichtzentralitätsparameter} $\sym{delta_nc}$ quantifiziert \cite{Montgomery.2020,Kutner.2005}.
 Für die Überprüfung eines individuellen Modellparameters ist dieser definiert als:
 \begin{equation} \label{eq:non_centrality}
     \symsub{delta}{idx_nc} = \frac{|\symsub{beta}{idx_j}|}{\sym{sigma} \sqrt{\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}}}
@@ -979,7 +979,7 @@ In einem vollständig orthogonalen Versuchsplan ist die Informationsmatrix $\sym
 Die Schätzer der Koeffizienten sind somit linear unabhängig und das Diagonalelement der Inversen minimiert sich.
 Sobald jedoch geometrische Verzerrungen auftreten und die Orthogonalität verloren geht, entstehen signifikante Kovarianzen (Werte abseits der Hauptdiagonalen in $\sym{M}$).
 Bei der Invertierung der Matrix führt dies zu einer Inflation der Varianzen, wodurch der Wert $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$ anwächst.
-Dies vergrößert den Nenner in Gleichung~\ref{eq:non_centrality}, reduziert den Nichtzentralitätsparameter $\symsub{delta}{idx_nc}$ und mindert somit unmittelbar die analytische Trennschärfe.
+Dies vergrößert den Nenner in Gleichung~\ref{eq:non_centrality}, reduziert den Nichtzentralitätsparameter $\sym{delta_nc}$ und mindert somit unmittelbar die analytische Trennschärfe.
 
 Solche analytischen Berechnungen, die auf der exakten Bestimmung von $\symsub{delta}{idx_nc}$ beruhen, verkomplizieren sich erheblich, sobald asymmetrische Design-Modifikationen und Mehrfach-Korrelationen greifen.
 Im Kontext der Lebensdauerdatenanalyse, bei der zudem nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten folglich ohnehin nicht mehr über klassische \textbf{t-Tests} ableiten.

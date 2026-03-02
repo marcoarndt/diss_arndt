@@ -22,6 +22,13 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Methodischer Ablauf des heuristischen Screenings als Vorstufe zum L-DoE}}{69}{figure.caption.62}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Prozedurale Volumenreduktion des Parameterraums im heuristischen Screening für \cgls {L-DoE} (adaptiert nach \blx@tocontentsinit {0}\textcite {Arndt.2023c})}}{71}{figure.caption.63}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Konvergenz der Schätzwerte ($\hat {\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath {\ensuremath {\beta }}}}}_2$) über die Monte-Carlo-Iterationen. Der systematische Schätzfehler (Bias) tendiert bei allen untersuchten geometrischen Störszenarien asymptotisch gegen Null.}}{88}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Güte der Schätzer (Mean Squared Error). Geometrische Verzerrungen entladen sich primär in der Schätzvarianz, insbesondere beim Wegfall von Freiheitsgraden durch asymmetrische Ausfälle (Fall IV).}}{89}{figure.caption.75}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle. Die durch Nicht-Orthogonalität induzierte Varianzinflation (\cgls {VIF}) führt zu stark aufgeweiteten Vertrauensbereichen.}}{90}{figure.caption.76}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust.}}{91}{figure.caption.78}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Statistische Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien. Trotz kritischer Parameterkonstellation ($\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1$) bleiben die Power-Verluste bei Erhalt der Symmetrie gering.}}{92}{figure.caption.80}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Konvergenz der statistischen Trennschärfe für $\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath {\ensuremath {\beta }}}}_2$ über die Simulationsläufe.}}{94}{figure.caption.81}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Verteilung der p-Werte für die Signifikanztests der Modellparameter. Die relative Häufigkeit der Werte unterhalb von $\glsadd {alpha}\glslink {alpha}{\textcolor {blue}{\ensuremath {\ensuremath {\alpha }}}}=0{,}05$ entspricht der berechneten Power.}}{95}{figure.caption.82}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
