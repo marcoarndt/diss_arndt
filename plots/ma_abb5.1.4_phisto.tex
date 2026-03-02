@@ -5,8 +5,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.772\textwidth,
-height=0.533\textwidth,
+width=0.8\textwidth,
+height=0.225\textwidth,
 at={(0\textwidth,0\textwidth)},
 scale only axis,
 xmin=0.0000,
@@ -65,7 +65,7 @@ legend style={legend cell align=left, align=left}
 0.9744	16.0000\\
 1.0000	16.0000\\
 };
-\addlegendentry{Ideal/Ref}
+\addlegendentry{Default CCD}
 
 \addplot[const plot, color=darkgray, dashed, line width=1.5pt] table[row sep=crcr] {%
 0.0000	8449.0000\\
@@ -109,7 +109,7 @@ legend style={legend cell align=left, align=left}
 0.9744	17.0000\\
 1.0000	17.0000\\
 };
-\addlegendentry{Fall I (-)}
+\addlegendentry{Fall I ($-20\%$)}
 
 \addplot[const plot, color=white!35!black, dotted, line width=1.5pt] table[row sep=crcr] {%
 0.0000	8518.0000\\
@@ -153,7 +153,7 @@ legend style={legend cell align=left, align=left}
 0.9744	13.0000\\
 1.0000	13.0000\\
 };
-\addlegendentry{Fall I (+)}
+\addlegendentry{Fall I ($+20\%$)}
 
 \addplot[const plot, color=white!45!black, dashdotted, line width=1.5pt] table[row sep=crcr] {%
 0.0000	8507.0000\\
@@ -241,7 +241,7 @@ legend style={legend cell align=left, align=left}
 0.9744	28.0000\\
 1.0000	28.0000\\
 };
-\addlegendentry{Fall II (-)}
+\addlegendentry{Fall II (leicht)}
 
 \addplot[const plot, color=white!65!black, dashed, line width=1.5pt] table[row sep=crcr] {%
 0.0000	8539.0000\\
@@ -285,7 +285,7 @@ legend style={legend cell align=left, align=left}
 0.9744	12.0000\\
 1.0000	12.0000\\
 };
-\addlegendentry{Fall II (+)}
+\addlegendentry{Fall II (stark)}
 
 \addplot[const plot, color=lightgray, dotted, line width=1.5pt] table[row sep=crcr] {%
 0.0000	8597.0000\\

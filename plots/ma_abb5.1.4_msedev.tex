@@ -5,8 +5,8 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.545\textwidth,
-height=0.533\textwidth,
+width=0.583\textwidth,
+height=0.25\textwidth,
 at={(0\textwidth,0\textwidth)},
 scale only axis,
 bar shift auto,
@@ -15,9 +15,9 @@ xmax=6.4700,
 xtick={1.0000,2.0000,3.0000,4.0000,5.0000,6.0000},
 xticklabels={{$\beta_0$},{$\beta_1$},{$\beta_2$},{$\beta_{12}$},{$\beta_{11}$},{$\beta_{22}$}},
 ymin=0.0000,
-ymax=7.0000,
+ymax=6.3668,
 ylabel style={font=\color{mycolor1}},
-ylabel={Mean Squared Error (MSE)},
+ylabel={MSE},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
@@ -36,7 +36,7 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 0.5300	0.0000\\
 6.4700	0.0000\\
 };
-\addlegendentry{Ideal/Ref}
+\addlegendentry{Default CCD}
 
 \addplot[ybar, bar width=0.08, fill=darkgray, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.0000	3.0519\\
@@ -50,7 +50,7 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 0.5300	0.0000\\
 6.4700	0.0000\\
 };
-\addlegendentry{Fall I (-)}
+\addlegendentry{Fall I ($-20\%$)}
 
 \addplot[ybar, bar width=0.08, fill=white!35!black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.0000	3.0668\\
@@ -64,7 +64,7 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 0.5300	0.0000\\
 6.4700	0.0000\\
 };
-\addlegendentry{Fall I (+)}
+\addlegendentry{Fall I ($+20\%$)}
 
 \addplot[ybar, bar width=0.08, fill=white!45!black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.0000	3.0567\\
@@ -92,7 +92,7 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 0.5300	0.0000\\
 6.4700	0.0000\\
 };
-\addlegendentry{Fall II (-)}
+\addlegendentry{Fall II (leicht)}
 
 \addplot[ybar, bar width=0.08, fill=white!65!black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.0000	3.0994\\
@@ -106,7 +106,7 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 0.5300	0.0000\\
 6.4700	0.0000\\
 };
-\addlegendentry{Fall II (+)}
+\addlegendentry{Fall II (stark)}
 
 \addplot[ybar, bar width=0.08, fill=lightgray, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.0000	3.0379\\

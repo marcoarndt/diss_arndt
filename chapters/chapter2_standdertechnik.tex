@@ -434,7 +434,7 @@ Der voll-faktorielle Versuchsplan bildet somit den Standard-Versuchsplan im \ac{
 Versuche.
 Dieser Stichprobenumfang stellt sicher, dass das resultierende Gleichungssystem \textbf{gesättigt} ist: Mit $\sym{n}$ Versuchen lassen sich $\sym{n}-1$ Effekte für Hauptfaktoren und Wechselwirkungen eindeutig bestimmen.
 Von entscheidender Bedeutung für die Aussagekraft des Versuchsplans ist die Wahl der Faktorstufen (vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand}).
-Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, sodass signifikante Effekte sicher detektiert werden („\textbf{Signal-to-Noise}“), wobei gleichzeitig zu geringe Abstände (Rauschen) sowie zu große Intervalle (Gefahr unerkannter Nichtlinearitäten) zu vermeiden sind - vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand} sowie \textcite{Wu.2021,Siebertz.2017,Kleppmann.2020}.
+Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, sodass signifikante Effekte sicher detektiert werden - vgl. \textbf{\ac{SNR}} \cite{Montgomery.2021} - wobei gleichzeitig zu geringe Abstände (Rauschen) sowie zu große Intervalle (Gefahr unerkannter Nichtlinearitäten) zu vermeiden sind, siehe auch Abbildung~\ref{fig:ma_abb2.06_effektabstand} sowie \textcite{Wu.2021,Siebertz.2017,Kleppmann.2020}.
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.9\textwidth}
@@ -940,7 +940,7 @@ Unter Einhaltung dieser harten Nebenbedingungen wird anschließend jene Design-V
 
 \subsubsection{Signifikanz und Trennschärfe}
 Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. $\sym{power}$) verfügt.
-Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens (vergleiche \textbf{\sym{t}-Statistik}, \textbf{Signal-to-Noise Ratio}, \textbf{Signifikanztests} nach \textcite{Kleppmann.2020,Montgomery.2020,Goos.2011}) korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2017,Kleppmann.2020}.
+Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens (vergleiche \textbf{\sym{t}-Statistik}, \textbf{\ac{SNR}}, \textbf{Signifikanztests} nach \textcite{Kleppmann.2020,Montgomery.2020,Goos.2011}) korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2017,Kleppmann.2020}.
 Insofern ist ein Effekt in praktischem Umfeld natürlich problemabhängig (Streuungscharakteristik der Lebensdauer, realisierbare Stichprobengröße, etc.) und meist von Bedeutung für $\sym{Eff} \geq 2\sym{sigma}$, wobei Trennschärfewerte $\geq 80\,\%$ als befriedigend gelten \cite{Rigdon.2022,Montgomery.2020}.
 Insbesondere bei reduzierten Versuchsplänen und unter dem Einfluss stochastischer Lebensdauerstreuung ist die Power-Analyse jedoch essenziell, um das Risiko von falsch-negativen Schlussfolgerungen zu minimieren.
 Letztendlich kann die Trennschärfe somit als Garantiemetrik verstanden werden, die sicherstellt, dass ein geplanter Versuchsaufbau in der Lage ist, Effekte von praktischer Relevanz zu detektieren \cite{Cohen.1988,Myers.2016} - was vornehmlich in Bezug auf Lebensdauertests aufgrund genannter wirtschaftlicher Randbedingungen von hoher Bedeutung ist.

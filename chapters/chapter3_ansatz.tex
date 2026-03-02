@@ -40,8 +40,10 @@ Ein Design, das für einen angenommenen Parametersatz optimal ist, kann sich bei
 
 \subsubsection{Zeitliche und Strukturelle Effizienz}
 Zweitens muss die \textbf{zeitliche Effizienz} berücksichtigt werden.
-Da die Information in Lebensdauertests stochastisch über die Zeit generiert wird und womöglich durch Zensierung limitiert ist, wird die Varianz der Schätzung maßgeblich durch die Anzahl der tatsächlich ausgefallenen Einheiten getrieben \cite{Nelson.2005}.
-Ein Versuchsplan gilt folglich nur dann als effizient, wenn er die erwartete Testdauer bei gegebener Präzision minimiert.
+Da die Information in Lebensdauertests stochastisch über die Zeit generiert wird und womöglich durch Zensierung limitiert ist, wird die Varianz der Schätzung maßgeblich durch die Anzahl der tatsächlich ausgefallenen Einheiten getrieben \cite{Nelson.2005}.\\
+
+\textbf{Ein Versuchsplan gilt folglich nur dann als effizient, wenn er die erwartete Testdauer bei gegebener Präzision und damit unbeeinträchtigter Effektivität minimiert.}\\
+
 Drittens bietet die Klasse der \ac{OMARS}-Designs eine Antwort auf die Forderung nach \textbf{struktureller Effizienz} und Flexibilität.
 Im direkten Vergleich zum etablierten \ac{CCD}, das durch seine geometrische Konstruktion eine starre Anzahl an Versuchen fordert, ermöglichen \ac{OMARS}-Designs zwar eine Entkopplung von Faktoren- und Versuchsanzahl (z.B. $\sym{N}=40$ statt $\sym{N} \ge 45$ für $\sym{k}=6$).
 Sie resultieren jedoch in einer finalen Versuchspunktverteilung, die sich im Kontext von Aufwänden in \ac{EoL}-Testing rational nur schwer sequenziell erweitern oder anpassen lässt.

@@ -92,7 +92,7 @@ Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels \ac{MLE},
 Um statistisch belastbare Aussagen zu treffen und \textbf{epistemische Unsicherheiten} auf einen minimalen numerischen Approximationsfehler zu reduzieren, wird das Verfahren in eine \ac{MCS} mit $\symsub{n}{idx_MC} = 10.000$ Iterationen eingebettet - vergleiche Abschnitt~\ref{subsec:optimal} für entsprechende Hintergründe.
 Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
 \begin{enumerate}
-    \item \textbf{Präzision der Parameterschätzung:} Durch den (Mittelwert-) Vergleich der geschätzten Parameter $\hat{\sym{Beta}}$ mit den \textit{wahren} Koeffizienten $\sym{Beta}_{\text{true}}$ lassen sich Bias und Varianz der Schätzung ermitteln.
+    \item \textbf{Präzision der Parameterschätzung:} Durch den (Mittelwert-) Vergleich der geschätzten Parameter $\hat{\sym{Beta}}$ mit den \textit{wahren} Koeffizienten $\sym{Beta}_{\text{true}}$ lassen sich Offset und Varianz der Schätzung ermitteln.
     \item \textbf{Bestimmung der Trennschärfe $\sym{power}$:} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis der Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:power}).
 \end{enumerate}
 
@@ -113,10 +113,10 @@ Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl 
     \item Variation der Anzahl der Sternpunkte;
     \item Variation der Standardabweichung der Effektstärken (System-Rauschen);
     \item Änderung des relativen Verhältnisses von Effektstärken untereinander;
-    \item Variation der Standardabweichung der Systemantwort (Mess-Rauschen) sowie
+    \item Variation der Standardabweichung der Systemantwort (Mess-Rauschen);
     \item Variation des Signifikanzniveaus.
 \end{enumerate}
-Insbesondere die Berücksichtigung der Verhältnismäßigkeit von Effektstärken sowie der Rauschparameter ist von zentraler Bedeutung, da sie die Signal-zu-Rausch-Verhältnisse im Modell direkt beeinflussen und damit die Detektionswahrscheinlichkeit der Effekte maßgeblich steuern, gleichzeitig aber eine gegen unendlich tendierende Variationsmöglichkeit bieten, die in einem reinen Screening-Ansatz nicht abgedeckt werden könnte.
+Insbesondere die Berücksichtigung der Verhältnismäßigkeit von Effektstärken sowie der Rauschparameter ist von zentraler Bedeutung, da sie die \ac{SNR} im Modell direkt beeinflussen und damit die Detektionswahrscheinlichkeit der Effekte maßgeblich steuern, gleichzeitig aber eine gegen unendlich tendierende Variationsmöglichkeit bieten, die in einem reinen Screening-Ansatz nicht abgedeckt werden könnte.
 Zur formalen Beschreibung des Untersuchungsraums werden diese acht Einflussgrößen im Vektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]^\top$ zusammengefasst und in Tabelle~\ref{tab:sensitivitaetsfaktoren} definiert.
 Die Integration dieser Faktoren in das Meta-Design erfolgt dabei methodisch differenziert: Während die kontinuierlichen Stör- und Geometrieparameter ($\symsub{xi_factor}{idx_fac_a}, \symsub{xi_factor}{idx_fac_b}, \symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_f}, \symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_h}$) den Versuchsraum eines \ac{CCD} aufspannen, um stetige Sensitivitäten (Regressionskoeffizienten) zu schätzen, werden die strukturellen Designgrößen der Stützstellenanzahl ($\symsub{xi_factor}{idx_fac_c}, \symsub{xi_factor}{idx_fac_d}$) als kategoriale Blockfaktoren über drei diskrete Stufen behandelt.
 Diese Trennung ist zwingend geboten, da Variationen in der Stützstellenanzahl die topologische Struktur der Design-Matrix $\sym{X}$ und deren Freiheitsgrade diskontinuierlich verändern.
@@ -242,7 +242,7 @@ Da das Rauschen ($\symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_e}$)
     \end{tabular}
 \end{table}
 
-Dies birgt ein erhebliches ökonomisches Potenzial: Wenn die Trennschärfe ohnehin primär durch das System- und Messrauschen limitiert wird, ist zu prüfen, ob Design-Vereinfachungen (Reduktion von $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$) überhaupt zu einer \textit{signifikanten} weiteren Verschlechterung führen.
+Dies birgt ein erhebliches ökonomisches Potenzial: Wenn die Trennschärfe ohnehin primär durch das System- und Messrauschen limitiert wird, ist zu prüfen, ob Design-Vereinfachungen (Reduktion von $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$) überhaupt zu einer \textit{signifikanten} Effektivitätsreduktion führen.
 Tabelle~\ref{tab:impact_cd} quantifiziert diesen „\textit{Design-Penalty}“:
 Es zeigt sich, dass der Verzicht auf Zentralpunkte ($\symsub{xi_factor}{idx_fac_c}$) und Sternpunkte ($\symsub{xi_factor}{idx_fac_d}$) zwar die Trennschärfe reduziert (z.B. $\Delta \sym{power} \approx -13\,\%$ für $\sym{power}_{\sym{beta}_{11}}$), dieser Einfluss jedoch in der gleichen Größenordnung liegt wie die unvermeidbaren Rauscheffekte (\textit{Noise}).
 
@@ -281,36 +281,40 @@ Da die $\sym{power}$ durch die physikalischen Randbedingungen ($\symsub{xi_facto
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Generische Auswirkungen relevanter Orthogonalitäts-Abweichungen} \label{subsec:ergebnisse_generic}
+\subsection{Generische Auswirkungen relevanter Orthogonalitäts Abweichungen} \label{subsec:ergebnisse_generic}
 
-Die Ergebnisse der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) haben gezeigt, dass das \ac{CCD} im Hinblick auf die statistische Trennschärfe ein robustes Verhalten gegenüber Modifikationen seiner Stützstellenanzahl aufweist, da im Regelfall das experimentelle System- und Messrauschen den limitierenden Faktor der Effektivität darstellt.
+Die Ergebnisse der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) haben gezeigt, dass das \ac{CCD} im Hinblick auf die statistische Trennschärfe ein robustes Verhalten gegenüber Modifikationen seiner Stützstellenanzahl aufweist, da im Regelfall das experimentelle System- und Messrauschen den limitierenden Faktor der Effektivität darstellt - vgl. Tabellen~\ref{tab:summary_power_sensitivity} und~\ref{tab:impact_cd} sowie Abschnitt~\ref{subsec:pläne}.
 Für die praktische \ac{EoL}-Versuchsplanung greift dieser generalisierte, kombinatorische Ansatz jedoch noch zu kurz.
-In der Realität am Prüfstand treten Abweichungen von der idealen Design-Matrix technisch bedingt nicht als geplante, systematische Ausdünnung auf, sondern als unvorhergesehene, asymmetrische und meist isolierte Einzelphänomene, ausgelöst durch physikalische oder normative Restriktionen.
+In der Realität am Prüfstand treten Abweichungen von der idealen Design-Matrix technisch bedingt zunächst nicht als geplante, systematische Ausdünnung auf, sondern als unvorhergesehene, asymmetrische und meist isolierte Einzelphänomene, ausgelöst durch physikalische oder normative Restriktionen (siehe auch \cite{Arndt.2022,Mell.2022,Box.1963,Ahn.2015}).
 Darüber hinaus eröffnet das Bewusstsein über die geringen \textit{Design-Penalties} aus Abschnitt~\ref{subsec:ergebnisse_sensitivitaet} die Möglichkeit einer gezielten adaptiven Planung:
-Wenn Design-Modifikationen die Effektivität des Nachweises ohnehin nur verhältnismäßig moderat beeinflussen, ist zu prüfen, ob solche Manipulationen zur Kostenoptimierung, Prüfzeitverkürzung oder zur Vermeidung irrelevanter Ausfallmechanismen nicht sogar bewusst (\textit{on purpose}) induziert werden sollten.
+Wenn Design-Modifikationen die Effektivität des Nachweises ohnehin nur verhältnismäßig moderat beeinflussen, ist zu prüfen, ob solche Manipulationen zur Kostenoptimierung, Prüfzeitverkürzung oder zur Vermeidung irrelevanter Ausfallmechanismen nicht sogar bewusst (\textit{on purpose}) induziert werden sollten - insbesondere dann, wenn diese ohnehin, wie erwähnt, technisch bedingt sein können.
 
 Um diese singulären Praxisphänomene systematisch bewerten zu können, ist die kombinatorische Betrachtung des Meta-Designs aus dem vorherigen Abschnitt nicht mehr zielführend.
-Stattdessen werden basierend auf der Simulationsmethodik aus Abschnitt~\ref{subsec:simulationsmethodik} vier spezifische, voneinander isolierte Störszenarien definiert, welche typische Einzelrestriktionen in multivariaten Lebensdauerversuchen abbilden:
+Stattdessen werden basierend auf der Simulationsmethodik aus Abschnitt~\ref{subsec:simulationsmethodik} vier spezifische, voneinander isolierte Störszenarien definiert, welche typische Einzelrestriktionen in multivariaten Lebensdauerversuchen abbilden \cite{Arndt.2022,Mell.2022}:
 \begin{itemize}
-    \item \textbf{Fall I (Axialer Shift):} Sternpunkte ($\symsub{n}{idx_S}\geq 1$) können aufgrund von Anlagenrestriktionen nicht auf dem nominellen Abstand $\symsub{alpha}{idx_D}$ gefahren werden oder würden einen durch \ac{ALT} induzierten Wechsel des Ausfallmechanismus provozieren. Zur methodischen Einordnung wird dieser Fall in drei Stufen simuliert: eine axiale Stauchung auf $80\,\%$, eine Streckung auf $120\,\%$ sowie der Rückzug auf die Nennlasten des rein faktoriellen Würfels (\textit{\ac{FC}}, $\symsub{alpha}{idx_D}=1$).
-    \item \textbf{Fall II (Co-faktorielle Korrelation):} Ein Sternpunkt ist nicht mehr achsenrein isoliert fahrbar. Spezifische, physikalische Systemfunktionalitäten erzwingen die simultane (parasitäre) Aussteuerung eines zweiten Faktors, wodurch eine direkte geometrische Korrelation im ansonsten orthogonalen Raum entsteht. Dieser Fall wird in einer leichten und einer starken Ausprägung untersucht.
+    \item \textbf{Fall I (Axialer Shift):} Sternpunkte ($\symsub{n}{idx_S}\geq 1$) können aufgrund von Anlagenrestriktionen nicht auf dem nominellen Abstand $\symsub{alpha}{idx_D}$ gefahren werden oder würden einen durch \ac{ALT} induzierten Wechsel des Ausfallmechanismus provozieren.
+          Zur methodischen Einordnung wird dieser Fall in drei Stufen simuliert: eine axiale Stauchung auf $80\,\%$, eine Streckung auf $120\,\%$ sowie der Rückzug auf die Nennlasten des rein faktoriellen Würfels (\textit{\ac{FC}}, $\symsub{alpha}{idx_D}=1$).
+    \item \textbf{Fall II (Co-faktorielle Korrelation):} Ein Sternpunkt ist nicht mehr achsenrein isoliert realisierbar.
+          Spezifische, physikalische Systemfunktionalitäten erzwingen die simultane (parasitäre) Aussteuerung eines zweiten Faktors, wodurch eine direkte geometrische Korrelation im ansonsten orthogonalen Raum entsteht.
+          Dieser Fall wird in einer leichten und einer starken Ausprägung untersucht.
     \item \textbf{Fall III (Stellgrößen-Scatter):} Die Aktorik des Prüfstands erlaubt keine exakte Ansteuerung der Zielkoordinaten, sodass die Sternpunkte einer unbeabsichtigten stochastischen Streuung (uniformes Rauschen von $\pm 10\,\%$ auf der Eingangsvariablen $\symsub{x}{idx_i}$) unterliegen.
-    \item \textbf{Fall IV (Früh-Ausfall / Zensierung):} Ein extremer Versuchspunkt (Sternpunkt) führt zu einem Frühausfall, einem irrelevanten Durchläufer oder kann aus Zeitgründen nicht abgeschlossen werden. Er entfällt somit vollständig und asymmetrisch aus der finalen Design-Matrix.
+    \item \textbf{Fall IV (Früh-Ausfall / Zensierung):} Ein extremer Versuchspunkt (Sternpunkt) führt zu einem Frühausfall, einem irrelevanten Durchläufer oder kann aus Zeitgründen nicht abgeschlossen werden.
+          Er entfällt somit vollständig und asymmetrisch aus der finalen Design-Matrix: hier am Beispiel der Eliminierung des nördlichen Sternpunktes auf der Achse von Faktor $\sym{x}_1$.
 \end{itemize}
 
-Während auch bei dieser isolierten Betrachtung die Auswirkungen auf die Trennschärfe im \ac{GLM} eine zentrale Rolle spielen, rückt hier zusätzlich die Verzerrung der Koeffizientenschätzungen (\textit{Bias}) als sekundäre Metrik in den Fokus.
-Inwiefern dieser Bias durch den Verlust der Orthogonalität und die damit verbundene Multikollinearität induziert wird, ist von entscheidender Bedeutung, da systematische Schätzfehler die Validität der gesamten Lebensdauerprognose kompromittieren.
+Während auch bei dieser isolierten Betrachtung die Auswirkungen auf die Trennschärfe eine zentrale Rolle spielen, rückt hier zusätzlich die Verzerrung der Koeffizientenschätzungen (\textbf{Offset}) als sekundäre Metrik in den Fokus.
+Inwiefern dieser Offset durch den Verlust der Orthogonalität und die damit verbundene Multikollinearität induziert wird, ist von entscheidender Bedeutung, da systematische Schätzfehler die Validität der gesamten Lebensdauerprognose kompromittieren.
 
 \subsubsection{Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}
 
-Die Ergebnisse der generalisierten Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) haben belegt, dass bei dominierenden physikalischen Effekten mit einem hohen Signal-Rausch-Verhältnis ($\sym{snr} \gg 1$) Sättigungseffekte auftreten:
+Die Ergebnisse der generalisierten Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) zeigen, dass bei dominierenden physikalischen Effekten mit einem hohen \ac{SNR} ($\sym{snr} \gg 1$) Sättigungseffekte auftreten:
 Die statistische Trennschärfe konvergiert in diesen Fällen weitgehend unabhängig von der Designstruktur gegen $\sym{power}=100\,\%$.
 Unter solchen Idealbedingungen ist das Regressionsmodell derart robust, dass selbst signifikante geometrische Verzerrungen des Versuchsplans den Nachweis eines Effekts $\sym{Eff}$ kaum gefährden.
 In der Praxis der Lebensdauerprognose stellen jedoch selten diese dominanten Einflussgrößen die primäre Herausforderung für den Versuchsplaner dar.
 Vielmehr sind es subtile Effekte und schwache Degradationserscheinungen, die sich nur knapp vom Systemrauschen abheben.
 
-Um den isolierten Einfluss der Orthogonalitäts-Abweichungen -- den spezifischen \textit{Design-Penalty} -- überhaupt quantifizierbar zu machen, muss die nachfolgende Simulation in einen kritischen Arbeitsbereich überführt werden.
-Hierfür wird das \textit{Ground-Truth}-Modell methodisch kalibriert, indem das Signal-Rausch-Verhältnis gezielt auf $\sym{snr} = 1$ herabgesetzt wird (mit Koeffizientenstärken von $\symsub{beta}{idx_i} = 1$ bei einer Standardabweichung von $\sym{sigma} = 1$).
+Um den isolierten Einfluss der Orthogonalitäts-Abweichungen - den spezifischen \textit{Design-Penalty} - überhaupt quantifizierbar zu machen, muss die nachfolgende Simulation in einen kritischen Arbeitsbereich überführt werden.
+Hierfür wird das \textit{Ground-Truth}-Modell kalibriert, indem das Signal-Rausch-Verhältnis gezielt auf $\sym{snr} = 0.5$ herabgesetzt wird (mit Koeffizientenstärken von $\symsub{beta}{idx_i} = 10$ bei einer Standardabweichung von $\sym{sigma} = 5$).
 
 Diese Parametrisierung macht sich die mathematische Gesetzmäßigkeit zunutze, dass die Trennschärfe-Funktion -- basierend auf den Nichtzentralitätsparametern $\symsub{delta}{idx_nc}$ der zugrundeliegenden Prüfverteilungen -- einen S-förmigen (sigmoidalen) Verlauf aufweist.
 Während die Kurve am unteren Rand für ein $\sym{snr} \approx 0$ gegen das gewählte Signifikanzniveau $\sym{alpha}$ (Erwartungswert des Fehlers 1. Art) und am oberen Rand asymptotisch gegen $100\,\%$ strebt, besitzt sie in der Übergangszone ihre steilste Flanke.
@@ -321,7 +325,7 @@ Nur durch diese Justierung lässt sich valide bewerten, ab welchem Grad eine Pra
 \subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse}
 
 Die simulative Auswertung der definierten Praxis-Szenarien bei einem kritischen Signal-Rausch-Verhältnis ($\sym{snr} = 1$) offenbart eine hochgradig differenzierte Reaktion der klassischen Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}) und der algorithmischen Schätzgüte.
-Zur detaillierten Evaluation wird diese Schätzgüte nachfolgend nach dem systematischen Schätzfehler (Bias, Tabelle~\ref{tab:results_ortho_bias}), der Schätzvarianz (\ac{MSE}, Tabelle~\ref{tab:results_ortho_mse}) sowie dem resultierenden Trennschärfe-Verlust ($\Delta \sym{power}$, Tabelle~\ref{tab:results_ortho_power}) aufgeschlüsselt.
+Zur detaillierten Evaluation wird diese Schätzgüte nachfolgend nach dem systematischen Schätzfehler (Offset, Tabelle~\ref{tab:results_ortho_bias}), der Schätzvarianz (\ac{MSE}, Tabelle~\ref{tab:results_ortho_mse}) sowie dem resultierenden Trennschärfe-Verlust ($\Delta \sym{power}$, Tabelle~\ref{tab:results_ortho_power}) aufgeschlüsselt.
 
 \begin{table}[htbp]
     \centering
@@ -357,13 +361,13 @@ Eine geometrische Verzerrung im \ac{CCD} führt demnach nicht zu einer inhärent
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{3cm}
     \input{plots/ma_abb5.1.4_betakonv.tex}
-    \caption{Konvergenz der Schätzwerte ($\hat{\sym{beta}}_2$) über die Monte-Carlo-Iterationen. Der systematische Schätzfehler (Bias) tendiert bei allen untersuchten geometrischen Störszenarien asymptotisch gegen Null.}
+    \caption{Konvergenz der Schätzwerte ($\hat{\sym{beta}}_2$) über die Monte-Carlo-Iterationen. Der systematische Schätzfehler (Offset) tendiert bei allen untersuchten geometrischen Störszenarien asymptotisch gegen Null.}
     \label{fig:ma_abb5.1.4_betakonv}
 \end{figure}
 
 \begin{table}[htbp]
     \centering
-    \caption{Simulationsergebnisse: Systematischer Schätzfehler (Bias) der einzelnen Koeffizienten bei $\sym{snr}=1$.}
+    \caption{Simulationsergebnisse: Systematischer Schätzfehler (Offset) der einzelnen Koeffizienten bei $\sym{snr}=1$.}
     \label{tab:results_ortho_bias}
     \renewcommand{\arraystretch}{1.2}
     \small
@@ -597,7 +601,7 @@ Im Rahmen der MC-Simulation werden $\symsub{n}{idx_MC} = 10.000$ virtuelle Versu
 Die Auswertung erfolgt multidimensional anhand der in den vorangegangenen Abschnitten definierten Metriken:
 \begin{itemize}
     \item \textbf{Power:} Wie hoch ist die Wahrscheinlichkeit, die definierten Effekte trotz Design-Manipulation korrekt zu detektieren?
-    \item \textbf{Parameterschätzgüte:} Wie verhalten sich Bias und Varianz der Schätzer ($\hat{\sym{b}}, \hat{\sym{T}}$) bei Verlust der Orthogonalität?
+    \item \textbf{Parameterschätzgüte:} Wie verhalten sich Offset und Varianz der Schätzer ($\hat{\sym{b}}, \hat{\sym{T}}$) bei Verlust der Orthogonalität?
     \item \textbf{Ökonomische Bilanz:} Welches Design liefert die geforderte Präzision bei minimalen Gesamtkosten gemäß Gleichung~\ref{eq:kostenmodell}?
 \end{itemize}
 Durch den Vergleich der gesampleten Versuchszeiten (Time-to-Failure) kann valide auf die Effizienz im \ac{ALT}-Kontext geschlossen werden.

@@ -18,21 +18,21 @@
 \contentsline {table}{\numberline {5.3}{\ignorespaces Zusammenfassende Statistik der Trennschärfe und Identifikation der dominanten Einflussfaktoren. Die Ergebnisse demonstrieren, dass die Power maßgeblich durch unveränderliche Systemgrößen (Rauschen) und nur im Ausnahmefall durch modifizierbare Designgrößen limitiert wird.}}{82}{table.caption.66}%
 \contentsline {table}{\numberline {5.4}{\ignorespaces Systematischer Trennschärfe-Verlust ($\Delta \glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$) bei Reduktion der Versuchsstützpunkte. Während lineare Haupteffekte relativ robust gegenüber einer Design-Ausdünnung bleiben, zeigt sich der primäre \textit {Design-Penalty} in der Schätzung der quadratischen Terme.}}{83}{table.caption.67}%
 \contentsline {table}{\numberline {5.5}{\ignorespaces Matrix-Eigenschaften und Optimalitäten der simulierten Störszenarien. Der \cgls {VIF} wird für alle Haupt- und quadratischen Terme dargestellt ($\hat {\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath {\ensuremath {\beta }}}}}_0$ entfällt theoriekonform).}}{87}{table.caption.72}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Simulationsergebnisse: Systematischer Schätzfehler (Bias) der einzelnen Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1$.}}{88}{table.caption.74}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Simulationsergebnisse: Schätzvarianz (\cgls {MSE}) der einzelnen Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1$.}}{89}{table.caption.77}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Simulationsergebnisse: Durchschnittlicher Trennschärfe-Verlust ($\Delta \glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$) der Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1$. Ein negatives Vorzeichen indiziert einen Verlust, ein positives Vorzeichen einen Gewinn an Trennschärfe.}}{92}{table.caption.79}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Simulationsergebnisse: Systematischer Schätzfehler (Offset) der einzelnen Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1$.}}{88}{table.caption.74}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Simulationsergebnisse: Schätzvarianz (\cgls {MSE}) der einzelnen Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1$.}}{90}{table.caption.77}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Simulationsergebnisse: Durchschnittlicher Trennschärfe-Verlust ($\Delta \glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$) der Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1$. Ein negatives Vorzeichen indiziert einen Verlust, ein positives Vorzeichen einen Gewinn an Trennschärfe.}}{91}{table.caption.79}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B1}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}}{119}{table.caption.90}%
-\contentsline {table}{\numberline {B2}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}}{120}{table.caption.91}%
-\contentsline {table}{\numberline {B3}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}}{121}{table.caption.92}%
-\contentsline {table}{\numberline {B4}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}}{122}{table.caption.93}%
-\contentsline {table}{\numberline {B5}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}}{123}{table.caption.94}%
-\contentsline {table}{\numberline {B6}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}}{124}{table.caption.95}%
-\contentsline {table}{\numberline {B7}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}}{125}{table.caption.96}%
+\contentsline {table}{\numberline {B1}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}}{117}{table.caption.90}%
+\contentsline {table}{\numberline {B2}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}}{118}{table.caption.91}%
+\contentsline {table}{\numberline {B3}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}}{119}{table.caption.92}%
+\contentsline {table}{\numberline {B4}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}}{120}{table.caption.93}%
+\contentsline {table}{\numberline {B5}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}}{121}{table.caption.94}%
+\contentsline {table}{\numberline {B6}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}}{122}{table.caption.95}%
+\contentsline {table}{\numberline {B7}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}}{123}{table.caption.96}%
 \contentsfinish 
 \contentsfinish 
-\contentsline {table}{\numberline {B8}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}}{126}{table.caption.97}%
-\contentsline {table}{\numberline {B9}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}}{127}{table.caption.98}%
+\contentsline {table}{\numberline {B8}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}}{124}{table.caption.97}%
+\contentsline {table}{\numberline {B9}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}}{125}{table.caption.98}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
