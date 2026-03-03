@@ -12,9 +12,9 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.583\textwidth,
-height=0.25\textwidth,
-at={(0\textwidth,0\textwidth)},
+width=0.71\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
 scale only axis,
 bar shift auto,
 xmin=0.5300,
@@ -32,12 +32,12 @@ grid style={dotted, opacity=0.25},
 legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left}
 ]
 \addplot[ybar, bar width=0.08, fill=mycolor1, draw=mycolor2, area legend] table[row sep=crcr] {%
-1.0000	100.0000\\
-2.0000	88.0400\\
-3.0000	87.7700\\
-4.0000	79.5900\\
-5.0000	87.3900\\
-6.0000	87.4800\\
+1.0000	99.8300\\
+2.0000	72.9700\\
+3.0000	73.1700\\
+4.0000	60.6700\\
+5.0000	72.5300\\
+6.0000	71.7500\\
 };
 \addplot[forget plot, color=mycolor2] table[row sep=crcr] {%
 0.5300	0.0000\\
@@ -46,12 +46,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Default CCD}
 
 \addplot[ybar, bar width=0.08, fill=mycolor3, draw=mycolor2, area legend] table[row sep=crcr] {%
-1.0000	100.0000\\
-2.0000	86.7500\\
-3.0000	87.4600\\
-4.0000	78.8100\\
-5.0000	85.0600\\
-6.0000	87.8900\\
+1.0000	99.8800\\
+2.0000	71.2800\\
+3.0000	72.3400\\
+4.0000	59.4800\\
+5.0000	68.0100\\
+6.0000	72.5300\\
 };
 \addplot[forget plot, color=mycolor2] table[row sep=crcr] {%
 0.5300	0.0000\\
@@ -60,12 +60,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall I ($-20\%$)}
 
 \addplot[ybar, bar width=0.08, fill=mycolor4, draw=mycolor2, area legend] table[row sep=crcr] {%
-1.0000	100.0000\\
-2.0000	88.2500\\
-3.0000	88.4400\\
-4.0000	78.4300\\
-5.0000	90.7900\\
-6.0000	88.1100\\
+1.0000	99.8800\\
+2.0000	73.3800\\
+3.0000	73.0100\\
+4.0000	59.6800\\
+5.0000	77.0200\\
+6.0000	73.1900\\
 };
 \addplot[forget plot, color=mycolor2] table[row sep=crcr] {%
 0.5300	0.0000\\
@@ -74,12 +74,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall I ($+20\%$)}
 
 \addplot[ybar, bar width=0.08, fill=mycolor5, draw=mycolor2, area legend] table[row sep=crcr] {%
-1.0000	100.0000\\
-2.0000	85.7000\\
-3.0000	88.2900\\
-4.0000	78.9300\\
-5.0000	83.9800\\
-6.0000	87.7200\\
+1.0000	99.8400\\
+2.0000	69.5200\\
+3.0000	73.0300\\
+4.0000	60.4300\\
+5.0000	67.7300\\
+6.0000	72.7500\\
 };
 \addplot[forget plot, color=mycolor2] table[row sep=crcr] {%
 0.5300	0.0000\\
@@ -88,12 +88,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall I (FC)}
 
 \addplot[ybar, bar width=0.08, fill=mycolor6, draw=mycolor2, area legend] table[row sep=crcr] {%
-1.0000	100.0000\\
-2.0000	88.3700\\
-3.0000	87.6000\\
-4.0000	79.5200\\
-5.0000	87.9700\\
-6.0000	87.3100\\
+1.0000	99.8300\\
+2.0000	72.9200\\
+3.0000	72.6100\\
+4.0000	60.3100\\
+5.0000	72.3200\\
+6.0000	72.4700\\
 };
 \addplot[forget plot, color=mycolor2] table[row sep=crcr] {%
 0.5300	0.0000\\
@@ -102,12 +102,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall II (leicht)}
 
 \addplot[ybar, bar width=0.08, fill=mycolor7, draw=mycolor2, area legend] table[row sep=crcr] {%
-1.0000	100.0000\\
-2.0000	86.6000\\
-3.0000	87.9500\\
-4.0000	81.9200\\
-5.0000	86.2500\\
-6.0000	87.0700\\
+1.0000	99.8900\\
+2.0000	70.0000\\
+3.0000	73.2100\\
+4.0000	63.1700\\
+5.0000	70.0100\\
+6.0000	71.1200\\
 };
 \addplot[forget plot, color=mycolor2] table[row sep=crcr] {%
 0.5300	0.0000\\
@@ -116,12 +116,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall II (stark)}
 
 \addplot[ybar, bar width=0.08, fill=mycolor8, draw=mycolor2, area legend] table[row sep=crcr] {%
-1.0000	100.0000\\
-2.0000	87.3500\\
-3.0000	89.1500\\
-4.0000	79.2900\\
-5.0000	87.3200\\
-6.0000	89.0500\\
+1.0000	99.9000\\
+2.0000	71.5300\\
+3.0000	73.8900\\
+4.0000	60.0700\\
+5.0000	71.8200\\
+6.0000	74.7400\\
 };
 \addplot[forget plot, color=mycolor2] table[row sep=crcr] {%
 0.5300	0.0000\\
@@ -130,12 +130,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall III}
 
 \addplot[ybar, bar width=0.08, fill=mycolor1, draw=mycolor2, area legend] table[row sep=crcr] {%
-1.0000	100.0000\\
-2.0000	81.4400\\
-3.0000	88.0200\\
-4.0000	78.9700\\
-5.0000	81.2500\\
-6.0000	87.2000\\
+1.0000	99.8100\\
+2.0000	63.7600\\
+3.0000	73.0100\\
+4.0000	59.2300\\
+5.0000	62.0800\\
+6.0000	71.3000\\
 };
 \addplot[forget plot, color=mycolor2] table[row sep=crcr] {%
 0.5300	0.0000\\
@@ -146,82 +146,82 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.6500	100.0000	0.0000	0.0000\\
-1.6500	88.0400	0.6360	0.6360\\
-2.6500	87.7700	0.6422	0.6422\\
-3.6500	79.5900	0.7900	0.7900\\
-4.6500	87.3900	0.6506	0.6506\\
-5.6500	87.4800	0.6487	0.6487\\
+0.6500	99.8300	0.0807	0.0807\\
+1.6500	72.9700	0.8705	0.8705\\
+2.6500	73.1700	0.8684	0.8684\\
+3.6500	60.6700	0.9574	0.9574\\
+4.6500	72.5300	0.8749	0.8749\\
+5.6500	71.7500	0.8824	0.8824\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.7500	100.0000	0.0000	0.0000\\
-1.7500	86.7500	0.6645	0.6645\\
-2.7500	87.4600	0.6491	0.6491\\
-3.7500	78.8100	0.8010	0.8010\\
-4.7500	85.0600	0.6987	0.6987\\
-5.7500	87.8900	0.6394	0.6394\\
+0.7500	99.8800	0.0679	0.0679\\
+1.7500	71.2800	0.8868	0.8868\\
+2.7500	72.3400	0.8767	0.8767\\
+3.7500	59.4800	0.9622	0.9622\\
+4.7500	68.0100	0.9142	0.9142\\
+5.7500	72.5300	0.8749	0.8749\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.8500	100.0000	0.0000	0.0000\\
-1.8500	88.2500	0.6311	0.6311\\
-2.8500	88.4400	0.6267	0.6267\\
-3.8500	78.4300	0.8062	0.8062\\
-4.8500	90.7900	0.5668	0.5668\\
-5.8500	88.1100	0.6344	0.6344\\
+0.8500	99.8800	0.0679	0.0679\\
+1.8500	73.3800	0.8663	0.8663\\
+2.8500	73.0100	0.8701	0.8701\\
+3.8500	59.6800	0.9615	0.9615\\
+4.8500	77.0200	0.8246	0.8246\\
+5.8500	73.1900	0.8682	0.8682\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.9500	100.0000	0.0000	0.0000\\
-1.9500	85.7000	0.6861	0.6861\\
-2.9500	88.2900	0.6302	0.6302\\
-3.9500	78.9300	0.7993	0.7993\\
-4.9500	83.9800	0.7189	0.7189\\
-5.9500	87.7200	0.6433	0.6433\\
+0.9500	99.8400	0.0783	0.0783\\
+1.9500	69.5200	0.9022	0.9022\\
+2.9500	73.0300	0.8699	0.8699\\
+3.9500	60.4300	0.9584	0.9584\\
+4.9500	67.7300	0.9163	0.9163\\
+5.9500	72.7500	0.8727	0.8727\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.0500	100.0000	0.0000	0.0000\\
-2.0500	88.3700	0.6283	0.6283\\
-3.0500	87.6000	0.6460	0.6460\\
-4.0500	79.5200	0.7910	0.7910\\
-5.0500	87.9700	0.6376	0.6376\\
-6.0500	87.3100	0.6524	0.6524\\
+1.0500	99.8300	0.0807	0.0807\\
+2.0500	72.9200	0.8710	0.8710\\
+3.0500	72.6100	0.8741	0.8741\\
+4.0500	60.3100	0.9589	0.9589\\
+5.0500	72.3200	0.8769	0.8769\\
+6.0500	72.4700	0.8755	0.8755\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.1500	100.0000	0.0000	0.0000\\
-2.1500	86.6000	0.6677	0.6677\\
-3.1500	87.9500	0.6381	0.6381\\
-4.1500	81.9200	0.7543	0.7543\\
-5.1500	86.2500	0.6750	0.6750\\
-6.1500	87.0700	0.6576	0.6576\\
+1.1500	99.8900	0.0650	0.0650\\
+2.1500	70.0000	0.8982	0.8982\\
+3.1500	73.2100	0.8680	0.8680\\
+4.1500	63.1700	0.9454	0.9454\\
+5.1500	70.0100	0.8981	0.8981\\
+6.1500	71.1200	0.8883	0.8883\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.2500	100.0000	0.0000	0.0000\\
-2.2500	87.3500	0.6515	0.6515\\
-3.2500	89.1500	0.6096	0.6096\\
-4.2500	79.2900	0.7942	0.7942\\
-5.2500	87.3200	0.6522	0.6522\\
-6.2500	89.0500	0.6120	0.6120\\
+1.2500	99.9000	0.0619	0.0619\\
+2.2500	71.5300	0.8845	0.8845\\
+3.2500	73.8900	0.8609	0.8609\\
+4.2500	60.0700	0.9599	0.9599\\
+5.2500	71.8200	0.8818	0.8818\\
+6.2500	74.7400	0.8516	0.8516\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.3500	100.0000	0.0000	0.0000\\
-2.3500	81.4400	0.7620	0.7620\\
-3.3500	88.0200	0.6365	0.6365\\
-4.3500	78.9700	0.7987	0.7987\\
-5.3500	81.2500	0.7650	0.7650\\
-6.3500	87.2000	0.6548	0.6548\\
+1.3500	99.8100	0.0854	0.0854\\
+2.3500	63.7600	0.9422	0.9422\\
+3.3500	73.0100	0.8701	0.8701\\
+4.3500	59.2300	0.9632	0.9632\\
+5.3500	62.0800	0.9510	0.9510\\
+6.3500	71.3000	0.8866	0.8866\\
 };
 \end{axis}
 \end{tikzpicture}%

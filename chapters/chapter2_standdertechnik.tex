@@ -687,10 +687,17 @@ Mathematisch fundiert die Bewertung der Schätzgenauigkeit auf der Inversen der 
     \label{eq:dispersion}
 \end{equation}
 wobei wie gehabt $\sym{sigma_sq}$ die Varianz des Versuchsfehlers darstellt.
-Während der $\sym{A2}$-Indikator die Gesamtmatrix bewertet, stehen die Diagonalelemente der Matrix $(\sym{X}'\sym{X})^{-1}$ in direktem Zusammenhang mit dem \textbf{\ac{VIF}} für die Evaluation einzelner Modellterme \cite{Siebertz.2017,Kleppmann.2020}.
-Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.
-Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Kleppmann.2020,Montgomery.2021}.
 
+Ein universelles Maß zur Beurteilung der Schätzgüte einzelner Parameter ist der \textbf{\ac{MSE}}. Er vereint die Varianz des Schätzers und dessen systematische Verzerrung (\textbf{Bias}) in einer Metrik:
+\begin{equation}
+    \sym{mse}(\hat{\sym{beta}}_{\sym{idx_j}}) = \sym{E}\left[ (\hat{\sym{beta}}_{\sym{idx_j}} - \sym{beta}_{\sym{idx_j}})^2 \right] = \sym{Var}(\hat{\sym{beta}}_{\sym{idx_j}}) + \left(\text{Bias}(\hat{\sym{beta}}_{\sym{idx_j}})\right)^2.
+    \label{eq:mse_estimator}
+\end{equation}
+Da klassische Schätzverfahren (wie \ac{OLS} oder \ac{MLE}) unter regulären Bedingungen erwartungstreu sind ($\text{Bias} = 0$), entspricht der \ac{MSE} in diesen Fällen exakt der Schätzvarianz $\sym{Var}(\hat{\sym{beta}}_{\sym{idx_j}})$ und skaliert folglich direkt mit den Diagonalelementen der inversen Informationsmatrix.
+
+Während der $\sym{A2}$-Indikator die Gesamtmatrix bewertet, stehen genau diese Diagonalelemente in direktem Zusammenhang mit dem \textbf{\ac{VIF}} für die Evaluation einzelner Modellterme \cite{Siebertz.2017,Kleppmann.2020}.
+Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz (und damit der \ac{MSE}) eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.
+Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Kleppmann.2020,Montgomery.2021}.
 
 Ergänzend zur globalen Bewertung der Multikollinearität durch den \ac{VIF} erlaubt die Betrachtung der sogenannten \textbf{Prädiktionsmatrix} (engl. auch \textbf{Hat-Matrix})
 \begin{equation}

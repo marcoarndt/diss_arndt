@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+    \centering
+    \caption{Simulationsergebnisse: Systematischer Schätzfehler (Offset) der einzelnen Koeffizienten bei $\sym{snr}=1$.}
+    \label{tab:results_ortho_bias}
+    \renewcommand{\arraystretch}{1.2}
+    \small
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l rrrrrr@{}}
+        \toprule
+        \textbf{Szenario (Störfall)} & \textbf{$\hat{\sym{beta}}_{0}$} & \textbf{$\hat{\sym{beta}}_{1}$} & \textbf{$\hat{\sym{beta}}_{2}$} & \textbf{$\hat{\sym{beta}}_{12}$} & \textbf{$\hat{\sym{beta}}_{11}$} & \textbf{$\hat{\sym{beta}}_{22}$} \\
+        \midrule
+        Referenz (Orthogonal) & $+0{,}016$ & $-0{,}002$ & $-0{,}010$ & $+0{,}041$ & $-0{,}015$ & $-0{,}005$ \\
+        Fall I: Shift (-20\,\%) & $+0{,}014$ & $-0{,}000$ & $-0{,}017$ & $+0{,}005$ & $+0{,}002$ & $-0{,}028$ \\
+        Fall I: Shift (+20\,\%) & $+0{,}005$ & $-0{,}019$ & $+0{,}008$ & $+0{,}022$ & $-0{,}007$ & $+0{,}000$ \\
+        Fall I: Face-Centered & $+0{,}029$ & $+0{,}023$ & $-0{,}004$ & $+0{,}022$ & $-0{,}012$ & $+0{,}011$ \\
+        Fall II: Korrelation (leicht) & $-0{,}028$ & $+0{,}023$ & $+0{,}015$ & $+0{,}017$ & $+0{,}003$ & $+0{,}021$ \\
+        Fall II: Korrelation (stark) & $-0{,}030$ & $+0{,}001$ & $-0{,}049$ & $-0{,}049$ & $+0{,}064$ & $-0{,}015$ \\
+        Fall III: Scatter ($\pm 10\,\%$) & $+0{,}006$ & $+0{,}016$ & $+0{,}035$ & $-0{,}013$ & $-0{,}009$ & $-0{,}008$ \\
+        Fall IV: Ausfall (NaN) & $-0{,}010$ & $+0{,}026$ & $+0{,}001$ & $+0{,}050$ & $+0{,}051$ & $+0{,}007$ \\
+        \bottomrule
+    \end{tabular*}
+\end{table}

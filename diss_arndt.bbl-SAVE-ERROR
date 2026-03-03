@@ -3154,8 +3154,8 @@
       \strng{authornamehash}{0559b359e32bccb6527f54a2911e9798}
       \strng{authorfullhash}{0559b359e32bccb6527f54a2911e9798}
       \strng{authorfullhashraw}{0559b359e32bccb6527f54a2911e9798}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{"}An Introduction to Generalized Linear Models, Fourth Edition provides a cohesive framework for statistical modelling, with an emphasis on numerical and graphical methods. This new edition of a bestseller has been updated with new sections on non-linear associations, strategies for model selection, and a Postface on good statistical practice. Like its predecessor, this edition presents the theoretical background of generalized linear models (GLMs) before focusing on methods for analyzing particular kinds of data. It covers Normal, Poisson, and Binomial distributions; linear regression models; classical estimation and model fitting methods; and frequentist methods of statistical inference. After forming this foundation, the authors explore multiple linear regression, analysis of variance (ANOVA), logistic regression, log-linear models, survival analysis, multilevel modeling, Bayesian models, and Markov chain Monte Carlo (MCMC) methods. Introduces GLMs in a way that enables readers to understand the unifying structure that underpins themDiscusses common concepts and principles of advanced GLMs, including nominal and ordinal regression, survival analysis, non-linear associations and longitudinal analysisConnects Bayesian analysis and MCMC methods to fit GLMsContains numerous examples from business, medicine, engineering, and the social sciencesProvides the example code for R, Stata, and WinBUGS to encourage implementation of the methodsOffers the data sets and solutions to the exercises onlineDescribes the components of good statistical practice to improve scientific validity and reproducibility of results. Using popular statistical software programs, this concise and accessible text illustrates practical approaches to estimation, model fitting, and model comparisons.{"}--Provided by publisher}
@@ -3209,8 +3209,8 @@
       \strng{editornamehash}{f2f71db52401837c018a82537cd40e41}
       \strng{editorfullhash}{f2f71db52401837c018a82537cd40e41}
       \strng{editorfullhashraw}{f2f71db52401837c018a82537cd40e41}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Design and analysis of experiments}
@@ -4266,6 +4266,41 @@
       \verb{file}
       \verb Zio 2013 - The Monte Carlo simulation method:Attachments/Zio 2013 - The Monte Carlo simulation method.pdf:application/pdf
       \endverb
+    \endentry
+    \entry{Mell.2022}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=1bd42f23ad4c4d4311ca8cd8a0966357}{%
+           family={Mell},
+           familyi={M\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa6a0f34515feb94cc32a153a3881c95}
+      \strng{fullhash}{65ded0308e8c55f83fce848dc9c7fc67}
+      \strng{fullhashraw}{65ded0308e8c55f83fce848dc9c7fc67}
+      \strng{bibnamehash}{65ded0308e8c55f83fce848dc9c7fc67}
+      \strng{authorbibnamehash}{65ded0308e8c55f83fce848dc9c7fc67}
+      \strng{authornamehash}{aa6a0f34515feb94cc32a153a3881c95}
+      \strng{authorfullhash}{65ded0308e8c55f83fce848dc9c7fc67}
+      \strng{authorfullhashraw}{65ded0308e8c55f83fce848dc9c7fc67}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Probabilistic Safety Assessment and Management Conference 2022}
+      \field{title}{Non-orthogonality in test design: practical relevance of the theoretical concept in terms of regression quality and test plan efficiency}
+      \field{volume}{PSAM 16}
+      \field{year}{2022}
     \endentry
   \enddatalist
 \endrefsection
