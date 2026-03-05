@@ -1,0 +1,140 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.683\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+bar shift auto,
+xmin=0.5300,
+xmax=6.4700,
+xtick={1.0000,2.0000,3.0000,4.0000,5.0000,6.0000},
+xticklabels={{$\sym{beta}_0$},{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
+ymin=0.0000,
+ymax=30.1386,
+ylabel style={font=\color{mycolor1}},
+ylabel={Schätzwert $\hat{\sym{thet}}_{\sym{idx_i}}$},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25},
+legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left}
+]
+\addplot[ybar, bar width=0.08, fill=white!15!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.0000	30.0962\\
+2.0000	10.0128\\
+3.0000	10.1914\\
+4.0000	10.0013\\
+5.0000	9.9609\\
+6.0000	9.7372\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.5300	0.0000\\
+6.4700	0.0000\\
+};
+\addlegendentry{Default \ac{CCD}}
+
+\addplot[ybar, bar width=0.08, fill=darkgray, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.0000	29.9467\\
+2.0000	10.0500\\
+3.0000	9.9998\\
+4.0000	9.9263\\
+5.0000	9.9005\\
+6.0000	9.9532\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.5300	0.0000\\
+6.4700	0.0000\\
+};
+\addlegendentry{Fall I ($-20\%$)}
+
+\addplot[ybar, bar width=0.08, fill=white!35!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.0000	30.0114\\
+2.0000	9.9721\\
+3.0000	10.0339\\
+4.0000	9.8776\\
+5.0000	9.9848\\
+6.0000	10.0573\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.5300	0.0000\\
+6.4700	0.0000\\
+};
+\addlegendentry{Fall I ($+20\%$)}
+
+\addplot[ybar, bar width=0.08, fill=white!45!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.0000	29.9793\\
+2.0000	10.0266\\
+3.0000	10.0943\\
+4.0000	10.0971\\
+5.0000	10.2387\\
+6.0000	10.0098\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.5300	0.0000\\
+6.4700	0.0000\\
+};
+\addlegendentry{Fall I (\ac{FC})}
+
+\addplot[ybar, bar width=0.08, fill=white!55!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.0000	30.0639\\
+2.0000	10.0356\\
+3.0000	9.9347\\
+4.0000	10.0730\\
+5.0000	9.9656\\
+6.0000	9.8885\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.5300	0.0000\\
+6.4700	0.0000\\
+};
+\addlegendentry{Fall II (leicht)}
+
+\addplot[ybar, bar width=0.08, fill=white!65!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.0000	29.8129\\
+2.0000	9.8719\\
+3.0000	10.0069\\
+4.0000	9.9337\\
+5.0000	10.0871\\
+6.0000	9.9629\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.5300	0.0000\\
+6.4700	0.0000\\
+};
+\addlegendentry{Fall II (stark)}
+
+\addplot[ybar, bar width=0.08, fill=lightgray, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.0000	30.1386\\
+2.0000	9.8457\\
+3.0000	10.0672\\
+4.0000	9.9636\\
+5.0000	9.9721\\
+6.0000	9.8767\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.5300	0.0000\\
+6.4700	0.0000\\
+};
+\addlegendentry{Fall III}
+
+\addplot[ybar, bar width=0.08, fill=white!85!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.0000	29.9728\\
+2.0000	9.9172\\
+3.0000	9.9561\\
+4.0000	9.9652\\
+5.0000	9.9679\\
+6.0000	10.0802\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.5300	0.0000\\
+6.4700	0.0000\\
+};
+\addlegendentry{Fall IV}
+
+\end{axis}
+\end{tikzpicture}%

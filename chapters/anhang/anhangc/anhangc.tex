@@ -42,3 +42,34 @@ In diesem Anhang sind ergänzende statistische Visualisierungen zur Bewertung de
     \caption{Zusammenhang zwischen simulierter Schätzvarianz (\ac{MSE}) und dem prozentualen Trennschärfe-Vverlust ($\Delta \sym{power}$) über alle Koeffizienten. Die Pearson-Korrelation $\sym{corr}$ untermauert die signifikante Kausalität.}
     \label{fig:app.c_corr_mse}
 \end{figure}
+
+\input{tables/tab_results_ortho_mse.tex}
+
+\subsection{Szenarien bei Arbeitspunkt \ac{SNR}$=1$}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{6cm}
+    \input{plots/ma_abb_app.c_betadev_snr1.tex}
+    \caption{Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle für $\sym{snr}=1$.}
+    \label{fig:app.c_betadev_snr1}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{6cm}
+    \input{plots/ma_abb_app.c_msedev_snr1.tex}
+    \caption{Güte der Schätzer (\ac{MSE}) für $\sym{snr}=1$.}
+    \label{fig:app.c_msedev_snr1}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{6cm}
+    \input{plots/ma_abb_app.c_powerdev_snr1.tex}
+    \caption{Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien für $\sym{snr}=1$.}
+    \label{fig:app.c_powerdev_snr1}
+\end{figure}

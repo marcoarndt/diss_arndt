@@ -1,20 +1,20 @@
 \begin{table}[htbp]
     \centering
-    \caption{Matrix-Eigenschaften und Optimalitäten der simulierten Störszenarien. Der \ac{VIF} wird für alle Haupt- und quadratischen Terme dargestellt ($\hat{\sym{beta}}_0$ entfällt theoriekonform).}
+    \caption{Matrix-Eigenschaften und Effizienzen zu Optimalitätskriterien der simulierten Störszenarien. Der \ac{VIF} wird für alle Haupt- und quadratischen Terme dargestellt ($\hat{\sym{beta}}_0$ entfällt theoriekonform).}
     \label{tab:results_ortho_metrics}
     \renewcommand{\arraystretch}{1.2}
     \setlength{\tabcolsep}{3.5pt}
     \footnotesize
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c rrrrr rrrrr@{}}
         \toprule
-        \textbf{Szenario (Störfall)} & \textbf{$\sym{A2}$} & \multicolumn{5}{c}{\textbf{Effizienzen [\%]}} & \multicolumn{5}{c}{\textbf{VIF}} \\
+        \textbf{Szenario (Störfall)} & \textbf{$\sym{A2}$} & \multicolumn{5}{c}{\textbf{Effizienzen [\%]}} & \multicolumn{5}{c}{\textbf{\ac{VIF}}} \\
         \cmidrule(lr){3-7} \cmidrule(l){8-12}
         & & $\sym{eff_A}$ & $\sym{eff_D}$ & $\sym{eff_G}$ & $\sym{eff_I}$ & $\sym{eff_V}$ & $\hat{\sym{beta}}_{1}$ & $\hat{\sym{beta}}_{2}$ & $\hat{\sym{beta}}_{12}$ & $\hat{\sym{beta}}_{11}$ & $\hat{\sym{beta}}_{22}$ \\
         \midrule
-        Referenz (Orthogonal) & $0{,}000$ & $42{,}9$ & $50{,}0$ & $17{,}6$ & $81{,}2$ & $180{,}0$ & $1{,}00$ & $1{,}00$ & $1{,}00$ & $1{,}00$ & $1{,}00$ \\
+        Default \ac{CCD} & $0{,}000$ & $42{,}9$ & $50{,}0$ & $17{,}6$ & $81{,}2$ & $180{,}0$ & $1{,}00$ & $1{,}00$ & $1{,}00$ & $1{,}00$ & $1{,}00$ \\
         Fall I: Shift (-20\,\%) & $0{,}037$ & $40{,}3$ & $47{,}0$ & $15{,}9$ & $76{,}0$ & $181{,}7$ & $1{,}04$ & $1{,}00$ & $1{,}00$ & $1{,}04$ & $1{,}00$ \\
         Fall I: Shift (+20\,\%) & $0{,}038$ & $45{,}0$ & $53{,}6$ & $17{,}7$ & $85{,}1$ & $181{,}0$ & $1{,}04$ & $1{,}00$ & $1{,}00$ & $1{,}04$ & $1{,}00$ \\
-        Fall I: Face-Centered & $0{,}071$ & $39{,}1$ & $45{,}9$ & $15{,}2$ & $73{,}5$ & $184{,}0$ & $1{,}07$ & $1{,}00$ & $1{,}00$ & $1{,}08$ & $1{,}01$ \\
+        Fall I: \ac{FC} & $0{,}071$ & $39{,}1$ & $45{,}9$ & $15{,}2$ & $73{,}5$ & $184{,}0$ & $1{,}07$ & $1{,}00$ & $1{,}00$ & $1{,}08$ & $1{,}01$ \\
         Fall II: Korrelation (leicht) & $0{,}004$ & $42{,}9$ & $50{,}0$ & $17{,}0$ & $81{,}2$ & $180{,}0$ & $1{,}00$ & $1{,}00$ & $1{,}00$ & $1{,}00$ & $1{,}00$ \\
         Fall II: Korrelation (stark) & $0{,}352$ & $42{,}5$ & $51{,}3$ & $13{,}9$ & $80{,}3$ & $183{,}5$ & $1{,}16$ & $1{,}07$ & $1{,}23$ & $1{,}18$ & $1{,}07$ \\
         Fall III: Scatter ($\pm 10\,\%$) & $0{,}007$ & $43{,}8$ & $51{,}5$ & $16{,}6$ & $83{,}0$ & $180{,}2$ & $1{,}00$ & $1{,}00$ & $1{,}00$ & $1{,}00$ & $1{,}00$ \\
