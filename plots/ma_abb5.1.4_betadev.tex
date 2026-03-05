@@ -5,7 +5,7 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.71\figurewidth,
+width=0.683\figurewidth,
 height=\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
@@ -13,11 +13,11 @@ bar shift auto,
 xmin=0.5300,
 xmax=6.4700,
 xtick={1.0000,2.0000,3.0000,4.0000,5.0000,6.0000},
-xticklabels={{$\beta_0$},{$\beta_1$},{$\beta_2$},{$\beta_{12}$},{$\beta_{11}$},{$\beta_{22}$}},
+xticklabels={{$\sym{beta}_0$},{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
 ymin=0.0000,
-ymax=35.0000,
+ymax=30.1039,
 ylabel style={font=\color{mycolor1}},
-ylabel={Schätzwert der Koeffizienten $\theta_i$},
+ylabel={Schätzwert $\hat{\sym{thet}}_{\sym{idx_i}}$},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
@@ -36,7 +36,7 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 0.5300	0.0000\\
 6.4700	0.0000\\
 };
-\addlegendentry{Default CCD}
+\addlegendentry{Default \ac{CCD}}
 
 \addplot[ybar, bar width=0.08, fill=darkgray, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.0000	29.9600\\
@@ -78,7 +78,7 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 0.5300	0.0000\\
 6.4700	0.0000\\
 };
-\addlegendentry{Fall I (FC)}
+\addlegendentry{Fall I (\ac{FC})}
 
 \addplot[ybar, bar width=0.08, fill=white!55!black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.0000	30.0479\\
@@ -136,85 +136,5 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 };
 \addlegendentry{Fall IV}
 
-\addplot [color=black, line width=0.4pt, only marks, forget plot]
- plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
- table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.6500	30.0722	0.1566	0.1566\\
-1.6500	10.0096	0.1547	0.1547\\
-2.6500	10.1436	0.1567	0.1567\\
-3.6500	10.0009	0.1626	0.1626\\
-4.6500	9.9707	0.1572	0.1572\\
-5.6500	9.8029	0.1558	0.1558\\
-};
-\addplot [color=black, line width=0.4pt, only marks, forget plot]
- plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
- table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.7500	29.9600	0.1559	0.1559\\
-1.7500	10.0375	0.1563	0.1563\\
-2.7500	9.9998	0.1560	0.1560\\
-3.7500	9.9447	0.1634	0.1634\\
-4.7500	9.9254	0.1567	0.1567\\
-5.7500	9.9649	0.1572	0.1572\\
-};
-\addplot [color=black, line width=0.4pt, only marks, forget plot]
- plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
- table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.8500	30.0085	0.1573	0.1573\\
-1.8500	9.9791	0.1559	0.1559\\
-2.8500	10.0255	0.1542	0.1542\\
-3.8500	9.9082	0.1664	0.1664\\
-4.8500	9.9886	0.1531	0.1531\\
-5.8500	10.0430	0.1565	0.1565\\
-};
-\addplot [color=black, line width=0.4pt, only marks, forget plot]
- plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
- table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.9500	29.9845	0.1562	0.1562\\
-1.9500	10.0200	0.1585	0.1585\\
-2.9500	10.0707	0.1552	0.1552\\
-3.9500	10.0728	0.1653	0.1653\\
-4.9500	10.1791	0.1604	0.1604\\
-5.9500	10.0074	0.1564	0.1564\\
-};
-\addplot [color=black, line width=0.4pt, only marks, forget plot]
- plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
- table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.0500	30.0479	0.1557	0.1557\\
-2.0500	10.0267	0.1556	0.1556\\
-3.0500	9.9510	0.1558	0.1558\\
-4.0500	10.0547	0.1626	0.1626\\
-5.0500	9.9742	0.1548	0.1548\\
-6.0500	9.9164	0.1556	0.1556\\
-};
-\addplot [color=black, line width=0.4pt, only marks, forget plot]
- plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
- table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.1500	29.8597	0.1558	0.1558\\
-2.1500	9.9039	0.1551	0.1551\\
-3.1500	10.0052	0.1561	0.1561\\
-4.1500	9.9503	0.1615	0.1615\\
-5.1500	10.0653	0.1602	0.1602\\
-6.1500	9.9722	0.1556	0.1556\\
-};
-\addplot [color=black, line width=0.4pt, only marks, forget plot]
- plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
- table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.2500	30.1039	0.1568	0.1568\\
-2.2500	9.8843	0.1562	0.1562\\
-3.2500	10.0504	0.1552	0.1552\\
-4.2500	9.9727	0.1655	0.1655\\
-5.2500	9.9791	0.1576	0.1576\\
-6.2500	9.9075	0.1549	0.1549\\
-};
-\addplot [color=black, line width=0.4pt, only marks, forget plot]
- plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
- table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.3500	29.9796	0.1552	0.1552\\
-2.3500	9.9379	0.1610	0.1610\\
-3.3500	9.9671	0.1545	0.1545\\
-4.3500	9.9739	0.1639	0.1639\\
-5.3500	9.9759	0.1609	0.1609\\
-6.3500	10.0602	0.1559	0.1559\\
-};
 \end{axis}
 \end{tikzpicture}%

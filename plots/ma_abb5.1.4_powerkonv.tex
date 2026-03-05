@@ -6,17 +6,17 @@
 
 \begin{axis}[%
 width=\figurewidth,
-height=0.995\figureheight,
+height=0.921\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
 xmin=0.0000,
 xmax=10000.0000,
 xlabel style={font=\color{mycolor1}},
-xlabel={Iterationen $n_{MC}$},
+xlabel={Iterationen $\sym{n}_{\sym{idx_MC}}$},
 ymin=50.0000,
 ymax=100.0000,
 ylabel style={font=\color{mycolor1}},
-ylabel={$power_{\beta_2} [\%]$},
+ylabel={$\sym{power}_{\sym{beta}_2} [\%]$},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
@@ -625,7 +625,7 @@ legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align
 9908.0000	73.1530\\
 10000.0000	73.1700\\
 };
-\addlegendentry{Default CCD}
+\addlegendentry{Default \ac{CCD}}
 
 \addplot [color=darkgray, dashed, line width=1.5pt]
   table[row sep=crcr]{%
@@ -2437,7 +2437,7 @@ legend style={at={(0.97,0.03)}, anchor=south east, legend cell align=left, align
 9908.0000	73.0521\\
 10000.0000	73.0300\\
 };
-\addlegendentry{Fall I (FC)}
+\addlegendentry{Fall I (\ac{FC})}
 
 \addplot [color=white!55!black, line width=1.5pt]
   table[row sep=crcr]{%

@@ -105,54 +105,6 @@ Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
     \item \textbf{Bestimmung der Trennschärfe $\sym{power}$:} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis der Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:power}).
 \end{enumerate}
 
-
-% \subsection{Methodik zur simulativen Ermittlung von Auswirkungen durch Orthogonalitäts-Abweichungen} \label{subsec:simulationsmethodik}
-% Um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bedarf es einer kontrollierten Untersuchungsumgebung, in der - im Gegensatz zu physischen Experimenten - die \textit{wahre} Natur des Systems bekannt ist.
-% Durch den Vergleich von beiderseits Modellierungs- als auch Analyse-Ergebnissen mit einer vorab definierten Wahrheit (engl. \textit{Ground Truth}) lassen sich \acp{KPI} wie die Schätzpräzision und allen voran die \ac{power} bestimmen.
-% Zu diesem Zweck wird für die Untersuchungen eine allgemeingültige Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert \cite{Arndt.2023,Arndt.2022c}.\\
-
-% \textbf{Pseudo-physikalisches Simulationsmodell} \\
-% Das zugrundeliegende Systemverhalten im Sinne einer \textit{Ground Truth} wird \colorbox{yellow}{global} durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert.
-% Dies entspricht der Struktur, die auch als Ergebnis der \ac{RSM}-Untersuchung erwartet wird (vgl. Gleichung~\ref{eq:quadric_std_model}) und möglicherweise im Zuge einer Zuverlässigkeitsuntersuchung eines technischen Produktes resultieren kann.
-% Um die Anforderungen an eine multivariate Untersuchung ($\sym{k} \ge 2$) zu erfüllen und die Komplexität handhabbar zu halten, wird im Basisszenario von zwei Faktoren ($\sym{x}_1, \sym{x}_2$) ausgegangen.
-% Das Modell berücksichtigt neben den Haupteffekten explizit die für die Lebensdaueranalyse kritischen Wechselwirkungen ersten Grades sowie quadratische Terme zur Abbildung von Nichtlinearitäten:
-% \begin{equation} \label{eq:simulation_model}
-%     \sym{y}_{\sym{idx_sim}} = \sym{beta}_{0} + \sym{beta}_{1}\sym{x}_{1} + \sym{beta}_{2}\sym{x}_{2} + \sym{beta}_{12}\sym{x}_{1}\sym{x}_{2} + \sym{beta}_{11}\sym{x}_{1}^2 + \sym{beta}_{22}\sym{x}_{2}^2 + \sym{epsilon}.
-% \end{equation}
-
-% Um ein realistisches, stochastisches Verhalten abzubilden, sind die Modellparameter nicht deterministisch fixiert.
-% Den Regressionskoeffizienten $\symsub{beta}{idx_j}$ werden zwar nominale Startwerte zugewiesen (vgl. Tabelle~\ref{tab:simulation_parameters}), diese werden jedoch in jedem Simulationslauf mit einer definierten Streuung überlagert.
-% Zusätzlich wird die resultierende Systemantwort $\sym{y}_{\sym{idx_sim}}$ mit einer Reststreuung $\sym{epsilon}$ beaufschlagt, um die inhärente \textbf{aleatorische Unsicherheit} des Systems (Messfehler, unbekannte Einflüsse) abzubilden.
-% Die Default-Werte für die Koeffizienten sowie die vorgegebene Standardabweichung $\sym{sigma}_{\sym{idx_sim}}$, welche als Streuparameter für das stochastische Basis-Verhalten dient, sind in Tabelle~\ref{tab:simulation_parameters} zusammengefasst.
-
-% \begin{table}[htbp]
-%     \centering
-%     \caption{Nominale Startwerte und Streuparameter des pseudo-physikalischen Simulationsmodells}
-%     \label{tab:simulation_parameters}
-%     \renewcommand{\arraystretch}{1.2}
-%     \begin{tabular}{@{}lr@{}}
-%         \toprule
-%         \textbf{Modellparameter}                                                           & \textbf{Default-Wert} \\
-%         \midrule
-%         Regressionskonstante $\sym{beta}_{0}$                                              & $30$                  \\
-%         Regressionskoeffizienten $\symsub{beta}{idx_j}$ (für $j \in \{1, 2, 12, 11, 22\}$) & $10$                  \\
-%         Standardabweichung der Systemantwort $\symsub{sigma}{idx_sim}$                     & $1$                   \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
-
-% \textbf{Simulationsalgorithmus und Monte-Carlo-Ansatz} \\
-% Das Modell der \textit{Ground Truth} wird zunächst mit den zu untersuchenden Versuchsplänen gekoppelt.
-% Für jeden Stützpunkt des Versuchsplans (Versuchspunkte) werden die korrespondierenden Systemantworten simuliert.
-% Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels \ac{MLE}, entsprechend der ausgeführten Methodik aus Abschnitt~\ref{subsubsec:mle}.
-% Um statistisch belastbare Aussagen zu treffen und \textbf{epistemische Unsicherheiten} auf einen minimalen numerischen Approximationsfehler zu reduzieren, wird das Verfahren in eine \ac{MCS} mit $\symsub{n}{idx_MC} = 10.000$ Iterationen eingebettet - vergleiche Abschnitt~\ref{subsec:optimal} für entsprechende Hintergründe.
-% Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
-% \begin{enumerate}
-%     \item \textbf{Präzision der Parameterschätzung:} Durch den (Mittelwert-) Vergleich der geschätzten Parameter $\hat{\sym{Beta}}$ mit den \textit{wahren} Koeffizienten $\sym{Beta}_{\text{true}}$ lassen sich Offset und Varianz der Schätzung ermitteln.
-%     \item \textbf{Bestimmung der Trennschärfe $\sym{power}$:} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis der Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:power}).
-% \end{enumerate}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -259,7 +211,7 @@ Es muss zwischen \textbf{dispositiven Designfaktoren} (Geometrie $\symsub{xi_fac
 
 Tabelle~\ref{tab:summary_power_sensitivity} zeigt dazu entsprechende Ergebnisse der Sensitivitätsanalyse aus Abschnitt~\ref{subsec:sensitivitaetsanalyse} in Form von Mittelwerten, Wertebereichen sowie den dominanten Einflussfaktoren für die Trennschärfe der einzelnen Modellparameter.
 Die Werte wurden durch eine \ac{ANOVA} des Meta-Designs ermittelt, wobei die Effektstärke $\sym{Eff}$ als Maß für die Dominanz eines Faktors auf die Trennschärfe herangezogen wird, sofern dieser als signifikant identifiziert und der im Model geschätzte Zusammenhang der Daten entsprechend erfolgreich auf Plausibilität (Residuenanalyse, Bestimmtheitsmaß, etc.) geprüft wurde.
-Tabelle~\ref{tab:summary_power_sensitivity} bildet dabei eine zusammenfassende Übersicht über die Ergebnisse, wobei weiterführende Details zu den einzelnen Effekten und deren Interaktionen in Anhang~\ref{app:sensitivity} zu finden sind.
+Tabelle~\ref{tab:summary_power_sensitivity} bildet dabei eine zusammenfassende Übersicht über die Ergebnisse, wobei weiterführende Details zu den einzelnen Effekten und deren Interaktionen in Anhang~\ref{app:c} zu finden sind.
 
 Betrachtet man zunächst die globale \textbf{Modell-Power} ($\sym{power}_{\sym{idx_M}}$), so zeigt sich eine extrem hohe Robustheit gegenüber allen Variationen mit einem Mittelwert von $\overline{\sym{power}} > 99,7\,\%$.
 Diese pauschale Metrik verdeckt jedoch, dass das Verhalten spezifischer Einzel-Effekte - insbesondere die Identifikation der für die Lebensdauerprognose kritischen quadratischen Terme - deutlich sensitiver ausfällt.
@@ -376,27 +328,27 @@ Während die Kurve am unteren Rand für ein $\sym{snr} \approx 0$ gegen das gew�
 Die definierte Kalibrierung zwingt das ideale, orthogonale Referenz-Design exakt auf diesen Wendepunkt maximaler Sensitivität, in dem die Basis-Trennschärfe für die betrachteten Modelleffekte bei rund $\sym{power}=88\,\%$ liegt.
 
 Dieser künstliche Arbeitspunkt fungiert folglich als analytische Lupe:
-Er eliminiert jeglichen Sättigungseffekt und stellt sicher, dass die infolge von Orthogonalitäts-Verlust und Multikollinearität auftretende Varianzinflation (\ac{VIF}) unmittelbar und hochauflösend als messbarer Trennschärfe-Verlust $\Delta \sym{power}$ sichtbar wird.
-Um hierbei rein stochastische Schwankungen zwischen den verschiedenen Design-Szenarien auszuschließen und eine strikte \textbf{Reproduzierbarkeit} der Ergebnisse zu garantieren, wird der Monte-Carlo-Algorithmus deterministisch initialisiert (\textit{Mersenne-Twister}-Generator) \cite{Zio.2013}.
-Nur durch dieses methodische Setup lässt sich valide bewerten, ab welchem Grad eine Praxisrestriktion am Prüfstand die statistische Integrität der Parameteridentifikation real gefährdet.
+Er eliminiert jeglichen Sättigungseffekt und stellt sicher, dass die infolge von Orthogonalitäts-Verlust und Multikollinearität auftretende Varianzinflation (\ac{VIF}) unmittelbar als messbarer Trennschärfe-Verlust $\Delta \sym{power}$ sichtbar wird.
+Um hierbei rein stochastische Schwankungen zwischen den verschiedenen Design-Szenarien auszuschließen und eine strikte \textbf{Reproduzierbarkeit} der Ergebnisse zu garantieren, wird der Monte-Carlo-Algorithmus deterministisch initialisiert (\textit{Mersenne-Twister}-Generator mit \textit{Seed}-Fixierung) \cite{Zio.2013}.
+Nur durch dieses methodische Setup lässt sich valide bewerten, ab welchem Grad eine hypothetische Praxisrestriktion am Prüfstand bzw. generelle Orthogonalitäts-Abweichung gemäß \textit{Fall~I-IV} die statistische Integrität der Effekt-Identifikation real gefährdet.
 
 \subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse}
 
-Die simulative Auswertung der definierten Praxis-Szenarien bei einem kritischen Signal-Rausch-Verhältnis ($\sym{snr} = 1$) offenbart eine hochgradig differenzierte Reaktion der klassischen Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}) und der algorithmischen Schätzgüte.
-Zur detaillierten Evaluation wird diese Schätzgüte nachfolgend nach dem systematischen Schätzfehler (Offset, Tabelle~\ref{tab:results_ortho_bias}), der Schätzvarianz (\ac{MSE}, Tabelle~\ref{tab:results_ortho_mse}) sowie dem resultierenden Trennschärfe-Verlust ($\Delta \sym{power}$, Tabelle~\ref{tab:results_ortho_power}) aufgeschlüsselt.
+Die simulative Auswertung der definierten Praxis-Szenarien bei einem kritischen Signal-Rausch-Verhältnis ($\sym{snr} = 1{,}33$) offenbart eine hochgradig differenzierte Reaktion der klassischen Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}) und der algorithmischen Schätzgüte.
+Zur detaillierten Evaluation wird diese Schätzgüte nachfolgend nach dem systematischen Schätzfehler (\textit{Bias} in Tabelle~\ref{tab:results_ortho_bias}), der Schätzvarianz (\textit{\ac{MSE}} in Tabelle~\ref{tab:results_ortho_mse}) sowie dem resultierenden Trennschärfe-Verlust ($\Delta \sym{power}$ in Tabelle~\ref{tab:results_ortho_power}) aufgeschlüsselt.
 
 \input{tables/tab_results_ortho_metrics.tex}
 
 Zunächst belegt die Auswertung die fundamentale Erwartungstreue des angewandten OLS-Algorithmus:
 Trotz gravierender struktureller Abweichungen im Versuchsraum verharrt der systematische Schätzfehler für alle Szenarien und über alle Koeffizienten hinweg im marginalen Promillebereich nahe Null (Tabelle~\ref{tab:results_ortho_bias}).
-Eine geometrische Verzerrung im \ac{CCD} führt demnach nicht zu einer inhärent falschen Lebensdauerprognose. Die Schätzer konvergieren erwartungstreu und stabil gegen die wahren Parameter, was durch die Simulationspfade in Abbildung~\ref{fig:ma_abb5.1.4_betakonv} visuell bewiesen wird.
+Eine geometrische Verzerrung im \ac{CCD} führt demnach nicht zu einer inhärent falschen Lebensdauerprognose. Dass die gewählte Anzahl von $\symsub{n}{idx_MC} = 10.000$ Simulationsläufen dabei ausreichend dimensioniert ist, um das stochastische Rauschen der numerischen Approximation zu eliminieren und eine strikt reproduzierbare Konvergenz gegen diese wahren Parameter zu gewährleisten, wird exemplarisch für den Koeffizienten $\hat{\sym{beta}}_2$ in Abbildung~\ref{fig:ma_abb5.1.4_betakonv} visuell belegt.
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.1.4_betakonv.tex}
-    \caption{Konvergenz der Schätzwerte ($\hat{\sym{beta}}_2$) über die Monte-Carlo-Iterationen. Der systematische Schätzfehler (Offset) tendiert bei allen untersuchten geometrischen Störszenarien asymptotisch gegen Null.}
+    \caption{Numerische Konvergenz am Beispiel von Schätzwert zu $\hat{\sym{beta}}_2$ über die \ac{MCS}-Iterationen.}
     \label{fig:ma_abb5.1.4_betakonv}
 \end{figure}
 
@@ -411,7 +363,7 @@ In der Praxis der Zuverlässigkeitstechnik führt diese Varianzinflation zu sign
     \setlength\figurewidth{0.9\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.1.4_msedev.tex}
-    \caption{Güte der Schätzer (Mean Squared Error). Geometrische Verzerrungen entladen sich primär in der Schätzvarianz, insbesondere beim Wegfall von Freiheitsgraden durch asymmetrische Ausfälle (Fall IV).}
+    \caption{Güte der Schätzer (\ac{MSE}). Geometrische Verzerrungen entladen sich primär in der Schätzvarianz, insbesondere beim Wegfall von Freiheitsgraden durch asymmetrische Ausfälle (\textit{Fall IV}).}
     \label{fig:ma_abb5.1.4_msedev}
 \end{figure}
 
@@ -427,19 +379,21 @@ In der Praxis der Zuverlässigkeitstechnik führt diese Varianzinflation zu sign
 \input{tables/tab_results_ortho_mse.tex}
 
 Die explorative Analyse der Resultate korreliert diese Varianzeffekte direkt mit den klassischen Design-Metriken (Abbildung~\ref{fig:ma_abb5.1.4_korrelation}).
-Auffällig ist hierbei, dass der rein topologische $\sym{A2}$-Indikator kaum linear mit dem tatsächlichen Trennschärfeverlust korreliert (Abschnitt~\ref{subsec:optimal}: Pearson-Korrelation $\sym{corr} \approx 0{,}38$). Auch der \ac{VIF} zeigt mit $\sym{corr} \approx 0{,}69$ nur eine begrenzte Aussagekraft für die Trennschärfe.
+Auffällig ist hierbei, dass der rein topologische $\sym{A2}$-Indikator kaum linear mit dem tatsächlichen Trennschärfeverlust korreliert (Abschnitt~\ref{subsec:optimal}: Pearson-Korrelation $\sym{corr} \approx 0{,}38$).
+Dies ist darauf zurückzuführen, dass Trennschärfe-Verluste in Folge von Multikollinearität nicht linear, sondern sigmoidal verlaufen, weshalb reine Matrix-Topologie-Indikatoren (wie $A_2$) sich primär als Schwellenwert-Warnungen, nicht aber als lineare Prädiktoren der $\sym{power}$ eignen.
+Auch der \ac{VIF} zeigt mit $\sym{corr} \approx 0{,}69$ nur eine begrenzte Aussagekraft für die Trennschärfe.
 Hingegen fungiert die simulierte Schätzvarianz (\ac{MSE}) als nahezu perfekter, inverser Prädiktor für den Trennschärfe-Erhalt ($\sym{corr} \approx 0{,}99$ zwischen \ac{MSE} und $\Delta \sym{power}$ für den Term $\hat{\sym{beta}}_{11}$).
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.8\textwidth}
-    \setlength\figureheight{3cm}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{4cm}
     \input{plots/ma_abb5.1.4_korrelation.tex}
     \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust.}
     \label{fig:ma_abb5.1.4_korrelation}
 \end{figure}
 
-Gleichzeitig erweist sich im Bereich der theoretischen Optimalitäten die $\sym{I_opt}$ ($\sym{eff_I}$) als verlässlichster Indikator ($\sym{corr} \approx -0{,}97$).
+Gleichzeitig erweist sich im Bereich der theoretischen Optimalitäten die I-Effizienz ($\sym{eff_I}$) als verlässlichster Indikator ($\sym{corr} \approx -0{,}97$).
 Volumengetriebene Kriterien wie $\sym{eff_I}$ und $\sym{eff_D}$ skalieren proportional mit der absoluten Ausdehnung des Versuchsraums. So erzielt der nach außen gestreckte Shift (Fall I, $+20\,\%$) Bestwerte in der integrierten Prädiktionsvarianz ($\sym{eff_I} = 85{,}1\,\%$), da die Hebelwirkung der Stützpunkte im Raum steigt.
 Die \textit{G}-Optimalität ($\sym{eff_G}$), welche die Vorhersagegüte am ungünstigsten Ort (\textit{Worst-Case}) absichert, erweist sich hingegen als extrem sensitiv gegenüber geometrischen Asymmetrien.
 In Fall II (starke Korrelation) fällt sie drastisch von $17{,}6\,\%$ auf $13{,}9\,\%$ ab, obwohl das globale Design-Volumen ($\sym{eff_D}$) scheinbar stabil bleibt.
@@ -455,48 +409,52 @@ Der resultierende \textbf{Einfluss auf die Trennschärfe} -- in Tabelle~\ref{tab
     \setlength\figurewidth{0.9\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.1.4_powerdev.tex}
-    \caption{Statistische Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien. Trotz kritischer Parameterkonstellation ($\sym{snr}=1$) bleiben die Power-Verluste bei Erhalt der Symmetrie gering.}
+    \caption{Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien. Trotz kritischer Parameterkonstellation ($\sym{snr}=1{,}33$) bleiben die \sym{power}-Verluste bei Erhalt der Symmetrie gering.}
     \label{fig:ma_abb5.1.4_powerdev}
 \end{figure}
 
 \begin{enumerate}
-    \item \textbf{Gutmütige Restriktionen (Scatter und Face-Centered):} Ein stochastischer Stellgrößen-Scatter (Fall III) hat mit einem $\sym{A2} = 0{,}007$ kaum messbare Auswirkungen. Der Trennschärfeverlust liegt bei $\le 1\,\%$. Selbst das bewusste Zurückziehen der Sternpunkte auf das strikte physikalische Randniveau der Faktoren (\textit{Face-Centered}, Fall I) generiert lediglich einen vertretbaren Detektionsverlust von $3{,}6\,\%$ in den quadratischen Termen.
-    \item \textbf{Kritische Restriktionen (Ausfall):} Der vollständige Entfall eines Randpunktes (Fall IV) schlägt sich im Kollaps nahezu aller globalen Optimalitäten nieder (z.B. $\sym{eff_I}$ fällt auf $69{,}0\,\%$). Der Verlust von Freiheitsgraden an den Rändern treibt das \ac{VIF} auf über $1{,}2$ und den \ac{MSE} auf massive $5{,}46$ - ein Anstieg der Schätzvarianz um über $70\,\%$. Dies resultiert im stärksten Einbruch der Trennschärfe von fast $7\,\%$.
+    \item \textbf{Gutmütige Restriktionen (Scatter und \ac{FC}):} Eine ungenaue, stochastisch verzerrte Ansteuerung der Nenn-Koordinaten (\textit{Fall III}) hat mit einem $\sym{A2} = 0{,}007$ kaum messbare Auswirkungen. Der Trennschärfeverlust liegt bei $\le 1\,\%$. Selbst das bewusste Zurückziehen der Sternpunkte auf das strikte physikalische Randniveau der Faktoren (\textit{\ac{FC}}, \textit{Fall I}) generiert lediglich einen vertretbaren Detektionsverlust von $3{,}6\,\%$ in den quadratischen Termen.
+    \item \textbf{Kritische Restriktionen (Ausfall):} Der vollständige Entfall eines Randpunktes (\textit{Fall IV}) schlägt sich im Kollaps nahezu aller globalen Optimalitäten nieder (z.\,B. $\sym{eff_I}$ fällt auf $69{,}0\,\%$). Der Verlust von Freiheitsgraden an den Rändern treibt das \ac{VIF} auf über $1{,}2$ und den \ac{MSE} auf massive $5{,}46$ - ein Anstieg der Schätzvarianz um über $70\,\%$. Dies resultiert im stärksten Einbruch der Trennschärfe von fast $7\,\%$.
 \end{enumerate}
 
-Zur umfassenden statistischen Dokumentation ist das iterative Verhalten der Trennschärfe (Konvergenz) bei zunehmender Stichprobengröße in Abbildung~\ref{fig:ma_abb5.1.4_powerkonv} veranschaulicht. Flankierend sind die resultierenden Wahrscheinlichkeitsdichten der Signifikanztests ($\sym{p-Wert}$) für alle Fälle in Abbildung~\ref{fig:ma_abb5.1.4_phisto} grafisch aufbereitet. Weiterführende Sensitivitäts- und Strukturmatrizen können bei Bedarf im Anhang~B eingesehen werden.
+Zur Sicherstellung der methodischen Transparenz und Reproduzierbarkeit ist das numerische Konvergenzverhalten der empirischen Trennschärfe über die zunehmende Anzahl an \ac{MCS}-Iterationen exemplarisch für $\sym{beta}_2$ in Abbildung~\ref{fig:ma_abb5.1.4_powerkonv} dokumentiert.
+Es zeigt, dass die angesetzte Iterationstiefe ausreicht, um den numerischen Approximationsfehler zu minimieren und stabile Power-Kennwerte abzuleiten.
+Flankierend sind die resultierenden Wahrscheinlichkeitsdichten der Signifikanztests (\sym{p-Wert}) für alle Fälle in Abbildung~\ref{fig:ma_abb5.1.4_phisto} grafisch aufbereitet.
+Weiterführende Sensitivitäts- und Strukturmatrizen sowie die Konvergenzplots der restlichen Koeffizienten können bei Bedarf im Anhang~\ref{app:c} eingesehen werden.
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.1.4_powerkonv.tex}
-    \caption{Konvergenz der statistischen Trennschärfe für $\sym{beta}_2$ über die Simulationsläufe.}
+    \caption{Numerische Konvergenz der Trennschärfe über die Simulationsläufe am Beispiel von $\sym{beta}_2$.}
     \label{fig:ma_abb5.1.4_powerkonv}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.1.4_phisto.tex}
-    \caption{Verteilung der $\sym{p-Wert}$ für die Signifikanztests der Modellparameter. Die relative Häufigkeit der Werte unterhalb von $\sym{alpha}=0{,}05$ entspricht der berechneten $\sym{power}$.}
+    \caption{$\sym{p-Wert}$ Histogramm für den Signifikanztest am Beispiel von $\sym{beta}_2$. Die relative Häufigkeit der Werte unterhalb von $\sym{alpha}=0{,}05$ entspricht der berechneten $\sym{power}$.}
     \label{fig:ma_abb5.1.4_phisto}
 \end{figure}
 
 
-\subsubsection{Synthese: Adaptive Planung und „On Purpose“-Modifikationen}
+\subsubsection{Synthese: Adaptive Planung und arbiträre Modifikationen}
 
 Aus diesen Resultaten lässt sich für die methodische Auslegung von \ac{EoL} Lebensdauerprognosen eine klare handlungsleitende Synthese ableiten.
-Das \ac{CCD} reagiert auf symmetrische, aber suboptimale Hebelweiten (Fall I) sowie auf verrauschte Stellgrößen (Fall III) extrem verzeihend.
-Dieser Umstand legitimiert eine \textbf{gezielte, adaptive Versuchsplanung (\textit{on purpose})}:
+Das \ac{CCD} reagiert auf symmetrische, aber suboptimale Hebelweiten (\textit{Fall I}) sowie auf verrauschte Stellgrößen (\textit{Fall III}) extrem verzeihend.
+Dieser Umstand legitimiert eine \textbf{gezielte, adaptive Versuchsplanung}:
 Anstatt bei Prüfständen mit stark eingeschränkten physikalischen Stellbereichen, extremen Kostendrücken oder unpräziser Aktorik kompromisslos auf starren geometrischen Lehrbuchvorgaben (wie der strengen Rotierbarkeit mit exaktem $\symsub{alpha}{idx_D}$) zu beharren, kann und sollte das Design bewusst in den technisch sicheren, \textit{Face-Centered}-Bereich komprimiert werden.
 Die Studie belegt unmissverständlich, dass der resultierende \textit{Design-Penalty} in der statistischen Trennschärfe im niedrigen einstelligen Prozentbereich verbleibt.
 Umgekehrt ermöglicht eine bewusste axiale Streckung sogar eine künstliche Steigerung der \sym{power}, sofern das Testobjekt diese Lasten toleriert.
 
-Gleichzeitig liefert der asymmetrische Ausfall (Fall IV) die harte methodische Grenze für diese Flexibilität: Der ungeplante Entfall von Extrempunkten zerstört die Stabilität der Informationsmatrix signifikant.
-Daraus folgt die ökonomisch-strategische Konsequenz für die Testplanung: \textit{Modifikationen der Design-Geometrie sind methodisch vertretbar und hochgradig ratsam, wenn sie perspektivisch Prüfzeit und Kosten sparen.
-    Der asymmetrische, ersatzlose Ausfall von Randstützstellen - sei es durch Fehlplanung oder zu hohe Belastungen (Zensierung) - muss operativ jedoch unter allen Umständen verhindert oder durch sofortige Augmentierung kompensiert werden.}
+Gleichzeitig liefert der asymmetrische Ausfall (\textit{Fall IV}) die harte methodische Grenze für diese Flexibilität:
+Der ungeplante Entfall von Extrempunkten zerstört die Stabilität der Informationsmatrix signifikant.
+Daraus folgt die ökonomisch-strategische Konsequenz für die Testplanung: Modifikationen der Design-Geometrie sind methodisch vertretbar und hochgradig ratsam, wenn sie perspektivisch Prüfzeit und Kosten sparen.
+Der asymmetrische, ersatzlose Ausfall von Randstützstellen - sei es durch Fehlplanung oder zu hohe Belastungen (Zensierung) - muss operativ jedoch unter allen Umständen verhindert oder durch sofortige Augmentierung kompensiert werden.
 Dieser Paradigmenwechsel vom starren Lehrbuch-Design hin zu einer kosteneffizienten, risikoadaptierten Versuchsraumgestaltung bildet das notwendige Fundament für das nachfolgend vorgestellte ökonomische Bewertungsmodell.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
