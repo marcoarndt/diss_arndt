@@ -23,7 +23,7 @@ ymajorgrids,
 grid style={dotted, opacity=0.25},
 legend style={legend cell align=left, align=left}
 ]
-\addplot[const plot, color=white!15!black, line width=1.5pt] table[row sep=crcr] {%
+\addplot[const plot, color=white!10!black, line width=1.5pt] table[row sep=crcr] {%
 0.0000	0.6827\\
 0.0256	0.0517\\
 0.0513	0.0313\\
@@ -67,7 +67,7 @@ legend style={legend cell align=left, align=left}
 };
 \addlegendentry{Default \ac{CCD}}
 
-\addplot[const plot, color=darkgray, dashed, line width=1.5pt] table[row sep=crcr] {%
+\addplot[const plot, color=white!20!black, dashed, line width=1.5pt] table[row sep=crcr] {%
 0.0000	0.6756\\
 0.0256	0.0487\\
 0.0513	0.0297\\
@@ -111,7 +111,7 @@ legend style={legend cell align=left, align=left}
 };
 \addlegendentry{Fall I ($-20\%$)}
 
-\addplot[const plot, color=white!35!black, dotted, line width=1.5pt] table[row sep=crcr] {%
+\addplot[const plot, color=white!30!black, dotted, line width=1.5pt] table[row sep=crcr] {%
 0.0000	0.6796\\
 0.0256	0.0528\\
 0.0513	0.0288\\
@@ -155,7 +155,7 @@ legend style={legend cell align=left, align=left}
 };
 \addlegendentry{Fall I ($+20\%$)}
 
-\addplot[const plot, color=white!45!black, dashdotted, line width=1.5pt] table[row sep=crcr] {%
+\addplot[const plot, color=white!40!black, dashdotted, line width=1.5pt] table[row sep=crcr] {%
 0.0000	0.6740\\
 0.0256	0.0576\\
 0.0513	0.0327\\
@@ -199,7 +199,7 @@ legend style={legend cell align=left, align=left}
 };
 \addlegendentry{Fall I (\ac{FC})}
 
-\addplot[const plot, color=white!55!black, line width=1.5pt] table[row sep=crcr] {%
+\addplot[const plot, color=gray, line width=1.5pt] table[row sep=crcr] {%
 0.0000	0.6753\\
 0.0256	0.0526\\
 0.0513	0.0319\\
@@ -243,7 +243,7 @@ legend style={legend cell align=left, align=left}
 };
 \addlegendentry{Fall II (leicht)}
 
-\addplot[const plot, color=white!65!black, dashed, line width=1.5pt] table[row sep=crcr] {%
+\addplot[const plot, color=white!60!black, dashed, line width=1.5pt] table[row sep=crcr] {%
 0.0000	0.6795\\
 0.0256	0.0539\\
 0.0513	0.0303\\
@@ -287,7 +287,7 @@ legend style={legend cell align=left, align=left}
 };
 \addlegendentry{Fall II (stark)}
 
-\addplot[const plot, color=lightgray, dotted, line width=1.5pt] table[row sep=crcr] {%
+\addplot[const plot, color=white!70!black, dotted, line width=1.5pt] table[row sep=crcr] {%
 0.0000	0.6872\\
 0.0256	0.0541\\
 0.0513	0.0306\\
@@ -331,7 +331,7 @@ legend style={legend cell align=left, align=left}
 };
 \addlegendentry{Fall III}
 
-\addplot[const plot, color=white!85!black, dashdotted, line width=1.5pt] table[row sep=crcr] {%
+\addplot[const plot, color=white!80!black, dashdotted, line width=1.5pt] table[row sep=crcr] {%
 0.0000	0.6776\\
 0.0256	0.0542\\
 0.0513	0.0344\\
@@ -373,7 +373,51 @@ legend style={legend cell align=left, align=left}
 0.9744	0.0040\\
 1.0000	0.0040\\
 };
-\addlegendentry{Fall IV}
+\addlegendentry{Fall IV: \ac{SP}}
+
+\addplot[const plot, color=white!90!black, line width=1.5pt] table[row sep=crcr] {%
+0.0000	0.6726\\
+0.0256	0.0553\\
+0.0513	0.0322\\
+0.0769	0.0223\\
+0.1026	0.0149\\
+0.1282	0.0158\\
+0.1538	0.0116\\
+0.1795	0.0118\\
+0.2051	0.0097\\
+0.2308	0.0093\\
+0.2564	0.0087\\
+0.2821	0.0081\\
+0.3077	0.0081\\
+0.3333	0.0068\\
+0.3590	0.0061\\
+0.3846	0.0049\\
+0.4103	0.0050\\
+0.4359	0.0049\\
+0.4615	0.0054\\
+0.4872	0.0055\\
+0.5128	0.0062\\
+0.5385	0.0047\\
+0.5641	0.0057\\
+0.5897	0.0036\\
+0.6154	0.0039\\
+0.6410	0.0046\\
+0.6667	0.0043\\
+0.6923	0.0037\\
+0.7179	0.0045\\
+0.7436	0.0034\\
+0.7692	0.0043\\
+0.7949	0.0047\\
+0.8205	0.0038\\
+0.8462	0.0035\\
+0.8718	0.0038\\
+0.8974	0.0046\\
+0.9231	0.0039\\
+0.9487	0.0028\\
+0.9744	0.0050\\
+1.0000	0.0050\\
+};
+\addlegendentry{Fall IV: \ac{ZP}}
 
 \addplot [color=black, line width=1.5pt]
   table[row sep=crcr]{%

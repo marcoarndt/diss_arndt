@@ -479,14 +479,14 @@ Die bisher diskutierten Versuchspläne beschränken sich auf die Untersuchung vo
 Perspektivisch ist daher entscheidend, wie die bestehende Datenbasis weitergenutzt und augmentiert werden kann, falls die Systemantwort signifikante \textbf{Krümmungen} (engl. \textbf{Curvature}) aufweist und die quantitativen Beziehungen zwischen Faktoren und Zielgröße für eine Optimierung detaillierter beschrieben werden müssen.
 
 Die \textbf{\ac{RSM}} behandelt als Teildisziplin des \ac{DoE} derartige Herangehensweisen und bietet hierfür spezielle \textbf{Wirkungsflächenversuchspläne} - engl. \textbf{\acp{RSD}} - an.
-Der erste Schritt zur Detektion von Nichtlinearitäten besteht in der Integration von $\symsub{n}{idx_C}$ sogenannten \textbf{Zentralpunkten}, engl. \textbf{\acp{CP}}, in den faktoriellen Basisplan. Hierbei werden alle Faktoren auf die kodierte Stufe \textit{0} (die Mitte des Versuchsraums) gesetzt.
-Weicht der Mittelwert der Systemantwort in den Zentralpunkten signifikant vom Mittelwert über die faktoriellen Eckpunkte ab, deutet dies auf eine Krümmung der Antwortfläche hin \cite{Montgomery.2020}.
+Der erste Schritt zur Detektion von Nichtlinearitäten besteht in der Integration von $\symsub{n}{idx_C}$ sogenannten \textbf{\acp{ZP}}, engl. \textbf{\acp{CP}}, in den faktoriellen Basisplan. Hierbei werden alle Faktoren auf die kodierte Stufe \textit{0} (die Mitte des Versuchsraums) gesetzt.
+Weicht der Mittelwert der Systemantwort in den \acp{ZP} signifikant vom Mittelwert über die faktoriellen Eckpunkte ab, deutet dies auf eine Krümmung der Antwortfläche hin \cite{Montgomery.2020}.
 
 Um diese quadratischen Zusammenhänge explizit zu bestimmen, gilt der \textbf{Zentral-Zusammengesetzte-Versuchsplan}, engl. \textbf{\ac{CCD}}, als etablierter Standard.
 Ein \ac{CCD} entsteht durch die Augmentierung des ursprünglichen voll- (oder teil-)faktoriellen Plans (den $\symsub{n}{idx_F}$ Eckpunkten), vgl. Abbildung~\ref{fig:abb2.07_ccd_design}, um:
 \begin{itemize}
-    \item eine definierte Anzahl $\symsub{n}{idx_C}$ an wiederholten Zentralpunkten (üblicherweise $3 \leq \symsub{n}{idx_C} \leq 5$ zur Abschätzung des reinen Fehlers) sowie
-    \item $\symsub{n}{idx_S} = 2 \cdot \sym{k}$ zusätzliche \textbf{Sternpunkte} (engl. \textbf{Axial Points} oder \textbf{Star Points}), die auf den Achsen des Koordinatensystems im Abstand $\pm \symsub{alpha}{idx_D}$ vom Zentrum liegen.
+    \item eine definierte Anzahl $\symsub{n}{idx_C}$ an wiederholten \acp{ZP} (üblicherweise $3 \leq \symsub{n}{idx_C} \leq 5$ zur Abschätzung des reinen Fehlers) sowie
+    \item $\symsub{n}{idx_S} = 2 \cdot \sym{k}$ zusätzliche \textbf{\acp{SP}} (engl. \textbf{Axial Points} oder \textbf{Star Points}), die auf den Achsen des Koordinatensystems im Abstand $\pm \symsub{alpha}{idx_D}$ vom Zentrum liegen.
 \end{itemize}
 \begin{figure}[htbp]
     \centering
@@ -533,7 +533,7 @@ Ein \ac{CCD} entsteht durch die Augmentierung des ursprünglichen voll- (oder te
     \caption{Zentral zusammengesetzter Versuchsplan (CCD) mit $\sym{k}=2$}
     \label{fig:abb2.07_ccd_design}
 \end{figure}
-Während die Zentralpunkte das Vorhandensein quadratischer Effekte validieren, ermöglichen die Sternpunkte deren Wertbestimmung.
+Während die \acp{ZP} das Vorhandensein quadratischer Effekte validieren, ermöglichen die \acp{SP} deren Wertbestimmung.
 Die Wahl des Abstands $\symsub{alpha}{idx_D}$ wird primär durch die Geometrie des interessierenden Versuchsraums (\textbf{Region of Interest}) diktiert.
 Betrachtet man diesen Raum als Kugel (\textbf{sphärisch}), ist die \textbf{Drehbarkeit} (\textbf{Rotierbarkeit}, engl. \textbf{Rotatability}) ein wesentliches Qualitätsmerkmal.
 Sie stellt sicher, dass die Varianz der Vorhersage nur vom Abstand zum Zentrum abhängt und invariant gegenüber einer Rotation des Koordinatensystems ist.
@@ -541,19 +541,19 @@ Um diese Eigenschaft zu gewährleisten, berechnet sich der Abstand $\symsub{alph
 \begin{equation} \label{eq:ccd_alpha}
     \symsub{alpha}{idx_D} = (\symsub{n}{idx_F})^{1/4}.
 \end{equation}
-Alternativ kann für sphärische Räume auch $\symsub{alpha}{idx_D} = \sqrt{\sym{k}}$ gewählt werden (\textbf{Sphärisches \ac{CCD}}), wodurch alle Versuchs- und Sternpunkte auf einer Kugeloberfläche liegen \cite{Myers.2016}.
+Alternativ kann für sphärische Räume auch $\symsub{alpha}{idx_D} = \sqrt{\sym{k}}$ gewählt werden (\textbf{Sphärisches \ac{CCD}}), wodurch alle Versuchs- und \acp{SP} auf einer Kugeloberfläche liegen \cite{Myers.2016}.
 Ist der Versuchsraum hingegen durch harte physikalische Grenzen (z.B. maximale Temperatur) kubisch beschränkt, bietet sich der \textbf{flächenzentrierte \ac{CCD}} (\textbf{Face Centered \ac{CCD}}) an.
-Hierbei wird $\symsub{alpha}{idx_D} = 1$ gesetzt, sodass die Sternpunkte direkt auf den Flächenmitten des Würfels liegen.
+Hierbei wird $\symsub{alpha}{idx_D} = 1$ gesetzt, sodass die \acp{SP} direkt auf den Flächenmitten des Würfels liegen.
 Dies vereinfacht die Durchführung, da nur drei Faktorstufen ($-1$, $0$, $+1$) benötigt werden, opfert jedoch die Eigenschaft der Rotierbarkeit.
 Eine effiziente Alternative zum \ac{CCD} stellt das \textbf{Box-Behnken-Design} dar \cite{Box.1960}.
 Dieses Design kombiniert $2^{\sym{k}}$-Faktorielle mit unvollständigen Blockplänen und platziert Versuchspunkte auf den Kantenmitten des Versuchsraums, vermeidet jedoch die extremen faktoriellen Versuchspunkte.
 Dies kann vorteilhaft für Lebensdauertests sein, bei denen extreme Ecken oft zu verfrühten Ausfällen führen können.
-Zudem ist es bei korrekter Wahl der Zentralpunkte alias-optimal gegenüber kubischen Modellen \cite{Jones.2011}.
+Zudem ist es bei korrekter Wahl der \acp{ZP} alias-optimal gegenüber kubischen Modellen \cite{Jones.2011}.
 Stoßen Standard-Designs (\ac{CCD}, Box-Behnken) aufgrund von Restriktionen im Versuchsraum (\textbf{Constraints}), nicht-standardmäßigen Modellierungszielen oder ungewöhnlichen Stichprobenumfängen an ihre Grenzen, empfiehlt sich der Einsatz von \textbf{Optimalen Versuchsplänen}, vergleiche übernächsten Abschnitt.
 Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche Vorhersagevarianz über den gesamten Designraum und können Standard-Designs in ihrer Prädiktionsgüte oft übertreffen \cite{Goos.2011,Montgomery.2020}.
 
 \subsection{Strategische Vorgehensweisen} \label{subsec:strategie}
-In der Praxis entsteht ein \ac{CCD} häufig im Rahmen einer \textbf{sequenziellen Versuchsstrategie}: Zeigt das initiale lineare Modell Anpassungsmängel (\textbf{Lack-of-Fit}), wird der bestehende faktorielle Plan um die Sternpunkte augmentiert, um ein Modell zweiter Ordnung zu fitten \cite{Myers.2016}.
+In der Praxis entsteht ein \ac{CCD} häufig im Rahmen einer \textbf{sequenziellen Versuchsstrategie}: Zeigt das initiale lineare Modell Anpassungsmängel (\textbf{Lack-of-Fit}), wird der bestehende faktorielle Plan um die \acp{SP} augmentiert, um ein Modell zweiter Ordnung zu fitten \cite{Myers.2016}.
 Modelle zweiter Ordnung sind insbesondere in der Lebensdauer- und Zuverlässigkeitstechnik vermehrt von Bedeutung, da sie die Existenz von lokalen Extrema (Minima oder Maxima) der Systemantwort im Versuchsraum detaillierter abbilden können \cite{Rigdon.2022,Dean.2017}.
 Prinzipielle Vorgehensweisen, die ein erfolgreiches Umsetzen von \ac{DoE} bzw. \ac{L-DoE} begünstigen sollten, wie \textbf{Blockbildung} oder \textbf{Randomisierung} (vgl. \cite{Siebertz.2017,Kleppmann.2020}) seien hier bereits vorausgesetzt.
 Abbildung~\ref{fig:abb2.08_strategy} fasst eine derartige strategische Vorgehensweise zur Realisierung eines \ac{CCD} zusammen, wie sie beispielsweise \textcite{Box.1951,Box.1988,Bisgaard.1992} vorschlagen.
@@ -619,8 +619,8 @@ Abbildung~\ref{fig:abb2.08_strategy} fasst eine derartige strategische Vorgehens
 \end{figure}
 Um effizient Versuchspunkte zu allokieren und für sequentiell fortlaufende Versuche weiterverwendet zu werden, wird in Abgleich mit Abbildung~\ref{fig:ma_abb2.02_doe_steps} zunächst ein \textbf{teil-faktorieller Versuchsplan} zur Identifikation signifikanter Faktoren durchgeführt.
 Anschließend wird der Plan zu einem \textbf{voll-faktoriellen Versuchsplan} erweitert, um alle Haupteffekte und Wechselwirkungen erster Ordnung zu schätzen.
-Daraufhin werden \textbf{Zentralpunkte} ergänzt, um das Vorhandensein von Krümmungen zu validieren.
-Abschließend werden bei Bedarf die \textbf{Sternpunkte} hinzugefügt, um ein vollständiges \ac{CCD} zu realisieren.
+Daraufhin werden \textbf{\acp{ZP}} ergänzt, um das Vorhandensein von Krümmungen zu validieren.
+Abschließend werden bei Bedarf die \textbf{\acp{SP}} hinzugefügt, um ein vollständiges \ac{CCD} zu realisieren.
 Insbesondere in der Lebensdauererprobung ist eine derartige schrittweise Vorgehensweise sinnvoll, um den Versuchsumfang zu minimieren und dennoch eine fundierte Modellierung der Systemantwort zu gewährleisten.
 Gleichzeitig erlaubt diese Strategie eine flexible Anpassung an unerwartete Ergebnisse in den einzelnen Phasen der Untersuchung, während lokale Optima von Zuverlässigkeiten im Sinne von \ac{DfR} im Vorfeld ohnehin nicht bekannt sind.
 In Abhängigkeit der Anpassung zur Wahl eines geeigneten Modells, linear oder quadratisch, kann die Versuchsplanung so stets an die aktuellen Erkenntnisse angepasst werden.
@@ -630,7 +630,7 @@ Intuitiv erfordert bereits die Bestimmung der Parameter einer einfachen Geraden 
 Soll hingegen ein quadratischer Zusammenhang ($\symsub{beta}{idx_0}, \sym{beta}_1, \sym{beta}_{11}$) abgebildet werden, sind zwingend mindestens drei Stützstellen erforderlich, um das Gleichungssystem zu lösen.
 Im Kontext optimaler Versuchspläne definiert nach \textcite{Pukelsheim.2006} der Maßerweiterungssatz von Carathéodory dabei eine theoretische Obergrenze für die notwendigen Stützstellen von $\sym{N}=\sym{p}(\sym{p} + 1)/2 + 1$, beziehungsweise $\sym{N}=\sym{p}(\sym{p} + 1)/2$, sofern das Interesse der Schätzung aller Elemente des Parametervektors $\sym{Beta}$ gilt \cite{Russell.2019}.
 Es kann beispielsweise auf Basis der Ergebnisse des teil-faktoriellen Plans entschieden werden, ob eine Erweiterung zum voll-faktoriellen Plan überhaupt notwendig ist.
-Genauso kann die Anzahl der Zentralpunkte an die beobachtete Streuung der Lebensdauerdaten angepasst werden, um eine robuste Schätzung des Fehlers zu gewährleisten.
+Genauso kann die Anzahl der \acp{ZP} an die beobachtete Streuung der Lebensdauerdaten angepasst werden, um eine robuste Schätzung des Fehlers zu gewährleisten.
 Ist dann eine Extrapolation in Richtung a-priori unbekannter Beanspruchungsniveaus geplant, verfügt der \ac{CCD} über die notwendigen Stützstellen, um eine adäquate Exploration des Versuchsraums zu ermöglichen.
 Zuletzt kann selbst bei Extrapolation über die Grenzen des Versuchsraums hinaus auf Basis der modellierten Krümmungen eine fundierte Abschätzung der Systemantwort erfolgen \cite{Myers.2016,Montgomery.2020} und sogar mit Validierungsversuchen unter realen Einsatzbedingungen hinterlegt werden \cite{Dean.2017}.
 So wird eine effiziente und zugleich robuste Lebensdauererprobung ermöglicht, die den Anforderungen der \ac{DfR} gerecht wird und wirtschaftlich abbildbar bleibt \cite{RisbergEllekjr.1998}.
@@ -989,7 +989,7 @@ Bei der Invertierung der Matrix führt dies zu einer Inflation der Varianzen, wo
 Dies vergrößert den Nenner in Gleichung~\ref{eq:non_centrality}, reduziert den Nichtzentralitätsparameter $\sym{delta_nc}$ und mindert somit unmittelbar die analytische Trennschärfe.
 
 Solche analytischen Berechnungen, die auf der exakten Bestimmung von $\symsub{delta}{idx_nc}$ beruhen, verkomplizieren sich erheblich, sobald asymmetrische Design-Modifikationen und Mehrfach-Korrelationen greifen.
-Im Kontext der Lebensdauerdatenanalyse, bei der zudem nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten folglich ohnehin nicht mehr über klassische \textbf{t-Tests} ableiten.
+Im Kontext der Lebensdauerdatenanalyse, bei der zudem nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten folglich ohnehin nicht mehr über klassische \textbf{\sym{t}-Tests} ableiten.
 Aus der Arbeit von \textcite{Nelder.1972} kommen hier \textbf{Verallgemeinerte Lineare Modelle}, engl. \textbf{\acp{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\symsub{beta}{idx_j}$ vorzugsweise über den \textbf{\ac{LR-Test}} (oder approximativ über \textbf{Wald-Tests} - vergleiche hierzu Arbeiten von \textcite{Rigdon.2022,Meeker.2022,Montgomery.2020,McCulloch.2001}) ermittelt wird.
 Da für diese komplexen Verteilungsmodelle - insbesondere unter dem Einfluss von Orthogonalitätsabweichungen und bei kleinen Stichprobenumfängen $\sym{n}$ - keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung in der modernen Praxis numerisch mittels \textbf{\ac{MCS}} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
 Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.B. $\symsub{n}{idx_MC}=10^4$ Simulationsläufe).

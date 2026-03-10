@@ -1,0 +1,44 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=\figurewidth,
+height=0.497\figurewidth,
+at={(0\figurewidth,0\figurewidth)},
+scale only axis,
+xmin=0,
+xmax=8,
+xlabel style={font=\color{mycolor1}},
+xlabel={$\text{Anzahl der Zentralpunkte \$\sym}{\text{n}}_{\text{\sym}{\text{ZP}}}\text{\$}$},
+ymin=7000,
+ymax=13000,
+ylabel style={font=\color{mycolor1}},
+ylabel={Gesamtkosten [EUR]},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={$\text{\textbf}{\text{Einfluss der Zentralpunkt-Anzahl}}$},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25}
+]
+\addplot [color=black, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+0	7528.96312871622\\
+1	8160.6428923098\\
+2	8792.59647344238\\
+3	9424.59462160825\\
+4	10056.2886808868\\
+5	10688.4324343446\\
+6	11320.4644679649\\
+7	11952.4831069225\\
+8	12583.9955132437\\
+};
+\end{axis}
+\end{tikzpicture}%

@@ -1,0 +1,45 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.997\figurewidth,
+height=0.499\figurewidth,
+at={(0\figurewidth,0\figurewidth)},
+scale only axis,
+xmin=1,
+xmax=10,
+xlabel style={font=\color{mycolor1}},
+xlabel={Geometrische Streuung [\\%]},
+ymin=12583,
+ymax=12584.4,
+ylabel style={font=\color{mycolor1}},
+ylabel={Gesamtkosten [EUR]},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={$\text{\textbf}{\text{Einfluss der Positionierungs-Streuung}}$},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25}
+]
+\addplot [color=black, mark=square*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+1	12584.2919313495\\
+2	12584.0285867944\\
+3	12584.3661734517\\
+4	12584.2996668813\\
+5	12584.1069699676\\
+6	12583.3339109401\\
+7	12583.1990222343\\
+8	12583.4257872457\\
+9	12583.5509132113\\
+10	12583.0238032305\\
+};
+\end{axis}
+\end{tikzpicture}%

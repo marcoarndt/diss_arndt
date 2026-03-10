@@ -1,0 +1,45 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.997\figurewidth,
+height=0.5\figurewidth,
+at={(0\figurewidth,0\figurewidth)},
+scale only axis,
+xmin=1,
+xmax=2,
+xlabel style={font=\color{mycolor1}},
+xlabel={$\text{Axialer Shift-Wert \$}\alpha\text{\$}$},
+ymin=12582,
+ymax=12587,
+ylabel style={font=\color{mycolor1}},
+ylabel={Gesamtkosten [EUR]},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={$\text{\textbf}{\text{Einfluss der Sternpunkt-Verschiebung}}$},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25}
+]
+\addplot [color=black, mark=triangle*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+1	12586.7808002953\\
+1.11111111111111	12586.0342137746\\
+1.22222222222222	12585.5573071064\\
+1.33333333333333	12584.6407276073\\
+1.44444444444444	12583.9616928664\\
+1.55555555555556	12583.4779271352\\
+1.66666666666667	12582.7010695912\\
+1.77777777777778	12582.2326417527\\
+1.88888888888889	12582.0941095131\\
+2	12582.2131559194\\
+};
+\end{axis}
+\end{tikzpicture}%

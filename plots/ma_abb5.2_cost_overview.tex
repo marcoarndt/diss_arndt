@@ -1,0 +1,48 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.952\figurewidth,
+height=0.5\figurewidth,
+at={(0\figurewidth,0\figurewidth)},
+scale only axis,
+bar shift auto,
+xmin=-0.2,
+xmax=10.2,
+xtick={1,2,3,4,5,6,7,8,9},
+xticklabels={{Default CCD},{Fall I (-20%)},{Fall I (+20%)},{Fall I (FC)},{Fall II (leicht)},{Fall II (stark)},{Fall III (Scatter)},{Fall IV (Ausfall SP)},{Fall V (Ausfall ZP)}},
+ymin=0,
+ymax=120,
+ylabel style={font=\color{mycolor1}},
+ylabel={$\text{Relative Gesamtkosten \$C}_{\Sigma}\text{\$ [\\%]}$},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={$\text{\textbf}{\text{Kostensensitivität geometrischer Designabweichungen}}$},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25}
+]
+\addplot[ybar, bar width=0.8, fill=white!40!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1	100\\
+2	101.000313704816\\
+3	99.0630431801053\\
+4	101.469898384413\\
+5	99.9386061805051\\
+6	99.6335492837211\\
+7	99.1874431582201\\
+8	99.2045585074088\\
+9	94.353144845014\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+-0.2	0\\
+10.2	0\\
+};
+\end{axis}
+\end{tikzpicture}%

@@ -1,0 +1,41 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.951\figurewidth,
+height=0.603\figurewidth,
+at={(0\figurewidth,0\figurewidth)},
+scale only axis,
+bar shift auto,
+symbolic x coords={Orthogonaler CCD,Nördlicher SP,Westlicher SP,Beide (N+W)},
+enlarge x limits=0.2,
+xtick=data,
+ymin=0,
+ymax=160000,
+ylabel style={font=\color{mycolor1}},
+ylabel={Kosten [EUR]},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={$\text{\textbf}{\text{Sensitivität: SP-Konfiguration}}$},
+xmajorgrids,
+ymajorgrids
+]
+\addplot[ybar, fill=gray, draw=mycolor1, area legend] table[row sep=crcr] {%
+Orthogonaler CCD	153387.557879556\\
+Nördlicher SP	121552.727411784\\
+Westlicher SP	114981.186887022\\
+Beide (N+W)	129432.073011332\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+Orthogonaler CCD	0\\
+Beide (N+W)	0\\
+};
+\end{axis}
+\end{tikzpicture}%
