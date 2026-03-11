@@ -63,30 +63,33 @@
 \contentsline {subsection}{\numberline {4.4.2}\textit {Phase II}: Heuristische Parameterassessment und Interaktionsanalyse}{70}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}\textit {Phase III}: Abgleich mit dem Versuchsdesign}{70}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Zusammenfassung}{71}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Effizienz und Effektivität in der multivariaten Versuchsplanung}{73}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Effizienz durch Effektivität in der multivariaten Versuchsplanung}{73}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Effektivität von Versuchsplänen mit Orthogonalitätsabweichungen}{74}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Methodik zur simulativen Ermittlung von Auswirkungen durch Orthogonalitätsabweichungen}{76}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.1}Methodik zur simulativen Ermittlung von Auswirkungen durch Orthogonalitätsabweichungen}{75}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen}{78}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Ergebnisse der Sensitivitätsanalyse und Quantifizierung der Trennschärfe}{81}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.3}Ergebnisse der Sensitivitätsanalyse und Quantifizierung der Trennschärfe}{79}{subsection.5.1.3}%
 \contentsline {subsection}{\numberline {5.1.4}Generische Auswirkungen relevanter Orthogonalitätsabweichungen}{84}{subsection.5.1.4}%
 \contentsline {subsubsection}{\nonumberline Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}{86}{subsubsection*.69}%
 \contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{87}{subsubsection*.71}%
-\contentsline {subsubsection}{\nonumberline Synthese: Adaptive Planung und arbiträre Modifikationen}{96}{subsubsection*.83}%
-\contentsline {subsection}{\numberline {5.1.5}Fazit zu Orthogonalitätsabweichungen: Statistische Effektivität}{97}{subsection.5.1.5}%
-\contentsline {section}{\numberline {5.2}Ökonomische Bewertung: Das Kostenmodell}{98}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Orthogonalitätsabweichungen in der Zuverlässigkeitsprognose}{99}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Extrapolation Variance Graph (EVG)}{99}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Zuverlässigkeitsmodellierung mit Vertrauensbereichen}{99}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Simulative Validierung und Methodennachweis}{99}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Simulationssetup}{100}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Ergebnisse und Effizienzbewertung}{100}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.1.5}Fazit: Statistische Effektivität und geometrisches Gestaltungsbudget}{96}{subsection.5.1.5}%
+\contentsline {section}{\numberline {5.2}Adaptive Versuchsplanung zur Extrapolationsabsicherung}{97}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Die Scaled Prediction Variance als Prognosemetrik}{97}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)}{100}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Übertragung auf multivariate Lebensdauermodelle}{100}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Transformation der Methodik auf lebensdauerverteilte Daten}{100}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Validierung der Trennschärfe bei zensierten Lebensdauerdaten}{100}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Prognosegüte und Konfidenzintervalle im Feldbetrieb}{100}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}Ökonomische Bewertung: Das Effizienz-Kosten-Modell}{100}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Modellierung multivariater Prüfkosten}{100}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Der Trade-off: Testzeit versus Prognosegüte}{100}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Holistische Effizienz-Metrik für Lebensdauertests}{100}{subsection.5.4.3}%
 \contentsline {chapter}{\numberline {6}Fallstudie}{101}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{103}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Key Findings}{103}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Diskussion}{103}{section.7.2}%
 \contentsline {section}{\numberline {7.3}Ausblick}{103}{section.7.3}%
-\contentsline {chapter}{\nonumberline Literatur}{105}{chapter*.84}%
-\contentsline {chapter}{Anhang}{117}{chapter*.84}%
+\contentsline {chapter}{\nonumberline Literatur}{105}{chapter*.83}%
+\contentsline {chapter}{Anhang}{117}{chapter*.83}%
 \contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{117}{section.Alph0.1}%
 \contentsline {section}{\numberline {B}Sensitivitätsanalyse}{118}{section.Alph0.2}%
 \contentsline {section}{\numberline {C}Stabilitäts- und Konvergenzanalysen der Design-Modifikationen}{125}{section.Alph0.3}%

@@ -4176,6 +4176,7 @@
       \strng{authornamehash}{06de43da47c8b5ca086684bf9c477217}
       \strng{authorfullhash}{06de43da47c8b5ca086684bf9c477217}
       \strng{authorfullhashraw}{06de43da47c8b5ca086684bf9c477217}
+      \field{extraname}{1}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -4308,7 +4309,47 @@
       \verb https://www.iapsam.org/PSAM16/paper.php?ID=PH20
       \endverb
     \endentry
+    \entry{Arndt.2024}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{fullhash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{fullhashraw}{06de43da47c8b5ca086684bf9c477217}
+      \strng{bibnamehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authorbibnamehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authornamehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authorfullhash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authorfullhashraw}{06de43da47c8b5ca086684bf9c477217}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 Annual Reliability and Maintainability Symposium (RAMS)}
+      \field{isbn}{979-8-3503-0769-6}
+      \field{title}{Investigating Practical Orthogonality Deviations in RSM for Optimized Predictive Reliability Modeling}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/RAMS51492.2024.10457825
+      \endverb
+    \endentry
   \enddatalist
+  \missing{Giovannitti.1989}
 \endrefsection
 \endinput
 
