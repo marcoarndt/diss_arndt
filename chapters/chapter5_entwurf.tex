@@ -116,7 +116,7 @@ Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl 
     \item Manipulation von \acp{SP}n durch co-faktorielle Korrelation;
     \item Variation der Anzahl der \acp{ZP};
     \item Variation der Anzahl der \acp{SP};
-    \item Variation der Standardabweichung der Effektstärken (System-Rauschen);
+    \item Variation der Standardabweichung der Effektstärken (System-Rauschen, auch \ac{SNR});
     \item Änderung des relativen Verhältnisses von Effektstärken untereinander;
     \item Variation der Standardabweichung der Systemantwort (Mess-Rauschen);
     \item Variation des Signifikanzniveaus.
@@ -169,8 +169,8 @@ Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_e}$
-         & \textbf{System-Rauschen ($\sym{sigma}$)} \newline
-        Verhältnis zwischen pseudo-physikalischem Modellkoeffizienten und Systemabweichung bzw. Effektstreuung.
+         & \textbf{System-Rauschen ($\sym{snr}$)} \newline
+        Verhältnis zwischen pseudo-physikalischem Modellkoeffizienten und Systemabweichung bzw. Effektstreuung $\symsub{beta}{idx_i}/\sym{sigma}$.
          & $[0,80;\, 1,20]$
          & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
@@ -319,7 +319,7 @@ Die analytische Differenzierung dieser Fehlerarten ist von entscheidender Bedeut
 
 \subsubsection{Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}
 
-Wie in der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) dargelegt, konvergiert die Trennschärfe bei dominierenden physikalischen Effekten (hohes $\sym{snr} \gg 1$) in einen Sättigungsbereich nahe $100\,\%$.
+Wie in der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) dargelegt, konvergiert die Trennschärfe bei dominierenden physikalischen Effekten (hohes $\sym{snr} \gg 1$) in einen Sättigungsbereich nahe $100\,\%$. \colorbox{yellow}{Anmerkung zu Sensitivanalyse 0,8-1,2}
 Unter solchen Idealbedingungen ist das Regressionsmodell derart robust, dass selbst signifikante geometrische Verzerrungen des Versuchsplans den Nachweis eines Effekts $\sym{Eff}$ kaum gefährden.
 In der Praxis der Lebensdauerprognose stellen diese dominanten Einflussgrößen jedoch selten die primäre Herausforderung dar. Vielmehr gilt es, subtile Effekte und schwache Degradationserscheinungen zu identifizieren, die sich nur knapp vom Systemrauschen abheben.
 
@@ -335,7 +335,6 @@ Er eliminiert jeglichen Sättigungseffekt und stellt sicher, dass die infolge vo
 Um hierbei rein stochastische Schwankungen zwischen den verschiedenen Design-Szenarien auszuschließen und eine strikte \textbf{Reproduzierbarkeit} der Ergebnisse zu garantieren, wird der Monte-Carlo-Algorithmus deterministisch initialisiert (\textit{Mersenne-Twister}-Generator mit \textit{Seed}-Fixierung) \cite{Zio.2013}.
 Nur durch dieses methodische Setup lässt sich valide bewerten, ab welchem Grad eine hypothetische Praxisrestriktion am Prüfstand bzw. generelle Orthogonalitätsabweichung gemäß \textit{Fall~I-IV} die statistische Integrität der Effekt-Identifikation real gefährdet.
 
-
 \subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse}
 
 Die Auswertung der definierten Praxis-Szenarien bei einem kritischen Signal-Rausch-Verhältnis ($\sym{snr} = 1{,}33$) offenbart eine differenzierte Reaktion der klassischen Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}) und der algorithmischen Schätzgüte.
@@ -347,7 +346,7 @@ Ein erster Blick auf die topologischen und informationsbasierten Metriken aus Ta
 
     \item \textbf{Topologische Warnsignale und blinde Flecken:} Eine \textit{starke Korrelation} (\textit{Fall II}) erzeugt einen statistischen blinden Fleck. Obwohl das globale Design-Volumen nur marginal zunimmt ($\sym{eff_D}=50{,}0\,\% \rightarrow 51{,}3\,\%$), schießt der $\sym{A2}$-Indikator als Maß für die Nicht-Orthogonalität auf seinen Spitzenwert von $0{,}352$. Die durch die parasitäre Abhängigkeit entstehenden Lücken im Parameterraum bestraft die an \textit{Worst-Case}-Szenarien orientierte \textit{G-Effizienz} mit einem drastischen Einbruch auf $13{,}9\,\%$. Während die globale Modellsignifikanz (\sym{Fstat}-Test, \ac{ANOVA}) über alle Szenarien hinweg stabil bei $\approx 100\,\%$ verbleibt (daher nicht in Tabelle~\ref{tab:results_ortho_metrics} aufgeführt), entlädt sich der Informationsverlust ausschließlich term-spezifisch in der Identifikationsgüte einzelner Parameter.
 
-    \item \textbf{Geometrische Selektivität der Varianzinflation:} Der \ac{VIF} bildet den Orthogonalitätsverlust nicht global, sondern hochgradig term-spezifisch ab. Während der stochastische Scatter (\textit{Fall III}) sowie der symmetrieneutrale Ausfall des Zentralpunktes (\textit{Fall IV: \ac{ZP}}) das \ac{VIF} exakt bei $1{,}00$ stagnieren lassen, schlägt sich eine starke Korrelation (\textit{Fall II}) primär auf den Interaktionsterm nieder ($\sym{VIF}_{\sym{beta}_{12}} = 1{,}23$). Beim asymmetrischen Sternpunkt-Ausfall (\textit{Fall IV: \ac{SP}}) greift die Mathematik der isolierten Achsen: Da der zensierte \ac{SP} auf der $\sym{x}_1$-Achse liegt, leiden ausschließlich der zugehörige Haupteffekt $\hat{\sym{beta}}_1$ sowie die Krümmung $\hat{\sym{beta}}_{11}$ (jeweils $\sym{VIF}=1{,}22$). Die orthogonal stehende $\sym{x}_2$-Achse bleibt davon vollkommen isoliert und unbeschadet ($\sym{VIF}_{\sym{beta}_2, \sym{beta}_{22}}=1{,}00$).
+    \item \textbf{Geometrische Selektivität der Varianzinflation:} Der \ac{VIF} bildet den Orthogonalitätsverlust nicht global, sondern hochgradig term-spezifisch ab. Während der stochastische Scatter (\textit{Fall III}) sowie der symmetrieneutrale Ausfall des Zentralpunktes (\textit{Fall IV: \ac{ZP}}) das \ac{VIF} exakt bei $1{,}00$ stagnieren lassen, schlägt sich eine starke Korrelation (\textit{Fall II}) primär auf den Interaktionsterm nieder ($\sym{VIF}_{\sym{beta}_{12}} = 1{,}23$). Beim asymmetrischen Sternpunkt-Ausfall (\textit{Fall IV: \ac{SP}}) greift die Mathematik der isolierten Achsen: Da der zensierte \ac{SP} auf der $\sym{x}_1$-Achse liegt, leiden ausschließlich der zugehörige Haupteffekt $\hat{\sym{beta}}_1$ sowie die Krümmung $\hat{\sym{beta}}_{11}$ (jeweils $\sym{VIF}=1{,}22$). Die orthogonal stehende $\sym{x}_2$-Achse bleibt davon vollkommen isoliert und unbeschadet ($\sym{VIF}_{\sym{beta}_2, \sym{beta}_{22}}=1{,}00$). Global bemisst sich der \ac{VIF} stets $<5$, was die allgemeine Stabilität der Schätzung bestätigt, jedoch die term-spezifische Varianzinflation und damit die potenzielle Trennschärfe-Reduktion deutlich macht, vgl. Abschnitt~\ref{subsec:optimal}.
 \end{itemize}
 
 \input{tables/tab_results_ortho_metrics.tex}
@@ -451,7 +450,7 @@ Die Gegenüberstellung der Resultate (vgl. Abbildung~\ref{fig:ma_abb5.1.4_korrel
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{4cm}
     \input{plots/ma_abb5.1.4_korrelation.tex}
-    \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust in den \textbf{simulierten Störszenarien}: \textit{Fälle I-IV}.}
+    \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust in den \textbf{simulierten Störszenarien}: \textit{Fälle I-IV}. \colorbox{yellow}{Gitter weg, $\sym{corr}$ zu $R^2$}}
     \label{fig:ma_abb5.1.4_korrelation}
 \end{figure}
 
@@ -467,54 +466,43 @@ Diese Gutmütigkeit rechtfertigt einen praktischen Paradigmenwechsel:
 Der bewusste Verzicht auf starre Lehrbuch-Orthogonalität zugunsten reduzierter Prüfzeiten liefert dem Planer ein wertvolles \textbf{geometrisches Gestaltungsbudget}.
 Um dieses Budget im weiteren Verlauf der Arbeit in eine holistische Effizienzbewertung (Informationsgewinn vs. Prüfkosten) zu überführen, muss geklärt werden, wie es bestmöglich investiert wird.
 Hierfür greift die Maximierung der reinen Erkennungswahrscheinlichkeit (\ac{power}) zu kurz.
-Wie durch die I-Effizienz bereits mathematisch indiziert, rückt stattdessen die zentrale Herausforderung der Lebensdauererprobung in den Fokus: die modellspezifische Extrapolationsabsicherung.
+Wie durch die I-Effizienz bereits mathematisch indiziert, rückt stattdessen die zentrale Herausforderung der Lebensdauererprobung in den Fokus: die modellspezifische Extrapolationsabsicherung mittels \ac{SPV}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Adaptive Versuchsplanung zur Extrapolationsabsicherung} \label{sec:adaptive_planung}
 
-In der Praxis beschleunigter Lebensdauertests (\ac{ALT}) werden Versuchspläne naturgemäß in Bereiche hoher Belastungen verschoben (z.\,B. in den nordöstlichen Quadranten des Parameterraums), um Ausfälle in vertretbarer Prüfzeit zu erzwingen.
+In der Praxis beschleunigter Lebensdauertests (\ac{ALT}) werden Versuchspläne naturgemäß in Bereiche hoher Belastungen verschoben, z.\,B. in den nordöstlichen Quadranten des Parameterraums, um Ausfälle in vertretbarer Prüfzeit zu erzwingen (denkbare Ausnahme: beispielsweise kleiner Wertebereich von Temperaturen).
 Ziel der Modellbildung bleibt jedoch die verlässliche Prognose unter wesentlich moderateren Feldbedingungen (südwestlicher Quadrant).
 
-Anstatt das in Abschnitt~\ref{sec:abweichungen} erarbeitete geometrische Budget rein zur passiven Kostensenkung zu nutzen, drängt sich ein proaktiver Ansatz auf: Die durch die Design-Robustheit "freigewordenen" Stützstellen - etwa substituierbare Zentralpunkte oder verschleißkritische Sternpunkte - werden gezielt in Richtung des anvisierten Feldbereichs verlagert.
-Dieser strategische \textit{Brückenbau im Parameterraum} erzeugt asymmetrische Validierungspunkte, die das Regressionsmodell auf dem Extrapolationspfad verankern und empirisch absichern.
+Anstatt das in Abschnitt~\ref{sec:abweichungen} erarbeitete geometrische Budget rein zur passiven Kostensenkung zu nutzen, erschließt sich ein proaktiver Ansatz:
+Die durch die Design-Robustheit freigewordenen Stützstellen - etwa substituierbare Zentralpunkte oder Extremstellen wie Sternpunkte - werden gezielt in Richtung des anvisierten Feldbereichs verlagert während der verbleibende Versuchsplan weiterhin die notwendige Trennschärfe für die Effektidentifikation gewährleistet und beschleunigt wird.
+Dieser strategische \textit{Brückenbau im Parameterraum} erzeugt asymmetrische Validierungspunkte, die das Regressionsmodell auf dem Extrapolationspfad verankern, empirisch absichern und in der Prognose Extrapolation-fähig machen.
 
 Um den Leistungsgewinn dieser gerichteten Design-Manipulationen objektiv bewerten zu können, wird die zuvor eingeführte \ac{SPV} aus ihrer globalen Integralbetrachtung gelöst.
-Es bedarf nun ihrer isolierten Anwendung als exakte, lokale Maßzahl, die das Vertrauensintervall der Vorhersage punktgenau im fernen Feld-Betriebspunkt quantifiziert.
+Es bedarf nun ihrer isolierten Anwendung als exakte, lokale Maßzahl, die das Vertrauensintervall der Vorhersage punktgenau im Prognosepunkt quantifiziert.
+Typisch für Lebensdauer- bzw. Zuverlässigkeits-Assessments kann dieser einem kritischen Betriebspunkt entsprechen, der weit außerhalb der getesteten Hochlastgrenzen liegt.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Die Scaled Prediction Variance als Prognosemetrik} \label{subsec:spv_metrik}
 
-Während Parameter-Schätzfehler (\textit{Bias}) und Multikollinearität (\ac{VIF}) die Identifikation der wahren physikalischen Effekte innerhalb des untersuchten Versuchsraums gefährden, verlagert sich der Fokus in der Lebensdauerprognose auf einen gänzlich anderen Aspekt: die Vorhersageunsicherheit des extrapolierten Zielwertes.
-In multivariaten \ac{ALT}-Szenarien liegt dieser Zielwert - die nominelle Lebensdauer im Feldbetrieb oder ein wesentlicher Arbeitspunkt des Produktes- definitionsgemäß weit außerhalb der getesteten, hochbelasteten Parametergrenzen.
-Jede Unsicherheit in den geschätzten Regressionskoeffizienten $\hat{\sym{beta}}$ pflanzt sich über die Hebelarme der Modellgleichung fort und weitet sich mit zunehmender geometrischer Distanz zum Design-Zentrum exponentiell aus.
+Während die vorangegangenen Analysen in Abschnitt~\ref{subsec:ergebnisse_sensitivitaet} die Schätzbarkeit der zugrundeliegenden Modelleffekte (\ac{power}, \textit{Bias}) fokussierten, verlagert sich der Anspruch in der \ac{ALT}-Lebensdauerprognose auf die Vorhersageunsicherheit des Zielwertes gemäß Gleichung~\ref{eq:pred_variance_scaled}.
+Da der nominelle Feldbetrieb definitionsgemäß weit außerhalb der getesteten Hochlastgrenzen liegt, weitet sich jede Unsicherheit der Regressionskoeffizienten mit zunehmender geometrischer Distanz zum Design-Zentrum exponentiell aus. Zur Quantifizierung dieser ortsabhängigen Prognosegüte dient die \ac{SPV} (vgl. mathematische Definition in Kapitel~2).
 
-Um diese Prognoseunsicherheit losgelöst von der realen Fehlervarianz $\sym{sigma}^2$ bewerten und verschiedene Versuchsplan-Alternativen objektiv vergleichen zu können, wird die \ac{SPV} herangezogen \cite{Montgomery.2020}.
-Sie skaliert die absolute Vorhersagevarianz $\text{Var}[\hat{\sym{y}}(\sym{x})]$ mit der Anzahl der Versuchsstützstellen $\symsub{N}{RSD}$ und normiert sie auf die Systemstreuung $\sym{sigma}^2$.
-In Matrix-Notation ergibt sich die \ac{SPV} an einem beliebigen Punkt $\sym{x}_{p}$ des Parameterraums zu:
-\begin{equation} \label{eq:spv}
-    \text{SPV}(\sym{x}_{p}) = \frac{\symsub{N}{RSD} \cdot \text{Var}[\hat{\sym{y}}(\sym{x}_{p})]}{\sym{sigma}^2} = \symsub{N}{RSD} \cdot \sym{x}_{p}^\top (\sym{X}^\top \sym{X})^{-1} \sym{x}_{p}
-\end{equation}
-wobei $\sym{x}_{p}^\top$ den Vektor der Prädiktorvariablen am Punkt der Auswertung und $(\sym{X}^\top \sym{X})^{-1}$ die inverse Informationsmatrix des gewählten Designs darstellen \cite{Giovannitti.1989}.
+Um die Auswirkungen von Stützstellen-Modifikationen gezielt auf diese Extrapolationsfähigkeit zu bewerten, untersucht \textcite{Arndt.2024} die Varianztopologie modifizierter \acp{CCD} mittels Konturplots sowie \textit{Variance Dispersion} (\ac{VDG}) und \textit{Fraction of Design Space} (\ac{FDS}) Graphen.
+Die dort abgeleiteten Ergebnisse kontextualisieren die \textit{Design-Penalties} aus Abschnitt~\ref{subsec:fazit_sensitivitaet} entscheidend für die Prognosepraxis: Es belegt sich, dass eine Reduktion der Zentralpunkte (analog zum untersuchten \textit{Fall IV: \ac{ZP}}) die \ac{SPV} zwar im unmittelbaren interpolativen Kern des Versuchsplans erhöht, sich jedoch auf die Peripherie und den fernen Extrapolationsraum de facto nicht auswirkt.
+Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen und gefahrlos als Gestaltungsbudget freigegeben werden können.
 
-\subsubsection*{Auswirkungen von Stützstellen-Modifikationen auf die Vorhersagevarianz}
+Demgegenüber offenbart die \ac{SPV}-Analyse den enormen geometrischen Hebel der Sternpunkte.
+Während ihr ersatzloser Entfall (\textit{Fall IV: \ac{SP}}) die Trennschärfe und Modellstabilität global schädigt, führt eine gezielte Verschiebung dieser Punkte - beispielsweise der Rückzug aus extremen, schadensirrelevanten Hochlastbereichen hin zu moderateren Lastniveaus - zu einer gewollten, asymmetrischen Verformung der Varianzfunktion.
+Die \ac{SPV} wird exakt in jener Richtung, in die der Sternpunkt als \textit{Brückenpunkt} wandert, massiv gedämpft.
 
-Wie in der vorangegangenen Analyse der I-Effizienz (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) bereits indiziert, reagiert die \ac{SPV} hochsensibel auf die geometrische Verteilung der Stützstellen.
-Basierend auf den Untersuchungen von \textcite{Arndt.2024} (RAMS) lässt sich der Einfluss von \ac{ZP}- und \ac{SP}-Manipulationen auf die Prognosefähigkeit präzise quantifizieren.
-
-\begin{itemize}
-    \item \textbf{Einfluss der Zentralpunkte:} Die Reduktion von Replikas im Design-Zentrum ($\symsub{n}{idx_C}$) beeinträchtigt die Schätzung der quadratischen Terme, wirkt sich jedoch primär lokal aus. Eine hohe Anzahl an \acp{ZP} minimiert die \ac{SPV} drastisch im Kernbereich des Versuchsplans (Interpolation). Für die Extrapolation in weit entfernte Feldbereiche verliert diese lokale Überbestimmung jedoch massiv an Relevanz. Es zeigt sich folglich, dass redundante \ac{ZP} für \ac{EoL}-Prognosen ein ineffizientes Investment darstellen und prädestiniert sind, um als geometrisches Budget für den Brückenbau umgewidmet zu werden \cite{Arndt.2024}.
-    \item \textbf{Einfluss der Sternpunkte:} \acp{SP} definieren die maximalen Hebelarme ($\symsub{alpha}{idx_D}$) der Informationsmatrix. Ein Entfall von \acp{SP} (wie im zuvor analysierten \textit{Fall IV: \ac{SP}}) führt zu einem rapiden Anstieg der \ac{SPV}, insbesondere an den Rändern des Versuchsraums. Werden \acp{SP} hingegen gezielt nicht zensiert, sondern lediglich geometrisch verschoben (beispielsweise weg von extremen Hochlastbereichen hin zu moderateren Lastniveaus), transformiert sich ihr statistischer Nutzen: Sie reduzieren die \ac{SPV} exakt in jener Richtung, in die sie verschoben werden.
-\end{itemize}
-
-Diese topologischen Gesetzmäßigkeiten der Gleichung~\ref{eq:spv} bestätigen das enorme Potenzial adaptiver Designs: Wenn das Systemverhalten in der Design-Mitte durch wenige \ac{ZP} ausreichend definiert ist, können freigewordene Versuchskapazitäten gezielt genutzt werden, um asymmetrische Validierungspunkte in Richtung des Feld-Betriebspunktes zu platzieren.
-Solche "Brückenpunkte" verkürzen den geometrischen Extrapolationshebel $\sym{x}_{p}$ künstlich und binden die divergierende \ac{SPV}-Funktion an einem kritischen Zwischenstopp fest.
-
-Die isolierte, punktuelle Berechnung der \ac{SPV} ist jedoch unzureichend, um den globalen Profit einer solchen Modifikation in einem multivariaten Raum visuell und quantitativ zu greifen.
-Klassische Bewertungstools stoßen hierbei an ihre Grenzen.
+Diese topologischen Gesetzmäßigkeiten verknüpfen die reinen Parameteridentifikations-Ergebnisse nahtlos mit dem Prognoseanspruch:
+Die durch reduzierte \acp{ZP} freigewordenen Ressourcen lassen sich investieren, um den geometrischen Extrapolationshebel in Richtung des Feld-Betriebspunktes abzustützen und die divergierende \ac{SPV}-Funktion an einem kritischen Zwischenstopp zu erden.
+Zur Quantifizierung dieses spezifischen, richtungsabhängigen Informationsgewinns im multivariaten Raum stoßen klassische, meist rotationssymmetrisch auswertende Bewertungstools (wie der \ac{VDG}) jedoch an ihre Grenzen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

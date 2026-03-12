@@ -273,14 +273,14 @@ Da das lokale oder globale Optimum der Lebensdauer- bzw. Zuverlässigkeitsfunkti
 Eine besondere Herausforderung stellt hierbei zusätzlich die Integration von \ac{ALT} dar: Die Diskrepanz zwischen dem hochbelasteten Testraum (engl. \textbf{Design Space}) und dem regulären \textbf{Prädiktionsraum} (engl. Use Space oder \textbf{Field Space}) kann eine \textbf{Extrapolation} erforderlich machen, welche die Anforderungen an die Daten- und somit auch an die Designqualität deutlich verschärft.
 Für umfassendere Ausführungen zu Forschungserkenntnissen in \ac{ALT} sei hierbei insbesondere auf Arbeiten von \textcite{Meeker.1993,Meeker.2022,Nelson.1990, Elsayed.2007} verwiesen.
 Das Unwissen zur tatsächlichen Lage optimaler Antwortwerte und die Möglichkeit, per se einen systematischen Offset zwischen Design- und Field-Space durch \ac{ALT} vorzufinden, stellen Teststrategien nach Best-Guess Ansätzen nachteilig.
-Hier wird in der industriellen Praxis häufig fälschlicherweise ein \textbf{\ac{OFAT}}-Testing Ansatz gewählt - unabhängig, ob vom Vorhandensein von Lebensdauer- oder anderen Daten, welcher schlichtweg die Wahrscheinlichkeit, Optimalstellen im Parameterraum systematisch zu treffen, senkt und somit gegenüber \ac{L-DoE} nachteilig ist, vgl. \cite{Montgomery.2020,Siebertz.2017}.
+Hier wird in der industriellen Praxis häufig fälschlicherweise ein \textbf{\ac{OFAT}}-Testing Ansatz gewählt - unabhängig, ob vom Vorhandensein von Lebensdauer- oder anderen Daten, welcher schlichtweg die Wahrscheinlichkeit, Optimalstellen im Parameterraum systematisch zu treffen, senkt und somit gegenüber \ac{L-DoE} nachteilig ist, vgl. \cite{Montgomery.2020,Siebertz.2026}.
 Da nun die geometrische Struktur eines Versuchsplans die erreichbare Modellierungsqualität deterministisch begrenzt, ist eine präzise Bewertung der Plangüte anhand genau dieser Eigenschaft im Vorfeld unerlässlich.
 Hierfür können objektive \textbf{Performance-Indikatoren} sowie mathematische \textbf{Optimalitätskriterien} dienen, vgl. \cite{Montgomery.2020,Goos.2011}.
 Ergänzend zu rationalen Metriken wie der statistischen \textbf{Trennschärfe} (engl. \textbf{Power}) und dem Schätzergebnis einer \textbf{Koeffizienten}- bzw. Parameterschätzung sind diese Größen damit bestimmend für effiziente multivariate Lebensdauertests.
 
 Vor diesem Hintergrund fokussiert sich dieser Abschnitt auf eine gezielte Auswahl an Grundbegriffen und Metriken für multivariate Testpläne im Kontext von \ac{L-DoE} sowie auf eine Übersicht der für Lebensdauertests geeigneten Versuchspläne, bevor abschließend die statistische Modellbildung beleuchtet wird.
 
-Für eine grundsätzlichere Auseinandersetzung mit konventionellen Methoden und Werkzeugen von \ac{DoE} sei, mit Blick auf den Fokus der vorliegenden Arbeit, hingegen auf die einschlägige Literatur von \textcite{Kleppmann.2020}, \textcite{Siebertz.2017}, \textcite{Hinkelmann.2012} sowie vornehmlich \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
+Für eine grundsätzlichere Auseinandersetzung mit konventionellen Methoden und Werkzeugen von \ac{DoE} sei, mit Blick auf den Fokus der vorliegenden Arbeit, hingegen auf die einschlägige Literatur von \textcite{Kleppmann.2020}, \textcite{Siebertz.2026}, \textcite{Hinkelmann.2012} sowie vornehmlich \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
 Diese Werke behandeln intensiv die Inhalte grundsätzlicher statistischer Versuchsplanung, welche um Perspektiven zu \ac{L-DoE} bereits durch am \ac{IMA} entstandene Dissertationen von \textcite{Dazer.2019}, \textcite{Herzig.2021}, \textcite{Grundler.2024} und maßgeblich durch \textcite{Kremer.2021} fortschreitend ergänzt wurden.
 Konsequenterweise werden Hintergründe zum Umgang mit normalverteilten Daten oder Abweichungen davon im Rahmen des \ac{DoE}, die Diskussion zu einschlägigen Vor- und Nachteilen auch unter Abgrenzung zu Alternativen wie \ac{OFAT}, die Regressionsmodellierung auf Basis der \textbf{\ac{ANOVA}}, konventionelle Hypothesentests sowie fundamentale Ausführungen zu \ac{ALT} in den nachfolgenden Ausführungen nicht explizit betrachtet, sondern als bekannt vorausgesetzt.
 
@@ -314,7 +314,7 @@ Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Pa
 \end{figure}
 Um das Systemverhalten zu charakterisieren, werden die Faktoren als kategoriale oder kontinuierliche Parameter im Versuch auf diskreten Werten, den sogenannten \textbf{Faktorstufen} (engl. \textbf{Level}), variiert (\textit{Schritt~3}).
 Dies erfolgt in aller Regel in kodierter Darstellung, so entsprechen gemäß der gängigsten Konvention die Stufe \textit{-1} der niedrigen und \textit{+1} der hohen Einstellstufe.
-Die planerische Kombination verschiedener Faktorstufen äußert sich in spezifischen \textbf{Versuchspunkten} innerhalb des Parameterraums und entspricht der Versuchsplan-Matrix \cite{Kleppmann.2020,Siebertz.2017}.
+Die planerische Kombination verschiedener Faktorstufen äußert sich in spezifischen \textbf{Versuchspunkten} innerhalb des Parameterraums und entspricht der Versuchsplan-Matrix \cite{Kleppmann.2020,Siebertz.2026}.
 Der \textbf{Versuchsraum} (engl. \textbf{Design Space}) wird hierbei durch die Gesamtheit der technisch realisierbaren und im Versuch einstellbaren Parameterkombinationen aufgespannt.
 Die Auswahl geeigneter statistischer Versuchspläne (\textit{Schritt~4}) für die Durchführung (\textit{Schritt~5}) wird in Abschnitt~\ref{subsec:pläne} detailliert behandelt.
 
@@ -323,7 +323,7 @@ Mittels \textbf{Kontrastmethode} wird also die Änderung der Systemantwort über
 \begin{equation} \label{eq:eff}
     \sym{Eff}=\frac{1}{\sym{n}|_{+1}}\sum{\sym{y}|_{+1}} - \frac{1}{\sym{n}|_{-1}}\sum{\sym{y}|_{-1}}
 \end{equation}
-So können mittels \ac{DoE} strukturiert, effizient und verbindlich Informationen gewonnen werden, die über die direkten Effekte hinausgehen und differenziert Aufschluss über \textbf{Haupteffekte} sowie etwaige \textbf{Wechselwirkungen} der Faktoren auf die Antwort des Systems geben - vergleiche Abb.~\ref{fig:ma_abb2.04_effekt} sowie \textcite{Montgomery.2020,Kleppmann.2020,Siebertz.2017,Kremer.2021}.
+So können mittels \ac{DoE} strukturiert, effizient und verbindlich Informationen gewonnen werden, die über die direkten Effekte hinausgehen und differenziert Aufschluss über \textbf{Haupteffekte} sowie etwaige \textbf{Wechselwirkungen} der Faktoren auf die Antwort des Systems geben - vergleiche Abb.~\ref{fig:ma_abb2.04_effekt} sowie \textcite{Montgomery.2020,Kleppmann.2020,Siebertz.2026,Kremer.2021}.
 Abbildung~\ref{fig:ma_abb2.04_effekt} visualisiert derartige Effekte.
 So gibt die Darstellung eines Haupteffekts in Abhängigkeit des Vorzeichens und der Steigung (\textbf{positiver} oder \textbf{negativer} Haupteffekt) sozusagen die Einflussstärke und -richtung wieder, während bei Wechselwirkung der Effekt in Abhängigkeit der Einstellung eines \textbf{Co-Faktors} dargestellt wird.
 \begin{figure}[h]
@@ -434,7 +434,7 @@ Der voll-faktorielle Versuchsplan bildet somit den Standard-Versuchsplan im \ac{
 Versuche.
 Dieser Stichprobenumfang stellt sicher, dass das resultierende Gleichungssystem \textbf{gesättigt} ist: Mit $\sym{n}$ Versuchen lassen sich $\sym{n}-1$ Effekte für Hauptfaktoren und Wechselwirkungen eindeutig bestimmen.
 Von entscheidender Bedeutung für die Aussagekraft des Versuchsplans ist die Wahl der Faktorstufen (vgl. Abbildung~\ref{fig:ma_abb2.06_effektabstand}).
-Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, sodass signifikante Effekte sicher detektiert werden - vgl. \textbf{\ac{SNR}} \cite{Montgomery.2021} - wobei gleichzeitig zu geringe Abstände (Rauschen) sowie zu große Intervalle (Gefahr unerkannter Nichtlinearitäten) zu vermeiden sind, siehe auch Abbildung~\ref{fig:ma_abb2.06_effektabstand} sowie \textcite{Wu.2021,Siebertz.2017,Kleppmann.2020}.
+Die Differenz der gewählten Level muss bereits im Vorfeld definiert werden, sodass signifikante Effekte sicher detektiert werden - vgl. \textbf{\ac{SNR}} \cite{Montgomery.2021} - wobei gleichzeitig zu geringe Abstände (Rauschen) sowie zu große Intervalle (Gefahr unerkannter Nichtlinearitäten) zu vermeiden sind, siehe auch Abbildung~\ref{fig:ma_abb2.06_effektabstand} sowie \textcite{Wu.2021,Siebertz.2026,Kleppmann.2020}.
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.9\textwidth}
@@ -455,7 +455,7 @@ Sind nach Anwendung der Kreativmethoden (qualitatives Screening) weiterhin so vi
 Dies empfiehlt sich insbesondere für Systeme mit $\sym{k} > 5$ Faktoren, um die experimentelle Effizienz zu gewährleisten.
 Zur Veranschaulichung der Notwendigkeit: Bereits eine einzelne Replikation eines voll-faktoriellen Experiments mit $\sym{k}=8$ Faktoren würde $2^8 = 256$ Versuchsdurchläufe erfordern, was in der Lebensdauererprobung meist illusorisch ist.
 
-Für derartige Selektionsaufgaben eignen sich daher \textbf{Screening-Versuchspläne}, wie der \textbf{teil-faktorielle Versuchsplan} (Fractional Factorial Design) oder alternativ der \textbf{Plackett-Burman-Plan} \cite{Kleppmann.2020,Siebertz.2017,Montgomery.2020}.
+Für derartige Selektionsaufgaben eignen sich daher \textbf{Screening-Versuchspläne}, wie der \textbf{teil-faktorielle Versuchsplan} (Fractional Factorial Design) oder alternativ der \textbf{Plackett-Burman-Plan} \cite{Kleppmann.2020,Siebertz.2026,Montgomery.2020}.
 Bei diesem Ansatz wird lediglich eine selektive Teilmenge (Fraktion) der voll-faktoriellen Versuchsagenda umgesetzt, um mit minimalem Informationsverlust die für den Anwendungsfall signifikanten Effekte zu beschreiben.
 Mathematisch wird die Anzahl der Versuche dabei auf
 \begin{equation} \label{eq:teilfakt_n}
@@ -555,7 +555,7 @@ Diese computergenerierten Designs minimieren algorithmisch die durchschnittliche
 \subsection{Strategische Vorgehensweisen} \label{subsec:strategie}
 In der Praxis entsteht ein \ac{CCD} häufig im Rahmen einer \textbf{sequenziellen Versuchsstrategie}: Zeigt das initiale lineare Modell Anpassungsmängel (\textbf{Lack-of-Fit}), wird der bestehende faktorielle Plan um die \acp{SP} augmentiert, um ein Modell zweiter Ordnung zu fitten \cite{Myers.2016}.
 Modelle zweiter Ordnung sind insbesondere in der Lebensdauer- und Zuverlässigkeitstechnik vermehrt von Bedeutung, da sie die Existenz von lokalen Extrema (Minima oder Maxima) der Systemantwort im Versuchsraum detaillierter abbilden können \cite{Rigdon.2022,Dean.2017}.
-Prinzipielle Vorgehensweisen, die ein erfolgreiches Umsetzen von \ac{DoE} bzw. \ac{L-DoE} begünstigen sollten, wie \textbf{Blockbildung} oder \textbf{Randomisierung} (vgl. \cite{Siebertz.2017,Kleppmann.2020}) seien hier bereits vorausgesetzt.
+Prinzipielle Vorgehensweisen, die ein erfolgreiches Umsetzen von \ac{DoE} bzw. \ac{L-DoE} begünstigen sollten, wie \textbf{Blockbildung} oder \textbf{Randomisierung} (vgl. \cite{Siebertz.2026,Kleppmann.2020}), seien hier bereits vorausgesetzt.
 Abbildung~\ref{fig:abb2.08_strategy} fasst eine derartige strategische Vorgehensweise zur Realisierung eines \ac{CCD} zusammen, wie sie beispielsweise \textcite{Box.1951,Box.1988,Bisgaard.1992} vorschlagen.
 
 \begin{figure}[htbp]
@@ -617,11 +617,14 @@ Abbildung~\ref{fig:abb2.08_strategy} fasst eine derartige strategische Vorgehens
     \caption{Strategischer Ansatz zu augmentierter Versuchsplanung für die Lebensdauererprobung nach \cite{Box.1988,Bisgaard.1992}}
     \label{fig:abb2.08_strategy}
 \end{figure}
+
+
 Um effizient Versuchspunkte zu allokieren und für sequentiell fortlaufende Versuche weiterverwendet zu werden, wird in Abgleich mit Abbildung~\ref{fig:ma_abb2.02_doe_steps} zunächst ein \textbf{teil-faktorieller Versuchsplan} zur Identifikation signifikanter Faktoren durchgeführt.
 Anschließend wird der Plan zu einem \textbf{voll-faktoriellen Versuchsplan} erweitert, um alle Haupteffekte und Wechselwirkungen erster Ordnung zu schätzen.
 Daraufhin werden \textbf{\acp{ZP}} ergänzt, um das Vorhandensein von Krümmungen zu validieren.
 Abschließend werden bei Bedarf die \textbf{\acp{SP}} hinzugefügt, um ein vollständiges \ac{CCD} zu realisieren.
 Insbesondere in der Lebensdauererprobung ist eine derartige schrittweise Vorgehensweise sinnvoll, um den Versuchsumfang zu minimieren und dennoch eine fundierte Modellierung der Systemantwort zu gewährleisten.
+Schließlich kann ein hierbei sequentiell ausgewertet und ausgewählt werden, inwiefern ein optimiertes Modell mit ausgewählten Termen gegenüber einem konventionellen Modell quadratischer Ordnung überlegen wäre, um die Modellantwort abzuschätzen, vgl. \textcite{Paschal.2024}.
 Gleichzeitig erlaubt diese Strategie eine flexible Anpassung an unerwartete Ergebnisse in den einzelnen Phasen der Untersuchung, während lokale Optima von Zuverlässigkeiten im Sinne von \ac{DfR} im Vorfeld ohnehin nicht bekannt sind.
 In Abhängigkeit der Anpassung zur Wahl eines geeigneten Modells, linear oder quadratisch, kann die Versuchsplanung so stets an die aktuellen Erkenntnisse angepasst werden.
 Dies folgt im Wesentlichen einer übergeordneten Logik der Modellkomplexität:
@@ -678,7 +681,7 @@ wobei $\sym{corr}_{\sym{idx_i}\sym{idx_j}}$ den paarweisen Korrelationskoeffizie
 Folglich gilt für einen streng orthogonalen Plan $\sym{A2} = 0$.
 Jeder Anstieg dieses Wertes signalisiert zunehmende Multikollinearität im Design, was das Risiko von Fehlschlüssen bei der Identifikation kausaler Haupteffekte und Interaktionen erhöht \cite{Wu.2021}.
 
-Zudem liegt \textbf{Ausgewogenheit} vor, sofern für einen jeweiligen Faktor alle anderen Faktoreinstellungen gleichmäßig aufgeteilt sind \cite{Siebertz.2017}.
+Zudem liegt \textbf{Ausgewogenheit} vor, sofern für einen jeweiligen Faktor alle anderen Faktoreinstellungen gleichmäßig aufgeteilt sind \cite{Siebertz.2026}.
 Damit wird Varianzhomogenität und Gleichbehandlung der Faktoren gewährleistet, sodass die Schätzung der Effekte unverzerrt erfolgt.
 
 Mathematisch fundiert die Bewertung der Schätzgenauigkeit auf der Inversen der Informationsmatrix, welche als \textbf{Varianz-Kovarianz-Matrix} (oder \textbf{Dispersionsmatrix}) $(\sym{X}'\sym{X})^{-1}$ der Regressionskoeffizienten definiert ist:
@@ -695,7 +698,7 @@ Ein universelles Maß zur Beurteilung der Schätzgüte einzelner Parameter ist d
 \end{equation}
 Da klassische Schätzverfahren (wie \ac{OLS} oder \ac{MLE}) unter regulären Bedingungen erwartungstreu sind ($\text{Bias} = 0$), entspricht der \ac{MSE} in diesen Fällen exakt der Schätzvarianz $\sym{Var}(\hat{\sym{beta}}_{\sym{idx_j}})$ und skaliert folglich direkt mit den Diagonalelementen der inversen Informationsmatrix.
 
-Während der $\sym{A2}$-Indikator die Gesamtmatrix bewertet, stehen genau diese Diagonalelemente in direktem Zusammenhang mit dem \textbf{\ac{VIF}} für die Evaluation einzelner Modellterme \cite{Siebertz.2017,Kleppmann.2020}.
+Während der $\sym{A2}$-Indikator die Gesamtmatrix bewertet, stehen genau diese Diagonalelemente in direktem Zusammenhang mit dem \textbf{\ac{VIF}} für die Evaluation einzelner Modellterme \cite{Siebertz.2026,Kleppmann.2020}.
 Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz (und damit der \ac{MSE}) eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.
 Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Kleppmann.2020,Montgomery.2021}.
 
@@ -706,7 +709,7 @@ Ergänzend zur globalen Bewertung der Multikollinearität durch den \ac{VIF} erl
 \end{equation}
 eine lokale Diagnose der Versuchspunkte.
 Die Diagonalelemente $\sym{h}_{\sym{idx_i}\sym{idx_i}} \in \left[ \frac{1}{\sym{n}}, 1 \right]$ dieser Projektionsmatrix, bezeichnet als \textbf{Hebelwerte} (engl. \textbf{Leverage}), quantifizieren den Einfluss eines einzelnen Versuchslaufs auf die Modellvorhersage.
-Punkte mit hohen Hebelwerten (typischerweise $\sym{h}_{\sym{idx_i}\sym{idx_i}}> 2\sym{p}/\sym{n}$) befinden sich geometrisch weit vom Zentrum des Versuchsraums entfernt und dominieren die Regression, was den Plan anfällig für Ausreißer in diesen spezifischen Einstellungen macht \cite{Siebertz.2017,Montgomery.2021}.
+Punkte mit hohen Hebelwerten (typischerweise $\sym{h}_{\sym{idx_i}\sym{idx_i}}> 2\sym{p}/\sym{n}$) befinden sich geometrisch weit vom Zentrum des Versuchsraums entfernt und dominieren die Regression, was den Plan anfällig für Ausreißer in diesen spezifischen Einstellungen macht \cite{Siebertz.2026,Montgomery.2021}.
 
 Während Hebelwerte jedoch lediglich das \textit{Potenzial} einer Beobachtung zur Modellbeeinflussung aufgrund ihrer geometrischen Exponiertheit indizieren, quantifizieren Einflussstatistiken die \textit{tatsächliche} Auswirkung auf die Regressionsparameter und die Vorhersagegüte.
 Die Identifikation solcher Beobachtungen erfolgt methodisch durch den iterativen Ausschluss des $i$-ten Datensatzes (\textit{Leave-One-Out}-Methodik) und den Vergleich der resultierenden Modellstatistiken mit dem ursprünglichen Modell basierend auf $\sym{n}$ Beobachtungen \cite{Belsley.2004, Montgomery.2021}.
@@ -748,6 +751,7 @@ Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zie
 Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
 Eine Übersicht der einschlägigen \textbf{Optimalitätskriterien} - oder einfach \textbf{Optimalitäten} - welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}.
 Sie bilden mitunter die Grundlage für diverse weitere Optimalitäten und hybride Ansätze und lassen sich prinzipiell in Modellierungskriterien (\textit{\textbf{A}}-, \textit{\textbf{D}}-~Optimalität) und Prädiktionskriterien (\textit{\textbf{G}}-, \textit{\textbf{I}}-, \textit{\textbf{U}}-, \textit{\textbf{V}}\textbf{-~Optimalität}) unterteilen \cite{Myers.2016,Rigdon.2022}.
+Während konventionelle Ansätze stets die Optimierung eines einzelnen Kriteriums anstreben, können in der Praxis auch mehrere Kriterien gleichzeitig berücksichtigt werden, um eine ausgewogene Optimierung zu erreichen \cite{Goos.2011,Walsh.2024}.
 
 Jenseits praktischer Kriterien sind hier der Vollständigkeit halber auch eine Teilmenge eher theoretischerer Optimalitäten zu nennen.
 Die \textbf{\textit{E}-Optimalität}, führt zur Minimierung des maximalen Eigenwerts der Dispersionsmatrix, was eine Worst-Case-Absicherung zur Varianzschätzung begünstigt - vergleiche \textcite{Boyd.2004,Russell.2019}.
@@ -947,7 +951,7 @@ Unter Einhaltung dieser harten Nebenbedingungen wird anschließend jene Design-V
 
 \subsubsection{Signifikanz und Trennschärfe}
 Zuletzt muss sichergestellt werden, dass der Versuchsplan über eine ausreichende \textbf{Trennschärfe} (engl. $\sym{power}$) verfügt.
-Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens (vergleiche \textbf{\sym{t}-Statistik}, \textbf{\ac{SNR}}, \textbf{Signifikanztests} nach \textcite{Kleppmann.2020,Montgomery.2020,Goos.2011}) korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2017,Kleppmann.2020}.
+Die Trennschärfe beschreibt als Metrik diejenige Wahrscheinlichkeit, mit der ein existierender Einfluss durch Faktoren vor dem Hintergrund des experimentellen Rauschens (vergleiche \textbf{\sym{t}-Statistik}, \textbf{\ac{SNR}}, \textbf{Signifikanztests} nach \textcite{Kleppmann.2020,Montgomery.2020,Goos.2011}) korrekt als \textbf{signifikanter} Effekt $\sym{Eff}$ identifiziert wird \cite{Siebertz.2026,Kleppmann.2020}.
 Insofern ist ein Effekt in praktischem Umfeld natürlich problemabhängig (Streuungscharakteristik der Lebensdauer, realisierbare Stichprobengröße, etc.) und meist von Bedeutung für $\sym{Eff} \geq 2\sym{sigma}$, wobei Trennschärfewerte $\geq 80\,\%$ als befriedigend gelten \cite{Rigdon.2022,Montgomery.2020}.
 Insbesondere bei reduzierten Versuchsplänen und unter dem Einfluss stochastischer Lebensdauerstreuung ist die Power-Analyse jedoch essenziell, um das Risiko von falsch-negativen Schlussfolgerungen zu minimieren.
 Letztendlich kann die Trennschärfe somit als Garantiemetrik verstanden werden, die sicherstellt, dass ein geplanter Versuchsaufbau in der Lage ist, Effekte von praktischer Relevanz zu detektieren \cite{Cohen.1988,Myers.2016} - was vornehmlich in Bezug auf Lebensdauertests aufgrund genannter wirtschaftlicher Randbedingungen von hoher Bedeutung ist.
@@ -996,8 +1000,6 @@ Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.B. $\sym
 Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht bzw. mit Streuung überlagert und/oder zensiert.
 Anschließend erfolgt die Modellbildung und Hypothesenprüfung.
 Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant ($\sym{p-Wert} < \sym{alpha}$) erkannt wird, entspricht der geschätzten $\sym{power}$ des Designs.
-
-
 
 \subsection{Statistische Modellbildung} \label{subsec:modellbildung}
 Die statistische Modellbildung transformiert die durch den Versuchsplan generierte Datenbasis in einen funktionalen, empirisch basierten Zusammenhang zwischen den Einflussfaktoren $\symsub{x}{idx_i}$ und der Lebensdauerantwort.
@@ -1148,7 +1150,7 @@ Die Validität eines parametrischen Lebensdauermodells (hier Weibull-\ac{GLM}) b
 Erstens folgen die Lebensdauern der angenommenen Verteilung.
 Zweitens sind die Lebensdauern statistisch unabhängig.
 Drittens besteht ein log-linearer Zusammenhang zwischen dem Skalenparameter und den Einflussgrößen, wobei der Formparameter in einfachen Modellen als konstant über den gesamten Versuchsraum angenommen wird.
-Die Beurteilung dieser Modellgüte erfordert bei Lebensdauerdaten, bedingt durch Nicht-Normalverteilung und Zensierung, eine Anpassung klassischer Konzepte zur Residuenanalyse ($\sym{y} - \hat{\sym{y}}$) \cite{Kleppmann.2020,Siebertz.2017}.
+Die Beurteilung dieser Modellgüte erfordert bei Lebensdauerdaten, bedingt durch Nicht-Normalverteilung und Zensierung, eine Anpassung klassischer Konzepte zur Residuenanalyse ($\sym{y} - \hat{\sym{y}}$) \cite{Kleppmann.2020,Siebertz.2026}.
 Stattdessen werden transformierte Residuen betrachtet, die den Bezug zur Verteilung der kleinsten Extremwerte \sym{SEV} herstellen, welcher der logarithmierten Weibull-Verteilung zugrunde liegt.
 Analog zur $\sym{z}$-Transformation bei der Normalverteilung lassen sich für jede Beobachtung $\symsub{t}{idx_i}$ standardisierte Residuen $\sym{resid_std}_{\sym{idx_i}}$ berechnen.
 Dabei ersetzt der logarithmierte Schätzwert der charakteristischen Lebensdauer $\ln(\hat{\sym{T}}_{\sym{idx_i}})$ (vgl. Gleichung~\ref{eq:glm_link}) den Lageparameter $\sym{mu}$ und der Kehrwert des Formparameters $1/\hat{\sym{b}}$ die Skalierung $\sym{sigma}$.
