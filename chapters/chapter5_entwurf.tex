@@ -456,51 +456,111 @@ Die Gegenüberstellung der Resultate (vgl. Abbildung~\ref{fig:ma_abb5.1.4_korrel
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Fazit: Statistische Effektivität und geometrisches Gestaltungsbudget} \label{subsec:fazit_sensitivitaet}
 
-Die simulativen Analysen belegen die immense topologische Robustheit des \ac{CCD} gegenüber moderaten geometrischen Modifikationen.
-Während symmetrische Abweichungen (\textit{Fall I}), Rauschen (\textit{Fall III}) oder der Entfall redundanter Zentralpunkte (\textit{Fall IV: \ac{ZP}}) lediglich kalkulierbare, marginale \textit{Design-Penalties} erzeugen, markiert einzig der asymmetrische Ausfall von Extrempunkten (\textit{Fall IV: \ac{SP}}) die harte methodische Grenze der Matrixstabilität.
+Die simulativen Analysen belegen die erstaunliche topologische Robustheit des \ac{CCD} gegenüber geometrischen Modifikationen.
+Zwar manifestieren sich bei massiven strukturellen Eingriffen in den Versuchsraum definierte Ausreißer in der Schätzvarianz - etwa der sprunghafte Anstieg des \ac{MSE} bei den Termen $\hat{\sym{beta}}_1$ und $\hat{\sym{beta}}_{11}$ (auf Werte $>12$, vgl. Abbildung~\ref{fig:ma_abb5.1.4_msedev}) infolge eines asymmetrischen Sternpunkt-Ausfalls (\textit{Fall IV: \ac{SP}}) oder die Varianzinflation des Interaktionsterms ($\sym{VIF}_{\sym{beta}_{12}} \approx 1{,}23$, siehe Tabelle~\ref{tab:results_ortho_metrics}) bei starker Faktorkorrelation (\textit{Fall II}).
+Setzt man diese Extremwerte jedoch in Relation zu kritischen statistischen \textit{Red Flags} (Ausschlusskriterien wie einem $\sym{VIF} > 5$ oder massiven Einbrüchen der Trennschärfe von $\Delta \sym{power} > 10\,\%$ auf die wesentlichen Haupteffekte), erweisen sich selbst diese modifizierten Versuchspläne als funktionell.
+Der systematische Schätzfehler (\textit{Bias}) bleibt ohnehin durchweg vernachlässigbar, vgl. Abbildung~\ref{fig:ma_abb5.1.4_betadev}.
 
-Diese Gutmütigkeit rechtfertigt einen praktischen Paradigmenwechsel:
-Der bewusste Verzicht auf starre Lehrbuch-Orthogonalität zugunsten reduzierter Prüfzeiten liefert dem Planer ein wertvolles \textbf{geometrisches Gestaltungsbudget}.
-Um dieses Budget im weiteren Verlauf der Arbeit in eine holistische Effizienzbewertung (Informationsgewinn vs. Prüfkosten) zu überführen, muss geklärt werden, wie es bestmöglich investiert wird.
+Darüber hinaus verursachen der Entfall redundanter Zentralpunkte (\textit{Fall IV: \ac{ZP}}) oder moderate axiale Verschiebungen (\textit{Fall I}) lediglich marginale \textit{Design-Penalties}.
+Diese nachgewiesene Fehlertoleranz der Planmatrix rechtfertigt einen radikalen Paradigmenwechsel für hochbeschleunigte Lebensdauertests: Der Verzicht auf Replikationen im Zentrum oder die bewusste Entschärfung extremer Prüfbedingungen an den hochbelasteten (nordöstlichen) Rändern des Parameterraums zerstören die statistische Validität des Modells nicht, flexibilisieren aber Prüfkapazitäten.
+Der Tausch einer in der Praxis ohnehin durch Rauschen limitierten, globalen Trennschärfe gegen signifikante Prüfzeitverkürzungen liefert dem Planer somit ein wertvolles \textbf{geometrisches Gestaltungsbudget}.
+
+Um dieses Budget im weiteren Verlauf der Arbeit in eine holistische Effizienzbewertung (Informationsgewinn versus Prüfkosten) zu überführen, muss geklärt werden, wie die freigewordenen Versuchskapazitäten bestmöglich reinvestiert werden.
 Hierfür greift die Maximierung der reinen Erkennungswahrscheinlichkeit (\ac{power}) zu kurz.
-Wie durch die I-Effizienz bereits mathematisch indiziert, rückt stattdessen die zentrale Herausforderung der Lebensdauererprobung in den Fokus: die modellspezifische Extrapolationsabsicherung mittels \ac{SPV}.
+Wie durch das Integral der I-Effizienz bereits mathematisch indiziert, rückt stattdessen die eigentliche Herausforderung der \ac{EoL}-Erprobung in den Fokus: die gezielte Reduktion der Prognosevarianz \ac{SPV} für die modellspezifische Extrapolationsabsicherung, wenn eine Garantie für die Identifikation von Effekten bereits zu akzeptabler Eintrittwahrscheinlichkeit gegeben ist.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Adaptive Versuchsplanung zur Extrapolationsabsicherung} \label{sec:adaptive_planung}
 
-In der Praxis beschleunigter Lebensdauertests (\ac{ALT}) werden Versuchspläne naturgemäß in Bereiche hoher Belastungen verschoben, z.\,B. in den nordöstlichen Quadranten des Parameterraums, um Ausfälle in vertretbarer Prüfzeit zu erzwingen (denkbare Ausnahme: beispielsweise kleiner Wertebereich von Temperaturen).
-Ziel der Modellbildung bleibt jedoch die verlässliche Prognose unter wesentlich moderateren Feldbedingungen (südwestlicher Quadrant).
+In der Praxis beschleunigter Lebensdauertests (\ac{ALT}) werden Versuchspläne naturgemäß in Bereiche hoher Belastungen verschoben - beispielsweise in den nordöstlichen Quadranten des Parameterraums - um Ausfälle in vertretbarer Prüfzeit zu erzwingen, sofern es der physikalisch sinnvolle Wertebereich der Faktoren zulässt.
+Das eigentliche Ziel der Modellbildung bleibt jedoch die verlässliche Prognose unter wesentlich moderateren Feldbedingungen: im Feldbereich des meist südwestlichen Quadranten.
 
-Anstatt das in Abschnitt~\ref{sec:abweichungen} erarbeitete geometrische Budget rein zur passiven Kostensenkung zu nutzen, erschließt sich ein proaktiver Ansatz:
-Die durch die Design-Robustheit freigewordenen Stützstellen - etwa substituierbare Zentralpunkte oder Extremstellen wie Sternpunkte - werden gezielt in Richtung des anvisierten Feldbereichs verlagert während der verbleibende Versuchsplan weiterhin die notwendige Trennschärfe für die Effektidentifikation gewährleistet und beschleunigt wird.
-Dieser strategische \textit{Brückenbau im Parameterraum} erzeugt asymmetrische Validierungspunkte, die das Regressionsmodell auf dem Extrapolationspfad verankern, empirisch absichern und in der Prognose Extrapolation-fähig machen.
+Anstatt das in Abschnitt~\ref{sec:abweichungen} erarbeitete geometrische Budget rein zur passiven Kostensenkung zu nutzen, drängt sich nun ein proaktiver Ansatz auf:
+Die durch die nachgewiesene Design-Robustheit freigewordenen Stützstellen - etwa substituierbare Zentralpunkte oder extreme, für den Schädigungsmechanismus gegebenenfalls irrelevante Sternpunkte - werden gezielt in Richtung des anvisierten Feldbereichs verlagert, während das verbleibende Basisdesign weiterhin die notwendige Trennschärfe für die Effektidentifikation gewährleistet.
+Dieser strategische \textit{Brückenbau im Parameterraum} erzeugt asymmetrische Validierungspunkte, die das Regressionsmodell auf dem Extrapolationspfad verankern und empirisch absichern.
 
 Um den Leistungsgewinn dieser gerichteten Design-Manipulationen objektiv bewerten zu können, wird die zuvor eingeführte \ac{SPV} aus ihrer globalen Integralbetrachtung gelöst.
-Es bedarf nun ihrer isolierten Anwendung als exakte, lokale Maßzahl, die das Vertrauensintervall der Vorhersage punktgenau im Prognosepunkt quantifiziert.
-Typisch für Lebensdauer- bzw. Zuverlässigkeits-Assessments kann dieser einem kritischen Betriebspunkt entsprechen, der weit außerhalb der getesteten Hochlastgrenzen liegt.
+Es bedarf nun ihrer isolierten Anwendung als exakte, lokale Maßzahl, die das Vertrauensintervall der Vorhersage punktgenau im kritischen Betriebspunkt des Feldes quantifiziert.
+Eine Bewertung nach etabliertem Vorgehen via Bias und $\sym{power}$ im Anschluss ist obligatorisch und folgt in Abschnitt~\ref{sec:weibull_transfer}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Die Scaled Prediction Variance als Prognosemetrik} \label{subsec:spv_metrik}
 
-Während die vorangegangenen Analysen in Abschnitt~\ref{subsec:ergebnisse_sensitivitaet} die Schätzbarkeit der zugrundeliegenden Modelleffekte (\ac{power}, \textit{Bias}) fokussierten, verlagert sich der Anspruch in der \ac{ALT}-Lebensdauerprognose auf die Vorhersageunsicherheit des Zielwertes gemäß Gleichung~\ref{eq:pred_variance_scaled}.
-Da der nominelle Feldbetrieb definitionsgemäß weit außerhalb der getesteten Hochlastgrenzen liegt, weitet sich jede Unsicherheit der Regressionskoeffizienten mit zunehmender geometrischer Distanz zum Design-Zentrum exponentiell aus. Zur Quantifizierung dieser ortsabhängigen Prognosegüte dient die \ac{SPV} (vgl. mathematische Definition in Kapitel~2).
+Während die vorangegangenen Analysen in Abschnitt~\ref{subsec:ergebnisse_sensitivitaet} die Schätzbarkeit der zugrundeliegenden Modelleffekte (\ac{power}, \textit{Bias}) fokussierten, verlagert sich der Anspruch in der \ac{ALT}-Lebensdauerprognose außerdem auf die Vorhersageunsicherheit des Zielwertes (vgl. Gleichung~\ref{eq:pred_variance_scaled}).
+Da der nominelle Feldbetrieb definitionsgemäß weit außerhalb der getesteten Hochlastgrenzen liegt, weitet sich jede Unsicherheit der Regressionskoeffizienten mit zunehmender geometrischer Distanz zum Design-Zentrum exponentiell aus.
+Zur Quantifizierung dieser ortsabhängigen Prognosegüte dient die \ac{SPV}.
 
-Um die Auswirkungen von Stützstellen-Modifikationen gezielt auf diese Extrapolationsfähigkeit zu bewerten, untersucht \textcite{Arndt.2024} die Varianztopologie modifizierter \acp{CCD} mittels Konturplots sowie \textit{Variance Dispersion} (\ac{VDG}) und \textit{Fraction of Design Space} (\ac{FDS}) Graphen.
-Die dort abgeleiteten Ergebnisse kontextualisieren die \textit{Design-Penalties} aus Abschnitt~\ref{subsec:fazit_sensitivitaet} entscheidend für die Prognosepraxis: Es belegt sich, dass eine Reduktion der Zentralpunkte (analog zum untersuchten \textit{Fall IV: \ac{ZP}}) die \ac{SPV} zwar im unmittelbaren interpolativen Kern des Versuchsplans erhöht, sich jedoch auf die Peripherie und den fernen Extrapolationsraum de facto nicht auswirkt.
-Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen und gefahrlos als Gestaltungsbudget freigegeben werden können.
+Um die Auswirkungen von Stützstellen-Modifikationen gezielt auf diese Extrapolationsfähigkeit zu bewerten, untersucht \textcite{Arndt.2024} die Varianztopologie modifizierter \acp{CCD} mittels Konturplots sowie Visualisierungen zur \textit{Variance Dispersion} (\ac{VDG}) und \textit{Fraction of Design Space} (\ac{FDS}).
+Durch eine Reduktion der Zentralpunkte (analog zum untersuchten \textit{Fall IV: \ac{ZP}}) erhöht sich demnach die \ac{SPV} zwar im unmittelbaren interpolativen Kern des Versuchsplans leicht, sie wirkt sich jedoch de facto nicht auf die Peripherie und den fernen Extrapolationsraum aus.
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figureheight{5cm} % Einheitliche Höhe für beide Subplots
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \setlength\figurewidth{\linewidth}
+        \input{plots/ma_abb5.2.1_vdg_nc.tex}
+        \caption{Variance Dispersion Graph (VDG)}
+        \label{fig:vdg_nc}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \setlength\figurewidth{\linewidth}
+        \input{plots/ma_abb5.2.1_fds_nc.tex}
+        \caption{Fraction of Design Space (FDS)}
+        \label{fig:fds_nc}
+    \end{subfigure}
+    \caption{Untersuchung der Vorhersagegüte bei Variation der Zentralpunkt-Anzahl $\sym{n}_{\sym{idx_C}}$ für $k=2$ Faktoren.}
+    \label{fig:combined_nc_analysis}
+\end{figure}
+Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen können, sofern deren Umfang über die Grenzen der Modellstabilität hinausgeht und potenziell als Gestaltungsbudget freigegeben werden können.
 
 Demgegenüber offenbart die \ac{SPV}-Analyse den enormen geometrischen Hebel der Sternpunkte.
-Während ihr ersatzloser Entfall (\textit{Fall IV: \ac{SP}}) die Trennschärfe und Modellstabilität global schädigt, führt eine gezielte Verschiebung dieser Punkte - beispielsweise der Rückzug aus extremen, schadensirrelevanten Hochlastbereichen hin zu moderateren Lastniveaus - zu einer gewollten, asymmetrischen Verformung der Varianzfunktion.
-Die \ac{SPV} wird exakt in jener Richtung, in die der Sternpunkt als \textit{Brückenpunkt} wandert, massiv gedämpft.
+Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (die identifizierte statistische \textit{Red Flag} aus \textit{Fall IV: \ac{SP}}), transformiert sich ihr Nutzen bei einer gezielten Verschiebung: Der Rückzug aus extremen Hochlastbereichen hin zu moderateren Lastniveaus führt zu einer gewollten, asymmetrischen Verformung der Varianzfunktion.
+\begin{figure}[htbp]
+    \centering
+    \setlength\figureheight{5.5cm} % Etwas mehr Höhe für bessere Lesbarkeit der Legenden
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \setlength\figurewidth{\linewidth}
+        \input{plots/ma_abb5.2.1_fds_omitted.tex}
+        \caption{FDS-Vergleich bei Ausfällen}
+        \label{fig:fds_omitted}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \setlength\figurewidth{\linewidth}
+        \input{plots/ma_abb5.2.1_vdg_omitted.tex}
+        \caption{VDG des manipulierten Designs}
+        \label{fig:vdg_omitted}
+    \end{subfigure}
+    \caption{Auswirkung reduzierter Orthogonalität durch schrittweisen Entfall axialer Versuchspunkte auf die skalierte Prädiktionsvarianz $\sym{nu}$.}
+    \label{fig:combined_omission_analysis}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{7cm}
+    \input{plots/ma_abb5.2.1_contour_spv.tex}
+    \caption{Dreidimensionale Darstellung der skalierten Prädiktionsvarianz $\sym{nu}$ und zugehöriger Konturverlauf für ein asymmetrisch manipuliertes Versuchsdesign.}
+    \label{fig:contour_spv}
+\end{figure}
+Dies eröffnet das Potenzial, Mäßigung ungünstiger Wertlagen der \ac{SPV} durch Verschiebung der Sternpunkte in exakt jene Richtung zu erreichen \textit{Brückenpunkt}.
 
-Diese topologischen Gesetzmäßigkeiten verknüpfen die reinen Parameteridentifikations-Ergebnisse nahtlos mit dem Prognoseanspruch:
+Diese topologischen Gesetzmäßigkeiten verschmelzen die Ergebnisse der reinen Parameteridentifikation nahtlos mit dem Prognoseanspruch:
 Die durch reduzierte \acp{ZP} freigewordenen Ressourcen lassen sich investieren, um den geometrischen Extrapolationshebel in Richtung des Feld-Betriebspunktes abzustützen und die divergierende \ac{SPV}-Funktion an einem kritischen Zwischenstopp zu erden.
 Zur Quantifizierung dieses spezifischen, richtungsabhängigen Informationsgewinns im multivariaten Raum stoßen klassische, meist rotationssymmetrisch auswertende Bewertungstools (wie der \ac{VDG}) jedoch an ihre Grenzen.
 
