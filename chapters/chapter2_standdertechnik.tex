@@ -675,9 +675,9 @@ Dies stellt einen Versuchsplan also zunächst einmal qualitativ günstig dar.
 Um den Grad der Abweichung von diesem Idealzustand - etwa bei asymmetrisch ausgedünnten Designs oder durch praxisbedingte Modifikationen der Versuchsraumgeometrie - quantitativ bewerten zu können, hat sich in der Literatur der \textbf{$\sym{A2}$-Indikator} als globales Maß für Nicht-Orthogonalität etabliert \cite{Box.2007, Ahn.2015}.
 Er berechnet sich als Summe der quadrierten Elemente abseits der Hauptdiagonalen der normierten Informationsmatrix $\sym{M}$:
 \begin{equation} \label{eq:a2_indicator}
-    \sym{A2} = \sum_{\sym{idx_i}=1}^{\sym{p}} \sum_{\substack{\sym{idx_j}=1 \\ \sym{idx_j} \neq \sym{idx_i}}}^{\sym{p}} \sym{corr}_{\sym{idx_i}\sym{idx_j}}^2 \quad \text{mit} \quad \sym{corr}_{\sym{idx_i}\sym{idx_j}} = \frac{\sym{M}_{\sym{idx_i}\sym{idx_j}}}{\sqrt{\sym{M}_{\sym{idx_i}\sym{idx_i}}\sym{M}_{\sym{idx_j}\sym{idx_j}}}},
+    \sym{A2} = \sum_{\sym{idx_i}=1}^{\sym{p}} \sum_{\substack{\sym{idx_j}=1 \\ \sym{idx_j} \neq \sym{idx_i}}}^{\sym{p}} \sym{r}_{\sym{idx_i}\sym{idx_j}}^2 \quad \text{mit} \quad \sym{r}_{\sym{idx_i}\sym{idx_j}} = \frac{\sym{M}_{\sym{idx_i}\sym{idx_j}}}{\sqrt{\sym{M}_{\sym{idx_i}\sym{idx_i}}\sym{M}_{\sym{idx_j}\sym{idx_j}}}},
 \end{equation}
-wobei $\sym{corr}_{\sym{idx_i}\sym{idx_j}}$ den paarweisen Korrelationskoeffizienten zwischen der $\sym{idx_i}$-ten und $\sym{idx_j}$-ten Spalte der Versuchsplan-Matrix repräsentiert.
+wobei $\sym{r}_{\sym{idx_i}\sym{idx_j}}$ den paarweisen Korrelationskoeffizienten zwischen der $\sym{idx_i}$-ten und $\sym{idx_j}$-ten Spalte der Versuchsplan-Matrix repräsentiert.
 Folglich gilt für einen streng orthogonalen Plan $\sym{A2} = 0$.
 Jeder Anstieg dieses Wertes signalisiert zunehmende Multikollinearität im Design, was das Risiko von Fehlschlüssen bei der Identifikation kausaler Haupteffekte und Interaktionen erhöht \cite{Wu.2021}.
 
@@ -714,10 +714,10 @@ Punkte mit hohen Hebelwerten (typischerweise $\sym{h}_{\sym{idx_i}\sym{idx_i}}> 
 Während Hebelwerte jedoch lediglich das \textit{Potenzial} einer Beobachtung zur Modellbeeinflussung aufgrund ihrer geometrischen Exponiertheit indizieren, quantifizieren Einflussstatistiken die \textit{tatsächliche} Auswirkung auf die Regressionsparameter und die Vorhersagegüte.
 Die Identifikation solcher Beobachtungen erfolgt methodisch durch den iterativen Ausschluss des $i$-ten Datensatzes (\textit{Leave-One-Out}-Methodik) und den Vergleich der resultierenden Modellstatistiken mit dem ursprünglichen Modell basierend auf $\sym{n}$ Beobachtungen \cite{Belsley.2004, Montgomery.2021}.
 Als globales Maß für den Einfluss der $i$-ten Beobachtung auf den Vektor aller geschätzten Regressionskoeffizienten $\hat{\sym{Beta}}$ dient die \textbf{Cook-Distanz} ($\sym{D}_i$).
-Sie verknüpft die Information des intern studentisierten Residuums $\symsub{resid}{idx_i}$ mit dem Hebelwert $\sym{h}_{\sym{idx_i}\sym{idx_i}}$:
+Sie verknüpft die Information des intern studentisierten Residuums $\symsub{r}{idx_i}$ mit dem Hebelwert $\sym{h}_{\sym{idx_i}\sym{idx_i}}$:
 % ...
 \begin{equation}
-    \symsub{D}{idx_i} = \frac{\sym{resid}_{\sym{idx_i}}^2}{\sym{p}} \cdot \frac{\sym{h}_{\sym{idx_i}\sym{idx_i}}}{1-\sym{h}_{\sym{idx_i}\sym{idx_i}}}.
+    \symsub{D}{idx_i} = \frac{\sym{r}_{\sym{idx_i}}^2}{\sym{p}} \cdot \frac{\sym{h}_{\sym{idx_i}\sym{idx_i}}}{1-\sym{h}_{\sym{idx_i}\sym{idx_i}}}.
     \label{eq:cooks_d}
 \end{equation}
 % ...

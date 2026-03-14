@@ -15,10 +15,10 @@ Um den Paradigmenwechsel von klassischen, starren \ac{DoE}-Ansätzen hin zu hoch
 Zunächst wird in Abschnitt \ref{sec:abweichungen} die statistische Sensitivität des ungestörten Designs evaluiert, um die Robustheit von Standard-Versuchsplänen gegenüber Praxisrestriktionen zu prüfen.
 Unabhängig von einer \ac{ALT}-Beschleunigung wird quantifiziert, wie das \ac{CCD} auf typische, unbeabsichtigte Restriktionen - wie Anlagenlimits, asymmetrische Ausfälle oder Streuungen der Steuerung - reagiert.
 Mittels Monte-Carlo-Simulationen (\ac{MCS}) auf Basis eines fiktiv-physikalischen \textit{Ground-Truth}-Modells wird nachgewiesen, ab welchem Grad solche Orthogonalitätsabweichungen die Schätzpräzision und insbesondere die statistische Trennschärfe (\ac{power}) kompromittieren.
-Das daraus gewonnene Bewusstsein über die erstaunliche Robustheit des \ac{CCD} legitimiert in einem zweiten Schritt (Abschnitt \ref{sec:adaptive_extrapolation}) den gezielten, asymmetrischen Eingriff in die Planmatrix im Sinne einer adaptiven Versuchsplanung. Hierbei wird untersucht, wie durch den Verzicht redundanter Versuche "freigewordene" Umfänge als strategische Brückenpunkte genutzt werden können, um die \ac{SPV} bei der Extrapolation in den realen Feldbereich zu minimieren.
+Das daraus gewonnene Bewusstsein über die erstaunliche Robustheit des \ac{CCD} legitimiert in einem zweiten Schritt (Abschnitt~\colorbox{yellow}{tbd}) den gezielten, asymmetrischen Eingriff in die Planmatrix im Sinne einer adaptiven Versuchsplanung. Hierbei wird untersucht, wie durch den Verzicht redundanter Versuche "freigewordene" Umfänge als strategische Brückenpunkte genutzt werden können, um die \ac{SPV} bei der Extrapolation in den realen Feldbereich zu minimieren.
 Zur richtungsabhängigen Veranschaulichung dieser Extrapolationsabsicherung wird eine dedizierte visuelle Bewertungsmethodik, der \ac{EVG}, eingeführt.
 
-Darauf aufbauend werden die bis dato unter Normalverteilungsannahme abgeleiteten Design-Modifikationen in Abschnitt \ref{sec:weibull_transformation} auf multivariate Lebensdauermodelle übertragen.
+Darauf aufbauend werden die bis dato unter Normalverteilungsannahme abgeleiteten Design-Modifikationen in Abschnitt~\colorbox{yellow}{tbd} auf multivariate Lebensdauermodelle übertragen.
 Anhand lebensdauerverteilter Daten (Weibull) und der Parameteridentifikation via \ac{MLE} wird validiert, ob der adaptive Brückenbau auch unter den erschwerten Bedingungen von Zensierungen und Lebensdauerskalierungen seine überlegene Prognosefähigkeit behält, welche maßgeblich über die resultierenden Konfidenzintervalle im Feldbereich evaluiert wird.
 Den Abschluss bildet in Abschnitt \ref{sec:kostenmodell} eine ökonomische Effizienz- und Kostenmodellierung, die das holistische Bild vervollständigt.
 Indem die resultierenden Testlaufzeiten in reale Prüfstandskosten übersetzt werden, wird die statistische Testgüte - repräsentiert durch \ac{power} und \ac{SPV} - direkt mit dem monetären Aufwand verknüpft.
@@ -150,49 +150,49 @@ Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation
         $\symsub{xi_factor}{idx_fac_b}$
          & \textbf{\ac{SP}-Shift} \newline
         Asymmetrische / Co-Faktorielle Verschiebung eines \ac{SP}s zur Simulation geometrischer Verzerrungen und Faktoren-Korrelation.
-         & $[0,10;\, \symsub{alpha}{idx_D}]$
+         & $[0,10;\, \phantom{0}\phantom{0}\symsub{alpha}{idx_D}]$
          & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_c}$
          & \textbf{\acp{ZP} ($\symsub{n}{idx_C}$)} \newline
         Variation der Anzahl der \acp{ZP} $\symsub{n}{idx_C}>0$.
-         & $[1,00;\, 8,00]$
+         & $[1,00;\, \phantom{0}8,00]$
          & Diskret (Faktoriell)                                                                                                \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_d}$
          & \textbf{\acp{SP} ($\symsub{n}{idx_S}$)} \newline
         Variation durch Entfall von maximal $50\,\%$ der \acp{SP} (z.B. durch Zensierung oder Funktionalitätsverlust).
-         & $[2,00;\, 4,00]$
+         & $[2,00;\, \phantom{0}4,00]$
          & Diskret (Faktoriell)                                                                                                \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_e}$
          & \textbf{System-Rauschen ($\sym{snr}$)} \newline
         Verhältnis zwischen pseudo-physikalischem Modellkoeffizienten und Systemabweichung bzw. Effektstreuung $\symsub{beta}{idx_i}/\sym{sigma}$.
-         & $[0,80;\, 1,20]$
+         & $[0,80;\,\phantom{0} 1,20]$
          & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_f}$
          & \textbf{Effekt-Verhältnis ($\sym{beta}_1/\sym{beta}_2$)} \newline
         Verhältnis zweier Haupteffekte zueinander: zwischen gleichwertiger Effektstärke oder einem Anteil von $10\,\%$.
-         & $[0,10;\, 1,00]$
+         & $[0,10;\,\phantom{0} 1,00]$
          & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_g}$
          & \textbf{Mess-Rauschen ($\sym{epsilon}$)} \newline
         Verhältnis zwischen den Modellkoeffizienten und dem Wert des Streuparameters der Systemantwort.
-         & $[0,80;\, 1,20]$
+         & $[0,80;\, \phantom{0}1,20]$
          & Kont. (\ac{CCD})                                                                                                    \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_h}$
          & \textbf{Signifikanzniveau ($\sym{alpha}$)} \newline
         Das gewählte Signifikanzniveau.
-         & $[0,02;\, 0,08]$
+         & $[0,02;\, \phantom{0}0,08]$
          & Kont. (\ac{CCD})                                                                                                    \\
 
         \bottomrule
@@ -440,9 +440,9 @@ Weiterführende Sensitivitäts- und Strukturmatrizen sowie die Konvergenzplots d
 
 Die Gegenüberstellung der Resultate (vgl. Abbildung~\ref{fig:ma_abb5.1.4_korrelation}) erlaubt eine fundierte Neubewertung der etablierten Design-Metriken hinsichtlich ihrer Vorhersagekraft für die $\sym{power}$:
 \begin{itemize}
-    \item \textbf{Grenzen topologischer Indikatoren ($\sym{A2}$ und \ac{VIF}):} Der rein topologische $\sym{A2}$-Indikator korreliert kaum linear mit dem tatsächlichen Trennschärfe-Verlust (Pearson $\sym{corr} \approx 0{,}35$). Auch das \ac{VIF} zeigt mit $\sym{corr} \approx 0{,}69$ nur begrenzte globale Aussagekraft. Da Trennschärfe-Verluste infolge von Multikollinearität (Klippeneffekt) sigmoidal verlaufen, eignen sich diese Topologie-Indikatoren primär als Warnsysteme für Singularitäten, nicht aber als präzise Prädiktoren der $\sym{power}$.
-    \item \textbf{Die I-Effizienz als robustes, globales Maß:} Auf Ebene der theoretischen Optimalitäten erweist sich die I-Effizienz ($\sym{eff_I}$) als verlässlichster Indikator ($\sym{corr} \approx -0{,}90$). Da sie die \ac{SPV} über den gesamten Versuchsraum integriert, bewertet sie direkt die durchschnittliche Prognosegüte des Modells. Im Gegensatz zur rein volumenbasierten D-Effizienz - welche durch asymmetrische Verzerrungen künstlich gebläht werden kann - erfasst die I-Effizienz die wahren Hebelwirkungen realitätsnah. Dies prädestiniert die \ac{SPV} als entscheidende Leitmetrik, sobald der Fokus von der reinen Parameteridentifikation auf die Vorhersagefähigkeit wechselt.
-    \item \textbf{Der \ac{MSE} als direkter Prädiktor der Teststatistik:} Die simulierte Schätzvarianz (\ac{MSE}) fungiert als nahezu perfekter, inverser Prädiktor für den Trennschärfe-Erhalt ($\sym{corr} \approx 1{,}00$ für $\hat{\sym{beta}}_{11}$). Dies folgt stringent aus der Prüfmathematik: Da die Teststatistik (z.\,B. der \sym{Fstat}-Wert) proportional zu $1/\sqrt{\sym{MSE}}$ skaliert, verschiebt eine Varianzinflation den Nichtzentralitätsparameter unmittelbar. Der \ac{MSE} übersetzt den geometrischen Fehler somit verlustfrei in die probabilistische Trennschärfe.
+    \item \textbf{Grenzen topologischer Indikatoren ($\sym{A2}$):} Der rein topologische $\sym{A2}$-Indikator weist ein geringes Bestimmtheitsmaß in Bezug auf den tatsächlichen Trennschärfe-Verlust auf ($\sym{R2} \approx 0{,}12$). Da Trennschärfe-Verluste infolge von Multikollinearität (Klippeneffekt) oft sigmoidal und damit hochgradig nichtlinear verlaufen, eignet sich dieser Topologie-Indikator primär als Warnsystem für Singularitäten, nicht aber als präziser Prädiktor für die verbleibende $\sym{power}$.
+    \item \textbf{Die I-Effizienz als robustes, globales Maß:} Auf Ebene der theoretischen Optimalitätskriterien erweist sich die I-Effizienz ($\sym{eff_I}$) als verlässlicher Indikator, der rund $81\,\%$ der Varianz des Trennschärfe-Verlusts erklärt ($\sym{R2} \approx 0{,}81$). Da sie die \ac{SPV} über den gesamten Versuchsraum integriert, bewertet sie direkt die durchschnittliche Prognosegüte des Modells. Im Gegensatz zur rein volumenbasierten D-Effizienz erfasst die I-Effizienz die wahren Hebelwirkungen geometrischer Abweichungen realitätsnah. Dies prädestiniert die \ac{SPV} als entscheidende Leitmetrik, sobald der Fokus von der reinen Parameteridentifikation auf die Prognosefähigkeit wechselt.
+    \item \textbf{Der \ac{MSE} als direkter Prädiktor der Teststatistik:} Die simulierte Schätzvarianz (\ac{MSE}) fungiert als nahezu perfekter Prädiktor für den Trennschärfe-Erhalt ($\sym{R2} \approx 1{,}00$ am Beispiel von $\hat{\beta}_{11}$). Dies folgt stringent aus der Prüfmathematik: Da die Teststatistik (z.\,B. der \sym{Fstat}-Wert) proportional zu $1/\sqrt{\sym{MSE}}$ skaliert, verschiebt eine Varianzinflation den Nichtzentralitätsparameter unmittelbar. Der \ac{MSE} übersetzt den geometrischen Fehler somit nahezu verlustfrei in die probabilistische Trennschärfe.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -450,7 +450,7 @@ Die Gegenüberstellung der Resultate (vgl. Abbildung~\ref{fig:ma_abb5.1.4_korrel
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{4cm}
     \input{plots/ma_abb5.1.4_korrelation.tex}
-    \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust in den \textbf{simulierten Störszenarien}: \textit{Fälle I-IV}. \colorbox{yellow}{Gitter weg, $\sym{corr}$ zu $R^2$}}
+    \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust in den \textbf{simulierten Störszenarien}: \textit{Fälle I-IV}.}
     \label{fig:ma_abb5.1.4_korrelation}
 \end{figure}
 
@@ -503,26 +503,25 @@ Zur Quantifizierung dieser ortsabhängigen Prognosegüte dient die \ac{SPV}.
 
 Um die Auswirkungen von Stützstellen-Modifikationen gezielt auf diese Extrapolationsfähigkeit zu bewerten, untersucht \textcite{Arndt.2024} die Varianztopologie modifizierter \acp{CCD} mittels Konturplots sowie Visualisierungen zur \textit{Variance Dispersion} (\ac{VDG}) und \textit{Fraction of Design Space} (\ac{FDS}).
 Durch eine Reduktion der Zentralpunkte (analog zum untersuchten \textit{Fall IV: \ac{ZP}}) erhöht sich demnach die \ac{SPV} zwar im unmittelbaren interpolativen Kern des Versuchsplans leicht, sie wirkt sich jedoch de facto nicht auf die Peripherie und den fernen Extrapolationsraum aus.
-
 \begin{figure}[htbp]
     \centering
     \setlength\figureheight{5cm} % Einheitliche Höhe für beide Subplots
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \setlength\figurewidth{\linewidth}
+        \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_vdg_nc.tex}
-        \caption{Variance Dispersion Graph (VDG)}
+        \caption{Variance Dispersion Graph (\ac{VDG})}
         \label{fig:vdg_nc}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \setlength\figurewidth{\linewidth}
+        \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_fds_nc.tex}
-        \caption{Fraction of Design Space (FDS)}
+        \caption{Fraction of Design Space (\ac{FDS})}
         \label{fig:fds_nc}
     \end{subfigure}
-    \caption{Untersuchung der Vorhersagegüte bei Variation der Zentralpunkt-Anzahl $\sym{n}_{\sym{idx_C}}$ für $k=2$ Faktoren.}
+    \caption{Vorhersagegüte bei Variation der \ac{ZP}-Anzahl $\sym{n}_{\sym{idx_C}}$ für einen \c{CCD} mit $\sym{k}=2$ Faktoren.}
     \label{fig:combined_nc_analysis}
 \end{figure}
 Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen können, sofern deren Umfang über die Grenzen der Modellstabilität hinausgeht und potenziell als Gestaltungsbudget freigegeben werden können.
@@ -534,7 +533,7 @@ Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (di
     \setlength\figureheight{5.5cm} % Etwas mehr Höhe für bessere Lesbarkeit der Legenden
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \setlength\figurewidth{\linewidth}
+        \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_fds_omitted.tex}
         \caption{FDS-Vergleich bei Ausfällen}
         \label{fig:fds_omitted}
@@ -542,12 +541,12 @@ Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (di
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
-        \setlength\figurewidth{\linewidth}
+        \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_vdg_omitted.tex}
         \caption{VDG des manipulierten Designs}
         \label{fig:vdg_omitted}
     \end{subfigure}
-    \caption{Auswirkung reduzierter Orthogonalität durch schrittweisen Entfall axialer Versuchspunkte auf die skalierte Prädiktionsvarianz $\sym{nu}$.}
+    \caption{Auswirkung reduzierter Orthogonalität durch schrittweisen Entfall axialer Versuchspunkte auf die skalierte Prädiktionsvarianz .}
     \label{fig:combined_omission_analysis}
 \end{figure}
 \begin{figure}[htbp]
@@ -555,7 +554,7 @@ Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (di
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{7cm}
     \input{plots/ma_abb5.2.1_contour_spv.tex}
-    \caption{Dreidimensionale Darstellung der skalierten Prädiktionsvarianz $\sym{nu}$ und zugehöriger Konturverlauf für ein asymmetrisch manipuliertes Versuchsdesign.}
+    \caption{Dreidimensionale Darstellung der skalierten Prädiktionsvarianz und zugehöriger Konturverlauf für ein asymmetrisch manipuliertes Versuchsdesign.}
     \label{fig:contour_spv}
 \end{figure}
 Dies eröffnet das Potenzial, Mäßigung ungünstiger Wertlagen der \ac{SPV} durch Verschiebung der Sternpunkte in exakt jene Richtung zu erreichen \textit{Brückenpunkt}.

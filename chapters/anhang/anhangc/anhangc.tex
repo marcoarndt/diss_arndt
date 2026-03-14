@@ -5,29 +5,41 @@
 \section{Stabilitäts- und Konvergenzanalysen der Design-Modifikationen}
 \label{app:c}
 
-In diesem Anhang sind ergänzende statistische Visualisierungen zur Bewertung der geometrischen Design-Verzerrungen (vergleiche Abschnitt 5.3) aufgeführt. Sämtliche Analysen wurden für ein $\sym{snr}=1{,}33$ und über $n_{MC}=10.000$ Monte-Carlo-Iterationen durchgeführt.
+In diesem Anhang sind ergänzende statistische Visualisierungen zur Bewertung der geometrischen Design-Verzerrungen (vergleiche Abschnitt 5.3) aufgeführt.
+
+\input{tables/tab_results_ortho_mse.tex}
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.5\textwidth}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{4cm}
+    \input{plots/ma_abb_app.c_betadev_snr1.tex}
+    \caption{Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle für $\sym{snr}=1$.}
+    \label{fig:app.c_betadev_snr1}
+\end{figure}
+
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
     \setlength\figureheight{16cm}
     \input{plots/ma_abb_app.c_convergence_power.tex}
-    \caption{Laufende Konvergenz der Trennschärfe für alle Modellparameter. Die Schätzungen stabilisieren sich bei der $\sym{n}_{\sym{idx_MC}}=10.000$ reproduzierbar.}
+    \caption{Laufende Konvergenz der Trennschärfe für alle Modellparameter. Die Schätzungen stabilisieren sich bei der $\sym{n}_{\sym{idx_MC}}=10^4$ reproduzierbar.}
     \label{fig:app.c_conv_power}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.5\textwidth}
+    \setlength\figurewidth{0.9\textwidth}
     \setlength\figureheight{16cm}
     \input{plots/ma_abb_app.c_convergence_beta.tex}
-    \caption{Konvergenz der \ac{OLS}-Parameterschätzwerte ($\hat{\sym{beta}}_i$). Alle Modelle erweisen sich unabhängig von der geometrischen Verzerrung als erwartungstreu. Die Schätzungen stabilisieren sich bei der $\sym{n}_{\sym{idx_MC}}=10.000$ reproduzierbar.}
+    \caption{Konvergenz der \ac{OLS}-Parameterschätzwerte ($\hat{\sym{beta}}_i$). Alle Modelle erweisen sich unabhängig von der geometrischen Verzerrung als erwartungstreu. Die Schätzungen stabilisieren sich bei der $\sym{n}_{\sym{idx_MC}}=10^4$ reproduzierbar.}
     \label{fig:app.c_conv_beta}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.5\textwidth}
+    \setlength\figurewidth{0.9\textwidth}
     \setlength\figureheight{16cm}
     \input{plots/ma_abb_app.c_pvalue_hist.tex}
     \caption{Relative Häufigkeiten der in der Simulation ermittelten $\sym{p-Wert}$e der Signifikanztests.}
@@ -36,30 +48,22 @@ In diesem Anhang sind ergänzende statistische Visualisierungen zur Bewertung de
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.5\textwidth}
-    \setlength\figureheight{16cm}
-    \input{plots/ma_abb_app.c_korrelation_mse.tex}
-    \caption{Zusammenhang zwischen simulierter Schätzvarianz (\ac{MSE}) und dem prozentualen Trennschärfe-Verlust ($\Delta \sym{power}$) über alle Koeffizienten und Szenarien. Die Pearson-Korrelation $\sym{corr}$ untermauert die signifikante Kausalität. \colorbox{yellow}{I-Eff ergänzen}}
-    \label{fig:app.c_corr_mse}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{19cm}
+    \input{plots/ma_abb_app.c_korrelation_all.tex}
+    \caption{Korrelierende Metriken zur prozentualen Trennschärfe-Änderung ($\Delta \sym{power}$ [\%]) über alle Koeffizienten und Szenarien ergänzend zu Abbiildung~\ref{fig:ma_abb5.1.4_korrelation}.}
+    \label{fig:app.c_corr_all}
 \end{figure}
 
-\input{tables/tab_results_ortho_mse.tex}
 
-\subsection{Szenarien bei Arbeitspunkt \ac{SNR}$=1$}
+
+\clearpage
+\subsection{Szenarien bei Arbeitspunkt \ac{SNR}$=1$} \label{app:c_snr1}
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.8\textwidth}
-    \setlength\figureheight{6cm}
-    \input{plots/ma_abb_app.c_betadev_snr1.tex}
-    \caption{Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle für $\sym{snr}=1$.}
-    \label{fig:app.c_betadev_snr1}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \setlength\figurewidth{0.8\textwidth}
-    \setlength\figureheight{6cm}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{4cm}
     \input{plots/ma_abb_app.c_msedev_snr1.tex}
     \caption{Güte der Schätzer (\ac{MSE}) für $\sym{snr}=1$.}
     \label{fig:app.c_msedev_snr1}
@@ -67,8 +71,8 @@ In diesem Anhang sind ergänzende statistische Visualisierungen zur Bewertung de
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.8\textwidth}
-    \setlength\figureheight{6cm}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{4cm}
     \input{plots/ma_abb_app.c_powerdev_snr1.tex}
     \caption{Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien für $\sym{snr}=1$.}
     \label{fig:app.c_powerdev_snr1}

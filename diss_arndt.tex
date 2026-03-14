@@ -237,15 +237,12 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_k}{type=indices, name={\ensuremath{k}}, description={Laufvariable (für Faktor-Indizierung)}}
 \newglossaryentry{idx_sim}{type=indices, name={\ensuremath{\textnormal{sim}}}, description={Simulationsergebnisse}}
 \newglossaryentry{idx_M}{type=indices, name={\ensuremath{\textnormal{M}}}, description={Modellbezogen}}
-
-
 \newglossaryentry{idx_fail}{type=indices, name={\ensuremath{\textnormal{fail}}}, description={Ausfallbedingt (Fehlerfolge)}}
 \newglossaryentry{idx_fix}{type=indices, name={\ensuremath{\textnormal{fix}}}, description={Fix (z.\,B. Rüstkosten)}}
 \newglossaryentry{idx_spec}{type=indices, name={\ensuremath{\textnormal{spec}}}, description={Spezifisch (pro Prüfling)}}
 \newglossaryentry{idx_test}{type=indices, name={\ensuremath{\textnormal{test}}}, description={Versuchs-/Testbezogen}}
 \newglossaryentry{idx_time}{type=indices, name={\ensuremath{\textnormal{time}}}, description={Zeitabhängig (pro Zeiteinheit)}}
 \newglossaryentry{idx_total}{type=indices, name={\ensuremath{\textnormal{total}}}, description={Gesamt (Summe aller Anteile)}}
-
 \newglossaryentry{idx_fac_a}{type=indices, name={\ensuremath{\textnormal{a}}}, description={Simulationsfaktor: Sternpunkt-Abstand}}
 \newglossaryentry{idx_fac_b}{type=indices, name={\ensuremath{\textnormal{b}}}, description={Simulationsfaktor: Sternpunkt-Shift}}
 \newglossaryentry{idx_fac_c}{type=indices, name={\ensuremath{\textnormal{c}}}, description={Simulationsfaktor: Zentralpunkte}}
@@ -254,10 +251,9 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_fac_f}{type=indices, name={\ensuremath{\textnormal{f}}}, description={Simulationsfaktor: Effekt-Verhältnis}}
 \newglossaryentry{idx_fac_g}{type=indices, name={\ensuremath{\textnormal{g}}}, description={Simulationsfaktor: Mess-Rauschen}}
 \newglossaryentry{idx_fac_h}{type=indices, name={\ensuremath{\textnormal{h}}}, description={Simulationsfaktor: Signifikanzniveau}}
-
 \newglossaryentry{idx_nc}{type=indices, name={\ensuremath{\textnormal{nc}}}, description={Nichtzentral (non-central)}}
 \newglossaryentry{idx_nom}{type=indices, name={\ensuremath{\textnormal{nom}}}, description={Nominale Werte}}
-
+\newglossaryentry{idx_r}{type=indices, name={\ensuremath{r}}, description={Radiusbezogen}}
 \newglossaryentry{idx_pwr}{type=indices, name={\ensuremath{\textnormal{pwr}}}, description={Power-bezogen}}
 \newglossaryentry{idx_MSE}{type=indices, name={\ensuremath{\textnormal{MSE}}}, description={MSE-bezogen}}
 \newglossaryentry{idx_delta}{type=indices, name={\ensuremath{\Delta}}, description={Differenz- oder Verlustwert}}
@@ -285,7 +281,6 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Fraktionsgrad}, text={\ensuremath{p_{\textnormal{f}}}}]{p_f}{\ensuremath{p_{\textnormal{f}}}}
 \glsxtrnewsymbol[type=formulas, description={Quantilwert}, text={\ensuremath{q}}]{q}{\ensuremath{q}}
 \glsxtrnewsymbol[type=formulas, description={Zuverlässigkeit}]{R}{\ensuremath{R}}
-\glsxtrnewsymbol[type=formulas, description={Studentisiertes Residuum}, text={\ensuremath{r}}]{resid}{\ensuremath{r}}
 \glsxtrnewsymbol[type=formulas, description={Modellparameter, Schätzung}, text={\ensuremath{\theta}}]{thet}{\ensuremath{\theta}}
 \glsxtrnewsymbol[type=formulas, description={Empirische Standardabweichung (von \sym{x})}, text={\ensuremath{s}}]{s}{\ensuremath{s}}
 \glsxtrnewsymbol[type=formulas, description={Empirische Varianz (von \sym{x})}, text={\ensuremath{s^2}}]{s_sq}{\ensuremath{s^2}}
@@ -299,11 +294,12 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Trennschärfe, Power}, text={\ensuremath{power}}]{power}{\ensuremath{power}}
 \glsxtrnewsymbol[type=formulas, description={Likelihood-Ratio}, text={\ensuremath{LR}}]{LR}{\ensuremath{LR}}
 \glsxtrnewsymbol[type=formulas, description={Nicht-Orthogonalitätsindikator ($A_2$-Kriterium)}, text={\ensuremath{A_2}}]{A2}{\ensuremath{A_2}}
-\glsxtrnewsymbol[type=formulas, description={Paarweiser (Pearson-)Korrelationskoeffizient}, text={\ensuremath{r}}]{corr}{\ensuremath{r}}
+\glsxtrnewsymbol[type=formulas, description={Paarweiser (Pearson-)Korrelationskoeffizient \newline Radius im Versuchsraum (Euklidische Distanz) \newline Studentisiertes Residuum}, text={\ensuremath{r}}]{r}{\ensuremath{r}}
 
 \glsxtrnewsymbol[type=formulas, description={Effizienz (allgemein)}, text={\ensuremath{\eta}}]{eff_gen}{\ensuremath{\eta}}
 
-\glsxtrnewsymbol[type=formulas, description={Radius im Versuchsraum (Euklidische Distanz)}, text={\ensuremath{r}}]{radius}{\ensuremath{r}}
+\glsxtrnewsymbol[type=formulas, description={Bestimmtheitsmaß (Determinationskoeffizient)}, text={\ensuremath{R^2}}]{R2}{\ensuremath{R^2}}
+\glsxtrnewsymbol[type=formulas, description={Varianz-Dispersion (mittlere skalierte Prädiktionsvarianz auf dem Radius \sym{r})}, text={\ensuremath{V}}]{Vspv}{\ensuremath{V}}
 
 
 % ===========================================================================
@@ -541,18 +537,14 @@ Thanks for your service.
 \printbibliography[title={Literatur}]
 
 
-
-
-
-% Appendix, if needed:
-%% This uses \section and below to have everything grouped in the virtual chapter "Anhang" in the table of contents. 
 \startSMBAppendix
 
 \addcontentsline{toc}{chapter}{Anhang}
 \input{chapters/anhang/anhanga/anhanga.tex}
+\clearpage
 \input{chapters/anhang/anhangb/anhangb.tex}
+\clearpage
 \input{chapters/anhang/anhangc/anhangc.tex}
-% \section{Ein Anhang}
-% \subsection{Unteranhang 1}
+\clearpage
 
 \end{document}
