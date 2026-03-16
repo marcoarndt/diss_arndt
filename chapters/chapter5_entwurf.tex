@@ -509,19 +509,19 @@ Durch eine Reduktion der Zentralpunkte (analog zum untersuchten \textit{Fall IV:
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \setlength\figurewidth{0.8\linewidth}
-        \input{plots/ma_abb5.2.1_vdg_nc.tex}
-        \caption{Variance Dispersion Graph (\ac{VDG})}
-        \label{fig:vdg_nc}
+        \input{plots/ma_abb5.2.1_fds_nc.tex}
+        \caption{Fraction of Design Space (\ac{FDS})}
+        \label{fig:fds_nc}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \setlength\figurewidth{0.8\linewidth}
-        \input{plots/ma_abb5.2.1_fds_nc.tex}
-        \caption{Fraction of Design Space (\ac{FDS})}
-        \label{fig:fds_nc}
+        \input{plots/ma_abb5.2.1_vdg_nc.tex}
+        \caption{Variance Dispersion Graph (\ac{VDG})}
+        \label{fig:vdg_nc}
     \end{subfigure}
-    \caption{Vorhersagegüte bei Variation der \ac{ZP}-Anzahl $\sym{n}_{\sym{idx_C}}$ für einen \c{CCD} mit $\sym{k}=2$ Faktoren.}
+    \caption{Vorhersagegüte bei Variation der \ac{ZP}-Anzahl $\sym{n}_{\sym{idx_C}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren.}
     \label{fig:combined_nc_analysis}
 \end{figure}
 Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen können, sofern deren Umfang über die Grenzen der Modellstabilität hinausgeht und potenziell als Gestaltungsbudget freigegeben werden können.
@@ -530,12 +530,12 @@ Demgegenüber offenbart die \ac{SPV}-Analyse den enormen geometrischen Hebel der
 Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (die identifizierte statistische \textit{Red Flag} aus \textit{Fall IV: \ac{SP}}), transformiert sich ihr Nutzen bei einer gezielten Verschiebung: Der Rückzug aus extremen Hochlastbereichen hin zu moderateren Lastniveaus führt zu einer gewollten, asymmetrischen Verformung der Varianzfunktion.
 \begin{figure}[htbp]
     \centering
-    \setlength\figureheight{5.5cm} % Etwas mehr Höhe für bessere Lesbarkeit der Legenden
+    \setlength\figureheight{5cm} % Einheitliche Höhe für beide Subplots
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_fds_omitted.tex}
-        \caption{FDS-Vergleich bei Ausfällen}
+        \caption{Fraction of Design Space (\ac{FDS})}
         \label{fig:fds_omitted}
     \end{subfigure}
     \hfill
@@ -543,11 +543,11 @@ Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (di
         \centering
         \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_vdg_omitted.tex}
-        \caption{VDG des manipulierten Designs}
+        \caption{Variance Dispersion Graph (\ac{VDG})}
         \label{fig:vdg_omitted}
     \end{subfigure}
-    \caption{Auswirkung reduzierter Orthogonalität durch schrittweisen Entfall axialer Versuchspunkte auf die skalierte Prädiktionsvarianz .}
-    \label{fig:combined_omission_analysis}
+    \caption{Vorhersagegüte bei Variation der \ac{SP}-Anzahl $\sym{n}_{\sym{idx_S}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren.}
+    \label{fig:combined_nc_analysis}
 \end{figure}
 \begin{figure}[htbp]
     \centering

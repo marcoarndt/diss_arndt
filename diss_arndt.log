@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  14 MAR 2026 00:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  16 MAR 2026 01:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1347,7 +1347,11 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
- (diss_arndt.aux)
+ (diss_arndt.aux
+
+LaTeX Warning: Label `fig:combined_nc_analysis' multiply defined.
+
+)
 \openout1 = `diss_arndt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 428.
@@ -1463,12 +1467,11 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `diss_arndt.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'diss_arndt.bbl' not found.
-
-No file diss_arndt.bbl.
+Package biblatex Info: ... file 'diss_arndt.bbl' found.
+ (diss_arndt.bbl)
 Package biblatex Info: Reference section=0 on input line 428.
 Package biblatex Info: Reference segment=0 on input line 428.
-(C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
+ (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
 File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 428.
@@ -1585,21 +1588,116 @@ Overfull \hbox (32.6245pt too wide) in paragraph at lines 455--457
 
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 463.
- (diss_arndt.toc)
-\tf@toc=\write11
-\openout11 = `diss_arndt.toc'.
-
+ (diss_arndt.toc
+Package tocbasic Info: Using my definition of `\numberline' on input line 2.
+Package tocbasic Info: Using my definition of `\numberline' on input line 3.
+Package tocbasic Info: Using my definition of `\numberline' on input line 4.
+Package tocbasic Info: Using my definition of `\numberline' on input line 5.
+Package tocbasic Info: Using my definition of `\numberline' on input line 6.
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
+Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 15.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
+Package tocbasic Info: Using my definition of `\numberline' on input line 17.
+Package tocbasic Info: Using my definition of `\numberline' on input line 18.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
+Package tocbasic Info: Using my definition of `\numberline' on input line 25.
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
+Package tocbasic Info: Using my definition of `\numberline' on input line 30.
 
 
 [7
 
 
 ]
+Package tocbasic Info: Using my definition of `\numberline' on input line 35.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
+Package tocbasic Info: Using my definition of `\numberline' on input line 43.
+Package tocbasic Info: Using my definition of `\numberline' on input line 44.
+Package tocbasic Info: Using my definition of `\numberline' on input line 47.
+Package tocbasic Info: Using my definition of `\numberline' on input line 48.
+Package tocbasic Info: Using my definition of `\numberline' on input line 49.
+Package tocbasic Info: Using my definition of `\numberline' on input line 50.
+Package tocbasic Info: Using my definition of `\numberline' on input line 51.
+Package tocbasic Info: Using my definition of `\numberline' on input line 52.
+Package tocbasic Info: Using my definition of `\numberline' on input line 53.
+Package tocbasic Info: Using my definition of `\numberline' on input line 54.
+Package tocbasic Info: Using my definition of `\numberline' on input line 57.
+Package tocbasic Info: Using my definition of `\numberline' on input line 58.
+Package tocbasic Info: Using my definition of `\numberline' on input line 59.
+Package tocbasic Info: Using my definition of `\numberline' on input line 60.
+Package tocbasic Info: Using my definition of `\numberline' on input line 61.
+Package tocbasic Info: Using my definition of `\numberline' on input line 62.
+Package tocbasic Info: Using my definition of `\numberline' on input line 63.
+Package tocbasic Info: Using my definition of `\numberline' on input line 64.
+Package tocbasic Info: Using my definition of `\numberline' on input line 65.
+Package tocbasic Info: Using my definition of `\numberline' on input line 66.
+Package tocbasic Info: Using my definition of `\numberline' on input line 67.
+Package tocbasic Info: Using my definition of `\numberline' on input line 68.
 
-[8
+Overfull \hbox (9.00552pt too wide) in paragraph at lines 68--68
+ [][] []\T1/qpl/m/n/12 (-10) Methodik zur si-mu-la-ti-ven Er-mitt-lung von Aus-wir-kun-gen durch 
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 69.
+
+Overfull \hbox (3.80106pt too wide) in paragraph at lines 69--69
+ [][] []\T1/qpl/m/n/12 (-10) Sensitivitätsanalyse geo-me-tri-scher und sto-chas-ti-scher Ein-fluss- 
+ []
 
 
-]
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
+
+
+[8]
+Package tocbasic Info: Using my definition of `\numberline' on input line 70.
+Package tocbasic Info: Using my definition of `\numberline' on input line 71.
+Package tocbasic Info: Using my definition of `\numberline' on input line 74.
+Package tocbasic Info: Using my definition of `\numberline' on input line 75.
+Package tocbasic Info: Using my definition of `\numberline' on input line 76.
+Package tocbasic Info: Using my definition of `\numberline' on input line 77.
+Package tocbasic Info: Using my definition of `\numberline' on input line 78.
+Package tocbasic Info: Using my definition of `\numberline' on input line 79.
+Package tocbasic Info: Using my definition of `\numberline' on input line 80.
+Package tocbasic Info: Using my definition of `\numberline' on input line 81.
+Package tocbasic Info: Using my definition of `\numberline' on input line 82.
+Package tocbasic Info: Using my definition of `\numberline' on input line 83.
+Package tocbasic Info: Using my definition of `\numberline' on input line 84.
+Package tocbasic Info: Using my definition of `\numberline' on input line 85.
+Package tocbasic Info: Using my definition of `\numberline' on input line 86.
+Package tocbasic Info: Using my definition of `\numberline' on input line 87.
+Package tocbasic Info: Using my definition of `\numberline' on input line 88.
+Package tocbasic Info: Using my definition of `\numberline' on input line 89.
+Package tocbasic Info: Using my definition of `\numberline' on input line 90.
+Package tocbasic Info: Using my definition of `\numberline' on input line 91.
+Package tocbasic Info: Using my definition of `\numberline' on input line 92.
+Package tocbasic Info: Using my definition of `\numberline' on input line 93.
+Package tocbasic Info: Using my definition of `\numberline' on input line 94.
+Package tocbasic Info: Using my definition of `\numberline' on input line 95.
+Package tocbasic Info: Using my definition of `\numberline' on input line 96.
+)
+\tf@toc=\write11
+\openout11 = `diss_arndt.toc'.
+
+
+Underfull \vbox (badness 3158) has occurred while \output is active []
+
+
+
+[9]
+
+[10{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 chapter without number
 (diss_arndt.acr
 Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
@@ -1622,11 +1720,13 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--239
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--252
  [] [] 
  []
 
-[9
+[11
+
+
 
 
 ]) (diss_arndt.indices-gls
@@ -1650,7 +1750,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--121
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--128
  [] [] 
  []
 
@@ -1659,7 +1759,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[10] [11{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]) (diss_arndt.formulas-gls
+[12] [13]) (diss_arndt.formulas-gls
 Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  [] [] 
  []
@@ -1680,82 +1780,174 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 []|\T1/qpl/m/n/12 (+10) Orthogonale Pro-jek-ti-ons-ma-trix, Prä-dik-ti-ons-ma-trix, Hat-
  []
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 324.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 335.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 2173) in paragraph at lines 465--465
+Underfull \hbox (badness 2173) in paragraph at lines 480--480
 []|\T1/qpl/m/n/12 (+10) Standardisierte Va-ria-ble der Kleinst-wert-ver-tei-lung (SEV);
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--466
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--481
  [] [] 
  []
 
-[12] [13] [14] [15])
+[14] [15] [16] [17])
 
-[16]
+[18]
 Package tocbasic Info: character protrusion at lof deactivated on input line 509.
- (diss_arndt.lof)
-\tf@lof=\write12
-\openout12 = `diss_arndt.lof'.
+ (diss_arndt.lof
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 13.
+Package tocbasic Info: Using my definition of `\numberline' on input line 14.
+Package tocbasic Info: Using my definition of `\numberline' on input line 17.
+Package tocbasic Info: Using my definition of `\numberline' on input line 18.
+Package tocbasic Info: Using my definition of `\numberline' on input line 19.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 21.
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 25.
+
+Overfull \hbox (5.96107pt too wide) in paragraph at lines 25--25
+ \T1/qpl/m/n/12 (-10) Weg-fall von Frei-heits-gra-den durch asym-me-tri-sche Aus-fäl-le (\T1/qpl/b/it/12 (-10) Fall IV: [][][]Stern^^? 
+ []
 
 
-
-[17
-
-
-
-
-]
-
-[18
-
-
-]
-Package tocbasic Info: character protrusion at lot deactivated on input line 512.
- (diss_arndt.lot)
-\tf@lot=\write13
-\openout13 = `diss_arndt.lot'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [19
 
 
+
+
 ]
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 
-[20
+Overfull \hbox (13.47383pt too wide) in paragraph at lines 26--26
+ [][] []\T1/qpl/m/n/12 (-10) Absolute Schätz-wer-te der Mo-dell-ko-ef-fi-zi-en-ten für den Ar-beits-punkt $[][][][][][] \OT1/zplm/m/n/12 = 
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 27.
+Package tocbasic Info: Using my definition of `\numberline' on input line 28.
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
+Package tocbasic Info: Using my definition of `\numberline' on input line 30.
+Package tocbasic Info: Using my definition of `\numberline' on input line 31.
+
+Overfull \hbox (25.6751pt too wide) in paragraph at lines 31--31
+ [][] []\T1/qpl/m/n/12 (-10) Korrelation zwi-schen Design-Metriken und dem re-sul-tie-ren-den Trennschärfe- 
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 32.
+Package tocbasic Info: Using my definition of `\numberline' on input line 33.
+Package tocbasic Info: Using my definition of `\numberline' on input line 34.
+Package tocbasic Info: Using my definition of `\numberline' on input line 38.
+
+Overfull \hbox (66.06801pt too wide) in paragraph at lines 38--38
+ [][] []\T1/qpl/m/n/12 (-10) Absolute Schätz-wer-te der Mo-dell-ko-ef-fi-zi-en-ten in-klu-si-ve der $\OT1/pplx/m/n/12 95 %$\T1/qpl/m/n/12 (-10) -Konfidenzintervalle 
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 39.
+Package tocbasic Info: Using my definition of `\numberline' on input line 40.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+
+Underfull \vbox (badness 6125) has occurred while \output is active []
 
 
-] (chapters/chapter1_einleitung.tex
+
+[20]
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
+
+Overfull \hbox (12.56499pt too wide) in paragraph at lines 42--42
+ [][] []\T1/qpl/m/n/12 (-10) Korrelierende Me-tri-ken zur pro-zen-tua-len Trennschärfe-Änderung ($\OT1/zplm/m/n/12 ^^A[][][][][][]$ 
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 43.
+Package tocbasic Info: Using my definition of `\numberline' on input line 44.
+)
+\tf@lof=\write12
+\openout12 = `diss_arndt.lof'.
+
+
+
+[21]
+
+[22
+
+
+]
+Package tocbasic Info: character protrusion at lot deactivated on input line 512.
+ (diss_arndt.lot
+Package tocbasic Info: Using my definition of `\numberline' on input line 7.
+Package tocbasic Info: Using my definition of `\numberline' on input line 8.
+Package tocbasic Info: Using my definition of `\numberline' on input line 9.
+Package tocbasic Info: Using my definition of `\numberline' on input line 10.
+Package tocbasic Info: Using my definition of `\numberline' on input line 11.
+Package tocbasic Info: Using my definition of `\numberline' on input line 12.
+Package tocbasic Info: Using my definition of `\numberline' on input line 16.
+Package tocbasic Info: Using my definition of `\numberline' on input line 17.
+Package tocbasic Info: Using my definition of `\numberline' on input line 18.
+
+Overfull \hbox (1.71317pt too wide) in paragraph at lines 18--18
+ \T1/qpl/m/n/12 (-10) Power maÿ-geb-lich durch un-ver-än-der-li-che Sys-tem-grö-ÿen (Rau-schen) und 
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 19.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
+Package tocbasic Info: Using my definition of `\numberline' on input line 21.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[23
+
+
+]
+Package tocbasic Info: Using my definition of `\numberline' on input line 22.
+
+Overfull \hbox (5.86382pt too wide) in paragraph at lines 22--22
+ [][] []\T1/qpl/m/n/12 (-10) Simulationsergebnisse: Durch-schnitt-li-cher Trennschärfe-Verlust ($\OT1/zplm/m/n/12 ^^A[][][][][][]$\T1/qpl/m/n/12 (-10) ) 
+ []
+
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
+Package tocbasic Info: Using my definition of `\numberline' on input line 27.
+Package tocbasic Info: Using my definition of `\numberline' on input line 28.
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
+Package tocbasic Info: Using my definition of `\numberline' on input line 30.
+Package tocbasic Info: Using my definition of `\numberline' on input line 31.
+Package tocbasic Info: Using my definition of `\numberline' on input line 32.
+Package tocbasic Info: Using my definition of `\numberline' on input line 33.
+Package tocbasic Info: Using my definition of `\numberline' on input line 34.
+Package tocbasic Info: Using my definition of `\numberline' on input line 35.
+)
+\tf@lot=\write13
+\openout13 = `diss_arndt.lot'.
+
+
+
+[24] (chapters/chapter1_einleitung.tex
 chapter 1.
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 1 undefined on input line 11.
-
 
 
 [1
 
 
+
+
 ]
-
-LaTeX Warning: Citation 'Koselka.1996' on page 2 undefined on input line 16.
-
-
-Overfull \hbox (5.30205pt too wide) in paragraph at lines 15--17
-\T1/qpl/m/n/12 (-10) ge mul-ti-va-ria-bler Test-me-tho-den in der in-dus-tri-el-len Pra-xis her-vor-hob [[]]. 
- []
-
-
-LaTeX Warning: Citation 'dat.2025' on page 2 undefined on input line 25.
-
-
 
 [2]
 
@@ -1771,61 +1963,12 @@ LaTeX Warning: Citation 'dat.2025' on page 2 undefined on input line 25.
 ]
 chapter 2.
 
-LaTeX Warning: Citation 'Bertsche.2022' on page 7 undefined on input line 16.
 
-
-
-[7]
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 8 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 8 undefined on input line 26.
-
-
-LaTeX Warning: Citation 'Birolini.2017' on page 8 undefined on input line 26.
-
-[8]
-
-LaTeX Warning: Citation 'Yang.2007' on page 9 undefined on input line 91.
-
-
-LaTeX Warning: Citation 'Fahrmeir.2016' on page 9 undefined on input line 91.
-
-
+[7] [8]
 
 [9]
 
-LaTeX Warning: Citation 'Kaplan.1958' on page 10 undefined on input line 112.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 10 undefined on input line 112.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 10 undefined on input line 112.
-
-
-
 [10]
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Birolini.2017' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Hedderich.2020' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 11 undefined on input line 118.
-
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 11 undefined on input line 124.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
@@ -1837,14 +1980,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
 
 
-[11]
-
-LaTeX Warning: Citation 'Rinne.2008' on page 12 undefined on input line 161.
-
-
-LaTeX Warning: Citation 'Kececioglu.2002' on page 12 undefined on input line 161.
-
-(plots/ma_abb2.01_weibull.tex
+[11] (plots/ma_abb2.01_weibull.tex
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 10.42007pt on input line 4047.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -1858,276 +1994,67 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 4047.
 )
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 12 undefined on input line 179.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 12 undefined on input line 179.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 12 undefined on input line 180.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 12 undefined on input line 180.
-
-
 
 [12]
 
 [13]
 
-LaTeX Warning: Citation 'Meeker.2022' on page 14 undefined on input line 196.
-
-
-LaTeX Warning: Citation 'Kalbfleisch.2002' on page 14 undefined on input line 196.
-
-
-
 [14]
-
-LaTeX Warning: Citation 'Nelson.2005' on page 15 undefined on input line 208.
-
-
-LaTeX Warning: Citation 'Rinne.2008' on page 15 undefined on input line 208.
-
-
-LaTeX Warning: Citation 'Nelson.2005' on page 15 undefined on input line 209.
-
-
-LaTeX Warning: Citation 'Qiao.1994' on page 15 undefined on input line 209.
-
-
-LaTeX Warning: Citation 'Kremer.2019b' on page 15 undefined on input line 209.
-
-
-LaTeX Warning: Citation 'Abernethy.2006' on page 15 undefined on input line 210.
-
-
-LaTeX Warning: Citation 'Hirose.1999' on page 15 undefined on input line 210.
-
-
-LaTeX Warning: Citation 'Ross.1996' on page 15 undefined on input line 210.
-
-
-Overfull \hbox (12.99716pt too wide) in paragraph at lines 206--211
-[]\T1/qpl/m/n/12 (-10) ]. An-dern-falls wer-den nu-me-ri-sche Op-ti-mie-rungs-al-go-rith-men, vgl. Newton-
- []
-
-
-Overfull \hbox (55.56007pt too wide) in paragraph at lines 206--211
-\T1/qpl/m/n/12 (-10) wei-ter-füh-rend [[], []] so-wie de-tail-lier-te Un-ter-su-chun-gen von [].
- []
-
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 15 undefined on input line 222.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 15 undefined on input line 222.
-
-
-LaTeX Warning: Citation 'Kremer.2019c' on page 15 undefined on input line 223.
-
-
-LaTeX Warning: Citation 'Nelson.2005' on page 15 undefined on input line 224.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 15 undefined on input line 224.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 15 undefined on input line 224.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 15 undefined on input line 225.
-
-
-LaTeX Warning: Citation 'Lawless.2003' on page 15 undefined on input line 225.
-
-
-Overfull \hbox (46.50577pt too wide) in paragraph at lines 221--228
-[]\T1/qpl/m/n/12 (-10) , []]. In der prak-ti-schen An-wen-dung wird die Fisher-Informationsmatrix
- []
-
-
 
 [15]
 
-LaTeX Warning: Citation 'Nelson.1990' on page 16 undefined on input line 236.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 16 undefined on input line 237.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 16 undefined on input line 237.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 16 undefined on input line 238.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 16 undefined on input line 244.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 16 undefined on input line 244.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 16 undefined on input line 244.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 16 undefined on input line 249.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 16 undefined on input line 249.
-
-
-
 [16]
-
-LaTeX Warning: Citation 'Bain.2017b' on page 17 undefined on input line 259.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 17 undefined on input line 259.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 17 undefined on input line 259.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 17 undefined on input line 263.
-
-
-LaTeX Warning: Citation 'Fisher.1935' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Box.1978' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Taguchi.2005' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 17 undefined on input line 268.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 17 undefined on input line 271.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 17 undefined on input line 271.
-
-
-LaTeX Warning: Citation 'Meeker.1993' on page 17 undefined on input line 274.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 17 undefined on input line 274.
-
-
-LaTeX Warning: Citation 'Nelson.1990' on page 17 undefined on input line 274.
-
-
-LaTeX Warning: Citation 'Elsayed.2007' on page 17 undefined on input line 274.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 17 undefined on input line 276.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 17 undefined on input line 276.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 17 undefined on input line 278.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 17 undefined on input line 278.
-
-
 
 [17]
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Hinkelmann.2012' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 18 undefined on input line 283.
-
-
-LaTeX Warning: Citation 'Dazer.2019' on page 18 undefined on input line 284.
-
-
-LaTeX Warning: Citation 'Herzig.2021' on page 18 undefined on input line 284.
-
-
-LaTeX Warning: Citation 'Grundler.2024' on page 18 undefined on input line 284.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 18 undefined on input line 284.
-
-
-Overfull \hbox (42.18292pt too wide) in paragraph at lines 283--286
-\T1/qpl/m/n/12 (-10) ge-gen auf die ein-schlä-gi-ge Li-te-ra-tur von [], [], []
- []
-
-
-
-[18]
-
-LaTeX Warning: Citation 'Coleman.1993' on page 19 undefined on input line 292.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 19 undefined on input line 292.
-
-(plots/ma_abb2.02_doe_steps.pdf_tex
-<plots/ma_abb2.02_doe_steps.pdf, id=967, page=1, 350.42117pt x 111.38583pt>
+[18] (plots/ma_abb2.02_doe_steps.pdf_tex
+<plots/ma_abb2.02_doe_steps.pdf, id=1402, page=1, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=968, page=2, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1403, page=2, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page2 used on input line 59.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=969, page=3, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1404, page=3, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page3 used on input line 62.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=970, page=4, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1405, page=4, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page4 used on input line 65.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=971, page=5, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1406, page=5, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page5 used on input line 68.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=972, page=6, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1407, page=6, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page6 used on input line 71.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=973, page=7, 350.42117pt x 111.38583pt>
+<plots/ma_abb2.02_doe_steps.pdf, id=1408, page=7, 350.42117pt x 111.38583pt>
 File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
 <use plots/ma_abb2.02_doe_steps.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page7 used on input line 74.
 (pdftex.def)             Requested size: 391.79184pt x 124.54051pt.
+) (plots/ma_abb2.03_p_diagramm.pdf_tex
+<plots/ma_abb2.03_p_diagramm.pdf, id=1420, page=1, 266.19023pt x 171.65889pt>
+File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
+<use plots/ma_abb2.03_p_diagramm.pdf, page 1>
+Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
+<plots/ma_abb2.03_p_diagramm.pdf, id=1421, page=2, 266.19023pt x 171.65889pt>
+File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
+<use plots/ma_abb2.03_p_diagramm.pdf, page 2>
+Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page2 used on input line 67.
+(pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
 )
-
-LaTeX Warning: Citation 'Coleman.1993' on page 19 undefined on input line 297.
-
-
-LaTeX Warning: Citation 'Coleman.1993' on page 19 undefined on input line 297.
-
-
 
 [19 <./plots/ma_abb2.02_doe_steps.pdf> <./plots/ma_abb2.02_doe_steps.pdf
 
@@ -2149,54 +2076,10 @@ pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion:
 pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 20 undefined on input line 306.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 20 undefined on input line 307.
-
-(plots/ma_abb2.03_p_diagramm.pdf_tex
-<plots/ma_abb2.03_p_diagramm.pdf, id=992, page=1, 266.19023pt x 171.65889pt>
-File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
-<use plots/ma_abb2.03_p_diagramm.pdf, page 1>
-Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
-<plots/ma_abb2.03_p_diagramm.pdf, id=993, page=2, 266.19023pt x 171.65889pt>
-File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
-<use plots/ma_abb2.03_p_diagramm.pdf, page 2>
-Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page2 used on input line 67.
-(pdftex.def)             Requested size: 348.2631pt x 224.58665pt.
-)
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 20 undefined on input line 317.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 20 undefined on input line 317.
-
-
-
 [20 <./plots/ma_abb2.03_p_diagramm.pdf> <./plots/ma_abb2.03_p_diagramm.pdf
 
 pdfTeX warning: pdflatex (file ./plots/ma_abb2.03_p_diagramm.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 21 undefined on input line 322.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 21 undefined on input line 322.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 21 undefined on input line 326.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 21 undefined on input line 326.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 21 undefined on input line 326.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 21 undefined on input line 326.
-
-(plots/ma_abb2.04.1_effekt.tex)
+>] (plots/ma_abb2.04.1_effekt.tex)
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 11.40997pt on input line 336.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -2207,80 +2090,14 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 336.
  (plots/ma_abb2.04.2_effekt.tex)
 
-LaTeX Warning: Citation 'Montgomery.2020' on page 21 undefined on input line 353.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 21 undefined on input line 353.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 21 undefined on input line 353.
-
-
-
 [21]
 
-LaTeX Warning: Citation 'Yang.2007' on page 22 undefined on input line 366.
-
-
-LaTeX Warning: Citation 'Nelson.2005' on page 22 undefined on input line 366.
-
-
-
 [22]
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 23 undefined on input line 377.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 23 undefined on input line 377.
-
-
-LaTeX Warning: Citation 'Gundlach.2004' on page 23 undefined on input line 377.
-
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 23 undefined on input line 380.
-
-
-LaTeX Warning: Citation 'Mayers.1997' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Pahl.2007' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Daenzer.2002' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Lindemann.2008' on page 23 undefined on input line 381.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 23 undefined on input line 390.
-
-
 
 [23] (plots/ma_abb2.05_FF_design.tex)
 Overfull \hbox (20.4039pt too wide) in paragraph at lines 43--401
  [][] 
  []
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 24 undefined on input line 428.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 24 undefined on input line 428.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 24 undefined on input line 437.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 24 undefined on input line 437.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 24 undefined on input line 437.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 24 undefined on input line 437.
 
 (plots/ma_abb2.06_effektabstand.tex)
 
@@ -2288,32 +2105,7 @@ LaTeX Warning: Citation 'Kleppmann.2020' on page 24 undefined on input line 437.
 
 [25]
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 26 undefined on input line 458.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 26 undefined on input line 458.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 26 undefined on input line 458.
-
-
-Overfull \hbox (22.7959pt too wide) in paragraph at lines 458--461
-\T1/qpl/m/n/12 (-10) Bei die-sem An-satz wird le-dig-lich ei-ne se-lek-ti-ve Teil-men-ge (Frak-ti-on) der voll-faktoriellen
- []
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 26 undefined on input line 465.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 26 undefined on input line 465.
-
-
-
 [26]
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 27 undefined on input line 483.
-
-
 
 [27] (plots/ma_abb2.07_CCD_design.tex)
 Overfull \hbox (46.59633pt too wide) in paragraph at lines 175--500
@@ -2321,71 +2113,8 @@ Overfull \hbox (46.59633pt too wide) in paragraph at lines 175--500
  []
 
 
-LaTeX Warning: Citation 'Box.1957' on page 28 undefined on input line 540.
 
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 28 undefined on input line 540.
-
-
-
-[28]
-
-LaTeX Warning: Citation 'Myers.2016' on page 29 undefined on input line 544.
-
-
-LaTeX Warning: Citation 'Box.1960' on page 29 undefined on input line 548.
-
-
-LaTeX Warning: Citation 'Jones.2011' on page 29 undefined on input line 551.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 29 undefined on input line 553.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 29 undefined on input line 553.
-
-
-Overfull \hbox (8.19333pt too wide) in paragraph at lines 543--554
-[][][]\T1/qpl/b/n/12 (-10) CCD[][]\T1/qpl/m/n/12 (-10) ), wo-durch al-le Versuchs- und [][][]SPs[][] auf ei-ner Ku-ge-lo-ber-flä-che lie-gen [[]].
- []
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 29 undefined on input line 556.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 29 undefined on input line 557.
-
-
-LaTeX Warning: Citation 'Dean.2017' on page 29 undefined on input line 557.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 29 undefined on input line 558.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 29 undefined on input line 558.
-
-
-LaTeX Warning: Citation 'Box.1951' on page 29 undefined on input line 559.
-
-
-LaTeX Warning: Citation 'Box.1988' on page 29 undefined on input line 559.
-
-
-LaTeX Warning: Citation 'Bisgaard.1992' on page 29 undefined on input line 559.
-
-
-Overfull \hbox (16.04767pt too wide) in paragraph at lines 556--560
-\T1/qpl/m/n/12 (-10) ten, wie \T1/qpl/b/n/12 (-10) Block^^?bil^^?dung \T1/qpl/m/n/12 (-10) oder \T1/qpl/b/n/12 (-10) Ran^^?do^^?mi^^?sie^^?rung \T1/qpl/m/n/12 (-10) (vgl. [[], []]),
- []
-
-
-Overfull \hbox (1.46411pt too wide) in paragraph at lines 556--560
-\T1/qpl/m/n/12 (-10) ge-hens-wei-se zur Rea-li-sie-rung ei-nes [][][]CCD[][] zu-sam-men, wie sie bei-spiels-wei-se [],
- []
-
-
-
-[29] (plots/ma_abb2.08.1_strategy.tex)
+[28] (plots/ma_abb2.08.1_strategy.tex)
 Overfull \hbox (37.25467pt too wide) in paragraph at lines 51--571
  [][] 
  []
@@ -2417,741 +2146,78 @@ Overfull \hbox (17.53004pt too wide) in paragraph at lines 606--610
 
 (plots/ma_abb2.08.4_strategy.tex)
 
-LaTeX Warning: Citation 'Box.1988' on page 30 undefined on input line 617.
-
-
-LaTeX Warning: Citation 'Bisgaard.1992' on page 30 undefined on input line 617.
-
-
-LaTeX Warning: Citation 'Box.1988' on page 30 undefined on input line 617.
-
-
-LaTeX Warning: Citation 'Bisgaard.1992' on page 30 undefined on input line 617.
-
-
-LaTeX Warning: Citation 'Paschal.2024' on page 30 undefined on input line 627.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 30 undefined on input line 631.
-
-
-LaTeX Warning: Citation 'Pukelsheim.2006' on page 30 undefined on input line 634.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 30 undefined on input line 634.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 30 undefined on input line 638.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 30 undefined on input line 638.
-
-
-LaTeX Warning: Citation 'Dean.2017' on page 30 undefined on input line 638.
-
-
-LaTeX Warning: Citation 'RisbergEllekjr.1998' on page 30 undefined on input line 639.
-
-
+[29]
 
 [30]
-
-LaTeX Warning: Citation 'Kleppmann.2016' on page 31 undefined on input line 642.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 31 undefined on input line 642.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 31 undefined on input line 642.
-
-
 Overfull \hbox (5.89397pt too wide) in paragraph at lines 642--644
 \T1/qpl/m/n/12 (-10) Wird ma-xi-ma-le Fle-xi-bi-li-tät jen-seits star-rer Standard-Designs wie dem voll-faktoriellen
- []
-
-
-Overfull \hbox (23.5481pt too wide) in paragraph at lines 642--644
-\T1/qpl/m/n/12 (-10) gen, \T1/qpl/m/it/12 (-10) ef^^?fi^^?zi^^?en^^?ten \T1/qpl/m/n/12 (-10) Lö-sungs-an-satz für \T1/qpl/m/it/12 (-10) mul^^?ti^^?va^^?ria^^?te \T1/qpl/m/n/12 (-10) Ver-suchs-pla-nung bie-ten [[],
  []
 
 
 
 [31]
 
-LaTeX Warning: Citation 'Myers.2016' on page 32 undefined on input line 650.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 32 undefined on input line 650.
-
-
-Overfull \hbox (0.12688pt too wide) in paragraph at lines 649--652
-\T1/qpl/m/n/12 (-10) Ver-suchs-punk-te (der Ma-trix $[][][][][][][]$) in der \T1/qpl/b/n/12 (-10) In^^?for^^?ma^^?ti^^?ons^^?ma^^?trix \T1/qpl/m/n/12 (-10) (auch \T1/qpl/b/it/12 (-10) M\T1/qpl/b/n/12 (-10) omentenmatrix\T1/qpl/m/n/12 (-10) ) 
- []
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 32 undefined on input line 656.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 32 undefined on input line 658.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 32 undefined on input line 658.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 32 undefined on input line 658.
-
-
-LaTeX Warning: Citation 'Myers.2010' on page 32 undefined on input line 658.
-
-
-LaTeX Warning: Citation 'Zahran.2003' on page 32 undefined on input line 660.
-
-
-LaTeX Warning: Citation 'GiovannittiJensen.1989' on page 32 undefined on input line 660.
-
-
-LaTeX Warning: Citation 'Goldfarb.2004' on page 32 undefined on input line 660.
-
-
-LaTeX Warning: Citation 'Ardakani.2011' on page 32 undefined on input line 660.
-
-
-LaTeX Warning: Citation 'Borkowski.2022' on page 32 undefined on input line 660.
-
-
-LaTeX Warning: Citation 'Myers.1992' on page 32 undefined on input line 660.
-
-
-LaTeX Warning: Citation 'OzolGodfrey.2005' on page 32 undefined on input line 660.
-
-
-LaTeX Warning: Citation 'Schoonees.2016' on page 32 undefined on input line 660.
-
-
-Overfull \hbox (2.28415pt too wide) in paragraph at lines 655--662
-\T1/qpl/m/n/12 (-10) dem [][][]\T1/qpl/b/n/12 (-10) Va^^?rian^^?ce Di^^?sper^^?si^^?on Graph (VDG)[][] \T1/qpl/m/n/12 (-10) oder [][][]\T1/qpl/b/n/12 (-10) Frac^^?ti^^?on of De^^?sign Space (FDS)[][]-Plot
- []
-
-
-Overfull \hbox (20.55756pt too wide) in paragraph at lines 655--662
-\T1/qpl/m/n/12 (-10) gnmo-di-fi-ka-tio-nen bil-den [[], [], [], [],
- []
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 32 undefined on input line 664.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 32 undefined on input line 664.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 32 undefined on input line 665.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 32 undefined on input line 665.
-
-
-Overfull \hbox (23.73244pt too wide) in paragraph at lines 664--667
-\T1/qpl/m/n/12 (-10) strik-te Li-mi-tie-run-gen der ver-füg-ba-ren Ver-suchs-ka-pa-zi-tät [[], []].
- []
-
-
-
 [32]
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 33 undefined on input line 671.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 33 undefined on input line 671.
-
-
-LaTeX Warning: Citation 'Box.2007' on page 33 undefined on input line 675.
-
-
-LaTeX Warning: Citation 'Ahn.2015' on page 33 undefined on input line 675.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 33 undefined on input line 682.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 33 undefined on input line 684.
-
-
 
 [33]
 
-LaTeX Warning: Citation 'Siebertz.2026' on page 34 undefined on input line 701.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 34 undefined on input line 701.
-
-
-LaTeX Warning: Citation 'Hedderich.2020' on page 34 undefined on input line 702.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 34 undefined on input line 703.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 34 undefined on input line 703.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 34 undefined on input line 712.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 34 undefined on input line 712.
-
-
-
 [34]
-
-LaTeX Warning: Citation 'Belsley.2004' on page 35 undefined on input line 715.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 35 undefined on input line 715.
-
-
-Overfull \hbox (19.01236pt too wide) in paragraph at lines 714--719
-\T1/qpl/m/n/12 (-10) sprüng-li-chen Mo-dell ba-sie-rend auf $[][][][][][][]$ Be-ob-ach-tun-gen [[], []].
- []
-
-
-LaTeX Warning: Citation 'Fahrmeir.2009' on page 35 undefined on input line 724.
-
-
-LaTeX Warning: Citation 'Belsley.2004' on page 35 undefined on input line 724.
-
-
-LaTeX Warning: Citation 'Belsley.2004' on page 35 undefined on input line 733.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 35 undefined on input line 733.
-
-
 
 [35]
 
-LaTeX Warning: Citation 'Belsley.2004' on page 36 undefined on input line 747.
+[36] [37]
 
+[38] [39]
 
-LaTeX Warning: Citation 'Goos.2011' on page 36 undefined on input line 752.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 36 undefined on input line 752.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 36 undefined on input line 753.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 36 undefined on input line 753.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 36 undefined on input line 754.
-
-
-LaTeX Warning: Citation 'Walsh.2024' on page 36 undefined on input line 754.
-
-
-
-[36]
-
-LaTeX Warning: Citation 'Boyd.2004' on page 37 undefined on input line 757.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 37 undefined on input line 757.
-
-
-LaTeX Warning: Citation 'Atkinson.1970' on page 37 undefined on input line 758.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 37 undefined on input line 760.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 37 undefined on input line 761.
-
-
-LaTeX Warning: Citation 'Atkinson.2007' on page 37 undefined on input line 761.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 37 undefined on input line 761.
-
-
-Overfull \hbox (24.96724pt too wide) in paragraph at lines 756--762
-\T1/qpl/m/n/12 (-10) Case-Absicherung zur Va-ri-anz-schät-zung be-güns-tigt - ver-glei-che [], [].
- []
-
-
-Overfull \hbox (9.93452pt too wide) in paragraph at lines 756--762
-\T1/qpl/m/n/12 (-10) Für ex-plo-ra-ti-ve Ziel-set-zun-gen oh-ne star-re Mo-dell-an-nah-men kann nach []
- []
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 37 undefined on input line 789.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 37 undefined on input line 789.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 37 undefined on input line 789.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 789--792
-[]|\T1/qpl/m/n/12 (+10) Minimierung der Spur der in-ver-sen In-for-ma-ti-ons-ma-trix
- []
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 37 undefined on input line 799.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 37 undefined on input line 799.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 37 undefined on input line 799.
-
-
-LaTeX Warning: Citation 'Atkinson.2007' on page 37 undefined on input line 799.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 37 undefined on input line 809.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 37 undefined on input line 809.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 37 undefined on input line 809.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 809--812
-[][][][][][][]$ \T1/qpl/m/n/12 (+10) im re-le-van-ten Pa-ra-me-ter-raum [[],
- []
-
-
-LaTeX Warning: Citation 'Monroe.2011' on page 37 undefined on input line 819.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 37 undefined on input line 819.
-
-
-LaTeX Warning: Citation 'Atkinson.2007' on page 37 undefined on input line 819.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 37 undefined on input line 829.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 37 undefined on input line 829.
-
-
-LaTeX Warning: Citation 'Myers.2010' on page 37 undefined on input line 829.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 829--832
-[]|\T1/qpl/m/n/12 (+10) Minimierung der durch-schnitt-li-chen Prä-dik-ti-ons-va-ri-
- []
-
-
-Underfull \hbox (badness 4454) in paragraph at lines 829--832
-\T1/qpl/m/n/12 (+10) anz über ein dis-kre-tes Set von $[][][][][][][]$ Punk-ten [[],
- []
-
-[37] [38]
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 39 undefined on input line 841.
-
-
-Overfull \hbox (13.3319pt too wide) in paragraph at lines 841--846
-\T1/qpl/m/n/12 (-10) Ta-bel-le [][]2.4[][] las-sen sich die \T1/qpl/b/it/12 (-10) A\T1/qpl/b/n/12 (-10) -Effizienz $[][][][][][][]$\T1/qpl/m/n/12 (-10) , \T1/qpl/b/it/12 (-10) D\T1/qpl/b/n/12 (-10) -Effizienz $[][][][][][][]$\T1/qpl/m/n/12 (-10) , \T1/qpl/b/it/12 (-10) G\T1/qpl/b/n/12 (-10) -Effizienz $[][][][][][][]$\T1/qpl/m/n/12 (-10) , \T1/qpl/b/it/12 (-10) I\T1/qpl/b/n/12 (-10) -Effizienz
- []
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 39 undefined on input line 869.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 39 undefined on input line 869.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 39 undefined on input line 878.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 39 undefined on input line 878.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 39 undefined on input line 887.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 39 undefined on input line 896.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 39 undefined on input line 905.
-
-
-
-[39] [40]
-
-LaTeX Warning: Citation 'Jones.2011' on page 41 undefined on input line 917.
-
-
-LaTeX Warning: Citation 'Goos.2025' on page 41 undefined on input line 918.
-
-
-LaTeX Warning: Citation 'NunezAres.2020' on page 41 undefined on input line 919.
-
-
-
-[41]
+[40]
 Overfull \hbox (1.25711pt too wide) in paragraph at lines 931--933
 []\T1/qpl/b/n/12 (-10) Einhaltung des Stich^^?pro^^?be^^?n^^?um^^?fangs: \T1/qpl/m/n/12 (-10) Die Sum-me der aus-ge-wähl-ten Ver-suchs-
  []
 
 
 
+[41]
+
 [42]
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 43 undefined on input line 954.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 43 undefined on input line 954.
-
-
-LaTeX Warning: Citation 'Goos.2011' on page 43 undefined on input line 954.
-
-
-LaTeX Warning: Citation 'Siebertz.2026' on page 43 undefined on input line 954.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 43 undefined on input line 954.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 43 undefined on input line 955.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 43 undefined on input line 955.
-
-
-LaTeX Warning: Citation 'Cohen.1988' on page 43 undefined on input line 957.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 43 undefined on input line 957.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 43 undefined on input line 959.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 43 undefined on input line 959.
-
-
-Overfull \hbox (12.29788pt too wide) in paragraph at lines 959--963
-[]\T1/qpl/m/n/12 (-10) Formalisiert wird dies im Rah-men \T1/qpl/b/n/12 (-10) sta^^?tis^^?ti^^?scher Hy^^?po^^?the^^?sen^^?tests \T1/qpl/m/n/12 (-10) [[],
- []
-
-
 
 [43]
 
-LaTeX Warning: Citation 'Montgomery.2020' on page 44 undefined on input line 980.
-
-
-LaTeX Warning: Citation 'Kutner.2005' on page 44 undefined on input line 980.
-
-
-LaTeX Warning: Citation 'Cohen.1988' on page 44 undefined on input line 985.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 44 undefined on input line 985.
-
-
-
 [44]
-
-LaTeX Warning: Citation 'Nelder.1972' on page 45 undefined on input line 997.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 45 undefined on input line 997.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 45 undefined on input line 997.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 45 undefined on input line 997.
-
-
-LaTeX Warning: Citation 'McCulloch.2001' on page 45 undefined on input line 997.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 45 undefined on input line 998.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 45 undefined on input line 998.
-
-
-LaTeX Warning: Citation 'Khuri.2006' on page 45 undefined on input line 998.
-
-
-Overfull \hbox (1.4332pt too wide) in paragraph at lines 995--1003
-[]\T1/qpl/m/n/12 (-10) , [], []) er-mit-telt wird. Da für die-se kom-
- []
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 45 undefined on input line 1007.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 45 undefined on input line 1007.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 45 undefined on input line 1007.
-
-
-LaTeX Warning: Citation 'Box.1964' on page 45 undefined on input line 1008.
-
-
-LaTeX Warning: Citation 'Montgomery.2021' on page 45 undefined on input line 1008.
-
-
-
-[45]
-
-LaTeX Warning: Citation 'Wu.2021' on page 46 undefined on input line 1017.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 46 undefined on input line 1017.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 46 undefined on input line 1018.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 46 undefined on input line 1018.
-
-
-LaTeX Warning: Citation 'Wuthrich.2023' on page 46 undefined on input line 1018.
-
-
-LaTeX Warning: Citation 'Modarres.2017' on page 46 undefined on input line 1023.
-
-
-LaTeX Warning: Citation 'Kremer.2020' on page 46 undefined on input line 1023.
-
-
 Overfull \hbox (0.30013pt too wide) in paragraph at lines 1021--1024
 \T1/qpl/m/n/12 (-10) In der Lebensdauer-Datenanalyse wer-den ins-be-son-de-re zwei wei-te-re Mo-del-lie-rungs-
  []
 
 
 
+[45]
+
 [46]
-
-LaTeX Warning: Citation 'Meeker.2022' on page 47 undefined on input line 1029.
-
-
-LaTeX Warning: Citation 'Wu.2021' on page 47 undefined on input line 1029.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 47 undefined on input line 1029.
-
-
-LaTeX Warning: Citation 'Dobson.2018' on page 47 undefined on input line 1029.
-
-
-LaTeX Warning: Citation 'Kremer.2020' on page 47 undefined on input line 1029.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 47 undefined on input line 1029.
-
-
-LaTeX Warning: Citation 'Myers.2010' on page 47 undefined on input line 1029.
-
-
-LaTeX Warning: Citation 'Russell.2019' on page 47 undefined on input line 1042.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 47 undefined on input line 1042.
-
-
-LaTeX Warning: Citation 'Aitkin.1980' on page 47 undefined on input line 1042.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 47 undefined on input line 1049.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 47 undefined on input line 1049.
-
-
 
 [47]
 
-LaTeX Warning: Citation 'Meeker.2022' on page 48 undefined on input line 1072.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 48 undefined on input line 1072.
-
-
-LaTeX Warning: Citation 'Modarres.2017' on page 48 undefined on input line 1072.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 48 undefined on input line 1073.
-
-
-LaTeX Warning: Citation 'Qiao.1994' on page 48 undefined on input line 1073.
-
-
-LaTeX Warning: Citation 'Kremer.2019b' on page 48 undefined on input line 1074.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 48 undefined on input line 1079.
-
-
-LaTeX Warning: Citation 'Kremer.2019c' on page 48 undefined on input line 1079.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 48 undefined on input line 1080.
-
-
-LaTeX Warning: Citation 'Rencher.2008' on page 48 undefined on input line 1080.
-
-
-
 [48]
 
-LaTeX Warning: Citation 'Fisher.1935' on page 49 undefined on input line 1097.
-
-
-LaTeX Warning: Citation 'Rasch.2018' on page 49 undefined on input line 1097.
-
-
-
 [49]
-
-LaTeX Warning: Citation 'Yang.2007' on page 50 undefined on input line 1108.
-
-
-LaTeX Warning: Citation 'Rasch.2018' on page 50 undefined on input line 1108.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 50 undefined on input line 1119.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 50 undefined on input line 1119.
-
-
-LaTeX Warning: Citation 'Kremer.2019c' on page 50 undefined on input line 1119.
-
-
-Overfull \hbox (2.24017pt too wide) in paragraph at lines 1117--1120
-\T1/qpl/m/n/12 (-10) tei-lung der [][][]MLE[][] be-schreibt [] ne-ben wei-te-ren Al-ter-na-ti-ven aus [],
- []
-
-
-Overfull \hbox (1.00491pt too wide) in paragraph at lines 1117--1120
-[] \T1/qpl/m/n/12 (-10) die sym-me-tri-schen $\OT1/zplm/m/n/12 (\OT1/pplx/m/n/12 1 \OMS/zplm/m/n/12 ^^@ [][][][][][][]\OT1/zplm/m/n/12 )$\T1/qpl/m/n/12 (-10) -Konfidenzintervalle (Wald-Intervalle) wie
- []
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 50 undefined on input line 1126.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 50 undefined on input line 1126.
-
-
-LaTeX Warning: Citation 'Bain.2017b' on page 50 undefined on input line 1127.
-
-
-
-[50]
 Overfull \hbox (7.04196pt too wide) in paragraph at lines 1130--1132
 \T1/qpl/m/n/12 (-10) Die Va-ri-anz die-ser Grö-ÿe lässt sich mit-tels Taylor-Reihenentwicklung (Delta-Methode,
  []
 
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 51 undefined on input line 1153.
+
+[50]
+
+[51]) (chapters/chapter3_ansatz.tex
+
+[52]
+chapter 3.
 
 
-LaTeX Warning: Citation 'Siebertz.2026' on page 51 undefined on input line 1153.
-
-
-
-[51]
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 52 undefined on input line 1162.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 52 undefined on input line 1162.
-
-
-
-[52]) (chapters/chapter3_ansatz.tex
-
-[53]
-
-[54
+[53
 
 
 ]
-chapter 3.
 
-LaTeX Warning: Citation 'Kleppmann.2020' on page 55 undefined on input line 11.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 55 undefined on input line 11.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 55 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'Kremer.2019b' on page 55 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'Kremer.2019c' on page 55 undefined on input line 13.
-
-
-LaTeX Warning: Citation 'Ahn.2015' on page 55 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'Donev.2004' on page 55 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'Box.1951' on page 55 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'Ardakani.2011' on page 55 undefined on input line 16.
-
-
-Overfull \hbox (33.87814pt too wide) in paragraph at lines 11--19
-\T1/qpl/m/n/12 (-10) Stan-dard für die Mo-del-lie-rung nicht-linearer Zu-sam-men-hän-ge be-währt [[],
- []
-
-
-
-[55]
-
-LaTeX Warning: Citation 'Khuri.2006' on page 56 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 56 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'Thommen.2022' on page 56 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'Khuri.2006' on page 56 undefined on input line 28.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 56 undefined on input line 28.
-
-
-
-[56]
-
-LaTeX Warning: Citation 'Khuri.2006' on page 57 undefined on input line 35.
-
-
-LaTeX Warning: Citation 'Yang.2011' on page 57 undefined on input line 35.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 57 undefined on input line 37.
-
-
-LaTeX Warning: Citation 'Stufken.2012' on page 57 undefined on input line 39.
-
-
-LaTeX Warning: Citation 'Nelson.2005' on page 57 undefined on input line 43.
-
-
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 42--44
 
  []
@@ -3162,70 +2228,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
  []
 
 
-LaTeX Warning: Citation 'Goos.2025' on page 57 undefined on input line 50.
 
+[55]
 
+[56]
 
 [57]
 
 [58]
-
-LaTeX Warning: Citation 'Myers.2016' on page 59 undefined on input line 73.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 59 undefined on input line 73.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 59 undefined on input line 73.
-
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 59 undefined on input line 75.
-
-
-
-[59]
-
-LaTeX Warning: Citation 'Meeker.2022' on page 60 undefined on input line 76.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 60 undefined on input line 76.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 60 undefined on input line 77.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 60 undefined on input line 77.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 60 undefined on input line 77.
-
-
-LaTeX Warning: Citation 'Yang.2007' on page 60 undefined on input line 78.
-
-
-LaTeX Warning: Citation 'Modarres.2017' on page 60 undefined on input line 78.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 60 undefined on input line 78.
-
-
-LaTeX Warning: Citation 'Meeker.2022' on page 60 undefined on input line 79.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 60 undefined on input line 80.
-
-
-LaTeX Warning: Citation 'Rigdon.2022' on page 60 undefined on input line 80.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 60 undefined on input line 81.
-
-
-LaTeX Warning: Citation 'Myers.2016' on page 60 undefined on input line 81.
-
-
-
-[60]
 Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
@@ -3237,251 +2247,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
 ) (chapters/chapter4_screening.tex
 
-[61]
+[59]
 
-[62]
+[60]
 chapter 4.
 
-LaTeX Warning: Citation 'Arndt.2023c' on page 63 undefined on input line 12.
 
-
-
-[63
+[61
 
 
 ]
-
-LaTeX Warning: Citation 'Bertsche.2022' on page 64 undefined on input line 22.
-
-
-LaTeX Warning: Citation 'Lindemann.2008' on page 64 undefined on input line 23.
-
-
-LaTeX Warning: Citation 'Krallmann.2013' on page 64 undefined on input line 23.
-
-
-LaTeX Warning: Citation 'Gundlach.2004' on page 64 undefined on input line 23.
-
-
-LaTeX Warning: Citation 'Pahl.2007' on page 64 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'Wallace.2007' on page 64 undefined on input line 30.
-
-
-LaTeX Warning: Citation 'Wallace.2007' on page 64 undefined on input line 30.
-
-
-LaTeX Warning: Citation 'Montgomery.2020b' on page 64 undefined on input line 33.
-
-
-LaTeX Warning: Citation 'Bruckner.2019' on page 64 undefined on input line 33.
-
-
-Overfull \hbox (5.8323pt too wide) in paragraph at lines 21--34
-[] \T1/qpl/m/n/12 (-10) klas-si-sche Me-tho-den des Qua-li-täts-ma-na-ge-ments ([][][]Se-ven Qua-li-ty Tools
- []
-
-
-LaTeX Warning: Citation 'Breiing.1997' on page 64 undefined on input line 35.
-
-
 Overfull \hbox (3.82832pt too wide) in paragraph at lines 35--36
 []\T1/qpl/b/n/12 (-10) Literaturrecherche: \T1/qpl/m/n/12 (-10) Ana-ly-se be-ste-hen-der Aus-fallm-odi und phy-si-ka-li-scher Wirk-
  []
 
 
-Overfull \hbox (54.9076pt too wide) in paragraph at lines 35--36
-\T1/qpl/m/n/12 (-10) aber auch si-mu-la-ti-ven Un-ter-su-chun-gen ([][][]Finite-Elemente-Analyse (FEA)[][]) [[]]. 
+Overfull \hbox (5.0596pt too wide) in paragraph at lines 35--36
+\T1/qpl/m/n/12 (-10) aber auch si-mu-la-ti-ven Un-ter-su-chun-gen ([][][]Finite-Elemente-Analyse (FEA)[][]) [[][]102[][]]. 
  []
 
 
-LaTeX Warning: Citation 'Daenzer.2002' on page 64 undefined on input line 36.
 
+[62]
 
-LaTeX Warning: Citation 'Mayers.1997' on page 64 undefined on input line 36.
-
-
-Overfull \hbox (55.78517pt too wide) in paragraph at lines 36--37
-\T1/qpl/m/n/12 (-10) Ex-per-ten-teams, in-tui-ti-ves Er-fah-rungs-wis-sen zu ex-pli-zie-ren [[], []]. 
- []
-
-
-LaTeX Warning: Citation 'Daenzer.2002' on page 64 undefined on input line 37.
-
-
+[63]
 
 [64]
 
-LaTeX Warning: Citation 'Albers.2005' on page 65 undefined on input line 38.
-
-
-LaTeX Warning: Citation 'Thompson.1999' on page 65 undefined on input line 38.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 65 undefined on input line 44.
-
-
-LaTeX Warning: Citation 'Gundlach.2004' on page 65 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'Kremer.2018b' on page 65 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'Mayers.1997' on page 65 undefined on input line 45.
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 65 undefined on input line 50.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 65 undefined on input line 50.
-
-
-
 [65]
-
-LaTeX Warning: Citation 'Bruckner.2019' on page 66 undefined on input line 54.
-
-
-Overfull \hbox (38.98218pt too wide) in paragraph at lines 54--55
-\T1/qpl/m/n/12 (-10) rung der oft un-struk-tu-rier-ten Er-geb-nis-se aus Brainstorming-Sessions [[]].
- []
-
-
-LaTeX Warning: Citation 'Buzan.2010' on page 66 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 66 undefined on input line 58.
-
-
-LaTeX Warning: Citation 'Daenzer.2002' on page 66 undefined on input line 58.
-
-
-Overfull \hbox (37.88953pt too wide) in paragraph at lines 58--59
-\T1/qpl/m/n/12 (-10) schen den Äs-ten vi-sua-li-siert wer-den (vgl. Ab-bil-dung [][]4.2[][]) [[], []]. 
- []
-
-
-LaTeX Warning: Citation 'Tittmann.2019' on page 66 undefined on input line 60.
-
-
-Overfull \hbox (26.39862pt too wide) in paragraph at lines 60--61
-\T1/qpl/m/n/12 (-10) me-ter als Kno-ten und ih-re Wirk-be-zie-hun-gen als Kan-ten dar-ge-stellt [[]].
- []
-
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 66 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 66 undefined on input line 69.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 66 undefined on input line 69.
-
-
 
 [66]
 
-LaTeX Warning: Citation 'Kremer.2018b' on page 67 undefined on input line 81.
-
-
-LaTeX Warning: Citation 'Lindemann.2008' on page 67 undefined on input line 81.
-
-
-LaTeX Warning: Citation 'Kremer.2021' on page 67 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 67 undefined on input line 89.
-
-
-LaTeX Warning: Citation 'Lindemann.2008' on page 67 undefined on input line 90.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 67 undefined on input line 95.
-
-
-LaTeX Warning: Citation 'Arndt.2022' on page 67 undefined on input line 95.
-
-
-Underfull \hbox (badness 1062) in paragraph at lines 95--95
-[][][]|\T1/qpl/m/n/12 (+10) Bei-spiel-haf-te Dar-stel-lung ei-ner bi-nären DSM zur Iden-ti-fi-ka-ti-on
- []
-
-
-Underfull \hbox (badness 1072) in paragraph at lines 95--95
-\T1/qpl/m/n/12 (+10) von In-ter-ak-tio-nen zwi-schen Sy-stem-pa-ra-me-tern (ad-ap-tiert nach
- []
-
-
-
 [67]
-
-LaTeX Warning: Citation 'Mayers.1997' on page 68 undefined on input line 100.
-
-
 
 [68]
 
-LaTeX Warning: Citation 'Arndt.2023c' on page 69 undefined on input line 112.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 69 undefined on input line 123.
-
-
-LaTeX Warning: Citation 'Gundlach.2004' on page 69 undefined on input line 128.
-
-
-LaTeX Warning: Citation 'Mayers.1997' on page 69 undefined on input line 128.
-
-
-LaTeX Warning: Citation 'Klein.2011' on page 69 undefined on input line 128.
-
-
-Overfull \hbox (11.11545pt too wide) in paragraph at lines 128--129
-\T1/qpl/m/n/12 (-10) der klas-si-schen Ro-bust-heits-op-ti-mie-rung un-ter-schei-den [[], [],
- []
-
-
-
 [69]
 
-LaTeX Warning: Citation 'Klein.2014' on page 70 undefined on input line 132.
-
-
-
-[70]
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 71 undefined on input line 150.
-
-
-LaTeX Warning: Citation 'Siebertz.2017' on page 71 undefined on input line 150.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 71 undefined on input line 154.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 71 undefined on input line 158.
-
-
+[70]) (chapters/chapter5_entwurf.tex
 
 [71]
 
-LaTeX Warning: Citation 'Arndt.2023c' on page 72 undefined on input line 176.
+[72
 
 
-
-[72]
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 73 undefined on input line 199.
-
-
-LaTeX Warning: Citation 'Arndt.2023c' on page 73 undefined on input line 199.
-
-) (chapters/chapter5_entwurf.tex
-
-[73]
-
-[74]
+]
 chapter 5.
 
 Overfull \hbox (9.66035pt too wide) in paragraph at lines 15--20
@@ -3490,61 +2300,22 @@ Overfull \hbox (9.66035pt too wide) in paragraph at lines 15--20
 
 
 
-[75
+[73]
 
-
-]
-
-LaTeX Warning: Citation 'Box.1963' on page 76 undefined on input line 39.
-
-
-LaTeX Warning: Citation 'Ahn.2015' on page 76 undefined on input line 39.
-
-
-LaTeX Warning: Citation 'Donev.2004' on page 76 undefined on input line 39.
-
-
-LaTeX Warning: Citation 'Zhang.2021' on page 76 undefined on input line 39.
-
-
-LaTeX Warning: Citation 'Jang.2002' on page 76 undefined on input line 39.
-
-
-
-[76]
-
-LaTeX Warning: Citation 'Arndt.2023' on page 77 undefined on input line 52.
-
-
-LaTeX Warning: Citation 'Arndt.2022c' on page 77 undefined on input line 52.
-
-
+[74]
 Underfull \hbox (badness 10000) in paragraph at lines 50--53
 
  []
 
 
-LaTeX Warning: Citation 'Arndt.2022' on page 77 undefined on input line 58.
 
+[75]
 
+[76]
 
 [77]
 
 [78]
-
-[79]
-
-LaTeX Warning: Citation 'Arndt.2023' on page 80 undefined on input line 110.
-
-
-LaTeX Warning: Citation 'Zio.2013' on page 80 undefined on input line 130.
-
-
-LaTeX Warning: Citation 'Kleppmann.2020' on page 80 undefined on input line 130.
-
-
-
-[80]
 Underfull \hbox (badness 3579) in paragraph at lines 151--153
 \T1/qpl/m/n/12 (+10) schie-bung ei-nes [][][]SP[][]s zur Si-mu-la-ti-
  []
@@ -3566,83 +2337,42 @@ Underfull \hbox (badness 5878) in paragraph at lines 179--181
 
 
 
+[79]
+
+[80]
+
 [81]
 
 [82]
 
-LaTeX Warning: Reference `app:c' on page 83 undefined on input line 211.
-
-
-
 [83]
 
 [84]
-
-LaTeX Warning: Citation 'Arndt.2022' on page 85 undefined on input line 293.
-
-
-LaTeX Warning: Citation 'Mell.2022' on page 85 undefined on input line 293.
-
-
-LaTeX Warning: Citation 'Box.1963' on page 85 undefined on input line 293.
-
-
-LaTeX Warning: Citation 'Ahn.2015' on page 85 undefined on input line 293.
-
-
-
-[85]
-
-LaTeX Warning: Citation 'Arndt.2022' on page 86 undefined on input line 300.
-
-
-LaTeX Warning: Citation 'Mell.2022' on page 86 undefined on input line 300.
-
-
-
-[86]
 Overfull \hbox (13.1498pt too wide) in paragraph at lines 308--309
 \T1/qpl/m/n/12 (-10) aus-fall (ggf. kon-kur-rie-ren-der Scha-dens-me-cha-nis-mus), ei-nem ir-re-le-van-ten Durch-
  []
 
 
 
-[87]
+[85]
 Overfull \hbox (31.23122pt too wide) in paragraph at lines 322--325
 [][][][][][][] \OMS/zplm/m/n/12 ^^] \OT1/pplx/m/n/12 1$\T1/qpl/m/n/12 (-10) ) in einen Sät-ti-gungs-be-reich na-he $\OT1/pplx/m/n/12 100 %$\T1/qpl/m/n/12 (-10) . [][][][][][]
  []
 
 
-LaTeX Warning: Citation 'Cohen.1988' on page 88 undefined on input line 329.
 
-
-LaTeX Warning: Citation 'Montgomery.2020' on page 88 undefined on input line 329.
-
-
-
-[88]
-
-LaTeX Warning: Citation 'Zio.2013' on page 89 undefined on input line 335.
-
-
-LaTeX Warning: Reference `tab:results_ortho_mse' on page 89 undefined on input line 341.
-
-
+[86]
 Overfull \hbox (2.9799pt too wide) in paragraph at lines 340--342
 \T1/qpl/m/n/12 (-10) Die Aus-wer-tung der de-fi-nier-ten Praxis-Szenarien bei ei-nem kri-ti-schen Signal-Rausch-
  []
 
 
 
-[89] (tables/tab_results_ortho_metrics.tex
+[87] (tables/tab_results_ortho_metrics.tex)
 
-[90]) (plots/ma_abb5.1.4_msedev.tex)
+[88] (plots/ma_abb5.1.4_msedev.tex)
 
-[91] (tables/tab_results_ortho_bias.tex) (plots/ma_abb5.1.4_betadev.tex)
-
-LaTeX Warning: Reference `app:c' on page 92 undefined on input line 387.
-
-(plots/ma_abb5.1.4_betakonv.tex) (tables/tab_results_ortho_power.tex
+[89] (tables/tab_results_ortho_bias.tex) (plots/ma_abb5.1.4_betadev.tex) (plots/ma_abb5.1.4_betakonv.tex) (tables/tab_results_ortho_power.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 [][][]|\T1/qpl/m/n/12 (+10) Si-mu-la-ti-ons-er-geb-nis-se: Durch-schnitt-li-cher Trennschärfe-Verlust
  []
@@ -3654,96 +2384,51 @@ Underfull \hbox (badness 1259) in paragraph at lines 3--3
 
 )
 
-[92]
+[90]
 
-[93]
+[91]
 
-[94] (plots/ma_abb5.1.4_powerdev.tex) (plots/ma_abb5.1.4_powerkonv.tex)
+[92] (plots/ma_abb5.1.4_powerdev.tex) (plots/ma_abb5.1.4_powerkonv.tex)
 
-[95] (plots/ma_abb5.1.4_phisto.tex)
-
-LaTeX Warning: Reference `app:c' on page 96 undefined on input line 439.
-
-
+[93] (plots/ma_abb5.1.4_phisto.tex)
 Overfull \hbox (15.03763pt too wide) in paragraph at lines 443--444
 \T1/qpl/m/n/12 (-10) weist ein ge-rin-ges Be-stimmt-heits-maÿ in Be-zug auf den tat-säch-li-chen Trennschärfe-
  []
 
 
 
-[96] (plots/ma_abb5.1.4_korrelation.tex)
+[94] (plots/ma_abb5.1.4_korrelation.tex)
 
-[97]
+[95]
+
+[96]
+
+[97] (plots/ma_abb5.2.1_fds_nc.tex) (plots/ma_abb5.2.1_vdg_nc.tex)
+Overfull \hbox (2.0235pt too wide) in paragraph at lines 162--521
+ [][] 
+ []
+
+(plots/ma_abb5.2.1_fds_omitted.tex) (plots/ma_abb5.2.1_vdg_omitted.tex)
+Overfull \hbox (2.0235pt too wide) in paragraph at lines 292--546
+ [][] 
+ []
+
+(plots/ma_abb5.2.1_contour_spv.tex)
 
 [98]
 
-[99]
-
-LaTeX Warning: Citation 'Arndt.2024' on page 100 undefined on input line 504.
-
-(plots/ma_abb5.2.1_vdg_nc.tex)
-Overfull \hbox (2.0235pt too wide) in paragraph at lines 185--513
- [][] 
- []
-
-(plots/ma_abb5.2.1_fds_nc.tex) (plots/ma_abb5.2.1_fds_omitted.tex) (plots/ma_abb5.2.1_vdg_omitted.tex
-plots/ma_abb5.2.1_vdg_omitted.tex:351: Missing \endcsname inserted.
-<to be read again> 
-                   \let 
-l.351 \end{axis}
-                
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-
-plots/ma_abb5.2.1_vdg_omitted.tex:351: Package glossaries-extra Error: Glossary entry `\glsadd {r}\glsadd {idx_nom}\glslink {r}{\textcolor {blue}{\ensuremath {\ensuremath {r}_{\ensuremath {\textnormal {nom}}}}}}' has not been defined.
-
-See the glossaries-extra package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.351 \end{axis}
-                
-You need to define a glossary entry before you can reference it.
-
-plots/ma_abb5.2.1_vdg_omitted.tex:351: Missing \endcsname inserted.
-<to be read again> 
-                   \let 
-l.351 \end{axis}
-                
-The control sequence marked <to be read again> should
-not appear between \csname and \endcsname.
-
-)
-Overfull \hbox (2.0235pt too wide) in paragraph at lines 352--546
- [][] 
- []
-
-(plots/ma_abb5.2.1_contour_spv.tex
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-Missing character: There is no ` in font nullfont!
-)
+[99]) (chapters/chapter6_casestudy.tex
 
 [100]
 
-[101]) (chapters/chapter6_casestudy.tex
+[101]
 
-[102]
+[102
+
+
+]
+chapter 6.
+) (chapters/chapter7_zusammenfassung.tex
 
 [103]
 
@@ -3751,8 +2436,8 @@ Missing character: There is no ` in font nullfont!
 
 
 ]
-chapter 6.
-) (chapters/chapter7_zusammenfassung.tex
+chapter 7.
+)
 
 [105]
 
@@ -3760,83 +2445,127 @@ chapter 6.
 
 
 ]
-chapter 7.
+chapter without number
+LaTeX Font Info:    Trying to load font information for T1+DejaVuSansMono-TLF on input line 537.
+(C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/dejavu\t1dejavusansmono-tlf.fd
+File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono-TLF.
 )
+LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 10.20007pt on input line 537.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `DejaVuSansMono-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
-LaTeX Warning: Empty bibliography on input line 537.
+Overfull \hbox (3.11346pt too wide) in paragraph at lines 537--537
+\T1/qpl/m/it/12 (-10) ments for re^^?lia^^?bi^^?li^^?ty achie^^?ve^^?ment\T1/qpl/m/n/12 (-10) . Ho-bo-ken, NJ: Wi-ley, 2022. \T1/qpl/m/sc/12/50ls (-10) isbn\T1/qpl/m/n/12 (-10) : 9781119237693.
+ []
 
 
 
-[107]
+[107{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
 
-[108
+[108]
+
+[109]
+
+[110]
+
+[111]
+
+[112]
+
+[113]
+
+[114]
+
+[115]
+
+[116]
+
+[117]
+Overfull \hbox (27.99475pt too wide) in paragraph at lines 537--537
+\T1/qpl/m/it/12 (-10) Bil^^?dern, zahl^^?rei^^?chen Bei^^?spie^^?len und 92 Auf^^?ga^^?ben\T1/qpl/m/n/12 (-10) . 3., ak-tua-li-sier-te Auf-la-ge. Mathematik-
+ []
+
+
+
+[118]
+
+[119]
+
+[120
 
 
 ] (chapters/anhang/anhanga/anhanga.tex
 
-[109])
+[121])
 
-[110] (chapters/anhang/anhangb/anhangb.tex (tables/table_sens_Cplus_1_Dplus_1.tex) (tables/table_sens_Cplus_1_D00.tex) (tables/table_sens_Cplus_1_Dminus_1.tex)
+[122] (chapters/anhang/anhangb/anhangb.tex (tables/table_sens_Cplus_1_Dplus_1.tex) (tables/table_sens_Cplus_1_D00.tex) (tables/table_sens_Cplus_1_Dminus_1.tex)
 
-[111
-
-]
-
-[112]
-
-[113] (tables/table_sens_C00_Dplus_1.tex) (tables/table_sens_C00_D00.tex) (tables/table_sens_C00_Dminus_1.tex)
-
-[114
+[123
 
 ]
-
-[115]
-
-[116] (tables/table_sens_Cminus_1_Dplus_1.tex) (tables/table_sens_Cminus_1_D00.tex) (tables/table_sens_Cminus_1_Dminus_1.tex))
-
-[117
-
-]
-
-[118]
-
-[119] (chapters/anhang/anhangc/anhangc.tex (tables/tab_results_ortho_mse.tex) (plots/ma_abb_app.c_betadev_snr1.tex) (plots/ma_abb_app.c_convergence_power.tex) (plots/ma_abb_app.c_convergence_beta.tex) (plots/ma_abb_app.c_pvalue_hist.tex) (plots/ma_abb_app.c_korrelation_all.tex)
-
-LaTeX Warning: Float too large for page by 33.2882pt on input line 56.
-
-
-
-[120
-
-]
-
-[121]
-
-[122]
-
-[123]
 
 [124]
+
+[125] (tables/table_sens_C00_Dplus_1.tex) (tables/table_sens_C00_D00.tex) (tables/table_sens_C00_Dminus_1.tex)
+
+[126
+
+]
+
+[127]
+
+[128] (tables/table_sens_Cminus_1_Dplus_1.tex) (tables/table_sens_Cminus_1_D00.tex) (tables/table_sens_Cminus_1_Dminus_1.tex))
+
+[129
+
+]
+
+[130]
+
+[131] (chapters/anhang/anhangc/anhangc.tex (tables/tab_results_ortho_mse.tex) (plots/ma_abb_app.c_betadev_snr1.tex) (plots/ma_abb_app.c_convergence_power.tex) (plots/ma_abb_app.c_convergence_beta.tex) (plots/ma_abb_app.c_pvalue_hist.tex) (plots/ma_abb_app.c_korrelation_all.tex)
+Overfull \hbox (4.68889pt too wide) in paragraph at lines 726--54
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 29.62924pt on input line 56.
+
+
+
+[132
+
+]
+
+[133]
+
+[134]
+
+[135]
+
+[136]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 61.
+(Font)              scaled to size 15.0049pt on input line 59.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 61.
+(Font)              scaled to size 15.0049pt on input line 59.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cgls' on input line 61.
+(hyperref)                removing `\cgls' on input line 59.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 61.
+(hyperref)                removing `math shift' on input line 59.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 61.
+(hyperref)                removing `math shift' on input line 59.
 
 (plots/ma_abb_app.c_msedev_snr1.tex) (plots/ma_abb_app.c_powerdev_snr1.tex))
 
-[125
+[137
 
 ] (diss_arndt.aux)
  ***********
@@ -3845,34 +2574,26 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `diss_arndt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                diss_arndt
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 \openout1 = `diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 77680 strings out of 473577
- 1788011 string characters out of 5716318
- 4904855 words of memory out of 5000000
- 98779 multiletter control sequences out of 15000+600000
- 738671 words of font info for 392 fonts, out of 8000000 for 9000
+ 77807 strings out of 473577
+ 1797866 string characters out of 5716318
+ 4973715 words of memory out of 5000000
+ 98711 multiletter control sequences out of 15000+600000
+ 750537 words of font info for 428 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 122i,25n,121p,10968b,4870s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (145 pages, 1995424 bytes).
+ 122i,28n,121p,10968b,3730s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on diss_arndt.pdf (161 pages, 2219460 bytes).
 PDF statistics:
- 4440 PDF objects out of 5155 (max. 8388607)
- 614 named destinations out of 1000 (max. 500000)
- 90866 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 5449 PDF objects out of 6186 (max. 8388607)
+ 749 named destinations out of 1000 (max. 500000)
+ 95482 words of extra memory for PDF output out of 106986 (max. 10000000)
 
