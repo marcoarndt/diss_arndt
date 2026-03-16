@@ -1,0 +1,82 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.968\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=-3.50,
+xmax=1.50,
+xlabel style={font=\color{mycolor1}},
+xlabel={Faktor $\sym{x}_1$},
+ymin=-3.50,
+ymax=1.50,
+ylabel style={font=\color{mycolor1}},
+ylabel={Faktor $\sym{x}_2$},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25},
+legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left}
+]
+
+\addplot[area legend, draw=none, fill=white!80!black, fill opacity=0.50, forget plot]
+table[row sep=crcr] {%
+x	y\\
+-1.00	-2.65\\
+-0.95	-2.65\\
+-0.90	-2.60\\
+-0.85	-2.55\\
+-0.80	-2.45\\
+-0.80	-2.40\\
+-0.80	-2.35\\
+-0.80	-2.30\\
+-0.85	-2.25\\
+-0.90	-2.30\\
+-1.00	-2.40\\
+-1.00	-2.45\\
+-1.00	-2.50\\
+-1.00	-2.55\\
+-1.00	-2.60\\
+-1.00	-2.65\\
+}--cycle;
+\addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=white, black}]
+  table[row sep=crcr]{%
+-1.00	-1.00\\
+-1.00	1.00\\
+1.00	-1.00\\
+1.00	1.00\\
+-1.41	0.00\\
+0.00	-1.41\\
+0.00	0.00\\
+0.00	0.00\\
+0.00	0.00\\
+0.00	0.00\\
+};
+\addlegendentry{Basis \ac{CCD}}
+
+\addplot [color=black, only marks, mark=*, mark options={solid, fill=black, black}]
+  table[row sep=crcr]{%
+-1.20	-1.40\\
+-1.40	-1.50\\
+-1.60	-1.30\\
+};
+\addlegendentry{Modifikation $\sym{x}_{\sym{idx_C}}$}
+
+\addplot[-Straight Barb, color=black, dashed, line width=1.2pt, point meta={sqrt((\thisrow{u})^2+(\thisrow{v})^2)}, point meta min=0, quiver={u=\thisrow{u}, v=\thisrow{v}, every arrow/.append style={-{Straight Barb[angle'=18.263, scale={10.00/1000*\pgfplotspointmetatransformed}]}}}]
+ table[row sep=crcr] {%
+x	y	u	v\\
+0.00	0.00	-0.70	-1.90\\
+};
+\addplot [color=black, line width=1.5pt, only marks, mark size=5.0pt, mark=x, mark options={solid, black}]
+  table[row sep=crcr]{%
+-0.70	-1.90\\
+};
+\addlegendentry{Prädiktion}
+
+\end{axis}
+\end{tikzpicture}%

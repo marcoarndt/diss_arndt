@@ -5,17 +5,17 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0\figurewidth,0.874\figureheight)},
 scale only axis,
 clip=false,
-xmin=0.0,
-xmax=0.4,
-xtick={0.0,0.2,0.4},
+xmin=0.00,
+xmax=0.40,
+xtick={0.00,0.20,0.40},
 xticklabels={\empty},
-ymin=-0.0,
-ymax=0.1,
+ymin=-0.02,
+ymax=0.06,
 ylabel style={font=\color{mycolor1}},
 ylabel={$\sym{beta}_0$},
 axis background/.style={fill=white},
@@ -23,119 +23,118 @@ xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-0.0	0.0\\
-0.0	0.0\\
-0.0	0.0\\
-0.1	0.0\\
-0.0	0.0\\
-0.4	0.0\\
-0.0	-0.0\\
-0.2	0.0\\
-0.0	0.1\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+0.00	0.00\\
+0.04	0.01\\
+0.04	0.00\\
+0.07	0.01\\
+0.00	0.00\\
+0.35	0.00\\
+0.01	-0.02\\
+0.18	0.03\\
+0.00	0.06\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-0.0	0.0\\
-0.4	0.0\\
+0.00	0.01\\
+0.35	0.01\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,00$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.345\figurewidth,0.874\figureheight)},
 scale only axis,
 clip=false,
-xmin=69.0,
-xmax=85.7,
-xtick={70.0,80.0},
+xmin=68.98,
+xmax=85.65,
+xtick={70.00,80.00},
 xticklabels={\empty},
-ymin=-0.0,
-ymax=0.1,
-ytick={0.0,0.0,0.0},
+ymin=-0.02,
+ymax=0.06,
+ytick={0.00,0.02,0.04},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-81.2	0.0\\
-76.0	0.0\\
-85.1	0.0\\
-73.5	0.0\\
-81.2	0.0\\
-80.3	0.0\\
-83.0	-0.0\\
-69.0	0.0\\
-85.7	0.1\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+81.19	0.00\\
+76.00	0.01\\
+85.05	0.00\\
+73.48	0.01\\
+80.32	0.00\\
+82.97	-0.02\\
+68.98	0.03\\
+85.65	0.06\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-69.0	0.0\\
-85.7	0.0\\
+68.98	0.01\\
+85.65	0.01\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,01$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.689\figurewidth,0.874\figureheight)},
 scale only axis,
 clip=false,
-xmin=6.8,
-xmax=8.0,
-xtick={7.0,7.5,8.0},
+xmin=6.84,
+xmax=8.00,
+xtick={7.00,7.50,8.00},
 xticklabels={\empty},
-ymin=-0.0,
-ymax=0.1,
-ytick={0.0,0.0,0.0,0.1},
+ymin=-0.02,
+ymax=0.06,
+ytick={0.00,0.02,0.04,0.06},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-7.0	0.0\\
-6.9	0.0\\
-6.9	0.0\\
-6.9	0.0\\
-6.9	0.0\\
-7.0	0.0\\
-6.8	-0.0\\
-7.2	0.0\\
-7.9	0.1\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+6.95	0.00\\
+6.87	0.01\\
+6.90	0.00\\
+6.88	0.01\\
+6.88	0.00\\
+6.97	0.00\\
+6.84	-0.02\\
+7.16	0.03\\
+7.95	0.06\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-6.8	-0.0\\
-7.9	0.1\\
+6.84	-0.00\\
+7.95	0.06\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,82$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0\figurewidth,0.699\figureheight)},
 scale only axis,
 clip=false,
-xmin=0.0,
-xmax=0.4,
-xtick={0.0,0.2,0.4},
+xmin=0.00,
+xmax=0.40,
+xtick={0.00,0.20,0.40},
 xticklabels={\empty},
-ymin=-0.9,
-ymax=10.0,
+ymin=-0.89,
+ymax=10.00,
 ylabel style={font=\color{mycolor1}},
 ylabel={$\sym{beta}_1$},
 axis background/.style={fill=white},
@@ -143,119 +142,119 @@ xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-0.0	0.0\\
-0.0	2.0\\
-0.0	-0.9\\
-0.1	2.8\\
-0.0	0.0\\
-0.4	2.4\\
-0.0	0.3\\
-0.2	8.4\\
-0.0	0.3\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+0.00	0.00\\
+0.04	2.04\\
+0.04	-0.89\\
+0.07	2.81\\
+0.00	0.04\\
+0.35	2.38\\
+0.01	0.31\\
+0.18	8.40\\
+0.00	0.25\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-0.0	0.7\\
-0.4	5.2\\
+0.00	0.71\\
+0.35	5.24\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,29$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.345\figurewidth,0.699\figureheight)},
 scale only axis,
 clip=false,
-xmin=69.0,
-xmax=85.7,
-xtick={70.0,80.0},
+xmin=68.98,
+xmax=85.65,
+xtick={70.00,80.00},
 xticklabels={\empty},
-ymin=-1.1,
-ymax=10.0,
-ytick={0.0,5.0,10.0},
+ymin=-1.12,
+ymax=10.00,
+ytick={0.00,5.00,10.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-81.2	0.0\\
-76.0	2.0\\
-85.1	-0.9\\
-73.5	2.8\\
-81.2	0.0\\
-80.3	2.4\\
-83.0	0.3\\
-69.0	8.4\\
-85.7	0.3\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+81.19	0.00\\
+76.00	2.04\\
+85.05	-0.89\\
+73.48	2.81\\
+81.18	0.04\\
+80.32	2.38\\
+82.97	0.31\\
+68.98	8.40\\
+85.65	0.25\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-69.0	6.4\\
-85.7	-1.1\\
+68.98	6.44\\
+85.65	-1.12\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,80$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.689\figurewidth,0.699\figureheight)},
 scale only axis,
 clip=false,
-xmin=6.6,
-xmax=11.9,
-xtick={7.0,8.0,9.0,10.0,11.0},
+xmin=6.61,
+xmax=11.91,
+xtick={7.00,8.00,9.00,10.00,11.00},
 xticklabels={\empty},
-ymin=-0.9,
-ymax=10.0,
-ytick={0.0,5.0,10.0},
+ymin=-0.89,
+ymax=10.00,
+ytick={0.00,5.00,10.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-7.0	0.0\\
-8.0	2.0\\
-6.6	-0.9\\
-8.6	2.8\\
-7.1	0.0\\
-8.1	2.4\\
-7.2	0.3\\
-11.9	8.4\\
-6.9	0.3\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+6.97	0.00\\
+8.03	2.04\\
+6.61	-0.89\\
+8.61	2.81\\
+7.13	0.04\\
+8.08	2.38\\
+7.15	0.31\\
+11.91	8.40\\
+6.94	0.25\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-6.6	-0.6\\
-11.9	8.5\\
+6.61	-0.57\\
+11.91	8.53\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,99$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0\figurewidth,0.524\figureheight)},
 scale only axis,
 clip=false,
-xmin=0.0,
-xmax=0.4,
-xtick={0.0,0.2,0.4},
+xmin=0.00,
+xmax=0.40,
+xtick={0.00,0.20,0.40},
 xticklabels={\empty},
-ymin=-1.0,
-ymax=0.4,
+ymin=-1.01,
+ymax=0.43,
 ylabel style={font=\color{mycolor1}},
 ylabel={$\sym{beta}_2$},
 axis background/.style={fill=white},
@@ -263,119 +262,119 @@ xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-0.0	0.0\\
-0.0	0.1\\
-0.0	-0.0\\
-0.1	0.1\\
-0.0	-0.0\\
-0.4	-0.7\\
-0.0	-1.0\\
-0.2	0.4\\
-0.0	0.3\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+0.00	0.00\\
+0.04	0.06\\
+0.04	-0.01\\
+0.07	0.05\\
+0.00	-0.01\\
+0.35	-0.72\\
+0.01	-1.01\\
+0.18	0.43\\
+0.00	0.35\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-0.0	-0.0\\
-0.4	-0.4\\
+0.00	-0.02\\
+0.35	-0.36\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,06$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.345\figurewidth,0.524\figureheight)},
 scale only axis,
 clip=false,
-xmin=69.0,
-xmax=85.7,
-xtick={70.0,80.0},
+xmin=68.98,
+xmax=85.65,
+xtick={70.00,80.00},
 xticklabels={\empty},
-ymin=-1.0,
-ymax=0.4,
-ytick={-1.0,-0.5,0.0},
+ymin=-1.01,
+ymax=0.43,
+ytick={-1.00,-0.50,0.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-81.2	0.0\\
-76.0	0.1\\
-85.1	-0.0\\
-73.5	0.1\\
-81.2	-0.0\\
-80.3	-0.7\\
-83.0	-1.0\\
-69.0	0.4\\
-85.7	0.3\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+81.19	0.00\\
+76.00	0.06\\
+85.05	-0.01\\
+73.48	0.05\\
+81.18	-0.01\\
+80.32	-0.72\\
+82.97	-1.01\\
+68.98	0.43\\
+85.65	0.35\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-69.0	0.2\\
-85.7	-0.3\\
+68.98	0.21\\
+85.65	-0.28\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,12$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.689\figurewidth,0.524\figureheight)},
 scale only axis,
 clip=false,
-xmin=6.7,
-xmax=7.1,
-xtick={6.8,7.0},
+xmin=6.71,
+xmax=7.12,
+xtick={6.80,7.00},
 xticklabels={\empty},
-ymin=-1.0,
-ymax=0.4,
-ytick={-1.0,-0.5,0.0},
+ymin=-1.01,
+ymax=0.43,
+ytick={-1.00,-0.50,0.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-7.1	0.0\\
-7.1	0.1\\
-7.1	-0.0\\
-7.0	0.1\\
-6.9	-0.0\\
-6.8	-0.7\\
-6.7	-1.0\\
-6.9	0.4\\
-7.0	0.3\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+7.12	0.00\\
+7.08	0.06\\
+7.07	-0.01\\
+6.97	0.05\\
+6.91	-0.01\\
+6.78	-0.72\\
+6.71	-1.01\\
+6.91	0.43\\
+7.05	0.35\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-6.7	-0.7\\
-7.1	0.3\\
+6.71	-0.68\\
+7.12	0.32\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,53$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0\figurewidth,0.35\figureheight)},
 scale only axis,
 clip=false,
-xmin=0.0,
-xmax=0.4,
-xtick={0.0,0.2,0.4},
+xmin=0.00,
+xmax=0.40,
+xtick={0.00,0.20,0.40},
 xticklabels={\empty},
-ymin=-4.0,
-ymax=0.6,
+ymin=-4.00,
+ymax=0.62,
 ylabel style={font=\color{mycolor1}},
 ylabel={$\sym{beta}_{12}$},
 axis background/.style={fill=white},
@@ -383,119 +382,119 @@ xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-0.0	0.0\\
-0.0	-0.1\\
-0.0	0.1\\
-0.1	-0.1\\
-0.0	0.0\\
-0.4	-3.9\\
-0.0	-0.2\\
-0.2	0.6\\
-0.0	0.6\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+0.00	0.00\\
+0.04	-0.09\\
+0.04	0.06\\
+0.07	-0.07\\
+0.00	0.02\\
+0.35	-3.94\\
+0.01	-0.16\\
+0.18	0.62\\
+0.00	0.57\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-0.0	0.4\\
-0.4	-2.9\\
+0.00	0.39\\
+0.35	-2.91\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,64$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.345\figurewidth,0.35\figureheight)},
 scale only axis,
 clip=false,
-xmin=69.0,
-xmax=85.7,
-xtick={70.0,80.0},
+xmin=68.98,
+xmax=85.65,
+xtick={70.00,80.00},
 xticklabels={\empty},
-ymin=-4.0,
-ymax=0.6,
-ytick={-4.0,-2.0,0.0},
+ymin=-4.00,
+ymax=0.62,
+ytick={-4.00,-2.00,0.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-81.2	0.0\\
-76.0	-0.1\\
-85.1	0.1\\
-73.5	-0.1\\
-81.2	0.0\\
-80.3	-3.9\\
-83.0	-0.2\\
-69.0	0.6\\
-85.7	0.6\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+81.19	0.00\\
+76.00	-0.09\\
+85.05	0.06\\
+73.48	-0.07\\
+81.18	0.02\\
+80.32	-3.94\\
+82.97	-0.16\\
+68.98	0.62\\
+85.65	0.57\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-69.0	-0.1\\
-85.7	-0.5\\
+68.98	-0.08\\
+85.65	-0.48\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,01$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.689\figurewidth,0.35\figureheight)},
 scale only axis,
 clip=false,
-xmin=11.7,
-xmax=14.3,
-xtick={12.0,13.0,14.0},
+xmin=11.73,
+xmax=14.33,
+xtick={12.00,13.00,14.00},
 xticklabels={\empty},
-ymin=-4.0,
-ymax=0.6,
-ytick={-4.0,-2.0,0.0},
+ymin=-4.00,
+ymax=0.62,
+ytick={-4.00,-2.00,0.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-13.9	0.0\\
-14.0	-0.1\\
-14.3	0.1\\
-14.2	-0.1\\
-14.0	0.0\\
-11.7	-3.9\\
-13.9	-0.2\\
-13.9	0.6\\
-14.1	0.6\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+13.89	0.00\\
+13.96	-0.09\\
+14.33	0.06\\
+14.18	-0.07\\
+14.00	0.02\\
+11.73	-3.94\\
+13.95	-0.16\\
+13.87	0.62\\
+14.15	0.57\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-11.7	-3.8\\
-14.3	0.6\\
+11.73	-3.80\\
+14.33	0.58\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,92$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0\figurewidth,0.175\figureheight)},
 scale only axis,
 clip=false,
-xmin=0.0,
-xmax=0.4,
-xtick={0.0,0.2,0.4},
+xmin=0.00,
+xmax=0.40,
+xtick={0.00,0.20,0.40},
 xticklabels={\empty},
-ymin=-4.6,
-ymax=10.5,
+ymin=-4.57,
+ymax=10.52,
 ylabel style={font=\color{mycolor1}},
 ylabel={$\sym{beta}_{11}$},
 axis background/.style={fill=white},
@@ -503,119 +502,119 @@ xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-0.0	0.0\\
-0.0	4.3\\
-0.0	-4.6\\
-0.1	6.2\\
-0.0	-0.0\\
-0.4	2.7\\
-0.0	1.2\\
-0.2	10.5\\
-0.0	0.8\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+0.00	0.00\\
+0.04	4.34\\
+0.04	-4.57\\
+0.07	6.25\\
+0.00	-0.05\\
+0.35	2.74\\
+0.01	1.19\\
+0.18	10.52\\
+0.00	0.84\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-0.0	1.2\\
-0.4	6.5\\
+0.00	1.20\\
+0.35	6.52\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,17$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.345\figurewidth,0.175\figureheight)},
 scale only axis,
 clip=false,
-xmin=69.0,
-xmax=85.7,
-xtick={70.0,80.0},
+xmin=68.98,
+xmax=85.65,
+xtick={70.00,80.00},
 xticklabels={\empty},
-ymin=-4.6,
-ymax=10.5,
-ytick={0.0,5.0,10.0},
+ymin=-4.57,
+ymax=10.52,
+ytick={0.00,5.00,10.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-81.2	0.0\\
-76.0	4.3\\
-85.1	-4.6\\
-73.5	6.2\\
-81.2	-0.0\\
-80.3	2.7\\
-83.0	1.2\\
-69.0	10.5\\
-85.7	0.8\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+81.19	0.00\\
+76.00	4.34\\
+85.05	-4.57\\
+73.48	6.25\\
+81.18	-0.05\\
+80.32	2.74\\
+82.97	1.19\\
+68.98	10.52\\
+85.65	0.84\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-69.0	9.8\\
-85.7	-2.1\\
+68.98	9.82\\
+85.65	-2.09\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,84$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.689\figurewidth,0.175\figureheight)},
 scale only axis,
 clip=false,
-xmin=5.0,
-xmax=12.3,
-xtick={5.0,10.0},
+xmin=4.98,
+xmax=12.29,
+xtick={5.00,10.00},
 xticklabels={\empty},
-ymin=-4.6,
-ymax=10.5,
-ytick={0.0,5.0,10.0},
+ymin=-4.57,
+ymax=10.52,
+ytick={0.00,5.00,10.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-7.0	0.0\\
-9.3	4.3\\
-5.0	-4.6\\
-10.4	6.2\\
-7.0	-0.0\\
-8.6	2.7\\
-7.4	1.2\\
-12.3	10.5\\
-7.3	0.8\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+7.04	0.00\\
+9.33	4.34\\
+4.98	-4.57\\
+10.37	6.25\\
+7.05	-0.05\\
+8.62	2.74\\
+7.36	1.19\\
+12.29	10.52\\
+7.28	0.84\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-5.0	-4.1\\
-12.3	10.4\\
+4.98	-4.14\\
+12.29	10.38\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,99$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
 clip=false,
-xmin=0.0,
-xmax=0.4,
+xmin=0.00,
+xmax=0.40,
 xlabel style={font=\color{mycolor1}},
 xlabel={$\sym{A2}$},
-ymin=-4.0,
-ymax=2.0,
+ymin=-4.00,
+ymax=2.00,
 ylabel style={font=\color{mycolor1}},
 ylabel={$\sym{beta}_{22}$},
 axis background/.style={fill=white},
@@ -623,102 +622,102 @@ xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-0.0	0.0\\
-0.0	0.1\\
-0.0	0.1\\
-0.1	-0.1\\
-0.0	-0.1\\
-0.4	1.3\\
-0.0	-3.0\\
-0.2	1.8\\
-0.0	0.9\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+0.00	0.00\\
+0.04	0.08\\
+0.04	0.05\\
+0.07	-0.08\\
+0.00	-0.07\\
+0.35	1.35\\
+0.01	-2.98\\
+0.18	1.75\\
+0.00	0.93\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-0.0	-0.4\\
-0.4	1.8\\
+0.00	-0.36\\
+0.35	1.82\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,30$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.345\figurewidth,0\figureheight)},
 scale only axis,
 clip=false,
-xmin=69.0,
-xmax=85.7,
+xmin=68.98,
+xmax=85.65,
 xlabel style={font=\color{mycolor1}},
 xlabel={$\sym{eff_I}$},
-ymin=-4.0,
-ymax=2.0,
-ytick={-4.0,-2.0,0.0,2.0},
+ymin=-4.00,
+ymax=2.00,
+ytick={-4.00,-2.00,0.00,2.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-81.2	0.0\\
-76.0	0.1\\
-85.1	0.1\\
-73.5	-0.1\\
-81.2	-0.1\\
-80.3	1.3\\
-83.0	-3.0\\
-69.0	1.8\\
-85.7	0.9\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+81.19	0.00\\
+76.00	0.08\\
+85.05	0.05\\
+73.48	-0.08\\
+81.18	-0.07\\
+80.32	1.35\\
+82.97	-2.98\\
+68.98	1.75\\
+85.65	0.93\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-69.0	1.0\\
-85.7	-0.4\\
+68.98	1.03\\
+85.65	-0.43\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,13$};
 \end{axis}
 
 \begin{axis}[%
-width=0.262\figurewidth,
+width=0.254\figurewidth,
 height=0.126\figureheight,
 at={(0.689\figurewidth,0\figureheight)},
 scale only axis,
 clip=false,
-xmin=5.9,
-xmax=8.0,
+xmin=5.89,
+xmax=8.00,
 xlabel style={font=\color{mycolor1}},
 xlabel={$\sym{mse}$},
-ymin=-4.0,
-ymax=2.0,
-ytick={-4.0,-2.0,0.0,2.0},
+ymin=-4.00,
+ymax=2.00,
+ytick={-4.00,-2.00,0.00,2.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.1180pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-7.0	0.0\\
-7.1	0.1\\
-6.9	0.1\\
-7.2	-0.1\\
-7.0	-0.1\\
-7.7	1.3\\
-5.9	-3.0\\
-7.8	1.8\\
-7.3	0.9\\
+\addplot [color=black, only marks, mark size=2.0pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+6.99	0.00\\
+7.13	0.08\\
+6.88	0.05\\
+7.22	-0.08\\
+7.02	-0.07\\
+7.73	1.35\\
+5.89	-2.98\\
+7.81	1.75\\
+7.31	0.93\\
 };
 \addplot [color=black, dashed, forget plot]
   table[row sep=crcr]{%
-5.9	-2.8\\
-7.8	1.8\\
+5.89	-2.76\\
+7.81	1.77\\
 };
 \node[left, align=right, inner sep=0, font=\color{mycolor1}]
 at (rel axis cs:0.95,0.9) {$\sym{R2}=0,95$};

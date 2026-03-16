@@ -691,12 +691,12 @@ Mathematisch fundiert die Bewertung der Schätzgenauigkeit auf der Inversen der 
 \end{equation}
 wobei wie gehabt $\sym{sigma_sq}$ die Varianz des Versuchsfehlers darstellt.
 
-Ein universelles Maß zur Beurteilung der Schätzgüte einzelner Parameter ist der \textbf{\ac{MSE}}. Er vereint die Varianz des Schätzers und dessen systematische Verzerrung (\textbf{Bias}) in einer Metrik:
+Ein universelles Maß zur Beurteilung der Schätzgüte einzelner Parameter ist der \textbf{\ac{MSE}}. Er vereint die Varianz des Schätzers und dessen systematische Verzerrung (\textbf{Bias}) generell über alle Beobachtungen durch $1/\sym{n}\sum_{\sym{idx_i}}^{\sym{n}}\left(\symsub{y}{idx_i} - \hat{\sym{y}}_{\sym{idx_i}}\right)^2$ in einer Metrik und beschreibt für einen geschätzten Parameter $\hat{\sym{beta}}_{\sym{idx_j}}$ die erwartete quadratische Abweichung von dessen wahren Wert $\sym{beta}_{\sym{idx_j}}$:
 \begin{equation}
     \sym{mse}(\hat{\sym{beta}}_{\sym{idx_j}}) = \sym{E}\left[ (\hat{\sym{beta}}_{\sym{idx_j}} - \sym{beta}_{\sym{idx_j}})^2 \right] = \sym{Var}(\hat{\sym{beta}}_{\sym{idx_j}}) + \left(\text{Bias}(\hat{\sym{beta}}_{\sym{idx_j}})\right)^2.
     \label{eq:mse_estimator}
 \end{equation}
-Da klassische Schätzverfahren (wie \ac{OLS} oder \ac{MLE}) unter regulären Bedingungen erwartungstreu sind ($\text{Bias} = 0$), entspricht der \ac{MSE} in diesen Fällen exakt der Schätzvarianz $\sym{Var}(\hat{\sym{beta}}_{\sym{idx_j}})$ und skaliert folglich direkt mit den Diagonalelementen der inversen Informationsmatrix.
+Da klassische Schätzverfahren (wie \ac{OLS} oder \ac{MLE}) unter regulären Bedingungen erwartungstreu sind ($\text{Bias} = 0$), entspricht der \ac{MSE} in diesen Fällen exakt der Schätzvarianz $\sym{Var}(\hat{\sym{beta}}_{\sym{idx_j}})$ und skaliert folglich direkt mit den Diagonalelementen der inversen Informationsmatrix \cite{Hedderich.2020}.
 
 Während der $\sym{A2}$-Indikator die Gesamtmatrix bewertet, stehen genau diese Diagonalelemente in direktem Zusammenhang mit dem \textbf{\ac{VIF}} für die Evaluation einzelner Modellterme \cite{Siebertz.2026,Kleppmann.2020}.
 Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz (und damit der \ac{MSE}) eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.

@@ -1,0 +1,149 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.987\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+unbounded coords=jump,
+xmin=0.00,
+xmax=3.50,
+xlabel style={font=\color{mycolor1}},
+xlabel={Radius $\sym{r}$ entlang Vektor $\vec{\sym{c}}$},
+ymin=0.00,
+ymax=35.00,
+ylabel style={font=\color{mycolor1}},
+ylabel={$\sym{pred_var}$ (\ac{SPV})},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25},
+legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left}
+]
+\addplot [color=black, dashdotted, line width=1.2pt]
+  table[row sep=crcr]{%
+0.00	2.60\\
+0.07	2.60\\
+0.14	2.58\\
+0.21	2.56\\
+0.29	2.53\\
+0.36	2.51\\
+0.43	2.48\\
+0.50	2.47\\
+0.57	2.48\\
+0.64	2.52\\
+0.71	2.59\\
+0.79	2.71\\
+0.86	2.89\\
+0.93	3.15\\
+1.00	3.49\\
+1.07	3.94\\
+1.14	4.51\\
+1.21	5.23\\
+1.29	6.09\\
+1.36	7.14\\
+1.43	8.39\\
+1.50	9.87\\
+1.57	11.59\\
+1.64	13.58\\
+1.71	15.87\\
+1.79	18.49\\
+1.86	21.47\\
+1.93	24.83\\
+2.00	28.60\\
+2.07	32.82\\
+2.14	37.53\\
+2.21	42.74\\
+2.29	48.51\\
+2.36	54.87\\
+2.43	61.86\\
+2.50	69.50\\
+2.57	77.86\\
+2.64	86.96\\
+2.71	96.85\\
+2.79	107.57\\
+2.86	119.17\\
+2.93	131.70\\
+3.00	145.19\\
+3.07	159.71\\
+3.14	175.30\\
+3.21	192.00\\
+3.29	209.88\\
+3.36	228.98\\
+3.43	249.37\\
+3.50	271.09\\
+};
+\addlegendentry{Default \ac{CCD}}
+
+\addplot [color=black, line width=1.5pt]
+  table[row sep=crcr]{%
+0.00	2.70\\
+0.07	2.73\\
+0.14	2.76\\
+0.21	2.78\\
+0.29	2.80\\
+0.36	2.80\\
+0.43	2.80\\
+0.50	2.80\\
+0.57	2.79\\
+0.64	2.77\\
+0.71	2.76\\
+0.79	2.76\\
+0.86	2.77\\
+0.93	2.79\\
+1.00	2.83\\
+1.07	2.90\\
+1.14	3.00\\
+1.21	3.15\\
+1.29	3.35\\
+1.36	3.60\\
+1.43	3.93\\
+1.50	4.33\\
+1.57	4.83\\
+1.64	5.42\\
+1.71	6.13\\
+1.79	6.97\\
+1.86	7.94\\
+1.93	9.07\\
+2.00	10.37\\
+2.07	11.85\\
+2.14	13.53\\
+2.21	15.42\\
+2.29	17.55\\
+2.36	19.94\\
+2.43	22.59\\
+2.50	25.53\\
+2.57	28.77\\
+2.64	32.35\\
+2.71	36.28\\
+2.79	40.58\\
+2.86	45.27\\
+2.93	50.38\\
+3.00	55.93\\
+3.07	61.95\\
+3.14	68.45\\
+3.21	75.47\\
+3.29	83.03\\
+3.36	91.16\\
+3.43	99.89\\
+3.50	109.24\\
+};
+\addlegendentry{Modifiziertes Design}
+
+\addplot [color=black, dotted, line width=1.2pt, forget plot]
+  table[row sep=crcr]{%
+2.02	0.00\\
+2.02	35.00\\
+};
+\addplot [color=black, dotted]
+  table[row sep=crcr]{%
+nan	nan\\
+};
+\addlegendentry{Prädiktion bei $\sym{r} = 2.02$}
+
+\end{axis}
+\end{tikzpicture}%

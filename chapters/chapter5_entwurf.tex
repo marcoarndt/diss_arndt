@@ -436,13 +436,23 @@ Flankierend sind die resultierenden Wahrscheinlichkeitsdichten der Signifikanzte
     \label{fig:ma_abb5.1.4_phisto}
 \end{figure}
 
-Weiterführende Sensitivitäts- und Strukturmatrizen sowie die Konvergenzplots der restlichen Koeffizienten können bei Bedarf im Anhang~\ref{app:c} eingesehen werden.
 
-Die Gegenüberstellung der Resultate (vgl. Abbildung~\ref{fig:ma_abb5.1.4_korrelation}) erlaubt eine fundierte Neubewertung der etablierten Design-Metriken hinsichtlich ihrer Vorhersagekraft für die $\sym{power}$:
+Zur abschließenden Bewertung der Indikator-Wertebereiche wird die Korrelation zwischen den Design-Metriken und dem simulierten Trennschärfe-Verlust ($\Delta \sym{power}$) analysiert.
+Explizit herangezogen werden hierfür der topologische Indikator $\sym{A2}$, die prädiktive $\sym{eff_I}$ sowie die koeffizienten-spezifische Schätzvarianz $\sym{mse}$.
+Andere Maße, wie der systematische Bias, werden aufgrund ihrer nachgewiesenen Unempfindlichkeit gegenüber den untersuchten Störungen (vgl. Tabelle~\ref{tab:results_ortho_bias}) nicht weiter betrachtet.
+Ebenso verbleibt die D-Optimalität unberücksichtigt, da sie als Volumenmaß zwar die Matrix-Größe bewertet, jedoch die hier entscheidende interne Strukturverschiebung (Varianz-Hebelwirkung) unzureichender abbildet als die integrierte I-Effizienz.
+Abbildung~\ref{fig:ma_abb5.1.4_korrelation} nutzt dabei für die globalen Metriken ($\sym{A2}$ und $\sym{eff_I}$) eine aggregierte Darstellung über den \textbf{durchschnittlichen Power-Verlust} aller Modellkoeffizienten.
+Dies hat den Zweck, die globale Robustheit eines Versuchsplans gegenüber den definierten Störfällen makroskopisch zu bewerten und eine schnelle Entscheidungsbasis für die Versuchsplanung über alle Terme und Koeffizienten hinweg zu liefern.
+Dabei muss jedoch kritisch angemerkt werden, dass diese Mittelwertbetrachtung inhärente \textbf{Inhomogenitäten maskiert}: Wie die detaillierte Aufschlüsselung in Abbildung~\ref{fig:app.c_corr_all} von Anhang~\ref{app:c} belegt, reagieren einzelne Koeffizienten (insb. quadratische Terme) oft um ein Vielfaches sensitiver auf Orthogonalitätsbrüche als robuste Haupteffekte.
+Dennoch ist die statistische Aussagekraft dieser zusammenfassenden Betrachtung hoch, da sie den Trend der algorithmischen Degradation über die Szenarien hinweg repräsentativ abbildet.
+Die Kernaussagen der makroskopischen Darstellung korrespondieren somit konsistent mit den Detail-Ergebnissen des Anhangs, vgl. Abbildung~\ref{fig:app.c_corr_all}.
+
 \begin{itemize}
-    \item \textbf{Grenzen topologischer Indikatoren ($\sym{A2}$):} Der rein topologische $\sym{A2}$-Indikator weist ein geringes Bestimmtheitsmaß in Bezug auf den tatsächlichen Trennschärfe-Verlust auf ($\sym{R2} \approx 0{,}12$). Da Trennschärfe-Verluste infolge von Multikollinearität (Klippeneffekt) oft sigmoidal und damit hochgradig nichtlinear verlaufen, eignet sich dieser Topologie-Indikator primär als Warnsystem für Singularitäten, nicht aber als präziser Prädiktor für die verbleibende $\sym{power}$.
-    \item \textbf{Die I-Effizienz als robustes, globales Maß:} Auf Ebene der theoretischen Optimalitätskriterien erweist sich die I-Effizienz ($\sym{eff_I}$) als verlässlicher Indikator, der rund $81\,\%$ der Varianz des Trennschärfe-Verlusts erklärt ($\sym{R2} \approx 0{,}81$). Da sie die \ac{SPV} über den gesamten Versuchsraum integriert, bewertet sie direkt die durchschnittliche Prognosegüte des Modells. Im Gegensatz zur rein volumenbasierten D-Effizienz erfasst die I-Effizienz die wahren Hebelwirkungen geometrischer Abweichungen realitätsnah. Dies prädestiniert die \ac{SPV} als entscheidende Leitmetrik, sobald der Fokus von der reinen Parameteridentifikation auf die Prognosefähigkeit wechselt.
-    \item \textbf{Der \ac{MSE} als direkter Prädiktor der Teststatistik:} Die simulierte Schätzvarianz (\ac{MSE}) fungiert als nahezu perfekter Prädiktor für den Trennschärfe-Erhalt ($\sym{R2} \approx 1{,}00$ am Beispiel von $\hat{\beta}_{11}$). Dies folgt stringent aus der Prüfmathematik: Da die Teststatistik (z.\,B. der \sym{Fstat}-Wert) proportional zu $1/\sqrt{\sym{MSE}}$ skaliert, verschiebt eine Varianzinflation den Nichtzentralitätsparameter unmittelbar. Der \ac{MSE} übersetzt den geometrischen Fehler somit nahezu verlustfrei in die probabilistische Trennschärfe.
+    \item \textbf{Grenzen topologischer Indikatoren ($\sym{A2}$):} Der rein topologische $\sym{A2}$-Indikator weist ein geringes Bestimmtheitsmaß in Bezug auf den tatsächlichen Trennschärfe-Verlust auf ($\sym{R2} \approx 0{,}12$). Da Trennschärfe-Verluste infolge von Multikollinearität oft hochgradig nichtlinear verlaufen (sog. Klippeneffekte), eignet sich dieser Indikator primär als Warnsystem für drohende Singularitäten, nicht aber als präziser Prädiktor für die verbleibende Detektionswahrscheinlichkeit.
+
+    \item \textbf{Die I-Effizienz als robustes, globales Maß:} Auf Ebene der theoretischen Optimalitätskriterien erweist sich die I-Effizienz ($\sym{eff_I}$) als verlässlicher Indikator, der rund $81\,\%$ der Varianz des durchschnittlichen Trennschärfe-Verlusts erklärt ($\sym{R2} \approx 0{,}81$). Da sie die \ac{SPV} über den gesamten Versuchsraum integriert, bewertet sie direkt die durchschnittliche Prognosegüte. Im Gegensatz zur rein volumenbasierten D-Effizienz erfasst sie die wahren Hebelwirkungen geometrischer Abweichungen realitätsnah.
+
+    \item \textbf{Der \ac{MSE} als direkter Prädiktor der Teststatistik:} Die simulierte Schätzvarianz (\ac{MSE}) fungiert als nahezu perfekter Prädiktor für den Trennschärfe-Erhalt ($\sym{R2} \approx 1{,}00$ am Beispiel von $\hat{\beta}_{11}$). Dies folgt stringent aus der Prüfmathematik, da die Teststatistik (z.\,B. der \sym{Fstat}-Wert) proportional zu $1/\sqrt{\sym{MSE}}$ skaliert. Der \ac{MSE} übersetzt den geometrischen Fehler somit verlustfrei in die probabilistische Trennschärfe.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -450,7 +460,7 @@ Die Gegenüberstellung der Resultate (vgl. Abbildung~\ref{fig:ma_abb5.1.4_korrel
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{4cm}
     \input{plots/ma_abb5.1.4_korrelation.tex}
-    \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust in den \textbf{simulierten Störszenarien}: \textit{Fälle I-IV}.}
+    \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust in den \textbf{simulierten Störszenarien} \textit{Fälle I-IV}: Durchschnittswerte für alle Koeffizienten in $\sym{A2},\sym{eff_I}$, beispielhaft in $\sym{beta}_{11}$ und $\sym{MSE}$.}
     \label{fig:ma_abb5.1.4_korrelation}
 \end{figure}
 
@@ -459,20 +469,19 @@ Die Gegenüberstellung der Resultate (vgl. Abbildung~\ref{fig:ma_abb5.1.4_korrel
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Fazit: Statistische Effektivität und geometrisches Gestaltungsbudget} \label{subsec:fazit_sensitivitaet}
+\subsection{Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung} \label{subsec:fazit_sensitivitaet}
 
-Die simulativen Analysen belegen die erstaunliche topologische Robustheit des \ac{CCD} gegenüber geometrischen Modifikationen.
-Zwar manifestieren sich bei massiven strukturellen Eingriffen in den Versuchsraum definierte Ausreißer in der Schätzvarianz - etwa der sprunghafte Anstieg des \ac{MSE} bei den Termen $\hat{\sym{beta}}_1$ und $\hat{\sym{beta}}_{11}$ (auf Werte $>12$, vgl. Abbildung~\ref{fig:ma_abb5.1.4_msedev}) infolge eines asymmetrischen Sternpunkt-Ausfalls (\textit{Fall IV: \ac{SP}}) oder die Varianzinflation des Interaktionsterms ($\sym{VIF}_{\sym{beta}_{12}} \approx 1{,}23$, siehe Tabelle~\ref{tab:results_ortho_metrics}) bei starker Faktorkorrelation (\textit{Fall II}).
-Setzt man diese Extremwerte jedoch in Relation zu kritischen statistischen \textit{Red Flags} (Ausschlusskriterien wie einem $\sym{VIF} > 5$ oder massiven Einbrüchen der Trennschärfe von $\Delta \sym{power} > 10\,\%$ auf die wesentlichen Haupteffekte), erweisen sich selbst diese modifizierten Versuchspläne als funktionell.
-Der systematische Schätzfehler (\textit{Bias}) bleibt ohnehin durchweg vernachlässigbar, vgl. Abbildung~\ref{fig:ma_abb5.1.4_betadev}.
+Die simulativen Analysen unterstreichen die ausgeprägte topologische Resilienz des \ac{CCD} gegenüber geometrischen Abweichungen.
+Zwar provozieren massive Störungen - insbesondere der asymmetrische Wegfall randlicher Freiheitsgrade (\textit{Fall IV: \ac{SP}}) - eine messbare Aufweitung der Schätzvarianz (\ac{MSE}), doch verbleiben diese Effekte weit unterhalb kritischer statistischer Abbruchkriterien.
+In Kombination mit der nachgewiesenen Erwartungstreue des \ac{OLS}-Schätzers (vernachlässigbarer Bias) ergibt sich daraus ein entscheidender planerischer Spielraum: Die bewusste Inkaufnahme moderater Einbußen in der Orthogonalität gefährdet nicht die statistische Validität des Modells, sondern schafft ein wertvolles \textbf{geometrisches Gestaltungsbudget} zur operativen Optimierung von Prüfzeiten und Ressourcen.
 
-Darüber hinaus verursachen der Entfall redundanter Zentralpunkte (\textit{Fall IV: \ac{ZP}}) oder moderate axiale Verschiebungen (\textit{Fall I}) lediglich marginale \textit{Design-Penalties}.
-Diese nachgewiesene Fehlertoleranz der Planmatrix rechtfertigt einen radikalen Paradigmenwechsel für hochbeschleunigte Lebensdauertests: Der Verzicht auf Replikationen im Zentrum oder die bewusste Entschärfung extremer Prüfbedingungen an den hochbelasteten (nordöstlichen) Rändern des Parameterraums zerstören die statistische Validität des Modells nicht, flexibilisieren aber Prüfkapazitäten.
-Der Tausch einer in der Praxis ohnehin durch Rauschen limitierten, globalen Trennschärfe gegen signifikante Prüfzeitverkürzungen liefert dem Planer somit ein wertvolles \textbf{geometrisches Gestaltungsbudget}.
+Dass der Fokus im Weiteren methodischen Verlauf der Arbeit konsequent von der reinen Identifikationswahrscheinlichkeit (\ac{power}) hin zur räumlichen Verteilung der Schätzpräzision verschoben wird, legitimiert sich durch die hohe Indikatorgüte der prädiktiven Metriken.
+Die nachgewiesene Korrelation der $I$-Effizienz mit dem durchschnittlichen Trennschärfe-Verhalt ($R^2 \approx 0{,}81$) belegt makroskopisch, dass die algorithmische Güte eines Lebensdauertests untrennbar mit der Struktur der Prädiktionsvarianz im Versuchsraum verknüpft ist.
 
-Um dieses Budget im weiteren Verlauf der Arbeit in eine holistische Effizienzbewertung (Informationsgewinn versus Prüfkosten) zu überführen, muss geklärt werden, wie die freigewordenen Versuchskapazitäten bestmöglich reinvestiert werden.
-Hierfür greift die Maximierung der reinen Erkennungswahrscheinlichkeit (\ac{power}) zu kurz.
-Wie durch das Integral der I-Effizienz bereits mathematisch indiziert, rückt stattdessen die eigentliche Herausforderung der \ac{EoL}-Erprobung in den Fokus: die gezielte Reduktion der Prognosevarianz \ac{SPV} für die modellspezifische Extrapolationsabsicherung, wenn eine Garantie für die Identifikation von Effekten bereits zu akzeptabler Eintrittwahrscheinlichkeit gegeben ist.
+Diese Erkenntnis gewinnt im Kontext der \ac{ALT} eine übergeordnete Bedeutung: Da Lebensdauermodelle naturgemäß auf die Extrapolation in den späteren Einsatzbereich (Use-Level) angewiesen sind, wirkt die im Versuchsraum (Design-Space) vorliegende Varianz der Prädiktion als Verstärker für Unsicherheiten außerhalb des beprobten Raums. Während die zusammenfassende Betrachtung in Abbildung~\ref{fig:ma_abb5.1.4_korrelation} den globalen Trend dieser Verschlechterung repräsentativ wiedergibt, verdeutlicht erst der detaillierte Blick in die koeffizienten-spezifische Aufschlüsselung (Anhang~\ref{app:c}), wie selektiv insbesondere Terme höherer Ordnung auf topologische Brüche reagieren.
+
+Für die holistische Effizienzbewertung (Informationsgewinn versus Prüfkosten) bedeutet dies: Sobald durch die topologische Robustheit des Designs die grundlegende Identifikation von Effekten gesichert ist, wird die Beherrschung der \ac{SPV}-Struktur zum primären Stellhebel.
+Die Minimierung der Prognoseunsicherheit ist somit kein rein akademisches Gütemaß, sondern die zwingende Voraussetzung für eine belastbare und ökonomisch vertretbare Extrapolationsabsicherung multivariater Lebensdauermodelle.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -505,7 +514,7 @@ Um die Auswirkungen von Stützstellen-Modifikationen gezielt auf diese Extrapola
 Durch eine Reduktion der Zentralpunkte (analog zum untersuchten \textit{Fall IV: \ac{ZP}}) erhöht sich demnach die \ac{SPV} zwar im unmittelbaren interpolativen Kern des Versuchsplans leicht, sie wirkt sich jedoch de facto nicht auf die Peripherie und den fernen Extrapolationsraum aus.
 \begin{figure}[htbp]
     \centering
-    \setlength\figureheight{5cm} % Einheitliche Höhe für beide Subplots
+    \setlength\figureheight{5cm}
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \setlength\figurewidth{0.8\linewidth}
@@ -530,13 +539,13 @@ Demgegenüber offenbart die \ac{SPV}-Analyse den enormen geometrischen Hebel der
 Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (die identifizierte statistische \textit{Red Flag} aus \textit{Fall IV: \ac{SP}}), transformiert sich ihr Nutzen bei einer gezielten Verschiebung: Der Rückzug aus extremen Hochlastbereichen hin zu moderateren Lastniveaus führt zu einer gewollten, asymmetrischen Verformung der Varianzfunktion.
 \begin{figure}[htbp]
     \centering
-    \setlength\figureheight{5cm} % Einheitliche Höhe für beide Subplots
+    \setlength\figureheight{5cm}
     \begin{subfigure}[b]{0.48\textwidth}
         \centering
         \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_fds_omitted.tex}
         \caption{Fraction of Design Space (\ac{FDS})}
-        \label{fig:fds_omitted}
+        \label{fig:fds_sp}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
@@ -544,17 +553,17 @@ Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (di
         \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_vdg_omitted.tex}
         \caption{Variance Dispersion Graph (\ac{VDG})}
-        \label{fig:vdg_omitted}
+        \label{fig:vdg_sp}
     \end{subfigure}
     \caption{Vorhersagegüte bei Variation der \ac{SP}-Anzahl $\sym{n}_{\sym{idx_S}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren.}
-    \label{fig:combined_nc_analysis}
+    \label{fig:combined_sp_analysis}
 \end{figure}
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figurewidth{0.7\textwidth}
     \setlength\figureheight{7cm}
     \input{plots/ma_abb5.2.1_contour_spv.tex}
-    \caption{Dreidimensionale Darstellung der skalierten Prädiktionsvarianz und zugehöriger Konturverlauf für ein asymmetrisch manipuliertes Versuchsdesign.}
+    \caption{Dreidimensionale Darstellung der \ac{SPV} und zugehöriger Konturverlauf für ein beispielhaft asymmetrisch manipuliertes Versuchsdesign: es entfallen $(0,\symsub{alpha}{idx_D})$ \textit{und} $(\symsub{alpha}{idx_D},0)$ eines \ac{CCD} mit $\sym{k}=2$ Faktoren.}
     \label{fig:contour_spv}
 \end{figure}
 Dies eröffnet das Potenzial, Mäßigung ungünstiger Wertlagen der \ac{SPV} durch Verschiebung der Sternpunkte in exakt jene Richtung zu erreichen \textit{Brückenpunkt}.

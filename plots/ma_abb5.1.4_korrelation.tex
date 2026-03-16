@@ -9,12 +9,12 @@ width=0.263\figurewidth,
 height=0.948\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
-xmin=0.0000,
-xmax=0.4000,
+xmin=0.00,
+xmax=0.40,
 xlabel style={font=\color{mycolor1}},
 xlabel={$\sym{A2}$},
-ymin=-5.0700,
-ymax=11.0200,
+ymin=-5.07,
+ymax=11.02,
 ylabel style={font=\color{mycolor1}},
 ylabel={$\Delta \sym{power}$ [\%]},
 axis background/.style={fill=white},
@@ -24,22 +24,22 @@ xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.5811pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-0.0000	0.0000\\
-0.0369	1.2860\\
-0.0383	-1.0720\\
-0.0714	1.7920\\
-0.0035	-0.0140\\
-0.3516	0.3620\\
-0.0067	-0.5300\\
-0.1832	4.3440\\
-0.0012	0.5880\\
+\addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+0.00	0.00\\
+0.04	1.29\\
+0.04	-1.07\\
+0.07	1.79\\
+0.00	-0.01\\
+0.35	0.36\\
+0.01	-0.53\\
+0.18	4.34\\
+0.00	0.59\\
 };
 \addplot [color=black, dashed, line width=1.2pt, forget plot]
   table[row sep=crcr]{%
-0.0000	0.3828\\
-0.3516	2.0631\\
+0.00	0.38\\
+0.35	2.06\\
 };
 \end{axis}
 
@@ -48,13 +48,13 @@ width=0.263\figurewidth,
 height=0.948\figureheight,
 at={(0.368\figurewidth,0\figureheight)},
 scale only axis,
-xmin=68.9825,
-xmax=85.6511,
+xmin=68.98,
+xmax=85.65,
 xlabel style={font=\color{mycolor1}},
 xlabel={$\sym{eff_I}$ [\%]},
-ymin=-5.0700,
-ymax=11.0200,
-ytick={-5.0000,0.0000,5.0000,10.0000},
+ymin=-5.07,
+ymax=11.02,
+ytick={-5.00,0.00,5.00,10.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 title style={font=\bfseries\color{mycolor1}},
@@ -63,22 +63,22 @@ xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.5811pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-81.1859	0.0000\\
-76.0003	1.2860\\
-85.0514	-1.0720\\
-73.4800	1.7920\\
-81.1809	-0.0140\\
-80.3223	0.3620\\
-82.9668	-0.5300\\
-68.9825	4.3440\\
-85.6511	0.5880\\
+\addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+81.19	0.00\\
+76.00	1.29\\
+85.05	-1.07\\
+73.48	1.79\\
+81.18	-0.01\\
+80.32	0.36\\
+82.97	-0.53\\
+68.98	4.34\\
+85.65	0.59\\
 };
 \addplot [color=black, dashed, line width=1.2pt, forget plot]
   table[row sep=crcr]{%
-68.9825	3.4820\\
-85.6511	-0.8780\\
+68.98	3.48\\
+85.65	-0.88\\
 };
 \end{axis}
 
@@ -87,13 +87,13 @@ width=0.263\figurewidth,
 height=0.948\figureheight,
 at={(0.737\figurewidth,0\figureheight)},
 scale only axis,
-xmin=4.9812,
-xmax=12.2925,
+xmin=4.98,
+xmax=12.29,
 xlabel style={font=\color{mycolor1}},
 xlabel={$\sym{mse}(\sym{beta}_{11})$},
-ymin=-5.0700,
-ymax=11.0200,
-ytick={-5.0000,0.0000,5.0000,10.0000},
+ymin=-5.07,
+ymax=11.02,
+ytick={-5.00,0.00,5.00,10.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 title style={font=\bfseries\color{mycolor1}},
@@ -102,22 +102,22 @@ xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
 ]
-\addplot[only marks, mark=*, mark options={}, mark size=1.5811pt, color=black, fill=black, forget plot] table[row sep=crcr]{%
-x	y\\
-7.0355	0.0000\\
-9.3283	4.3400\\
-4.9812	-4.5700\\
-10.3692	6.2500\\
-7.0474	-0.0500\\
-8.6204	2.7400\\
-7.3558	1.1900\\
-12.2925	10.5200\\
-7.2813	0.8400\\
+\addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+7.04	0.00\\
+9.33	4.34\\
+4.98	-4.57\\
+10.37	6.25\\
+7.05	-0.05\\
+8.62	2.74\\
+7.36	1.19\\
+12.29	10.52\\
+7.28	0.84\\
 };
 \addplot [color=black, dashed, line width=1.2pt, forget plot]
   table[row sep=crcr]{%
-4.9812	-4.1444\\
-12.2925	10.3785\\
+4.98	-4.14\\
+12.29	10.38\\
 };
 \end{axis}
 \end{tikzpicture}%

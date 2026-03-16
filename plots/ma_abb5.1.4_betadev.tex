@@ -10,12 +10,12 @@ height=\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
 bar shift auto,
-xmin=0.5378,
-xmax=6.4622,
-xtick={1.0000,2.0000,3.0000,4.0000,5.0000,6.0000},
+xmin=0.54,
+xmax=6.46,
+xtick={1.00,2.00,3.00,4.00,5.00,6.00},
 xticklabels={{$\sym{beta}_0$},{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
-ymin=0.0000,
-ymax=35.0000,
+ymin=0.00,
+ymax=35.00,
 ylabel style={font=\color{mycolor1}},
 ylabel={Schätzwert $\hat{\sym{thet}}_{\sym{idx_i}}$},
 axis background/.style={fill=white},
@@ -25,128 +25,128 @@ grid style={dotted, opacity=0.25},
 legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left}
 ]
 \addplot[ybar, bar width=0.071, fill=white!10!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.0000	30.0722\\
-2.0000	10.0096\\
-3.0000	10.1436\\
-4.0000	10.0009\\
-5.0000	9.9707\\
-6.0000	9.8029\\
+1.00	30.07\\
+2.00	10.01\\
+3.00	10.14\\
+4.00	10.00\\
+5.00	9.97\\
+6.00	9.80\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
-0.5378	0.0000\\
-6.4622	0.0000\\
+0.54	0.00\\
+6.46	0.00\\
 };
 \addlegendentry{Default \ac{CCD}}
 
 \addplot[ybar, bar width=0.071, fill=white!20!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.0000	29.9600\\
-2.0000	10.0375\\
-3.0000	9.9998\\
-4.0000	9.9447\\
-5.0000	9.9254\\
-6.0000	9.9649\\
+1.00	29.96\\
+2.00	10.04\\
+3.00	10.00\\
+4.00	9.94\\
+5.00	9.93\\
+6.00	9.96\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
-0.5378	0.0000\\
-6.4622	0.0000\\
+0.54	0.00\\
+6.46	0.00\\
 };
-\addlegendentry{Fall I ($-20\%$)}
+\addlegendentry{Fall I ($-20\,\%$)}
 
 \addplot[ybar, bar width=0.071, fill=white!30!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.0000	30.0085\\
-2.0000	9.9791\\
-3.0000	10.0255\\
-4.0000	9.9082\\
-5.0000	9.9886\\
-6.0000	10.0430\\
+1.00	30.01\\
+2.00	9.98\\
+3.00	10.03\\
+4.00	9.91\\
+5.00	9.99\\
+6.00	10.04\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
-0.5378	0.0000\\
-6.4622	0.0000\\
+0.54	0.00\\
+6.46	0.00\\
 };
-\addlegendentry{Fall I ($+20\%$)}
+\addlegendentry{Fall I ($+20\,\%$)}
 
 \addplot[ybar, bar width=0.071, fill=white!40!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.0000	29.9845\\
-2.0000	10.0200\\
-3.0000	10.0707\\
-4.0000	10.0728\\
-5.0000	10.1791\\
-6.0000	10.0074\\
+1.00	29.98\\
+2.00	10.02\\
+3.00	10.07\\
+4.00	10.07\\
+5.00	10.18\\
+6.00	10.01\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
-0.5378	0.0000\\
-6.4622	0.0000\\
+0.54	0.00\\
+6.46	0.00\\
 };
 \addlegendentry{Fall I (\ac{FC})}
 
 \addplot[ybar, bar width=0.071, fill=gray, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.0000	30.0479\\
-2.0000	10.0267\\
-3.0000	9.9510\\
-4.0000	10.0547\\
-5.0000	9.9742\\
-6.0000	9.9164\\
+1.00	30.05\\
+2.00	10.03\\
+3.00	9.95\\
+4.00	10.05\\
+5.00	9.97\\
+6.00	9.92\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
-0.5378	0.0000\\
-6.4622	0.0000\\
+0.54	0.00\\
+6.46	0.00\\
 };
 \addlegendentry{Fall II (leicht)}
 
 \addplot[ybar, bar width=0.071, fill=white!60!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.0000	29.8597\\
-2.0000	9.9039\\
-3.0000	10.0052\\
-4.0000	9.9503\\
-5.0000	10.0653\\
-6.0000	9.9722\\
+1.00	29.86\\
+2.00	9.90\\
+3.00	10.01\\
+4.00	9.95\\
+5.00	10.07\\
+6.00	9.97\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
-0.5378	0.0000\\
-6.4622	0.0000\\
+0.54	0.00\\
+6.46	0.00\\
 };
 \addlegendentry{Fall II (stark)}
 
 \addplot[ybar, bar width=0.071, fill=white!70!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.0000	30.1039\\
-2.0000	9.8843\\
-3.0000	10.0504\\
-4.0000	9.9727\\
-5.0000	9.9791\\
-6.0000	9.9075\\
+1.00	30.10\\
+2.00	9.88\\
+3.00	10.05\\
+4.00	9.97\\
+5.00	9.98\\
+6.00	9.91\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
-0.5378	0.0000\\
-6.4622	0.0000\\
+0.54	0.00\\
+6.46	0.00\\
 };
 \addlegendentry{Fall III}
 
 \addplot[ybar, bar width=0.071, fill=white!80!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.0000	29.9796\\
-2.0000	9.9379\\
-3.0000	9.9671\\
-4.0000	9.9739\\
-5.0000	9.9759\\
-6.0000	10.0602\\
+1.00	29.98\\
+2.00	9.94\\
+3.00	9.97\\
+4.00	9.97\\
+5.00	9.98\\
+6.00	10.06\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
-0.5378	0.0000\\
-6.4622	0.0000\\
+0.54	0.00\\
+6.46	0.00\\
 };
 \addlegendentry{Fall IV: \ac{SP}}
 
 \addplot[ybar, bar width=0.071, fill=white!90!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.0000	30.0618\\
-2.0000	9.8855\\
-3.0000	10.0820\\
-4.0000	9.9811\\
-5.0000	10.1330\\
-6.0000	9.8785\\
+1.00	30.06\\
+2.00	9.89\\
+3.00	10.08\\
+4.00	9.98\\
+5.00	10.13\\
+6.00	9.88\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
-0.5378	0.0000\\
-6.4622	0.0000\\
+0.54	0.00\\
+6.46	0.00\\
 };
 \addlegendentry{Fall IV: \ac{ZP}}
 
