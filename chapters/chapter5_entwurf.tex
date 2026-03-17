@@ -576,8 +576,50 @@ Zur Quantifizierung dieses spezifischen, richtungsabhängigen Informationsgewinn
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)} \label{subsec:evg_plot}
-% Hier folgt die Neuentwicklung des EVG und die Reduktion der SPV im Zielbereich (RAMS 2025)
 
+Wie aus den vorherigen Überlegungen hervorgeht, verliert die \ac{SPV}-Topologie durch die asymmetrische Streichung oder Verschiebung einzelner Versuchspunkte unweigerlich ihre konzentrische Rotationssymmetrie; die Vorhersagevarianz divergiert richtungsabhängig.
+Für die gezielte Extrapolation auf einen fernen Feld-Betriebspunkt ist jedoch nicht die durchschnittliche Varianz über alle Winkel entscheidend, sondern exakt die \ac{SPV}-Entwicklung entlang des Vektors, der das Design-Zentrum mit dem Ziel-Betriebspunkt verbindet.
+
+Klassische Visualisierungswerkzeuge wie der \textit{Variance Dispersion Graph} (\ac{VDG}) berechnen für einen gegebenen Radius um das Design-Zentrum lediglich globale Minima, Maxima sowie den sphärischen Mittelwert der \ac{SPV}.
+Sie sind blind für die tatsächliche geometrische Ausrichtung der Modifikation. Um diesen \textit{Blind Spot} zu adressieren und die Effizienz asymmetrischer Versuchsplan-Anpassungen qualitativ sowie quantitativ zu bewerten, wurde in \textcite{Arndt.2025} der \textit{Extrapolation Variance Graph} (\ac{EVG}) entwickelt.
+
+Der \ac{EVG} transformiert die Fragestellung: Anstatt die \ac{SPV} konzentrisch zu mitteln, wird sie ausschließlich entlang eines eindimensionalen Vektors analysiert, der exakt in den Zielbereich des extrapolierten Feld-Betriebspunktes zeigt.
+Um die \ac{SPV}-Divergenz entlang dieser Achse abzustützen, werden die aus der Modifikation des \ac{CCD} freigewordenen Stützstellen (beispielsweise entfallene hochbelastete Sternpunkte oder redundante Zentralpunkte) gezielt umgewidmet. Sie fungieren fortan als sogenannte Extrapolations-\acp{AP}. Diese \acp{AP} werden in einem physikalisch realisierbaren Toleranzbereich (\textit{Exposure-Area}) zwischen dem Basis-Design und dem Betriebsraum platziert (vgl. Abbildung~\ref{fig:ma_abb5.2.2_exposure_scatter}).
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.7\textwidth}
+    \setlength\figureheight{6cm}
+    \input{plots/ma_abb5.2.2_exposure_scatter.tex}
+    \caption{Versuchsraum-Topologie: Das Basis-Design (\ac{CCD}) wird durch strategische Extrapolations-\acp{AP} (innerhalb der \textit{Exposure-Area}) in Richtung des fernen Feld-Betriebspunktes (Ziel-Vektor) erweitert.}
+    \label{fig:ma_abb5.2.2_exposure_scatter}
+\end{figure}
+
+Die asymmetrische Verankerung durch diese \acp{AP} zieht die Konturlinien geringer Vorhersageunsicherheit gezielt in den südwestlichen Extrapolationsraum (vgl. Abbildung~\ref{fig:ma_abb5.2.2_contour}). Das Regressionsmodell wird an diesen Stellen empirisch gestützt, was den Hebelarm der Unsicherheit künstlich verkürzt.
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.7\textwidth}
+    \setlength\figureheight{6cm}
+    \input{plots/ma_abb5.2.2_contour.tex}
+    \caption{Konturverlauf der \ac{SPV}: Die Platzierung der \acp{AP} zwingt die Vorhersagevarianz im Zielkorridor zur Konvergenz und durchbricht die konzentrische Aufweitung der Unsicherheit.}
+    \label{fig:ma_abb5.2.2_contour}
+\end{figure}
+
+Der messbare Nutzen dieser Manipulation wird in der direkten Gegenüberstellung von klassischem \ac{VDG} und dem neuen \ac{EVG} manifest (Abbildung~\ref{fig:ma_abb5.2.2_evg}).
+Während der \ac{VDG} durch die asymmetrische Verzerrung des Designs scheinbar global schlechtere Werte indiziert (Anstieg der Maxima und Mittelwerte), offenbart der \ac{EVG} den tatsächlichen, zielgerichteten Erfolg: Entlang des untersuchten Extrapolationsvektors sinkt die \ac{SPV} im fernen Betriebspunkt massiv. Die \acp{AP} erzeugen einen messbaren "Sattelpunkt" im Anstieg der Varianz, der die Vorhersageunsicherheit im Vergleich zum starren Standard-Design um signifikante Größenordnungen reduziert.
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{5.5cm}
+    \input{plots/ma_abb5.2.2_evg.tex}
+    \caption{Vergleich der Bewertungsmethodik: Der klassische \ac{VDG} bewertet das asymmetrische Design fälschlicherweise negativ. Der \ac{EVG} hingegen belegt die signifikante Reduktion der \ac{SPV} (Sattelpunkt) exakt auf dem geforderten Extrapolationsvektor.}
+    \label{fig:ma_abb5.2.2_evg}
+\end{figure}
+
+Diese richtungsabhängige Reduktion der Vorhersagevarianz belegt, dass eine Abkehr von der reinen Symmetrie und Orthogonalität in \ac{ALT}-Szenarien hochgradig effizient ist. Das gewonnene geometrische Budget wird nicht verschwendet, sondern wertsteigernd investiert.
+Bislang basierten diese topologischen Schlussfolgerungen jedoch ausschließlich auf der vereinfachenden Annahme normalverteilter Fehlerterme. Um die Robustheit der Extrapolations-\acp{AP} für reale Zuverlässigkeitsuntersuchungen final zu validieren, muss das Konzept in einem nächsten Schritt zwingend auf lebensdauerverteilte Daten überführt werden.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

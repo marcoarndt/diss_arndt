@@ -209,7 +209,7 @@ isbn=true]{biblatex}
 \newacronym{FC}{FC}{Face Centered}
 \newacronym[plural=SPs, longplural=Sternpunkte]{SP}{SP}{Sternpunkt}
 \newacronym[plural=ZPs, longplural=Zentralpunkte]{ZP}{ZP}{Zentralpunkt}
-
+\newacronym[plural=APs, longplural=Ankerpunkte]{AP}{AP}{Ankerpunkt}
 
 
 % Glossary - use in text: \sym{R}, also needs \input{settings/glossaries}
@@ -220,16 +220,17 @@ isbn=true]{biblatex}
 \newglossaryentry{idx_i}{type=indices, name={\ensuremath{i}}, description={Laufvariable}}
 \newglossaryentry{idx_j}{type=indices, name={\ensuremath{j}}, description={Laufvariable}}
 \newglossaryentry{idx_l}{type=indices, name={\ensuremath{l}}, description={Laufvariable}}
-\newglossaryentry{idx_0}{type=indices, name={\ensuremath{0}}, description={Zeitpunkt $\sym{t}=0$ \newline  Zentralpunkt \newline Regressionskonstante \newline Position im Versuchsraum}}
+\newglossaryentry{idx_0}{type=indices, name={\ensuremath{0}}, description={Zeitpunkt $\sym{t}=0$ \newline Regressionskonstante \newline Position im Versuchsraum}}
 \newglossaryentry{idx_q}{type=indices, name={\ensuremath{q}}, description={Quantilwert}}
 \newglossaryentry{idx_O}{type=indices, name={\ensuremath{\textnormal{O}}}, description={Beobachtet (Observed)}}
 \newglossaryentry{idx_u}{type=indices, name={\ensuremath{u}}, description={Untere Grenze des Vertrauensbereichs}}
 \newglossaryentry{idx_o}{type=indices, name={\ensuremath{o}}, description={Obere Grenze des Vertrauensbereichs}}
 \newglossaryentry{idx_z}{type=indices, name={\ensuremath{z}}, description={Zensierungsindikator}}
 \newglossaryentry{idx_F}{type=indices, name={\ensuremath{\textnormal{F}}}, description={Faktorieller Punkt}}
-\newglossaryentry{idx_S}{type=indices, name={\ensuremath{\textnormal{S}}}, description={Sternpunkt}}
+\newglossaryentry{idx_S}{type=indices, name={\ensuremath{\textnormal{SP}}}, description={Sternpunkt}}
+\newglossaryentry{idx_AP}{type=indices, name={\ensuremath{\textnormal{AP}}}, description={Ankerpunkt}}
 \newglossaryentry{idx_D}{type=indices, name={\ensuremath{\textnormal{D}}}, description={Sternpunktabstand CCD}}
-\newglossaryentry{idx_C}{type=indices, name={\ensuremath{\textnormal{C}}}, description={Zentralpunkt}}
+\newglossaryentry{idx_C}{type=indices, name={\ensuremath{\textnormal{ZP}}}, description={Zentralpunkt}}
 \newglossaryentry{idx_V}{type=indices, name={\ensuremath{\textnormal{V}}}, description={Transformation}}
 \newglossaryentry{idx_error}{type=indices, name={\ensuremath{\textnormal{error}}}, description={Fehler 2. Art (Wahrscheinlichkeit für ein falsch-negatives Ergebnis)}}
 \newglossaryentry{idx_MC}{type=indices, name={\ensuremath{\textnormal{MC}}}, description={Monte-Carlo-Simulation}}
@@ -295,11 +296,10 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Likelihood-Ratio}, text={\ensuremath{LR}}]{LR}{\ensuremath{LR}}
 \glsxtrnewsymbol[type=formulas, description={Nicht-Orthogonalitätsindikator ($A_2$-Kriterium)}, text={\ensuremath{A_2}}]{A2}{\ensuremath{A_2}}
 \glsxtrnewsymbol[type=formulas, description={Paarweiser (Pearson-)Korrelationskoeffizient \newline Radius im Versuchsraum (Euklidische Distanz) \newline Studentisiertes Residuum}, text={\ensuremath{r}}]{r}{\ensuremath{r}}
-
 \glsxtrnewsymbol[type=formulas, description={Effizienz (allgemein)}, text={\ensuremath{\eta}}]{eff_gen}{\ensuremath{\eta}}
-
 \glsxtrnewsymbol[type=formulas, description={Bestimmtheitsmaß (Determinationskoeffizient)}, text={\ensuremath{R^2}}]{R2}{\ensuremath{R^2}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Dispersion (mittlere skalierte Prädiktionsvarianz auf dem Radius \sym{r})}, text={\ensuremath{V}}]{Vspv}{\ensuremath{V}}
+\glsxtrnewsymbol[type=formulas, description={Richtungsvektor zur extrapolierten Prognose}, text={\ensuremath{\vec{e}}}]{e_vec}{\ensuremath{\vec{e}}}
 
 
 % ===========================================================================
@@ -388,29 +388,19 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Mittlerer quadratischer Fehler (Mean Squared Error)}, text={\textnormal{MSE}}]{mse}{\ensuremath{\textnormal{MSE}}}
 \glsxtrnewsymbol[type=formulas, description={Standardisierte Variable der Kleinstwertverteilung (SEV); Hilfsgröße für Wald-Konfidenzintervalle (äquivalent zu $\sym{w_aux}$)}, text={\ensuremath{z_{\textnormal{e}}}}]{z_e}{\ensuremath{z_{\textnormal{e}}}}
 \glsxtrnewsymbol[type=formulas, description={Varianz-Inflations-Faktor (Variance Inflation Factor)}, text={\textnormal{VIF}}]{vif}{\ensuremath{\textnormal{VIF}}}
-
-
-
-
 \glsxtrnewsymbol[type=formulas, description={Vektor der partiellen Ableitungen (Modell-Steigungen)}, text={\ensuremath{\mathbf{s}(\symsub{x_loc}{idx_0})}}]{s_grad}{\ensuremath{\mathbf{s}(\symsub{x_loc}{idx_0})}}
 \glsxtrnewsymbol[type=formulas, description={Gewichtsmatrix für S-Optimalität (Slope-Momentenmatrix)}, text={\ensuremath{\mathbf{W_s}}}]{W_s}{\ensuremath{\mathbf{W_s}}}
 \glsxtrnewsymbol[type=formulas, description={S-Effizienz (für Schätzung der Steigungen)}, text={\ensuremath{S_{\textnormal{eff}}}}]{eff_S}{\ensuremath{S_{\textnormal{eff}}}}
-
 \glsxtrnewsymbol[type=formulas, description={Hilfsvariable für die Log-Likelihood-Berechnung}, text={\ensuremath{z}}]{z_aux}{\ensuremath{z}}
 \glsxtrnewsymbol[type=formulas, description={Linearer Prädiktor (Logarithmus der charakteristischen Lebensdauer)}, text={\ensuremath{\eta}}]{eta}{\ensuremath{\eta}}
-
 \glsxtrnewsymbol[type=formulas, description={Hilfsgröße zur Berechnung von Vertrauensbereichen (standardisierte Log-Lebensdauer)}, text={\ensuremath{{w}}}]{w_aux}{\ensuremath{{w}}}
-
 \glsxtrnewsymbol[type=formulas, description={Verteilungsfunktion der kleinsten Extremwerte}, text={\ensuremath{G}}]{G_func}{\ensuremath{G(\cdot)}}
-
 \glsxtrnewsymbol[type=formulas, description={Cox-Snell-Residuum}, text={\ensuremath{r_{\textnormal{CS}}}}]{resid_CS}{\ensuremath{r_{\textnormal{CS}}}}
 \glsxtrnewsymbol[type=formulas, description={Standardisiertes Devianz-Residuum}, text={\ensuremath{r_{\textnormal{Dev}}}}]{resid_Dev}{\ensuremath{r_{\textnormal{Dev}}}}
 \glsxtrnewsymbol[type=formulas, description={Standardisiertes Residuum (bezogen auf die SEV-Verteilung)}, text={\ensuremath{r}}]{resid_std}{\ensuremath{r}} 
-
 \glsxtrnewsymbol[type=formulas, description={Kandidatenmenge (Menge aller möglichen Faktorstufenkombinationen)}, text={\ensuremath{\Omega}}]{cand_set}{\ensuremath{\Omega}}
 \glsxtrnewsymbol[type=formulas, description={Binäre Entscheidungsvariable für die Design-Optimierung (1 = Versuchspunkt ausgewählt)}, text={\ensuremath{\gamma}}]{dec_var}{\ensuremath{\gamma}}
 \glsxtrnewsymbol[type=formulas, description={Anzahl der Faktoren (Dimension)}, text={\ensuremath{k_{\textnormal{f}}}}]{num_fac}{\ensuremath{k_{\textnormal{f}}}}
-
 \glsxtrnewsymbol[type=formulas, description={Kosten (allgemein)}, text={\ensuremath{C}}]{C}{\ensuremath{C}}
 
 

@@ -1,15 +1,15 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
-[75] biber-MSWIN64:340> INFO - === 
-[105] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
-[266] Biber.pm:994> INFO - Found 118 citekeys in bib section 0
-[279] Biber.pm:4463> INFO - Processing section 0
-[288] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[345] bibtex.pm:1713> INFO - LaTeX decoding ...
-[581] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[913] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[914] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[915] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[915] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[964] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[1069] bbl.pm:779> INFO - Output to diss_arndt.bbl
+[71] biber-MSWIN64:340> INFO - === 
+[96] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
+[256] Biber.pm:994> INFO - Found 119 citekeys in bib section 0
+[267] Biber.pm:4463> INFO - Processing section 0
+[276] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[327] bibtex.pm:1713> INFO - LaTeX decoding ...
+[545] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[880] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[882] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[882] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[883] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[929] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[1032] bbl.pm:779> INFO - Output to diss_arndt.bbl
