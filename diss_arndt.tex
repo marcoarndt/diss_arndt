@@ -422,7 +422,6 @@ isbn=true]{biblatex}
 \onehalfspacing % line spacing: 1,5
 
 \addchap{Vorwort}
-% Formel-Beispiel
 Thanks for your service.
 
 % Beispiel fürs Referenzieren eines Akronyms:
@@ -431,6 +430,33 @@ Thanks for your service.
 
 \cleardoublepage
 \addchap{Kurzfassung/Abstract}
+Die Absicherung technischer Produkte und Systeme hinsichtlich ihrer Funktionalität und Lebensdauer bildet eine zentrale Säule im modernen Produktentwicklungsprozess.
+Um Ausfälle innerhalb des Gewährleistungszeitraums zu vermeiden und gleichzeitig Entwicklungszeiten zu verkürzen, greift die Zuverlässigkeitstechnik auf beschleunigte Lebensdauerprüfungen (Accelerated Life Testing, ALT) zurück.
+Da das Schädigungsverhalten technischer Systeme meist von mehreren interagierenden Lastgrößen (wie Temperatur, Vibration oder mechanischer Spannung) abhängt, erfordert die empirische Modellierung den Einsatz multivariater statistischer Versuchsplanung (Design of Experiments, DoE).
+Als methodischer Standard hat sich hierfür die Response Surface Methodology (RSM) mit dem Central Composite Design (CCD) etabliert.
+Die direkte Übertragung klassischer DoE-Prinzipien auf die Zuverlässigkeitstechnik offenbart jedoch fundamentale methodische Konflikte. Während klassische Versuchspläne auf geometrische Orthogonalität, Symmetrie und eine optimale Schätzgüte im Zentrum des Versuchsraums (Interpolation) getrimmt sind, erfordert die Lebensdauererprobung zwingend die Extrapolation: Tests müssen bei stark erhöhten Lasten (meist im nordöstlichen Parameterraum) durchgeführt werden, um Ausfälle in wirtschaftlich vertretbarer Zeit zu erzwingen.
+Das eigentliche Ziel der Modellbildung ist jedoch die verlässliche Prognose unter wesentlich moderateren Feldbedingungen (im südwestlichen Parameterraum).
+Darüber hinaus verletzen Lebensdauerdaten mit ihrer inhärenten Asymmetrie (Weibull-Verteilung) und unvermeidbaren Zensierungen die klassischen Annahmen normalverteilter Fehlerterme.
+Die vorliegende Dissertation adressiert diese methodische Lücke und entwickelt ein holistisches Framework zur Auslegung hocheffizienter, multivariater Lebensdauertests.
+Als methodische Basis wird zunächst ein heuristisches Screening-Verfahren vorgestellt.
+Da die Komplexität multivariater Versuchspläne exponentiell mit der Anzahl der Faktoren skaliert, schließt dieser Ansatz die Lücke zwischen qualitativer Systemanalyse (etwa durch Design Structure Matrices und erweiterte Ishikawa-Diagramme) und der quantitativen Testplanung.
+Durch die konsequente Fokussierung auf zeitabhängige Degradationsmechanismen wird die Dimensionalität des Parameterraums im Vorfeld rational auf das essenzielle Maß verdichtet, ohne zeit- und kostenintensive experimentelle Vorversuche zu erfordern.
+Im informationstheoretischen Kern der Arbeit wird das CCD systematisch auf seine Robustheit gegenüber praxisüblichen Restriktionen untersucht. Umfangreiche Monte-Carlo-Simulationen auf Basis fiktiv-physikalischer Ground-Truth-Modelle belegen eine erstaunliche topologische Gutmütigkeit des Designs.
+Es wird quantitativ nachgewiesen, dass moderate Abweichungen von der Orthogonalität - wie der Ausfall redundanter Zentralpunkte oder stochastische Varianzen in der Lastansteuerung - die statistische Trennschärfe (Power) und die Schätzpräzision lediglich marginal kompromittieren. Der resultierende Design-Penalty wird in der Praxis meist vom inhärenten System- und Messrauschen überschattet.
+Diese nachgewiesene Fehlertoleranz legitimiert einen radikalen Paradigmenwechsel: den Übergang zur adaptiven Versuchsplanung. Der bewusste Verzicht auf starre Lehrbuch-Orthogonalität zugunsten reduzierter Prüfumfänge erschließt dem Planer ein wertvolles „geometrisches Gestaltungsbudget“.
+Anstatt Versuchspunkte lediglich zur passiven Kostensenkung zu streichen, werden freigewordene Stützstellen - etwa extrem verschleißkritische Sternpunkte - proaktiv modifiziert und als sogenannte Extrapolations-Ankerpunkte (AP) in Richtung des anvisierten Feldbereichs verlagert.
+Dieser strategische Brückenbau im Parameterraum stützt das Regressionsmodell auf dem Extrapolationspfad empirisch ab.
+Um den Leistungsgewinn dieser gerichteten Asymmetrie objektiv bewerten zu können, wird die Scaled Prediction Variance (SPV) als lokale Maßzahl für die Vorhersageunsicherheit etabliert. Da klassische Bewertungstools wie der Variance Dispersion Graph (VDG) aufgrund ihrer Rotationssymmetrie blinde Flecken bei gezielten Extrapolationen aufweisen, wird im Rahmen dieser Arbeit der Extrapolation Variance Graph (EVG) neu entwickelt. Der EVG ermöglicht eine richtungsabhängige Quantifizierung der Prognosevarianz und belegt visuell wie analytisch, dass die Setzung von Ankerpunkten die Unsicherheit im Feld-Betriebspunkt um signifikante Größenordnungen reduziert.
+
+Um die Anwendbarkeit dieses adaptiven Konzepts für die industrielle Praxis zu garantieren, erfolgt anschließend die methodische Transformation von der idealisierten Normalverteilung (Ordinary Least Squares) hin zu multivariaten Lebensdauermodellen. Anhand Weibull-verteilter Daten und der Parameteridentifikation mittels Maximum-Likelihood-Estimation (MLE) wird validiert, dass der Extrapolations-Brückenbau auch unter Berücksichtigung von Frühausfällen und Zensierungen seine überlegene Prognosefähigkeit behält, was sich in messbar schmaleren Konfidenzintervallen im Feldbereich manifestiert.
+
+Den Abschluss der Methodik bildet ein eigens entwickeltes ökonomisches Effizienz- und Kostenmodell, welches den zwingenden Trade-off der Lebensdauererprobung quantifiziert: Ein Versuchspunkt, der näher an das Felderniveau rückt (Ankerpunkt), verbessert die statistische Prognosegüte drastisch, verursacht aber durch die verringerte Beschleunigung exponentiell längere Prüfstandslaufzeiten und somit höhere Kosten. Durch die Übersetzung der Testzeit in monetäre Aufwände und deren Gegenüberstellung mit dem Informationsgewinn liefert die Arbeit eine holistische Bewertungsmetrik. Eine abschließende Fallstudie validiert die Praxistauglichkeit des gesamten Frameworks.
+
+Die Dissertation beweist somit eindrücklich, dass sich Effizienz in der Versuchsplanung nicht durch die bedingungslose Minimierung von Testläufen definiert, sondern durch das optimale wirtschaftliche Gleichgewicht zwischen eingesetzten Ressourcen und dem Erhalt der statistischen Effektivität.\\
+
+
+
+
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
 \todo{
     \begin{itemize}
