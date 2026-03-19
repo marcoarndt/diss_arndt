@@ -4,7 +4,7 @@
 % %% Kapitel 5 - Entwurf %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Effizienz durch Effektivität in der multivariaten Versuchsplanung} \label{chap:entwurf}
+\chapter{Statistische Effektivität als Fundament effizienter Lebensdauertests} \label{chap:entwurf}
 
 Nach der qualitativen Vorselektion relevanter Einflussgrößen (Kapitel~\ref{chap:screening}) fokussiert die vorliegende Betrachtung nun die quantitative \ac{DoE}-Planung.
 Die zentrale wissenschaftliche Zielsetzung besteht in der Entwicklung adäquater, multivariater Lebensdauertests, welche etablierte Standard-\acp{RSD} gezielt an die spezifischen Anforderungen der Lebensdauerprognose anpassen.
@@ -112,8 +112,8 @@ Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl 
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
     \setlength{\parskip}{0pt}
-    \item Manipulation von \acp{SP}n über deren axialen Abstand;
-    \item Manipulation von \acp{SP}n durch co-faktorielle Korrelation;
+    \item Manipulation von \acp{SP} über deren axialen Abstand;
+    \item Manipulation von \acp{SP} durch co-faktorielle Korrelation;
     \item Variation der Anzahl der \acp{ZP};
     \item Variation der Anzahl der \acp{SP};
     \item Variation der Standardabweichung der Effektstärken (System-Rauschen, auch \ac{SNR});
@@ -520,7 +520,7 @@ Durch eine Reduktion der Zentralpunkte (analog zum untersuchten \textit{Fall IV:
         \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_fds_nc.tex}
         \caption{Fraction of Design Space (\ac{FDS})}
-        \label{fig:fds_nc}
+        \label{fig:ma_abb5.2.1_fds_nc}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
@@ -531,7 +531,7 @@ Durch eine Reduktion der Zentralpunkte (analog zum untersuchten \textit{Fall IV:
         \label{fig:vdg_nc}
     \end{subfigure}
     \caption{Vorhersagegüte bei Variation der \ac{ZP}-Anzahl $\sym{n}_{\sym{idx_C}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren.}
-    \label{fig:combined_nc_analysis}
+    \label{fig:ma_abb5.2.1_vdg_nc}
 \end{figure}
 Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen können, sofern deren Umfang über die Grenzen der Modellstabilität hinausgeht und potenziell als Gestaltungsbudget freigegeben werden können.
 
@@ -545,7 +545,7 @@ Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (di
         \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_fds_omitted.tex}
         \caption{Fraction of Design Space (\ac{FDS})}
-        \label{fig:fds_sp}
+        \label{fig:ma_abb5.2.1_fds_omitted}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
@@ -556,16 +556,23 @@ Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (di
         \label{fig:vdg_sp}
     \end{subfigure}
     \caption{Vorhersagegüte bei Variation der \ac{SP}-Anzahl $\sym{n}_{\sym{idx_S}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren.}
-    \label{fig:combined_sp_analysis}
+    \label{fig:ma_abb5.2.1_vdg_omitted}
 \end{figure}
+% \begin{figure}[htbp]
+%     \centering
+%     \setlength\figurewidth{0.7\textwidth}
+%     \setlength\figureheight{9cm}
+%     \input{plots/ma_abb5.2.1_contour_spv.tex}
+%     \caption{Dreidimensionale Darstellung der \ac{SPV} und zugehöriger Konturverlauf für ein beispielhaft asymmetrisch manipuliertes Versuchsdesign: es entfallen $(0,\symsub{alpha}{idx_D})$ \textit{und} $(\symsub{alpha}{idx_D},0)$ eines \ac{CCD} mit $\sym{k}=2$ Faktoren.}
+%     \label{fig:contour_spv}
+% \end{figure}
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.7\textwidth}
-    \setlength\figureheight{7cm}
-    \input{plots/ma_abb5.2.1_contour_spv.tex}
+    \includegraphics[width=0.7\textwidth]{plots/ma_abb5.2.1_contour_spv.pdf}
     \caption{Dreidimensionale Darstellung der \ac{SPV} und zugehöriger Konturverlauf für ein beispielhaft asymmetrisch manipuliertes Versuchsdesign: es entfallen $(0,\symsub{alpha}{idx_D})$ \textit{und} $(\symsub{alpha}{idx_D},0)$ eines \ac{CCD} mit $\sym{k}=2$ Faktoren.}
-    \label{fig:contour_spv}
+    \label{fig:ma_abb5.2.1_contour_spv}
 \end{figure}
+
 Dies eröffnet das Potenzial, Mäßigung ungünstiger Wertlagen der \ac{SPV} durch Verschiebung der Sternpunkte in exakt jene Richtung zu erreichen \textit{Brückenpunkt}.
 
 Diese topologischen Gesetzmäßigkeiten verschmelzen die Ergebnisse der reinen Parameteridentifikation nahtlos mit dem Prognoseanspruch:
@@ -588,9 +595,8 @@ Um die \ac{SPV}-Divergenz entlang dieser Achse abzustützen, werden die aus der 
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.7\textwidth}
-    \setlength\figureheight{6cm}
-    \input{plots/ma_abb5.2.2_exposure_scatter.tex}
+    % \setlength\figureheight{8cm}
+    \includegraphics[width=0.6\textwidth]{plots/ma_abb5.2.2_exposure_scatter.pdf}
     \caption{Versuchsraum-Topologie: Das Basis-Design (\ac{CCD}) wird durch strategische Extrapolations-\acp{AP} (innerhalb der \textit{Exposure-Area}) in Richtung des fernen Feld-Betriebspunktes (Ziel-Vektor) erweitert.}
     \label{fig:ma_abb5.2.2_exposure_scatter}
 \end{figure}
@@ -599,10 +605,8 @@ Die asymmetrische Verankerung durch diese \acp{AP} zieht die Konturlinien gering
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.7\textwidth}
-    \setlength\figureheight{6cm}
-    \input{plots/ma_abb5.2.2_contour.tex}
-    \caption{Konturverlauf der \ac{SPV}: Die Platzierung der \acp{AP} zwingt die Vorhersagevarianz im Zielkorridor zur Konvergenz und durchbricht die konzentrische Aufweitung der Unsicherheit.}
+    \includegraphics[width=0.7\textwidth]{plots/ma_abb5.2.2_contour.pdf}
+    \caption{Dreidimensionale Darstellung der \ac{SPV} und zugehöriger Konturverlauf für ein beispielhaft asymmetrisch manipuliertes Versuchsdesign: es entfallen $(0,\symsub{alpha}{idx_D})$ \textit{und} $(\symsub{alpha}{idx_D},0)$ eines \ac{CCD} mit $\sym{k}=2$ Faktoren.}
     \label{fig:ma_abb5.2.2_contour}
 \end{figure}
 
@@ -611,8 +615,8 @@ Während der \ac{VDG} durch die asymmetrische Verzerrung des Designs scheinbar g
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.9\textwidth}
-    \setlength\figureheight{5.5cm}
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{6cm}
     \input{plots/ma_abb5.2.2_evg.tex}
     \caption{Vergleich der Bewertungsmethodik: Der klassische \ac{VDG} bewertet das asymmetrische Design fälschlicherweise negativ. Der \ac{EVG} hingegen belegt die signifikante Reduktion der \ac{SPV} (Sattelpunkt) exakt auf dem geforderten Extrapolationsvektor.}
     \label{fig:ma_abb5.2.2_evg}
@@ -625,25 +629,14 @@ Bislang basierten diese topologischen Schlussfolgerungen jedoch ausschließlich 
 
 \section{Übertragung auf multivariate Lebensdauermodelle} \label{sec:weibull_transfer}
 
-\subsection{Transformation der Methodik auf lebensdauerverteilte Daten} \label{subsec:weibull_methodik}
-% Warum MLE und Weibull nun OLS und Normalverteilung ablösen
+\subsection{Generische Auswirkungen relevanter Orthogonalitätsabweichungen} \label{subsec:weibull_methodik}
+\begin{itemize}
+    \item Überprüfung von Power und Bias für den modifizierten Plan (PSAM17/ASRAM 2024)
+    \item Tatsächliche Extrapolationsgüte (CI-Breite) im Arbeitspunkt (ESREL 2025)
+\end{itemize}
 
-\subsection{Validierung der Trennschärfe bei zensierten Lebensdauerdaten} \label{subsec:weibull_power}
-% Überprüfung von Power und Bias für den modifizierten Plan (PSAM17/ASRAM 2024)
+\subsection{Ökonomische Bewertung: Das Effizienz-Kosten-Modell} \label{sec:kostenmodell}
 
-\subsection{Prognosegüte und Konfidenzintervalle im Feldbetrieb} \label{subsec:weibull_ci}
-% Tatsächliche Extrapolationsgüte (CI-Breite) im Arbeitspunkt (ESREL 2025)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Ökonomische Bewertung: Das Effizienz-Kosten-Modell} \label{sec:kostenmodell}
-
-\subsection{Modellierung multivariater Prüfkosten} \label{subsec:kostenstruktur}
-% Setup-Kosten, Prüfstandskosten, Pönalen
-
-\subsection{Der Trade-off: Testzeit versus Prognosegüte} \label{subsec:tradeoff_zeit_guete}
-% Längere Laufzeiten für Brückenpunkte vs. bessere CIs
-
-\subsection{Holistische Effizienz-Metrik für Lebensdauertests} \label{subsec:effizienz_metrik}
-% Zusammenführung zu einer finalen Metrik (ESREL 2023 adaptiert)
+\begin{itemize}
+    \item Zusammenführung zu einer finalen Metrik (ESREL 2023 adaptiert)
+\end{itemize}
