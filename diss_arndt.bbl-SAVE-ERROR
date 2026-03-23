@@ -2402,54 +2402,46 @@
       \verb 10.1080/00224065.2004.11980255
       \endverb
     \endentry
-    \entry{Ardakani.2011}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=882f38cda5f44951d8ee2e746f5274bb}{%
-           family={Ardakani},
-           familyi={A\bibinitperiod},
-           given={M.\bibnamedelimi K.},
-           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
-        {{hash=9254dd6932e7308133e2d455e201149e}{%
-           family={Das},
-           familyi={D\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=07b8775e0626a75d2f1881ff27e7531d}{%
-           family={Wulf},
-           familyi={W\bibinitperiod},
-           given={S.\bibnamedelimi S.},
-           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=f711b3e628e92e9165e20db290a88684}{%
-           family={Robinson},
-           familyi={R\bibinitperiod},
-           given={T.\bibnamedelimi J.},
-           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+    \entry{OzolGodfrey.2005}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=69540b773e0fdf4e79720a90ff9ef737}{%
+           family={Ozol-Godfrey},
+           familyi={O\bibinithyphendelim G\bibinitperiod},
+           given={Ayca},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
+           family={Anderson-Cook},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Christine\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
-      \strng{namehash}{fd67122f44d94b81ea483acf74cc3cb9}
-      \strng{fullhash}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{fullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{bibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{authorbibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{authornamehash}{fd67122f44d94b81ea483acf74cc3cb9}
-      \strng{authorfullhash}{bd58e8c12f38ea84695af5f81c73be6e}
-      \strng{authorfullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{namehash}{d183012579a5a91e92241aab6cd79389}
+      \strng{fullhash}{b2166bdb849421c537aa36d9ab131a3d}
+      \strng{fullhashraw}{b2166bdb849421c537aa36d9ab131a3d}
+      \strng{bibnamehash}{b2166bdb849421c537aa36d9ab131a3d}
+      \strng{authorbibnamehash}{b2166bdb849421c537aa36d9ab131a3d}
+      \strng{authornamehash}{d183012579a5a91e92241aab6cd79389}
+      \strng{authorfullhash}{b2166bdb849421c537aa36d9ab131a3d}
+      \strng{authorfullhashraw}{b2166bdb849421c537aa36d9ab131a3d}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Commun. in Statistics}
-      \field{number}{9}
-      \field{title}{Estimation in Second-Order Models with Errors in the Factor Levels}
-      \field{urlday}{24}
-      \field{urlmonth}{3}
-      \field{urlyear}{2023}
-      \field{volume}{40}
-      \field{year}{2011}
-      \field{urldateera}{ce}
-      \field{pages}{1573\bibrangedash 1590}
-      \range{pages}{18}
+      \field{issn}{0022-4065}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{number}{3}
+      \field{title}{Fraction of Design Space Plots for Examining Model Robustness}
+      \field{volume}{37}
+      \field{year}{2005}
+      \field{pages}{223\bibrangedash 235}
+      \range{pages}{13}
       \verb{doi}
-      \verb 10.1080/03610921003637421
+      \verb 10.1080/00224065.2005.11980323
       \endverb
     \endentry
     \entry{Borkowski.2022}{article}{}{}
@@ -2540,48 +2532,6 @@
       \range{pages}{11}
       \verb{doi}
       \verb 10.1080/00224065.1992.11979368
-      \endverb
-    \endentry
-    \entry{OzolGodfrey.2005}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=69540b773e0fdf4e79720a90ff9ef737}{%
-           family={Ozol-Godfrey},
-           familyi={O\bibinithyphendelim G\bibinitperiod},
-           given={Ayca},
-           giveni={A\bibinitperiod}}}%
-        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
-           family={Anderson-Cook},
-           familyi={A\bibinithyphendelim C\bibinitperiod},
-           given={Christine\bibnamedelima M.},
-           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
-           family={Montgomery},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima C.},
-           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-      }
-      \strng{namehash}{d183012579a5a91e92241aab6cd79389}
-      \strng{fullhash}{b2166bdb849421c537aa36d9ab131a3d}
-      \strng{fullhashraw}{b2166bdb849421c537aa36d9ab131a3d}
-      \strng{bibnamehash}{b2166bdb849421c537aa36d9ab131a3d}
-      \strng{authorbibnamehash}{b2166bdb849421c537aa36d9ab131a3d}
-      \strng{authornamehash}{d183012579a5a91e92241aab6cd79389}
-      \strng{authorfullhash}{b2166bdb849421c537aa36d9ab131a3d}
-      \strng{authorfullhashraw}{b2166bdb849421c537aa36d9ab131a3d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0022-4065}
-      \field{journaltitle}{Journal of Quality Technology}
-      \field{number}{3}
-      \field{title}{Fraction of Design Space Plots for Examining Model Robustness}
-      \field{volume}{37}
-      \field{year}{2005}
-      \field{pages}{223\bibrangedash 235}
-      \range{pages}{13}
-      \verb{doi}
-      \verb 10.1080/00224065.2005.11980323
       \endverb
     \endentry
     \entry{Schoonees.2016}{article}{}{}
@@ -3259,8 +3209,8 @@
       \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
       \strng{authorfullhashraw}{f938eb5ea778b1893dcdfbcde1ea455d}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 16th International Probabilistic Safety Assessment and Management Conference (PSAM16)}
@@ -3287,8 +3237,8 @@
       \strng{authornamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
       \strng{authorfullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
       \strng{authorfullhashraw}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1st}
@@ -3317,8 +3267,8 @@
       \strng{authornamehash}{5e366e99b3c71b7753f79f011fac39b1}
       \strng{authorfullhash}{5e366e99b3c71b7753f79f011fac39b1}
       \strng{authorfullhashraw}{5e366e99b3c71b7753f79f011fac39b1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1369-7412}
@@ -3723,6 +3673,56 @@
       \field{year}{2004}
       \field{pages}{569\bibrangedash 585}
       \range{pages}{17}
+    \endentry
+    \entry{Ardakani.2011}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=882f38cda5f44951d8ee2e746f5274bb}{%
+           family={Ardakani},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=9254dd6932e7308133e2d455e201149e}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=07b8775e0626a75d2f1881ff27e7531d}{%
+           family={Wulf},
+           familyi={W\bibinitperiod},
+           given={S.\bibnamedelimi S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f711b3e628e92e9165e20db290a88684}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={T.\bibnamedelimi J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{fd67122f44d94b81ea483acf74cc3cb9}
+      \strng{fullhash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{fullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{bibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{authorbibnamehash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{authornamehash}{fd67122f44d94b81ea483acf74cc3cb9}
+      \strng{authorfullhash}{bd58e8c12f38ea84695af5f81c73be6e}
+      \strng{authorfullhashraw}{bd58e8c12f38ea84695af5f81c73be6e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Commun. in Statistics}
+      \field{number}{9}
+      \field{title}{Estimation in Second-Order Models with Errors in the Factor Levels}
+      \field{urlday}{24}
+      \field{urlmonth}{3}
+      \field{urlyear}{2023}
+      \field{volume}{40}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{1573\bibrangedash 1590}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1080/03610921003637421
+      \endverb
     \endentry
     \entry{Thommen.2022}{book}{}{}
       \name{author}{6}{}{%
@@ -4306,8 +4306,8 @@
       \strng{authorfullhash}{1f4ca49bc5f596180e2b8593999ff85b}
       \strng{authorfullhashraw}{1f4ca49bc5f596180e2b8593999ff85b}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Mit Design of Experiments wird ein sehr wirksames Instrument zur Verkürzung von Innovationszeiten und Steigerung von Qualitäten angewandt. Dieses Lehrbuch führt in den theoretischen Hintergrund der Methode ausführlich ein und vertieft das Verständnis anhand einer Vielzahl von Beispielen und Fallstudien. Durch Übungsaufgaben können die vorgestellten Lösungsansätze praktisch nachvollzogen und der Umgang mit den Methoden trainiert werden}
@@ -4699,6 +4699,50 @@
       \verb 10.1109/RAMS51492.2024.10457825
       \endverb
     \endentry
+    \entry{Arndt.2025b}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=237cd2690daa06ce75eb0a191e1bcbf0}{%
+           family={Rittmaier},
+           familyi={R\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{fullhash}{4780ea36ecf2a378970a5be3178e63ac}
+      \strng{fullhashraw}{4780ea36ecf2a378970a5be3178e63ac}
+      \strng{bibnamehash}{4780ea36ecf2a378970a5be3178e63ac}
+      \strng{authorbibnamehash}{4780ea36ecf2a378970a5be3178e63ac}
+      \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{authorfullhash}{4780ea36ecf2a378970a5be3178e63ac}
+      \strng{authorfullhashraw}{4780ea36ecf2a378970a5be3178e63ac}
+      \field{extraname}{4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 Annual Reliability and Maintainability Symposium (RAMS)}
+      \field{isbn}{979-8-3503-6774-4}
+      \field{title}{Assessing the Extrapolation Variance of Non-Orthogonal Response Surface Designs}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/RAMS48127.2025.10935022
+      \endverb
+    \endentry
     \entry{Arndt.2025}{incollection}{}{}
       \name{author}{2}{}{%
         {{hash=cb1e3a90988f317beb3353678cbde418}{%
@@ -4732,6 +4776,37 @@
       \verb{doi}
       \verb 10.3850/978-981-94-3281-3{\textunderscore }ESREL-SRA-E2025-P2042-cd
       \endverb
+    \endentry
+    \entry{Arndt.2024a}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{fullhash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{fullhashraw}{06de43da47c8b5ca086684bf9c477217}
+      \strng{bibnamehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authorbibnamehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authornamehash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authorfullhash}{06de43da47c8b5ca086684bf9c477217}
+      \strng{authorfullhashraw}{06de43da47c8b5ca086684bf9c477217}
+      \field{extraname}{4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the 17th International Conference on Probabilistic Safety Assessment and Management {\&} Asian Symposium on Risk Assessment and Management}
+      \field{title}{Characteristics of Extrapolation-Optimized Response Surface Designs for Multivariate Reliability Modelling and Lifetime Prediction}
+      \field{volume}{PSAM17 {\&} ASRAM2024}
+      \field{year}{2024}
     \endentry
   \enddatalist
 \endrefsection

@@ -21,9 +21,9 @@ axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25},
-legend style={legend cell align=left, align=left}
+legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left}
 ]
-\addplot [color=black, dashed]
+\addplot [color=black, dashed, line width=1.2pt]
   table[row sep=crcr]{%
 0.00	3.67\\
 0.04	3.66\\
@@ -61,7 +61,7 @@ legend style={legend cell align=left, align=left}
 };
 \addlegendentry{$\sym{n}_{\sym{idx_C}} = 3$}
 
-\addplot [color=black]
+\addplot [color=white!40!black, line width=2.0pt]
   table[row sep=crcr]{%
 0.00	2.60\\
 0.07	2.59\\
@@ -98,7 +98,7 @@ legend style={legend cell align=left, align=left}
 };
 \addlegendentry{$\sym{n}_{\sym{idx_C}} = 5$}
 
-\addplot [color=black, dashdotted]
+\addplot [color=black, dashdotted, line width=1.2pt]
   table[row sep=crcr]{%
 0.00	2.14\\
 0.11	2.14\\

@@ -452,7 +452,7 @@ Die Kernaussagen der makroskopischen Darstellung korrespondieren somit konsisten
 
     \item \textbf{Die I-Effizienz als robustes, globales Maß:} Auf Ebene der theoretischen Optimalitätskriterien erweist sich die I-Effizienz ($\sym{eff_I}$) als verlässlicher Indikator, der rund $81\,\%$ der Varianz des durchschnittlichen Trennschärfe-Verlusts erklärt ($\sym{R2} \approx 0{,}81$). Da sie die \ac{SPV} über den gesamten Versuchsraum integriert, bewertet sie direkt die durchschnittliche Prognosegüte. Im Gegensatz zur rein volumenbasierten D-Effizienz erfasst sie die wahren Hebelwirkungen geometrischer Abweichungen realitätsnah.
 
-    \item \textbf{Der \ac{MSE} als direkter Prädiktor der Teststatistik:} Die simulierte Schätzvarianz (\ac{MSE}) fungiert als nahezu perfekter Prädiktor für den Trennschärfe-Erhalt ($\sym{R2} \approx 1{,}00$ am Beispiel von $\hat{\beta}_{11}$). Dies folgt stringent aus der Prüfmathematik, da die Teststatistik (z.\,B. der \sym{Fstat}-Wert) proportional zu $1/\sqrt{\sym{MSE}}$ skaliert. Der \ac{MSE} übersetzt den geometrischen Fehler somit verlustfrei in die probabilistische Trennschärfe.
+    \item \textbf{Der \ac{MSE} als direkter Prädiktor der Teststatistik:} Die simulierte Schätzvarianz (\ac{MSE}) fungiert als nahezu perfekter Prädiktor für den Trennschärfe-Erhalt ($\sym{R2}=0{,}99$ am Beispiel von $\hat{\sym{beta}}_{11}$). Dies folgt stringent aus der Prüfmathematik, da die Teststatistik (z.\,B. der \sym{Fstat}-Wert) proportional zu $1/\sqrt{\sym{MSE}}$ skaliert. Der \ac{MSE} übersetzt den geometrischen Fehler somit verlustfrei in die probabilistische Trennschärfe.
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -460,7 +460,7 @@ Die Kernaussagen der makroskopischen Darstellung korrespondieren somit konsisten
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{4cm}
     \input{plots/ma_abb5.1.4_korrelation.tex}
-    \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust in den \textbf{simulierten Störszenarien} \textit{Fälle I-IV}: Durchschnittswerte für alle Koeffizienten in $\sym{A2},\sym{eff_I}$, beispielhaft in $\sym{beta}_{11}$ und $\sym{MSE}$.}
+    \caption{Korrelation zwischen Design-Metriken und dem resultierenden Trennschärfe-Verlust in den \textbf{simulierten Störszenarien} \textit{Fälle I-IV}: Durchschnittswerte für alle Koeffizienten in $\sym{A2},\sym{eff_I}$, beispielhaft in $\sym{beta}_{11}$ und $\ac{MSE}$.}
     \label{fig:ma_abb5.1.4_korrelation}
 \end{figure}
 
@@ -472,15 +472,18 @@ Die Kernaussagen der makroskopischen Darstellung korrespondieren somit konsisten
 \subsection{Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung} \label{subsec:fazit_sensitivitaet}
 
 Die simulativen Analysen unterstreichen die ausgeprägte topologische Resilienz des \ac{CCD} gegenüber geometrischen Abweichungen.
-Zwar provozieren massive Störungen - insbesondere der asymmetrische Wegfall von Extremstellen sowie die Reduktion von Zentralpunkten (\textit{Fall IV: \ac{SP}} und \textit{Fall IV: \ac{ZP}}) - eine messbare Aufweitung der Schätzvarianz (\ac{MSE}), doch verbleiben diese Effekte weit unterhalb kritischer statistischer Abbruchkriterien.
-In Kombination mit der nachgewiesenen Erwartungstreue des \ac{OLS}-Schätzers (vernachlässigbarer \textit{Bias}) ergibt sich genau daraus ein entscheidender planerischer Spielraum: Die bewusste Inkaufnahme moderater Einbußen in der Orthogonalität gefährdet nicht die statistische Validität des Modells, sondern schafft ein wertvolles \textbf{geometrisches Gestaltungsbudget} zur operativen Optimierung von Prüfzeiten und Ressourcen.
+Zwar provozieren massive Störungen - insbesondere der asymmetrische Wegfall von Extremstellen sowie die Reduktion von Zentralpunkten (\textit{Fall IV: \ac{SP}} und \textit{Fall IV: \ac{ZP}}) - eine messbare Aufweitung der Schätzvarianz (\ac{MSE}), doch verbleiben diese Effekte in tolerierbarem Umfang.
+Mit der Ausnahme von Fall IV: \ac{SP}: $\sym{beta}_{11}$ ($\Delta\sym{power}_{\sym{beta}_{11}}=-10{,}5\%$) verbleiben die Trennschärfe-Verluste für alle Szenarien unter $10\,\%$, vgl. Tabelle~\ref{tab:results_ortho_power}.
+In Kombination mit der nachgewiesenen Erwartungstreue des \ac{OLS}-Schätzers (vernachlässigbarer \textit{Bias}) ergibt sich genau daraus ein entscheidender planerischer Spielraum: Die bewusste Inkaufnahme moderater Einbußen in der Orthogonalität gefährdet nicht die statistische Validität eines zu schätzenden Modells, sondern schafft ein wertvolles \textbf{geometrisches Gestaltungsbudget} zur operativen Optimierung von Prüfzeiten und Ressourcen bei Lebensdauerversuchen.
 
-Dass der Fokus im Weiteren methodischen Verlauf der Arbeit konsequent von der reinen Identifikationswahrscheinlichkeit (\ac{power}) hin zur räumlichen Verteilung der Schätzpräzision verschoben wird, legitimiert sich durch die hohe Indikatorgüte der prädiktiven Metriken.
-Die nachgewiesene Korrelation der $I$-Effizienz mit dem durchschnittlichen Trennschärfe-Verhalten ($R^2 \approx 0{,}81$) belegt makroskopisch, dass die algorithmische Güte eines Lebensdauertests und damit dessen Effektivität untrennbar mit der Struktur der Prädiktionsvarianz im Versuchsraum verknüpft ist.
-Diese Erkenntnis gewinnt im Kontext der \ac{ALT} eine übergeordnete Bedeutung: Da Lebensdauermodelle naturgemäß auf die Extrapolation in den späteren Einsatzbereich (Use- bzw. Field-Level) angewiesen sind, wirkt die im Versuchsraum (Design-Space) vorliegende Varianz der Prädiktion als Verstärker für Unsicherheiten außerhalb des beprobten Raums. Während die zusammenfassende Betrachtung in Abbildung~\ref{fig:ma_abb5.1.4_korrelation} den globalen Trend dieser Verschlechterung repräsentativ wiedergibt, verdeutlicht erst der detaillierte Blick in die koeffizienten-spezifische Aufschlüsselung (Anhang~\ref{app:c}), wie selektiv insbesondere Terme höherer Ordnung auf topologische Brüche reagieren.
+Dass der Fokus im Weiteren methodischen Verlauf der Arbeit konsequent von der reinen Identifikationswahrscheinlichkeit (\ac{power}) hin zur räumlichen Verteilung der Schätzpräzision verschoben wird, legitimiert sich durch die hohe Indikatorgüte der prädiktiven Metriken ($\sym{eff_I}$ und \ac{MSE}).
+Die nachgewiesene Korrelation der $I$-Effizienz mit dem durchschnittlichen Trennschärfe-Verhalten ($\sym{R2} \approx 0{,}81$) belegt makroskopisch, dass die algorithmische Güte eines Lebensdauertests und damit dessen Effektivität untrennbar mit der Struktur der Prädiktionsvarianz im Versuchsraum verknüpft ist.
+Diese Erkenntnis gewinnt im Kontext der \ac{ALT} eine übergeordnete Bedeutung: Da Lebensdauermodelle naturgemäß auf die Extrapolation in den späteren Einsatzbereich (Use- bzw. Field-Space) angewiesen sind, wirkt die im Versuchsraum (Design-Space) vorliegende Varianz der Prädiktion als Verstärker für Unsicherheiten außerhalb des beprobten Raums.
+Während die zusammenfassende Betrachtung in Abbildung~\ref{fig:ma_abb5.1.4_korrelation} den globalen Trend dieser Verschlechterung repräsentativ wiedergibt, verdeutlicht erst der detaillierte Blick in die koeffizienten-spezifische Aufschlüsselung (Anhang~\ref{app:c}), wie selektiv insbesondere Terme höherer Ordnung auf topologische Brüche reagieren.
 
 Für die holistische Effizienzbewertung bedeutet dies: Sobald durch die topologische Robustheit des Designs die grundlegende Identifikation von Effekten gesichert ist, wird die Beherrschung der \ac{SPV}-Struktur zum primären Stellhebel.
 Die Minimierung der Prognoseunsicherheit ist somit kein rein akademisches Gütemaß, sondern die zwingende Voraussetzung für eine belastbare und ökonomisch vertretbare Extrapolationsabsicherung multivariater Lebensdauermodelle.
+Im Folgenden wird daher das Gestaltungsbudget proaktiv genutzt, um die Stützstellen gezielt in Richtung des anvisierten Feldbereichs zu verschieben und damit die \ac{SPV} im kritischen Extrapolationspfad zu optimieren, während die Gesamtanzahl der Versuchspunkte sowie die Grundstruktur des \ac{CCD} als stabiler Kern erhalten bleiben.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -491,25 +494,34 @@ Die Minimierung der Prognoseunsicherheit ist somit kein rein akademisches Gütem
 
 In der Praxis befinden sich \acp{ALT} naturgemäß in Bereiche hoher Belastungen - beispielsweise in den nordöstlichen Quadranten des Parameterraums - um Ausfälle in vertretbarer Prüfzeit zu erzwingen, sofern es der physikalisch sinnvolle Wertebereich der Faktoren zulässt.
 Das eigentliche Ziel der Modellbildung bleibt jedoch die verlässliche Prognose unter wesentlich moderateren Feldbedingungen: im Feldbereich des meist südwestlichen Quadranten - beispielsweise in einem markanten Arbeitspunkt.
-Anstatt das in Abschnitt~\ref{sec:abweichungen} erarbeitete geometrische Budget rein zur passiven Kostensenkung zu nutzen, drängt sich für das Gestaltungsbudget also ein proaktiver Ansatz auf:
-Die durch die nachgewiesene Design-Robustheit freigewordenen Stützstellen - etwa substituierbare Zentralpunkte oder extreme, für den Schädigungsmechanismus gegebenenfalls irrelevante Sternpunkte - werden gezielt in Richtung des anvisierten Feldbereichs verlagert, während das verbleibende Basisdesign weiterhin die notwendige Trennschärfe für die Effektidentifikation gewährleistet.
-Dieser strategische \textit{Brückenbau im Parameterraum} erzeugt asymmetrische Validierungs- oder \textbf{Ankerpunkte}, die das Regressionsmodell auf dem Extrapolationspfad sützen und empirisch absichern.
+Anstatt das in Abschnitt~\ref{sec:abweichungen} erarbeitete geometrische Budget rein zur passiven Kostensenkung zu nutzen, wird das Gestaltungsbudget proaktiv verwertet:
+Die durch die nachgewiesene Design-Robustheit freigewordenen Stützstellen - etwa substituierbare \acp{ZP} oder extreme, für den Schädigungsmechanismus gegebenenfalls irrelevante Sternpunkte \acp{SP} - werden gezielt in Richtung des anvisierten Feldbereichs verlagert, während das verbleibende Basisdesign weiterhin die notwendige Trennschärfe für die Effektidentifikation gewährleistet.
+Dieser strategische \textit{Brückenbau im Parameterraum} erzeugt asymmetrische Validierungs- oder \textbf{Ankerpunkte}, die das Regressionsmodell auf dem Extrapolationspfad sützen und empirisch absichern, vgl. \textcite{Arndt.2024,Arndt.2025b,Arndt.2025,Arndt.2024a}.
 Simultan verbleibt das gewählte \ac{RSD}, hier also der \ac{CCD}, als stabiler, optimaler und effizienter Kern erhalten, der die notwendige Identifikationsgüte für die Effekte sicherstellt.
 Um den Leistungsgewinn der gerichteten Design-Manipulationen objektiv bewerten zu können, wird die zuvor eingeführte \ac{SPV} aus ihrer globalen Integralbetrachtung gelöst.
-Es bedarf nun ihrer isolierten Interpretation als exakte, lokale Maßzahl, die das Vertrauensintervall der Vorhersage  durch Gleichung~\ref{eq:pred_variance_scaled} punktgenau im kritischen Betriebspunkt des Feldes quantifiziert.
-Eine Bewertung nach etabliertem Vorgehen via \textit{Bias} und $\sym{power}$ im Anschluss ist obligatorisch und folgt in Abschnitt~\ref{sec:weibull_transfer}.
+Es bedarf ihrer isolierten Interpretation als exakte, lokale Maßzahl, die das Vertrauensintervall der Vorhersage durch Gleichung~\ref{eq:pred_variance_scaled} punktgenau im kritischen Betriebspunkt des Feldes quantifiziert.
+Eine Bewertung nach etabliertem Vorgehen via \textit{Bias} und $\sym{power}$ im Anschluss ist obligatorisch und folgt in \textcolor{yellow}{Abschnitt~\ref{sec:weibull_transfer}}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Die Scaled Prediction Variance als Prognosemetrik} \label{subsec:spv_metrik}
-Zur Quantifizierung der ortsabhängigen Prognosegüte dient die \ac{SPV} gemäß Gleichung~\ref{eq:pred_variance_scaled}.
-Um die Auswirkungen von Stützstellen-Modifikationen gezielt auf diese Extrapolationsfähigkeit zu bewerten, stellt sich die Untersuchung der Varianztopologie modifizierter \acp{CCD} mittels \textit{Variance Dispersion} (\ac{VDG}) und \textit{Fraction of Design Space} (\ac{FDS}) entsprechend zu Abschnitt~\ref{subsec:optimal} nach \textcite{Arndt.2024} als nur geeignet heraus.
-Wird zunächst gemäß \textit{Fall IV: \ac{ZP}} eine Reduktion der Zentralpunkte betrachtet, erhöht sich demnach die \ac{SPV} im unmittelbaren Kern $(0,0)$ des Versuchsplans leicht, sie wirkt sich jedoch de facto nicht negativ auf die Peripherie und den fernen Extrapolationsraum aus.
-%%%
-%%  HIER WEITER
-%%%
-Sowohl der \ac{FDS}-Plot~\ref{fig:ma_abb5.2.1_fds_nc} als auch der \ac{VDG} in Abbildung~\ref{fig:vdg_nc} belegen, dass die Entfernung von Zentralpunkten die Prognosegüte im Extrapolationsraum kaum beeinträchtigt, solange die verbleibenden Stützstellen die notwendige Identifikationsgüte für die Effekte gewährleisten.
+Zur Quantifizierung der ortsabhängigen Prognosegüte dient gemäß Gleichung~\ref{eq:pred_variance_scaled} sowohl für gezielte Effizienzbetrachtungen die \ac{SPV} als auch generisch die \ac{UPV}.
+Um die Auswirkungen von Stützstellen-Modifikationen gezielt auf diese Extrapolationsfähigkeit zu bewerten, stellt sich die Untersuchung der Varianztopologie modifizierter \acp{CCD} mittels \textit{Variance Dispersion} (\ac{VDG}) und \textit{Fraction of Design Space} (\ac{FDS}) entsprechend zu Abschnitt~\ref{subsec:optimal} nach \textcite{Arndt.2024} jedoch als nur bedingt geeignet heraus.
+Wird zunächst gemäß \textit{Fall IV: \ac{ZP}} eine Reduktion der Zentralpunkte auf beispielsweise $\symsub{n}{idx_C}=3$ betrachtet, ist demnach einer Erhöhung der \ac{SPV} im unmittelbaren Zentrum $(0,0)$ des Design-Spaces marginal identifizierbar - sie wirkt sich jedoch de facto nicht negativ auf die Peripherie und den fernen Extrapolationsraum aus.
+Das zeigen beiderseits die Visualisierungen von \ac{FDS} und \ac{VDG} in Abbildung~\ref{fig:ma_abb5.2.1_fdsvdg_nc}: Trotz der Entfernung von Zentralpunkten bleibt die effizienzbasierte Vorhersagegüte im Extrapolationsraum im Vergleich zum Basis \ac{CCD} mit $\symsub{n}{idx_C}=5$ nahezu unverändert, reduziert sich jedoch zu höheren Anteilen (engl. \textit{Fractions} oder \textit{Proportions})  im Versuchsraum (Abbildung~\ref{fig:ma_abb5.2.1_fds_nc}) und zu größeren radialen Abständen vom Zentrum aufgrund der Normierung der \ac{SPV} mit dem geringeren Stichprobenumfang $\sym{N}$.
+So reduziert sich beispielsweise die mit der Varianz der Messwerte $\sym{sigma}$ zu multiplizierende Vorhersagegüte \ac{SPV} in der äußeren Sphäre des Design-Spaces (Radius $\sym{r}=\sqrt{2}$) um $15\%$ von $8{,}125$ auf $6{,}875$ - siehe Abbildung~\ref{fig:ma_abb5.2.1_vdg_nc}.
+Gegenteiliges erfährt die \ac{SPV} in der Peripherie bei einer steigenden Zentralpunktanzahl $\symsub{n}{idx_C}$.
+Die ineffiziente Ressourcenbindung durch redundante Zentralpunkte lässt sich am Grenzwert der \ac{SPV} im Design-Zentrum  analytisch beweisen.
+Da die Schätzvarianz im Ursprung maßgeblich durch den Mittelwert der $\symsub{n}{idx_C}$ Zentralpunkte dominiert wird, gilt für die Vorhersagevarianz näherungsweise $\sym{pred_var}\approx \sym{sigma}^2 / \symsub{n}{idx_C}$.
+Eingesetzt in die Definitionsgleichung~\ref{eq:pred_variance_scaled} der \ac{SPV} ergibt sich mit der Gesamtversuchsanzahl $\sym{m}(\sym{N} = \symsub{n}{idx_F} + \symsub{n}{idx_S} +\symsub{n}{idx_C})$ (wobei für \ac{CCD} mit $\sym{k}=2$ gilt: $\symsub{n}{idx_F} + \symsub{n}{idx_S} = 8$):
+\begin{equation} \label{eq:spv_limit_center}
+    \lim_{\symsub{n}{idx_C} \to \infty} \sym{pred_var}= \lim_{\symsub{n}{idx_C} \to \infty} \frac{(\symsub{n}{idx_F} + \symsub{n}{idx_S} + \symsub{n}{idx_C}) \cdot \frac{\sym{sigma}^2}{\symsub{n}{idx_C}}}{\sym{sigma}^2} = \lim_{\symsub{n}{idx_C} \to \infty} \left( \frac{\symsub{n}{idx_F} + \symsub{n}{idx_S}}{\symsub{n}{idx_C}} + 1 \right) = 1
+\end{equation}
+Dieses asymptotische Konvergenzverhalten verdeutlicht den abnehmenden Grenznutzen in der Versuchsmitte:
+Die \ac{SPV} stagniert am absoluten Minimum von $1$.
+Eine Erhöhung über $\symsub{n}{idx_C} \approx 3$ hinaus mindert die Varianz im Zentrum nur marginal und leistet insbesondere für den fernen Extrapolationsraum keinerlei Beitrag.
+Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen und potenziell als Gestaltungsbudget freigegeben werden können.
 \begin{figure}[htbp]
     \centering
     \setlength\figureheight{5cm}
@@ -526,15 +538,18 @@ Sowohl der \ac{FDS}-Plot~\ref{fig:ma_abb5.2.1_fds_nc} als auch der \ac{VDG} in A
         \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_vdg_nc.tex}
         \caption{Variance Dispersion Graph (\ac{VDG})}
-        \label{fig:vdg_nc}
+        \label{fig:ma_abb5.2.1_vdg_nc}
     \end{subfigure}
     \caption{Vorhersagegüte bei Variation der \ac{ZP}-Anzahl $\sym{n}_{\sym{idx_C}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren.}
-    \label{fig:ma_abb5.2.1_vdg_nc}
+    \label{fig:ma_abb5.2.1_fdsvdg_nc}
 \end{figure}
-Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen können, sofern deren Umfang über die Grenzen der Modellstabilität hinausgeht und potenziell als Gestaltungsbudget freigegeben werden können.
-
 Demgegenüber offenbart die \ac{SPV}-Analyse den enormen geometrischen Hebel der Sternpunkte.
-Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (die identifizierte statistische \textit{Red Flag} aus \textit{Fall IV: \ac{SP}}), transformiert sich ihr Nutzen bei einer gezielten Verschiebung: Der Rückzug aus extremen Hochlastbereichen hin zu moderateren Lastniveaus führt zu einer gewollten, asymmetrischen Verformung der Varianzfunktion.
+Wird gemäß der tendenziell kritischeren Restriktion nach \textit{Fall IV: \ac{SP}} ein oder mehrere Sternpunkte zensiert, ausgelassen oder unbrauchbar, steigt die \ac{SPV} im unmittelbaren Hochlastbereich des jeweiligen Faktors massiv an.
+Ein wesentlicher Anteil des Design-Space wird demnach durch zunehmend größere \ac{SPV}-Werte dominiert, vergleiche Abbildung~\ref{fig:ma_abb5.2.1_fds_omitted} für verschiedene Varianten von Sternpunkt-Entfall.
+Auch hier wird gemäß \ac{FDS} die Propagation der erhöhten \ac{SPV} zwischen globalem Minimalwert und dem größten Perzentil der \ac{SPV} im Design-Space sichtbar.
+Allerdings ist weder hier, noch im radial ausgewerteten Verlauf der \ac{SPV} (Abbildung~\ref{fig:ma_abb5.2.1_vdg_omitted}) eine gezielte Bewertung der kritischen Extrapolationsregion, also die Faktor- bzw. Richtungsabhängigkeit, möglich.
+Abbildung~\ref{fig:ma_abb5.2.1_vdg_omitted} zeigt dazu vornehmlich die durchschnittliche \ac{SPV} über den Radius, die jedoch die kritische Anisotropie der Varianzverteilung bei asymmetrischem Sternpunkt-Entfall nicht adäquat abbildet.
+Werden hier die Sternpunkte im Hochlastbereich beider Faktoren entfert, so steigt die \ac{SPV} in der äußeren Sphäre des Design-Spaces ungleichmäßig an.
 \begin{figure}[htbp]
     \centering
     \setlength\figureheight{5cm}
@@ -551,31 +566,20 @@ Während ihr ersatzloser Entfall die Modellstabilität signifikant schädigt (di
         \setlength\figurewidth{0.8\linewidth}
         \input{plots/ma_abb5.2.1_vdg_omitted.tex}
         \caption{Variance Dispersion Graph (\ac{VDG})}
-        \label{fig:vdg_sp}
+        \label{fig:ma_abb5.2.1_vdg_omitted}
     \end{subfigure}
-    \caption{Vorhersagegüte bei Variation der \ac{SP}-Anzahl $\sym{n}_{\sym{idx_S}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren.}
-    \label{fig:ma_abb5.2.1_vdg_omitted}
+    \caption{Vorhersagegüte bei Variation der \ac{SP}-Anzahl $\sym{n}_{\sym{idx_S}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren. \ac{SPV}-Werte für verschiedene Varianten entfallener Sternpunkte. Abbildung \ref{fig:ma_abb5.2.1_vdg_omitted} zeigt den Fall des vollständigen Entfalls der Sternpunkte $(\symsub{alpha}{idx_D},0)$ und $(0,\symsub{alpha}{idx_D})$ im Hochlastbereich.}
+    \label{fig:ma_abb5.2.1_fdsvdg_omitted}
 \end{figure}
-% \begin{figure}[htbp]
-%     \centering
-%     \setlength\figurewidth{0.7\textwidth}
-%     \setlength\figureheight{9cm}
-%     \input{plots/ma_abb5.2.1_contour_spv.tex}
-%     \caption{Dreidimensionale Darstellung der \ac{SPV} und zugehöriger Konturverlauf für ein beispielhaft asymmetrisch manipuliertes Versuchsdesign: es entfallen $(0,\symsub{alpha}{idx_D})$ \textit{und} $(\symsub{alpha}{idx_D},0)$ eines \ac{CCD} mit $\sym{k}=2$ Faktoren.}
-%     \label{fig:contour_spv}
-% \end{figure}
+Die asymmetrische Ausprägung des Designs führt zu einer starken Anisotropie der Varianzverteilung, die sich in einem deutlich erhöhten \ac{SPV} im Hochlastbereich und einem vergleichsweise moderaten Anstieg in anderen Regionen manifestiert.
+Schließlich entspricht der Versuchsplan keinem rotierbarem Design, wie auch Abbildung~\ref{fig:ma_abb5.2.1_contour_spv} zeigt, da die Varianz nicht mehr ausschließlich vom Radius, sondern auch von der Richtung abhängt.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{plots/ma_abb5.2.1_contour_spv.pdf}
     \caption{Dreidimensionale Darstellung der \ac{SPV} und zugehöriger Konturverlauf für ein beispielhaft asymmetrisch manipuliertes Versuchsdesign: es entfallen $(0,\symsub{alpha}{idx_D})$ \textit{und} $(\symsub{alpha}{idx_D},0)$ eines \ac{CCD} mit $\sym{k}=2$ Faktoren.}
     \label{fig:ma_abb5.2.1_contour_spv}
 \end{figure}
-
-Dies eröffnet das Potenzial, Mäßigung ungünstiger Wertlagen der \ac{SPV} durch Verschiebung der Sternpunkte in exakt jene Richtung zu erreichen \textit{Brückenpunkt}.
-
-Diese topologischen Gesetzmäßigkeiten verschmelzen die Ergebnisse der reinen Parameteridentifikation nahtlos mit dem Prognoseanspruch:
-Die durch reduzierte \acp{ZP} freigewordenen Ressourcen lassen sich investieren, um den geometrischen Extrapolationshebel in Richtung des Feld-Betriebspunktes abzustützen und die divergierende \ac{SPV}-Funktion an einem kritischen Zwischenstopp zu erden.
-Zur Quantifizierung dieses spezifischen, richtungsabhängigen Informationsgewinns im multivariaten Raum stoßen klassische, meist rotationssymmetrisch auswertende Bewertungstools (wie der \ac{VDG}) jedoch an ihre Grenzen.
+%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -626,6 +630,8 @@ Bislang basierten diese topologischen Schlussfolgerungen jedoch ausschließlich 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Übertragung auf multivariate Lebensdauermodelle} \label{sec:weibull_transfer}
+Für die topologische Optimierung des Versuchsraums und die Allokation des Gestaltungsbudgets fungiert die SPV als primäre Zielfunktion der geometrischen Effizienz. Sie rechtfertigt die Reduktion irrelevanter Zentralpunkte. Um jedoch sicherzustellen, dass die absolute Schätzpräzision des resultierenden adaptiven Designs den ingenieurtechnischen Anforderungen der Praxis genügt, muss das Design im Nachgang unskaliert bewertet werden. Diese absolute Prädiktionsvarianz (UPV) wird im Rahmen dieser Arbeit nicht als abstrakter Kennwert isoliert, sondern in Kapitel 5.3 direkt über die Breite der resultierenden Konfidenzintervalle der multivariaten Lebensdauerverteilung quantifiziert.
+
 
 \subsection{Generische Auswirkungen relevanter Orthogonalitätsabweichungen} \label{subsec:weibull_methodik}
 \begin{itemize}
