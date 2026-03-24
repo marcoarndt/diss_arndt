@@ -492,8 +492,8 @@ Im Folgenden wird daher das Gestaltungsbudget proaktiv genutzt, um die Stützste
 
 \section{Adaptive Versuchsplanung zur Extrapolationsabsicherung} \label{sec:adaptive_planung}
 
-In der Praxis befinden sich \acp{ALT} naturgemäß in Bereiche hoher Belastungen - beispielsweise in den nordöstlichen Quadranten des Parameterraums - um Ausfälle in vertretbarer Prüfzeit zu erzwingen, sofern es der physikalisch sinnvolle Wertebereich der Faktoren zulässt.
-Das eigentliche Ziel der Modellbildung bleibt jedoch die verlässliche Prognose unter wesentlich moderateren Feldbedingungen: im Feldbereich des meist südwestlichen Quadranten - beispielsweise in einem markanten Arbeitspunkt.
+In der Praxis befinden sich \acp{ALT} naturgemäß im Bereich hoher Belastungen - beispielsweise in den nordöstlichen Quadranten des Parameterraums - um Ausfälle in vertretbarer Prüfzeit zu erzwingen, sofern es der physikalisch sinnvolle Wertebereich der Faktoren zulässt.
+Das eigentliche Ziel der Modellbildung bleibt jedoch die verlässliche Prognose unter wesentlich moderateren Faktoreinstellungen: im Feldbereich des meist südwestlichen Quadranten - beispielsweise in einem markanten Arbeitspunkt.
 Anstatt das in Abschnitt~\ref{sec:abweichungen} erarbeitete geometrische Budget rein zur passiven Kostensenkung zu nutzen, wird das Gestaltungsbudget proaktiv verwertet:
 Die durch die nachgewiesene Design-Robustheit freigewordenen Stützstellen - etwa substituierbare \acp{ZP} oder extreme, für den Schädigungsmechanismus gegebenenfalls irrelevante Sternpunkte \acp{SP} - werden gezielt in Richtung des anvisierten Feldbereichs verlagert, während das verbleibende Basisdesign weiterhin die notwendige Trennschärfe für die Effektidentifikation gewährleistet.
 Dieser strategische \textit{Brückenbau im Parameterraum} erzeugt asymmetrische Validierungs- oder \textbf{Ankerpunkte}, die das Regressionsmodell auf dem Extrapolationspfad sützen und empirisch absichern, vgl. \textcite{Arndt.2024,Arndt.2025b,Arndt.2025,Arndt.2024a}.
@@ -506,22 +506,17 @@ Eine Bewertung nach etabliertem Vorgehen via \textit{Bias} und $\sym{power}$ im 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Die Scaled Prediction Variance als Prognosemetrik} \label{subsec:spv_metrik}
-Zur Quantifizierung der ortsabhängigen Prognosegüte dient gemäß Gleichung~\ref{eq:pred_variance_scaled} sowohl für gezielte Effizienzbetrachtungen die \ac{SPV} als auch generisch die \ac{UPV}.
-Um die Auswirkungen von Stützstellen-Modifikationen gezielt auf diese Extrapolationsfähigkeit zu bewerten, stellt sich die Untersuchung der Varianztopologie modifizierter \acp{CCD} mittels \textit{Variance Dispersion} (\ac{VDG}) und \textit{Fraction of Design Space} (\ac{FDS}) entsprechend zu Abschnitt~\ref{subsec:optimal} nach \textcite{Arndt.2024} jedoch als nur bedingt geeignet heraus.
-Wird zunächst gemäß \textit{Fall IV: \ac{ZP}} eine Reduktion der Zentralpunkte auf beispielsweise $\symsub{n}{idx_C}=3$ betrachtet, ist demnach einer Erhöhung der \ac{SPV} im unmittelbaren Zentrum $(0,0)$ des Design-Spaces marginal identifizierbar - sie wirkt sich jedoch de facto nicht negativ auf die Peripherie und den fernen Extrapolationsraum aus.
-Das zeigen beiderseits die Visualisierungen von \ac{FDS} und \ac{VDG} in Abbildung~\ref{fig:ma_abb5.2.1_fdsvdg_nc}: Trotz der Entfernung von Zentralpunkten bleibt die effizienzbasierte Vorhersagegüte im Extrapolationsraum im Vergleich zum Basis \ac{CCD} mit $\symsub{n}{idx_C}=5$ nahezu unverändert, reduziert sich jedoch zu höheren Anteilen (engl. \textit{Fractions} oder \textit{Proportions})  im Versuchsraum (Abbildung~\ref{fig:ma_abb5.2.1_fds_nc}) und zu größeren radialen Abständen vom Zentrum aufgrund der Normierung der \ac{SPV} mit dem geringeren Stichprobenumfang $\sym{N}$.
-So reduziert sich beispielsweise die mit der Varianz der Messwerte $\sym{sigma}$ zu multiplizierende Vorhersagegüte \ac{SPV} in der äußeren Sphäre des Design-Spaces (Radius $\sym{r}=\sqrt{2}$) um $15\%$ von $8{,}125$ auf $6{,}875$ - siehe Abbildung~\ref{fig:ma_abb5.2.1_vdg_nc}.
-Gegenteiliges erfährt die \ac{SPV} in der Peripherie bei einer steigenden Zentralpunktanzahl $\symsub{n}{idx_C}$.
-Die ineffiziente Ressourcenbindung durch redundante Zentralpunkte lässt sich am Grenzwert der \ac{SPV} im Design-Zentrum  analytisch beweisen.
-Da die Schätzvarianz im Ursprung maßgeblich durch den Mittelwert der $\symsub{n}{idx_C}$ Zentralpunkte dominiert wird, gilt für die Vorhersagevarianz näherungsweise $\sym{pred_var}\approx \sym{sigma}^2 / \symsub{n}{idx_C}$.
-Eingesetzt in die Definitionsgleichung~\ref{eq:pred_variance_scaled} der \ac{SPV} ergibt sich mit der Gesamtversuchsanzahl $\sym{m}(\sym{N} = \symsub{n}{idx_F} + \symsub{n}{idx_S} +\symsub{n}{idx_C})$ (wobei für \ac{CCD} mit $\sym{k}=2$ gilt: $\symsub{n}{idx_F} + \symsub{n}{idx_S} = 8$):
-\begin{equation} \label{eq:spv_limit_center}
-    \lim_{\symsub{n}{idx_C} \to \infty} \sym{pred_var}= \lim_{\symsub{n}{idx_C} \to \infty} \frac{(\symsub{n}{idx_F} + \symsub{n}{idx_S} + \symsub{n}{idx_C}) \cdot \frac{\sym{sigma}^2}{\symsub{n}{idx_C}}}{\sym{sigma}^2} = \lim_{\symsub{n}{idx_C} \to \infty} \left( \frac{\symsub{n}{idx_F} + \symsub{n}{idx_S}}{\symsub{n}{idx_C}} + 1 \right) = 1
-\end{equation}
-Dieses asymptotische Konvergenzverhalten verdeutlicht den abnehmenden Grenznutzen in der Versuchsmitte:
-Die \ac{SPV} stagniert am absoluten Minimum von $1$.
-Eine Erhöhung über $\symsub{n}{idx_C} \approx 3$ hinaus mindert die Varianz im Zentrum nur marginal und leistet insbesondere für den fernen Extrapolationsraum keinerlei Beitrag.
-Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen und potenziell als Gestaltungsbudget freigegeben werden können.
+Zur Quantifizierung der ortsabhängigen Prognosegüte dienen gemäß Gleichung~\ref{eq:pred_variance_scaled} sowohl die \ac{SPV} für \textit{effizienzbasierte} Varianzbewertungen als auch die \ac{UPV} für die Bewertung der \textit{absoluten} Vorhersageunsicherheit (Abschnitt~\ref{subsec:optimal}).
+Um die Auswirkungen von Design-Modifikationen auf die Varianz sowie speziell Extrapolationsfähigkeit zu bewerten, erweist sich die Untersuchung der Varianztopologie mittels \textit{Variance Dispersion} (\ac{VDG}) und \textit{Fraction of Design Space} (\ac{FDS}) - entsprechend der Methodik aus Abschnitt~\ref{subsec:optimal} nach \textcite{Arndt.2024} - jedoch als nur bedingt geeignet.
+Das lässt sich an nachfolgender Beobachtung belegen.
+Dafür wird gemäß den Erkenntnissen aus Abschnitt~\ref{subsec:ergebnisse_generic} die daraus als vorwiegend kritischer identifizierten Restriktionen von Designmodifikationen betrachtet:
+Erfolgt beispielsweise zunächst eine Reduktion der Zentralpunkte von $\symsub{n}{idx_C} = 5$ auf $\symsub{n}{idx_C} = 3$ entlang von \textit{Fall IV: \ac{ZP}}, ist ein marginaler Anstieg der \ac{SPV} im unmittelbaren Zentrum $(0,0)$ des Versuchsraums identifizierbar - wie Abbildung~\ref{fig:ma_abb5.2.1_fds_nc} zeigt.
+Außerdem ergibt hier die Analyse weiter, dass sich diese Modifikation de facto nicht negativ auf die Peripherie und den fernen Extrapolationsraum auswirkt:
+Die \ac{SPV} bleibt dort im Vergleich zum Basis \ac{CCD} ($\sym{n}=5$) nahezu unverändert oder verbessert sich sogar leicht.
+Dies belegen zu diesem Punkt beiderseits die Visualisierungen von \ac{FDS} sowie \ac{VDG} in Abbildung~\ref{fig:ma_abb5.2.1_fdsvdg_nc}.
+Aufgrund der Normierung der \ac{SPV} mit dem nun geringeren Stichprobenumfang $\sym{N}$ reduziert sich die skalierte Varianz über große Anteile (\textit{Fractions}) des Versuchsraums (vgl. Abbildung~\ref{fig:ma_abb5.2.1_fds_nc}) sowie auch bei größeren radialen Abständen.
+Daraus folgt: für aus dem \textit{Fall IV: \ac{ZP}} stammende Modifikationen am Basis-\ac{CCD} fällt die effizienzbasierte \ac{SPV} in der äußeren Sphäre (Radius $\sym{r}=\sqrt{2}$) um $15\,\%$ von $8{,}125$ auf $6{,}875$ ab, vgl. Abbildung~\ref{fig:ma_abb5.2.1_vdg_nc}.
+Auch Gegenteiliges kann beobachtet werden: bei einer \textit{steigenden} Zentralpunktanzahl $\symsub{n}{idx_C} > 5$ nimmt die effizienzbasierte \ac{SPV} in der Peripherie zu.
 \begin{figure}[htbp]
     \centering
     \setlength\figureheight{5cm}
@@ -543,13 +538,21 @@ Dies untermauert die methodische These, dass redundante \acp{ZP} für extrapolie
     \caption{Vorhersagegüte bei Variation der \ac{ZP}-Anzahl $\sym{n}_{\sym{idx_C}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren.}
     \label{fig:ma_abb5.2.1_fdsvdg_nc}
 \end{figure}
-Demgegenüber offenbart die \ac{SPV}-Analyse den enormen geometrischen Hebel der Sternpunkte.
-Wird gemäß der tendenziell kritischeren Restriktion nach \textit{Fall IV: \ac{SP}} ein oder mehrere Sternpunkte zensiert, ausgelassen oder unbrauchbar, steigt die \ac{SPV} im unmittelbaren Hochlastbereich des jeweiligen Faktors massiv an.
-Ein wesentlicher Anteil des Design-Space wird demnach durch zunehmend größere \ac{SPV}-Werte dominiert, vergleiche Abbildung~\ref{fig:ma_abb5.2.1_fds_omitted} für verschiedene Varianten von Sternpunkt-Entfall.
-Auch hier wird gemäß \ac{FDS} die Propagation der erhöhten \ac{SPV} zwischen globalem Minimalwert und dem größten Perzentil der \ac{SPV} im Design-Space sichtbar.
-Allerdings ist weder hier, noch im radial ausgewerteten Verlauf der \ac{SPV} (Abbildung~\ref{fig:ma_abb5.2.1_vdg_omitted}) eine gezielte Bewertung der kritischen Extrapolationsregion, also die Faktor- bzw. Richtungsabhängigkeit, möglich.
-Abbildung~\ref{fig:ma_abb5.2.1_vdg_omitted} zeigt dazu vornehmlich die durchschnittliche \ac{SPV} über den Radius, die jedoch die kritische Anisotropie der Varianzverteilung bei asymmetrischem Sternpunkt-Entfall nicht adäquat abbildet.
-Werden hier die Sternpunkte im Hochlastbereich beider Faktoren entfert, so steigt die \ac{SPV} in der äußeren Sphäre des Design-Spaces ungleichmäßig an.
+Die ineffiziente Ressourcenbindung durch redundante Zentralpunkte lässt sich am Grenzwert der \ac{SPV} im Design-Zentrum sogar schlichtweg analytisch beweisen.
+Da die Schätzvarianz im Ursprung maßgeblich durch den Mittelwert der $\symsub{n}{idx_C}$ Zentralpunkte dominiert wird, gilt für die Vorhersagevarianz näherungsweise $\sym{pred_var}\approx \sym{sigma}^2 / \symsub{n}{idx_C}$.
+Eingesetzt in die Definitionsgleichung~\ref{eq:pred_variance_scaled} ergibt sich mit der Gesamtversuchsanzahl $\sym{N} = \symsub{n}{idx_F} + \symsub{n}{idx_S} +\symsub{n}{idx_C}$ - wobei für ein zweidimensionales \ac{CCD} $\symsub{n}{idx_F} + \symsub{n}{idx_S} = 8$ gilt:
+\begin{equation} \label{eq:spv_limit_center}
+    \lim_{\symsub{n}{idx_C} \to \infty} \sym{pred_var}= \lim_{\symsub{n}{idx_C} \to \infty} \frac{(\symsub{n}{idx_F} + \symsub{n}{idx_S} + \symsub{n}{idx_C}) \cdot \frac{\sym{sigma}^2}{\symsub{n}{idx_C}}}{\sym{sigma}^2} = \lim_{\symsub{n}{idx_C} \to \infty} \left( \frac{\symsub{n}{idx_F} + \symsub{n}{idx_S}}{\symsub{n}{idx_C}} + 1 \right) = 1
+\end{equation}
+Dieses asymptotische Konvergenzverhalten verdeutlicht den abnehmenden Grenznutzen in der Versuchsmitte weiter:
+Die \ac{SPV} stagniert am absoluten Minimum von $1$.
+Eine Erhöhung über $\symsub{n}{idx_C} \approx 3$ hinaus mindert die Varianz im Zentrum nur noch marginal und leistet für den fernen Extrapolationsraum keinerlei Beitrag.
+Die das Gestaltungsbudget untermauernde These, dass redundante \acp{ZP} für extrapolierende \ac{EoL}-Prognosen ein ineffizientes Investment darstellen und potenziell als Gestaltungsbudget freigegeben werden können, festigt sich damit auf Basis der Erkenntnisse aus Abschnitt~\ref{subsec:ergebnisse_generic}.\
+Demgegenüber offenbaren die Sternpunkte (\textit{Fall IV: \ac{SP}}) eine deutlich kritischere Rolle, da sie die Varianz sowohl im Zentrum als auch in der Peripherie beeinflussen und eine Interpretation via \ac{FDS} und \ac{VDG} nicht ohne weiteres zulassen.
+Wird, entsprechend der tendenziell kritischeren Restriktion ein oder mehrere Sternpunkte zensiert, ausgelassen oder als unbrauchbar deklariert (in diesem Beispiel $(\symsub{alpha}{idx_D},0)$ und $(0,\symsub{alpha}{idx_D})$), erhöht sich die \ac{SPV} im unmittelbaren Hochlastbereich des jeweiligen Faktors lokal massiv.
+Damit wird einerseits ein wesentlicher Anteil des Design-Spaces infolgedessen durch zunehmend größere \ac{SPV}-Werte dominiert - vgl. Abbildung~\ref{fig:ma_abb5.2.1_fds_omitted}.
+Andererseits ist - vor allem für Fälle von $\sym{k}>2$ - die \ac{SPV} im Extrapolationsraum nicht mehr ohne weiteres durch die \ac{VDG} interpretierbar, da die asymmetrische Störung zu einer komplexen, nicht mehr radialsymmetrischen Varianzstruktur führt.
+Abbildung~\ref{fig:ma_abb5.2.1_vdg_omitted} zeigt dazu einerseits in gewohnter Form die durchschnittliche, skalierte und effizienzbasierte Prädiktionsvarianz \ac{SPV} über den Radius.
 \begin{figure}[htbp]
     \centering
     \setlength\figureheight{5cm}
@@ -571,15 +574,21 @@ Werden hier die Sternpunkte im Hochlastbereich beider Faktoren entfert, so steig
     \caption{Vorhersagegüte bei Variation der \ac{SP}-Anzahl $\sym{n}_{\sym{idx_S}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren. \ac{SPV}-Werte für verschiedene Varianten entfallener Sternpunkte. Abbildung \ref{fig:ma_abb5.2.1_vdg_omitted} zeigt den Fall des vollständigen Entfalls der Sternpunkte $(\symsub{alpha}{idx_D},0)$ und $(0,\symsub{alpha}{idx_D})$ im Hochlastbereich.}
     \label{fig:ma_abb5.2.1_fdsvdg_omitted}
 \end{figure}
-Die asymmetrische Ausprägung des Designs führt zu einer starken Anisotropie der Varianzverteilung, die sich in einem deutlich erhöhten \ac{SPV} im Hochlastbereich und einem vergleichsweise moderaten Anstieg in anderen Regionen manifestiert.
-Schließlich entspricht der Versuchsplan keinem rotierbarem Design, wie auch Abbildung~\ref{fig:ma_abb5.2.1_contour_spv} zeigt, da die Varianz nicht mehr ausschließlich vom Radius, sondern auch von der Richtung abhängt.
+Andererseits ist jedoch auch ein deutlich erhöhter, aus dem Hochlastbereich stammender, Maximal-Varianzverlauf sowie eine radiusabhängige minimale Varianzstruktur erkennbar, deren Differenz einen sphärischen Streubereich aufspannt und aus der asymmetrischen Verzerrung der Sternpunktallokation ($(-\symsub{alpha}{idx_D},0)$ und $(0,-\symsub{alpha}{idx_D})$ sind hier noch vorhanden) resultiert - vgl. Abbildung~\ref{fig:ma_abb5.2.1_contour_spv}.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{plots/ma_abb5.2.1_contour_spv.pdf}
     \caption{Dreidimensionale Darstellung der \ac{SPV} und zugehöriger Konturverlauf für ein beispielhaft asymmetrisch manipuliertes Versuchsdesign: es entfallen $(0,\symsub{alpha}{idx_D})$ \textit{und} $(\symsub{alpha}{idx_D},0)$ eines \ac{CCD} mit $\sym{k}=2$ Faktoren.}
     \label{fig:ma_abb5.2.1_contour_spv}
 \end{figure}
-%%
+Aus ingenieurwissenschaftlicher Sicht ist die starke Anisotropie der Varianzverteilung im Extrapolationsraum besonders kritisch, da sie die Vorhersagegüte entlang des Extrapolationspfads - insbesondere in Richtung der entfernten Sternpunkte - sowohl massiv beeinträchtigt, während sie in anderen Richtungen vergleichsweise moderat bleibt, als auch in Bezug auf einen etwaigen Prognosepunkt nicht interpretierbar ist.
+Aus diesem geometrischen Verhalten lassen sich drei wesentliche Erkenntnisse für die Versuchsplanung ableiten:
+\begin{enumerate}
+    \item Lokale Fehlstellen in der Matrix (fehlende Versuchspunkte) prägen sich unmittelbar als divergierende Varianztäler (\textit{Peaks}) in genau jener Himmelsrichtung der \ac{SPV}-Topologie aus, was die Vorhersagegüte dort massiv kompromittiert.
+    \item Die Vorhersagegüte im Extrapolationsraum verhält sich stets richtungssensitiv: Während die Unsicherheit in Richtung  entfernter Sternpunkte radial drastisch ansteigt, bleibt sie in den diametral gegenüberliegenden (gestützten) Quadranten moderat.
+    \item Konventionelle, rotationssymmetrisch aggregierende Visualisierungen (wie der \ac{VDG}) versagen bei der Bewertung solcher asymmetrisch modifizierter Designs. Sie blenden die kritische Richtungsabhängigkeit aus und deuten im besten Fall lediglich über die sphärischen Minima und Maxima auf extreme Streuungen der \ac{SPV} hin.
+\end{enumerate}
+Insbesondere aus der Perpektive der Ingenieurpraxis und effizienter, multivariater \ac{ALT}-Planung ist demnach die Entwicklung eines neuen Visualisierungs- und Bewertungswerkzeugs notwendig, das die Richtungsabhängigkeit der Vorhersagevarianz explizit adressiert und die Effizienz von gezielten Design-Manipulationen zur Extrapolationsabsicherung direkt quantifiziert.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -587,14 +596,18 @@ Schließlich entspricht der Versuchsplan keinem rotierbarem Design, wie auch Abb
 \subsection{Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)} \label{subsec:evg_plot}
 
 Wie aus den vorherigen Überlegungen hervorgeht, verliert die \ac{SPV}-Topologie durch die asymmetrische Streichung oder Verschiebung einzelner Versuchspunkte unweigerlich ihre konzentrische Rotationssymmetrie; die Vorhersagevarianz divergiert richtungsabhängig.
-Für die gezielte Extrapolation auf einen fernen Feld-Betriebspunkt ist jedoch nicht die durchschnittliche Varianz über alle Winkel entscheidend, sondern exakt die \ac{SPV}-Entwicklung entlang des Vektors, der das Design-Zentrum mit dem Ziel-Betriebspunkt verbindet.
-
-Klassische Visualisierungswerkzeuge wie der \textit{Variance Dispersion Graph} (\ac{VDG}) berechnen für einen gegebenen Radius um das Design-Zentrum lediglich globale Minima, Maxima sowie den sphärischen Mittelwert der \ac{SPV}.
-Sie sind blind für die tatsächliche geometrische Ausrichtung der Modifikation. Um diesen \textit{Blind Spot} zu adressieren und die Effizienz asymmetrischer Versuchsplan-Anpassungen qualitativ sowie quantitativ zu bewerten, wurde in \textcite{Arndt.2025} der \textit{Extrapolation Variance Graph} (\ac{EVG}) entwickelt.
-
-Der \ac{EVG} transformiert die Fragestellung: Anstatt die \ac{SPV} konzentrisch zu mitteln, wird sie ausschließlich entlang eines eindimensionalen Vektors analysiert, der exakt in den Zielbereich des extrapolierten Feld-Betriebspunktes zeigt.
-Um die \ac{SPV}-Divergenz entlang dieser Achse abzustützen, werden die aus der Modifikation des \ac{CCD} freigewordenen Stützstellen (beispielsweise entfallene hochbelastete Sternpunkte oder redundante Zentralpunkte) gezielt umgewidmet. Sie fungieren fortan als sogenannte Extrapolations-\acp{AP}. Diese \acp{AP} werden in einem physikalisch realisierbaren Toleranzbereich (\textit{Exposure-Area}) zwischen dem Basis-Design und dem Betriebsraum platziert (vgl. Abbildung~\ref{fig:ma_abb5.2.2_exposure_scatter}).
-
+Für die gezielte Extrapolation auf einen fernen Betriebspunkt im Field-Space ist jedoch nicht die durchschnittliche Varianz über alle Winkel entscheidend, sondern exakt die \ac{SPV}-Entwicklung entlang des Vektors, der das Design-Zentrum mit dem Ziel-Betriebspunkt verbindet.
+Klassische Visualisierungswerkzeuge wie der \ac{VDG} berechnen für einen gegebenen Radius und basierend auf den Sphären des Design um das Zentrum lediglich globale Minima, Maxima sowie den sphärischen Mittelwert der \ac{SPV} (Abbildung~\ref{fig:ma_abb5.2.1_vdg_omitted}).
+Sie sind blind für die tatsächliche geometrische Ausrichtung der Modifikation.
+Um diesen \textit{Blind Spot} zu adressieren und die Effizienz asymmetrischer Versuchsplan-Anpassungen qualitativ sowie quantitativ zu bewerten, wurde von \textcite{Arndt.2025} der \textbf{\ac{EVG}} vorgestellt.
+Der \ac{EVG} transformiert die Fragestellung: Anstatt die \ac{SPV} konzentrisch zu mitteln, wird sie ausschließlich entlang eines eindimensionalen Vektors analysiert, der exakt in den Zielbereich eines extrapolierten Betriebspunktes zeigt.
+Um die \ac{SPV}-Divergenz entlang dieser Achse abzustützen, werden die aus der Modifikation des \ac{CCD} freigewordenen Stützstellen (beispielsweise entfallene hochbelastete Sternpunkte $(0,\symsub{alpha}{idx_D})$ \textit{und} $(\symsub{alpha}{idx_D},0)$ oder zwei der $\symsub{n}{idx_C}$ redundanten Zentralpunkte gemäß \textit{Fall IV: \ac{ZP} und \ac{SP}}) gezielt umgewidmet.
+Sie fungieren fortan als sogenannte Extrapolations-\acp{AP}.
+Diese \acp{AP} werden in einem physikalisch realisierbaren Toleranzbereich (\textit{Expositionsbereich}) zwischen dem Basis-Design und dem Betriebsraum platziert (vgl. Abbildung~\ref{fig:ma_abb5.2.2_exposure_scatter}) und können verschiedene Anforderungen erfüllen.
+Dazu können beispielsweise \ac{AP}-Kombinationen algorithmisch identifiziert werden, die die \ac{SPV} zum extrapolierten Prognosepunkt minimal oder auf ein maximal toleriertes Perzentil reduzieren, sodass die Vorhersagegüte im Ziel-Betriebspunkt einen Wertekorridor erreicht, der für die Ingenieurpraxis als ausreichend gilt.
+Das Testdesign würde demnach eine Form annehmen, die aus dem unveränderten Basis-Design des \ac{CCD} besteht, jedoch gemäß Abschnitt~\ref{subsec:ergebnisse_generic} um die gezielt verschobenen Extrapolations-\acp{AP} ergänzt wird, die entlang des Extrapolationsvektors in Richtung des Ziel-Betriebspunktes positioniert sind.
+Abbildung~\ref{fig:ma_abb5.2.2_exposure_scatter} illustriert exemplarisch und unter Vorbehalt der Annahme, dass eine Umsetzung des \textit{Gestaltungsbudgets} nach Abschnitt~\ref{subsec:spv_metrik} interessant wäre, die strategische Allokation von drei Extrapolations-\acp{AP} im südwestlichen Quadranten des Design-Space.
+Der dazu aufgespannte graue Expositionsbereich erfasst dabei den Parameterraum, zu dem alle beliebigen Kombinationen der drei \acp{AP} zusammen mit den Versuchspunkten aus dem Basis-Deisgn im exemplarischen \textbf{Progonosepunkt} $(-0,7;-1,9)$ eine ideale Prädiktionsvarianz $\ac{SPV}_5$ zum minimalen Wert oder maxximal dem 5. Perzentil der \ac{SPV} erzeugen würden.
 \begin{figure}[htbp]
     \centering
     % \setlength\figureheight{8cm}
@@ -602,8 +615,12 @@ Um die \ac{SPV}-Divergenz entlang dieser Achse abzustützen, werden die aus der 
     \caption{Versuchsraum-Topologie: Das Basis-Design (\ac{CCD}) wird durch strategische Extrapolations-\acp{AP} (innerhalb der \textit{Exposure-Area}) in Richtung des fernen Feld-Betriebspunktes (Ziel-Vektor) erweitert.}
     \label{fig:ma_abb5.2.2_exposure_scatter}
 \end{figure}
+%%%%%%%%%%%%%%%
 
-Die asymmetrische Verankerung durch diese \acp{AP} zieht die Konturlinien geringer Vorhersageunsicherheit gezielt in den südwestlichen Extrapolationsraum (vgl. Abbildung~\ref{fig:ma_abb5.2.2_contour}). Das Regressionsmodell wird an diesen Stellen empirisch gestützt, was den Hebelarm der Unsicherheit künstlich verkürzt.
+%% hier weiter
+
+%%%%%%%%%%%%%%%
+
 
 \begin{figure}[htbp]
     \centering
