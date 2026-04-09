@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+    \centering
+    \caption{Matrix\-eigenschaften und Effizienzen. Der \ac{VIF} wird für alle Terme dargestellt ($\hat{\sym{beta}}_0$ entfällt).}
+    \label{tab:results_emalt_metrics}
+    \renewcommand{\arraystretch}{1.2}
+    \setlength{\tabcolsep}{3.5pt}
+    \footnotesize
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l c rrrrr rrrrr@{}}
+        \toprule
+        \textbf{Szenario} & \textbf{$\sym{A2}$} & \multicolumn{5}{c}{\textbf{Effizienzen [\%]}} & \multicolumn{5}{c}{\textbf{\ac{VIF}}} \\
+        \cmidrule(lr){3-7} \cmidrule(l){8-12}
+        & & $\sym{eff_A}$ & $\sym{eff_D}$ & $\sym{eff_G}$ & $\sym{eff_I}$ & $\sym{eff_V}$ & $\hat{\sym{beta}}_{1}$ & $\hat{\sym{beta}}_{2}$ & $\hat{\sym{beta}}_{12}$ & $\hat{\sym{beta}}_{11}$ & $\hat{\sym{beta}}_{22}$ \\
+        \midrule
+        Basis \ac{CCD} & $0{,}017$ & $46{,}7$ & $56{,}9$ & $0{,}0$ & $0{,}0$ & $0{,}0$ & $1{,}00$ & $1{,}00$ & $1{,}00$ & $1{,}02$ & $1{,}02$ \\
+        $\ac{CCD}_{-\ac{AP}}$ & $0{,}373$ & $39{,}2$ & $50{,}4$ & $0{,}0$ & $0{,}0$ & $0{,}0$ & $1{,}27$ & $1{,}27$ & $1{,}00$ & $1{,}31$ & $1{,}31$ \\
+        EmALT & $2{,}596$ & $39{,}1$ & $68{,}9$ & $0{,}0$ & $0{,}0$ & $0{,}0$ & $1{,}45$ & $3{,}84$ & $3{,}18$ & $1{,}32$ & $5{,}91$ \\
+        \bottomrule
+    \end{tabular*}
+\end{table}

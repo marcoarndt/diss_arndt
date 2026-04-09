@@ -501,7 +501,7 @@ Um diese Aufwände generisch und unabhängig vom spezifischen Prüflingstyp bila
     \item \textbf{Laufende Durchführungskosten $\sym{C}_{\sym{idx_cost_size}}$ (\textit{Size of Testing}):} Diese variable Kostengruppe skaliert direkt mit der Dauer und dem Umfang der Versuchsreihe. Sie umfasst die Personalkosten $\sym{C}_{\sym{idx_cost_op}}$, die Kosten für Hilfs- und Betriebsstoffe $\sym{C}_{\sym{idx_cost_help}}$, die Energiekosten $\sym{C}_{\sym{idx_cost_ener}}$ sowie die belastungsabhängigen Instandhaltungskosten $\sym{C}_{\sym{idx_cost_maint}}$.
 \end{enumerate}
 
-Das zugrundeliegende strukturelle Wirknetz dieser Kostenpositionen ist in Abbildung~\ref{fig:cost_model_structure} visualisiert. 
+Das zugrundeliegende strukturelle Wirknetz dieser Kostenpositionen ist in Abbildung~\ref{fig:cost_model_structure} visualisiert.
 Es verdeutlicht die Interdependenzen und zeigt auf, wie die einzelnen Faktoren methodisch aggregiert werden, um die designspezifischen Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ abzuleiten.
 
 \begin{figure}[htbp]
@@ -515,7 +515,7 @@ Die fixen Bereitstellungsblöcke für Labor ($\sym{C}_{\sym{idx_cost_ambient}}$)
 Die laufenden Durchführungskosten $\sym{C}_{\sym{idx_cost_size}}$ hingegen verhalten sich hochgradig dynamisch: Da Lebensdauerversuche stochastischen Ausfallzeiten unterliegen und unterschiedliche Belastungsstufen (Faktorkombinationen) zu stark variierenden Testdauern führen, determinieren die individuellen, zufallsbehafteten Versuchslaufzeiten $\sym{t}_{\sym{idx_i}}$ den jeweiligen Ressourcenverbrauch (Personal, Energie, Material, Anlagenverschleiß).
 Im Rahmen der Modellierung werden diese dynamischen Kostentreiber in einem iterativen Prozess (beispielsweise über eine \ac{MCS}) aggregiert, um einen belastbaren Erwartungswert für die Durchführungskosten $\bar{\sym{C}}_{\sym{idx_cost_size}}$ zu ermitteln.
 
-In der Summe ermöglicht dieses Kostenmodell, den topologischen und statistischen Modifikationen eines Versuchsplans ein direktes ökonomisches Preisschild zuzuordnen. 
+In der Summe ermöglicht dieses Kostenmodell, den topologischen und statistischen Modifikationen eines Versuchsplans ein direktes ökonomisches Preisschild zuzuordnen.
 Es bildet das notwendige methodische Fundament, um im weiteren Verlauf der Arbeit evaluieren zu können, inwiefern die durch Extrapolations-\acp{AP} gewonnene Prognosegüte in einem wirtschaftlich tragfähigen Verhältnis zu den real aufgewendeten Prüfkosten steht.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -681,7 +681,7 @@ Sie liefert dem versuchsplanenden Ingenieur den belastbaren Nachweis der Extrapo
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.2.2_evg.tex}
-    \caption{Der klassische \ac{VDG} verschleiert den lokalen Design-Nutzen durch radiale Mittelung. Der \ac{EVG} belegt hingegen die signifikante \ac{SPV}-Reduktion zielgerichtet entlang des Extrapolationsvektors.}
+    \caption{Der klassische \ac{VDG} verschleiert den lokalen Design-Nutzen des um \acp{AP} modifizierten \ac{CCD} durch radiale Mittelung. Der \ac{EVG} belegt hingegen die signifikante \ac{SPV}-Reduktion zielgerichtet entlang des Extrapolationsvektors zum Prognosepunkt.}
     \label{fig:ma_abb5.2.2_evg}
 \end{figure}
 Diese richtungsabhängige Reduktion der Vorhersagevarianz belegt eindrücklich, dass eine Abkehr von der reinen Symmetrie und Orthogonalität in \ac{ALT}-Szenarien hochgradig effizient ist.
@@ -692,10 +692,72 @@ Das gewonnene geometrische Budget wird nicht verschwendet, sondern wertsteigernd
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Übertragung auf multivariate Lebensdauermodelle} \label{sec:weibull_transfer}
-Für die topologische Optimierung des Versuchsraums und die Allokation des Gestaltungsbudgets fungiert die SPV als primäre Zielfunktion der geometrischen Effizienz. Sie rechtfertigt die Reduktion irrelevanter Zentralpunkte. Um jedoch sicherzustellen, dass die absolute Schätzpräzision des resultierenden adaptiven Designs den ingenieurtechnischen Anforderungen der Praxis genügt, muss das Design im Nachgang unskaliert bewertet werden. Diese absolute Prädiktionsvarianz (UPV) wird im Rahmen dieser Arbeit nicht als abstrakter Kennwert isoliert, sondern in Kapitel 5.3 direkt über die Breite der resultierenden Konfidenzintervalle der multivariaten Lebensdauerverteilung quantifiziert.
+Für die topologische Optimierung des Versuchsraums und die Allokation des Gestaltungsbudgets fungiert die \ac{SPV} nach Abschnitt~\ref{sec:adaptive_planung} und damit auf Basis der \textit{I}-Effizienz (vgl. Abschnitt~\ref{subsec:ergebnisse_generic}) als primäre Zielfunktion und geometrische Effizienz- und damit der Effektivität-Metrik des Versuchsplans.
+Sie rechtfertigt die Reduktion irrelevanter Zentralpunkte sowie Sternpunkte bzw. deren Re-Allokation.
+Um jedoch sicherzustellen, dass die absolute Schätzpräzision des resultierenden adaptiven Designs den ingenieurtechnischen Anforderungen der Praxis genügt, muss das Design im Nachgang analog zu Abschnitt~\ref{sec:abweichungen} bewertet werden.
+Dabei wird die Fragestellung verfolgt, ob durch die gezielte, durch die \ac{SPV}-Optimierung motivierte Umverteilung der Stützstellen die absolute Präzision der Schätzung (\textit{Bias}) und Entdeckungswahrscheinlichkeit (\textit{\sym{power}}) nach wie vor tolerable Ergebnisse erzielt werden.
+In Abschnitt~\ref{subsec:spvbias} werden demnach die generischen Auswirkungen auf diese beiden Gütekriterien sowie zugehöriger Effizienz untersucht - zunächst im direkten Abgleich zu Abschnitt~\ref{subsec:ergebnisse_generic} auf Basis desselben Modells normalverteilter Zielwerte und anschließend unter Berücksichtigung stochastischer Lebensdauerstreuungen.
+Abschnitt~\ref{sec:ldoe} widmet sich auf Basis Weibull-verteilter Daten schließlich der finalen Zusammenführung der Effizienz- und Präzisionsmetriken zu einer ganzheitlichen Bewertung der methodisch entwickelten Versuchsplanung für die Lebensdauererprobung.
 
 
-\subsection{Generische Auswirkungen relevanter Orthogonalitätsabweichungen} \label{subsec:weibull_methodik}
+\subsection{Generische Auswirkungen relevanter Orthogonalitätsabweichungen} \label{subsec:spvbias}
+
+\subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse} \label{subsubsec:quant_eval_emalt}
+
+Zur finalen Validierung des entwickelten adaptiven Versuchsplans (\textbf{EmALT}) erfolgt nachfolgend die quantitative Auswertung der Schätzgüte und Modellstabilität. Unter der Annahme eines praxisnahen \textit{Signal-to-Noise Ratios} von $\sym{snr}=1{,}33$ wird das neu konfigurierte EmALT-Design direkt dem ungestörten Basis-\ac{CCD} sowie einem reduzierten Design ohne ausgleichende Ankerpunkte ($\ac{CCD}_{-\ac{AP}}$) gegenübergestellt. Die Analyse stützt sich dabei iterativ auf die kombinierten topologischen Metriken, die absolute Schätzvarianz (\ac{MSE}), die Erwartungstreue (Bias) sowie die resultierende statistische Trennschärfe ($\sym{power}$).
+
+\paragraph{Topologische und informationsbasierte Metriken}
+Tabelle~\ref{tab:results_emalt_metrics} fasst die grundlegenden Matrixeigenschaften und Effizienzen zusammen. Das EmALT-Design zeigt durch die gezielte Platzierung der Extrapolations-\acp{AP} naturgemäß einen Anstieg der Nicht-Orthogonalität, was durch den Indikator $\sym{A2} = 2{,}596$ quantifiziert wird. Diese gewollte Asymmetrie ist der methodische Preis für den Brückenbau in Richtung des Prognosepunktes.
+Gleichzeitig belegt die \textbf{D-Effizienz} den enormen geometrischen Hebel der Modifikation: Sie steigt beachtlich von $56{,}9\,\%$ (Basis) auf $68{,}9\,\%$ (EmALT) an, was für ein exzellentes aufgespanntes Design-Volumen spricht.
+Die VIF-Werte weisen erwartungsgemäß eine zielgerichtete Varianzinflation auf (insbesondere für $\hat{\sym{beta}}_2$ mit $3{,}84$ und $\hat{\sym{beta}}_{22}$ mit $5{,}91$). Diese lokale Inflation im Hauptdesign ist der kalkulierte Trade-off, um im Gegenzug eine massive Varianzabsenkung auf dem fernen Extrapolationspfad zu erzwingen.
+
+\input{tables/tab_results_emalt_metrics.tex}
+
+\paragraph{Absolute Schätzvarianz und Prognoseunsicherheit (MSE)}
+Der direkte Blick auf den \ac{MSE} in Tabelle~\ref{tab:results_emalt_mse} beweist die exzellente Kompensationsfähigkeit des EmALT-Ansatzes. Ein unkompensierter Entfall von Stützstellen ($\ac{CCD}_{-\ac{AP}}$) treibt den mittleren quadratischen Fehler über alle Modellterme hinweg unweigerlich in die Höhe.
+Durch die strategische Re-Investition des Budgets in Form von \acp{AP} stabilisiert EmALT die Modellschätzung enorm: Der \ac{MSE} des quadratischen Terms $\hat{\sym{beta}}_{22}$ sinkt mit $4{,}61$ sogar signifikant \textit{unter} das Niveau des ungestörten Basis-\ac{CCD} ($8{,}02$). Auch die Interaktion $\hat{\sym{beta}}_{12}$ wird mit einem \ac{MSE} von $11{,}13$ effizienter geschätzt als im Basis-Design ($13{,}97$). Das adaptierte Design tauscht somit punktuell Varianz ein, um hochgradig relevante Modellterme maßgeblich zu präzisieren.
+
+\input{tables/tab_results_emalt_mse.tex}
+
+\paragraph{Systematischer Schätzfehler (Bias)}
+Trotz der geometrischen Asymmetrie und der leichten Varianzinflation belegt die Monte-Carlo-Simulation die absolute Stabilität des \ac{OLS}-Schätzers. Wie Tabelle~\ref{tab:results_emalt_bias} sowie die korrespondierenden Abweichungs-Plots (Abbildung~\ref{fig:ma_abb5.4.1_betadev} und der p-Wert-Verlauf in Abbildung~\ref{fig:ma_abb5.4.1_phisto_all}) eindrücklich zeigen, verbleibt der systematische Schätzfehler (Bias) für alle Koeffizienten auf einem verschwindend geringen Niveau von weit unter $1\,\%$. Die Erwartungstreue des Modells bleibt durch die EmALT-Modifikation vollumfänglich und unangetastet erhalten.
+
+\input{tables/tab_results_emalt_bias.tex}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{5cm}
+    \input{plots/ma_abb5.4.1_betadev.tex}
+    \caption{Erwartungstreue der Modellparameter: Der Schätzwert $\hat{\sym{thet}}_{\sym{idx_i}}$ verbleibt auch unter asymmetrischer EmALT-Modifikation stabil auf dem wahren Wert (Bias $< 1\,\%$).}
+    \label{fig:ma_abb5.4.1_betadev}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{4cm}
+    \input{plots/ma_abb5.4.1_phisto_all.tex}
+    \caption{Relative Häufigkeitsverteilung der p-Werte über alle Simulationsiterationen, welche die numerische Konvergenz und Robustheit der Modellauswertung bestätigt.}
+    \label{fig:ma_abb5.4.1_phisto_all}
+\end{figure}
+
+\paragraph{Statistische Trennschärfe ($\sym{power}$)}
+Die alles entscheidende Metrik für die Anwendbarkeit in der Praxis stellt abschließend die statistische Trennschärfe dar (vgl. Tabelle~\ref{tab:results_emalt_power} und Abbildung~\ref{fig:ma_abb5.4.1_powerdev}).
+Ein ungestützter Verlust von Versuchspunkten ($\ac{CCD}_{-\ac{AP}}$) führt zu kritischen Power-Einbrüchen von bis zu $-19{,}7\,\%$. Das EmALT-Design federt diesen Verlust nicht nur massiv ab, sondern generiert partiell sogar Leistungsgewinne: Für die kritische Interaktion $\hat{\sym{beta}}_{12}$ steigt die Power um $+4{,}3\,\%$, für den quadratischen Term $\hat{\sym{beta}}_{22}$ gar um herausragende $+7{,}5\,\%$.
+Die leichten Verluste bei den Haupteffekten $\hat{\sym{beta}}_1$ und $\hat{\sym{beta}}_2$ ($-8{,}4\,\%$ und $-9{,}1\,\%$) sind als überaus tolerabel einzustufen. Wie Abbildung~\ref{fig:ma_abb5.4.1_powerdev} zeigt, verbleibt die absolute Power für die wesentlichen Terme des EmALT-Designs sicher über der empirischen Gütegrenze von $60\,\%$, wobei $\hat{\sym{beta}}_{22}$ mit knapp $77\,\%$ ein hochgradig gesundes und robustes Niveau erreicht.
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{6cm}
+    \input{plots/ma_abb5.4.1_powerdev.tex}
+    \caption{Absolutes Niveau der statistischen Trennschärfe ($\sym{power}$). Das EmALT-Design hält die wesentlichen Modellterme über der kritischen $60\,\%$-Marke und verzeichnet bei $\hat{\sym{beta}}_{22}$ ein besonders gesundes Erkennungsniveau nahe $80\,\%$.}
+    \label{fig:ma_abb5.4.1_powerdev}
+\end{figure}
+
+Zusammenfassend belegt die Studie: Das EmALT-Design ist kein statistischer Kompromiss, sondern eine hochgradig effiziente, zielgerichtete Umwidmung von Gestaltungsbudget, die Extrapolationsgüte gewinnt, ohne die erforderliche Trennschärfe des Ursprungsdesigns zu opfern.
+
 \begin{itemize}
     \item Überprüfung von Power und Bias für den modifizierten Plan (PSAM17/ASRAM 2024)
     \item Tatsächliche Extrapolationsgüte (CI-Breite) im Arbeitspunkt (ESREL 2025)

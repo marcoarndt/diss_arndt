@@ -1,0 +1,102 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.259\figurewidth,
+height=0.953\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=0.00,
+xmax=2.60,
+xlabel style={font=\color{mycolor1}},
+xlabel={$\sym{A2}$},
+ymin=-0.50,
+ymax=13.93,
+ylabel style={font=\color{mycolor1}},
+ylabel={$\Delta \sym{power}$ [\%]},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={\textbf{Topologie} ($\sym{R2} = 1.00$)},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25}
+]
+\addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+0.02	0.00\\
+2.60	3.78\\
+};
+\addplot [color=black, dashed, line width=1.2pt, forget plot]
+  table[row sep=crcr]{%
+0.02	0.00\\
+2.60	3.78\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=0.259\figurewidth,
+height=0.953\figureheight,
+at={(0.37\figurewidth,0\figureheight)},
+scale only axis,
+xmin=73.08,
+xmax=100.00,
+xlabel style={font=\color{mycolor1}},
+xlabel={$\sym{eff_I}$ [\%]},
+ymin=-0.50,
+ymax=13.93,
+ytick={0.00,5.00,10.00},
+yticklabels={\empty},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={\textbf{Prädiktion} ($\sym{R2} = 1.00$)},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25}
+]
+\addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+95.49	0.00\\
+73.08	3.78\\
+};
+\addplot [color=black, dashed, line width=1.2pt, forget plot]
+  table[row sep=crcr]{%
+73.08	3.78\\
+95.49	-0.00\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=0.259\figurewidth,
+height=0.953\figureheight,
+at={(0.741\figurewidth,0\figureheight)},
+scale only axis,
+xmin=8.08,
+xmax=15.71,
+xlabel style={font=\color{mycolor1}},
+xlabel={$\sym{mse}(\sym{beta}_{11})$},
+ymin=-0.50,
+ymax=13.93,
+ytick={0.00,5.00,10.00},
+yticklabels={\empty},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor1}},
+title={\textbf{Schätzung} ($\sym{R2} = 1.00$)},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25}
+]
+\addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
+  table[row sep=crcr]{%
+8.08	0.00\\
+15.71	13.43\\
+};
+\addplot [color=black, dashed, line width=1.2pt, forget plot]
+  table[row sep=crcr]{%
+8.08	0.00\\
+15.71	13.43\\
+};
+\end{axis}
+\end{tikzpicture}%

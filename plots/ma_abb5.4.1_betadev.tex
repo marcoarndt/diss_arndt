@@ -1,0 +1,70 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.681\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+bar shift auto,
+xmin=0.51,
+xmax=6.49,
+xtick={1.00,2.00,3.00,4.00,5.00,6.00},
+xticklabels={{$\sym{beta}_0$},{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
+ymin=0.00,
+ymax=35.00,
+ylabel style={font=\color{mycolor1}},
+ylabel={Schätzwert $\hat{\sym{thet}}_{\sym{idx_i}}$},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25},
+legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left}
+]
+\addplot[ybar, bar width=0.178, fill=black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	30.04\\
+2.00	9.97\\
+3.00	10.10\\
+4.00	9.97\\
+5.00	9.96\\
+6.00	10.03\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.51	0.00\\
+6.49	0.00\\
+};
+\addlegendentry{Basis \ac{CCD}}
+
+\addplot[ybar, bar width=0.178, fill=white!60!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	30.03\\
+2.00	9.91\\
+3.00	9.84\\
+4.00	9.76\\
+5.00	9.95\\
+6.00	10.01\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.51	0.00\\
+6.49	0.00\\
+};
+\addlegendentry{$\ac{CCD}_{-\ac{AP}}$}
+
+\addplot[ybar, bar width=0.178, fill=white!30!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	30.18\\
+2.00	9.96\\
+3.00	10.08\\
+4.00	9.91\\
+5.00	9.93\\
+6.00	9.92\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.51	0.00\\
+6.49	0.00\\
+};
+\addlegendentry{EmALT}
+
+\end{axis}
+\end{tikzpicture}%
