@@ -704,22 +704,26 @@ Abschnitt~\ref{sec:ldoe} widmet sich auf Basis Weibull-verteilter Daten schließ
 
 \subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse} \label{subsubsec:quant_eval_emalt}
 
-Zur finalen Validierung des entwickelten adaptiven Versuchsplans (\textbf{EmALT}) erfolgt nachfolgend die quantitative Auswertung der Schätzgüte und Modellstabilität. Unter der Annahme eines praxisnahen \textit{Signal-to-Noise Ratios} von $\sym{snr}=1{,}33$ wird das neu konfigurierte EmALT-Design direkt dem ungestörten Basis-\ac{CCD} sowie einem reduzierten Design ohne ausgleichende Ankerpunkte ($\ac{CCD}_{-\ac{AP}}$) gegenübergestellt. Die Analyse stützt sich dabei iterativ auf die kombinierten topologischen Metriken, die absolute Schätzvarianz (\ac{MSE}), die Erwartungstreue (Bias) sowie die resultierende statistische Trennschärfe ($\sym{power}$).
+Zur finalen Validierung des entwickelten adaptiven Versuchsplans (\textbf{EmALT}) erfolgt nachfolgend die quantitative Auswertung der Schätzgüte und Modellstabilität.
+Unter der Annahme eines praxisnahen \textit{Signal-to-Noise Ratios} von $\sym{snr}=1{,}33$ analog zu Abschnitt~\ref{subsec:ergebnisse_generic} wird das neu konfigurierte EmALT-Design direkt dem ungestörten Basis-\ac{CCD} sowie einem reduzierten Design ohne ausgleichende Ankerpunkte ($\ac{CCD}_{-\ac{AP}}$) gegenübergestellt.
+Die Analyse stützt sich dabei iterativ auf die kombinierten topologischen Metriken, die absolute Schätzvarianz (\ac{MSE}), die Erwartungstreue (Bias) sowie die resultierende statistische Trennschärfe ($\sym{power}$).
 
-\paragraph{Topologische und informationsbasierte Metriken}
-Tabelle~\ref{tab:results_emalt_metrics} fasst die grundlegenden Matrixeigenschaften und Effizienzen zusammen. Das EmALT-Design zeigt durch die gezielte Platzierung der Extrapolations-\acp{AP} naturgemäß einen Anstieg der Nicht-Orthogonalität, was durch den Indikator $\sym{A2} = 2{,}596$ quantifiziert wird. Diese gewollte Asymmetrie ist der methodische Preis für den Brückenbau in Richtung des Prognosepunktes.
-Gleichzeitig belegt die \textbf{D-Effizienz} den enormen geometrischen Hebel der Modifikation: Sie steigt beachtlich von $56{,}9\,\%$ (Basis) auf $68{,}9\,\%$ (EmALT) an, was für ein exzellentes aufgespanntes Design-Volumen spricht.
-Die VIF-Werte weisen erwartungsgemäß eine zielgerichtete Varianzinflation auf (insbesondere für $\hat{\sym{beta}}_2$ mit $3{,}84$ und $\hat{\sym{beta}}_{22}$ mit $5{,}91$). Diese lokale Inflation im Hauptdesign ist der kalkulierte Trade-off, um im Gegenzug eine massive Varianzabsenkung auf dem fernen Extrapolationspfad zu erzwingen.
+\subsubsection{Topologische und informationsbasierte Metriken}
+Tabelle~\ref{tab:results_emalt_metrics} fasst die grundlegenden Matrixeigenschaften und Effizienzen zusammen.
+Das EmALT-Design verzeichnet durch die gezielte Platzierung der Extrapolations-\acp{AP} naturgemäß einen Anstieg der Nicht-Orthogonalität, was durch den Indikator $\sym{A2} = 2{,}596$ quantifiziert wird.
+Diese gewollte Asymmetrie ist der methodische Preis für den Brückenbau in Richtung des Prognosepunktes.
+Gleichzeitig belegt die \textbf{D-Effizienz} den enormen geometrischen Hebel der Modifikation:
+Sie steigt beachtlich von $56{,}9\,\%$ (Basis) auf $68{,}9\,\%$ (EmALT) an, was für ein exzellentes, aufgespanntes Design-Volumen spricht.
+Die \ac{VIF}-Werte weisen erwartungsgemäß eine zielgerichtete Varianzinflation auf (insbesondere für $\hat{\sym{beta}}_2$ mit $3{,}84$ und $\hat{\sym{beta}}_{22}$ mit $5{,}91$).
+Diese lokale Inflation im Hauptdesign ist der kalkulierte Trade-off, um im Gegenzug eine massive Varianzabsenkung auf dem fernen Extrapolationspfad zu erzwingen.
 
 \input{tables/tab_results_emalt_metrics.tex}
 
-\paragraph{Absolute Schätzvarianz und Prognoseunsicherheit (MSE)}
+\subsubsection{Absolute Schätzvarianz und Prognoseunsicherheit (MSE)}
 Der direkte Blick auf den \ac{MSE} in Tabelle~\ref{tab:results_emalt_mse} beweist die exzellente Kompensationsfähigkeit des EmALT-Ansatzes. Ein unkompensierter Entfall von Stützstellen ($\ac{CCD}_{-\ac{AP}}$) treibt den mittleren quadratischen Fehler über alle Modellterme hinweg unweigerlich in die Höhe.
 Durch die strategische Re-Investition des Budgets in Form von \acp{AP} stabilisiert EmALT die Modellschätzung enorm: Der \ac{MSE} des quadratischen Terms $\hat{\sym{beta}}_{22}$ sinkt mit $4{,}61$ sogar signifikant \textit{unter} das Niveau des ungestörten Basis-\ac{CCD} ($8{,}02$). Auch die Interaktion $\hat{\sym{beta}}_{12}$ wird mit einem \ac{MSE} von $11{,}13$ effizienter geschätzt als im Basis-Design ($13{,}97$). Das adaptierte Design tauscht somit punktuell Varianz ein, um hochgradig relevante Modellterme maßgeblich zu präzisieren.
 
-\input{tables/tab_results_emalt_mse.tex}
-
-\paragraph{Systematischer Schätzfehler (Bias)}
+\subsubsection{Systematischer Schätzfehler (Bias)}
 Trotz der geometrischen Asymmetrie und der leichten Varianzinflation belegt die Monte-Carlo-Simulation die absolute Stabilität des \ac{OLS}-Schätzers. Wie Tabelle~\ref{tab:results_emalt_bias} sowie die korrespondierenden Abweichungs-Plots (Abbildung~\ref{fig:ma_abb5.4.1_betadev} und der p-Wert-Verlauf in Abbildung~\ref{fig:ma_abb5.4.1_phisto_all}) eindrücklich zeigen, verbleibt der systematische Schätzfehler (Bias) für alle Koeffizienten auf einem verschwindend geringen Niveau von weit unter $1\,\%$. Die Erwartungstreue des Modells bleibt durch die EmALT-Modifikation vollumfänglich und unangetastet erhalten.
 
 \input{tables/tab_results_emalt_bias.tex}
@@ -742,22 +746,27 @@ Trotz der geometrischen Asymmetrie und der leichten Varianzinflation belegt die 
     \label{fig:ma_abb5.4.1_phisto_all}
 \end{figure}
 
-\paragraph{Statistische Trennschärfe ($\sym{power}$)}
-Die alles entscheidende Metrik für die Anwendbarkeit in der Praxis stellt abschließend die statistische Trennschärfe dar (vgl. Tabelle~\ref{tab:results_emalt_power} und Abbildung~\ref{fig:ma_abb5.4.1_powerdev}).
-Ein ungestützter Verlust von Versuchspunkten ($\ac{CCD}_{-\ac{AP}}$) führt zu kritischen Power-Einbrüchen von bis zu $-19{,}7\,\%$. Das EmALT-Design federt diesen Verlust nicht nur massiv ab, sondern generiert partiell sogar Leistungsgewinne: Für die kritische Interaktion $\hat{\sym{beta}}_{12}$ steigt die Power um $+4{,}3\,\%$, für den quadratischen Term $\hat{\sym{beta}}_{22}$ gar um herausragende $+7{,}5\,\%$.
-Die leichten Verluste bei den Haupteffekten $\hat{\sym{beta}}_1$ und $\hat{\sym{beta}}_2$ ($-8{,}4\,\%$ und $-9{,}1\,\%$) sind als überaus tolerabel einzustufen. Wie Abbildung~\ref{fig:ma_abb5.4.1_powerdev} zeigt, verbleibt die absolute Power für die wesentlichen Terme des EmALT-Designs sicher über der empirischen Gütegrenze von $60\,\%$, wobei $\hat{\sym{beta}}_{22}$ mit knapp $77\,\%$ ein hochgradig gesundes und robustes Niveau erreicht.
+\subsubsection{Statistische Trennschärfe ($\sym{power}$)}
+Die finale Metrik für die Praxistauglichkeit stellt die statistische Trennschärfe dar (vgl. Tabelle~\ref{tab:results_emalt_power} und Abbildung~\ref{fig:ma_abb5.4.1_powerdev}).
+Ein ungestützter Verlust von Versuchspunkten ($\ac{CCD}_{-\ac{AP}}$) führt unweigerlich zu kritischen Power-Einbrüchen von bis zu $-19{,}7\,\%$. Das EmALT-Design federt diesen Verlust nicht nur massiv ab, sondern generiert partiell signifikante Leistungsgewinne: Für die kritische Interaktion $\hat{\sym{beta}}_{12}$ steigt die Power um $+4{,}3\,\%$, für den quadratischen Term $\hat{\sym{beta}}_{22}$ gar um herausragende $+7{,}5\,\%$.
+Die leichten Verluste bei den Haupteffekten $\hat{\sym{beta}}_1$ und $\hat{\sym{beta}}_2$ ($-8{,}4\,\%$ und $-9{,}1\,\%$) sind überaus tolerabel. Wie Abbildung~\ref{fig:ma_abb5.4.1_powerdev} illustriert, verbleibt die absolute Power für die wesentlichen Terme des EmALT-Designs sicher über der Gütegrenze von $60\,\%$, wobei $\hat{\sym{beta}}_{22}$ mit knapp $77\,\%$ ein hochgradig gesundes Erkennungsniveau erreicht.
 
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.4.1_powerdev.tex}
-    \caption{Absolutes Niveau der statistischen Trennschärfe ($\sym{power}$). Das EmALT-Design hält die wesentlichen Modellterme über der kritischen $60\,\%$-Marke und verzeichnet bei $\hat{\sym{beta}}_{22}$ ein besonders gesundes Erkennungsniveau nahe $80\,\%$.}
+    \caption{Absolutes Niveau der statistischen Trennschärfe ($\sym{power}$). Das EmALT-Design hält die wesentlichen Modellterme über der kritischen $60\,\%$-Marke und verzeichnet bei $\hat{\sym{beta}}_{22}$ ein besonders robustes Erkennungsniveau von nahezu $80\,\%$.}
     \label{fig:ma_abb5.4.1_powerdev}
 \end{figure}
 
-Zusammenfassend belegt die Studie: Das EmALT-Design ist kein statistischer Kompromiss, sondern eine hochgradig effiziente, zielgerichtete Umwidmung von Gestaltungsbudget, die Extrapolationsgüte gewinnt, ohne die erforderliche Trennschärfe des Ursprungsdesigns zu opfern.
+\subsubsection{Kritische Würdigung der Trennschärfe im Kontext der Versuchsökonomie}
+Die moderate Reduktion der statistischen Trennschärfe für einzelne Modellterme auf Niveaus im Bereich von $55\,\%$ bis $65\,\%$ bedarf abschließend einer differenzierten, ingenieurwissenschaftlichen Einordnung. Während in der klassischen, univariaten Inferenzstatistik oftmals ein striktes Power-Niveau von $80\,\%$ als Gütekriterium gefordert wird, unterliegt die multivariate Lebensdauererprobung (\ac{ALT}) fundamental anderen ökonomischen und physikalischen Restriktionen. Eine simple Erhöhung des Stichprobenumfangs $\sym{N}$ zur Steigerung der Trennschärfe ist aufgrund der immensen Prüfstands- und Stückkosten praktisch meist ausgeschlossen.
 
+Vor diesem Hintergrund ist das Absinken der Power nicht als Schwäche des Designs, sondern als resultierender Kompromiss eines gezielten, unvermeidbaren Trade-offs bei konstantem Gestaltungsbudget zu interpretieren. Der \ac{EoL}-Test stellt keine reine Screening-Phase dar, in welcher die generelle Existenz von Haupteffekten fraglich ist. Vielmehr steht die absolute \textit{Prognosefähigkeit} des Modells im fernen Feldbereich im Fokus.
+Das EmALT-Design opfert somit bewusst einen vertretbaren Anteil der Entdeckungswahrscheinlichkeit für ohnehin dominierende Effekte, um im Gegenzug die absolute Prädiktionsvarianz (\ac{SPV}) auf dem kritischen Extrapolationspfad signifikant zu senken und gleichzeitig die Trennschärfe für nichtlineare, extrapolationskritische Terme (wie $\hat{\sym{beta}}_{22}$) maßgeblich zu stärken.
+
+In der Gesamtsynthese aus statistischer Modellstabilität (Bias $<1\,\%$), topologischer Prognosesicherheit (\ac{MSE}-Reduktion) und den monetären Einsparungen durch den Entfall redundanter Hochlastpunkte erweist sich das EmALT-Design als hochgradig überlegen. Ein Power-Niveau von über $60\,\%$ für die wesentlichen Effekte stellt in diesem ressourcenlimitierten Umfeld eine absolut praxistaugliche Basis dar, deren marginaler Verlust durch den massiven Zuwachs an Prognosepräzision im realen Betriebspunkt mehr als überkompensiert wird.
 \begin{itemize}
     \item Überprüfung von Power und Bias für den modifizierten Plan (PSAM17/ASRAM 2024)
     \item Tatsächliche Extrapolationsgüte (CI-Breite) im Arbeitspunkt (ESREL 2025)
