@@ -1568,85 +1568,87 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Effizientes \cgls {L-DoE}}{116}{subsection.5.4.2}\protected@file@percent }
 \newlabel{sec:ldoe}{{5.4.2}{116}{Effizientes \ac {L-DoE}}{subsection.5.4.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\nonumberline Systematischer Schätzfehler der Maximum-Likelihood-Schätzung}{116}{subsubsection*.108}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.10}{\ignorespaces Relativer systematischer Schätzfehler (Bias) in Prozent bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=-2$.}}{117}{table.caption.109}\protected@file@percent }
-\newlabel{tab:results_emalt_wbl_bias}{{5.10}{117}{Relativer systematischer Schätzfehler (Bias) in Prozent bei $\sym {snr}=-2$}{table.caption.109}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Erwartungstreue der \cgls {MLE}-Parameter bei Weibull-Verteilung: Die Schätzwerte $\hat  {\glsadd {thet}\glslink {thet}{\textcolor {blue}{\ensuremath  {\ensuremath  {\theta }}}}}_{\glsadd {idx_i}\glslink {idx_i}{\textcolor {blue}{\ensuremath  {\ensuremath  {i}}}}}$ verbleiben auch unter der asymmetrischen EmALT-Modifikation in einem stabilen Korridor um den wahren Wert.}}{118}{figure.caption.110}\protected@file@percent }
-\newlabel{fig:ma_abb5.4.1_betadev_wbl}{{5.18}{118}{Erwartungstreue der \ac {MLE}-Parameter bei Weibull-Verteilung: Die Schätzwerte $\hat {\sym {thet}}_{\sym {idx_i}}$ verbleiben auch unter der asymmetrischen EmALT-Modifikation in einem stabilen Korridor um den wahren Wert}{figure.caption.110}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Relative Häufigkeitsverteilung der p-Werte (Weibull-Modell), welche die numerische Konvergenz und Robustheit der \cgls {MLE}-Auswertung bestätigt.}}{118}{figure.caption.111}\protected@file@percent }
-\newlabel{fig:ma_abb5.4.1_phisto_all_wbl}{{5.19}{118}{Relative Häufigkeitsverteilung der p-Werte (Weibull-Modell), welche die numerische Konvergenz und Robustheit der \ac {MLE}-Auswertung bestätigt}{figure.caption.111}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Statistische Trennschärfe ($\glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath  {\ensuremath  {power}}}}$) unter Weibull-Bedingungen}{119}{subsubsection*.113}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.11}{\ignorespaces Durchschnittlicher Trenn\-schärfe-Verlust ($\Delta \glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath  {\ensuremath  {power}}}}$) bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=-2$.}}{119}{table.caption.114}\protected@file@percent }
-\newlabel{tab:results_emalt_wbl_power}{{5.11}{119}{Durchschnittlicher Trenn\-schärfe-Verlust ($\Delta \sym {power}$) bei $\sym {snr}=-2$}{table.caption.114}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Absolutes Niveau der statistischen Trennschärfe ($\glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath  {\ensuremath  {power}}}}$) für das log-lineare Weibull-Modell. Das EmALT-Design sichert wesentliche Krümmungseffekte trotz Lebensdauerrauschen verlässlich ab.}}{119}{figure.caption.115}\protected@file@percent }
-\newlabel{fig:ma_abb5.4.1_powerdev_wbl}{{5.20}{119}{Absolutes Niveau der statistischen Trennschärfe ($\sym {power}$) für das log-lineare Weibull-Modell. Das EmALT-Design sichert wesentliche Krümmungseffekte trotz Lebensdauerrauschen verlässlich ab}{figure.caption.115}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline SNR-Kalibrierung.}{117}{paragraph*.110}\protected@file@percent }
+\newlabel{eq:sigma_kev}{{5.6}{117}{SNR-Kalibrierung}{equation.5.6}{}}
+\newlabel{eq:beta_calibration}{{5.7}{117}{SNR-Kalibrierung}{equation.5.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{\nonumberline Fixed-Effect-Power vs.\ populationsgemittelte Power.}{117}{paragraph*.112}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.10}{\ignorespaces Absolute Schätzwerte der Koeffizienten inklusive Formparameter $\glsadd {b}\glslink {b}{\textcolor {blue}{\ensuremath  {\ensuremath  {b}}}}$. Abweichungen von der System-Vorgabe sind durch Pfeile markiert ($\updownarrow \le 10\,\% < \Updownarrow $).}}{119}{table.caption.113}\protected@file@percent }
+\newlabel{tab:results_emalt_wbl_bias}{{5.10}{119}{Absolute Schätzwerte der Koeffizienten inklusive Formparameter $\sym {b}$. Abweichungen von der System-Vorgabe sind durch Pfeile markiert ($\updownarrow \le 10\,\% < \Updownarrow $)}{table.caption.113}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces Erwartungstreue der \cgls {MLE}-Parameter bei Weibull-Verteilung: Die Schätzwerte $\hat  {\glsadd {thet}\glslink {thet}{\textcolor {blue}{\ensuremath  {\ensuremath  {\theta }}}}}_{\glsadd {idx_i}\glslink {idx_i}{\textcolor {blue}{\ensuremath  {\ensuremath  {i}}}}}$ verbleiben auch unter der asymmetrischen EmALT-Modifikation in einem stabilen Korridor um den wahren Wert.}}{120}{figure.caption.114}\protected@file@percent }
+\newlabel{fig:ma_abb5.4.1_betadev_wbl}{{5.18}{120}{Erwartungstreue der \ac {MLE}-Parameter bei Weibull-Verteilung: Die Schätzwerte $\hat {\sym {thet}}_{\sym {idx_i}}$ verbleiben auch unter der asymmetrischen EmALT-Modifikation in einem stabilen Korridor um den wahren Wert}{figure.caption.114}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Relative Häufigkeitsverteilung der p-Werte (Weibull-Modell), welche die numerische Konvergenz und Robustheit der \cgls {MLE}-Auswertung bestätigt.}}{120}{figure.caption.115}\protected@file@percent }
+\newlabel{fig:ma_abb5.4.1_phisto_all_wbl}{{5.19}{120}{Relative Häufigkeitsverteilung der p-Werte (Weibull-Modell), welche die numerische Konvergenz und Robustheit der \ac {MLE}-Auswertung bestätigt}{figure.caption.115}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\nonumberline Statistische Trennschärfe ($\glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath  {\ensuremath  {power}}}}$) unter Weibull-Bedingungen}{120}{subsubsection*.117}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces Absolutes Niveau der statistischen Trennschärfe ($\glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath  {\ensuremath  {power}}}}$) für das log-lineare Weibull-Modell. Das EmALT-Design sichert wesentliche Krümmungseffekte trotz Lebensdauerrauschen verlässlich ab.}}{121}{figure.caption.118}\protected@file@percent }
+\newlabel{fig:ma_abb5.4.1_powerdev_wbl}{{5.20}{121}{Absolutes Niveau der statistischen Trennschärfe ($\sym {power}$) für das log-lineare Weibull-Modell. Das EmALT-Design sichert wesentliche Krümmungseffekte trotz Lebensdauerrauschen verlässlich ab}{figure.caption.118}{}}
 \BKM@entry{id=62,open,dest={636861707465722E36},srcline={5}}{5C3337365C3337375C303030365C3030305C3034305C303030465C303030615C3030306C5C3030306C5C303030735C303030745C303030755C303030645C303030695C30303065}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Fallstudie}{121}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Fallstudie}{123}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:casestudy}{{6}{121}{Fallstudie}{chapter.6}{}}
+\newlabel{chap:casestudy}{{6}{123}{Fallstudie}{chapter.6}{}}
 \BKM@entry{id=63,open,dest={636861707465722E37},srcline={5}}{5C3337365C3337375C303030375C3030305C3034305C3030305A5C303030755C303030735C303030615C3030306D5C3030306D5C303030655C3030306E5C303030665C303030615C303030735C303030735C303030755C3030306E5C303030675C3030305C3034305C303030755C3030306E5C303030645C3030305C3034305C303030415C303030755C303030735C303030625C3030306C5C303030695C303030635C3030306B}
 \BKM@entry{id=64,open,dest={73656374696F6E2E372E31},srcline={7}}{5C3337365C3337375C303030375C3030302E5C303030315C3030305C3034305C3030304B5C303030655C303030795C3030305C3034305C303030465C303030695C3030306E5C303030645C303030695C3030306E5C303030675C30303073}
 \BKM@entry{id=65,open,dest={73656374696F6E2E372E32},srcline={8}}{5C3337365C3337375C303030375C3030302E5C303030325C3030305C3034305C303030445C303030695C303030735C3030306B5C303030755C303030735C303030735C303030695C3030306F5C3030306E}
 \BKM@entry{id=66,open,dest={73656374696F6E2E372E33},srcline={9}}{5C3337365C3337375C303030375C3030302E5C303030335C3030305C3034305C303030415C303030755C303030735C303030625C3030306C5C303030695C303030635C3030306B}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{123}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{125}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chap:fazit}{{7}{123}{Zusammenfassung und Ausblick}{chapter.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Key Findings}{123}{section.7.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Diskussion}{123}{section.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7.3}Ausblick}{123}{section.7.3}\protected@file@percent }
-\BKM@entry{id=67,open,dest={636861707465722A2E313136},srcline={565}}{5C3337365C3337375C3030304C5C303030695C303030745C303030655C303030725C303030615C303030745C303030755C30303072}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{125}{chapter*.116}\protected@file@percent }
+\newlabel{chap:fazit}{{7}{125}{Zusammenfassung und Ausblick}{chapter.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Key Findings}{125}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Diskussion}{125}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Ausblick}{125}{section.7.3}\protected@file@percent }
+\BKM@entry{id=67,open,dest={636861707465722A2E313139},srcline={565}}{5C3337365C3337375C3030304C5C303030695C303030745C303030655C303030725C303030615C303030745C303030755C30303072}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Literatur}{127}{chapter*.119}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\BKM@entry{id=68,open,dest={636861707465722A2E313136},srcline={570}}{5C3337365C3337375C303030415C3030306E5C303030685C303030615C3030306E5C30303067}
+\BKM@entry{id=68,open,dest={636861707465722A2E313139},srcline={570}}{5C3337365C3337375C303030415C3030306E5C303030685C303030615C3030306E5C30303067}
 \BKM@entry{id=69,open,dest={73656374696F6E2E416C7068302E31},srcline={1}}{5C3337365C3337375C303030415C3030305C3034305C303030415C303030625C3030306C5C303030655C303030695C303030745C303030755C3030306E5C303030675C303030655C3030306E5C3030305C3034305C3030307A5C303030755C303030725C3030305C3034305C3030304D5C303030615C303030785C303030695C3030306D5C303030755C3030306D5C3030302D5C3030304C5C303030695C3030306B5C303030655C3030306C5C303030695C303030685C3030306F5C3030306F5C303030645C3030302D5C303030535C303030635C303030685C3030305C3334345C303030745C3030307A5C303030755C3030306E5C30303067}
-\@writefile{toc}{\contentsline {chapter}{Anhang}{139}{chapter*.116}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{139}{section.Alph0.1}\protected@file@percent }
-\newlabel{app:mle_derivatives}{{A}{139}{Ableitungen zur Maximum-Likelihood-Schätzung}{section.Alph0.1}{}}
+\@writefile{toc}{\contentsline {chapter}{Anhang}{141}{chapter*.119}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{141}{section.Alph0.1}\protected@file@percent }
+\newlabel{app:mle_derivatives}{{A}{141}{Ableitungen zur Maximum-Likelihood-Schätzung}{section.Alph0.1}{}}
 \BKM@entry{id=70,open,dest={73656374696F6E2E416C7068302E32},srcline={1}}{5C3337365C3337375C303030425C3030305C3034305C303030535C303030655C3030306E5C303030735C303030695C303030745C303030695C303030765C303030695C303030745C3030305C3334345C303030745C303030735C303030615C3030306E5C303030615C3030306C5C303030795C303030735C30303065}
-\@writefile{toc}{\contentsline {section}{\numberline {B}Sensitivitätsanalyse}{141}{section.Alph0.2}\protected@file@percent }
-\newlabel{app:sensitivity}{{B}{141}{Sensitivitätsanalyse}{section.Alph0.2}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B1}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}}{141}{table.caption.121}\protected@file@percent }
-\newlabel{tab:sens_cplus1_dplus1}{{B1}{141}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}{table.caption.121}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B2}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}}{142}{table.caption.122}\protected@file@percent }
-\newlabel{tab:sens_cplus1_d00}{{B2}{142}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}{table.caption.122}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B3}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}}{143}{table.caption.123}\protected@file@percent }
-\newlabel{tab:sens_cplus1_dminus1}{{B3}{143}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}{table.caption.123}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B4}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}}{144}{table.caption.124}\protected@file@percent }
-\newlabel{tab:sens_c00_dplus1}{{B4}{144}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}{table.caption.124}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B5}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}}{145}{table.caption.125}\protected@file@percent }
-\newlabel{tab:sens_c00_d00}{{B5}{145}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}{table.caption.125}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B6}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}}{146}{table.caption.126}\protected@file@percent }
-\newlabel{tab:sens_c00_dminus1}{{B6}{146}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}{table.caption.126}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B7}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}}{147}{table.caption.127}\protected@file@percent }
-\newlabel{tab:sens_cminus1_dplus1}{{B7}{147}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}{table.caption.127}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B8}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}}{148}{table.caption.128}\protected@file@percent }
-\newlabel{tab:sens_cminus1_d00}{{B8}{148}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}{table.caption.128}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {B9}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}}{149}{table.caption.129}\protected@file@percent }
-\newlabel{tab:sens_cminus1_dminus1}{{B9}{149}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}{table.caption.129}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Sensitivitätsanalyse}{143}{section.Alph0.2}\protected@file@percent }
+\newlabel{app:sensitivity}{{B}{143}{Sensitivitätsanalyse}{section.Alph0.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B1}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}}{143}{table.caption.124}\protected@file@percent }
+\newlabel{tab:sens_cplus1_dplus1}{{B1}{143}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}{table.caption.124}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B2}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}}{144}{table.caption.125}\protected@file@percent }
+\newlabel{tab:sens_cplus1_d00}{{B2}{144}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}{table.caption.125}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B3}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}}{145}{table.caption.126}\protected@file@percent }
+\newlabel{tab:sens_cplus1_dminus1}{{B3}{145}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}{table.caption.126}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B4}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}}{146}{table.caption.127}\protected@file@percent }
+\newlabel{tab:sens_c00_dplus1}{{B4}{146}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}{table.caption.127}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B5}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}}{147}{table.caption.128}\protected@file@percent }
+\newlabel{tab:sens_c00_d00}{{B5}{147}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}{table.caption.128}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B6}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}}{148}{table.caption.129}\protected@file@percent }
+\newlabel{tab:sens_c00_dminus1}{{B6}{148}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}{table.caption.129}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B7}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}}{149}{table.caption.130}\protected@file@percent }
+\newlabel{tab:sens_cminus1_dplus1}{{B7}{149}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}{table.caption.130}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B8}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}}{150}{table.caption.131}\protected@file@percent }
+\newlabel{tab:sens_cminus1_d00}{{B8}{150}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}{table.caption.131}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {B9}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}}{151}{table.caption.132}\protected@file@percent }
+\newlabel{tab:sens_cminus1_dminus1}{{B9}{151}{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}{table.caption.132}{}}
 \BKM@entry{id=71,open,dest={73656374696F6E2E416C7068302E33},srcline={5}}{5C3337365C3337375C303030435C3030305C3034305C303030535C303030745C303030615C303030625C303030695C3030306C5C303030695C303030745C3030305C3334345C303030745C303030735C3030302D5C3030305C3034305C303030755C3030306E5C303030645C3030305C3034305C3030304B5C3030306F5C3030306E5C303030765C303030655C303030725C303030675C303030655C3030306E5C3030307A5C303030615C3030306E5C303030615C3030306C5C303030795C303030735C303030655C3030306E5C3030305C3034305C303030645C303030655C303030725C3030305C3034305C303030445C303030655C303030735C303030695C303030675C3030306E5C3030302D5C3030304D5C3030306F5C303030645C303030695C303030665C303030695C3030306B5C303030615C303030745C303030695C3030306F5C3030306E5C303030655C3030306E}
-\@writefile{toc}{\contentsline {section}{\numberline {C}Stabilitäts- und Konvergenzanalysen der Design-Modifikationen}{150}{section.Alph0.3}\protected@file@percent }
-\newlabel{app:c}{{C}{150}{Stabilitäts- und Konvergenzanalysen der Design-Modifikationen}{section.Alph0.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {C1}{\ignorespaces Simulations\-ergebnisse: Schätzvarianz (\cgls {MSE}) der einzelnen Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=1{,}33$.}}{150}{table.caption.130}\protected@file@percent }
-\newlabel{tab:results_ortho_mse}{{C1}{150}{Simulations\-ergebnisse: Schätzvarianz (\ac {MSE}) der einzelnen Koeffizienten bei $\sym {snr}=1{,}33$}{table.caption.130}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C1}{\ignorespaces Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle für $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=1$.}}{150}{figure.caption.131}\protected@file@percent }
-\newlabel{fig:app.c_betadev_snr1}{{C1}{150}{Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle für $\sym {snr}=1$}{figure.caption.131}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C2}{\ignorespaces Laufende Konvergenz der Trennschärfe für alle Modellparameter. Die Schätzungen stabilisieren sich bei der $\glsadd {n}\glslink {n}{\textcolor {blue}{\ensuremath  {\ensuremath  {n}}}}_{\glsadd {idx_MC}\glslink {idx_MC}{\textcolor {blue}{\ensuremath  {\ensuremath  {\textnormal  {MC}}}}}}=10^4$ reproduzierbar.}}{151}{figure.caption.132}\protected@file@percent }
-\newlabel{fig:app.c_conv_power}{{C2}{151}{Laufende Konvergenz der Trennschärfe für alle Modellparameter. Die Schätzungen stabilisieren sich bei der $\sym {n}_{\sym {idx_MC}}=10^4$ reproduzierbar}{figure.caption.132}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C3}{\ignorespaces Konvergenz der \cgls {OLS}-Parameterschätzwerte ($\hat  {\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath  {\ensuremath  {\beta }}}}}_i$). Alle Modelle erweisen sich unabhängig von der geometrischen Verzerrung als erwartungstreu. Die Schätzungen stabilisieren sich bei der $\glsadd {n}\glslink {n}{\textcolor {blue}{\ensuremath  {\ensuremath  {n}}}}_{\glsadd {idx_MC}\glslink {idx_MC}{\textcolor {blue}{\ensuremath  {\ensuremath  {\textnormal  {MC}}}}}}=10^4$ reproduzierbar.}}{152}{figure.caption.133}\protected@file@percent }
-\newlabel{fig:app.c_conv_beta}{{C3}{152}{Konvergenz der \ac {OLS}-Parameterschätzwerte ($\hat {\sym {beta}}_i$). Alle Modelle erweisen sich unabhängig von der geometrischen Verzerrung als erwartungstreu. Die Schätzungen stabilisieren sich bei der $\sym {n}_{\sym {idx_MC}}=10^4$ reproduzierbar}{figure.caption.133}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C4}{\ignorespaces Relative Häufigkeiten der in der Simulation ermittelten $\glsadd {p-Wert}\glslink {p-Wert}{\textcolor {blue}{\ensuremath  {\ensuremath  {p\textnormal  {-Wert}}}}}$e der Signifikanztests.}}{153}{figure.caption.134}\protected@file@percent }
-\newlabel{fig:app.c_pval_hist}{{C4}{153}{Relative Häufigkeiten der in der Simulation ermittelten $\sym {p-Wert}$e der Signifikanztests}{figure.caption.134}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C5}{\ignorespaces Korrelierende Metriken zur prozentualen Trennschärfe-Änderung ($\Delta \glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath  {\ensuremath  {power}}}}$ [\%]) über alle Koeffizienten und Szenarien ergänzend zu Abbiildung~\ref {fig:ma_abb5.1.4_korrelation}.}}{154}{figure.caption.135}\protected@file@percent }
-\newlabel{fig:app.c_corr_all}{{C5}{154}{Korrelierende Metriken zur prozentualen Trennschärfe-Änderung ($\Delta \sym {power}$ [\%]) über alle Koeffizienten und Szenarien ergänzend zu Abbiildung~\ref {fig:ma_abb5.1.4_korrelation}}{figure.caption.135}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Stabilitäts- und Konvergenzanalysen der Design-Modifikationen}{152}{section.Alph0.3}\protected@file@percent }
+\newlabel{app:c}{{C}{152}{Stabilitäts- und Konvergenzanalysen der Design-Modifikationen}{section.Alph0.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {C1}{\ignorespaces Simulations\-ergebnisse: Schätzvarianz (\cgls {MSE}) der einzelnen Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=1{,}33$.}}{152}{table.caption.133}\protected@file@percent }
+\newlabel{tab:results_ortho_mse}{{C1}{152}{Simulations\-ergebnisse: Schätzvarianz (\ac {MSE}) der einzelnen Koeffizienten bei $\sym {snr}=1{,}33$}{table.caption.133}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C1}{\ignorespaces Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle für $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=1$.}}{152}{figure.caption.134}\protected@file@percent }
+\newlabel{fig:app.c_betadev_snr1}{{C1}{152}{Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle für $\sym {snr}=1$}{figure.caption.134}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C2}{\ignorespaces Laufende Konvergenz der Trennschärfe für alle Modellparameter. Die Schätzungen stabilisieren sich bei der $\glsadd {n}\glslink {n}{\textcolor {blue}{\ensuremath  {\ensuremath  {n}}}}_{\glsadd {idx_MC}\glslink {idx_MC}{\textcolor {blue}{\ensuremath  {\ensuremath  {\textnormal  {MC}}}}}}=10^4$ reproduzierbar.}}{153}{figure.caption.135}\protected@file@percent }
+\newlabel{fig:app.c_conv_power}{{C2}{153}{Laufende Konvergenz der Trennschärfe für alle Modellparameter. Die Schätzungen stabilisieren sich bei der $\sym {n}_{\sym {idx_MC}}=10^4$ reproduzierbar}{figure.caption.135}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C3}{\ignorespaces Konvergenz der \cgls {OLS}-Parameterschätzwerte ($\hat  {\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath  {\ensuremath  {\beta }}}}}_i$). Alle Modelle erweisen sich unabhängig von der geometrischen Verzerrung als erwartungstreu. Die Schätzungen stabilisieren sich bei der $\glsadd {n}\glslink {n}{\textcolor {blue}{\ensuremath  {\ensuremath  {n}}}}_{\glsadd {idx_MC}\glslink {idx_MC}{\textcolor {blue}{\ensuremath  {\ensuremath  {\textnormal  {MC}}}}}}=10^4$ reproduzierbar.}}{154}{figure.caption.136}\protected@file@percent }
+\newlabel{fig:app.c_conv_beta}{{C3}{154}{Konvergenz der \ac {OLS}-Parameterschätzwerte ($\hat {\sym {beta}}_i$). Alle Modelle erweisen sich unabhängig von der geometrischen Verzerrung als erwartungstreu. Die Schätzungen stabilisieren sich bei der $\sym {n}_{\sym {idx_MC}}=10^4$ reproduzierbar}{figure.caption.136}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C4}{\ignorespaces Relative Häufigkeiten der in der Simulation ermittelten $\glsadd {p-Wert}\glslink {p-Wert}{\textcolor {blue}{\ensuremath  {\ensuremath  {p\textnormal  {-Wert}}}}}$e der Signifikanztests.}}{155}{figure.caption.137}\protected@file@percent }
+\newlabel{fig:app.c_pval_hist}{{C4}{155}{Relative Häufigkeiten der in der Simulation ermittelten $\sym {p-Wert}$e der Signifikanztests}{figure.caption.137}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C5}{\ignorespaces Korrelierende Metriken zur prozentualen Trennschärfe-Änderung ($\Delta \glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath  {\ensuremath  {power}}}}$ [\%]) über alle Koeffizienten und Szenarien ergänzend zu Abbiildung~\ref {fig:ma_abb5.1.4_korrelation}.}}{156}{figure.caption.138}\protected@file@percent }
+\newlabel{fig:app.c_corr_all}{{C5}{156}{Korrelierende Metriken zur prozentualen Trennschärfe-Änderung ($\Delta \sym {power}$ [\%]) über alle Koeffizienten und Szenarien ergänzend zu Abbiildung~\ref {fig:ma_abb5.1.4_korrelation}}{figure.caption.138}{}}
 \BKM@entry{id=72,open,dest={73756273656374696F6E2E416C7068302E332E31},srcline={59}}{5C3337365C3337375C303030435C3030302E5C303030315C3030305C3034305C303030535C3030307A5C303030655C3030306E5C303030615C303030725C303030695C303030655C3030306E5C3030305C3034305C303030625C303030655C303030695C3030305C3034305C303030415C303030725C303030625C303030655C303030695C303030745C303030735C303030705C303030755C3030306E5C3030306B5C303030745C3030305C3034305C303030535C3030304E5C303030525C3030303D5C30303031}
-\@writefile{toc}{\contentsline {subsection}{\numberline {C.1}Szenarien bei Arbeitspunkt \cgls {SNR}$=1$}{155}{subsection.Alph0.3.1}\protected@file@percent }
-\newlabel{app:c_snr1}{{C.1}{155}{Szenarien bei Arbeitspunkt \ac {SNR}$=1$}{subsection.Alph0.3.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C6}{\ignorespaces Güte der Schätzer (\cgls {MSE}) für $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=1$.}}{155}{figure.caption.136}\protected@file@percent }
-\newlabel{fig:app.c_msedev_snr1}{{C6}{155}{Güte der Schätzer (\ac {MSE}) für $\sym {snr}=1$}{figure.caption.136}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {C7}{\ignorespaces Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien für $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=1$.}}{155}{figure.caption.137}\protected@file@percent }
-\newlabel{fig:app.c_powerdev_snr1}{{C7}{155}{Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien für $\sym {snr}=1$}{figure.caption.137}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C.1}Szenarien bei Arbeitspunkt \cgls {SNR}$=1$}{157}{subsection.Alph0.3.1}\protected@file@percent }
+\newlabel{app:c_snr1}{{C.1}{157}{Szenarien bei Arbeitspunkt \ac {SNR}$=1$}{subsection.Alph0.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C6}{\ignorespaces Güte der Schätzer (\cgls {MSE}) für $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=1$.}}{157}{figure.caption.139}\protected@file@percent }
+\newlabel{fig:app.c_msedev_snr1}{{C6}{157}{Güte der Schätzer (\ac {MSE}) für $\sym {snr}=1$}{figure.caption.139}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {C7}{\ignorespaces Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien für $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath  {\textnormal  {SNR}}}}=1$.}}{157}{figure.caption.140}\protected@file@percent }
+\newlabel{fig:app.c_powerdev_snr1}{{C7}{157}{Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien für $\sym {snr}=1$}{figure.caption.140}{}}
 \ttl@finishall
 \global\csname @altsecnumformattrue\endcsname
 \abx@aux@read@bbl@mdfivesum{8BDF163B3B263007CBE8EE458F276789}
@@ -1778,4 +1780,4 @@
 \@writefile{toc}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 \@writefile{lof}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
 \@writefile{lot}{\providecommand\tocbasic@end@toc@file{}\tocbasic@end@toc@file}
-\gdef \@abspage@last{183}
+\gdef \@abspage@last{185}

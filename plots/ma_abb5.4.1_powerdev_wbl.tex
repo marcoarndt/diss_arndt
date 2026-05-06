@@ -1,99 +1,94 @@
 % This file was created by matlab2tikz.
 %
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.68\figurewidth,
+width=0.678\figurewidth,
 height=\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
 bar shift auto,
-unbounded coords=jump,
 xmin=0.51,
-xmax=6.49,
-xtick={1.00,2.00,3.00,4.00,5.00,6.00},
-xticklabels={{$\sym{beta}_0$},{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
+xmax=5.49,
+xtick={1.00,2.00,3.00,4.00,5.00},
+xticklabels={{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
 ymin=0.00,
 ymax=100.00,
-ylabel style={font=\color{white!15!black}},
+ylabel style={font=\color{mycolor1}},
 ylabel={$\sym{power} [\%]$},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25},
-legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left, draw=white!15!black}
+legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left}
 ]
-\addplot[ybar, bar width=0.178, fill=black, draw=black, area legend] table[row sep=crcr] {%
-1.00	nan\\
-2.00	94.55\\
-3.00	80.16\\
-4.00	73.08\\
-5.00	89.69\\
-6.00	89.73\\
+\addplot[ybar, bar width=0.178, fill=black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	99.83\\
+2.00	99.82\\
+3.00	96.57\\
+4.00	95.56\\
+5.00	91.46\\
 };
-\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
-6.49	0.00\\
+5.49	0.00\\
 };
 \addlegendentry{Basis \ac{CCD}}
 
-\addplot[ybar, bar width=0.178, fill=white!60!black, draw=black, area legend] table[row sep=crcr] {%
-1.00	nan\\
-2.00	88.08\\
-3.00	67.91\\
-4.00	57.08\\
-5.00	97.63\\
-6.00	95.46\\
+\addplot[ybar, bar width=0.178, fill=white!60!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	96.15\\
+2.00	94.50\\
+3.00	95.01\\
+4.00	53.92\\
+5.00	60.23\\
 };
-\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
-6.49	0.00\\
+5.49	0.00\\
 };
 \addlegendentry{$\ac{CCD}_{-\ac{AP}}$}
 
-\addplot[ybar, bar width=0.178, fill=white!30!black, draw=black, area legend] table[row sep=crcr] {%
-1.00	nan\\
-2.00	66.74\\
-3.00	90.25\\
-4.00	94.94\\
-5.00	94.03\\
-6.00	80.39\\
+\addplot[ybar, bar width=0.178, fill=white!30!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	86.64\\
+2.00	96.87\\
+3.00	100.00\\
+4.00	38.60\\
+5.00	94.44\\
 };
-\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
-6.49	0.00\\
+5.49	0.00\\
 };
 \addlegendentry{EmALT}
 
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.78	nan	nan	nan\\
-1.78	94.55	0.44	0.44\\
-2.78	80.16	0.78	0.78\\
-3.78	73.08	0.87	0.87\\
-4.78	89.69	0.60	0.60\\
-5.78	89.73	0.59	0.59\\
+0.78	99.83	0.00	0.00\\
+1.78	99.82	0.00	0.00\\
+2.78	96.57	0.00	0.00\\
+3.78	95.56	0.00	0.00\\
+4.78	91.46	0.00	0.00\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.00	nan	nan	nan\\
-2.00	88.08	0.64	0.64\\
-3.00	67.91	0.91	0.91\\
-4.00	57.08	0.97	0.97\\
-5.00	97.63	0.30	0.30\\
-6.00	95.46	0.41	0.41\\
+1.00	96.15	0.00	0.00\\
+2.00	94.50	0.00	0.00\\
+3.00	95.01	0.00	0.00\\
+4.00	53.92	0.00	0.00\\
+5.00	60.23	0.00	0.00\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.22	nan	nan	nan\\
-2.22	66.74	0.92	0.92\\
-3.22	90.25	0.58	0.58\\
-4.22	94.94	0.43	0.43\\
-5.22	94.03	0.46	0.46\\
-6.22	80.39	0.78	0.78\\
+1.22	86.64	0.00	0.00\\
+2.22	96.87	0.00	0.00\\
+3.22	100.00	0.00	0.00\\
+4.22	38.60	0.00	0.00\\
+5.22	94.44	0.00	0.00\\
 };
 \end{axis}
 \end{tikzpicture}%

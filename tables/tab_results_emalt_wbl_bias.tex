@@ -1,16 +1,18 @@
 \begin{table}[htbp]
     \centering
-    \caption{Relativer systematischer Schätzfehler (Bias) in Prozent bei $\sym{snr}=-2$.}
+    \caption{Absolute Schätzwerte der Koeffizienten inklusive Formparameter $\sym{b}$. Abweichungen von der System-Vorgabe sind durch Pfeile markiert ($\updownarrow \le 10\,\% < \Updownarrow$).}
     \label{tab:results_emalt_wbl_bias}
     \renewcommand{\arraystretch}{1.2}
     \small
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l rrrrrr@{}}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l rrrrrrr@{}}
         \toprule
-        \textbf{Szenario} & \textbf{$\hat{\sym{beta}}_{0}$} & \textbf{$\hat{\sym{beta}}_{1}$} & \textbf{$\hat{\sym{beta}}_{2}$} & \textbf{$\hat{\sym{beta}}_{12}$} & \textbf{$\hat{\sym{beta}}_{11}$} & \textbf{$\hat{\sym{beta}}_{22}$} \\
+        \textbf{Szenario} & \textbf{$\hat{\sym{b}}$} & \textbf{$\hat{\sym{beta}}_{0}$} & \textbf{$\hat{\sym{beta}}_{1}$} & \textbf{$\hat{\sym{beta}}_{2}$} & \textbf{$\hat{\sym{beta}}_{12}$} & \textbf{$\hat{\sym{beta}}_{11}$} & \textbf{$\hat{\sym{beta}}_{22}$} \\
         \midrule
-        Basis \ac{CCD} & $+10{,}35\,\%$ & $-0{,}61\,\%$ & $-0{,}55\,\%$ & $+0{,}57\,\%$ & $+59{,}15\,\%$ & $+63{,}49\,\%$ \\
-        $\ac{CCD}_{-\ac{AP}}$ & $+44{,}00\,\%$ & $-2{,}24\,\%$ & $+6{,}05\,\%$ & $+2{,}00\,\%$ & $+221{,}61\,\%$ & $+245{,}93\,\%$ \\
-        EmALT & $+94{,}86\,\%$ & $-135{,}44\,\%$ & $-462{,}75\,\%$ & $+251{,}49\,\%$ & $+225{,}12\,\%$ & $-12{,}18\,\%$ \\
+        \textbf{System} & $1{,}40$ & $10{,}00$ & $1{,}50$ & $1{,}50$ & $1{,}50$ & $1{,}50$ & $1{,}50$ \\
+        \midrule
+        Basis \ac{CCD} & $1{,}68\,\,\Uparrow$ & $10{,}68\,\,\uparrow$ & $1{,}51\,\,\uparrow$ & $1{,}51\,\,\uparrow$ & $1{,}51\,\,\uparrow$ & $1{,}05\,\,\Downarrow$ & $1{,}02\,\,\Downarrow$ \\
+        $\ac{CCD}_{-\ac{AP}}$ & $1{,}37\,\,\downarrow$ & $11{,}61\,\,\Uparrow$ & $1{,}48\,\,\downarrow$ & $1{,}47\,\,\downarrow$ & $1{,}54\,\,\uparrow$ & $0{,}54\,\,\Downarrow$ & $0{,}45\,\,\Downarrow$ \\
+        EmALT & $1{,}03\,\,\Downarrow$ & $13{,}36\,\,\Uparrow$ & $1{,}22\,\,\Downarrow$ & $1{,}29\,\,\Downarrow$ & $2{,}75\,\,\Uparrow$ & $-0{,}56\,\,\Downarrow$ & $0{,}58\,\,\Downarrow$ \\
         \bottomrule
     \end{tabular*}
 \end{table}
