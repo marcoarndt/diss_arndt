@@ -1,15 +1,15 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
-[1] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
-[183] biber-MSWIN64:340> INFO - === 
-[257] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
-[686] Biber.pm:994> INFO - Found 120 citekeys in bib section 0
-[711] Biber.pm:4463> INFO - Processing section 0
-[730] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[859] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1545] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[2624] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2625] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2626] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[2627] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[2768] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[3025] bbl.pm:779> INFO - Output to diss_arndt.bbl
+[0] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
+[92] biber-MSWIN64:340> INFO - === 
+[128] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
+[311] Biber.pm:994> INFO - Found 120 citekeys in bib section 0
+[329] Biber.pm:4463> INFO - Processing section 0
+[339] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[399] bibtex.pm:1713> INFO - LaTeX decoding ...
+[651] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[1004] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1004] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1005] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[1005] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[1052] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[1165] bbl.pm:779> INFO - Output to diss_arndt.bbl

@@ -759,7 +759,8 @@ Trotz der geometrischen Asymmetrie und der leichten Varianzinflation belegt die 
 \subsubsection{Statistische Trennschärfe ($\sym{power}$)}
 Die finale Metrik für die Praxistauglichkeit stellt die statistische Trennschärfe dar (vgl. Tabelle~\ref{tab:results_emalt_power} und Abbildung~\ref{fig:ma_abb5.4.1_powerdev}).
 Ein ungestützter Verlust von Versuchspunkten ($\ac{CCD}_{-\ac{AP}}$) führt unweigerlich zu kritischen Power-Einbrüchen von bis zu $-19{,}7\,\%$. Das EmALT-Design federt diesen Verlust nicht nur massiv ab, sondern generiert partiell signifikante Leistungsgewinne: Für die kritische Interaktion $\hat{\sym{beta}}_{12}$ steigt die Power um $+4{,}3\,\%$, für den quadratischen Term $\hat{\sym{beta}}_{22}$ gar um herausragende $+7{,}5\,\%$.
-Die leichten Verluste bei den Haupteffekten $\hat{\sym{beta}}_1$ und $\hat{\sym{beta}}_2$ ($-8{,}4\,\%$ und $-9{,}1\,\%$) sind überaus tolerabel. Wie Abbildung~\ref{fig:ma_abb5.4.1_powerdev} illustriert, verbleibt die absolute Power für die wesentlichen Terme des EmALT-Designs sicher über der Gütegrenze von $60\,\%$, wobei $\hat{\sym{beta}}_{22}$ mit knapp $77\,\%$ ein hochgradig gesundes Erkennungsniveau erreicht.
+Die leichten Verluste bei den Haupteffekten $\hat{\sym{beta}}_1$ und $\hat{\sym{beta}}_2$ ($-8{,}4\,\%$ und $-9{,}1\,\%$) sind überaus tolerabel.
+Wie Abbildung~\ref{fig:ma_abb5.4.1_powerdev} illustriert, verbleibt die absolute Power für die wesentlichen Terme des EmALT-Designs sicher über der Gütegrenze von $60\,\%$, wobei $\hat{\sym{beta}}_{22}$ mit knapp $77\,\%$ ein hochgradig gesundes Erkennungsniveau erreicht.
 
 \begin{figure}[htbp]
     \centering
@@ -788,104 +789,60 @@ In der Gesamtsynthese aus statistischer Modellstabilität (Bias $<1\,\%$), topol
 
 \subsection{Effizientes \ac{L-DoE}} \label{sec:ldoe}
 
-Nachdem die geometrische Wirksamkeit der Extrapolations-\acp{AP} unter idealisierten Bedingungen (Normalverteilung, \ac{OLS}-Schätzer) nachgewiesen wurde, erfolgt in diesem Abschnitt der zwingende methodische Transfer auf die reale Lebensdauererprobung. Hierbei unterliegen die Ausfallzeiten einer stochastischen Weibull-Verteilung, weshalb die Modellkoeffizienten nicht länger analytisch geschlossen, sondern iterativ über die \ac{MLE} geschätzt werden. Um zu validieren, ob das EmALT-Design auch unter dieser asymmetrischen Fehlerstruktur (bzw. unter der Kleinstwertverteilung im log-linearen Modell) seine Güte beibehält, werden der systematische Schätzfehler (Bias) und die statistische Trennschärfe ($\sym{power}$) erneut iterativ quantifiziert.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Nachdem die geometrische Wirksamkeit der Extrapolations-\acp{AP} unter idealisierten Bedingungen (Normalverteilung, \ac{OLS}-Schätzer) nachgewiesen wurde, erfolgt in diesem Abschnitt der zwingende methodische Transfer auf die reale Lebensdauererprobung. Hierbei unterliegen die Ausfallzeiten einer stochastischen Weibull-Verteilung, weshalb die Modellkoeffizienten nicht länger analytisch geschlossen, sondern iterativ über die \ac{MLE} geschätzt werden. Um zu validieren, ob das EmALT-Design auch unter dieser asymmetrischen Fehlerstruktur (bzw. unter der Kleinstwertverteilung im log-linearen Modell) seine Güte beibehält, werden der systematische Schätzfehler (Bias) und die statistische Trennschärfe ($\sym{power}$) iterativ quantifiziert.
 
 \subsubsection{Systematischer Schätzfehler der Maximum-Likelihood-Schätzung}
-Beim Übergang von der klassischen linearen Regression zur Maximum-Likelihood-Schätzung des Weibull-Modells (GLLW) ändert sich die
-Interpretation des linearen Prädiktors grundlegend, da dieser nun im Exponenten der charakteristischen Lebensdauer $T$ abgebildet wird
-($T = \exp(\mathbf{x}' \bm{\beta})$).
-Eine direkte Übernahme der bisherigen absoluten Koeffizienten (z.B.\ $\symsub{beta}{idx_i}=10$) würde zu einem numerischen Overflow führen,
-weshalb eine Skalierungstransformation erforderlich ist, die unmittelbar an den Weibull-Formparameter $\sym{b}$ geknüpft ist.
-Für die nachfolgenden Monte-Carlo-Simulationen wird $\sym{b} = 1{,}4$ fixiert - repräsentativ für typische Ermüdungs- und Schadensmechanismen im Maschinenbau (Wälzlagerermüdung, Risswachstum) mit moderat progressiver Ausfallrate.
-Auf eine Sensitivitätsanalyse über $\sym{b}$ wird bewusst verzichtet: Die Log-Location-Scale-Eigenschaft des zugrunde\-liegenden
-\textit{Accelerated Failure Time}-Modells garantiert, dass der Formparameter strikt invers proportional zur Systemvarianz des logarithmischen Fehlerterms wirkt ($\sym{sigma}_{\text{Weibull}} \propto 1/\sym{b}$).
-Eine hypothetische Variation von $\sym{b}$ - bei entsprechender Nachskalierung der Effekte - bewirkt daher lediglich eine proportionale Verschiebung im Parameterraum; die relativen Metriken (Trennschärfe-Verlust, Schätzvarianz zwischen den Designs) bleiben davon unberührt.
-Der spezifische \textit{Design-Penalty} infolge von Orthogonalitätsabweichungen ist unter konstantem $\sym{snr}$ folglich invariant gegenüber dem absoluten Wert des Formparameters.
 
-\paragraph{SNR-Kalibrierung.}
-Die Standardabweichung des logarithmischen Fehlerterms ergibt sich im log-linearen AFT-Modell nicht trivial als $1/\sym{b}$, sondern entspricht dem Skalenparameter der Kleinstwert-Verteilung (KEV):
-\begin{equation}\label{eq:sigma_kev}
-    \sym{sigma}_{\text{KEV}}
-    = \frac{\pi}{\sqrt{6}\,\sym{b}}
-    \approx \frac{\pi}{\sqrt{6} \cdot 1{,}4}
-    \approx 0{,}916.
-\end{equation}
-Dies ist der maßgebliche Rauschparameter des Modells - die direkte Analogie zu $\sym{sigma} = 7{,}5$ in den OLS-Vorstudien.
-Um den Arbeitspunkt auf dem identischen, kritischen Signal-Rausch-Verhältnis von $\sym{snr} \approx 1{,}33$ zu fixieren, werden
-die wahren Modelleffekte auf
-\begin{equation}\label{eq:beta_calibration}
-    |\symsub{beta}{idx_i}|
-    = \sym{snr} \cdot \sym{sigma}_{\text{KEV}}
-        = 1{,}33 \cdot 0{,}916 \approx 1{,}22
-\end{equation}
-skaliert - in vollständiger Analogie zu $|\symsub{beta}{idx_i}| = 10 =  1{,}33 \cdot 7{,}5$ der OLS-Studie.
-Beide Kalibrierungen erzeugen denselben relativen Abstand des nominalen Effekts vom Nullpunkt, gemessen in Einheiten des jeweiligen
-Modellrauschens~($P(\sym{beta}_i < 0) \approx 9{,}1\,\%$).
+Beim Übergang von der klassischen linearen Regression zur Maximum-Likelihood-Schätzung des Weibull-Modells (GLLW) ändert sich die Interpretation des linearen Prädiktors grundlegend, da dieser nun im Exponenten der charakteristischen Lebensdauer $T$ abgebildet wird ($T = \exp(\sym{x}' \sym{beta})$).
+Eine direkte Übernahme der bisherigen absoluten Koeffizienten (z.\,B. $\symsub{beta}{idx_i}=10$) würde hier unweigerlich zu einem numerischen Overflow führen. Um die methodische Integrität der vorherigen Analysen zu wahren, ist daher eine Skalierungstransformation erforderlich, die unmittelbar an die Wahl des Weibull-Formparameters $\sym{b}$ geknüpft ist.
+Für die nachfolgenden Monte-Carlo-Simulationen wird dieser Formparameter konstant auf $\sym{b} = 1{,}4$ fixiert – repräsentativ für typische Ermüdungsmechanismen im Maschinenbau mit moderat progressiver Ausfallrate.
 
-\paragraph{Fixed-Effect-Power vs.\ populationsgemittelte Power.}
-Ein wesentlicher methodischer Unterschied zwischen der vorliegenden Weibull-Studie und den vorherigen OLS-Untersuchungen betrifft die
-Interpretation der gemessenen Trennschärfe und ist für die Bewertung der nachfolgenden Ergebnisse zentral.
+Auf eine umfassende Sensitivitätsanalyse über den Parameter $\sym{b}$ wird im Rahmen dieser Arbeit bewusst verzichtet. Die Log-Location-Scale-Eigenschaft des zugrundeliegenden \textit{Accelerated Failure Time} Modells garantiert, dass der Formparameter strikt invers proportional zur Systemvarianz des logarithmischen Fehlerterms wirkt ($\sym{sigma}_{\ln t} \propto 1/\sym{b}$). Aus dieser Gesetzmäßigkeit ergibt sich bei $\sym{b}=1{,}4$ eine Standardabweichung des Fehlerterms von $\sym{sigma}_{\ln t} \approx 0{,}916$ (entsprechend der Kleinstwertverteilung).
+Um den Arbeitspunkt auf dem identischen, kritischen Signal-Rausch-Verhältnis von $\sym{snr} \approx 1{,}33$ aus den OLS-Studien zu fixieren, werden die wahren Effekte entsprechend auf $|\symsub{beta}{idx_i}| = 1{,}22$ herunterskaliert. Da die Analysen auf dieses fixe \ac{SNR} kalibriert sind, blieben die relativen statistischen Metriken (wie Trennschärfe-Verlust oder Schätzvarianz) gegenüber dem absoluten Wert des Formparameters ohnehin invariant.
 
-In den OLS-Vorstudien werden die wahren Koeffizienten in jeder Monte-Carlo-Iteration neu aus einer Normalverteilung gezogen
-($\symsub{beta}{idx_i} \sim \mathcal{N}(\symsub{beta}{idx_nom}, \sym{sigma})$).
-Die resultierende Trennschärfe ist damit eine \textbf{populationsgemittelte Power}: Sie quantifiziert, wie zuverlässig
-ein Effekt erkannt wird, dessen Größe und Vorzeichen selbst zufällig variieren.
-Diese Streuung der wahren Effekte ``verschmiert'' die Power-Kurve und dämpft in der Konsequenz die sichtbaren Unterschiede zwischen Designszenarien.
+Ein wesentlicher methodischer Unterschied zur OLS-Untersuchung betrifft zudem die Interpretation der Trennschärfe: Während in der linearen Regression die Koeffizienten iterativ streuten (\textit{populationsgemittelte Power}), sind sie im GLLW-Modell über alle Iterationen fixiert ($\symsub{beta}{idx_i} \equiv 1{,}22$); lediglich die stochastischen Ausfallzeiten variieren. Die gemessene Trennschärfe quantifiziert somit eine \textbf{Fixed-Effect-Power}. Da der verwaschende Effekt einer Koeffizientenpopulation entfällt, treten \textit{Design-Penalties} zwischen den Störszenarien schärfer und unvermittelter hervor. Diese konservative Perspektive ist für die Validierung unter realen Lebensdauerbedingungen strikt zielführend.
 
-Im GLLW-Modell hingegen sind die wahren Koeffizienten über alle Iterationen fixiert ($\symsub{beta}{idx_i} \equiv 1{,}22$); lediglich die stochastischen Ausfallzeiten variieren gemäß der Weibull-Verteilung.
-Die gemessene Trennschärfe ist damit eine \textbf{Fixed-Effect-Power}: Sie quantifiziert, wie zuverlässig ein Effekt \textit{exakt dieser Größe} am Arbeitspunkt des kritischen $\sym{snr}$ detektiert wird.
-Da der Koeffizientenstreuterm als dämpfende Komponente entfällt, treten Design-Penalties zwischen den Szenarien schärfer und unvermittelter hervor als in den OLS-Vorstudien.
-
-Diese Eigenschaft ist keine Schwäche des Ansatzes, sondern eine methodisch begründete, strengere Testbedingung: Sie stellt sicher, dass der isolierte geometrische Einfluss der Designmatrix-Topologie auf die Schätzpräzision - bereinigt um den Mittelungseffekt einer Koeffizientenpopulation - direkt quantifizierbar wird.
-Für die angestrebte Validierung des EmALT-Designs unter realen Lebensdauerbedingungen ist diese konservative Perspektive damit
-zweckmäßig und zielführend.
-
-Beim Übergang von der klassischen linearen Regression zur Maximum-Likelihood-Schätzung des Weibull-Modells (GLLW) ändert sich die Interpretation des linearen Prädiktors grundlegend, da dieser nun im Exponenten der charakteristischen Lebensdauer $T$ abgebildet wird ($T = \exp(\mathbf{x}' \bm{\beta})$). Eine direkte Übernahme der bisherigen absoluten Koeffizienten (z.,B. $\symsub{beta}{idx_i}=10$) würde hier unweigerlich zu einem numerischen Overflow führen. Um die methodische Integrität der vorherigen Analysen zu wahren, ist daher eine Skalierungstransformation erforderlich, die unmittelbar an die Wahl des Weibull-Formparameters (Weibull-Modul) $\sym{b}$ geknüpft ist.Für die nachfolgenden Monte-Carlo-Simulationen wird dieser Formparameter konstant auf $\sym{b} = 1{,}4$ fixiert. Dieser Wert ist repräsentativ für typische Ermüdungs- und Schadensmechanismen im Maschinenbau (wie etwa Wälzlagerermüdung oder Risswachstum), die durch eine moderat progressive Ausfallrate gekennzeichnet sind. Auf eine umfassende Sensitivitätsanalyse über den Parameter $\sym{b}$ wird im Rahmen dieser Arbeit jedoch bewusst verzichtet. Die Begründung hierfür liefert die Log-Location-Scale-Eigenschaft des zugrundeliegenden Accelerated Failure Time (AFT) Modells: Der Formparameter verhält sich strikt invers proportional zur Systemvarianz des logarithmischen Fehlerterms ($\sym{sigma}_{\text{Weibull}} \propto 1/\sym{b}$).
-Aus dieser Gesetzmäßigkeit ergibt sich bei dem gewählten Formparameter von $\sym{b}=1{,}4$ eine Standardabweichung des logarithmischen Fehlerterms von $\sym{sigma}_{\ln t} \approx 0{,}916$. Um den Arbeitspunkt auf dem identischen, kritischen Signal-Rausch-Verhältnis von $\sym{snr} \approx 1{,}33$ aus den vorherigen Untersuchungen zu fixieren, werden die wahren Effekte entsprechend auf $|\symsub{beta}{idx_i}| = 1{,}22$ skaliert. Um die Vergleichbarkeit vollständig zu gewährleisten, wird analog dazu auch die stochastische Streuung der wahren Effekte über die Monte-Carlo-Iterationen proportional mitskaliert (auf eine Standardabweichung von $\approx 0{,}916$), was exakt der relativen Schwankungsbreite von $75\,\%$ aus dem Basis-Szenario entspricht. Da die Analysen auf dieses fixe $\sym{snr}$ kalibriert sind, würde eine hypothetische Variation von $\sym{b}$ – bei entsprechender Nachskalierung der Effekte und deren Streuung - lediglich eine proportionale Verschiebung im Parameterraum bewirken. Die relativen statistischen Metriken, wie etwa der Trennschärfe-Verlust oder die Schätzvarianz zwischen den untersuchten Designs, verändern sich dadurch nicht. Der spezifische \textit{Design-Penalty} infolge von Orthogonalitätsabweichungen ist unter konstantem $\sym{snr}$ folglich invariant gegenüber dem absoluten Wert des Formparameters. Die analytische Lupe des Arbeitspunktes bleibt somit mathematisch exakt erhalten.
-
-Im Gegensatz zum \ac{OLS}-Ansatz ist der \ac{MLE}-Schätzer bei kleinen und moderaten Stichprobenumfängen ($\sym{N}$) bekanntermaßen nicht zwingend erwartungstreu. Dennoch belegt die Auswertung in Tabelle~\ref{tab:results_emalt_wbl_bias}, dass die topologische Asymmetrie des EmALT-Designs diese inhärente Schiefe nicht unkontrolliert verstärkt.
+Im Gegensatz zum \ac{OLS}-Ansatz ist der \ac{MLE}-Schätzer bei kleinen und moderaten Stichprobenumfängen ($\sym{N}$) zudem bekanntermaßen nicht zwingend erwartungstreu. Dennoch belegt die Auswertung in Tabelle~\ref{tab:results_emalt_wbl_bias}, dass die topologische Asymmetrie des EmALT-Designs diese inhärente Schiefe nicht unkontrolliert verstärkt.
 
 \input{tables/tab_results_emalt_wbl_bias.tex}
 
-Wie die Balkendiagramme der absoluten Schätzwerte (Abbildung~\ref{fig:ma_abb5.4.1_betadev_wbl}) zeigen, pendeln sich die Koeffizienten stabil um ihre wahren Werte ein. Der relative Bias verbleibt für die praxisrelevanten Terme auf einem tolerablen, einstelligen Prozentniveau, was die strukturelle Integrität des Modells bestätigt. Zudem belegt die numerische Auswertung der p-Werte (Abbildung~\ref{fig:ma_abb5.4.1_phisto_all_wbl}), dass der \ac{MLE}-Algorithmus auch unter der EmALT-Konfiguration robust konvergiert und keine pathologischen Randlösungen erzeugt.
+Wie die Balkendiagramme der absoluten Schätzwerte in Abbildung~\ref{fig:ma_abb5.4.1_betadev_wbl} zeigen, pendeln sich die Koeffizienten im EmALT-Design stabil um ihre wahren Werte ein. Der systematische Schätzfehler verbleibt für die praxisrelevanten Terme auf einem absolut tolerablen, meist einstelligen Prozentniveau, was die strukturelle Integrität des Modells bestätigt. Zudem belegt die numerische Auswertung der p-Werte (Abbildung~\ref{fig:ma_abb5.4.1_phisto_all_wbl}), dass der \ac{MLE}-Algorithmus auch unter der asymmetrischen EmALT-Konfiguration robust konvergiert und keine pathologischen Randlösungen erzeugt.
 
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{5cm}
-    \input{plots/ma_abb5.4.1_betadev_wbl.tex}
+    \input{plots/ma_abb5.4.2_betadev_wbl.tex}
     \caption{Erwartungstreue der \ac{MLE}-Parameter bei Weibull-Verteilung: Die Schätzwerte $\hat{\sym{thet}}_{\sym{idx_i}}$ verbleiben auch unter der asymmetrischen EmALT-Modifikation in einem stabilen Korridor um den wahren Wert.}
-    \label{fig:ma_abb5.4.1_betadev_wbl}
+    \label{fig:ma_abb5.4.2_betadev_wbl}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{4cm}
-    \input{plots/ma_abb5.4.1_phisto_all_wbl.tex}
+    \input{plots/ma_abb5.4.2_phisto_all_wbl.tex}
     \caption{Relative Häufigkeitsverteilung der p-Werte (Weibull-Modell), welche die numerische Konvergenz und Robustheit der \ac{MLE}-Auswertung bestätigt.}
-    \label{fig:ma_abb5.4.1_phisto_all_wbl}
+    \label{fig:ma_abb5.4.2_phisto_all_wbl}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Statistische Trennschärfe ($\sym{power}$) unter Weibull-Bedingungen}
-Der Übergang zur Lebensdauerverteilung geht naturgemäß mit einer erhöhten stochastischen Streuung einher, was die Detektion von Effekten grundsätzlich erschwert. Die Evaluierung der statistischen Trennschärfe (Tabelle~\ref{tab:results_emalt_wbl_power} und Abbildung~\ref{fig:ma_abb5.4.1_powerdev_wbl}) verdeutlicht diesen Effekt im direkten Vergleich zum \ac{CCD}.
 
-Trotz des verschärften stochastischen Rauschens der Lebensdauerdaten beweist das EmALT-Design seine ingenieurwissenschaftliche Berechtigung: Es stabilisiert die Power für die richtungsweisenden quadratischen Terme ($\hat{\sym{beta}}_{22}$) signifikant und hält sie deutlich über der für \ac{ALT}-Szenarien kritischen Gütegrenze von $60\,\%$. Dass die Trennschärfe für einzelne Haupteffekte leichte Verluste ($\Delta \sym{power}$) aufweist, ist im Lebensdauer-Kontext als bewusster Trade-off zu werten.
+Der Übergang zur Lebensdauerverteilung geht naturgemäß mit einer asymmetrischen Fehlerstruktur und erhöhter stochastischer Streuung einher. Wie Abbildung~\ref{fig:ma_abb5.4.1_powerdev_wbl} verdeutlicht, erschwert diese verschärfte \textit{Fixed-Effect}-Metrik die Detektion einzelner Interaktionsterm-Effekte (wie $\hat{\sym{beta}}_{12}$ und $\hat{\sym{beta}}_{11}$) im direkten Vergleich zum OLS-Modell merklich.
+
+Dennoch beweist das EmALT-Design exakt in diesem erschwerten Umfeld seine ingenieurwissenschaftliche Überlegenheit: Während das unkompensierte Ausdünnen des Designs (hier durch $\ac{CCD}_{-\ac{AP}}$ repräsentiert) die Identifikation der quadratischen Krümmung $\hat{\sym{beta}}_{22}$ komplett zum Erliegen bringt ($\approx 38\,\%$ Power), stabilisiert das EmALT-Design diesen richtungsweisenden Term signifikant und katapultiert ihn auf eine exzellente Erkennungsrate von knapp $95\,\%$.
+Dass die Trennschärfe für andere Modellkomponenten im Lebensdauer-Kontext leichte Streuverluste aufweist, ist als zwingender und gewollter Trade-off zu werten.
 
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{6cm}
-    \input{plots/ma_abb5.4.1_powerdev_wbl.tex}
-    \caption{Absolutes Niveau der statistischen Trennschärfe ($\sym{power}$) für das log-lineare Weibull-Modell. Das EmALT-Design sichert wesentliche Krümmungseffekte trotz Lebensdauerrauschen verlässlich ab.}
-    \label{fig:ma_abb5.4.1_powerdev_wbl}
+    \input{plots/ma_abb5.4.2_powerdev_wbl.tex}
+    \caption{Absolutes Niveau der statistischen Trennschärfe ($\sym{power}$) für das log-lineare Weibull-Modell. Das EmALT-Design sichert den wesentlichen quadratischen Term $\hat{\sym{beta}}_{22}$ trotz Lebensdauerrauschen und asymmetrischer Restriktion mit nahezu $95\,\%$ verlässlich ab.}
+    \label{fig:ma_abb5.4.2_powerdev_wbl}
 \end{figure}
 
-Dieser Kompromiss ist elementar: Das EmALT-Design opfert marginale Erkennungswahrscheinlichkeit bei ohnehin physikalisch gesicherten Haupteffekten, um im Gegenzug die absolute Prädiktionsvarianz (\ac{SPV}) auf dem Extrapolationspfad massiv zu senken. Die Explorationsergebnisse belegen damit zweifelsfrei, dass das Konzept der \acp{AP} auch unter den erschwerten, realen Bedingungen eines \ac{EoL}-Tests hervorragend skaliert.
+Dieser Kompromiss ist elementar für die Versuchsplanung: Das EmALT-Design opfert marginale Entdeckungswahrscheinlichkeiten bei weniger kritischen Komponenten, um im Gegenzug die fundamentale Krümmung der Antwortfläche ($\hat{\sym{beta}}_{22}$) abzusichern und die absolute Prädiktionsvarianz (\ac{SPV}) auf dem Extrapolationspfad massiv zu senken. Die Simulationsergebnisse belegen damit zweifelsfrei, dass das Konzept der Brückenbildung durch Extrapolations-\acp{AP} auch unter den harschen, realen Bedingungen eines \ac{EoL}-Tests hervorragend funktioniert und die Prognosesicherheit maximiert.
 
 \begin{itemize}
     \item Zusammenführung zu einer finalen Metrik (ESREL 2023 adaptiert)
