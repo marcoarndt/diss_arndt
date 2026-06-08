@@ -1048,7 +1048,7 @@ So wird Varianzhomogenität und Normalverteilung approximiert zu:
     \end{cases}
 \end{equation}
 Im Kontext der expliziten Lebensdaueranalyse ist dieser generische Ansatz jedoch weniger gebräuchlich, da die physikalisch motivierte Verteilungsannahme (z.B. Weibull) bereits eine inhärente Transformation der Lebensdauerzeit impliziert - vgl. Abschnitt~\ref{subsec:paramleben}, Gleichung~\ref{eq:weibull_pdf} sowie \textcite{Wu.2021,Yang.2007}.
-Wird also für die Lebensdauerverteilung die Weibull-Verteilung (Abschnitt~\ref{subsec:paramleben}) angenommen, so ergibt sich für $\sym{idx_j}=0,...,\sym{k}$ betrachtete Parameter aus beispielsweise Gleichung~\ref{eq:quadric_std_model} und $\sym{n}$ Beobachtungen analog zu Gleichung~\ref{eq:weibull_pdf} der Erwartungswert der charakteristischen Lebensdauer als \textbf{Link-Funktion} der Einflussfaktoren $\symsub{x}{idx_i}$ und des unbekannten Koeffizientenvektors $\hat{\sym{Beta}}$ \cite{Wu.2021,Yang.2007,Wuthrich.2023}:
+Wird also für die Lebensdauerverteilung die Weibull-Verteilung (Abschnitt~\ref{subsec:paramleben}) angenommen, so ergibt sich für $\sym{idx_j}=0,...,\sym{k}$ betrachtete Parameter aus beispielsweise Gleichung~\ref{eq:quadric_std_model} und $\sym{n}$ Beobachtungen analog zu Gleichung~\ref{eq:weibull_pdf} der Erwartungswert der charakteristischen Lebensdauer als \textbf{Link-Funktion} der Einflussfaktoren $\symsub{x}{idx_i}$ und des unbekannten Koeffizientenvektors $\hat{\sym{Beta}}$ \cite{Wu.2021,Yang.2007,Wuthrich.2023} zum \ac{AFT}-Modell:
 \begin{equation} \label{eq:glm_link}
     \sym{Er}_{\sym{thet}_{\sym{x}}}\left(\ln(\sym{T})\right) = \sym{y} = \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} + \dots + \sym{epsilon}.
 \end{equation}
