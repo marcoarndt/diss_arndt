@@ -2914,40 +2914,10 @@
     <bcf:citekey order="331" intorder="1">Arndt.2022</bcf:citekey>
     <bcf:citekey order="331" intorder="2">Mell.2022</bcf:citekey>
     <bcf:citekey order="332" intorder="1">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="333" intorder="1">Cohen.1988</bcf:citekey>
-    <bcf:citekey order="333" intorder="2">Montgomery.2020</bcf:citekey>
-    <bcf:citekey order="334" intorder="1">Zio.2013</bcf:citekey>
-    <bcf:citekey order="335" intorder="1">Arndt.2025</bcf:citekey>
-    <bcf:citekey order="336" intorder="1">Arndt.2025</bcf:citekey>
-    <bcf:citekey order="337" intorder="1">Arndt.2025</bcf:citekey>
-    <bcf:citekey order="338" intorder="1">Arndt.2024</bcf:citekey>
-    <bcf:citekey order="338" intorder="2">Arndt.2025b</bcf:citekey>
-    <bcf:citekey order="338" intorder="3">Arndt.2025</bcf:citekey>
-    <bcf:citekey order="339" intorder="1">Arndt.2025</bcf:citekey>
-    <bcf:citekey order="340" intorder="1">Arndt.2025</bcf:citekey>
-    <bcf:citekey order="341" intorder="1">Arndt.2025</bcf:citekey>
-    <bcf:citekey order="342" intorder="1">Meeker.1998</bcf:citekey>
-    <bcf:citekey order="342" intorder="2">Nelson.1990</bcf:citekey>
-    <bcf:citekey order="343" intorder="1">Montgomery.2020</bcf:citekey>
-  </bcf:section>
-  <!-- SORTING TEMPLATES -->
-  <bcf:sortingtemplate name="none">
-    <bcf:sort order="1">
-      <bcf:sortitem order="1">citeorder</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="2">
-      <bcf:sortitem order="1">intciteorder</bcf:sortitem>
-    </bcf:sort>
-  </bcf:sortingtemplate>
-  <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="none/global//global/global/global"
-                type="entry"
-                sortingtemplatename="none"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global"
-                namehashtemplatename="global">
-  </bcf:datalist>
-</bcf:controlfile>
+    <bcf:citekey order="333" intorder="1">Montgomery.2020</bcf:citekey>
+    <bcf:citekey order="333" intorder="2">McCulloch.2001</bcf:citekey>
+    <bcf:citekey order="334" intorder="1">Montgomery.2020</bcf:citekey>
+    <bcf:citekey order="334" intorder="2">McCulloch.2001</bcf:citekey>
+    <bcf:citekey order="335" intorder="1">Cohen.1988</bcf:citekey>
+    <bcf:citekey order="335" intorder="2">Montgomery.2020</bcf:citekey>
+    <bcf:citekey order="336" intorder="1">Zio.2013</bcf:citekey>

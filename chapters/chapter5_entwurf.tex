@@ -20,7 +20,7 @@ Zur richtungsabhängigen Veranschaulichung dieser Extrapolationsabsicherung wird
 
 Darauf aufbauend werden die bis dato unter Normalverteilungsannahme abgeleiteten Design-Modifikationen in Abschnitt~\colorbox{yellow}{tbd} auf multivariate Lebensdauermodelle übertragen.
 Anhand lebensdauerverteilter Daten (Weibull) und der Parameteridentifikation via \ac{MLE} wird validiert, ob der adaptive Brückenbau auch unter den erschwerten Bedingungen von Zensierungen und Lebensdauerskalierungen seine überlegene Prognosefähigkeit behält, welche maßgeblich über die resultierenden Konfidenzintervalle im Feldbereich evaluiert wird.
-Den Abschluss bildet in Abschnitt \ref{sec:kostenmodell} eine ökonomische Effizienz- und Kostenmodellierung, die das holistische Bild vervollständigt.
+Den Abschluss bildet in Abschnitt \ref{subsec:kostenmodell} eine ökonomische Effizienz- und Kostenmodellierung, die das holistische Bild vervollständigt.
 Indem die resultierenden Testlaufzeiten in reale Prüfstandskosten übersetzt werden, wird die statistische Testgüte - repräsentiert durch \ac{power} und \ac{SPV} - direkt mit dem monetären Aufwand verknüpft.
 Nur durch diesen finalen Trade-off lässt sich die zentrale Kernfrage der Effizienz beantworten: \textit{Wie viel Trennschärfe ist finanzierbar?}
 
@@ -323,25 +323,37 @@ Es gilt zu quantifizieren, inwiefern der Verlust der Orthogonalität - messbar �
 Die analytische Differenzierung dieser Fehlerarten ist von entscheidender Bedeutung, da insbesondere ein signifikanter Bias die Validität der gesamten Lebensdauerprognose unbemerkt kompromittieren würde, während eine reine Varianzinflation primär die Konfidenzintervalle aufweitet.
 
 \subsubsection{Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}
-
-Wie in der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) dargelegt, konvergiert die Trennschärfe bei dominierenden physikalischen Effekten (hohes $\sym{snr} \gg 1$) in einen Sättigungsbereich nahe $100\,\%$. \colorbox{yellow}{Anmerkung zu Sensitivanalyse 0,8-1,2}
-Unter solchen Idealbedingungen ist das Regressionsmodell derart robust, dass selbst signifikante geometrische Verzerrungen des Versuchsplans den Nachweis eines Effekts $\sym{Eff}$ kaum gefährden.
-In der Praxis der Lebensdauerprognose stellen diese dominanten Einflussgrößen jedoch selten die primäre Herausforderung dar. Vielmehr gilt es, subtile Effekte und schwache Degradationserscheinungen zu identifizieren, die sich nur knapp vom Systemrauschen abheben.
-
+Wie in der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) dargelegt, konvergiert die Trennschärfe bei dominierenden physikalischen Effekten (hohes $\sym{snr} \gg 1$) in einen Sättigungsbereich nahe $100\,\%$.
+Unter solchen Idealbedingungen ist das Regressionsmodell derart robust, dass selbst signifikante geometrische Verzerrungen des Versuchsplans den Nachweis eines Effekts $\sym{Eff}$ kaum gefährden - für die Evaluation subtiler topologischer Schwachstellen ist ein solches Setup folglich nicht adäquat.
+In der Praxis der Zuverlässigkeitserprobung stellen diese dominanten Einflussgrößen ohnehin selten die primäre Herausforderung dar.
+Vielmehr gilt es, subtile Effekte, schwache Degradationserscheinungen und sensible Interaktionen zu identifizieren, die sich nur knapp vom Systemrauschen abheben.
+\colorbox{yellow}{Anmerkung zu Sensitivanalyse 0,8-1,2}
 Um den isolierten Einfluss von Orthogonalitätsabweichungen - den spezifischen \textit{Design-Penalty} - überhaupt quantifizierbar zu machen, muss die nachfolgende Simulation daher in einen kritischen Arbeitsbereich überführt werden.
-Hierfür wird das \textit{Ground-Truth}-Modell gezielt kalibriert: Um eine methodische Vergleichbarkeit zur späteren Übertragung auf Lebensdauermodelle (vgl. Abschnitt~\ref{sec:ldoe}) zu gewährleisten, wird die \textit{analytische Lupe} konsequent auf die kritischen Terme höherer Ordnung (Interaktionen und quadratische Effekte) fokussiert.
-Diese Terme werden auf eine Effektstärke von $\symsub{beta}{12,11,22} = 5$ fixiert und mit einer erhöhten Standardabweichung der Systemantwort von $\sym{sigma} = 7{,}5$ beaufschlagt. Dies entspricht einem moderaten Signal-Rausch-Verhältnis von $\sym{snr} \approx 1{,}33$.
-Unter Vorgriff auf das \textit{Sparsity of Effects Principle} \cite{Montgomery.2020}, welches in der Lebensdauererprobung zwingend dominante Haupteinflüsse und schwächere Nichtlinearitäten differenziert, werden die linearen Haupteffekte proportional stärker mit $\symsub{beta}{1,2} = 10$ angesetzt.
+Hierfür wird das \textit{Ground-Truth}-Modell auf Basis der empirischen Erkenntnisse des vorangegangenen Screenings (vgl. Tabelle~\ref{tab:summary_power_sensitivity}) gezielt kalibriert.
+Da die Auswertung des Meta-Designs den dominanten Einfluss des Messrauschfaktors $\symsub{xi_factor}{idx_fac_g}$ auf fast alle relevanten Triebkräfte der Modell-Power ($\sym{Eff}=1{,}99$) nachweist, wird der stochastische Raum des Hauptmodells exakt am kritischen oberen Rand dieses untersuchten Intervalls verankert.
+Bei einer fixierten Standardabweichung der Systemantwort von $\sym{sigma} = 5{,}0$ wird das Signal-Rausch-Verhältnis für die kritischen Terme zweiter Ordnung auf $\sym{snr} = 1{,}20$ justiert.
+Zudem belegen die Screening-Ergebnisse für den Faktor des Effekt-Verhältnisses ($\symsub{xi_factor}{idx_fac_f}$), dass Verschiebungen der relativen Koeffizientenstärken zueinander die statistische Trennschärfe hochgradig sensitiv steuern ($\sym{Eff}=2{,}53$).
+Unter expliziter Berücksichtigung dieser Hebelwirkung und unter Vorgriff auf das werkstoffmechanisch fundamentierte \textit{Sparsity of Effects Principle} \cite{Montgomery.2020} wird die \textit{analytische Lupe} folglich asymmetrisch aufgeteilt:
+Die Interaktion sowie die quadratischen Krümmungseffekte werden exakt auf den sensiblen Schwellenwert von $|\sym{beta}_{11,22,12}| = 6{,}0$ ($\sym{snr} = 1{,}20$) gesetzt, während die linearen Haupteffekte proportional dominanter mit $\sym{beta}_{1,2} = 12{,}0$ ($\sym{snr} = 2{,}40$) einfließen, verlgieche Tabelle~\ref{tab:simulation_parameters_normal}.
+Auf eine zusätzliche, rechenintensive Streuung der wahren Effektkoeffizienten ($\symsub{xi_factor}{idx_fac_e}$) wird im Weiteren bewusst verzichtet, da diese laut Sensitivitätsanalyse die Entdeckungswahrscheinlichkeit vergleichsweise marginal beeinflusst ($\sym{Eff}=0{,}52$) und die angestrebte Evaluation reiner geometrischer Design-Eigenschaften im Sinne eines \textit{Fixed-Effects}-Ansatzes mathematisch verzerren würde: vergleiche \textit{Random Effect Models} nach \textcite{Montgomery.2020,McCulloch.2001}.
+Diese Parametrisierung zwingt das ideale, orthogonale Referenz-Design für die Terme zweiter Ordnung exakt auf die steilste Flanke der sigmoidalen Trennschärfe-Funktion \cite{Cohen.1988,Montgomery.2020}, in der die Basis-Power im empirischen Bereich von rund $80\,\%$ liegt.
+Der künstliche Arbeitspunkt eliminiert jegliche Sättigungseffekte und stellt sicher, dass jede infolge von Orthogonalitäts-Verlust auftretende Varianzinflation (\ac{VIF}) unmittelbar als messbarer Trennschärfe-Verlust $\Delta \sym{power}$ sichtbar wird.
+Um hierbei rein stochastische Schwankungen zwischen den Design-Szenarien auszuschließen, wird der Monte-Carlo-Algorithmus mit statischer \textit{Seed}-Fixierung deterministisch initialisiert \cite{Zio.2013}.
 
-Diese Parametrisierung macht sich die mathematische Gesetzmäßigkeit zunutze, dass die Trennschärfe-Funktion - basierend auf den Nichtzentralitätsparametern $\symsub{delta}{idx_nc}$ der zugrundeliegenden Prüfverteilungen - einen S-förmigen (sigmoidalen) Verlauf aufweist \cite{Cohen.1988,Montgomery.2020}.
-Während die Kurve am unteren Rand für ein $\sym{snr} \approx 0$ gegen das gewählte Signifikanzniveau $\sym{alpha}$ (Erwartungswert des Fehlers 1. Art) und am oberen Rand asymptotisch gegen $\sym{power}=100\,\%$ strebt, besitzt sie in der Übergangszone ihre steilste Flanke.
-Die definierte Kalibrierung zwingt das ideale, orthogonale Referenz-Design exakt auf diesen sensiblen Arbeitsbereich knapp unterhalb der Sättigungsgrenze, in dem die Basis-Trennschärfe für die betrachteten Modelleffekte bei rund $\sym{power}=88\,\%$ liegt.
-
-Dieser künstliche Arbeitspunkt fungiert folglich als analytische Lupe:
-Er eliminiert jeglichen Sättigungseffekt und stellt sicher, dass die infolge von Orthogonalitäts-Verlust und Multikollinearität auftretende Varianzinflation (\ac{VIF}) unmittelbar als messbarer Trennschärfe-Verlust $\Delta \sym{power}$ sichtbar wird.
-Um hierbei rein stochastische Schwankungen zwischen den verschiedenen Design-Szenarien auszuschließen und eine strikte \textbf{Reproduzierbarkeit} der Ergebnisse zu garantieren, wird der Monte-Carlo-Algorithmus deterministisch initialisiert (\textit{Mersenne-Twister}-Generator mit \textit{Seed}-Fixierung) \cite{Zio.2013}.
-Nur durch dieses methodische Setup lässt sich valide bewerten, ab welchem Grad eine hypothetische Praxisrestriktion am Prüfstand bzw. generelle Orthogonalitätsabweichung gemäß \textit{Fall~I-IV} die statistische Integrität der Effekt-Identifikation real gefährdet.
-
+\begin{table}[htbp]
+    \centering
+    \caption{Kalibrierte Startwerte und statistische Eigenschaften des additiven Normalverteilungs-Basismodells (kompakte Darstellung)}
+    \label{tab:simulation_parameters_normal}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{@{}lccccc@{}}
+        \toprule
+        \textbf{Koeffizient} & $\sym{beta}_{0}$ & $\sym{beta}_{1}, \sym{beta}_{2}$ & $\sym{beta}_{11}, \sym{beta}_{22}$ & $\sym{beta}_{12}$ & $\sym{sigma}$ \\
+        \midrule
+        Wahrer Wert          & $100{,}0$        & $12{,}0$                         & $-6{,}0$                           & $-6{,}0$          & $5{,}0$       \\
+        \sym{snr}            & --               & $2{,}40$                         & $1{,}20$                           & $1{,}20$          & --            \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 \subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse}
 
@@ -798,29 +810,49 @@ In der Gesamtsynthese aus statistischer Modellstabilität (Bias $<1\,\%$), topol
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Effizientes \ac{L-DoE}} \label{sec:ldoe}
-
 Nachdem die geometrische Wirksamkeit der Extrapolations-\acp{AP} unter idealisierten Bedingungen (Normalverteilung, \ac{OLS}-Schätzer) nachgewiesen wurde, erfolgt in diesem Abschnitt der zwingende methodische Transfer auf die reale Lebensdauererprobung.
-Hierbei unterliegen die Ausfallzeiten einer stochastischen Weibull-Verteilung, weshalb die Modellkoeffizienten nicht länger analytisch geschlossen, sondern iterativ über die \ac{MLE} geschätzt werden.
-Um zu validieren, ob das EmALT-Design auch unter dieser asymmetrischen Fehlerstruktur (bzw. unter der Kleinstwertverteilung im log-linearen Modell) seine Güte beibehält, werden der systematische Schätzfehler (Bias) und die statistische Trennschärfe ($\sym{power}$) erneut iterativ quantifiziert.
+Hierbei unterliegen die Ausfallzeiten einer stochastischen Weibull-Verteilung, weshalb die Modellkoeffizienten iterativ über die \ac{MLE} geschätzt werden.
+Um zu validieren, ob das EmALT-Design auch unter dieser asymmetrischen Fehlerstruktur (bzw. unter der Kleinstwertverteilung im log-linearen Modell) seine Güte beibehält, werden der systematische Schätzfehler (Bias) und die statistische Trennschärfe ($\sym{power}$) erneut quantifiziert.
 
 Um die in der linearen Vorstudie etablierte methodische Vergleichbarkeit aufrechtzuerhalten, wird das zugrundeliegende Referenz-Design für die log-lineare Lebensdauersimulation (\ac{AFT}-Modell) einer analogen Sensibilisierung unterzogen.
 Da absolute Koeffizientenwerte ($\sym{beta}$) zwischen dem additiven Normalverteilungsraum und dem multiplikativen Gumbel-Raum nicht translationsinvariant sind, wird das Konzept der dimensionslosen \sym{snr}-Invarianz angewandt.
-Das am idealen Arbeitspunkt kalibrierte Signal-Rausch-Verhältnis von $\sym{snr} \approx 1{,}33$ dient dabei als unveränderlicher Transformationsanker.
+Das auf die kritischen Modellterme kalibrierte Signal-Rausch-Verhältnis von $\sym{snr} = 1{,}20$, eingeführt in Abschnitt \ref{subsec:ergebnisse_generic}, dient dabei als unveränderlicher Transformationsanker.
+Unter der werkstoffmechanisch plausiblen Annahme eines progressiven Verschleißverhaltens wird der Weibull-Formparameter des Grundmodells repräsentativ auf $\sym{b} = 3{,}0$ fixiert \cite{Meeker.2022, Nelson.1990}.
+Dies determiniert den Skalenparameter der log-Lebensdauern (\sym{SEV}-Verteilung) auf $\sym{sigma}_\textnormal{\sym{SEV}} = 1/\sym{b} \approx 0{,}333$.
+Die mathematische Brücke zwischen der additiven OLS-Vorstudie und diesem multiplikativen Lebensdauerbereich wird über die Log-Location-Scale-Transformation geschlagen.
+Folgen die Ausfallzeiten $\symsub{t}{idx_i}$ einer zweiparametrischen Weibull-Verteilung $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$, so folgt die transformierte Zielgröße $\sym{y} = \ln(T)$ definitionsgemäß einer linkssteilen Kleinstwertverteilung \ac{SEV} mit dem Lageparameter $\sym{mu} = \ln(\sym{T})$ und dem Skalenparameter $\sym{sigma}_\textnormal{\sym{SEV}}$.
+Während die Varianz der Normalverteilung nach Abschnitt~\ref{subsec:ergebnisse_generic} direkt durch $\sym{sigma}^2$ gegeben ist, bestimmt sich die theoretische Varianz der \ac{SEV}-verteilten Residuen im log-linearen \ac{AFT}-Modell maßgeblich über die Eulersche Konstante und verhält sich strikt invers proportional zum quadrierten Weibull-Formparameter \cite{Meeker.2022}:
+\begin{equation} \label{eq:sev_variance}
+    \sym{Var}(\sym{y}) = \sym{sigma}_\textnormal{\sym{SEV}}^2 \cdot \frac{\pi^2}{6} = \frac{\pi^2}{6 \cdot \sym{b}^2}.
+\end{equation}
+Da der Formparameter $\sym{b}$ somit als reiner Skalierungsfaktor der stochastischen Streuung im log-Raum wirkt, bleibt die relative Informationsstruktur des Versuchsplans gegenüber Absolutwerten von $\sym{b}$ invariant.
+Dies legitimiert es, die Vergleichbarkeit der beiden Simulationsphasen nicht über absolute Varianzen, sondern über das dimensionslose Verhältnis von Struktureffekten zu Verteilungsrauschen ($\sym{snr} = \sym{beta} / \sym{sigma}_\textnormal{\sym{SEV}}$) zu definieren.
+Die physikalische Repräsentativität von \acp{EoL} erfordert daher, konform zum in der Vorstudie etablierten \textit{Sparsity of Effects Principle} \cite{Montgomery.2020}, eine hierarchische Differenzierung der $\sym{idx_i}=6$ Modellkoeffizienten ($\symsub{beta}{idx_i}$).
+Zusätzlich muss berücksichtigt werden, dass es sich bei den untersuchten Faktoren um lebensdauermindernde Stressoren handelt.
+Ein Anstieg des Stressniveaus induziert für den mechanischen Normalfall physikalisch eine Reduktion der Lebensdauer, was im \ac{AFT}-Ansatz durch \textit{negative} Vorzeichen der linearen Haupteffekte ($\sym{beta}_1, \sym{beta}_2 < 0$) abgebildet wird.
 
-Unter der werkstoffmechanisch plausiblen Annahme eines progressiven Verschleißverhaltens wird der Weibull-Formparameter des Grundmodells repräsentativ auf $\sym{b} = 3{,}0$ fixiert \cite{Meeker.1998, Nelson.1990}.
-Dies determiniert den Skalenparameter der log-Lebensdauern (SEV-Verteilung) auf $\sym{sigma}_{\textnormal{SEV}} = 1/\sym{b} \approx 0{,}333$.
-Im Gegensatz zum generischen Normalverteilungsmodell erfordert die physikalische Repräsentativität von Lebensdauer-Stresstests jedoch eine strikte Differenzierung der sechs Modellkoeffizienten ($\sym{beta}_0, \sym{beta}_1, \sym{beta}_2, \sym{beta}_{11}, \sym{beta}_{22}, \sym{beta}_{12}$) gemäß dem \textit{Sparsity of Effects Principle} und dem \textit{Hierarchieprinzip} \cite{Montgomery.2020}.
+Um die Trennschärfe-Verluste ($\Delta \sym{power}$) durch geometrische Manipulationen am \ac{CCD} - insbesondere die Verschiebung von Sternpunkten beim EmALT - maximal sichtbar zu machen, wird die \textit{analytische Lupe} erneut gezielt auf die quadratischen Effekte und die Wechselwirkung appliziert.
+Entsprechend werden die wahren Koeffizienten wie folgt initialisiert:
+Die Haupteffekte werden als dominante, lebensdauermindernde Stressoren mit $\sym{beta}_{1,2} = -0{,}80$ definiert - vergleiche Tabelle~\ref{tab:simulation_parameters_weibull}.
+Dies entspricht exakt dem fixierten \ac{SNR} von $2{,}40$ aus der OLS-Vorstudie (vgl. Abschnitt~\ref{subsec:ergebnisse_generic}) und resultiert in einem praxisnahen Beschleunigungsfaktor von $r = \exp(0{,}80) \approx 2{,}23$ beziehungsweise einem Lebensdauerverhältnis von $L_V = 1/r \approx 0{,}45$ in den jeweiligen Stressachsen.
+Die Interaktion sowie die quadratischen Krümmungseffekte werden exakt auf den sensiblen Arbeitspunkt von $\sym{beta}_{11,22,12} = \pm 0{,}40$ ($\sym{snr} = 1{,}20$) gesetzt. Der Intercept $\sym{beta}_0 = 9{,}21$ definiert die Basislebensdauer $\symsub{t}{idx_0} = \exp(9{,}21) \approx 10.000$ im Versuchszentrum.
+\begin{table}[htbp]
+    \centering
+    \caption{Invariante Parameter-Konfiguration und physikalische Metriken des log-linearen Weibull-Lebensdauermodells (kompakte Darstellung)}
+    \label{tab:simulation_parameters_weibull}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{@{}lccccc@{}}
+        \toprule
+        \textbf{Metrik}    & $\sym{beta}_{0}$                   & $\sym{beta}_{1}, \sym{beta}_{2}$     & $\sym{beta}_{11}, \sym{beta}_{22}$ & $\sym{beta}_{12}$ & $\sym{b}$                                           \\
+        \midrule
+        Wahrer Wert        & $9{,}21$                           & $-0{,}80$                            & $-0{,}40$                          & $-0{,}40$         & $3{,}00$                                            \\
+        \sym{snr} / Effekt & $\symsub{t}{idx_0} \approx 10.000$ & $2{,}40$ ($\sym{LV} \approx 0{,}45$) & $1{,}20$                           & $1{,}20$          & $\sym{sigma}_\textnormal{\sym{SEV}} \approx 0{,}33$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+Durch dieses dimensionslos invariante und physikalisch konsistente Setup wird gewährleistet, dass die stochastische Auswertung reale Degradationsphänomene abbildet.
+Jegliche Varianzinflation, die durch Design-Modifikationen im EmALT-Design entsteht, führt bei den kritisch kalibrierten Effekten zweiter Ordnung zum sofortigen und methodisch direkt vergleichbaren Einbruch der Nachweiswahrscheinlichkeit, noch bevor die dominanten Haupteffekte gefährdet sind.
 
-Zusätzlich muss berücksichtigt werden, dass es sich bei den untersuchten Faktoren um lebensdauermindernde Stressoren (z.\,B. erhöhte mechanische Last) handelt. Ein Anstieg des Stressniveaus induziert physikalisch zwingend eine Reduktion der Lebensdauer, was im \ac{AFT}-Ansatz durch \textbf{negative} Vorzeichen der linearen Haupteffekte ($\sym{beta}_1, \sym{beta}_2 < 0$) abgebildet wird.
-Um das angestrebte $\sym{snr} \approx 1{,}33$ für die strukturell kritischsten Terme zu erreichen, müssen die korrespondierenden log-linearen Modellkoeffizienten folglich auf $|\sym{beta}| = \sym{snr} \cdot \sym{sigma}_{\textnormal{SEV}} \approx 0{,}444$ kalibriert werden.
-
-Um die Trennschärfe-Verluste ($\Delta \sym{power}$) durch geometrische Design-Manipulationen am \ac{CCD} -- insbesondere die Verschiebung von Sternpunkten beim EmALT -- maximal sichtbar zu machen, wird die \textit{analytische Lupe} gezielt auf die quadratischen Effekte und die Wechselwirkung appliziert. Diese Terme sind für die Abbildung von Nichtlinearitäten essenziell, jedoch schätztechnisch am anfälligsten für den Verlust von Rotierbarkeit und Orthogonalität.
-Entsprechend werden die wahren Koeffizienten hierarchisch wie folgt initialisiert:
-
-Die Haupteffekte werden als dominante, lebensdauermindernde Stressoren mit $\sym{beta}_1 = \sym{beta}_2 = -0{,}888$ definiert. Dies entspricht einem Beschleunigungsfaktor von $r = \exp(0{,}888) \approx 2{,}43$ beziehungsweise einem Lebensdauerverhältnis von $L_V = 1/r \approx 0{,}41$ in den jeweiligen Stressachsen.
-Die Interaktion sowie die quadratischen Krümmungseffekte werden exakt auf den sensiblen Arbeitspunkt von $\sym{beta}_{12} = \sym{beta}_{11} = \sym{beta}_{22} = \pm 0{,}444$ ($\sym{snr} = 1{,}33$) gesetzt. Der Intercept $\sym{beta}_0$ definiert die Basislebensdauer $L_0$ im Versuchszentrum.
-
-Durch dieses physikalisch konsistente Setup wird gewährleistet, dass die stochastische Auswertung über $10.000$ Monte-Carlo-Iterationen reale Degradationsphänomene abbildet. Jegliche Varianzinflation, die durch Design-Modifikationen oder induzierte Daten-Zensierung (\textit{Right-Censoring}) im EmALT-Design entsteht, führt bei den kritisch kalibrierten Effekten zweiter Ordnung zum sofortigen und messbaren Einbruch der Nachweiswahrscheinlichkeit, noch bevor die dominanten Haupteffekte in ihrer Signifikanz gefährdet sind.
 
 \subsubsection{Systematischer Schätzfehler der Maximum-Likelihood-Schätzung}
 
@@ -828,8 +860,11 @@ Beim Übergang von der klassischen linearen Regression zur Maximum-Likelihood-Sc
 Eine direkte Übernahme der bisherigen absoluten Koeffizienten (z.\,B. $\symsub{beta}{idx_i}=10$) würde hier unweigerlich zu einem numerischen Overflow führen. Um die methodische Integrität der vorherigen Analysen zu wahren, ist daher eine Skalierungstransformation erforderlich, die unmittelbar an die Wahl des Weibull-Formparameters $\sym{b}$ geknüpft ist.
 Für die nachfolgenden Monte-Carlo-Simulationen wird dieser Formparameter konstant auf $\sym{b} = 1{,}4$ fixiert – repräsentativ für typische Ermüdungsmechanismen im Maschinenbau mit moderat progressiver Ausfallrate.
 
-Auf eine umfassende Sensitivitätsanalyse über den Parameter $\sym{b}$ wird im Rahmen dieser Arbeit bewusst verzichtet. Die Log-Location-Scale-Eigenschaft des zugrundeliegenden \textit{Accelerated Failure Time} Modells garantiert, dass der Formparameter strikt invers proportional zur Systemvarianz des logarithmischen Fehlerterms wirkt ($\sym{sigma}_{\ln t} \propto 1/\sym{b}$). Aus dieser Gesetzmäßigkeit ergibt sich bei $\sym{b}=1{,}4$ eine Standardabweichung des Fehlerterms von $\sym{sigma}_{\ln t} \approx 0{,}916$ (entsprechend der Kleinstwertverteilung).
-Um den Arbeitspunkt auf dem identischen, kritischen Signal-Rausch-Verhältnis von $\sym{snr} \approx 1{,}33$ aus den OLS-Studien zu fixieren, werden die wahren Effekte entsprechend auf $|\symsub{beta}{idx_i}| = 1{,}22$ herunterskaliert. Da die Analysen auf dieses fixe \ac{SNR} kalibriert sind, blieben die relativen statistischen Metriken (wie Trennschärfe-Verlust oder Schätzvarianz) gegenüber dem absoluten Wert des Formparameters ohnehin invariant.
+Auf eine umfassende Sensitivitätsanalyse über den Parameter $\sym{b}$ wird im Rahmen dieser Arbeit bewusst verzichtet.
+Die Log-Location-Scale-Eigenschaft des zugrundeliegenden \textit{Accelerated Failure Time} Modells garantiert, dass der Formparameter strikt invers proportional zur Systemvarianz des logarithmischen Fehlerterms wirkt ($\sym{sigma}_{\ln t} \propto 1/\sym{b}$).
+Aus dieser Gesetzmäßigkeit ergibt sich bei $\sym{b}=1{,}4$ eine Standardabweichung des Fehlerterms von $\sym{sigma}_{\ln t} \approx 0{,}916$ (entsprechend der Kleinstwertverteilung).
+Um den Arbeitspunkt auf dem identischen, kritischen Signal-Rausch-Verhältnis von $\sym{snr} \approx 1{,}33$ aus den OLS-Studien zu fixieren, werden die wahren Effekte entsprechend auf $|\symsub{beta}{idx_i}| = 1{,}22$ herunterskaliert.
+Da die Analysen auf dieses fixe \ac{SNR} kalibriert sind, blieben die relativen statistischen Metriken (wie Trennschärfe-Verlust oder Schätzvarianz) gegenüber dem absoluten Wert des Formparameters ohnehin invariant.
 
 Ein wesentlicher methodischer Unterschied zur OLS-Untersuchung betrifft zudem die Interpretation der Trennschärfe: Während in der linearen Regression die Koeffizienten iterativ streuten (\textit{populationsgemittelte Power}), sind sie im GLLW-Modell über alle Iterationen fixiert ($\symsub{beta}{idx_i} \equiv 1{,}22$); lediglich die stochastischen Ausfallzeiten variieren. Die gemessene Trennschärfe quantifiziert somit eine \textbf{Fixed-Effect-Power}. Da der verwaschende Effekt einer Koeffizientenpopulation entfällt, treten \textit{Design-Penalties} zwischen den Störszenarien schärfer und unvermittelter hervor. Diese konservative Perspektive ist für die Validierung unter realen Lebensdauerbedingungen strikt zielführend.
 
