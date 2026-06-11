@@ -13,13 +13,13 @@ xmin=0.00,
 xmax=0.40,
 xlabel style={font=\color{mycolor1}},
 xlabel={$\sym{A2}$},
-ymin=-5.07,
-ymax=11.02,
+ymin=-5.09,
+ymax=11.05,
 ylabel style={font=\color{mycolor1}},
 ylabel={$\Delta \sym{power}$ [\%]},
 axis background/.style={fill=white},
 title style={font=\bfseries\color{mycolor1}},
-title={\textbf{Topologie} ($\sym{R2} = 0.12$)},
+title={\textbf{Topologie} ($\sym{R2} = 0.13$)},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
@@ -27,19 +27,19 @@ grid style={dotted, opacity=0.25}
 \addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
   table[row sep=crcr]{%
 0.00	0.00\\
-0.04	1.29\\
-0.04	-1.07\\
-0.07	1.79\\
+0.04	1.09\\
+0.04	-0.97\\
+0.07	1.63\\
 0.00	-0.01\\
-0.35	0.36\\
-0.01	-0.53\\
-0.18	4.34\\
-0.00	0.59\\
+0.35	0.42\\
+0.01	-0.43\\
+0.18	3.37\\
+0.00	0.69\\
 };
 \addplot [color=black, dashed, line width=1.2pt, forget plot]
   table[row sep=crcr]{%
-0.00	0.38\\
-0.35	2.06\\
+0.00	0.34\\
+0.35	1.72\\
 };
 \end{axis}
 
@@ -52,13 +52,13 @@ xmin=68.98,
 xmax=85.65,
 xlabel style={font=\color{mycolor1}},
 xlabel={$\sym{eff_I}$ [\%]},
-ymin=-5.07,
-ymax=11.02,
+ymin=-5.09,
+ymax=11.05,
 ytick={-5.00,0.00,5.00,10.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
 title style={font=\bfseries\color{mycolor1}},
-title={\textbf{Prädiktion} ($\sym{R2} = 0.82$)},
+title={\textbf{Prädiktion} ($\sym{R2} = 0.80$)},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25}
@@ -66,19 +66,18 @@ grid style={dotted, opacity=0.25}
 \addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
   table[row sep=crcr]{%
 81.19	0.00\\
-76.00	1.29\\
-85.05	-1.07\\
-73.48	1.79\\
-81.18	-0.01\\
-80.32	0.36\\
-82.97	-0.53\\
-68.98	4.34\\
-85.65	0.59\\
+76.00	1.09\\
+85.05	-0.97\\
+73.48	1.63\\
+80.32	0.42\\
+82.97	-0.43\\
+68.98	3.37\\
+85.65	0.69\\
 };
 \addplot [color=black, dashed, line width=1.2pt, forget plot]
   table[row sep=crcr]{%
-68.98	3.48\\
-85.65	-0.88\\
+68.98	2.81\\
+85.65	-0.64\\
 };
 \end{axis}
 
@@ -87,12 +86,12 @@ width=0.263\figurewidth,
 height=0.948\figureheight,
 at={(0.737\figurewidth,0\figureheight)},
 scale only axis,
-xmin=4.98,
-xmax=12.29,
+xmin=2.00,
+xmax=6.00,
 xlabel style={font=\color{mycolor1}},
 xlabel={$\sym{mse}(\sym{beta}_{11})$},
-ymin=-5.07,
-ymax=11.02,
+ymin=-5.09,
+ymax=11.05,
 ytick={-5.00,0.00,5.00,10.00},
 yticklabels={\empty},
 axis background/.style={fill=white},
@@ -104,36 +103,20 @@ grid style={dotted, opacity=0.25}
 ]
 \addplot [color=black, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=black, black}, forget plot]
   table[row sep=crcr]{%
-7.04	0.00\\
-9.33	4.34\\
-4.98	-4.57\\
-10.37	6.25\\
-7.05	-0.05\\
-8.62	2.74\\
-7.36	1.19\\
-12.29	10.52\\
-7.28	0.84\\
+3.13	0.00\\
+4.15	4.49\\
+2.21	-4.59\\
+4.61	6.65\\
+3.13	-0.07\\
+3.83	3.06\\
+3.27	1.18\\
+5.46	10.55\\
+3.24	1.26\\
 };
 \addplot [color=black, dashed, line width=1.2pt, forget plot]
   table[row sep=crcr]{%
-4.98	-4.14\\
-12.29	10.38\\
+2.21	-4.08\\
+5.46	10.62\\
 };
-\end{axis}
-
-\begin{axis}[%
-width=1.312\figurewidth,
-height=1.312\figureheight,
-at={(-0.171\figurewidth,-0.242\figureheight)},
-scale only axis,
-xmin=0.00,
-xmax=1.00,
-ymin=0.00,
-ymax=1.00,
-axis line style={draw=none},
-ticks=none,
-axis x line*=bottom,
-axis y line*=left
-]
 \end{axis}
 \end{tikzpicture}%

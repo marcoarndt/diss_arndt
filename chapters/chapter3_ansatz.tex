@@ -67,7 +67,7 @@ Sie verlangt einen strategischen Kompromiss: Das Design muss flexibel genug sein
 Nur wenn die Wahrscheinlichkeit der Effektdetektion (\ac{power}) in einem ökonomisch vertretbaren Verhältnis zu den Testkosten steht, ist die Bedingung der Effizienz erfüllt und Effektivität gewährleistet.
 
 \section{Forschungsfragen und Aufbau der Arbeit} \label{sec:forschungsfragen}
-Das übergeordnete Ziel dieser Arbeit, die Entwicklung effizienter multivariater Lebensdauerversuche, fußt damit auf der Prämisse, dass etablierte Standard-Designs nicht zwingend durch vollkommen neuartige Algorithmen ersetzt, sondern vielmehr intelligent adaptiert werden müssen.
+Das übergeordnete Ziel dieser Arbeit, die Entwicklung effizienter multivariater Lebensdauerversuche, fußt damit auf der Prämisse, dass etablierte Standard-Designs nicht zwingend durch vollkommen neuartige Algorithmen ersetzt, sondern vielmehr intelligent adaptiert werden können und müssen.
 Als methodischer Anker und Referenzpunkt dient hierbei das \textbf{\ac{CCD}}.
 Dieser Konsens begründet sich auf einer Synthese aus verfahrenstechnischen, physikalischen und statistischen Vorzügen, die das \ac{CCD} für die Zuverlässigkeitsmodellierung im Maschinen- und Fahrzeugbau prädestinieren - wenn gleich die in dieser Arbeit vorgestellte Strategie auch generisch auf weitere \acp{RSD} übertragbar ist.
 Dies lässt sich aus praktischen Erfahrungen wie beispielsweise nach \textcite{Myers.2016,Kleppmann.2020,Rigdon.2022} sowie einer Vielzahl wissenschaftlicher Publikationen ableiten (vgl. Kapitel~\ref{chap:stand}) und umfasst insbesondere folgende Aspekte:
@@ -80,7 +80,8 @@ Dies lässt sich aus praktischen Erfahrungen wie beispielsweise nach \textcite{M
     \item \textbf{Orthogonale Blockbildung:} Das Design lässt sich exzellent in orthogonale Blöcke unterteilen \cite{Montgomery.2020,Rigdon.2022}. Dies ist für Langzeitversuche von entscheidender Bedeutung, um zeitliche Trends durch beispielsweise Chargenunterschiede statistisch zu bereinigen, ohne die Parameterschätzung zu verzerren.
     \item \textbf{Robustheit gegen Datenverlust:} Aufgrund seiner symmetrischen Struktur weist das \ac{CCD} eine hohe Toleranz gegenüber fehlenden Werten (\textit{Missing Data}) auf, was die Auswertbarkeit des Versuchs auch bei unvorhergesehenen Ausfällen oder technischer Zensierung auf dem Prüfstand weitgehend sichert \cite{Montgomery.2020,Myers.2016}.
 \end{enumerate}
-Ausgehend von diesem Status quo zielt die vorliegende Arbeit darauf ab, dieses bewährte Grundkonstrukt nicht zu verwerfen, sondern es gezielt für die spezifischen Anforderungen der Lebensdauerprognose zu modifizieren. Dies führt zur zentralen \textbf{Forschungsfrage} dieser Arbeit:\\
+Die vorliegende Arbeit zielt ausgehend davon somit darauf ab, das \ac{CCD} als bewährtes Grundkonstrukt nicht zu verwerfen, sondern es gezielt für die spezifischen Anforderungen der Lebensdauerprognose zu modifizieren.
+Dies führt zur zentralen \textbf{Forschungsfrage} dieser Arbeit:\\
 
 \textbf{Wie können effiziente, multivariate Testdesigns (\acp{RSD}) entwickelt und geplant werden, um eine beschleunigte Lebensdauererprobung zum Zweck einer multivariaten Zuverlässigkeitsmodellierung umzusetzen?}\\
 
