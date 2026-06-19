@@ -107,7 +107,7 @@ Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
 
 \subsection{Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
 Um zunächst die Robustheit des methodischen Ansatzes gegenüber den eingangs erwähnten Einflusse zu bewerten, wird eine Sensitivitätsanalyse durchgeführt, welche methodische einem \textbf{\ac{DoE} on Experimental Design}-Ansatz folgt:
-Die Eigenschaften des Versuchsplans sowie die der \textit{Ground Truth} werden als Faktoren eines übergeordneten Meta-Designs derart variiert, sodass deren Einfluss auf die Effektivität der Schätzung und damit insbesondere die Trennschärfe der Effekte im \ac{GLM} quantifiziert werden kann \cite{Arndt.2023}.
+Die Eigenschaften des Versuchsplans sowie die der \textit{Ground Truth} werden als Faktoren eines übergeordneten Meta-Designs derart variiert, sodass deren Einfluss auf die Effektivität der Schätzung und damit auf insbesondere die Trennschärfe der Effekte im \ac{GLM} quantifiziert werden kann \cite{Arndt.2023}.
 Infrage kommt dabei eine aus praktischer Überlegung erfasste Auswahl an sowohl geometrischer Manipulationen als auch stochastischer Einflüsse sowie methodische Parameter und deren Interaktionen:
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
@@ -207,10 +207,14 @@ So werden schließlich Haupteffekte, Interaktionen sowie quadratische Effekte au
 Die simulative Untersuchung der Trennschärfe (\ac{power}) im Meta-Design offenbart eine signifikante Dichotomie zwischen aktiven, \textbf{dispositiven Designfaktoren} (Geometrie, Stützstellenanzahl) und unveränderlichen, \textbf{externen Systemrestriktionen} (Rauschen, Signifikanzniveau).
 Tabelle~\ref{tab:summary_power_sensitivity} fasst die Ergebnisse der \ac{ANOVA} zusammen, wobei die signifikante Effektstärke $\sym{Eff}$ als Maß für die Dominanz eines Faktors dient (Detailauswertungen siehe Anhang~\ref{app:c}).
 
-Während die globale \textbf{Modell-Power} ($\overline{\sym{power}}_{\sym{idx_M}} > 99,7\,\%$) extrem robust reagiert, zeigt die ebenenspezifische Auswertung starke Sensitivitäten.
-Die Nachweiswahrscheinlichkeit der linearen Haupt- und Interaktionseffekte wird nicht durch die Anzahl der Versuchspunkte limitiert, sondern maßgeblich durch nicht-dispositive Systemgrößen dominiert:
-das Effektstärke-Verhältnis ($\symsub{xi_factor}{idx_fac_f}$, $\sym{Eff}=2{,}53$) sowie das Messrauschen ($\symsub{xi_factor}{idx_fac_g}$).
-Da diese Rausch- und Systemparameter bei \ac{EoL}-Versuchen zumeist feste Randbedingungen darstellen, definieren sie eine natürliche Obergrenze der Trennschärfe, die auch durch maximale Versuchspläne nicht durchbrochen werden kann.
+Wird zunächst die globale \textbf{Modell-Power} ($\sym{power}_{\sym{idx_M}}$) betrachtet, zeigt sich eine extrem hohe Robustheit gegenüber allen Variationen mit einer mittleren Trennschärfe von $\overline{\sym{power}} > 99{,}7\,\%$.
+Diese pauschale Metrik verdeckt jedoch, dass das Verhalten spezifischer Einzel-Effekte - insbesondere die Identifikation der für die Lebensdauerprognose kritischen quadratischen Terme - deutlich sensitiver ausfällt.
+Wie Tabelle~\ref{tab:summary_power_sensitivity} zeigt, liegt die mittlere Trennschärfe für quadratische Terme ($\sym{power}_{\sym{beta}_{11}}, \sym{power}_{\sym{beta}_{22}}$) nur noch im Bereich von $70\,\%$ bis $79\,\%$.
+Auch die Trennschärfe der linearen Haupteffekte wird durch die Variation der Einflussgrößen maßgeblich gesteuert, was sich in einem breiten Wertebereich von $37{,}3\,\%$ bis $90{,}8\,\%$ widerspiegelt.
+Die entscheidende Erkenntnis liefert jedoch der Blick auf die \textbf{Sensitivitäts-Indizes} (Spalte „Dominante Sensitivität“).
+Für die Mehrheit der untersuchten Koeffizienten ($\sym{power}_{\sym{idx_M}}, \sym{power}_{\sym{beta}_1}, \sym{power}_{\sym{beta}_{12}}, \sym{power}_{\sym{beta}_{11}}$) ist nicht etwa eine unzureichende Versuchspunktanzahl der limitierende Faktor, sondern das \textbf{Effektstärke-Verhältnis ($\symsub{xi_factor}{idx_fac_f}$)} sowie das \textbf{Messrauschen ($\symsub{xi_factor}{idx_fac_g}$)}.
+Mit einem Sensitivitätsindex von bis zu $\sym{Eff}=2{,}53$ dominiert das physikalische Systemverhalten die Erfolgswahrscheinlichkeit des Tests.
+Da das Rauschen sowie das Signifikanzniveau ($\symsub{xi_factor}{idx_fac_h}$) bei \ac{EoL}-Tests an bestehenden Prüfständen zumeist feste Randbedingungen darstellen, definieren sie eine natürliche Obergrenze der erreichbaren Trennschärfe, die auch durch noch so ausgedehnte Versuchspläne nicht durchbrochen werden kann.
 
 \begin{table}[htbp]
     \centering
@@ -240,9 +244,8 @@ Da diese Rausch- und Systemparameter bei \ac{EoL}-Versuchen zumeist feste Randbe
     \end{tabular}
 \end{table}
 
-Daraus resultiert eine fundamentale Konsequenz für die Versuchsökonomie: Wenn unvermeidbare Systemrestriktionen die Trennschärfe ohnehin deckeln, kompromittiert eine bewusste Ausdünnung der Stützstellen ($\symsub{xi_factor}{idx_fac_c}$, $\symsub{xi_factor}{idx_fac_d}$) die statistische Aussagekraft kaum.
-Tabelle~\ref{tab:impact_cd} quantifiziert diesen passiven „\textit{Design-Penalty}“ und belegt die immense Robustheit des \ac{CCD}-Skeletts:
-Die Reduktion redundanter Zentral- oder Sternpunkte verursacht bei Haupteffekten lediglich marginale Trennschärfe-Verluste (max. $-8{,}0\,\%$).
+Aus dieser Gegenüberstellung kristallisiert sich eine fundamentale Erkenntnis für die Versuchsökonomie heraus: Wenn die Nachweiswahrscheinlichkeit der linearen Haupteffekte ohnehin durch nicht-dispositive Systemrestriktionen limitiert wird, ist zu prüfen, ob eine gezielte Ausdünnung des Versuchsplans (Reduktion der Stützstellen $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$) die statistische Aussagekraft in der Praxis überhaupt signifikant kompromittiert.
+Tabelle~\ref{tab:impact_cd} quantifiziert diesen passiven „\textit{Design-Penalty}“.
 
 \begin{table}[htbp]
     \centering
@@ -270,11 +273,15 @@ Die Reduktion redundanter Zentral- oder Sternpunkte verursacht bei Haupteffekten
         \multicolumn{3}{l}{\footnotesize $^{**}$ Nicht auswertbar, da Singularität in quadratischem Term bei $\symsub{n}{idx_C}$.}
     \end{tabular}
 \end{table}
-Diese Ineffizienz klassischer Stützstellen für die reine Effektidentifikation erzeugt ein frei werdendes \textbf{geometrisches Gestaltungsbudget}.
-Gleichzeitig verdeutlichen beide Tabellen den signifikanten Schwachpunkt passiver Stützstellenreduktion: Quadratische Terme leiden massiv unter dem Verlust von Punkten (bis zu $-13{,}9\,\%$ bei $\sym{power}_{\sym{beta}_{11}}$), werden jedoch dominant durch die Geometrie des Sternpunktabstands ($\symsub{xi_factor}{idx_fac_a}$, $\sym{Eff}=3{,}72$) gesteuert.
-Hierin verbirgt sich die mathematische Rechtfertigung für die im weiteren Studienverlauf verfolgte Strategie der adaptiven Versuchsplanung: Das ungenutzte Gestaltungsbudget irrelevanter Stützstellen darf nicht passiv zur reinen Kostensenkung gestrichen werden.
-Es sollte vielmehr durch proaktive Design-Manipulationen (asymmetrische Ankerpunkte) umgewidmet werden.
-Nur so lässt sich der enorme geometrische Hebel nutzen, um die quadratische Modellkrümmung abzustützen und die Extrapolationsvarianz im Feldbereich gezielt zu minimieren.
+
+Die numerische Bilanzierung belegt eine erstaunliche Robustheit des \ac{CCD}-Skeletts: Der Verzicht auf redundante Zentralpunkte oder die Ausdünnung der Sternpunkte zieht für die Haupteffekte und Interaktionen lediglich einen marginalen Trennschärfe-Verlust nach sich (z.\,B. $\Delta \sym{power} = -2{,}4\,\%$ bis $-8{,}0\,\%$).
+Der signifikante Schwachpunkt dieser Reduktion entlädt sich fast ausschließlich in den quadratischen Termen (bis zu $-13{,}9\,\%$ Einbruch bei $\sym{power}_{\sym{beta}_{11}}$).
+
+Hierin verbirgt sich die zentrale mathematische Rechtfertigung für die im weiteren Studienverlauf verfolgte Strategie gezielter Design-Manipulationen:
+Einerseits zeigt Tabelle~\ref{tab:impact_cd}, dass die Reduktion klassischer Stützstellen die Detektion von Haupteffekten kaum gefährdet.
+Dies erzeugt ein ungenutztes \textbf{geometrisches Gestaltungsbudget}, da diese Punkte für die reine Effektidentifikation hochgradig ineffizient sind.
+Andererseits belegt Tabelle~\ref{tab:summary_power_sensitivity} eindrücklich, dass die Geometrie (speziell der Sternpunktabstand $\symsub{xi_factor}{idx_fac_a}$) mit einem herausragenden Index von $\sym{Eff}=3{,}72$ den massivsten Hebel auf exakt jene quadratischen Terme besitzt, die bei passiver Stützstellenreduktion am stärksten leiden.
+Dieses ungenutzte Budget sollte folglich nicht zur reinen Kostensenkung gestrichen, sondern durch proaktive Design-Manipulationen (asymmetrische Ankerpunkte) umgewidmet werden. Dies gilt umso mehr, als das physikalische Systemverhalten (Effektstärken und Rauschniveau) in realen \ac{ALT}-Szenarien naturgemäß als unveränderliche Randbedingung zu akzeptieren ist. Nur so lässt sich der enorme geometrische Hebel nutzen, um die quadratische Modellkrümmung abzustützen und die Extrapolationsvarianz im Feldbereich gezielt zu minimieren.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -290,7 +297,7 @@ Gleichzeitig eröffnet das Bewusstsein über die erstaunlich geringen \textit{De
 Wenn Design-Modifikationen die Effektivität des Nachweises ohnehin nur moderat beeinträchtigen, ist zu prüfen, inwiefern geometrische Manipulationen zur Kostenoptimierung, Prüfzeitverkürzung oder zur Vermeidung irrelevanter Ausfallmechanismen nicht sogar bewusst induziert werden sollten.
 
 Um diese singulären Praxisphänomene systematisch bewerten zu können, ist die kombinatorische Betrachtung des Meta-Designs aus dem vorherigen Abschnitt nicht mehr zielführend.
-Zwar ist der Parameterraum an denkbaren geometrischen Abweichungen und deren Kombinationen in der Realität nahezu unendlich und hochgradig abhängig von produktspezifischen, technologischen sowie modellspezifischen Randbedingungen. Ein allgemeingültiger, analytischer oder erschöpfend numerischer Beweis für sämtliche Permutationen ist folglich weder möglich noch methodisch erstrebenswert. 
+Zwar ist der Parameterraum an denkbaren geometrischen Abweichungen und deren Kombinationen in der Realität nahezu unendlich und hochgradig abhängig von produktspezifischen, technologischen sowie modellspezifischen Randbedingungen. Ein allgemeingültiger, analytischer oder erschöpfend numerischer Beweis für sämtliche Permutationen ist folglich weder möglich noch methodisch erstrebenswert.
 Der wissenschaftliche Anspruch an dieser Stelle liegt vielmehr darin, anhand isolierter, archetypischer Störfälle die fundamentalen Wirkmechanismen zwischen den objektiven Design-Metriken (Optimalitäten) und der resultierenden Trennschärfe aufzudecken.
 Aus dem Verständnis dieser kausalen Zusammenhänge lassen sich schließlich generalisierbare, methodische Anreize für die \textit{Entwicklung effizienter multivariater Lebensdauerversuche} ableiten.
 Dementsprechend werden basierend auf der Simulationsmethodik aus Abschnitt~\ref{subsec:simulationsmethodik} vier spezifische, voneinander isolierte Störszenarien definiert, welche typische Einzelrestriktionen in multivariaten Lebensdauerversuchen abbilden \cite{Arndt.2022,Mell.2022}:
