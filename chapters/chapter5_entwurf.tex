@@ -319,31 +319,35 @@ Dementsprechend werden basierend auf der Simulationsmethodik aus Abschnitt~\ref{
 \end{itemize}
 
 Wird als Vergleichsbasis zusätzlich zu den Design-Variationen aus den \textbf{Fällen I-IV} das standardmäßige \textit{Basis \ac{CCD}} berücksichtigt, ergeben sich insgesamt \textbf{neun} Szenarien.
-Für diese werden die Auswirkungen der Parameterschätzung und derjeweiligen Praxisrestriktion auf die Trennschärfe der Effekte isoliert quantifiziert und verglichen.
+Für diese werden die Auswirkungen der Parameterschätzung und der jeweiligen Praxisrestriktion auf die Trennschärfe der Effekte isoliert quantifiziert und verglichen.
 Während auch bei dieser isolierten Betrachtung der Erhalt der Trennschärfe ($\sym{power}$) die übergeordnete Rolle spielt, rückt hier zusätzlich die Schätzgüte der Modellparameter in den Fokus.
 Es gilt zu quantifizieren, inwiefern der Verlust der Orthogonalität - messbar über den globalen $\sym{A2}$-Indikator - zu Multikollinearität und folglich zu einer schädlichen Varianzinflation (\ac{VIF} beziehungsweise \ac{MSE}) oder gar zu systematischen Verzerrungen der Koeffizientenschätzung (\textit{Bias}) führt - vgl. Abschnitt~\ref{subsec:optimal}.
 Die analytische Differenzierung dieser Fehlerarten ist von entscheidender Bedeutung, da insbesondere ein signifikanter Bias die Validität der gesamten Lebensdauerprognose unbemerkt kompromittieren würde, während eine reine Varianzinflation primär die Konfidenzintervalle aufweitet.
 
 \subsubsection{Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}
-Wie in der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) dargelegt, konvergiert die Trennschärfe bei dominierenden physikalischen Effekten (hohes $\sym{snr} \gg 1$) in einen Sättigungsbereich nahe $100\,\%$.
-Unter solchen Idealbedingungen ist das Regressionsmodell derart robust, dass selbst signifikante geometrische Verzerrungen des Versuchsplans den Nachweis eines Effekts $\sym{Eff}$ kaum gefährden - für die Evaluation subtiler topologischer Schwachstellen ist ein solches Setup folglich nicht adäquat.
-In der Praxis der Zuverlässigkeitserprobung stellen diese dominanten Einflussgrößen ohnehin selten die primäre Herausforderung dar.
-Vielmehr gilt es, subtile Effekte, schwache Degradationserscheinungen und sensible Interaktionen zu identifizieren, die sich nur knapp vom Systemrauschen abheben.
-\colorbox{yellow}{Anmerkung zu Sensitivanalyse 0,8-1,2}
-Um den isolierten Einfluss von Orthogonalitätsabweichungen - den spezifischen \textit{Design-Penalty} - überhaupt quantifizierbar zu machen, muss die nachfolgende Simulation daher in einen kritischen Arbeitsbereich überführt werden.
-Hierfür wird das \textit{Ground-Truth}-Modell auf Basis der empirischen Erkenntnisse des vorangegangenen Screenings (vgl. Tabelle~\ref{tab:summary_power_sensitivity}) gezielt kalibriert.
-Da die Auswertung des Meta-Designs den dominanten Einfluss des Messrauschfaktors $\symsub{xi_factor}{idx_fac_g}$ auf fast alle relevanten Triebkräfte der Modell-Power ($\sym{Eff}=1{,}99$) nachweist, wird der stochastische Raum des Hauptmodells exakt am kritischen oberen Rand dieses untersuchten Intervalls verankert.
-Bei einer fixierten Standardabweichung der Systemantwort von $\sym{sigma} = 5{,}0$ wird das Signal-Rausch-Verhältnis für die kritischen Terme zweiter Ordnung auf $\sym{snr} = 1{,}20$ justiert.
-Zudem belegen die Screening-Ergebnisse für den Faktor des Effekt-Verhältnisses ($\symsub{xi_factor}{idx_fac_f}$), dass Verschiebungen der relativen Koeffizientenstärken zueinander die statistische Trennschärfe hochgradig sensitiv steuern ($\sym{Eff}=2{,}53$).
-Unter expliziter Berücksichtigung dieser Hebelwirkung und unter Vorgriff auf das werkstoffmechanisch fundamentierte \textit{Sparsity of Effects Principle} \cite{Montgomery.2020} wird die \textit{analytische Lupe} folglich asymmetrisch aufgeteilt:
-Die Interaktion sowie die quadratischen Krümmungseffekte werden exakt auf den sensiblen Schwellenwert von $|\sym{beta}_{11,22,12}| = 6{,}0$ ($\sym{snr} = 1{,}20$) gesetzt, während die linearen Haupteffekte proportional dominanter mit $\sym{beta}_{1,2} = 12{,}0$ ($\sym{snr} = 2{,}40$) einfließen, vergleiche Tabelle~\ref{tab:simulation_parameters_normal}.
-Der Durchschnittswert der Konstanten ($\sym{beta}_0 = 24{,}0$) wird so gewählt, dass die Systemantworten im empirisch relevanten Bereich von $[0; 50]$ liegen, um die praktische Relevanz der Ergebnisse zu gewährleisten.
-Die Wahl positiver Haupteffekte in Kombination mit negativen Termen zweiter Ordnung ist hierbei bewusst gewählt:
-Sie modelliert das in der \ac{RSM} klassische Verhalten eines zu maximierenden Leistungsoptimums (z.,B. Ausbeute oder Wirkungsgrad), welches durch Sättigungseffekte (Krümmung) und antagonistische Wechselwirkungen bei extremen Faktorkombinationen physikalisch begrenzt wird.
-Auf eine zusätzliche, rechenintensive Streuung der wahren Effektkoeffizienten ($\symsub{xi_factor}{idx_fac_e}$) wird im Weiteren bewusst verzichtet, da diese laut Sensitivitätsanalyse die Entdeckungswahrscheinlichkeit vergleichsweise marginal beeinflusst ($\sym{Eff}=0{,}52$) und die angestrebte Evaluation reiner geometrischer Design-Eigenschaften im Sinne eines \textit{Fixed-Effects}-Ansatzes mathematisch verzerren würde: vergleiche \textit{Random Effect Models} nach \textcite{Montgomery.2020,McCulloch.2001}.
-Diese Parametrisierung zwingt das ideale, orthogonale Referenz-Design für die Terme zweiter Ordnung exakt auf die steilste Flanke der sigmoidalen Trennschärfe-Funktion \cite{Cohen.1988,Montgomery.2020}, in der die Basis-Power im empirischen Bereich von rund $80\,\%$ liegt.
-Der künstliche Arbeitspunkt eliminiert jegliche Sättigungseffekte und stellt sicher, dass jede infolge von Orthogonalitäts-Verlust auftretende Varianzinflation (\ac{VIF}) unmittelbar als messbarer Trennschärfe-Verlust $\Delta \sym{power}$ sichtbar wird.
-Um hierbei rein stochastische Schwankungen zwischen den Design-Szenarien auszuschließen, wird der Monte-Carlo-Algorithmus mit statischer \textit{Seed}-Fixierung deterministisch initialisiert \cite{Zio.2013}.
+Wie in der vorangegangenen Sensitivitätsanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet}) dargelegt, konvergiert die Trennschärfe bei dominierenden physikalischen Effekten (hohes $\sym{snr} \gg 1$) in einen asymptotischen Sättigungsbereich nahe $100\,\%$.
+Unter derart idealen Bedingungen ist das Regressionsmodell so robust, dass selbst signifikante geometrische Verzerrungen des Versuchsplans den Nachweis eines Effekts kaum gefährden.
+Für die Evaluation subtiler topologischer Schwachstellen ist ein solches Setup folglich inadäquat.
+In der Praxis der Zuverlässigkeitserprobung stellen derart dominante Einflussgrößen ohnehin selten die primäre Herausforderung dar.
+Vielmehr gilt es zumeist, schwache Degradationserscheinungen und sensible Interaktionen zu identifizieren, die sich nur knapp vom Systemrauschen abheben.
+
+Um den isolierten Einfluss von Orthogonalitätsabweichungen - den spezifischen \textit{Design-Penalty} - überhaupt quantifizierbar zu machen, wird der Arbeitspunkt der Simulation gezielt in einen kritischen Bereich verschoben.
+Da die Auswertung des Meta-Designs dem Messrauschen ($\symsub{xi_factor}{idx_fac_g}$) einen dominierenden Einfluss auf die Modell-Power ($\sym{Eff}=1{,}99$) attestiert, wird das Basismodell am kritischen oberen Rand dieses Intervalls verankert:
+Bei einer fixierten Standardabweichung der Systemantwort von $\sym{sigma} = 5{,}0$ wird das Signal-Rausch-Verhältnis für die schätztechnisch anfälligen Terme zweiter Ordnung im Sinne des Arbeitsbereichs aus der Sensitivanalyse in Abschnitt~\ref{subsec:ergebnisse_sensitivitaet} auf exakt $\sym{snr} = 1{,}20$ justiert ($|\sym{beta}_{11}| = |\sym{beta}_{22}| = |\sym{beta}_{12}| = 6{,}0$).
+Diese Parametrisierung zwingt das ideale Referenz-Design für die quadratischen Effekte und Wechselwirkungen exakt auf die steilste Flanke der sigmoidalen Trennschärfe-Funktion \cite{Cohen.1988,Montgomery.2020}, woraus eine empirische Basis-Power von rund $70\,\%$ bis $80\,\%$ resultiert.
+
+Gleichzeitig belegen die Screening-Ergebnisse, dass das relative Effektstärke-Verhältnis ($\symsub{xi_factor}{idx_fac_f}$) die Trennschärfe hochgradig sensitiv steuert ($\sym{Eff}=2{,}53$).
+Unter Vorgriff auf das empirisch belegte \textit{Sparsity of Effects Principle} \cite{Montgomery.2020} wird die \textit{analytische Lupe} folglich hierarchisch asymmetrisch aufgeteilt:
+Während die Terme zweiter Ordnung den kritischen Schwellenwert definieren, fließen die linearen Haupteffekte proportional dominanter mit $\sym{beta}_1 = \sym{beta}_2 = 12{,}0$ ($\sym{snr} = 2{,}40$) in das Modell ein (vgl. Tabelle~\ref{tab:simulation_parameters_normal}).
+
+Der Durchschnittswert der Konstanten ($\sym{beta}_0 = 24{,}0$) hebt die Systemantworten hierbei in den anwendungsrelevanten positiven Bereich ($[0; 50]$).
+Die Wahl positiver Haupteffekte in Kombination mit negativen Krümmungstermen ist gezielt getroffen:
+Sie modelliert das in der \ac{RSM} klassische Verhalten eines zu maximierenden Leistungsoptimums (analog zur Zuverlässigkeitstechnik z.\,B. Ausbeute oder Wirkungsgrad), welches durch Sättigungseffekte und antagonistische Wechselwirkungen bei extremen Faktorkombinationen physikalisch begrenzt wird.
+Auf eine rechenintensive, stochastische Streuung der wahren Effektkoeffizienten (\textit{Random Effects}) wird im Weiteren bewusst verzichtet.
+Diese beeinflusst die Entdeckungswahrscheinlichkeit nur marginal ($\sym{Eff}=0{,}52$) und würde den Untersuchungsfokus unbegründet erweise in einen Random-Effects-Ansatz führen, der die angestrebte Evaluation rein geometrischer Design-Eigenschaften mathematisch verzerrt \cite{Montgomery.2020,McCulloch.2001}.
+
+In der Synthese eliminiert dieser künstliche, deterministisch initialisierte Arbeitspunkt \cite{Zio.2013} jegliche statistischen Sättigungseffekte.
+Er stellt sicher, dass jede durch Orthogonalitätsverlust induzierte Varianzinflation (\ac{VIF}) unmittelbar und unverfälscht als messbarer Trennschärfe-Einbruch ($\Delta \sym{power}$) sichtbar wird.
 
 \begin{table}[htbp]
     \centering
