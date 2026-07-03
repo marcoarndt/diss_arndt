@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+    \centering
+    \caption{Simulations\-ergebnisse: Schätzvarianz (\ac{MSE}) der einzelnen Koeffizienten bei $\sym{snr}=1$.}
+    \label{tab:results_ortho_mse}
+    \renewcommand{\arraystretch}{1.2}
+    \small
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l rrrrrr@{}}
+        \toprule
+        \textbf{Szenario (Störfall)} & \textbf{$\hat{\sym{beta}}_{0}$} & \textbf{$\hat{\sym{beta}}_{1}$} & \textbf{$\hat{\sym{beta}}_{2}$} & \textbf{$\hat{\sym{beta}}_{12}$} & \textbf{$\hat{\sym{beta}}_{11}$} & \textbf{$\hat{\sym{beta}}_{22}$} \\
+        \midrule
+        Referenz (Orthogonal) & $4{,}45$ & $4{,}46$ & $4{,}56$ & $8{,}89$ & $4{,}50$ & $4{,}47$ \\
+        Fall I: Shift ($-20\,\%$) & $4{,}39$ & $5{,}14$ & $4{,}53$ & $8{,}93$ & $5{,}97$ & $4{,}56$ \\
+        Fall I: Shift ($+20\,\%$) & $4{,}42$ & $4{,}23$ & $4{,}52$ & $9{,}17$ & $3{,}19$ & $4{,}41$ \\
+        Fall I: \ac{FC} & $4{,}40$ & $5{,}51$ & $4{,}46$ & $9{,}08$ & $6{,}64$ & $4{,}62$ \\
+        Fall II: Korrelation (leicht) & $4{,}41$ & $4{,}56$ & $4{,}42$ & $8{,}96$ & $4{,}51$ & $4{,}49$ \\
+        Fall II: Korrelation (stark) & $4{,}46$ & $5{,}17$ & $4{,}34$ & $7{,}51$ & $5{,}52$ & $4{,}95$ \\
+        Fall III: Scatter ($\pm 10\,\%$) & $4{,}37$ & $4{,}58$ & $4{,}30$ & $8{,}93$ & $4{,}71$ & $3{,}77$ \\
+        Fall IV: \ac{SP} & $4{,}58$ & $7{,}62$ & $4{,}42$ & $8{,}88$ & $7{,}87$ & $5{,}00$ \\
+        Fall IV: \ac{ZP} & $5{,}09$ & $4{,}44$ & $4{,}51$ & $9{,}05$ & $4{,}66$ & $4{,}68$ \\
+        \bottomrule
+    \end{tabular*}
+\end{table}

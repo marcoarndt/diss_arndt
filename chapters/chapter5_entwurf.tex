@@ -212,7 +212,7 @@ Diese pauschale Metrik verdeckt jedoch, dass das Verhalten spezifischer Einzel-E
 Wie Tabelle~\ref{tab:summary_power_sensitivity} zeigt, liegt die mittlere Trennschärfe für quadratische Terme ($\sym{power}_{\sym{beta}_{11}}, \sym{power}_{\sym{beta}_{22}}$) nur noch im Bereich von $70\,\%$ bis $79\,\%$.
 Auch die Trennschärfe der linearen Haupteffekte wird durch die Variation der Einflussgrößen maßgeblich gesteuert, was sich in einem breiten Wertebereich von $37{,}3\,\%$ bis $90{,}8\,\%$ widerspiegelt.
 Die entscheidende Erkenntnis liefert jedoch der Blick auf die \textbf{Sensitivitäts-Indizes} (Spalte „Dominante Sensitivität“).
-Für die Mehrheit der untersuchten Koeffizienten ($\sym{power}_{\sym{idx_M}}, \sym{power}_{\sym{beta}_1}, \sym{power}_{\sym{beta}_{12}}, \sym{power}_{\sym{beta}_{11}}$) ist nicht etwa eine unzureichende Versuchspunktanzahl der limitierende Faktor, sondern das \textbf{Effektstärke-Verhältnis ($\symsub{xi_factor}{idx_fac_f}$)} sowie das \textbf{Messrauschen ($\symsub{xi_factor}{idx_fac_g}$)}.
+Für die Mehrheit der untersuchten Koeffizienten ($\sym{power}_{\sym{idx_M}}$, $\sym{power}_{\sym{beta}_1}$, $\sym{power}_{\sym{beta}_{12}}$, $\sym{power}_{\sym{beta}_{11}}$) ist nicht etwa eine unzureichende Versuchspunktanzahl der limitierende Faktor, sondern das \textbf{Effektstärke-Verhältnis ($\symsub{xi_factor}{idx_fac_f}$)} sowie das \textbf{Messrauschen ($\symsub{xi_factor}{idx_fac_g}$)}.
 Mit einem Sensitivitätsindex von bis zu $\sym{Eff}=2{,}53$ dominiert das physikalische Systemverhalten die Erfolgswahrscheinlichkeit des Tests.
 Da das Rauschen sowie das Signifikanzniveau ($\symsub{xi_factor}{idx_fac_h}$) bei \ac{EoL}-Tests an bestehenden Prüfständen zumeist feste Randbedingungen darstellen, definieren sie eine natürliche Obergrenze der erreichbaren Trennschärfe, die auch durch noch so ausgedehnte Versuchspläne nicht durchbrochen werden kann.
 
@@ -365,23 +365,24 @@ Die Anwendung solch identischer Zufallszahlen (\textit{Common Random Numbers}) �
 
 \subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse}
 
-Die Auswertung der definierten Praxis-Szenarien am kalibrierten, kritischen Arbeitspunkt ($\sym{snr} = 1{,}20$) offenbart eine differenzierte Reaktion der klassischen Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}) und der algorithmischen Schätzgüte.
-Zur detaillierten Evaluation wird diese Schätzgüte nachfolgend auf Basis der kombinierten Schätzvarianz (\textit{\ac{VIF}} in Tabelle~\ref{tab:results_ortho_metrics} bzw. \textit{\ac{MSE}} in Tabelle~\ref{tab:results_ortho_mse} und Abbildung~\ref{fig:ma_abb5.1.4_msedev}), dem systematischen Schätzfehler (\textit{Bias} in Tabelle~\ref{tab:results_ortho_bias}) sowie dem resultierenden Trennschärfe-Verlust ($\Delta \sym{power}$ in Tabelle~\ref{tab:results_ortho_power}) aufgeschlüsselt.
+Die Auswertung der definierten Praxis-Szenarien (\textbf{Fälle I-IV}) am kalibrierten, kritischen Arbeitspunkt ($\sym{snr} = 1{,}20$) offenbart eine differenzierte Reaktion der klassischen Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}) und der numerisch ermittelten Schätzgüte.
+Zur detaillierten Evaluation wird diese Schätzgüte nachfolgend auf Basis der kombinierten Schätzvarianz (\textit{\ac{VIF}} in Tabelle~\ref{tab:results_ortho_metrics} bzw. \textit{\ac{MSE}} in Tabelle~\ref{tab:results_ortho_mse} und Abbildung~\ref{fig:ma_abb5.1.4_msedev}), dem systematischen Schätzfehler (\textit{Bias} in Tabelle~\ref{tab:results_ortho_bias}) sowie der resultierenden Trennschärfe-Variation ($\Delta \sym{power}$ in Tabelle~\ref{tab:results_ortho_power}) aufgeschlüsselt.
 
 Ein erster Blick auf die topologischen und informationsbasierten Metriken aus Tabelle~\ref{tab:results_ortho_metrics} offenbart physikalisch wie geometrisch plausible Muster:
 \begin{itemize}
     \item \textbf{Volumeneffekte und Prädiktionsgüte:} Kriterien wie die \textit{I-} und \textit{D-Effizienz} skalieren direkt mit der räumlichen Ausdehnung des Versuchsraums.
-          So erzielt der nach außen gestreckte Shift (\textit{Fall I}, $+20\,\%$) Bestwerte in der integrierten Prädiktionsvarianz ($\sym{eff_I}=85{,}1\,\%$).
+          So erzielt der nach außen gestreckte Shift (\textit{Fall I}, $+20\,\%$) Bestwerte in der integrierten Prädiktionsvarianz mit $\sym{eff_I}=85{,}1\,\%$ (Tabelle~\ref{tab:results_ortho_metrics}).
           Demgegenüber provozieren ungeplante Ausfälle periphere Informationsverluste.
           Bemerkenswert ist hierbei jedoch die topologische Sensitivität: Während der asymmetrische Entfall eines extremen Sternpunktes (\textit{Fall IV: \ac{SP}}) einen signifikanten Kollaps der \textit{I}-Effizienz auf $\sym{eff_I}=69{,}0\,\%$ provoziert, dämpft der Ausfall eines redundanten Zentralpunktes (\textit{Fall IV: \ac{ZP}}) die Vorhersagegüte keineswegs.
           Vielmehr steigt die \ac{SPV}-normierte $\sym{eff_I}$ aufgrund des reduzierten Stichprobenumfangs $\sym{N}$ rechnerisch sogar leicht auf $85{,}7\,\%$ an.
-          Dies belegt eindrücklich die statistische Ineffizienz reiner Basis-Zentralpunkte für den Bereich der fernen Extrapolation.
 
     \item \textbf{Topologische Warnsignale und blinde Flecken:} Eine starke \textit{co-faktorielle Korrelation} (\textit{Fall II, stark}) erzeugt einen statistischen blinden Fleck.
           Obwohl das globale Design-Volumen bei dieser Modifikation weitestgehend erhalten bleibt, schießt der $\sym{A2}$-Indikator als Maß für die Nicht-Orthogonalität auf seinen Spitzenwert von $0{,}352$.
           Die durch die parasitäre Abhängigkeit entstehenden Lücken im Parameterraum bestraft die an \textit{Worst-Case}-Szenarien orientierte \textit{G-Effizienz} mit einem drastischen Einbruch, während sich der Informationsverlust term-spezifisch auf die betroffenen Koeffizienten verlagert.
 
-    \item \textbf{Geometrische Selektivität der Varianzinflation:} Der \ac{VIF} bildet den Orthogonalitätsverlust nicht global, sondern hochgradig \textit{term-spezifisch} ab. Beim asymmetrischen Sternpunkt-Ausfall (\textit{Fall IV: \ac{SP}}) greift die stringente Mathematik der isolierten Achsen: Da der zensierte \ac{SP} exakt auf der $\sym{x}_1$-Achse liegt, leiden ausschließlich der zugehörige Haupteffekt $\hat{\sym{beta}}_1$ sowie die Krümmung $\hat{\sym{beta}}_{11}$ unter spürbarer Varianzinflation. Die orthogonal dazu stehende $\sym{x}_2$-Achse bleibt von diesem topologischen Bruch vollkommen isoliert und unbeschadet.
+    \item \textbf{Geometrische Selektivität der Varianzinflation:} Der \ac{VIF} bildet den Orthogonalitätsverlust nicht global, sondern hochgradig \textit{term-spezifisch} ab.
+          Beim asymmetrischen Sternpunkt-Ausfall (\textit{Fall IV: \ac{SP}}) greift die stringente Mathematik der isolierten Achsen: Da der zensierte \ac{SP} exakt auf der $\sym{x}_1$-Achse liegt, leiden ausschließlich der zugehörige Haupteffekt $\hat{\sym{beta}}_1$ sowie der quadratische Term $\hat{\sym{beta}}_{11}$ unter spürbarer Varianzinflation.
+          Die orthogonal dazu stehende $\sym{x}_2$-Achse bleibt von diesem topologischen Bruch vollkommen isoliert und unbeschadet.
 \end{itemize}
 
 \input{tables/tab_results_ortho_metrics.tex}

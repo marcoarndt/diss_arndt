@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  2 JUL 2026 00:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  3 JUL 2026 23:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1787,20 +1787,20 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--192
+Underfull \hbox (badness 10000) in paragraph at lines 193--193
 []|\T1/qpl/m/n/12 (+10) Orthogonale Pro-jek-ti-ons-ma-trix, Prä-dik-ti-ons-ma-trix, Hat-
  []
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 371.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 373.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 2173) in paragraph at lines 543--543
+Underfull \hbox (badness 2173) in paragraph at lines 544--544
 []|\T1/qpl/m/n/12 (+10) Standardisierte Va-ria-ble der Kleinst-wert-ver-tei-lung (SEV);
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--544
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--545
  [] [] 
  []
 
@@ -2399,11 +2399,6 @@ Underfull \hbox (badness 5878) in paragraph at lines 179--181
 [81]
 
 [82]
-Overfull \hbox (86.15681pt too wide) in paragraph at lines 210--218
-\T1/qpl/m/n/12 (-10) Sen-si-ti-vi-tät^^P). Für die Mehr-heit der un-ter-such-ten Ko-ef-fi-zi-en-ten ($[][][][][][][][]\OT1/pplx/m/n/12 , [][][][][][][][], [][][][][][][][], [][][][][][][][]$\T1/qpl/m/n/12 (-10) )
- []
-
-
 Overfull \hbox (3.14476pt too wide) in paragraph at lines 277--279
 []\T1/qpl/m/n/12 (-10) Die nu-me-ri-sche Bi-lan-zie-rung be-legt ei-ne er-staun-li-che Ro-bust-heit des [][][]CCD[][]-Skeletts:
  []
@@ -2445,20 +2440,24 @@ Underfull \hbox (badness 1194) in paragraph at lines 353--353
 
 
 [90]
-Overfull \hbox (1.48975pt too wide) in paragraph at lines 380--383
+Overfull \hbox (1.48975pt too wide) in paragraph at lines 379--382
 \T1/qpl/m/n/12 (-10) zen-wert von $\OT1/pplx/m/n/12 0[]352$\T1/qpl/m/n/12 (-10) . Die durch die pa-ra-si-täre Ab-hän-gig-keit ent-ste-hen-den Lücken
  []
 
 
 
-[91] (tables/tab_results_ortho_metrics.tex) (plots/ma_abb5.1.4_msedev.tex)
+[91] (tables/tab_results_ortho_metrics.tex)
 
-[92] (tables/tab_results_ortho_bias.tex) (plots/ma_abb5.1.4_betadev.tex)
-Overfull \hbox (5.9615pt too wide) in paragraph at lines 154--417
+[92] (plots/ma_abb5.1.4_msedev.tex) (tables/tab_results_ortho_bias.tex) (plots/ma_abb5.1.4_betadev.tex)
+Overfull \hbox (5.9615pt too wide) in paragraph at lines 154--418
  [][] 
  []
 
-(plots/ma_abb5.1.4_betakonv.tex) (tables/tab_results_ortho_power.tex
+(plots/ma_abb5.1.4_betakonv.tex)
+
+[93]
+
+[94] (tables/tab_results_ortho_power.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 [][][]|\T1/qpl/m/n/12 (+10) Simulations-ergebnisse: Durch-schnitt-li-cher Trenn-schärfe-Verlust
  []
@@ -2468,25 +2467,21 @@ Underfull \hbox (badness 1259) in paragraph at lines 3--3
 \T1/qpl/m/n/12 (+10) in-di-ziert einen Ver-lust, ein po-si-ti-ves Vor-zei-chen einen Ge-winn an
  []
 
+)
 
-
-[93]
-
-[94]) (plots/ma_abb5.1.4_powerdev.tex)
-Overfull \hbox (1.9966pt too wide) in paragraph at lines 244--446
+[95] (plots/ma_abb5.1.4_powerdev.tex)
+Overfull \hbox (1.9966pt too wide) in paragraph at lines 244--447
  [][] 
  []
 
-
-
-[95]
-
-[96] (plots/ma_abb5.1.4_powerkonv.tex) (plots/ma_abb5.1.4_phisto.tex)
-Overfull \hbox (3.4216pt too wide) in paragraph at lines 470--473
+(plots/ma_abb5.1.4_powerkonv.tex) (plots/ma_abb5.1.4_phisto.tex)
+Overfull \hbox (3.4216pt too wide) in paragraph at lines 471--474
 []\T1/qpl/m/n/12 (-10) Zur ab-schlie-ÿen-den Syn-the-se wird die Kor-re-la-ti-on zwi-schen den sta-ti-schen Design-
  []
 
 
+
+[96]
 
 [97] (plots/ma_abb5.1.4_korrelation.tex)
 
@@ -2499,21 +2494,21 @@ Overfull \hbox (3.4216pt too wide) in paragraph at lines 470--473
 [101]
 
 [102] (plots/ma_abb5.2.1_fds_nc.tex) (plots/ma_abb5.2.1_vdg_nc.tex)
-Overfull \hbox (2.0235pt too wide) in paragraph at lines 207--578
+Overfull \hbox (2.0235pt too wide) in paragraph at lines 207--579
  [][] 
  []
 
 
 
 [103] (plots/ma_abb5.2.1_fds_omitted.tex) (plots/ma_abb5.2.1_vdg_omitted.tex)
-Overfull \hbox (2.0235pt too wide) in paragraph at lines 261--611
+Overfull \hbox (2.0235pt too wide) in paragraph at lines 261--612
  [][] 
  []
 
-<plots/ma_abb5.2.1_contour_spv.pdf, id=4689, 307.1475pt x 226.8475pt>
+<plots/ma_abb5.2.1_contour_spv.pdf, id=4690, 307.1475pt x 226.8475pt>
 File: plots/ma_abb5.2.1_contour_spv.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.1_contour_spv.pdf>
-Package pdftex.def Info: plots/ma_abb5.2.1_contour_spv.pdf  used on input line 622.
+Package pdftex.def Info: plots/ma_abb5.2.1_contour_spv.pdf  used on input line 623.
 (pdftex.def)             Requested size: 304.72772pt x 225.07469pt.
 
 
@@ -2522,20 +2517,20 @@ Package pdftex.def Info: plots/ma_abb5.2.1_contour_spv.pdf  used on input line 6
 [105 <./plots/ma_abb5.2.1_contour_spv.pdf>]
 
 [106]
-<plots/ma_abb5.2.2_exposure_scatter.pdf, id=4818, 261.97874pt x 261.97874pt>
+<plots/ma_abb5.2.2_exposure_scatter.pdf, id=4819, 261.97874pt x 261.97874pt>
 File: plots/ma_abb5.2.2_exposure_scatter.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.2_exposure_scatter.pdf>
-Package pdftex.def Info: plots/ma_abb5.2.2_exposure_scatter.pdf  used on input line 668.
+Package pdftex.def Info: plots/ma_abb5.2.2_exposure_scatter.pdf  used on input line 669.
 (pdftex.def)             Requested size: 261.19899pt x 261.20659pt.
 
 
 [107]
 
 [108 <./plots/ma_abb5.2.2_exposure_scatter.pdf>]
-<plots/ma_abb5.2.2_contour.pdf, id=4870, 349.305pt x 271.0125pt>
+<plots/ma_abb5.2.2_contour.pdf, id=4871, 349.305pt x 271.0125pt>
 File: plots/ma_abb5.2.2_contour.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.2_contour.pdf>
-Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 677.
+Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 678.
 (pdftex.def)             Requested size: 348.2631pt x 270.21783pt.
 
 
@@ -2545,22 +2540,22 @@ Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 677.
 
 [111] (tables/tab_results_emalt_metrics.tex)
 
-LaTeX Warning: Reference `tab:results_emalt_mse' on page 112 undefined on input line 745.
+LaTeX Warning: Reference `tab:results_emalt_mse' on page 112 undefined on input line 746.
 
 
 
 [112]
-Overfull \hbox (12.7564pt too wide) in paragraph at lines 751--752
+Overfull \hbox (12.7564pt too wide) in paragraph at lines 752--753
 \T1/qpl/m/n/12 (-10) weit un-ter $\OT1/pplx/m/n/12 1 %$\T1/qpl/m/n/12 (-10) . Die Er-war-tungs-treue des Mo-dells bleibt durch die EmALT-Modifikation
  []
 
 (tables/tab_results_emalt_bias.tex) (plots/ma_abb5.4.1_betadev.tex) (plots/ma_abb5.4.1_phisto_all.tex)
-Overfull \hbox (14.32967pt too wide) in paragraph at lines 181--769
+Overfull \hbox (14.32967pt too wide) in paragraph at lines 181--770
  [][] 
  []
 
 
-LaTeX Warning: Reference `tab:results_emalt_power' on page 113 undefined on input line 776.
+LaTeX Warning: Reference `tab:results_emalt_power' on page 113 undefined on input line 777.
 
 
 
@@ -2569,13 +2564,13 @@ LaTeX Warning: Reference `tab:results_emalt_power' on page 113 undefined on inpu
 [114]
 
 [115]
-Overfull \hbox (7.31555pt too wide) in paragraph at lines 800--801
+Overfull \hbox (7.31555pt too wide) in paragraph at lines 801--802
 []\T1/qpl/m/n/12 (-10) Überprüfung von Power und Bi-as für den mo-di-fi-zier-ten Plan (PSAM17/ASRAM
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cgls' on input line 806.
+(hyperref)                removing `\cgls' on input line 807.
 
 
 
@@ -2585,30 +2580,30 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [118] (tables/tab_results_emalt_wbl_bias.tex)
 
-LaTeX Warning: Reference `fig:ma_abb5.4.1_betadev_wbl' on page 119 undefined on input line 869.
+LaTeX Warning: Reference `fig:ma_abb5.4.1_betadev_wbl' on page 119 undefined on input line 870.
 
 
-LaTeX Warning: Reference `fig:ma_abb5.4.1_phisto_all_wbl' on page 119 undefined on input line 869.
+LaTeX Warning: Reference `fig:ma_abb5.4.1_phisto_all_wbl' on page 119 undefined on input line 870.
 
 (plots/ma_abb5.4.2_betadev_wbl.tex)
 
 [119] (plots/ma_abb5.4.2_phisto_all_wbl.tex)
-Overfull \hbox (14.32967pt too wide) in paragraph at lines 71--885
+Overfull \hbox (14.32967pt too wide) in paragraph at lines 71--886
  [][] 
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 885--885
+Underfull \hbox (badness 4001) in paragraph at lines 886--886
 [][][]|\T1/qpl/m/n/12 (+10) Re-la-ti-ve Häu-fig-keits-ver-tei-lung der p-Werte (Weibull-Modell),
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 885--885
+Underfull \hbox (badness 1194) in paragraph at lines 886--886
 \T1/qpl/m/n/12 (+10) wel-che die nu-me-ri-sche Kon-ver-genz und Ro-bust-heit der [][][]MLE[][]-
  []
 
 
-LaTeX Warning: Reference `fig:ma_abb5.4.1_powerdev_wbl' on page 120 undefined on input line 891.
+LaTeX Warning: Reference `fig:ma_abb5.4.1_powerdev_wbl' on page 120 undefined on input line 892.
 
 
 
@@ -2718,7 +2713,12 @@ Overfull \hbox (27.99475pt too wide) in paragraph at lines 567--567
 
 [150]
 
-[151] (chapters/anhang/anhangc/anhangc.tex (tables/tab_results_ortho_mse.tex) (plots/ma_abb_app.c_betadev_snr1.tex) (plots/ma_abb_app.c_convergence_power.tex) (plots/ma_abb_app.c_convergence_beta.tex) (plots/ma_abb_app.c_pvalue_hist.tex) (plots/ma_abb_app.c_korrelation_all.tex)
+[151] (chapters/anhang/anhangc/anhangc.tex (tables/tab_results_ortho_mse_snr1.tex) (plots/ma_abb5.1.4_betadev_snr1.tex)
+Overfull \hbox (5.9615pt too wide) in paragraph at lines 154--17
+ [][] 
+ []
+
+(plots/ma_abb_app.c_convergence_power_snr1.tex) (plots/ma_abb_app.c_convergence_beta.tex) (plots/ma_abb_app.c_pvalue_hist.tex) (plots/ma_abb_app.c_korrelation_all.tex)
 
 LaTeX Warning: Float too large for page by 33.27924pt on input line 56.
 
@@ -2752,7 +2752,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 59.
 
-(plots/ma_abb_app.c_msedev_snr1.tex) (plots/ma_abb_app.c_powerdev_snr1.tex))
+(plots/ma_abb5.1.4_msedev_snr1.tex) (plots/ma_abb5.1.4_powerdev_snr1.tex)
+Overfull \hbox (1.9966pt too wide) in paragraph at lines 244--75
+ [][] 
+ []
+
+)
 
 [157
 
@@ -2772,17 +2777,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 78260 strings out of 473577
- 1810388 string characters out of 5716318
- 4027379 words of memory out of 5000000
- 99050 multiletter control sequences out of 15000+600000
+ 78274 strings out of 473577
+ 1810728 string characters out of 5716318
+ 4034369 words of memory out of 5000000
+ 99064 multiletter control sequences out of 15000+600000
  755295 words of font info for 443 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,26n,121p,10968b,3730s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (185 pages, 3192437 bytes).
+Output written on diss_arndt.pdf (185 pages, 3205651 bytes).
 PDF statistics:
- 6431 PDF objects out of 7423 (max. 8388607)
+ 6432 PDF objects out of 7423 (max. 8388607)
  831 named destinations out of 1000 (max. 500000)
  97523 words of extra memory for PDF output out of 106986 (max. 10000000)
 
