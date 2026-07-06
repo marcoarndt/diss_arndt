@@ -15,7 +15,7 @@ xmax=6.46,
 xtick={1.00,2.00,3.00,4.00,5.00,6.00},
 xticklabels={{$\sym{beta}_0$},{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
 ymin=0.00,
-ymax=10.00,
+ymax=7.00,
 ylabel style={font=\color{mycolor1}},
 ylabel={\sym{mse}},
 axis background/.style={fill=white},
@@ -25,12 +25,12 @@ grid style={dotted, opacity=0.25},
 legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left}
 ]
 \addplot[ybar, bar width=0.071, fill=white!10!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	4.45\\
-2.00	4.46\\
-3.00	4.56\\
-4.00	8.89\\
-5.00	4.50\\
-6.00	4.47\\
+1.00	3.09\\
+2.00	3.10\\
+3.00	3.17\\
+4.00	6.17\\
+5.00	3.13\\
+6.00	3.11\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.54	0.00\\
@@ -39,12 +39,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Basis \ac{CCD}}
 
 \addplot[ybar, bar width=0.071, fill=black!25!darkgray, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	4.39\\
-2.00	5.14\\
-3.00	4.53\\
-4.00	8.93\\
-5.00	5.97\\
-6.00	4.56\\
+1.00	3.05\\
+2.00	3.57\\
+3.00	3.15\\
+4.00	6.20\\
+5.00	4.15\\
+6.00	3.17\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.54	0.00\\
@@ -53,12 +53,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall I ($-20\,\%$)}
 
 \addplot[ybar, bar width=0.071, fill=black!45!gray, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	4.42\\
-2.00	4.23\\
-3.00	4.52\\
-4.00	9.17\\
-5.00	3.19\\
-6.00	4.41\\
+1.00	3.07\\
+2.00	2.94\\
+3.00	3.14\\
+4.00	6.37\\
+5.00	2.21\\
+6.00	3.06\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.54	0.00\\
@@ -67,12 +67,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall I ($+20\,\%$)}
 
 \addplot[ybar, bar width=0.071, fill=white!15!darkgray, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	4.40\\
-2.00	5.51\\
-3.00	4.46\\
-4.00	9.08\\
-5.00	6.64\\
-6.00	4.62\\
+1.00	3.06\\
+2.00	3.82\\
+3.00	3.10\\
+4.00	6.30\\
+5.00	4.61\\
+6.00	3.21\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.54	0.00\\
@@ -81,12 +81,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall I (\ac{FC})}
 
 \addplot[ybar, bar width=0.071, fill=white!45!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	4.41\\
-2.00	4.56\\
-3.00	4.42\\
-4.00	8.96\\
-5.00	4.51\\
-6.00	4.49\\
+1.00	3.06\\
+2.00	3.17\\
+3.00	3.07\\
+4.00	6.22\\
+5.00	3.13\\
+6.00	3.12\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.54	0.00\\
@@ -95,12 +95,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall II (leicht)}
 
 \addplot[ybar, bar width=0.071, fill=gray!85!lightgray, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	4.46\\
-2.00	5.17\\
-3.00	4.34\\
-4.00	7.51\\
-5.00	5.52\\
-6.00	4.95\\
+1.00	3.10\\
+2.00	3.59\\
+3.00	3.01\\
+4.00	5.21\\
+5.00	3.83\\
+6.00	3.44\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.54	0.00\\
@@ -109,12 +109,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall II (stark)}
 
 \addplot[ybar, bar width=0.071, fill=white!50!darkgray, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	4.37\\
-2.00	4.58\\
-3.00	4.30\\
-4.00	8.93\\
-5.00	4.71\\
-6.00	3.77\\
+1.00	3.04\\
+2.00	3.18\\
+3.00	2.98\\
+4.00	6.20\\
+5.00	3.27\\
+6.00	2.62\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.54	0.00\\
@@ -123,12 +123,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall III}
 
 \addplot[ybar, bar width=0.071, fill=black!5!lightgray, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	4.58\\
-2.00	7.62\\
-3.00	4.42\\
-4.00	8.88\\
-5.00	7.87\\
-6.00	5.00\\
+1.00	3.18\\
+2.00	5.29\\
+3.00	3.07\\
+4.00	6.17\\
+5.00	5.46\\
+6.00	3.47\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.54	0.00\\
@@ -137,12 +137,12 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 \addlegendentry{Fall IV: \ac{SP}}
 
 \addplot[ybar, bar width=0.071, fill=white!80!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	5.09\\
-2.00	4.44\\
-3.00	4.51\\
-4.00	9.05\\
-5.00	4.66\\
-6.00	4.68\\
+1.00	3.53\\
+2.00	3.09\\
+3.00	3.13\\
+4.00	6.29\\
+5.00	3.24\\
+6.00	3.25\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.54	0.00\\
