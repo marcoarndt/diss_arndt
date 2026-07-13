@@ -94,7 +94,7 @@ So wird gewährleistet, dass später beobachtete Schätzfehler oder $\sym{power}
 \textbf{Simulationsalgorithmus und Monte-Carlo-Ansatz} \\
 Das Modell der \textit{Ground Truth} wird zunächst mit den zu untersuchenden Versuchsplänen gekoppelt.
 Für jeden Stützpunkt des Versuchsplans (die Versuchspunkte) werden die korrespondierenden Systemantworten simuliert.
-Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels Parameterschätzverfahren (\ac{OLS},\ac{MLE}), entsprechend der ausgeführten Methodik aus Abschnitt~\ref{subsubsec:mle}.
+Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels Parameterschätzverfahren (\ac{OLS}, \ac{MLE}), entsprechend der ausgeführten Methodik aus Abschnitt~\ref{subsubsec:mle}.
 Um statistisch belastbare Aussagen zu treffen und \textbf{epistemische Unsicherheiten} auf einen minimalen numerischen Approximationsfehler zu reduzieren, wird das Verfahren in eine \ac{MCS} mit $\symsub{n}{idx_MC} = 1\times10^4$ Iterationen eingebettet - vergleiche Abschnitt~\ref{subsec:optimal} für entsprechende Hintergründe.
 Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
 \begin{enumerate}
@@ -375,7 +375,7 @@ Ein erster Blick auf die topologischen und informationsbasierten Metriken aus Ta
           Demgegenüber provozieren ungeplante Ausfälle periphere Informationsverluste.
           Bemerkenswert ist hierbei jedoch die topologische Sensitivität: Während der asymmetrische Entfall eines extremen Sternpunktes (\textit{Fall IV: \ac{SP}}) einen signifikanten Kollaps der \textit{I}-Effizienz auf $\sym{eff_I}=69{,}0\,\%$ provoziert, dämpft der Ausfall eines redundanten Zentralpunktes (\textit{Fall IV: \ac{ZP}}) die Vorhersagegüte keineswegs.
           Vielmehr steigt die \ac{SPV}-normierte $\sym{eff_I}$ aufgrund des reduzierten Stichprobenumfangs $\sym{N}$ rechnerisch sogar leicht auf $85{,}7\,\%$ an.
-          Dies belegt eindrücklich die statistische Ineffizienz reiner Basis-Zentrumspunkte für den Bereich der fernen Extrapolation.
+          Dies belegt eindrücklich die statistische Ineffizienz reiner Basis-\acp{ZP} für den Bereich der fernen Extrapolation.
 
     \item \textbf{Topologische Warnsignale und blinde Flecken:} Eine starke \textit{co-faktorielle Korrelation} (\textit{Fall II, stark}) erzeugt einen statistischen blinden Fleck.
           Obwohl das globale Design-Volumen bei dieser Modifikation weitestgehend erhalten bleibt, schießt der $\sym{A2}$-Indikator als Maß für die Nicht-Orthogonalität auf seinen Spitzenwert von $0{,}352$.
@@ -440,11 +440,13 @@ Es resultiert folgendes praxisrelevantes Bild:
 \input{tables/tab_results_ortho_power.tex}
 
 \begin{enumerate}
-    \item \textbf{Gutmütige Restriktionen (Scatter, \ac{ZP} und \ac{FC}):} Eine ungenaue, stochastisch verzerrte Ansteuerung der Nenn-Koordinaten (\textit{Fall III}) sowie der ungeplante Entfall eines Zentralpunktes (\textit{Fall IV: \ac{ZP}}) erzeugen kaum messbare Leistungseinbußen.
-          Ihr punktueller Trennschärfe-Verlust liegt zumeist auf dem Niveau des numerischen Rauschens ($\le 1{,}3$ Prozentpunkte).
-          Selbst das bewusste Zurückziehen aller \acp{SP} auf das physikalische Randniveau der Faktoren (\textit{\ac{FC}}, \textit{Fall I}) generiert in der Spitze lediglich einen Detektionsverlust von $6{,}6$ Prozentpunkten bei den quadratischen Termen, belässt die Haupt- und Interaktionseffekte jedoch nahezu unbeeindruckt.
-    \item \textbf{Kritische Restriktionen (Asymmetrischer Ausfall):} Der vollständige Entfall eines randlichen Sternpunktes (\textit{Fall IV: \ac{SP}}) führt unweigerlich zu den gravierendsten Schäden.
-          Die Varianzerhöhung an den Rändern des Parameterraums resultiert im stärksten Einbruch der Trennschärfe, welcher sich mit $10{,}6$ Prozentpunkten bei $\hat{\sym{beta}}_{11}$ sowie $4{,}4$ Prozentpunkten bei $\hat{\sym{beta}}_1$ exakt in jener Achse manifestiert, die vom Ausfall isoliert betroffen ist.
+    \item \textbf{Gutmütige Restriktionen (Scatter und \ac{ZP}):} Eine ungenaue, stochastisch verzerrte Ansteuerung der Nenn-Koordinaten (\textit{Fall III}) sowie der ungeplante Entfall eines Zentralpunktes (\textit{Fall IV: \ac{ZP}}) erzeugen kaum messbare Leistungseinbußen über alle Koeffizienten hinweg.
+          Der punktuelle Trennschärfe-Verlust verbleibt hier zumeist auf dem Niveau des numerischen Rauschens ($\le 1{,}3$ Prozentpunkte).
+    \item \textbf{Kritische Restriktionen für Terme höherer Ordnung (\ac{FC} und asymmetrischer Ausfall):} Sobald die periphere Geometrie des Versuchsraums kompromittiert wird, leiden die quadratischen Terme signifikant.
+          Selbst das noch symmetrische Zurückziehen aller \acp{SP} auf das physikalische Randniveau der Faktoren (\textit{\ac{FC}}, \textit{Fall I}) generiert bereits einen Detektionsverlust von $6{,}7$ Prozentpunkten der absoluten $\sym{power}$ bei den quadratischen Termen, wenngleich es die Haupt- und Interaktionseffekte nahezu unbeeindruckt belässt.
+          Der vollständige, asymmetrische Entfall eines Sternpunktes (\textit{Fall IV: \ac{SP}}) führt unweigerlich zu den gravierendsten Schäden in den isolierten Störszenarien.
+          Die Varianzerhöhung an den Rändern des Parameterraums resultiert im stärksten Einbruch, welcher spezifisch zur Dimension $\hat{\sym{beta}}_{11}$ einen Verlust von $10{,}6$ Trennschärfe-Punkten sowie $\hat{\sym{beta}}_1$ einen Abzug von $4{,}4$ Prozentpunkten kostet.
+          Dies korrespondiert konsistent mit der bereits in Tabelle~\ref{tab:impact_cd} nachgewiesenen Sensitivität: Eine systematische Ausdünnung peripherer Stützstellen provoziert primär bei den Krümmungseffekten (bis zu $13{,}9$ Prozentpunkte Verlust) einen fundamentalen Zusammenbruch der Detektionswahrscheinlichkeit.
 \end{enumerate}
 
 \begin{figure}[htbp]
@@ -452,12 +454,12 @@ Es resultiert folgendes praxisrelevantes Bild:
     \setlength\figurewidth{0.9\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.1.4_powerdev.tex}
-    \caption{Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der simulierten Störszenarien ($\sym{snr}=1{,}20$). Bei Erhalt der Basissymmetrie bleiben die \sym{power}-Verluste bemerkenswert gering.}
+    \caption{Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der simulierten Störszenarien ($\sym{snr}=1{,}20$).}
     \label{fig:ma_abb5.1.4_powerdev}
 \end{figure}
 
 Zur Verifikation der methodischen Transparenz ist das korrespondierende numerische Konvergenzverhalten der empirischen Trennschärfe über die Simulationsläufe - wiederum exemplarisch für $\sym{beta}_2$ - in Abbildung~\ref{fig:ma_abb5.1.4_powerkonv} dokumentiert.
-Flankierend sind die resultierenden Wahrscheinlichkeitsdichten der Signifikanztests (\sym{p-Wert}) für alle Fälle in Abbildung~\ref{fig:ma_abb5.1.4_phisto} grafisch aufbereitet.
+Ergänzend sind die resultierenden Wahrscheinlichkeitsdichten der Signifikanztests (\sym{p-Wert}) für alle Fälle in Abbildung~\ref{fig:ma_abb5.1.4_phisto} grafisch aufbereitet.
 
 \begin{figure}[htbp]
     \centering
@@ -480,7 +482,7 @@ Flankierend sind die resultierenden Wahrscheinlichkeitsdichten der Signifikanzte
 Zur abschließenden Synthese wird die Korrelation zwischen den \textit{a priori} Design-Metriken und dem dynamisch simulierten Trennschärfe-Verlust ($\Delta \sym{power}$) analysiert.
 Explizit herangezogen werden hierfür der topologische Indikator $\sym{A2}$, die prädiktive $\sym{eff_I}$ sowie die koeffizienten-spezifische Schätzvarianz $\ac{MSE}$.
 Metriken wie der Bias scheiden aufgrund ihrer nachgewiesenen Unempfindlichkeit als Prädiktoren aus.
-Die D-Optimalität bleibt ebenfalls unberücksichtigt, da sie als reines Volumenmaß die entscheidende interne Strukturverschiebung (Varianz-Hebelwirkung) unzureichend abbildet.
+Die \textit{D}-Optimalität bleibt ebenfalls unberücksichtigt, da sie als reines Volumenmaß die entscheidende interne Strukturverschiebung (Varianz-Hebelwirkung) unzureichend abbildet.
 
 Abbildung~\ref{fig:ma_abb5.1.4_korrelation} fasst diese korrelativen Zusammenhänge zusammen.
 Während der rein algebraische $\sym{A2}$-Indikator aufgrund der oftmals nichtlinearen Klippeneffekte von Trennschärfe-Verlusten nur ein extrem schwaches Bestimmtheitsmaß als Prädiktor liefert, erweist sich die \textbf{I-Effizienz ($\sym{eff_I}$)} als hochgradig verlässliches und robustes globales Maß.
@@ -501,22 +503,24 @@ Der \textbf{\ac{MSE}} wiederum fungiert infolge der zugrundeliegenden Prüfmathe
 
 \subsection{Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung} \label{subsec:fazit_sensitivitaet}
 
-Die simulativen Analysen unterstreichen die ausgeprägte topologische Resilienz des \ac{CCD} gegenüber geometrischen und anlagenbedingten Abweichungen.
-Zwar provozieren massive Störungen - insbesondere der asymmetrische Wegfall von Extremstellen (\textit{Fall IV: \ac{SP}}) - eine eindeutig messbare Aufweitung der Schätzvarianz (\ac{MSE}), doch verbleiben diese Einbußen zumeist in einem absolut tolerierbaren Umfang.
-Mit Ausnahme des isolierten quadratischen Terms in der Achse des \ac{SP}-Ausfalls verbleiben die Trennschärfe-Verluste über fast alle Szenarien und Dimensionen hinweg zumeist deutlich unterhalb von $10$ Prozentpunkten (vgl. Tabelle~\ref{tab:results_ortho_power}).
-In Kombination mit der nachgewiesenen Unverfälschbarkeit des \ac{OLS}-Schätzers (vernachlässigbarer \textit{Bias}) ergibt sich genau aus dieser Robustheit ein entscheidender planerischer Spielraum:
-Die bewusste Inkaufnahme moderater Einbußen in der Orthogonalität gefährdet die statistische Validität des zu schätzenden Lebensdauermodells nicht.
-Sie schafft stattdessen ein wertvolles \textbf{geometrisches Gestaltungsbudget} zur operativen Optimierung von Prüfzeiten und Testressourcen.
+Die simulativen Analysen unterstreichen eine ausgeprägte, jedoch hochgradig term-spezifische Resilienz des \ac{CCD} gegenüber geometrischen und anlagenbedingten Abweichungen.
+Während massive topologische Brüche - insbesondere der asymmetrische Wegfall von Extremstellen (\textit{Fall IV: \ac{SP}}) - eine eindeutig messbare Aufweitung der Schätzvarianz (\ac{MSE}) provozieren, offenbart sich eine für die Versuchsplanung elementare Dichotomie:
+Die Detektion linearer Haupteffekte erweist sich gegenüber geometrischen Störungen als erstaunlich robust, wohingegen die für die Modellkrümmung essenziellen quadratischen Terme hochsensibel auf periphere Informationsverluste reagieren.
+Die Trennschärfe-Einbußen bei den Haupteffekten verbleiben über fast alle isolierten Störszenarien hinweg auf einem absolut tolerierbaren Niveau (zumeist deutlich unter $5$ Prozentpunkten), während die quadratischen Effekte signifikante Einbrüche (bis zu $13{,}9$ Prozentpunkte bei systematischer Ausdünnung, vgl. Tabelle~\ref{tab:impact_cd}) verzeichnen.
 
-Dass der Fokus im weiteren methodischen Verlauf dieser Arbeit konsequent von der reinen Identifikationswahrscheinlichkeit (\ac{power}) der Haupteffekte hin zur räumlichen Verteilung der Schätzpräzision in der Peripherie verschoben wird, legitimiert sich durch die hohe Indikatorgüte der prädiktiven Metriken ($\sym{eff_I}$ und \ac{MSE}).
-Die algorithmische Güte eines EoL-Tests ist untrennbar mit der Struktur der Prädiktionsvarianz im Versuchsraum verknüpft.
+In Kombination mit der nachgewiesenen fundamentalen Erwartungstreue des \ac{OLS}-Schätzers (vernachlässigbarer \textit{Bias}) ergibt sich genau aus dieser term-spezifischen Robustheit ein entscheidender planerischer Spielraum:
+Die bewusste Reduktion oder Inkaufnahme moderater Einbußen in der Orthogonalität gefährdet die grundlegende Identifikation der primären Einflüsse nicht.
+Sie schafft stattdessen ein wertvolles \textbf{geometrisches Gestaltungsbudget}, da redundante Stützstellen zur operativen Optimierung von Prüfzeiten und Ressourcen freigegeben werden können.
+
+Dass der Fokus im weiteren methodischen Verlauf dieser Arbeit konsequent von der reinen Detektionswahrscheinlichkeit (\ac{power}) der Haupteffekte hin zur räumlichen Verteilung der Schätzpräzision in der Peripherie verschoben wird, legitimiert sich durch exakt diese Erkenntnis.
+Die algorithmische Güte eines \ac{EoL}-Tests ist untrennbar mit der Struktur der Prädiktionsvarianz im Versuchsraum verknüpft, welche maßgeblich durch die prädiktiven Metriken ($\sym{eff_I}$ und \ac{MSE}) abgebildet wird.
 Im Kontext der \ac{ALT} gewinnt dies eine existenzielle Bedeutung:
-Da Lebensdauermodelle naturgemäß auf die weite Extrapolation in den späteren Einsatzbereich (\textit{Use-Space} bzw. \textit{Field-Space}) angewiesen sind, wirkt die im Versuchsraum (\textit{Design-Space}) vorliegende Varianz der Prädiktion als geometrischer Verstärker für Unsicherheiten in der Ferne.
+Da Lebensdauermodelle naturgemäß auf die weite Extrapolation in den späteren Einsatzbereich (\textit{Use-Space} bzw. \textit{Field-Space}) angewiesen sind, wirkt die im Versuchsraum (\textit{Design-Space}) vorliegende Varianz der Prädiktion - insbesondere getrieben durch unsichere Krümmungseffekte - als geometrischer Verstärker für Unsicherheiten in der Ferne.
 
-Für die holistische Effizienzbewertung bedeutet dies: Sobald durch die fundamentale topologische Robustheit des Designs die grundlegende Identifikation der Effekte gesichert ist, wird die Kontrolle der \ac{SPV}-Struktur zum primären Stellhebel.
-Die Minimierung der Prognoseunsicherheit auf dem Extrapolationspfad ist kein rein akademisches Gütemaß, sondern die unabdingbare Voraussetzung für eine belastbare und ökonomisch verwertbare Lebensdauerprognose.
-Im Folgenden wird das aus unkritischen Zentral- und Sternpunkten freigewordene Gestaltungsbudget daher proaktiv genutzt, um die Stützstellen gezielt in Richtung des anvisierten Feldbereichs zu verschieben (EmALT).
-Diese asymmetrischen Ankerpunkte optimieren die \ac{SPV} exakt dort, wo sie gefordert wird, während die Grundstruktur des \ac{CCD} als stabiler Identifikationskern erhalten bleibt.
+Für die holistische Effizienzbewertung multivariater Lebensdauertests bedeutet dies: Sobald durch die fundamentale topologische Robustheit des Designs die grundlegende Identifikation der Haupteffekte gesichert ist, wird die zielgerichtete Kontrolle der \ac{SPV}-Struktur zum primären Stellhebel der Versuchsökonomie.
+Die Minimierung der Prognoseunsicherheit auf dem Extrapolationspfad ist kein rein akademisches Gütemaß, sondern die unabdingbare Voraussetzung für eine belastbare und wirtschaftlich vertretbare Lebensdauerprognose durch \ac{ALT}.
+Im Folgenden wird das aus topologisch unkritischen Zentral- und Sternpunkten freigewordene Gestaltungsbudget daher proaktiv genutzt, um diese Stützstellen gezielt in Richtung des anvisierten Feldbereichs zu verschieben (\textbf{EmALT}).
+Diese asymmetrischen Ankerpunkte investieren das gewonnene Budget exakt dort, wo es zur Stützung der kritischen Modellkrümmung und der Extrapolationsgüte gefordert wird, während die Grundstruktur des \ac{CCD} als stabiler Identifikationskern erhalten bleibt.
 
 \section{Kostenstruktur der Lebensdauererprobung} \label{subsec:kostenmodell}
 Um die Leistungsfähigkeit und Effizienz von Versuchsplan-Modifikationen nicht ausschließlich anhand rein statistischer Gütekriterien (wie der \ac{SPV}) und damit derer Effektivität bewerten zu können, bedarf es zwingend einer komplementären ökonomischen Betrachtung.
