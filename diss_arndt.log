@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  13 JUL 2026 23:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  14 JUL 2026 23:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1734,7 +1734,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--307
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--311
  [] [] 
  []
 
@@ -1762,7 +1762,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--165
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--168
  [] [] 
  []
 
@@ -1787,20 +1787,20 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--191
+Underfull \hbox (badness 10000) in paragraph at lines 192--192
 []|\T1/qpl/m/n/12 (+10) Orthogonale Pro-jek-ti-ons-ma-trix, Prä-dik-ti-ons-ma-trix, Hat-
  []
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 370.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 375.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 2173) in paragraph at lines 541--541
+Underfull \hbox (badness 2173) in paragraph at lines 547--547
 []|\T1/qpl/m/n/12 (+10) Standardisierte Va-ria-ble der Kleinst-wert-ver-tei-lung (SEV);
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--542
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--548
  [] [] 
  []
 
@@ -1857,12 +1857,12 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 30.
 Package tocbasic Info: Using my definition of `\numberline' on input line 31.
 Package tocbasic Info: Using my definition of `\numberline' on input line 32.
 Package tocbasic Info: Using my definition of `\numberline' on input line 33.
-Package tocbasic Info: Using my definition of `\numberline' on input line 34.
 
-Overfull \hbox (2.67299pt too wide) in paragraph at lines 34--34
+Overfull \hbox (2.67299pt too wide) in paragraph at lines 33--33
  [][] []\T1/qpl/m/n/12 (-10) Vorhersagegüte bei Va-ria-ti-on der [][][]Zen-tral-punkt (ZP)[][]-Anzahl $[][][][][][][]$ für einen 
  []
 
+Package tocbasic Info: Using my definition of `\numberline' on input line 34.
 Package tocbasic Info: Using my definition of `\numberline' on input line 35.
 Package tocbasic Info: Using my definition of `\numberline' on input line 36.
 Package tocbasic Info: Using my definition of `\numberline' on input line 37.
@@ -1891,13 +1891,13 @@ Overfull \hbox (5.38225pt too wide) in paragraph at lines 43--43
 Package tocbasic Info: Using my definition of `\numberline' on input line 44.
 Package tocbasic Info: Using my definition of `\numberline' on input line 45.
 Package tocbasic Info: Using my definition of `\numberline' on input line 49.
-Package tocbasic Info: Using my definition of `\numberline' on input line 50.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [25]
+Package tocbasic Info: Using my definition of `\numberline' on input line 50.
 Package tocbasic Info: Using my definition of `\numberline' on input line 51.
 Package tocbasic Info: Using my definition of `\numberline' on input line 52.
 
@@ -2345,6 +2345,10 @@ chapter 5.
 
 [75]
 
+LaTeX Warning: Reference `subsec:kostenmodell' on page 76 undefined on input line 24.
+
+
+
 [76]
 Underfull \hbox (badness 10000) in paragraph at lines 51--54
 
@@ -2475,87 +2479,93 @@ Overfull \hbox (12.74126pt too wide) in paragraph at lines 511--514
 
 [100]
 
-[101]
-
-[102] (plots/ma_abb5.2.1_fds_nc.tex) (plots/ma_abb5.2.1_vdg_nc.tex)
-Overfull \hbox (2.0235pt too wide) in paragraph at lines 207--603
+[101] (plots/ma_abb5.2.1_fds_nc.tex) (plots/ma_abb5.2.1_vdg_nc.tex)
+Overfull \hbox (2.0235pt too wide) in paragraph at lines 207--568
  [][] 
  []
 
 
 
-[103] (plots/ma_abb5.2.1_fds_omitted.tex) (plots/ma_abb5.2.1_vdg_omitted.tex)
-Overfull \hbox (2.0235pt too wide) in paragraph at lines 261--636
+[102] (plots/ma_abb5.2.1_fds_omitted.tex) (plots/ma_abb5.2.1_vdg_omitted.tex)
+Overfull \hbox (2.0235pt too wide) in paragraph at lines 261--601
  [][] 
  []
 
-<plots/ma_abb5.2.1_contour_spv.pdf, id=4691, 307.1475pt x 226.8475pt>
+<plots/ma_abb5.2.1_contour_spv.pdf, id=4626, 307.1475pt x 226.8475pt>
 File: plots/ma_abb5.2.1_contour_spv.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.1_contour_spv.pdf>
-Package pdftex.def Info: plots/ma_abb5.2.1_contour_spv.pdf  used on input line 647.
+Package pdftex.def Info: plots/ma_abb5.2.1_contour_spv.pdf  used on input line 612.
 (pdftex.def)             Requested size: 304.72772pt x 225.07469pt.
 
 
-[104]
+[103]
+
+[104 <./plots/ma_abb5.2.1_contour_spv.pdf>]
 
 [105]
-
-[106 <./plots/ma_abb5.2.1_contour_spv.pdf>]
-
-[107]
-<plots/ma_abb5.2.2_exposure_scatter.pdf, id=4824, 261.97874pt x 261.97874pt>
+<plots/ma_abb5.2.2_exposure_scatter.pdf, id=4755, 261.97874pt x 261.97874pt>
 File: plots/ma_abb5.2.2_exposure_scatter.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.2_exposure_scatter.pdf>
-Package pdftex.def Info: plots/ma_abb5.2.2_exposure_scatter.pdf  used on input line 693.
+Package pdftex.def Info: plots/ma_abb5.2.2_exposure_scatter.pdf  used on input line 658.
 (pdftex.def)             Requested size: 261.19899pt x 261.20659pt.
-<plots/ma_abb5.2.2_contour.pdf, id=4832, 349.305pt x 271.0125pt>
+
+
+[106]
+
+[107 <./plots/ma_abb5.2.2_exposure_scatter.pdf>]
+<plots/ma_abb5.2.2_contour.pdf, id=4807, 349.305pt x 271.0125pt>
 File: plots/ma_abb5.2.2_contour.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.2_contour.pdf>
-Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 702.
+Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 667.
 (pdftex.def)             Requested size: 348.2631pt x 270.21783pt.
 
 
-[108]
+[108 <./plots/ma_abb5.2.2_contour.pdf>] (plots/ma_abb5.2.2_evg.tex)
 
-[109 <./plots/ma_abb5.2.2_exposure_scatter.pdf>]
+[109]
+Overfull \hbox (18.45692pt too wide) in paragraph at lines 712--715
+\T1/qpl/m/n/12 (-10) vi-du-el-len Lauf-zei-ten $[][][][][][][][]$ der Prüf-lin-ge ab. Dies gilt ins-be-son-de-re für [][][]EoL[][]-Untersuchungen,
+ []
 
-[110 <./plots/ma_abb5.2.2_contour.pdf>] (plots/ma_abb5.2.2_evg.tex)
+
+
+[110]
 
 [111]
 
 [112] (tables/tab_results_emalt_metrics.tex)
 
-LaTeX Warning: Reference `tab:results_emalt_mse' on page 113 undefined on input line 770.
+LaTeX Warning: Reference `tab:results_emalt_mse' on page 113 undefined on input line 783.
 
 
 
 [113]
-Overfull \hbox (12.7564pt too wide) in paragraph at lines 776--777
+Overfull \hbox (12.7564pt too wide) in paragraph at lines 789--790
 \T1/qpl/m/n/12 (-10) weit un-ter $\OT1/pplx/m/n/12 1 %$\T1/qpl/m/n/12 (-10) . Die Er-war-tungs-treue des Mo-dells bleibt durch die EmALT-Modifikation
  []
 
 (tables/tab_results_emalt_bias.tex) (plots/ma_abb5.4.1_betadev.tex) (plots/ma_abb5.4.1_phisto_all.tex)
-Overfull \hbox (14.32967pt too wide) in paragraph at lines 181--794
+Overfull \hbox (14.32967pt too wide) in paragraph at lines 181--807
  [][] 
  []
 
 
-LaTeX Warning: Reference `tab:results_emalt_power' on page 114 undefined on input line 801.
+LaTeX Warning: Reference `tab:results_emalt_power' on page 114 undefined on input line 814.
 
 
 
-[114] (plots/ma_abb5.4.1_powerdev.tex)
+[114]
 
-[115]
+[115] (plots/ma_abb5.4.1_powerdev.tex)
 
 [116]
-Overfull \hbox (7.31555pt too wide) in paragraph at lines 825--826
+Overfull \hbox (7.31555pt too wide) in paragraph at lines 838--839
 []\T1/qpl/m/n/12 (-10) Überprüfung von Power und Bi-as für den mo-di-fi-zier-ten Plan (PSAM17/ASRAM
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cgls' on input line 831.
+(hyperref)                removing `\cgls' on input line 844.
 
 
 
@@ -2563,38 +2573,38 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [118]
 
-[119] (tables/tab_results_emalt_wbl_bias.tex)
+[119]
 
-LaTeX Warning: Reference `fig:ma_abb5.4.1_betadev_wbl' on page 120 undefined on input line 894.
+[120] (tables/tab_results_emalt_wbl_bias.tex)
+
+LaTeX Warning: Reference `fig:ma_abb5.4.1_betadev_wbl' on page 121 undefined on input line 907.
 
 
-LaTeX Warning: Reference `fig:ma_abb5.4.1_phisto_all_wbl' on page 120 undefined on input line 894.
+LaTeX Warning: Reference `fig:ma_abb5.4.1_phisto_all_wbl' on page 121 undefined on input line 907.
 
-(plots/ma_abb5.4.2_betadev_wbl.tex)
-
-[120] (plots/ma_abb5.4.2_phisto_all_wbl.tex)
-Overfull \hbox (14.32967pt too wide) in paragraph at lines 71--910
+(plots/ma_abb5.4.2_betadev_wbl.tex) (plots/ma_abb5.4.2_phisto_all_wbl.tex)
+Overfull \hbox (14.32967pt too wide) in paragraph at lines 71--923
  [][] 
  []
 
 
-Underfull \hbox (badness 4001) in paragraph at lines 910--910
+Underfull \hbox (badness 4001) in paragraph at lines 923--923
 [][][]|\T1/qpl/m/n/12 (+10) Re-la-ti-ve Häu-fig-keits-ver-tei-lung der p-Werte (Weibull-Modell),
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 910--910
+Underfull \hbox (badness 1194) in paragraph at lines 923--923
 \T1/qpl/m/n/12 (+10) wel-che die nu-me-ri-sche Kon-ver-genz und Ro-bust-heit der [][][]MLE[][]-
  []
 
 
-LaTeX Warning: Reference `fig:ma_abb5.4.1_powerdev_wbl' on page 121 undefined on input line 916.
+LaTeX Warning: Reference `fig:ma_abb5.4.1_powerdev_wbl' on page 121 undefined on input line 929.
 
 
 
-[121] (plots/ma_abb5.4.2_powerdev_wbl.tex)
+[121]
 
-[122]) (chapters/chapter6_casestudy.tex
+[122] (plots/ma_abb5.4.2_powerdev_wbl.tex)) (chapters/chapter6_casestudy.tex
 
 [123]
 
@@ -2759,17 +2769,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 78256 strings out of 473577
- 1810133 string characters out of 5716318
- 4033197 words of memory out of 5000000
- 99048 multiletter control sequences out of 15000+600000
+ 78257 strings out of 473577
+ 1810151 string characters out of 5716318
+ 4032203 words of memory out of 5000000
+ 99049 multiletter control sequences out of 15000+600000
  755295 words of font info for 443 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,26n,121p,10968b,3730s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (187 pages, 3199462 bytes).
+Output written on diss_arndt.pdf (187 pages, 3201956 bytes).
 PDF statistics:
- 6427 PDF objects out of 7423 (max. 8388607)
+ 6433 PDF objects out of 7423 (max. 8388607)
  832 named destinations out of 1000 (max. 500000)
  97523 words of extra memory for PDF output out of 106986 (max. 10000000)
 

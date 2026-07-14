@@ -522,41 +522,6 @@ Die Minimierung der Prognoseunsicherheit auf dem Extrapolationspfad ist kein rei
 Im Folgenden wird das aus topologisch unkritischen Zentral- und Sternpunkten freigewordene Gestaltungsbudget daher proaktiv genutzt, um diese Stützstellen gezielt in Richtung des anvisierten Feldbereichs zu verschieben (\textbf{EmALT}).
 Diese asymmetrischen Ankerpunkte investieren das gewonnene Budget exakt dort, wo es zur Stützung der kritischen Modellkrümmung und der Extrapolationsgüte gefordert wird, während die Grundstruktur des \ac{CCD} als stabiler Identifikationskern erhalten bleibt.
 
-\section{Kostenstruktur der Lebensdauererprobung} \label{subsec:kostenmodell}
-Um die Leistungsfähigkeit und Effizienz von Versuchsplan-Modifikationen nicht ausschließlich anhand rein statistischer Gütekriterien (wie der \ac{SPV}) und damit derer Effektivität bewerten zu können, bedarf es zwingend einer komplementären ökonomischen Betrachtung.
-Zu diesem Zweck wird ein strukturiertes Kostenmodell entwickelt, welches die monetären Aufwände der experimentellen Durchführung im \ac{DoE} systematisch erfasst und bilanziert, vgl. \cite{Arndt.2025}.
-An dieser Stelle sollen zunächst die zugrundeliegenden Kostenpositionen, deren funktionale Zuordnung sowie die strukturellen Interdependenzen des Modells grundlegend vorgestellt werden.
-
-Auch bei einer fest definierten Anzahl an Versuchspunkten ($\sym{N}$) und vorgegebenen Replikationen hängen die realen Versuchskosten maßgeblich von den individuellen Laufzeiten $\sym{t}_{\sym{idx_i}}$ der Prüflinge ab.
-Dies gilt insbesondere für \ac{EoL} - Untersuchungen, bei denen die Prüflinge oftmals sequenziell und bis zum Ausfall unter unterschiedlichen Lastniveaus getestet werden.
-Um diese Aufwände generisch und unabhängig vom spezifischen Prüflingstyp bilanzieren zu können, werden die Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ in drei wesentliche Hauptdomänen unterteilt:
-
-\begin{enumerate}
-    \item \textbf{Umgebungskosten $\sym{C}_{\sym{idx_cost_ambient}}$ (\textit{Ambient Conditions}):} Diese Domäne bündelt die standort- und laborbezogenen Bereitstellungskosten $\sym{C}_{\sym{idx_cost_labor}}$, wie beispielsweise allgemeine Aufwände für die Laborinfrastruktur oder die grundlegende Raumklimatisierung.
-    \item \textbf{Prüfstandskosten $\sym{C}_{\sym{idx_cost_test_eq}}$ (\textit{Test Equipment}):} Hierunter fallen die anlagenspezifischen Ausrüstungs- und Investitionskosten.
-          Diese setzen sich aus der grundlegenden Prüfstandshardware $\sym{C}_{\sym{idx_cost_base_eq}}$ sowie der geforderten Güte der eingesetzten Messtechnik $\sym{C}_{\sym{idx_cost_instr}}$ und Steuerungstechnik $\sym{C}_{\sym{idx_cost_ctrl}}$ zusammen.
-          Ein Absenken der geforderten Genauigkeit (und damit eine billigend in Kauf genommene Abweichung von der Orthogonalität) schlägt sich hier direkt in reduzierten Hardwarekosten nieder.
-    \item \textbf{Laufende Durchführungskosten $\sym{C}_{\sym{idx_cost_size}}$ (\textit{Size of Testing}):} Diese variable Kostengruppe skaliert direkt mit der Dauer und dem Umfang der Versuchsreihe.
-          Sie umfasst die Personalkosten $\sym{C}_{\sym{idx_cost_op}}$, die Kosten für Hilfs- und Betriebsstoffe $\sym{C}_{\sym{idx_cost_help}}$, die Energiekosten $\sym{C}_{\sym{idx_cost_ener}}$ sowie die belastungsabhängigen Instandhaltungskosten $\sym{C}_{\sym{idx_cost_maint}}$.
-\end{enumerate}
-
-Das zugrundeliegende strukturelle Wirknetz dieser Kostenpositionen ist in Abbildung~\ref{fig:cost_model_structure} visualisiert.
-Es verdeutlicht die Interdependenzen und zeigt auf, wie die einzelnen Faktoren methodisch aggregiert werden, um die designspezifischen Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ abzuleiten.
-
-\begin{figure}[htbp]
-    \centering
-    % \includegraphics[width=0.7\textwidth]{plots/ma_abb_cost_model.pdf} % Pfad bitte anpassen
-    \caption{Struktur des Kostenmodells zur Berechnung der Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ als Funktion der Versuchsplan-Implementierung, identifizierter Kostenfaktoren sowie zufallsbehafteter Versuchslaufzeiten $\sym{t}_{\sym{idx_i}}$ (gemäß \cite{Arndt.2025})}
-    \label{fig:cost_model_structure}
-\end{figure}
-
-Die fixen Bereitstellungsblöcke für Labor ($\sym{C}_{\sym{idx_cost_ambient}}$) und Prüfstand ($\sym{C}_{\sym{idx_cost_test_eq}}$) fließen dabei weitestgehend additiv in die Gesamtbilanz ein.
-Die laufenden Durchführungskosten $\sym{C}_{\sym{idx_cost_size}}$ hingegen verhalten sich hochgradig dynamisch: Da Lebensdauerversuche stochastischen Ausfallzeiten unterliegen und unterschiedliche Belastungsstufen (Faktorkombinationen) zu stark variierenden Testdauern führen, determinieren die individuellen, zufallsbehafteten Versuchslaufzeiten $\sym{t}_{\sym{idx_i}}$ den jeweiligen Ressourcenverbrauch (Personal, Energie, Material, Anlagenverschleiß).
-Im Rahmen der Modellierung werden diese dynamischen Kostentreiber in einem iterativen Prozess (beispielsweise über eine \ac{MCS}) aggregiert, um einen belastbaren Erwartungswert für die Durchführungskosten $\bar{\sym{C}}_{\sym{idx_cost_size}}$ zu ermitteln.
-
-In der Summe ermöglicht dieses Kostenmodell, den topologischen und statistischen Modifikationen eines Versuchsplans ein direktes ökonomisches Preisschild zuzuordnen.
-Es bildet das notwendige methodische Fundament, um im weiteren Verlauf der Arbeit evaluieren zu können, inwiefern die durch Extrapolations-\acp{AP} gewonnene Prognosegüte in einem wirtschaftlich tragfähigen Verhältnis zu den real aufgewendeten Prüfkosten steht.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -728,6 +693,54 @@ Das gewonnene geometrische Budget wird nicht verschwendet, sondern wertsteigernd
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Kostenstruktur der Lebensdauererprobung} \label{sec:kostenmodell}
+
+Die vorangegangenen Abschnitte~\ref{sec:abweichungen} und \ref{sec:adaptive_planung} zeigen, dass eine adaptive Manipulation der Orthogonalität eines Versuchsplans ein wertvolles geometrisches Gestaltungsbudget freisetzen kann.
+Die bisherige Evaluierung fokussierte sich dabei primär auf die \textbf{statistische Effektivität} der Versuchsdesigns - also auf deren fundamentale methodische Fähigkeit, die wahren physikalischen Zusammenhänge unverfälscht (\textit{Bias}, \ac{MSE}, Optimalitäten) und mit der geforderten Nachweissicherheit (\ac{power}) zu identifizieren.
+Statistische Effektivität bildet jedoch lediglich die unabdingbare Grundvoraussetzung für die industrielle \ac{EoL}-Versuchsplanung.
+Ein effektiver Versuchsplan wird in der Praxis erst dann zu einem \textbf{effizienten} Versuchsplan, wenn er die geforderten statistischen Zielvorgaben unter minimalem Ressourceneinsatz und zwingend innerhalb eines limitierten Zielbudgets erreicht.
+Effizienz definiert sich folglich direkt über das Verhältnis zwischen der algorithmischen Leistungsfähigkeit (statistische \acp{KPI}) und den real verursachten experimentellen Aufwänden.
+
+Um die ganzheitliche Leistungsfähigkeit adaptiver Versuchsplan-Modifikationen bewerten zu können, bedarf es demnach zwingend einer komplementären ökonomischen Betrachtung.
+Nur wenn die methodischen Gewinne der Extrapolationsabsicherung mit den tatsächlichen Prüfkosten ins Verhältnis gesetzt werden, lässt sich die übergeordnete Forschungsfrage objektiv beantworten: \textit{Wie viel Prädiktionsgüte ist finanzierbar?}
+
+Zu diesem Zweck wird nachfolgend die Struktur eines Modells eingeführt, welches die monetären Aufwände der experimentellen Durchführung im \ac{DoE} systematisch erfasst und bilanziert.
+Die methodische Grundlage hierfür bildet das in \textcite{Arndt.2025} publizierte Kostenmodell für multivariate Lebensdauertests.
+An dieser Stelle werden zunächst die zugrundeliegenden Kostenpositionen, deren funktionale Zuordnung sowie die strukturellen Interdependenzen des Modells grundlegend definiert.
+Die detaillierte quantitative Auswertung dieses Modells erfolgt im Rahmen der Gesamtbewertung in Abschnitt~\ref{sec:weibull_transfer}, sobald die stochastischen Eigenschaften realer Lebensdauerdaten in die Betrachtung integriert sind.
+
+Auch bei einer vorab fest definierten Anzahl an Versuchspunkten ($\sym{N}$) und vorgegebenen Replikationen hängen die realen Versuchskosten maßgeblich von den individuellen Laufzeiten $\sym{t}_{\sym{idx_i}}$ der Prüflinge ab.
+Dies gilt insbesondere für \ac{EoL}-Untersuchungen, bei denen Prüflinge oftmals sequenziell und bis zum Ausfallereignis unter stark variierenden Lastniveaus getestet werden.
+Um diese Aufwände generisch und unabhängig vom spezifischen Prüflingstyp bilanzieren zu können, werden die Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ in drei wesentliche Hauptdomänen unterteilt \cite{Arndt.2025}:
+
+\begin{enumerate}
+    \item \textbf{Umgebungskosten $\sym{C}_{\sym{idx_cost_ambient}}$ (\textit{Ambient Conditions}):} Diese statische Domäne bündelt die standort- und laborbezogenen Bereitstellungskosten $\sym{C}_{\sym{idx_cost_labor}}$, wie beispielsweise allgemeine Aufwände für die Laborinfrastruktur, den Flächenbedarf oder die grundlegende Raumklimatisierung.
+    \item \textbf{Prüfstandskosten $\sym{C}_{\sym{idx_cost_test_eq}}$ (\textit{Test Equipment}):} Hierunter fallen die anlagenspezifischen Ausrüstungs- und Investitionskosten.
+          Diese setzen sich primär aus der grundlegenden Prüfstandshardware $\sym{C}_{\sym{idx_cost_base_eq}}$ sowie der geforderten Güte der eingesetzten Messtechnik $\sym{C}_{\sym{idx_cost_instr}}$ und Steuerungstechnik $\sym{C}_{\sym{idx_cost_ctrl}}$ zusammen.
+          Ein strategisches Absenken der geforderten Ansteuergenauigkeit (und die damit verbundene Inkaufnahme von Orthogonalitätsabweichungen, vgl. in Abschnitt~\ref{subsec:ergebnisse_generic} Scatter-Effekte in Fall III) würde sich hier direkt in signifikant reduzierten Hardware- und Investitionskosten niederschlagen.
+    \item \textbf{Laufende Durchführungskosten $\sym{C}_{\sym{idx_cost_size}}$ (\textit{Size of Testing}):} Diese hochgradig variable Kostengruppe skaliert direkt mit der zeitlichen Dauer und dem physikalischen Umfang der Versuchsreihe.
+          Sie umfasst die kontinuierlichen Personalkosten $\sym{C}_{\sym{idx_cost_op}}$, die Aufwände für Hilfs- und Betriebsstoffe $\sym{C}_{\sym{idx_cost_help}}$, den lastabhängigen Energieverbrauch $\sym{C}_{\sym{idx_cost_ener}}$ sowie die belastungs- und zeitproportionalen Instandhaltungskosten $\sym{C}_{\sym{idx_cost_maint}}$.
+\end{enumerate}
+
+Das zugrundeliegende strukturelle Wirknetz dieser Kostenpositionen ist in Abbildung~\ref{fig:cost_model_structure} visualisiert.
+Es verdeutlicht die Interdependenzen der Domänen und zeigt auf, wie die einzelnen Faktoren methodisch aggregiert werden, um die designspezifischen Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ abzuleiten.
+
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.7\textwidth]{plots/ma_abb_cost_model.pdf} % Pfad bitte anpassen
+    \caption{Struktur des Kostenmodells zur Berechnung der Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ als Funktion der Versuchsplan-Implementierung, identifizierter Kostenfaktoren sowie zufallsbehafteter Versuchslaufzeiten $\sym{t}_{\sym{idx_i}}$ (in Anlehnung an \cite{Arndt.2025}).}
+    \label{fig:cost_model_structure}
+\end{figure}
+
+Während die fixen Bereitstellungsblöcke für Labor ($\sym{C}_{\sym{idx_cost_ambient}}$) und Basis-Prüfstand ($\sym{C}_{\sym{idx_cost_test_eq}}$) weitestgehend statisch und additiv in die Gesamtbilanz einfließen, verhalten sich die laufenden Durchführungskosten $\sym{C}_{\sym{idx_cost_size}}$ extrem dynamisch.
+Da Lebensdauerversuche stochastischen Ausfallprozessen unterliegen und die asymmetrische Verteilung unterschiedlicher Belastungsstufen (Faktorkombinationen im \ac{DoE}) zu stark variierenden Testdauern führt, determinieren erst die individuellen, zufallsbehafteten Versuchslaufzeiten $\sym{t}_{\sym{idx_i}}$ den tatsächlichen Ressourcenverbrauch (Personal, Energie, Material, Anlagenverschleiß).
+
+Im Rahmen der späteren Modellierung müssen diese dynamischen Kostentreiber folglich in einem iterativen Prozess evaluiert werden.
+Die Einbettung in eine Monte-Carlo-Simulation erlaubt es, die Verteilung der stochastischen Ausfallzeiten zu aggregieren, um einen belastbaren Erwartungswert für die Durchführungskosten $\bar{\sym{C}}_{\sym{idx_cost_size}}$ zu ermitteln.
+
+In der Summe stellt dieses Kostenmodell ein unabdingbares Instrument dar, um topologischen und statistischen Modifikationen eines Versuchsplans ein direktes ökonomisches Preisschild zuzuordnen.
+Es bildet das notwendige methodische Fundament, um evaluieren zu können, inwiefern die durch adaptive Extrapolations-Ankerpunkte (EmALT) gewonnene Prognosegüte in einem wirtschaftlich tragfähigen Verhältnis zu den real aufgewendeten Prüfkosten der Gesamtkampagne steht.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Übertragung auf multivariate Lebensdauermodelle} \label{sec:weibull_transfer}
