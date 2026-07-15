@@ -46,6 +46,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\def \@chapapp {\appendixname }
 \contentsline {figure}{\numberline {C1}{\ignorespaces Laufende Konvergenz der Trennschärfe für alle Modellparameter. Die Schätzungen stabilisieren sich bei der $\glsadd {n}\glslink {n}{\textcolor {blue}{\ensuremath {\ensuremath {n}}}}_{\glsadd {idx_MC}\glslink {idx_MC}{\textcolor {blue}{\ensuremath {\ensuremath {\textnormal {MC}}}}}}=10^4$ reproduzierbar.}}{155}{figure.caption.132}%
 \contentsline {figure}{\numberline {C2}{\ignorespaces Konvergenz der \cgls {OLS}-Parameterschätzwerte ($\hat {\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath {\ensuremath {\beta }}}}}_i$). Alle Modelle erweisen sich unabhängig von der geometrischen Verzerrung als erwartungstreu. Die Schätzungen stabilisieren sich bei der $\glsadd {n}\glslink {n}{\textcolor {blue}{\ensuremath {\ensuremath {n}}}}_{\glsadd {idx_MC}\glslink {idx_MC}{\textcolor {blue}{\ensuremath {\ensuremath {\textnormal {MC}}}}}}=10^4$ reproduzierbar.}}{156}{figure.caption.133}%
 \contentsline {figure}{\numberline {C3}{\ignorespaces Relative Häufigkeiten der in der Simulation ermittelten $\glsadd {p-Wert}\glslink {p-Wert}{\textcolor {blue}{\ensuremath {\ensuremath {p\textnormal {-Wert}}}}}$e der Signifikanztests.}}{157}{figure.caption.134}%
