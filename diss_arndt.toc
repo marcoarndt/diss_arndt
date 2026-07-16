@@ -77,27 +77,28 @@
 \contentsline {subsection}{\numberline {5.2.2}Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)}{105}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}Kostenstruktur der Lebensdauererprobung}{109}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Übertragung auf multivariate Lebensdauermodelle}{112}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Generische Auswirkungen relevanter Orthogonalitätsabweichungen}{113}{subsection.5.4.1}%
-\contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{113}{subsubsection*.92}%
-\contentsline {subsubsection}{\nonumberline Topologische und informationsbasierte Metriken}{113}{subsubsection*.94}%
-\contentsline {subsubsection}{\nonumberline Absolute Schätzvarianz und Prognoseunsicherheit (MSE)}{114}{subsubsection*.97}%
-\contentsline {subsubsection}{\nonumberline Systematischer Schätzfehler (Bias)}{114}{subsubsection*.99}%
-\contentsline {subsubsection}{\nonumberline Statistische Trennschärfe ($\glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$)}{114}{subsubsection*.104}%
-\contentsline {subsubsection}{\nonumberline Kritische Würdigung der Trennschärfe im Kontext der Versuchsökonomie}{116}{subsubsection*.107}%
-\contentsline {subsection}{\numberline {5.4.2}Effizientes \cgls {L-DoE}}{117}{subsection.5.4.2}%
-\contentsline {subsubsection}{\nonumberline Systematischer Schätzfehler der Maximum-Likelihood-Schätzung}{120}{subsubsection*.110}%
-\contentsline {subsubsection}{\nonumberline Statistische Trennschärfe ($\glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$) unter Weibull-Bedingungen}{121}{subsubsection*.115}%
-\contentsline {chapter}{\numberline {6}Fallstudie}{125}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{127}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Key Findings}{127}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Diskussion}{127}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Ausblick}{127}{section.7.3}%
-\contentsline {chapter}{\nonumberline Literatur}{129}{chapter*.117}%
-\def \@chapapp {\appendixname }
-\contentsline {chapter}{Anhang}{143}{chapter*.117}%
-\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{143}{section.Alph0.1}%
-\contentsline {section}{\numberline {B}Sensitivitätsanalyse}{145}{section.Alph0.2}%
-\contentsline {section}{\numberline {C}Stabilitäts- und Konvergenzanalysen der Design-Modifikationen}{154}{section.Alph0.3}%
-\contentsline {subsection}{\numberline {C.1}Szenarien bei Arbeitspunkt \cgls {SNR}$=1$}{159}{subsection.Alph0.3.1}%
+\contentsline {subsection}{\numberline {5.4.1}Signal-Rausch-Kalibrierung unter dem Sparsity of Effects Principle}{113}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Definition der Vergleichsdesigns und Anker-Allokation}{115}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Generische Auswirkungen relevanter Orthogonalitätsabweichungen}{116}{subsection.5.4.3}%
+\contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{116}{subsubsection*.93}%
+\contentsline {subsubsection}{\nonumberline Topologische und informationsbasierte Metriken}{116}{subsubsection*.95}%
+\contentsline {subsubsection}{\nonumberline Absolute Schätzvarianz und Prognoseunsicherheit (MSE)}{117}{subsubsection*.98}%
+\contentsline {subsubsection}{\nonumberline Systematischer Schätzfehler (Bias)}{117}{subsubsection*.100}%
+\contentsline {subsubsection}{\nonumberline Statistische Trennschärfe ($\glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$)}{119}{subsubsection*.105}%
+\contentsline {subsubsection}{\nonumberline Kritische Würdigung der Trennschärfe im Kontext der Versuchsökonomie}{119}{subsubsection*.108}%
+\contentsline {subsection}{\numberline {5.4.4}Effizientes \cgls {L-DoE}}{120}{subsection.5.4.4}%
+\contentsline {subsubsection}{\nonumberline Systematischer Schätzfehler der Maximum-Likelihood-Schätzung}{123}{subsubsection*.111}%
+\contentsline {subsubsection}{\nonumberline Statistische Trennschärfe ($\glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$) unter Weibull-Bedingungen}{124}{subsubsection*.116}%
+\contentsline {chapter}{\numberline {6}Fallstudie}{127}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Zusammenfassung und Ausblick}{129}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Key Findings}{129}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Diskussion}{129}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Ausblick}{129}{section.7.3}%
+\contentsline {chapter}{\nonumberline Literatur}{131}{chapter*.118}%
+\contentsline {chapter}{Anhang}{145}{chapter*.118}%
+\contentsline {section}{\numberline {A}Ableitungen zur Maximum-Likelihood-Schätzung}{145}{section.Alph0.1}%
+\contentsline {section}{\numberline {B}Sensitivitätsanalyse}{147}{section.Alph0.2}%
+\contentsline {section}{\numberline {C}Stabilitäts- und Konvergenzanalysen der Design-Modifikationen}{156}{section.Alph0.3}%
+\contentsline {subsection}{\numberline {C.1}Szenarien bei Arbeitspunkt \cgls {SNR}$=1$}{161}{subsection.Alph0.3.1}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

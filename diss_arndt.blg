@@ -1,18 +1,15 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'diss_arndt.blg'
-[176] biber-MSWIN64:340> INFO - === 
-[233] Biber.pm:419> INFO - Reading 'diss_arndt.bcf'
-[697] Biber.pm:979> INFO - Found 120 citekeys in bib section 0
-[721] Biber.pm:4419> INFO - Processing section 0
-[741] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[841] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1470] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[2544] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[2552] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[2552] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[2552] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
-[2694] bbl.pm:660> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[2793] bbl.pm:763> INFO - Output to diss_arndt.bbl
-[2794] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry 'Arndt.2024' is invalid - run biber with '--validate_datamodel' for details.
-[2794] Biber.pm:131> WARN - ISBN '979-8-3503-6774-4' in entry 'Arndt.2025b' is invalid - run biber with '--validate_datamodel' for details.
-[2794] Biber.pm:133> INFO - WARNINGS: 2
+[3] Config.pm:308> INFO - This is Biber 2.20
+[6] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
+[167] biber-MSWIN64:340> INFO - === 
+[228] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
+[659] Biber.pm:994> INFO - Found 120 citekeys in bib section 0
+[682] Biber.pm:4463> INFO - Processing section 0
+[709] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[817] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1323] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[2240] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2241] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2244] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[2244] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[2361] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[2600] bbl.pm:779> INFO - Output to diss_arndt.bbl
