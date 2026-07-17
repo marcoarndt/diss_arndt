@@ -316,8 +316,7 @@ Dementsprechend werden basierend auf der Simulationsmethodik aus Abschnitt~\ref{
 \end{itemize}
 
 Wird als Vergleichsbasis zusätzlich zu den Design-Variationen der \textbf{Fälle I-IV} das standardmäßige \textit{Basis \ac{CCD}} berücksichtigt, ergeben sich insgesamt \textbf{neun} Szenarien.
-Für diese werden die Auswirkungen der jeweiligen Praxisrestriktion auf die Effizienz der Parameterschätzung und die Trennschärfe der Effekte isoliert quantifiziert und verglichen.
-Während auch bei dieser isolierten Betrachtung der Erhalt der Trennschärfe ($\sym{power}$) die übergeordnete Rolle spielt, rückt hier zusätzlich die Schätzgüte der Modellparameter in den Fokus.
+Für diese werden die Auswirkungen der jeweiligen Praxisrestriktion auf die Effektivität der Parameterschätzung und die $\sym{power}$ der Effekte isoliert quantifiziert und verglichen.
 Es gilt zu quantifizieren, inwiefern der Verlust der Orthogonalität - messbar über den globalen $\sym{A2}$-Indikator - zu Multikollinearität und folglich zu einer schädlichen Varianzinflation (\ac{VIF} beziehungsweise \ac{MSE}) oder gar zu systematischen Verzerrungen der Koeffizientenschätzung (\textit{Bias}) führt (vgl. Abschnitt~\ref{subsec:optimal}).
 Die analytische Differenzierung dieser Fehlerarten ist von entscheidender Bedeutung, da insbesondere ein signifikanter Bias die Validität der gesamten Lebensdauerprognose unbemerkt kompromittieren würde, während eine reine Varianzinflation primär die Konfidenzintervalle aufweitet.
 
@@ -749,55 +748,64 @@ In der Summe stellt dieses Kostenmodell ein unabdingbares Instrument dar, um top
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \section{Übertragung auf multivariate Lebensdauermodelle} \label{sec:weibull_transfer}
 
-Die Analyse des additiven Normalverteilungsraums unter Anwendung des \ac{OLS}-Schätzers zuvor in Abschnitt~\ref{sec:abweichungen} dient bis zu diesem Stand der fundamentalen topologischen Charakterisierung von Versuchsdesigns und deren \ac{EoL}-Testing motivierten Modifikationen.
-Sie erbringen den Nachweis, dass das \ac{CCD} asymmetrische Design-Manipulationen zulässt, ohne inakzeptable Beeinträchtigungen der statistischen Effektivität zu erfahren, vergleiche Abschnitt~\ref{subsec:fazit_sensitivitaet}.
-Für die industrielle \ac{EoL}-Versuchsplanung greift dieses idealisierte Setup aus Sicht der spezifischen Datenlage jedoch immer noch zu kurz.
-Reale Lebensdauerdaten sind streng positiv, oftmals rechtsschief verteilt und möglicherweise durch Prüfzeitverkürzungen zensiert \cite{Meeker.2022}.
-In einem finalen Syntheseschritt wird die entwickelte Methodik der Extrapolationsabsicherung mit Aspekten aus Abschnitt~\ref{sec:adaptive_planung} daher in die komplexe stochastische Realität der Zuverlässigkeitstechnik durch die Einführung von \ac{EmALT} überführt.
-Dazu wird das zugrundeliegende Regressionsmodell in ein log-lineares \ac{AFT}-Modell auf Basis einer Weibull-verteilten Lebensdauer $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ transformiert.
+Die vorangegangenen Abschnitte dieses Kapitels bauen die methodischen Grundlagen einer adaptiven Versuchsplanung für die Lebensdauererprobung sukzessive auf:
+In Abschnitt~\ref{sec:abweichungen} evaluieren Sensitivitätsanalysen generelle Einflüsse von Orthogonalitätsabweichungen auf die Variabilität von Trennschärfe (\ac{power}) und Schätzfehler (\textit{Bias}). Diese Betrachtung gipfelt in Abschnitt~\ref{subsec:ergebnisse_generic} in der Erkenntnis, dass praxismotivierte Designmodifikationen hinsichtlich ihrer Auswirkungen auf die statistische Effektivität oftmals tolerabel bleiben.
+Abschnitt~\ref{sec:adaptive_planung} greift diese Erkenntnis auf und bewertet sie aus der Perspektive einer für \acp{ALT} motivierten Optimierung der Prädiktionsvarianz. Es zeigt sich, wie freigewordene Versuchspunkte -- das identifizierte geometrische Gestaltungsbudget -- proaktiv genutzt werden, um die Extrapolationsvarianz für die multidimensionale und beschleunigte Lebensdauererprobung gezielt zu minimieren.
+Abschnitt~\ref{sec:kostenmodell} versieht diese topologischen Aspekte schließlich mit einem monetären Preisschild. Das eingeführte Kostenmodell dient der objektiven Quantifizierung ökonomischer Vergünstigungen, welche aus der asymmetrischen Re-Allokation der Versuchspunkte resultieren.
 
+Der vorliegende Abschnitt bildet abschließend die Brücke zu lebensdauerverteilten Daten. Für die industrielle \ac{EoL}-Versuchsplanung greift das bisherige, idealisierte Setup aus Sicht der spezifischen Datenlage noch zu kurz, da reale Ausfallzeiten streng positiv, oftmals rechtsschief verteilt und durch Prüfzeitverkürzungen zensiert sind \cite{Meeker.2022}. In einem finalen Syntheseschritt erfährt die Methodik der Extrapolationsabsicherung (\textbf{EmALT}) daher den Transfer in die komplexe stochastische Realität der Zuverlässigkeitstechnik.
+Dazu transformiert die Methodik das zugrundeliegende Regressionsmodell in ein log-lineares \ac{AFT}-Modell auf Basis einer Weibull-verteilten Lebensdauer $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ und bettet dieses in die etablierte Monte-Carlo-Simulationsumgebung ein.
+
+Um die Effektivität der adaptiven Extrapolationsabsicherung abschließend zu quantifizieren, evaluiert die nachfolgende \ac{MCS} drei spezifische Design-Konfigurationen gegeneinander. Alle Konfigurationen verfügen über den exakt gleichen Ressourcenaufwand von $\sym{N} = 13$ Versuchspunkten:
+\begin{enumerate}
+    \item \textbf{Basis \ac{CCD} (Referenz):} Der klassische rotationssymmetrische Versuchsplan, bestehend aus dem faktoriellen Kern ($\sym{n}_{\sym{idx_F}}=4$), vier axialen \acp{SP} ($\sym{n}_{\sym{idx_S}}=4$, mit $\symsub{alpha}{idx_D}=\sqrt{2}$) sowie fünf redundanten \acp{ZP} ($\sym{n}_{\sym{idx_C}}=5$).
+    \item \textbf{Passiv ausgedünntes Design ($\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$):} Die aus Abschnitt~\ref{subsec:spv_metrik} als ineffizient identifizierten Stützstellen entfallen ersatzlos. Dies betrifft einen redundanten Zentralpunkt sowie die beiden für die Extrapolation unkritischen Sternpunkte im Bereich der höchsten Belastung (Nordosten: $(0; \symsub{alpha}{idx_D})$ und $(\symsub{alpha}{idx_D};0)$). Dieses künstliche Design dient primär als methodischer Zwischenschritt, um den isolierten Trennschärfe-Verlust dieser spezifischen Fehlstellen im Lebensdauer-Raum zu messen.
+    \item \textbf{\ac{EmALT} (Proaktive Extrapolationsabsicherung):} Das erarbeitete geometrische Budget aus den drei freigewordenen Stützstellen erfährt eine Re-Investition. Gemäß der in Abschnitt~\ref{subsec:evg_plot} beschriebenen \textit{Exposure-Area}-Methode wandern diese drei Prüflinge als asymmetrische Ankerpunkte (\acp{AP}) in den fernen südwestlichen Quadranten, in welchem sich der reale Feldbetriebspunkt befindet. Eine realitätsnahe Allokation, die auch Prüfstandsrestriktionen an den absoluten Belastungsgrenzen berücksichtigt, platziert diese Anker in einem stützenden Dreieck bei $\sym{AP}_1 = (-\symsub{alpha}{idx_D}; -\symsub{alpha}{idx_D})$, $\sym{AP}_2 = (-1; -\symsub{alpha}{idx_D})$ und $\sym{AP}_3 = (-\symsub{alpha}{idx_D}; -1)$ als beispielhafte Variante zur Minimierung der Prädiktionsvarianz.
+\end{enumerate}
+Entsprechend der Vorgehensweise in Abschnitt~\ref{subsec:ergebnisse_generic} evaluiert die \ac{MCS} die drei Design-Varianten auf Basis von $\symsub{n}{idx_MC} = 1\times10^4$ Iterationen.
 
 \subsection{Signal-Rausch-Kalibrierung unter dem Sparsity of Effects Principle} \label{subsec:weibull_kalibrierung}
 
-Um die in der linearen Vorstudie (Abschnitt~\ref{sec:abweichungen}) etablierte methodische Vergleichbarkeit der Trennschärfe-Verluste aufrechtzuerhalten, muss das Referenz-Design für die Weibull-Simulation exakt auf denselben kritischen Arbeitspunkt $\sym{snr} = 1{,}20$, vergleiche Abschnitt~\ref{subsec:ergebnisse_generic} sensibilisiert werden.
+Um die in der linearen Vorstudie (Abschnitt~\ref{sec:abweichungen}) etablierte methodische Vergleichbarkeit der Trennschärfe-Verluste aufrechtzuerhalten, erfährt das Referenz-Design für die Weibull-Simulation eine Sensibilisierung auf exakt denselben kritischen Arbeitspunkt $\sym{snr} = 1{,}20$ (vgl. Abschnitt~\ref{subsec:ergebnisse_generic}).
 Da absolute Regressionskoeffizienten in $\sym{Beta}$ zwischen dem additiven Normalverteilungsraum und Lebensdauermodellen nicht translationsinvariant sind, erfordert dieser Transfer die Ausnutzung der zugrundeliegenden Verteilungsmechanik.
+
 Beim Übergang zum \ac{AFT}-Modell ändert sich die Interpretation des Modells grundlegend:
-Aufgrund der strengen Positivität und der ausgeprägten Wertebereichsdynamik realer Ausfallzeiten wird nicht die Lebensdauer $\sym{t}$ selbst, sondern deren natürlicher Logarithmus $\ln(\sym{t})$ als Zielgröße der Regression modelliert, vergleiche Gleichung~\ref{eq:glm_link}.
-Unterliegt die physikalische Lebensdauer $\sym{t}$ einer Weibull-Verteilung, folgt ihr logarithmierter Wert $\ln(\sym{t})$ axiomatisch einer \sym{SEV} - in der Literatur äquivalent als Gumbel-Verteilung für Minima bezeichnet \cite{Meeker.2022}.
-Das \ac{AFT}-Modell lässt sich in diesem logarithmischen Raum gemäß Gleichung~\ref{eq:glm_link} als lineares Regressionsmodell formulieren:
+Aufgrund der strengen Positivität und der ausgeprägten Wertebereichsdynamik realer Ausfallzeiten modelliert die Regression nicht die Lebensdauer $\sym{t}$ selbst, sondern deren natürlichen Logarithmus $\ln(\sym{t})$ als Zielgröße.
+Unterliegt die physikalische Lebensdauer $\sym{t}$ einer Weibull-Verteilung, folgt ihr logarithmierter Wert $\ln(\sym{t})$ axiomatisch einer \ac{SEV} -- in der Literatur äquivalent als Gumbel-Verteilung für Minima bezeichnet \cite{Meeker.2022}.
+Das \ac{AFT}-Modell formuliert sich in diesem logarithmischen Raum als lineares Regressionsmodell:
 \begin{equation}
     \ln(\sym{t}) = \sym{x}'\sym{beta} + \sym{sigma}_{\textnormal{SEV}} \cdot \sym{epsilon} \quad \text{mit} \quad \sym{epsilon} \sim \textnormal{SEV}(0, 1)
 \end{equation}
-Die für die $\sym{power}$ entscheidende Rauschkomponente ($\sym{sigma}_{\textnormal{SEV}}$) stellt im Weibull-Fall jedoch keine freie Variable dar.
-Sie entspricht exakt dem Skalenparameter der \ac{SEV}, welcher über das Inverse des Weibull-Formparameters $\sym{b}$ intrinsisch an die Werkstoffphysik gekoppelt ist \cite{Meeker.2022}:
+
+Die für die $\sym{power}$ entscheidende Rauschkomponente ($\sym{sigma}_{\textnormal{SEV}}$) stellt im Weibull-Fall jedoch keine freie Variable dar. Sie entspricht exakt dem Skalenparameter der \ac{SEV}, welcher über das Inverse des Weibull-Formparameters $\sym{b}$ intrinsisch an die Werkstoffphysik gekoppelt ist \cite{Meeker.2022}:
 \begin{equation}
     \sym{sigma}_{\textnormal{SEV}} = \frac{1}{\sym{b}}
 \end{equation}
-Unter der werkstoffmechanisch plausiblen Annahme eines progressiven Verschleiß-/Ermüdungsverhaltens wird dieser Formparameter repräsentativ auf $\sym{b} = 3{,}0$ fixiert \cite{Nelson.1990}, was den Skalenparameter deterministisch auf $\sym{sigma}_{\textnormal{SEV}} = 1/3 \approx 0{,}33$ beschränkt.
-Für die methodische Konsistenz ist zu betonen, dass $\sym{sigma}_{\textnormal{SEV}}$ den rein mathematischen Skalenparameter und nicht die tatsächliche Standardabweichung der rechtsschiefen \ac{SEV} darstellt.
-Letztere ist über die Eulersche Konstante definiert und skaliert proportional über den Faktor $\pi / \sqrt{6}$ zu $\sym{sigma}_{\textnormal{total, SEV}} \approx 1{,}28 \cdot \sym{sigma}_{\textnormal{SEV}}$.
-In der mathematischen Statistik der Zuverlässigkeitstechnik ist es jedoch gängige Praxis, das \ac{SNR} invariant auf den Skalenparameter zu beziehen, da dieser als direkter Skalierungsfaktor in $\sym{FIM}$ und somit unmittelbar in die Asymptotik der Likelihood-basierten Prüfmathematik eingeht \cite{Meeker.2022}.
+Unter der werkstoffmechanisch plausiblen Annahme eines progressiven Verschleiß-/Ermüdungsverhaltens fixiert sich dieser Formparameter repräsentativ auf $\sym{b} = 3{,}0$ \cite{Nelson.1990}, was den Skalenparameter deterministisch auf $\sym{sigma}_{\textnormal{SEV}} = 1/3 \approx 0{,}33$ beschränkt.
 
-Während das Streuungsniveau in der Normalverteilungs-Studie (Abschnitt~\ref{sec:abweichungen}) künstlich skaliert wurde ($\sym{sigma} = 5{,}0$), ist das Systemrauschen im \ac{AFT}-Ansatz folglich fixiert.
-Um den kritischen Arbeitspunkt von $\sym{snr} = 1{,}20$ in den Weibull-Raum zu überführen, sind die vorzugebenden Effekte in $\sym{Beta}$ exakt auf diese \ac{SEV}-Streuung zu kalibrieren: $\sym{beta} = \sym{snr} \cdot \sym{sigma}_{\textnormal{SEV}}$.
+Für die methodische Konsistenz bleibt zu betonen, dass $\sym{sigma}_{\textnormal{SEV}}$ den rein mathematischen Skalenparameter und nicht die tatsächliche Standardabweichung der rechtsschiefen \ac{SEV} abbildet. Letztere definiert sich über die Eulersche Konstante und skaliert proportional über den Faktor $\pi / \sqrt{6}$ zu $\sym{sigma}_{\textnormal{total, SEV}} \approx 1{,}28 \cdot \sym{sigma}_{\textnormal{SEV}}$.
+In der mathematischen Statistik der Zuverlässigkeitstechnik etabliert sich jedoch die gängige Praxis, das \ac{SNR} invariant auf den Skalenparameter zu beziehen, da dieser als direkter Skalierungsfaktor in die Fisher-Informationsmatrix eingeht und somit die Asymptotik der Likelihood-basierten Prüfmathematik unmittelbar bestimmt \cite{Meeker.2022}.
+
+Während die Normalverteilungs-Studie das Streuungsniveau künstlich auf $\sym{sigma} = 5{,}0$ skaliert, fixiert der \ac{AFT}-Ansatz das Systemrauschen folglich intrinsisch.
+Um den kritischen Arbeitspunkt von $\sym{snr} = 1{,}20$ in den Weibull-Raum zu überführen, kalibrieren sich die vorzugebenden Effekte in $\sym{Beta}$ exakt auf diese \ac{SEV}-Streuung: $\sym{beta} = \sym{snr} \cdot \sym{sigma}_{\textnormal{SEV}}$.
 Für die quadratischen Modellkomponenten resultiert daraus eine exakte Ziel-Effektstärke von $\sym{beta}_{11} = \sym{beta}_{22} = \sym{beta}_{12} = (1{,}20 \cdot 0{,}33) = 0{,}40$.
+
 Eine physikalisch repräsentative Modellierung von \acp{ALT} erfordert darüber hinaus eine funktionale Differenzierung:
 Ein Anstieg des Stressniveaus induziert im Erwartungsfall eine Beschleunigung der Schädigungsmechanismen und damit eine Reduktion der Lebensdauer.
-Dies wird in der Modellstruktur durch strikt \textit{negative} Vorzeichen der linearen Haupteffekte ($\sym{beta}_1, \sym{beta}_2 < 0$) abgebildet.
-Die relativen Effektstärken werden hierbei hierarchisch gemäß dem empirisch belegten \textit{Sparsity of Effects Principle} \cite{Montgomery.2020} analog zu Abschnitt~\ref{sec:abweichungen} gestaffelt.
+Die Modellstruktur bildet dies durch strikt \textit{negative} Vorzeichen der linearen Haupteffekte ($\sym{beta}_1, \sym{beta}_2 < 0$) ab.
+Die relativen Effektstärken staffeln sich hierbei hierarchisch gemäß dem empirisch belegten \textit{Sparsity of Effects Principle} \cite{Montgomery.2020}.
 Daraus leitet sich die Parametrisierung für die nachfolgende \ac{MCS} ab:
 
 \begin{itemize}
-    \item \textbf{Interaktionen und quadratische Effekte:} Diese Terme höherer Ordnung determinieren die Krümmung der Antwortfläche und werden exakt auf den informationstheoretisch sensiblen Schwellenwert von $\sym{beta}_{11} = \sym{beta}_{22} = \sym{beta}_{12} =  0{,}40$ kalibriert.
+    \item \textbf{Interaktionen und quadratische Effekte:} Diese Terme höherer Ordnung determinieren die Krümmung der Antwortfläche und kalibrieren sich exakt auf den informationstheoretisch sensiblen Schwellenwert von $\sym{beta}_{11} = \sym{beta}_{22} = \sym{beta}_{12} = -0{,}40$.
           Dies gewährleistet im orthogonalen Basis-Design eine hinreichende statistische Referenz-$\sym{power}$ ($\approx 70-80\,\%$), verortet die Effekte methodisch jedoch gezielt im hochgradienten Übergangsbereich der Gütefunktion.
-    \item \textbf{Haupteffekte:} Entsprechend dem Sparsity-Prinzip fungieren sie als dominante, lebensdauermindernde Stressoren und werden mit einer betragsmäßig doppelt so hohen Effektamplitude parametrisiert: $\sym{beta}_1 = \sym{beta}_2 = -0{,}80$.
+    \item \textbf{Haupteffekte:} Entsprechend dem Sparsity-Prinzip fungieren sie als dominante, lebensdauermindernde Stressoren und parametrisieren sich mit einer betragsmäßig doppelt so hohen Effektamplitude: $\sym{beta}_1 = \sym{beta}_2 = -0{,}80$.
           Das korrespondierende \ac{SNR} von $2{,}40$ verleiht diesen Termen eine ausgeprägte statistische Robustheit. Im Kontext des multiplikativen \ac{AFT}-Ansatzes impliziert dies eine Verkürzung der zu erwartenden Lebensdauer um den konstanten Beschleunigungsfaktor $r = \exp(0{,}80) \approx 2{,}22$ pro normierter Stressstufe.
-    \item \textbf{Intercept:} Die Regressionskonstante $\sym{beta}_0$ wird analytisch derart dimensioniert, dass die charakteristische Basislebensdauer $\sym{T}$ im Koordinatenursprung des Versuchsraums ein anwendungsnahes Referenzniveau von ca. $100.000$ Lastwechseln abbildet ($\ln(10^5) \approx 11{,}51$).
+    \item \textbf{Intercept:} Die Regressionskonstante $\sym{beta}_0$ dimensioniert sich analytisch derart, dass die charakteristische Basislebensdauer $\sym{T}$ im Koordinatenursprung des Versuchsraums ein anwendungsnahes Referenzniveau von ca. $100.000$ Lastwechseln abbildet ($\ln(10^5) \approx 11{,}51$).
 \end{itemize}
+
 \begin{table}[htbp]
     \centering
     \caption{Kalibrierte Startwerte und statistische Eigenschaften des log-linearen Weibull-Basismodells (\ac{AFT}-Ansatz)}
@@ -807,29 +815,31 @@ Daraus leitet sich die Parametrisierung für die nachfolgende \ac{MCS} ab:
         \toprule
         \textbf{Koeffizient} & $\sym{beta}_{0}$ & $\sym{beta}_{1}, \sym{beta}_{2}$ & $\sym{beta}_{11}, \sym{beta}_{22}$ & $\sym{beta}_{12}$ & $\sym{sigma}_{\textnormal{SEV}}$ \\
         \midrule
-        Wahrer Wert          & $11{,}51$        & $-0{,}80$                        & $0{,}40$                           & $0{,}40$          & $0{,}33$                         \\
+        Wahrer Wert          & $11{,}51$        & $-0{,}80$                        & $-0{,}40$                          & $-0{,}40$         & $0{,}33$                         \\
         \sym{snr}            & --               & $2{,}40$                         & $1{,}20$                           & $1{,}20$          & --                               \\
         \bottomrule
     \end{tabular}
 \end{table}
-Durch dieses physikalisch wie methodisch konsistente Setup ist gewährleistet, dass jede Varianzinflation, die durch \ac{MLE}-Instabilitäten, Zensierung oder das asymmetrische \textbf{EmALT}-Design entsteht, völlig analog zu Abschnitt~\ref{subsec:ergebnisse_generic} isoliert als prozentualer Trennschärfe-Einbruch an den Krümmungseffekten messbar wird.
-
-
-\subsection{Definition der Vergleichsdesigns und Anker-Allokation} \label{subsec:weibull_designs}
-
-Um die Effizienz der adaptiven Extrapolationsabsicherung abschließend zu quantifizieren, werden im Rahmen der Monte-Carlo-Simulation drei spezifische Design-Konfigurationen gegeneinander evaluiert. Alle Konfigurationen verfügen über den exakt gleichen Ressourcenaufwand von $\sym{N} = 13$ Prüflingen.
-
-\begin{enumerate}
-    \item \textbf{Basis \ac{CCD} (Referenz):} Der klassische rotationssymmetrische Versuchsplan, bestehend aus dem faktoriellen Kern ($\sym{n}_{\sym{idx_F}}=4$), vier axialen Sternpunkten ($\sym{n}_{\sym{idx_S}}=4$, mit $\symsub{alpha}{idx_D}=\sqrt{2}$) sowie fünf redundanten Zentralpunkten ($\sym{n}_{\sym{idx_C}}=5$).
-    \item \textbf{Passiv ausgedünntes Design ($\text{CCD}_{-\text{AP}}$):} Die aus Abschnitt~\ref{subsec:spv_metrik} als ineffizient identifizierten Stützstellen werden ersatzlos gestrichen. Dies betrifft einen redundanten Zentralpunkt sowie die beiden für die Extrapolation unkritischen Sternpunkte im Bereich der höchsten Belastung (Nordosten: $(0; \symsub{alpha}{idx_D})$ und $(\symsub{alpha}{idx_D}; 0)$). Dieses künstliche Design dient primär als methodischer Zwischenschritt, um den isolierten Trennschärfe-Verlust dieser spezifischen Fehlstellen im Lebensdauer-Raum zu messen.
-    \item \textbf{EmALT (Proaktive Extrapolationsabsicherung):} Das erarbeitete geometrische Budget aus den drei freigewordenen Stützstellen wird re-investiert. Gemäß der in Abschnitt~\ref{subsec:evg_plot} beschriebenen \textit{Exposure-Area}-Methode werden diese drei Prüflinge als asymmetrische Ankerpunkte (\acp{AP}) in den fernen südwestlichen Quadranten verschoben, in welchem sich der reale Feldbetriebspunkt befindet. Eine realitätsnahe Allokation, die auch Prüfstandsrestriktionen an den absoluten Belastungsgrenzen berücksichtigt, platziert diese Anker in einem stützenden Dreieck bei $\sym{AP}_1 = (-\symsub{alpha}{idx_D}; -\symsub{alpha}{idx_D})$, $\sym{AP}_2 = (-1; -\symsub{alpha}{idx_D})$ und $\sym{AP}_3 = (-\symsub{alpha}{idx_D}; -1)$.
-\end{enumerate}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Generische Auswirkungen relevanter Orthogonalitätsabweichungen} \label{subsec:spvbias}
+
+Bevor die stochastischen Eigenschaften realer Lebensdauerdaten (wie die Schiefe der Weibull-Verteilung und die numerischen Spezifika der \ac{MLE}) in die Simulation einfließen, bedarf es methodisch zwingend eines analytischen Zwischenschritts.
+In diesem Abschnitt unterliegen die drei definierten Design-Varianten (Basis-\ac{CCD}, $\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$ und \ac{EmALT}) zunächst erneut einer Evaluation unter der Annahme normalverteilter Zielgrößen und linearer \ac{OLS}-Schätzung am neu kalibrierten Arbeitspunkt.
+
+Dieser direkte Abgleich zu den generischen Ergebnissen aus Abschnitt~\ref{subsec:ergebnisse_generic} erweist sich als essenziell: Er ermöglicht es, die isolierten Auswirkungen der massiven, asymmetrischen Stützstellenverschiebung des \ac{EmALT}-Designs auf die klassischen \acp{KPI} (Optimalitätskriterien, \ac{VIF}, \ac{MSE} sowie Trennschärfe und Schätzgüte) unverfälscht zu quantifizieren.
+Ausschließlich durch diesen deterministischen Abgleich lässt sich im späteren Verlauf klar abgrenzen, welche statistischen Effekte auf die reine topologische Geometrie des Versuchsplans und welche auf die stochastische Natur der Lebensdauermodellierung zurückzuführen sind. Demnach erfolgt zunächst die Auswertung der \textit{a priori} Metriken, gefolgt von der Überprüfung der Parameterschätzgüte und der statistischen Trennschärfe.
+
+% HIER FOLGEN DIE GENERISCHEN BERECHNUNGEN (OLS, VIF, MSE, POWER) AUS MATLAB
+
+\subsection{Effizientes \ac{L-DoE}} \label{sec:ldoe}
+
+Nach der rein geometrisch-topologischen Validierung des \ac{EmALT}-Designs vollzieht dieser Abschnitt den finalen Übertrag in die stochastische Welt der Lebensdaueranalyse.
+Auf Basis Weibull-verteilter Ausfallzeiten und einer log-linearen \ac{AFT}-Modellierung findet die Parameteridentifikation nun iterativ via Maximum-Likelihood-Schätzung (\ac{MLE}) statt.
+
+Die numerische Untersuchung evaluiert dabei zunächst erneut die klassischen Gütekriterien (Power und Bias), um die Stabilität des \ac{MLE}-Algorithmus unter asymmetrischer Versuchsplanung nachzuweisen. Darauf aufbauend rückt die finale Modellierung der Zuverlässigkeitsfunktion in den Fokus.
+Es quantifiziert sich, inwiefern sich die topologische Stützung durch \ac{EmALT} auf die tatsächliche Zuverlässigkeitsprädiktion im fernen Feldbereich und die zugehörigen Vertrauensbereiche (Konfidenzintervalle) auswirkt. Die nachfolgend präsentierten Simulationsergebnisse strukturieren sich exakt entlang dieser probabilistischen Bewertungslogik und fassen die holistische Bewertung der multidimensionalen Lebensdauererprobung zusammen.
+
+% HIER FOLGEN DIE WEIBULL-SPEZIFISCHEN BERECHNUNGEN (MLE, ZUVERLÄSSIGKEIT) AUS MATLAB
 
 \subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse} \label{subsubsec:quant_eval_emalt}
 
@@ -915,48 +925,7 @@ In der Gesamtsynthese aus statistischer Modellstabilität (Bias $<1\,\%$), topol
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Effizientes \ac{L-DoE}} \label{sec:ldoe}
-Nachdem die geometrische Wirksamkeit der Extrapolations-\acp{AP} unter idealisierten Bedingungen (Normalverteilung, \ac{OLS}-Schätzer) nachgewiesen wurde, erfolgt in diesem Abschnitt der zwingende methodische Transfer auf die reale Lebensdauererprobung.
-Hierbei unterliegen die Ausfallzeiten einer stochastischen Weibull-Verteilung, weshalb die Modellkoeffizienten iterativ über die \ac{MLE} geschätzt werden.
-Um zu validieren, ob das EmALT-Design auch unter dieser asymmetrischen Fehlerstruktur (bzw. unter der Kleinstwertverteilung im log-linearen Modell) seine Güte beibehält, werden der systematische Schätzfehler (Bias) und die statistische Trennschärfe ($\sym{power}$) erneut quantifiziert.
-
-Um die in der linearen Vorstudie etablierte methodische Vergleichbarkeit aufrechtzuerhalten, wird das zugrundeliegende Referenz-Design für die log-lineare Lebensdauersimulation (\ac{AFT}-Modell) einer analogen Sensibilisierung unterzogen.
-Da absolute Koeffizientenwerte ($\sym{beta}$) zwischen dem additiven Normalverteilungsraum und dem multiplikativen Gumbel-Raum nicht translationsinvariant sind, wird das Konzept der dimensionslosen \sym{snr}-Invarianz angewandt.
-Das auf die kritischen Modellterme kalibrierte Signal-Rausch-Verhältnis von $\sym{snr} = 1{,}20$, eingeführt in Abschnitt \ref{subsec:ergebnisse_generic}, dient dabei als unveränderlicher Transformationsanker.
-Unter der werkstoffmechanisch plausiblen Annahme eines progressiven Verschleißverhaltens wird der Weibull-Formparameter des Grundmodells repräsentativ auf $\sym{b} = 3{,}0$ fixiert \cite{Meeker.2022, Nelson.1990}.
-Dies determiniert den Skalenparameter der log-Lebensdauern (\sym{SEV}-Verteilung) auf $\sym{sigma}_\textnormal{\sym{SEV}} = 1/\sym{b} \approx 0{,}333$.
-Die mathematische Brücke zwischen der additiven OLS-Vorstudie und diesem multiplikativen Lebensdauerbereich wird über die Log-Location-Scale-Transformation geschlagen.
-Folgen die Ausfallzeiten $\symsub{t}{idx_i}$ einer zweiparametrischen Weibull-Verteilung $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$, so folgt die transformierte Zielgröße $\sym{y} = \ln(T)$ definitionsgemäß einer linkssteilen Kleinstwertverteilung \ac{SEV} mit dem Lageparameter $\sym{mu} = \ln(\sym{T})$ und dem Skalenparameter $\sym{sigma}_\textnormal{\sym{SEV}}$.
-Während die Varianz der Normalverteilung nach Abschnitt~\ref{subsec:ergebnisse_generic} direkt durch $\sym{sigma}^2$ gegeben ist, bestimmt sich die theoretische Varianz der \ac{SEV}-verteilten Residuen im log-linearen \ac{AFT}-Modell maßgeblich über die Eulersche Konstante und verhält sich strikt invers proportional zum quadrierten Weibull-Formparameter \cite{Meeker.2022}:
-\begin{equation} \label{eq:sev_variance}
-    \sym{Var}(\sym{y}) = \sym{sigma}_\textnormal{\sym{SEV}}^2 \cdot \frac{\pi^2}{6} = \frac{\pi^2}{6 \cdot \sym{b}^2}.
-\end{equation}
-Da der Formparameter $\sym{b}$ somit als reiner Skalierungsfaktor der stochastischen Streuung im log-Raum wirkt, bleibt die relative Informationsstruktur des Versuchsplans gegenüber Absolutwerten von $\sym{b}$ invariant.
-Dies legitimiert es, die Vergleichbarkeit der beiden Simulationsphasen nicht über absolute Varianzen, sondern über das dimensionslose Verhältnis von Struktureffekten zu Verteilungsrauschen ($\sym{snr} = \sym{beta} / \sym{sigma}_\textnormal{\sym{SEV}}$) zu definieren.
-Die physikalische Repräsentativität von \acp{EoL} erfordert daher, konform zum in der Vorstudie etablierten \textit{Sparsity of Effects Principle} \cite{Montgomery.2020}, eine hierarchische Differenzierung der $\sym{idx_i}=6$ Modellkoeffizienten ($\symsub{beta}{idx_i}$).
-Zusätzlich muss berücksichtigt werden, dass es sich bei den untersuchten Faktoren um lebensdauermindernde Stressoren handelt.
-Ein Anstieg des Stressniveaus induziert für den mechanischen Normalfall physikalisch eine Reduktion der Lebensdauer, was im \ac{AFT}-Ansatz durch \textit{negative} Vorzeichen der linearen Haupteffekte ($\sym{beta}_1, \sym{beta}_2 < 0$) abgebildet wird.
-
-Um die Trennschärfe-Verluste ($\Delta \sym{power}$) durch geometrische Manipulationen am \ac{CCD} - insbesondere die Verschiebung von Sternpunkten beim EmALT - maximal sichtbar zu machen, wird die \textit{analytische Lupe} erneut gezielt auf die quadratischen Effekte und die Wechselwirkung appliziert.
-Entsprechend werden die wahren Koeffizienten wie folgt initialisiert:
-Die Haupteffekte werden als dominante, lebensdauermindernde Stressoren mit $\sym{beta}_{1,2} = -0{,}80$ definiert - vergleiche Tabelle~\ref{tab:simulation_parameters_weibull}.
-Dies entspricht exakt dem fixierten \ac{SNR} von $2{,}40$ aus der OLS-Vorstudie (vgl. Abschnitt~\ref{subsec:ergebnisse_generic}) und resultiert in einem praxisnahen Beschleunigungsfaktor von $r = \exp(0{,}80) \approx 2{,}23$ beziehungsweise einem Lebensdauerverhältnis von $L_V = 1/r \approx 0{,}45$ in den jeweiligen Stressachsen.
-Die Interaktion sowie die quadratischen Krümmungseffekte werden exakt auf den sensiblen Arbeitspunkt von $\sym{beta}_{11,22,12} = \pm 0{,}40$ ($\sym{snr} = 1{,}20$) gesetzt. Der Intercept $\sym{beta}_0 = 9{,}21$ definiert die Basislebensdauer $\symsub{t}{idx_0} = \exp(9{,}21) \approx 10.000$ im Versuchszentrum.
-\begin{table}[htbp]
-    \centering
-    \caption{Invariante Parameter-Konfiguration und physikalische Metriken des log-linearen Weibull-Lebensdauermodells (kompakte Darstellung)}
-    \label{tab:simulation_parameters_weibull}
-    \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{@{}lccccc@{}}
-        \toprule
-        \textbf{Metrik}    & $\sym{beta}_{0}$                   & $\sym{beta}_{1}, \sym{beta}_{2}$     & $\sym{beta}_{11}, \sym{beta}_{22}$ & $\sym{beta}_{12}$ & $\sym{b}$                                           \\
-        \midrule
-        Wahrer Wert        & $9{,}21$                           & $-0{,}80$                            & $-0{,}40$                          & $-0{,}40$         & $3{,}00$                                            \\
-        \sym{snr} / Effekt & $\symsub{t}{idx_0} \approx 10.000$ & $2{,}40$ ($\sym{LV} \approx 0{,}45$) & $1{,}20$                           & $1{,}20$          & $\sym{sigma}_\textnormal{\sym{SEV}} \approx 0{,}33$ \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-Durch dieses dimensionslos invariante und physikalisch konsistente Setup wird gewährleistet, dass die stochastische Auswertung reale Degradationsphänomene abbildet.
-Jegliche Varianzinflation, die durch Design-Modifikationen im EmALT-Design entsteht, führt bei den kritisch kalibrierten Effekten zweiter Ordnung zum sofortigen und methodisch direkt vergleichbaren Einbruch der Nachweiswahrscheinlichkeit, noch bevor die dominanten Haupteffekte gefährdet sind.
+Einbruch der Nachweiswahrscheinlichkeit, noch bevor die dominanten Haupteffekte gefährdet sind.
 
 
 \subsubsection{Systematischer Schätzfehler der Maximum-Likelihood-Schätzung}
