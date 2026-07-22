@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+    \centering
+    \caption{Relativer systematischer Schätzfehler (Bias) in Prozent bei OLS-Baseline ($\sym{snr}=2{,}4$).}
+    \label{tab:results_emalt_bias_ols}
+    \renewcommand{\arraystretch}{1.2}
+    \small
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l rrrrrr@{}}
+        \toprule
+        \textbf{Szenario} & \textbf{$\hat{\sym{beta}}_{0}$} & \textbf{$\hat{\sym{beta}}_{1}$} & \textbf{$\hat{\sym{beta}}_{2}$} & \textbf{$\hat{\sym{beta}}_{12}$} & \textbf{$\hat{\sym{beta}}_{11}$} & \textbf{$\hat{\sym{beta}}_{22}$} \\
+        \midrule
+        Basis \ac{CCD} & $+0{,}01\,\%$ & $+0{,}02\,\%$ & $+0{,}08\,\%$ & $+0{,}09\,\%$ & $+0{,}42\,\%$ & $-0{,}41\,\%$ \\
+        $\ac{CCD}_{-\ac{AP}}$ & $-0{,}14\,\%$ & $-0{,}13\,\%$ & $+0{,}14\,\%$ & $+0{,}96\,\%$ & $-0{,}19\,\%$ & $-0{,}38\,\%$ \\
+        EmALT & $+0{,}24\,\%$ & $-0{,}22\,\%$ & $+0{,}15\,\%$ & $-0{,}12\,\%$ & $+0{,}59\,\%$ & $+0{,}10\,\%$ \\
+        \bottomrule
+    \end{tabular*}
+\end{table}

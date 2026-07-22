@@ -21,7 +21,7 @@ Zur richtungsabhängigen Veranschaulichung dieser Extrapolationsabsicherung wird
 
 Darauf aufbauend werden die bis dato unter Normalverteilungsannahme abgeleiteten Design-Modifikationen in Abschnitt~\ref{sec:weibull_transfer} auf multivariate Lebensdauermodelle übertragen.
 Anhand lebensdauerverteilter Daten $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ und der Parameteridentifikation via \ac{MLE} wird validiert, ob das \ac{CCD} auch mit adaptivem Brückenbau und unter erschwerten Bedingungen von Zensierungen und Lebensdauerskalierungen seine überlegene Prognosefähigkeit behält, welche maßgeblich über die resultierenden Konfidenzintervalle im Prognosebereich (Feldlast-Niveau) evaluiert wird.
-Den Abschluss bildet in Abschnitt \ref{subsec:kostenmodell} eine ökonomische Effizienz- und Kostenmodellierung, die das holistische Bild vervollständigt.
+Den Abschluss bildet in Abschnitt \ref{sec:kostenmodell} eine ökonomische Effizienz- und Kostenmodellierung, die das holistische Bild vervollständigt.
 Indem die resultierenden Testlaufzeiten in reale Prüfstandskosten übersetzt werden, wird die statistische Testgüte - repräsentiert durch \ac{power} und \ac{SPV} - direkt mit dem monetären Aufwand verknüpft.
 Nur durch diesen finalen Trade-off lässt sich die zentrale Kernfrage der Effizienz beantworten: \textit{Wie viel Trennschärfe ist finanzierbar?}
 
@@ -790,11 +790,11 @@ In der mathematischen Statistik der Zuverlässigkeitstechnik etabliert sich jedo
 
 Während die Normalverteilungs-Studie das Streuungsniveau künstlich auf $\sym{sigma} = 5{,}0$ skaliert, fixiert der \ac{AFT}-Ansatz das Systemrauschen folglich intrinsisch.
 Um den kritischen Arbeitspunkt von $\sym{snr} = 1{,}20$ in den Weibull-Raum zu überführen, kalibrieren sich die vorzugebenden Effekte in $\sym{Beta}$ exakt auf diese \ac{SEV}-Streuung: $\sym{beta} = \sym{snr} \cdot \sym{sigma}_{\textnormal{SEV}}$.
-Für die quadratischen Modellkomponenten resultiert daraus eine exakte Ziel-Effektstärke von $\sym{beta}_{11} = \sym{beta}_{22} = \sym{beta}_{12} = (1{,}20 \cdot 0{,}33) = 0{,}40$.
+Für die quadratischen Modellkomponenten resultiert daraus eine exakte Ziel-Effektstärke von $\sym{beta}_{11} = \sym{beta}_{22} = \sym{beta}_{12} = \left\lvert 1{,}20 \cdot 0{,}33\right\rvert  = \left\lvert 0{,}40\right\rvert $.
 
 Eine physikalisch repräsentative Modellierung von \acp{ALT} erfordert darüber hinaus eine funktionale Differenzierung:
 Ein Anstieg des Stressniveaus induziert im Erwartungsfall eine Beschleunigung der Schädigungsmechanismen und damit eine Reduktion der Lebensdauer.
-Die Modellstruktur bildet dies durch strikt \textit{negative} Vorzeichen der linearen Haupteffekte ($\sym{beta}_1, \sym{beta}_2 < 0$) ab.
+Die Modellstruktur bildet dies durch strikt \textit{negative} Vorzeichen der Effekte ab.
 Die relativen Effektstärken staffeln sich hierbei hierarchisch gemäß dem empirisch belegten \textit{Sparsity of Effects Principle} \cite{Montgomery.2020}.
 Daraus leitet sich die Parametrisierung für die nachfolgende \ac{MCS} ab:
 
@@ -821,15 +821,91 @@ Daraus leitet sich die Parametrisierung für die nachfolgende \ac{MCS} ab:
     \end{tabular}
 \end{table}
 
-\subsection{Generische Auswirkungen relevanter Orthogonalitätsabweichungen} \label{subsec:spvbias}
+\subsection{Generische Auswirkungen asymmetrischer Versuchsplanung} \label{subsec:spvbias}
 
-Bevor die stochastischen Eigenschaften realer Lebensdauerdaten (wie die Schiefe der Weibull-Verteilung und die numerischen Spezifika der \ac{MLE}) in die Simulation einfließen, bedarf es methodisch zwingend eines analytischen Zwischenschritts.
-In diesem Abschnitt unterliegen die drei definierten Design-Varianten (Basis-\ac{CCD}, $\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$ und \ac{EmALT}) zunächst erneut einer Evaluation unter der Annahme normalverteilter Zielgrößen und linearer \ac{OLS}-Schätzung am neu kalibrierten Arbeitspunkt.
+Analog zur Methodik aus Abschnitt~\ref{subsec:ergebnisse_generic} erfolgt die Auswertung der drei Design-Konfigurationen in einer stringenten zweistufigen Sequenz: Zunächst quantifizieren \textit{a priori} Design-Metriken den topologischen Orthogonalitätsverlust, bevor die probabilistische \ac{MCS} die tatsächlichen Auswirkungen auf Schätzpräzision und Entdeckungswahrscheinlichkeit beziffert.
 
-Dieser direkte Abgleich zu den generischen Ergebnissen aus Abschnitt~\ref{subsec:ergebnisse_generic} erweist sich als essenziell: Er ermöglicht es, die isolierten Auswirkungen der massiven, asymmetrischen Stützstellenverschiebung des \ac{EmALT}-Designs auf die klassischen \acp{KPI} (Optimalitätskriterien, \ac{VIF}, \ac{MSE} sowie Trennschärfe und Schätzgüte) unverfälscht zu quantifizieren.
-Ausschließlich durch diesen deterministischen Abgleich lässt sich im späteren Verlauf klar abgrenzen, welche statistischen Effekte auf die reine topologische Geometrie des Versuchsplans und welche auf die stochastische Natur der Lebensdauermodellierung zurückzuführen sind. Demnach erfolgt zunächst die Auswertung der \textit{a priori} Metriken, gefolgt von der Überprüfung der Parameterschätzgüte und der statistischen Trennschärfe.
+Die algebraische Auswertung (Tabelle~\ref{tab:results_emalt_metrics}) bestätigt das erwartete Spannungsfeld: Der proaktive asymmetrische Eingriff beim \ac{EmALT} erzwingt einen partiellen Verlust der strengen Orthogonalität (messbar im Anstieg von $\sym{A2}$ und $\ac{VIF}$). Im direkten Vergleich zum rein passiv ausgedünnten Design ($\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$) belegt die \textit{I-Effizienz} jedoch den strukturellen Mehrwert der Re-Allokation: Das geometrische Budget verpufft nicht ersatzlos, sondern stützt die integrierte Vorhersagevarianz ab.
 
-% HIER FOLGEN DIE GENERISCHEN BERECHNUNGEN (OLS, VIF, MSE, POWER) AUS MATLAB
+\input{tables/tab_results_emalt_metrics.tex}
+
+Die stochastische Auswertung validiert diese topologischen Indikatoren probabilistisch. Die fundamentale Erwartungstreue des \ac{OLS}-Schätzers bleibt unter asymmetrischen Bedingungen gewahrt; der \textit{Bias} verharrt über alle Design-Varianten hinweg auf einem vernachlässigbaren Niveau marginal nahe Null (vgl. Tabelle~\ref{tab:results_emalt_bias} sowie Abbildung~\ref{fig:ma_abb5.4.1_betadev}). Die einwandfreie numerische Konvergenz (Abbildung~\ref{fig:ma_abb5.4.1_betakonv}) sowie theoretisch konforme $\sym{p-Wert}$-Histogramme (Abbildung~\ref{fig:ma_abb5.4.1_phisto}) schließen numerische Artefakte aus.
+
+\input{tables/tab_results_emalt_bias.tex}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{6cm}
+    \input{plots/ma_abb5.4.1_betadev.tex}
+    \caption{Absolute Schätzwerte der Modellkoeffizienten für die asymmetrischen Designvarianten am Arbeitspunkt $\sym{snr}=1{,}20$. Der Bias bleibt marginal; die Erwartungstreue des \ac{OLS}-Schätzers bleibt gewahrt.}
+    \label{fig:ma_abb5.4.1_betadev}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{5cm}
+    \input{plots/ma_abb5.4.1_betakonv.tex}
+    \caption{Numerische Konvergenz der Schätzwerte über die Monte-Carlo-Iterationen, stellvertretend für die methodische Stabilität der asymmetrischen Auswertung.}
+    \label{fig:ma_abb5.4.1_betakonv}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{5cm}
+    \input{plots/ma_abb5.4.1_phisto.tex}
+    \caption{$\sym{p-Wert}$ Histogramme der verglichenen Designvarianten. Der konforme Verlauf belegt die Abwesenheit systematischer Verzerrungen in der Signifikanzprüfung.}
+    \label{fig:ma_abb5.4.1_phisto}
+\end{figure}
+
+Der geometrische Eingriff entlädt sich folglich primär in der Schätzvarianz (\ac{MSE}, vgl. Tabelle~\ref{tab:results_emalt_mse} und Abbildung~\ref{fig:ma_abb5.4.1_msedev}). Zwar weitet die induzierte Multikollinearität die Vertrauensbereiche auf, doch erweist sich das \ac{EmALT}-Design der ersatzlosen Ausdünnung als deutlich überlegen. Die re-investierten Extrapolations-\acp{AP} dämpfen den \ac{MSE} im direkten Vergleich signifikant.
+
+\input{tables/tab_results_emalt_mse.tex}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{6cm}
+    \input{plots/ma_abb5.4.1_msedev.tex}
+    \caption{Güte der Schätzer (\ac{MSE}). Der durch den Wegfall der Sternpunkte induzierte Varianzanstieg wird durch die strategische Positionierung der Ankerpunkte im \ac{EmALT} effektiv abgefedert.}
+    \label{fig:ma_abb5.4.1_msedev}
+\end{figure}
+
+Dieser dämpfende Effekt schlägt sich unmittelbar in der Erhaltung der statistischen Trennschärfe ($\sym{power}$) nieder (Tabelle~\ref{tab:results_emalt_power} und Abbildung~\ref{fig:ma_abb5.4.1_powerdev}).
+Während das passiv ausgedünnte Design ($\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$) einen massiven Einbruch der Entdeckungswahrscheinlichkeit -- insbesondere bei den für die Krümmung essenziellen quadratischen Termen -- verzeichnet, fängt das \ac{EmALT}-Design diesen Verlust hochgradig effektiv ab. Es übertrifft die reduzierte Designvariante substanziell und unterschreitet das makellose Niveau des voll-orthogonalen Basis-\ac{CCD} lediglich marginal.
+
+\input{tables/tab_results_emalt_power.tex}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{6cm}
+    \input{plots/ma_abb5.4.1_powerdev.tex}
+    \caption{Vergleichende Analyse der statistischen Trennschärfe. Die asymmetrische Extrapolationsabsicherung (\ac{EmALT}) stellt die Detektionsrate im Vergleich zur reinen Ausdünnung nahezu vollständig wieder her.}
+    \label{fig:ma_abb5.4.1_powerdev}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{5cm}
+    \input{plots/ma_abb5.4.1_powerkonv.tex}
+    \caption{Numerische Konvergenz der empirischen Trennschärfe ($\sym{power}$) über die Simulationsläufe.}
+    \label{fig:ma_abb5.4.1_powerkonv}
+\end{figure}
+
+Abschließend verifiziert Abbildung~\ref{fig:ma_abb5.4.1_korrelation} erneut die deterministische Kopplung zwischen Geometrie und Stochastik: Der Trennschärfe-Verlust skaliert streng proportional zum Anstieg des \ac{MSE} sowie invers zum Abfall der \textit{I-Effizienz}. Jegliche Variation der Modellgüte im additiven Normalverteilungsraum lässt sich somit exklusiv auf den variablen \ac{VIF} der modifizierten Design-Topologie zurückführen. Alle im nachfolgenden Transfer auf Lebensdauermodelle auftretenden Effekte ordnen sich damit unmissverständlich der stochastischen Natur der Weibull-Verteilung und der iterativen \ac{MLE}-Approximation zu.
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{4.5cm}
+    \input{plots/ma_abb5.4.1_korrelation.tex}
+    \caption{Korrelation zwischen a priori Design-Metriken und dem resultierenden Trennschärfe-Erhalt. Der \ac{MSE} fungiert als primärer Übersetzer des geometrischen Defizits in die probabilistische Trennschärfe.}
+    \label{fig:ma_abb5.4.1_korrelation}
+\end{figure}
 
 \subsection{Effizientes \ac{L-DoE}} \label{sec:ldoe}
 
@@ -841,72 +917,6 @@ Es quantifiziert sich, inwiefern sich die topologische Stützung durch \ac{EmALT
 
 % HIER FOLGEN DIE WEIBULL-SPEZIFISCHEN BERECHNUNGEN (MLE, ZUVERLÄSSIGKEIT) AUS MATLAB
 
-\subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse} \label{subsubsec:quant_eval_emalt}
-
-Zur finalen Validierung des entwickelten adaptiven Versuchsplans (\textbf{EmALT}) erfolgt nachfolgend die quantitative Auswertung der Schätzgüte und Modellstabilität.
-Unter der Annahme eines praxisnahen \textit{Signal-to-Noise Ratios} von $\sym{snr}=1{,}20$ analog zu Abschnitt~\ref{subsec:ergebnisse_generic} wird das neu konfigurierte EmALT-Design direkt dem ungestörten Basis-\ac{CCD} sowie einem reduzierten Design ohne ausgleichende Ankerpunkte ($\ac{CCD}_{-\ac{AP}}$) gegenübergestellt.
-Die Analyse stützt sich dabei iterativ auf die kombinierten topologischen Metriken, die absolute Schätzvarianz (\ac{MSE}), die Erwartungstreue (Bias) sowie die resultierende statistische Trennschärfe ($\sym{power}$).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Topologische und informationsbasierte Metriken}
-Tabelle~\ref{tab:results_emalt_metrics} fasst die grundlegenden Matrixeigenschaften und Effizienzen zusammen.
-Das EmALT-Design verzeichnet durch die gezielte Platzierung der Extrapolations-\acp{AP} naturgemäß einen Anstieg der Nicht-Orthogonalität, was durch den Indikator $\sym{A2} = 2{,}596$ quantifiziert wird.
-Diese gewollte Asymmetrie ist der methodische Preis für den Brückenbau in Richtung des Prognosepunktes.
-Gleichzeitig belegt die \textbf{D-Effizienz} den enormen geometrischen Hebel der Modifikation:
-Sie steigt beachtlich von $56{,}9\,\%$ (Basis) auf $68{,}9\,\%$ (EmALT) an, was für ein exzellentes, aufgespanntes Design-Volumen spricht.
-Die \ac{VIF}-Werte weisen erwartungsgemäß eine zielgerichtete Varianzinflation auf (insbesondere für $\hat{\sym{beta}}_2$ mit $3{,}84$ und $\hat{\sym{beta}}_{22}$ mit $5{,}91$).
-Diese lokale Inflation im Hauptdesign ist der kalkulierte Trade-off, um im Gegenzug eine massive Varianzabsenkung auf dem fernen Extrapolationspfad zu erzwingen.
-
-\input{tables/tab_results_emalt_metrics.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Absolute Schätzvarianz und Prognoseunsicherheit (MSE)}
-Der direkte Blick auf den \ac{MSE} in Tabelle~\ref{tab:results_emalt_mse} beweist die exzellente Kompensationsfähigkeit des EmALT-Ansatzes. Ein unkompensierter Entfall von Stützstellen ($\ac{CCD}_{-\ac{AP}}$) treibt den mittleren quadratischen Fehler über alle Modellterme hinweg unweigerlich in die Höhe.
-Durch die strategische Re-Investition des Budgets in Form von \acp{AP} stabilisiert EmALT die Modellschätzung enorm: Der \ac{MSE} des quadratischen Terms $\hat{\sym{beta}}_{22}$ sinkt mit $4{,}61$ sogar signifikant \textit{unter} das Niveau des ungestörten Basis-\ac{CCD} ($8{,}02$). Auch die Interaktion $\hat{\sym{beta}}_{12}$ wird mit einem \ac{MSE} von $11{,}13$ effizienter geschätzt als im Basis-Design ($13{,}97$). Das adaptierte Design tauscht somit punktuell Varianz ein, um hochgradig relevante Modellterme maßgeblich zu präzisieren.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Systematischer Schätzfehler (Bias)}
-Trotz der geometrischen Asymmetrie und der leichten Varianzinflation belegt die Monte-Carlo-Simulation die absolute Stabilität des \ac{OLS}-Schätzers. Wie Tabelle~\ref{tab:results_emalt_bias} sowie die korrespondierenden Abweichungs-Plots (Abbildung~\ref{fig:ma_abb5.4.1_betadev} und der p-Wert-Verlauf in Abbildung~\ref{fig:ma_abb5.4.1_phisto_all}) eindrücklich zeigen, verbleibt der systematische Schätzfehler (Bias) für alle Koeffizienten auf einem verschwindend geringen Niveau von weit unter $1\,\%$. Die Erwartungstreue des Modells bleibt durch die EmALT-Modifikation vollumfänglich und unangetastet erhalten.
-
-\input{tables/tab_results_emalt_bias.tex}
-
-\begin{figure}[htbp]
-    \centering
-    \setlength\figurewidth{0.8\textwidth}
-    \setlength\figureheight{5cm}
-    \input{plots/ma_abb5.4.1_betadev.tex}
-    \caption{Erwartungstreue der Modellparameter: Der Schätzwert $\hat{\sym{thet}}_{\sym{idx_i}}$ verbleibt auch unter asymmetrischer EmALT-Modifikation stabil auf dem wahren Wert (Bias $< 1\,\%$).}
-    \label{fig:ma_abb5.4.1_betadev}
-\end{figure}
-
-\begin{figure}[htbp]
-    \centering
-    \setlength\figurewidth{0.8\textwidth}
-    \setlength\figureheight{4cm}
-    \input{plots/ma_abb5.4.1_phisto_all.tex}
-    \caption{Relative Häufigkeitsverteilung der p-Werte über alle Simulationsiterationen, welche die numerische Konvergenz und Robustheit der Modellauswertung bestätigt.}
-    \label{fig:ma_abb5.4.1_phisto_all}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsubsection{Statistische Trennschärfe ($\sym{power}$)}
-Die finale Metrik für die Praxistauglichkeit stellt die statistische Trennschärfe dar (vgl. Tabelle~\ref{tab:results_emalt_power} und Abbildung~\ref{fig:ma_abb5.4.1_powerdev}).
-Ein ungestützter Verlust von Versuchspunkten ($\ac{CCD}_{-\ac{AP}}$) führt unweigerlich zu kritischen Power-Einbrüchen von bis zu $-19{,}7\,\%$. Das EmALT-Design federt diesen Verlust nicht nur massiv ab, sondern generiert partiell signifikante Leistungsgewinne: Für die kritische Interaktion $\hat{\sym{beta}}_{12}$ steigt die Power um $+4{,}3\,\%$, für den quadratischen Term $\hat{\sym{beta}}_{22}$ gar um herausragende $+7{,}5\,\%$.
-Die leichten Verluste bei den Haupteffekten $\hat{\sym{beta}}_1$ und $\hat{\sym{beta}}_2$ ($-8{,}4\,\%$ und $-9{,}1\,\%$) sind überaus tolerabel.
-Wie Abbildung~\ref{fig:ma_abb5.4.1_powerdev} illustriert, verbleibt die absolute Power für die wesentlichen Terme des EmALT-Designs sicher über der Gütegrenze von $60\,\%$, wobei $\hat{\sym{beta}}_{22}$ mit knapp $77\,\%$ ein hochgradig gesundes Erkennungsniveau erreicht.
-
-\begin{figure}[htbp]
-    \centering
-    \setlength\figurewidth{0.8\textwidth}
-    \setlength\figureheight{6cm}
-    \input{plots/ma_abb5.4.1_powerdev.tex}
-    \caption{Absolutes Niveau der statistischen Trennschärfe ($\sym{power}$). Das EmALT-Design hält die wesentlichen Modellterme über der kritischen $60\,\%$-Marke und verzeichnet bei $\hat{\sym{beta}}_{22}$ ein besonders robustes Erkennungsniveau von nahezu $80\,\%$.}
-    \label{fig:ma_abb5.4.1_powerdev}
-\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

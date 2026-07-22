@@ -1,0 +1,102 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.681\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+bar shift auto,
+xmin=0.51,
+xmax=6.49,
+xtick={1.00,2.00,3.00,4.00,5.00,6.00},
+xticklabels={{$\sym{beta}_0$},{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
+ymin=-10.00,
+ymax=25.00,
+ylabel style={font=\color{mycolor1}},
+ylabel={Schätzwert $\hat{\sym{thet}}_{\sym{idx_i}}$},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25},
+legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left}
+]
+\addplot[ybar, bar width=0.178, fill=black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	24.03\\
+2.00	11.98\\
+3.00	12.07\\
+4.00	-6.02\\
+5.00	-6.03\\
+6.00	-5.98\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.51	0.00\\
+6.49	0.00\\
+};
+\addlegendentry{Basis \ac{CCD}}
+
+\addplot[ybar, bar width=0.178, fill=white!60!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	24.02\\
+2.00	11.94\\
+3.00	11.89\\
+4.00	-6.16\\
+5.00	-6.03\\
+6.00	-5.99\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.51	0.00\\
+6.49	0.00\\
+};
+\addlegendentry{$\ac{CCD}_{-\ac{AP}}$}
+
+\addplot[ybar, bar width=0.178, fill=white!30!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	24.12\\
+2.00	11.97\\
+3.00	12.06\\
+4.00	-6.06\\
+5.00	-6.05\\
+6.00	-6.06\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.51	0.00\\
+6.49	0.00\\
+};
+\addlegendentry{EmALT}
+
+\addplot [color=black, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+0.65	24.00\\
+1.35	24.00\\
+};
+\addplot [color=black, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+1.65	12.00\\
+2.35	12.00\\
+};
+\addplot [color=black, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+2.65	12.00\\
+3.35	12.00\\
+};
+\addplot [color=black, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+3.65	-6.00\\
+4.35	-6.00\\
+};
+\addplot [color=black, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+4.65	-6.00\\
+5.35	-6.00\\
+};
+\addplot [color=black, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+5.65	-6.00\\
+6.35	-6.00\\
+};
+\addlegendentry{Wahrer Wert}
+
+\end{axis}
+\end{tikzpicture}%
