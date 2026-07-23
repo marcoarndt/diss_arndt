@@ -21,24 +21,27 @@
 \contentsline {table}{\numberline {5.6}{\ignorespaces Matrix\-eigenschaften und Effizienzen zu Optimalitäts\-kriterien der simulierten Störszenarien. Der \cgls {VIF} wird für alle Haupt- und quadratischen Terme dargestellt ($\hat {\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath {\ensuremath {\beta }}}}}_0$ entfällt theoriekonform).}}{92}{table.caption.74}%
 \contentsline {table}{\numberline {5.7}{\ignorespaces Simulations\-ergebnisse: Relativer systematischer Schätzfehler (Bias) der einzelnen Koeffizienten in Prozent bezogen auf ihren Nominalwert bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=2{,}4$.}}{94}{table.caption.76}%
 \contentsline {table}{\numberline {5.8}{\ignorespaces Simulations\-ergebnisse: Durchschnittliche Trennschärfe-Änderung ($\Delta \glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$) der Koeffizienten. Ein negatives Vorzeichen indiziert einen Verlust, ein positives Vorzeichen einen Gewinn an $\glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$ verglichen zur Referenz (Basis \cgls {CCD})}}{96}{table.caption.79}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces Kalibrierte Startwerte und statistische Eigenschaften des log-linearen Weibull-Basismodells (\cgls {AFT}-Ansatz)}}{116}{table.caption.91}%
-\contentsline {table}{\numberline {5.10}{\ignorespaces Matrix\-eigenschaften und Effizienzen. Der \cgls {VIF} wird für alle Terme dargestellt ($\hat {\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath {\ensuremath {\beta }}}}}_0$ entfällt).}}{117}{table.caption.92}%
-\contentsline {table}{\numberline {5.11}{\ignorespaces Relativer systematischer Schätzfehler (Bias) in Prozent bei OLS-Baseline ($\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=2{,}4$).}}{117}{table.caption.93}%
-\contentsline {table}{\numberline {5.12}{\ignorespaces Schätzvarianz (\cgls {MSE}) der einzelnen Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1{,}33$.}}{119}{table.caption.97}%
-\contentsline {table}{\numberline {5.13}{\ignorespaces Durchschnittlicher Trenn\-schärfe-Verlust ($\Delta \glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$) bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1{,}33$.}}{120}{table.caption.99}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces Indikative Relationen der Kostenpositionen in Bezug auf die Gesamtinvestition $\glsadd {C}\glslink {C}{\textcolor {blue}{\ensuremath {\ensuremath {C}}}}_{\glsadd {idx_cost_test_eq}\glslink {idx_cost_test_eq}{\textcolor {blue}{\ensuremath {\ensuremath {\textnormal {T}}}}}}$ für beispielhafte, typische Komponentenprüfstände im Maschinenbau.}}{113}{table.caption.91}%
+\contentsline {table}{\numberline {5.10}{\ignorespaces Kalibrierte Startwerte und statistische Eigenschaften des log-linearen Weibull-Basismodells (\cgls {AFT}-Ansatz)}}{118}{table.caption.92}%
+\contentsline {table}{\numberline {5.11}{\ignorespaces Matrix\-eigenschaften und Effizienzen. Der \cgls {VIF} wird für alle Terme dargestellt ($\hat {\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath {\ensuremath {\beta }}}}}_0$ entfällt).}}{118}{table.caption.93}%
+\contentsline {table}{\numberline {5.12}{\ignorespaces Relativer systematischer Schätzfehler (Bias) in Prozent bei OLS-Baseline ($\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1{,}2$).}}{119}{table.caption.94}%
+\contentsline {table}{\numberline {5.13}{\ignorespaces Schätzvarianz (\cgls {MSE}) der einzelnen Koeffizienten bei OLS-Baseline ($\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1{,}2$).}}{120}{table.caption.97}%
+\contentsline {table}{\numberline {5.14}{\ignorespaces Durchschnittlicher Trenn\-schärfe-Verlust ($\Delta \glsadd {power}\glslink {power}{\textcolor {blue}{\ensuremath {\ensuremath {power}}}}$) bei OLS-Baseline ($\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=1{,}2$).}}{121}{table.caption.98}%
+\contentsline {table}{\numberline {5.15}{\ignorespaces Matrix\-eigenschaften und Effizienzen. Der \cgls {VIF} wird für alle Terme dargestellt ($\hat {\glsadd {beta}\glslink {beta}{\textcolor {blue}{\ensuremath {\ensuremath {\beta }}}}}_0$ entfällt).}}{123}{table.caption.100}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces Ganzheitliche ökonomisch-statistische Gegenüberstellung aller Modellkoeffizienten. Der Index $\Xi _{\textnormal {eco}, i}$ quantifiziert die prädiktive Effizienz unter Berücksichtigung der Erwartungskosten $\PazoBB {E}[\glsadd {C}\glslink {C}{\textcolor {blue}{\ensuremath {\ensuremath {C}}}}_{\textnormal {total}}]$.}}{127}{table.caption.104}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B1}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}}{143}{table.caption.108}%
-\contentsline {table}{\numberline {B2}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}}{144}{table.caption.109}%
-\contentsline {table}{\numberline {B3}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}}{145}{table.caption.110}%
-\contentsline {table}{\numberline {B4}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}}{146}{table.caption.111}%
-\contentsline {table}{\numberline {B5}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}}{147}{table.caption.112}%
-\contentsline {table}{\numberline {B6}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}}{148}{table.caption.113}%
-\contentsline {table}{\numberline {B7}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}}{149}{table.caption.114}%
-\contentsline {table}{\numberline {B8}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}}{150}{table.caption.115}%
-\contentsline {table}{\numberline {B9}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}}{151}{table.caption.116}%
-\contentsline {table}{\numberline {C1}{\ignorespaces Simulations\-ergebnisse: Schätzvarianz (\cgls {MSE}) der einzelnen Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=2{,}4$.}}{152}{table.caption.117}%
+\contentsline {table}{\numberline {B1}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}}{149}{table.caption.111}%
+\contentsline {table}{\numberline {B2}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}}{150}{table.caption.112}%
+\contentsline {table}{\numberline {B3}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}}{151}{table.caption.113}%
+\contentsline {table}{\numberline {B4}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}}{152}{table.caption.114}%
+\contentsline {table}{\numberline {B5}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}}{153}{table.caption.115}%
+\contentsline {table}{\numberline {B6}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}}{154}{table.caption.116}%
+\contentsline {table}{\numberline {B7}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}}{155}{table.caption.117}%
+\contentsline {table}{\numberline {B8}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}}{156}{table.caption.118}%
+\contentsline {table}{\numberline {B9}{\ignorespaces Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}}{157}{table.caption.119}%
+\contentsline {table}{\numberline {C1}{\ignorespaces Simulations\-ergebnisse: Schätzvarianz (\cgls {MSE}) der einzelnen Koeffizienten bei $\glsadd {snr}\glslink {snr}{\textcolor {blue}{\ensuremath {\textnormal {SNR}}}}=2{,}4$.}}{158}{table.caption.120}%
 \contentsfinish 
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

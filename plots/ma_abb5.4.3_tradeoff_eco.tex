@@ -1,0 +1,97 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.06600,0.44300,0.74500}%
+\definecolor{mycolor2}{rgb}{0.86600,0.32900,0.00000}%
+\definecolor{mycolor3}{rgb}{0.92900,0.69400,0.12500}%
+\definecolor{mycolor4}{rgb}{0.52100,0.08600,0.81900}%
+\definecolor{mycolor5}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.425\figurewidth,
+height=0.954\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=0.00,
+xmax=32.53,
+xlabel style={font=\color{mycolor5}},
+xlabel={Prädiktionsvarianz $\sym{SPV}_{\textnormal{ext}}$},
+ymin=0.00,
+ymax=55364.81,
+ylabel style={font=\color{mycolor5}},
+ylabel={Erwartungskosten $\mathbb{E}[\sym{C}_{\textnormal{total}}]$ [kCU]},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor5}},
+title={\textbf{Trade-off: Kosten vs. Prognosegüte}},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25},
+legend style={legend cell align=left, align=left}
+]
+\addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}]
+  table[row sep=crcr]{%
+30.02	49432.87\\
+};
+\addlegendentry{Basis \ac{CCD}}
+
+\addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}]
+  table[row sep=crcr]{%
+30.12	43807.62\\
+};
+\addlegendentry{$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$}
+
+\addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}]
+  table[row sep=crcr]{%
+2.39	48615.65\\
+};
+\addlegendentry{\ac{EmALT}}
+
+\addplot [color=mycolor4, line width=1.0pt, only marks, mark size=2.2pt, mark=triangle*, mark options={solid, fill=white, draw=black}]
+  table[row sep=crcr]{%
+2.60	44265.80\\
+};
+\addlegendentry{Feld-\ac{CCD}}
+
+\end{axis}
+
+\begin{axis}[%
+width=0.425\figurewidth,
+height=0.954\figureheight,
+at={(0.575\figurewidth,0\figureheight)},
+scale only axis,
+xmin=46.40,
+xmax=72.89,
+xlabel style={font=\color{mycolor5}},
+xlabel={Klassische $\sym{D}_{\textnormal{eff}}$ [\%]},
+ymin=0.00,
+ymax=6289.20,
+ylabel style={font=\color{mycolor5}},
+ylabel={Wirtschaftlichkeits-Index $\Xi_{\textnormal{eco}, \sym{beta}_{22}}$},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor5}},
+title={\textbf{Klassik vs. Ökonomie ($\sym{beta}_{22}$)}},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.25}
+]
+\addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}, forget plot]
+  table[row sep=crcr]{%
+56.90	606.56\\
+};
+\node[centered, align=center, inner sep=0, font=\color{mycolor5}]
+at (axis cs:56.902,915.861) {Basis \ac{CCD}};
+\addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}, forget plot]
+  table[row sep=crcr]{%
+50.40	606.34\\
+};
+\node[centered, align=center, inner sep=0, font=\color{mycolor5}]
+at (axis cs:50.397,915.641) {$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$};
+\addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}, forget plot]
+  table[row sep=crcr]{%
+68.89	5155.08\\
+};
+\node[centered, align=center, inner sep=0, font=\color{mycolor5}]
+at (axis cs:68.888,5464.388) {\ac{EmALT}};
+\end{axis}
+\end{tikzpicture}%

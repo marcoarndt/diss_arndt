@@ -1,15 +1,19 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
-[0] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
-[79] biber-MSWIN64:340> INFO - === 
-[109] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
-[279] Biber.pm:994> INFO - Found 120 citekeys in bib section 0
-[292] Biber.pm:4463> INFO - Processing section 0
-[301] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[369] bibtex.pm:1713> INFO - LaTeX decoding ...
-[600] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[949] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[950] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[950] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[951] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[998] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[1117] bbl.pm:779> INFO - Output to diss_arndt.bbl
+[1] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
+[88] biber-MSWIN64:340> INFO - === 
+[125] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
+[339] Biber.pm:994> INFO - Found 124 citekeys in bib section 0
+[353] Biber.pm:4463> INFO - Processing section 0
+[362] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[433] bibtex.pm:1713> INFO - LaTeX decoding ...
+[689] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[1096] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1096] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1096] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[1097] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[1149] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[1288] bbl.pm:779> INFO - Output to diss_arndt.bbl
+[1290] Biber.pm:131> WARN - misc entry 'AfA.2000' (bibliography.bib): Invalid format '23.07.2026' of date field 'urldate' - ignoring
+[1290] Biber.pm:131> WARN - legacy year field '2005-12' in entry 'VDI2884' is not an integer - this will probably not sort properly.
+[1290] Biber.pm:131> WARN - legacy year field '1962-10' in entry 'VDI3258' is not an integer - this will probably not sort properly.
+[1291] Biber.pm:133> INFO - WARNINGS: 3
