@@ -842,12 +842,20 @@ Die relativen Effektstärken staffeln sich hierbei hierarchisch gemäß dem empi
 Daraus leitet sich die Parametrisierung für die nachfolgende \ac{MCS} ab:
 
 \begin{itemize}
-    \item \textbf{Interaktionen und quadratische Effekte:} Diese Terme höherer Ordnung determinieren die Krümmung der Antwortfläche und kalibrieren sich exakt auf den informationstheoretisch sensiblen Schwellenwert von $\sym{beta}_{11} = \sym{beta}_{22} = \sym{beta}_{12} = -0{,}40$.
-          Dies gewährleistet im orthogonalen Basis-Design eine hinreichende statistische Referenz-$\sym{power}$ ($\approx 70-80\,\%$), verortet die Effekte methodisch jedoch gezielt im hochgradienten Übergangsbereich der Gütefunktion.
+    \item \textbf{Interaktionen und quadratische Effekte:} Diese Terme höherer Ordnung determinieren die Krümmung der Antwortfläche (vgl. Abbildung \ref{fig:ma_abb5.4.3_response_surface}) und kalibrieren sich betragsmäßig auf den informationstheoretisch sensiblen Schwellenwert von $\vert{}\sym{beta}_{ij}\vert{} = 0{,}40$.
+          Dies gewährleistet im orthogonalen Basis-Design eine hinreichende statistische Referenz-$\sym{power}$ ($\approx 70-80\,\%$).
+          Die methodische Vorzeichenwahl ist hierbei physikalisch determiniert: Um eine valide Extrapolation in den Bereich extrem milder Feldlasten (negative Faktorstufen) zu ermöglichen, erzwingen positive quadratische Terme ($\sym{beta}_{11} = \sym{beta}_{22} = 0{,}40$) ein streng monotones Ansteigen der Systemlebensdauer im \ac{AFT}-Ansatz. Der synergistische Interaktionsterm verbleibt negativ ($\sym{beta}_{12} = -0{,}40$), um antagonistische Kompensations-Effekte bei kombinierter Extrembelastung auszuschließen.
     \item \textbf{Haupteffekte:} Entsprechend dem Sparsity-Prinzip fungieren sie als dominante, lebensdauermindernde Stressoren und parametrisieren sich mit einer betragsmäßig doppelt so hohen Effektamplitude: $\sym{beta}_1 = \sym{beta}_2 = -0{,}80$.
-          Das korrespondierende \ac{SNR} von $2{,}40$ verleiht diesen Termen eine ausgeprägte statistische Robustheit. Im Kontext des multiplikativen \ac{AFT}-Ansatzes impliziert dies eine Verkürzung der zu erwartenden Lebensdauer um den konstanten Beschleunigungsfaktor $r = \exp(0{,}80) \approx 2{,}22$ pro normierter Stressstufe.
+          Das korrespondierende \ac{SNR} von $2{,}40$ verleiht diesen Termen eine ausgeprägte statistische Robustheit.
+          Im Kontext des multiplikativen \ac{AFT}-Ansatzes impliziert dies eine Verkürzung der zu erwartenden Lebensdauer um den konstanten Beschleunigungsfaktor $r = \exp(0{,}80) \approx 2{,}22$ pro normierter Stressstufe.
     \item \textbf{Intercept:} Die Regressionskonstante $\sym{beta}_0$ dimensioniert sich analytisch derart, dass die charakteristische Basislebensdauer $\sym{T}$ im Koordinatenursprung des Versuchsraums ein anwendungsnahes Referenzniveau von ca. $100.000$ Lastwechseln abbildet ($\ln(10^5) \approx 11{,}51$).
 \end{itemize}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{plots/ma_abb5.4.3_response_surface.pdf}
+    \caption{Antwortfläche der charakteristischen Systemlebensdauer $\sym{T}$ in Abhängigkeit der Faktoren $\sym{x}_{1}$ und $\sym{x}_{2}$. Die Projektion verdeutlicht die massive Extrapolationsdistanz zwischen dem \ac{DoE}-Zentrum und den geforderten Feld-Bedingungen.}
+    \label{fig:ma_abb5.4.3_response_surface}
+\end{figure}
 
 \begin{table}[htbp]
     \centering
@@ -858,7 +866,7 @@ Daraus leitet sich die Parametrisierung für die nachfolgende \ac{MCS} ab:
         \toprule
         \textbf{Koeffizient} & $\sym{beta}_{0}$ & $\sym{beta}_{1}, \sym{beta}_{2}$ & $\sym{beta}_{11}, \sym{beta}_{22}$ & $\sym{beta}_{12}$ & $\sym{sigma}_{\textnormal{SEV}}$ \\
         \midrule
-        Wahrer Wert          & $11{,}51$        & $-0{,}80$                        & $-0{,}40$                          & $-0{,}40$         & $0{,}33$                         \\
+        Wahrer Wert          & $11{,}51$        & $-0{,}80$                        & $-0{,}40$                          & $0{,}40$          & $0{,}33$                         \\
         \sym{snr}            & --               & $2{,}40$                         & $1{,}20$                           & $1{,}20$          & --                               \\
         \bottomrule
     \end{tabular}
@@ -930,7 +938,7 @@ Auf Basis Weibull-verteilter Ausfallzeiten und einer log-linearen \ac{AFT}-Model
 Dieser Wechsel der mathematischen Domäne impliziert jedoch weit mehr als den Austausch des Schätzalgorithmus: Er aktiviert zwingend die in Abschnitt~\ref{sec:kostenmodell} eingeführte dynamische Kostenstruktur der Lebensdauererprobung.
 
 In klassischen, landwirtschaftlichen oder chemischen Versuchsplänen entsprechen die experimentellen Kosten zumeist linear der bloßen Anzahl an Versuchen ($\sym{C} \propto \sym{N}$).
-In der Lebensdauererprobung erweist sich eine solche Entkopplung jedoch als physikalisch unzulässig, da die Zielgröße selbst -- die Ausfallzeit $\sym{t}_{\sym{idx_i}}$ -- als der primäre Kostentreiber fungiert.
+In der Lebensdauererprobung erweist sich eine solche Entkopplung jedoch als physikalisch unzulässig, da die Zielgröße selbst - die Ausfallzeit $\sym{t}_{\sym{idx_i}}$ - als der primäre Kostentreiber fungiert.
 Die Designmatrix $\sym{X}$ und die resultierenden Versuchskosten $\sym{C}_{\sym{idx_cost_total}}$ sind dadurch stochastisch hart gekoppelt.
 Dieser Umstand zwingt die Versuchsplanung in einen fundamentalen Zielkonflikt:
 Das \ac{EmALT}-Design verschiebt Extrapolations-\acp{AP} in Richtung geringerer Stressniveaus (Südwesten des Parameterraums), um die Prädiktionsvarianz im Feld zu stützen.
@@ -1000,7 +1008,7 @@ Ein rein statistikgetriebenes Festhalten am voll-orthogonalen Basis-Design erwei
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.95\textwidth}
+    \setlength\figurewidth{0.90\textwidth}
     \setlength\figureheight{6.5cm}
     \input{plots/ma_abb5.4.3_tradeoff_eco.tex}
     \caption{Ökonomisch-statistischer Trade-off: Gegenüberstellung von Erwartungskosten $\mathbb{E}[\sym{C}_{\textnormal{total}}]$, Prädiktionsvarianz $\sym{SPV}_{\textnormal{ext}}$ und klassischer D-Effizienz.}

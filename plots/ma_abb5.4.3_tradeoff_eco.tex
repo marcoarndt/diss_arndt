@@ -18,7 +18,7 @@ xmax=32.53,
 xlabel style={font=\color{mycolor5}},
 xlabel={Prädiktionsvarianz $\sym{SPV}_{\textnormal{ext}}$},
 ymin=0.00,
-ymax=55364.81,
+ymax=142456.24,
 ylabel style={font=\color{mycolor5}},
 ylabel={Erwartungskosten $\mathbb{E}[\sym{C}_{\textnormal{total}}]$ [kCU]},
 axis background/.style={fill=white},
@@ -31,25 +31,25 @@ legend style={legend cell align=left, align=left}
 ]
 \addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}]
   table[row sep=crcr]{%
-30.02	49432.87\\
+30.02	54700.84\\
 };
 \addlegendentry{Basis \ac{CCD}}
 
 \addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}]
   table[row sep=crcr]{%
-30.12	43807.62\\
+30.12	47994.29\\
 };
 \addlegendentry{$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$}
 
 \addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}]
   table[row sep=crcr]{%
-2.39	48615.65\\
+2.39	79813.91\\
 };
 \addlegendentry{\ac{EmALT}}
 
 \addplot [color=mycolor4, line width=1.0pt, only marks, mark size=2.2pt, mark=triangle*, mark options={solid, fill=white, draw=black}]
   table[row sep=crcr]{%
-2.60	44265.80\\
+2.60	127193.07\\
 };
 \addlegendentry{Feld-\ac{CCD}}
 
@@ -65,7 +65,7 @@ xmax=72.89,
 xlabel style={font=\color{mycolor5}},
 xlabel={Klassische $\sym{D}_{\textnormal{eff}}$ [\%]},
 ymin=0.00,
-ymax=6289.20,
+ymax=4469.30,
 ylabel style={font=\color{mycolor5}},
 ylabel={Wirtschaftlichkeits-Index $\Xi_{\textnormal{eco}, \sym{beta}_{22}}$},
 axis background/.style={fill=white},
@@ -77,21 +77,21 @@ grid style={dotted, opacity=0.25}
 ]
 \addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}, forget plot]
   table[row sep=crcr]{%
-56.90	606.56\\
+56.90	548.14\\
 };
-\node[centered, align=center, inner sep=0, font=\color{mycolor5}]
-at (axis cs:56.902,915.861) {Basis \ac{CCD}};
+\node[below, align=center, inner sep=0, font=\color{mycolor5}]
+at (axis cs:56.902,767.944) {Basis \ac{CCD}};
 \addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}, forget plot]
   table[row sep=crcr]{%
-50.40	606.34\\
+50.40	553.44\\
 };
-\node[centered, align=center, inner sep=0, font=\color{mycolor5}]
-at (axis cs:50.397,915.641) {$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$};
+\node[below, align=center, inner sep=0, font=\color{mycolor5}]
+at (axis cs:50.397,773.245) {$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$};
 \addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}, forget plot]
   table[row sep=crcr]{%
-68.89	5155.08\\
+68.89	3663.36\\
 };
-\node[centered, align=center, inner sep=0, font=\color{mycolor5}]
-at (axis cs:68.888,5464.388) {\ac{EmALT}};
+\node[below, align=center, inner sep=0, font=\color{mycolor5}]
+at (axis cs:68.888,3883.165) {\ac{EmALT}};
 \end{axis}
 \end{tikzpicture}%
