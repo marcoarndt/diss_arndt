@@ -20,3 +20,5 @@
 {"rule":"DE_CASE","sentence":"^\\QAusfallrate (engl. Hazard-Function) - Momentanes Ausfallrisiko, bedingt auf das Überleben bis \\E(?:Dummy|Ina|Jimmy-|Dummy-|Maniquí-|Maniquíes-|Dummy\\+|Dummy's\\+)[0-9]+\\Q.\\E$"}
 {"rule":"DE_COMPOUND_COHERENCY","sentence":"^\\QDesign Resolution (Auflösung): Für den Fall, dass ultimativ dennoch viele vermeintlich relevante Faktoren aus dem Screening-Prozess resultieren, verbleiben nur Screening-Designs für die weitere experimentell empirische Analyse.\\E$"}
 {"rule":"DE_COMPOUND_COHERENCY","sentence":"^\\QOrthogonalitätsabweichungen in der Zuverlässigkeitsprognose.\\E$"}
+{"rule":"DE_CASE","sentence":"^\\QPseudo-physikalisches Simulationsmodell Das zugrundeliegende Systemverhalten im Sinne einer Ground Truth wird durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert.\\E$"}
+{"rule":"DE_CASE","sentence":"^\\QSimulationsalgorithmus und Monte-Carlo-Ansatz Das Modell der Ground Truth wird zunächst mit den zu untersuchenden Versuchsplänen gekoppelt.\\E$"}

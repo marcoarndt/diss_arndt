@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  24 JUL 2026 15:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  30 JUL 2026 00:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1746,7 +1746,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--329
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--330
  [] [] 
  []
 
@@ -1774,7 +1774,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--178
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--177
  [] [] 
  []
 
@@ -1799,20 +1799,20 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--209
+Underfull \hbox (badness 10000) in paragraph at lines 208--208
 []|\T1/qpl/m/n/12 (+10) Orthogonale Pro-jek-ti-ons-ma-trix, Prä-dik-ti-ons-ma-trix, Hat-
  []
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 390.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 389.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 2173) in paragraph at lines 565--565
+Underfull \hbox (badness 2173) in paragraph at lines 564--564
 []|\T1/qpl/m/n/12 (+10) Standardisierte Va-ria-ble der Kleinst-wert-ver-tei-lung (SEV);
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--566
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--565
  [] [] 
  []
 
@@ -2545,17 +2545,17 @@ Package pdftex.def Info: plots/ma_abb5.2.2_exposure_scatter.pdf  used on input l
 [106]
 
 [107 <./plots/ma_abb5.2.2_exposure_scatter.pdf>]
-<plots/ma_abb5.2.2_contour.pdf, id=4848, 349.305pt x 271.0125pt>
+<plots/ma_abb5.2.2_contour.pdf, id=4850, 349.305pt x 271.0125pt>
 File: plots/ma_abb5.2.2_contour.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.2_contour.pdf>
-Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 668.
+Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 669.
 (pdftex.def)             Requested size: 348.2631pt x 270.21783pt.
 
 
 [108 <./plots/ma_abb5.2.2_contour.pdf>] (plots/ma_abb5.2.2_evg.tex)
 
 [109]
-Overfull \hbox (18.45692pt too wide) in paragraph at lines 713--716
+Overfull \hbox (14.50089pt too wide) in paragraph at lines 714--717
 \T1/qpl/m/n/12 (-10) vi-du-el-len Lauf-zei-ten $[][][][][][][][]$ der Prüf-lin-ge ab. Dies gilt ins-be-son-de-re für [][][]EoL[][]-Untersuchungen,
  []
 
@@ -2568,35 +2568,35 @@ Overfull \hbox (18.45692pt too wide) in paragraph at lines 713--716
 [112]
 
 [113]
-Overfull \hbox (18.74652pt too wide) in paragraph at lines 804--805
+
+[114]
+Overfull \hbox (18.74652pt too wide) in paragraph at lines 806--807
 \T1/qpl/m/n/12 (-10) quan-ti-fi-zie-ren, eva-lu-iert die nach-fol-gen-de [][][]MCS[][] drei spe-zi-fi-sche Design-Konfigurationen
  []
 
 
-
-[114]
-Overfull \hbox (5.45706pt too wide) in paragraph at lines 808--809
+Overfull \hbox (5.45706pt too wide) in paragraph at lines 810--811
 \T1/qpl/m/n/12 (-10) sche Bud-get aus den drei frei-ge-wor-de-nen Stütz-stel-len er-fährt ei-ne Re-Investition.
- []
-
-
-Overfull \hbox (3.35179pt too wide) in paragraph at lines 817--821
-[]\T1/qpl/m/n/12 (-10) Beim Über-gang zum [][][]AFT[][]-Modell än-dert sich die In-ter-pre-ta-ti-on des Mo-dells grund-
  []
 
 
 
 [115]
+Overfull \hbox (3.35179pt too wide) in paragraph at lines 819--823
+[]\T1/qpl/m/n/12 (-10) Beim Über-gang zum [][][]AFT[][]-Modell än-dert sich die In-ter-pre-ta-ti-on des Mo-dells grund-
+ []
+
+
 
 [116]
-<plots/ma_abb5.4.3_response_surface.pdf, id=5200, 410.53375pt x 240.9pt>
-File: plots/ma_abb5.4.3_response_surface.pdf Graphic file (type pdf)
-<use plots/ma_abb5.4.3_response_surface.pdf>
-Package pdftex.def Info: plots/ma_abb5.4.3_response_surface.pdf  used on input line 855.
-(pdftex.def)             Requested size: 304.72772pt x 178.8109pt.
-
 
 [117]
+<plots/ma_abb5.4.3_response_surface.pdf, id=5203, 406.51875pt x 238.8925pt>
+File: plots/ma_abb5.4.3_response_surface.pdf Graphic file (type pdf)
+<use plots/ma_abb5.4.3_response_surface.pdf>
+Package pdftex.def Info: plots/ma_abb5.4.3_response_surface.pdf  used on input line 857.
+(pdftex.def)             Requested size: 304.72772pt x 179.08144pt.
+
 
 [118 <./plots/ma_abb5.4.3_response_surface.pdf>] (tables/tab_results_emalt_metrics_ols.tex) (tables/tab_results_emalt_bias_ols.tex
 Underfull \hbox (badness 3209) in paragraph at lines 3--3
@@ -2619,28 +2619,18 @@ Package pgfplots Warning: the current plot has no coordinates (or all have been 
 [122]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cgls' on input line 934.
+(hyperref)                removing `\cgls' on input line 936.
 
 
 
 [123] (tables/tab_results_emalt_wbl_metrics.tex)
-Overfull \hbox (33.65343pt too wide) in paragraph at lines 962--964
+Overfull \hbox (33.65343pt too wide) in paragraph at lines 965--967
 \T1/qpl/m/n/12 (-10) Schätzung un-ter asym-me-tri-schen Be-din-gun-gen. Zwar weist die Likelihood-Approximation
  []
 
+(plots/ma_abb5.4.3_betadev_wbl.tex)
 
-
-[124] (plots/ma_abb5.4.3_betadev_wbl.tex
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 111.
-
- [warning /pgfplots/warning/plot without coordinates]
-) (plots/ma_abb5.4.3_phisto_all_wbl.tex
-
-Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 167.
-
- [warning /pgfplots/warning/plot without coordinates]
-) (plots/ma_abb5.4.3_powerdev_wbl.tex)
+[124] (plots/ma_abb5.4.3_phisto_all_wbl.tex) (plots/ma_abb5.4.3_powerdev_wbl.tex)
 
 [125]
 
@@ -2805,17 +2795,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 78392 strings out of 473577
- 1813734 string characters out of 5716318
- 4040656 words of memory out of 5000000
- 99151 multiletter control sequences out of 15000+600000
+ 78393 strings out of 473577
+ 1813760 string characters out of 5716318
+ 4040654 words of memory out of 5000000
+ 99152 multiletter control sequences out of 15000+600000
  762746 words of font info for 441 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,26n,121p,10968b,3730s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (193 pages, 3368979 bytes).
+Output written on diss_arndt.pdf (193 pages, 3339693 bytes).
 PDF statistics:
- 6782 PDF objects out of 7423 (max. 8388607)
+ 7361 PDF objects out of 7423 (max. 8388607)
  839 named destinations out of 1000 (max. 500000)
  103680 words of extra memory for PDF output out of 106986 (max. 10000000)
 

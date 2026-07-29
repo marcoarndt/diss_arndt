@@ -661,6 +661,7 @@ Die grau hinterlegte Anker-Exposition markiert dabei exakt jenen Parameterbereic
     \label{fig:ma_abb5.2.2_exposure_scatter}
 \end{figure}
 Werden, wie in diesem Beispiel, konkrete Ankerpunkte identifiziert und fixiert, lässt sich das resultierende asymmetrische Design zur Überprüfung in einem 3D-Konturplot visualisieren (vgl. Abbildung~\ref{fig:ma_abb5.2.2_contour}).
+Beispielhaft zu dieser Stelle sowie in den nachfolgenden Abschnitten werden hier die \acp{AP} auf die Koordinaten $(-0{,}85 ; -2{,}60)$, $(-1{,}10 ; -2{,}35)$ und $(-0{,}85 ; -2{,}35)$ fixiert und als und das Design-Layout \ac{EmALT} evaluiert.
 Hierbei wird deutlich, wie die gesetzten \acp{AP} die Varianztopologie im Zielquadranten eindrücken und den divergierenden Anstieg der \ac{SPV} gezielt dämpfen.
 
 \begin{figure}[htbp]
@@ -711,7 +712,7 @@ An dieser Stelle werden zunächst die zugrundeliegenden Kostenpositionen, deren 
 Die detaillierte quantitative Auswertung dieses Modells erfolgt im Rahmen der Gesamtbewertung in Abschnitt~\ref{sec:weibull_transfer}, sobald die stochastischen Eigenschaften realer Lebensdauerdaten in die Betrachtung integriert sind.
 
 Auch bei einer vorab fest definierten Anzahl an Versuchspunkten ($\sym{N}$) und vorgegebenen Replikationen hängen die realen Versuchskosten maßgeblich von den individuellen Laufzeiten $\sym{t}_{\sym{idx_i}}$ der Prüflinge ab.
-Dies gilt insbesondere für \ac{EoL}-Untersuchungen, bei denen Prüflinge oftmals sequenziell und bis zum Ausfallereignis unter stark variierenden Lastniveaus getestet werden.
+Dies gilt insbesondere für \ac{EoL}\-Untersuchungen, bei denen Prüflinge oftmals sequenziell und bis zum Ausfallereignis unter stark variierenden Lastniveaus getestet werden.
 Um diese Aufwände generisch und unabhängig vom spezifischen Prüflingstyp bilanzieren zu können, werden die Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ in drei wesentliche Hauptdomänen unterteilt \cite{Arndt.2025}:
 
 \begin{enumerate}
@@ -749,7 +750,7 @@ Hilfs- und Betriebsstoffe ($\sym{C}_{\sym{idx_cost_help}}$), wie Schmier- und K�
 Die Umgebungskosten ($\sym{C}_{\sym{idx_cost_ambient}}$) hingegen bilden den statischen Sockelbetrag: Sie werden in der Regel nach dem Verursacherprinzip über den Flächenbedarf des Prüfstandes umgelegt und verhalten sich unabhängig vom aktuellen Rüstzustand oder der Auslastung \cite{VDI3258}.
 
 Tabelle~\ref{tab:cost_relations_capex} fasst diese ingenieurspraktischen Größenordnungen zusammen.
-Sie ordnet die identifizierten Kostenpositionen indikativ der Gesamtinvestition (\ac{CapEx}) des Prüfstandes zu.
+Sie ordnet die identifizierten Kostenpositionen indikativ den gesamten \ac{CapEx} des Prüfstandes zu.
 Diese normierten Verhältnisangaben verdeutlichen das Spannungsfeld zwischen statischer Anlagenbereitstellung und dynamischer Laufzeit und dienen als Basis für die spätere Parametrierung der stochastischen Simulation.
 
 \begin{table}[htbp]
@@ -799,13 +800,14 @@ Abschnitt~\ref{sec:adaptive_planung} greift diese Erkenntnis auf und bewertet si
 Abschnitt~\ref{sec:kostenmodell} versieht diese topologischen Aspekte schließlich mit einem monetären Preisschild. Das eingeführte Kostenmodell dient der objektiven Quantifizierung ökonomischer Vergünstigungen, welche aus der asymmetrischen Re-Allokation der Versuchspunkte resultieren.
 
 Der vorliegende Abschnitt bildet abschließend die Brücke zu lebensdauerverteilten Daten. Für die industrielle \ac{EoL}-Versuchsplanung greift das bisherige, idealisierte Setup aus Sicht der spezifischen Datenlage noch zu kurz, da reale Ausfallzeiten streng positiv, oftmals rechtsschief verteilt und durch Prüfzeitverkürzungen zensiert sind \cite{Meeker.2022}. In einem finalen Syntheseschritt erfährt die Methodik der Extrapolationsabsicherung (\textbf{EmALT}) daher den Transfer in die komplexe stochastische Realität der Zuverlässigkeitstechnik.
+Das gewählte \ac{EmALT} orientiert sich wie gehabt an dem in Abschnitt~\ref{subsec:evg_plot} beispielhaft gewählten Set an \acp{AP} im südwestlichen Quadranten, um die Prädiktionsvarianz entlang des Extrapolationsvektors zum realen Feldbetriebspunkt zu minimieren.
 Dazu transformiert die Methodik das zugrundeliegende Regressionsmodell in ein log-lineares \ac{AFT}-Modell auf Basis einer Weibull-verteilten Lebensdauer $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ und bettet dieses in die etablierte Monte-Carlo-Simulationsumgebung ein.
 
 Um die Effektivität der adaptiven Extrapolationsabsicherung abschließend zu quantifizieren, evaluiert die nachfolgende \ac{MCS} drei spezifische Design-Konfigurationen gegeneinander. Alle Konfigurationen verfügen über den exakt gleichen Ressourcenaufwand von $\sym{N} = 13$ Versuchspunkten:
 \begin{enumerate}
     \item \textbf{Basis \ac{CCD} (Referenz):} Der klassische rotationssymmetrische Versuchsplan, bestehend aus dem faktoriellen Kern ($\sym{n}_{\sym{idx_F}}=4$), vier axialen \acp{SP} ($\sym{n}_{\sym{idx_S}}=4$, mit $\symsub{alpha}{idx_D}=\sqrt{2}$) sowie fünf redundanten \acp{ZP} ($\sym{n}_{\sym{idx_C}}=5$).
     \item \textbf{Passiv ausgedünntes Design ($\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$):} Die aus Abschnitt~\ref{subsec:spv_metrik} als ineffizient identifizierten Stützstellen entfallen ersatzlos. Dies betrifft einen redundanten Zentralpunkt sowie die beiden für die Extrapolation unkritischen Sternpunkte im Bereich der höchsten Belastung (Nordosten: $(0; \symsub{alpha}{idx_D})$ und $(\symsub{alpha}{idx_D};0)$). Dieses künstliche Design dient primär als methodischer Zwischenschritt, um den isolierten Trennschärfe-Verlust dieser spezifischen Fehlstellen im Lebensdauer-Raum zu messen.
-    \item \textbf{\ac{EmALT} (Proaktive Extrapolationsabsicherung):} Das erarbeitete geometrische Budget aus den drei freigewordenen Stützstellen erfährt eine Re-Investition. Gemäß der in Abschnitt~\ref{subsec:evg_plot} beschriebenen \textit{Exposure-Area}-Methode wandern diese drei Prüflinge als asymmetrische Ankerpunkte (\acp{AP}) in den fernen südwestlichen Quadranten, in welchem sich der reale Feldbetriebspunkt befindet. Eine realitätsnahe Allokation, die auch Prüfstandsrestriktionen an den absoluten Belastungsgrenzen berücksichtigt, platziert diese Anker in einem stützenden Dreieck bei $\sym{AP}_1 = (-\symsub{alpha}{idx_D}; -\symsub{alpha}{idx_D})$, $\sym{AP}_2 = (-1; -\symsub{alpha}{idx_D})$ und $\sym{AP}_3 = (-\symsub{alpha}{idx_D}; -1)$ als beispielhafte Variante zur Minimierung der Prädiktionsvarianz.
+    \item \textbf{\ac{EmALT} (Proaktive Extrapolationsabsicherung):} Das erarbeitete geometrische Budget aus den drei freigewordenen Stützstellen erfährt eine Re-Investition. Gemäß der in Abschnitt~\ref{subsec:evg_plot} beschriebenen \textit{Exposure-Area}-Methode wandern diese drei Prüflinge als asymmetrische Ankerpunkte (\acp{AP}) in den fernen südwestlichen Quadranten, in welchem sich der reale Feldbetriebspunkt befindet. Eine realitätsnahe Allokation, die auch Prüfstandsrestriktionen an den absoluten Belastungsgrenzen berücksichtigt, platziert diese Anker in einem stützenden LAyout entsprechend Abschnitt~\ref{subsec:evg_plot} bei $(-0{,}85 ; -2{,}60)$, $(-1{,}10 ; -2{,}35)$ und $(-0{,}85 ; -2{,}35)$ als beispielhafte Variante zur Minimierung der Prädiktionsvarianz.
 \end{enumerate}
 Entsprechend der Vorgehensweise in Abschnitt~\ref{subsec:ergebnisse_generic} evaluiert die \ac{MCS} die drei Design-Varianten auf Basis von $\symsub{n}{idx_MC} = 1\times10^4$ Iterationen.
 
@@ -934,16 +936,17 @@ Alle im nachfolgenden Transfer auf Lebensdauermodelle auftretenden Effekte ordne
 \subsection{Effizientes \ac{L-DoE} und der Economic Extrapolation Power Index} \label{sec:ldoe}
 
 Nach der rein geometrisch-topologischen Validierung des \ac{EmALT}-Designs vollzieht dieser Abschnitt den finalen Übertrag in die stochastische und ökonomische Realität der Lebensdaueranalyse.
-Auf Basis Weibull-verteilter Ausfallzeiten und einer log-linearen \ac{AFT}-Modellierung findet die Parameteridentifikation nun iterativ via Maximum-Likelihood-Schätzung (\ac{MLE}) statt.
-Dieser Wechsel der mathematischen Domäne impliziert jedoch weit mehr als den Austausch des Schätzalgorithmus: Er aktiviert zwingend die in Abschnitt~\ref{sec:kostenmodell} eingeführte dynamische Kostenstruktur der Lebensdauererprobung.
+Auf Basis Weibull-verteilter Ausfallzeiten und einer log-linearen \ac{AFT}-Modellierung findet die Parameteridentifikation hier nun iterativ via \ac{MLE} statt.
+Dieser Wechsel der mathematischen Domäne impliziert jedoch weit mehr als den Austausch des Schätzalgorithmus:
+Er aktiviert zwingend die in Abschnitt~\ref{sec:kostenmodell} eingeführte dynamische Kostenstruktur der Lebensdauererprobung.
 
 In klassischen, landwirtschaftlichen oder chemischen Versuchsplänen entsprechen die experimentellen Kosten zumeist linear der bloßen Anzahl an Versuchen ($\sym{C} \propto \sym{N}$).
-In der Lebensdauererprobung erweist sich eine solche Entkopplung jedoch als physikalisch unzulässig, da die Zielgröße selbst - die Ausfallzeit $\sym{t}_{\sym{idx_i}}$ - als der primäre Kostentreiber fungiert.
+In der Lebensdauererprobung erweist sich eine solche Entkopplung jedoch als physikalisch unzulässig, da die Zielgröße selbst - die Ausfallzeit $\sym{t}_{\sym{idx_i}}$ - als der primäre Kostentreiber fungiert \cite{VDI3258}.
 Die Designmatrix $\sym{X}$ und die resultierenden Versuchskosten $\sym{C}_{\sym{idx_cost_total}}$ sind dadurch stochastisch hart gekoppelt.
 Dieser Umstand zwingt die Versuchsplanung in einen fundamentalen Zielkonflikt:
-Das \ac{EmALT}-Design verschiebt Extrapolations-\acp{AP} in Richtung geringerer Stressniveaus (Südwesten des Parameterraums), um die Prädiktionsvarianz im Feld zu stützen.
-Geringerer Stress erzwingt physikalisch jedoch exponentiell längere Testlaufzeiten, wodurch der Kostenerwartungswert $\mathbb{E}[\sym{C}_{\sym{idx_cost_total}}]$ massiv ansteigt.
-Gleichzeitig minimiert das Design jedoch die Extrapolationsvarianz ($\sym{SPV}_{\textnormal{ext}}$) am anvisierten Prognosepunkt um ein Vielfaches gegenüber dem standardisierten Basis-\ac{CCD} und bewahrt die Detektionssicherheit sensibler Krümmungseffekte.
+Das \ac{EmALT}-Design verschiebt Extrapolations-\acp{AP} in Richtung geringerer Stressniveaus (i.d.R. Südwesten des Parameterraums), um die Prädiktionsvarianz im Feld zu stützen.
+Geringerer Stress erzwingt physikalisch jedoch exponentiell längere Testlaufzeiten, wodurch der Kostenerwartungswert $\sym{Er}(\sym{C}_{\sym{idx_cost_total}})$ massiv ansteigt.
+Gleichzeitig minimiert das Design jedoch die Extrapolationsvarianz \ac{SPV} am anvisierten Prognosepunkt $(-0{,}7 ; -1{,}9)$ um ein Vielfaches gegenüber dem standardisierten Basis-\ac{CCD} und bewahrt die Detektionssicherheit sensibler Krümmungseffekte.
 
 Um diesen inhärenten Konflikt zwischen statistischer Prädiktionssicherheit und realem Ressourcenverbrauch messbar zu machen und eine objektive Entscheidungsgrundlage zu schaffen, bedarf es einer holistischen Effizienz-Metrik.
 Da im Kontext der Lebensdauererprobung die zielgerichtete Extrapolation im Fokus steht, entspricht der relevante Informationsgehalt exakt dem Kehrwert der prädiktiven Varianz am fernen Prognosepunkt ($1 / \sym{SPV}_{\textnormal{ext}}$).

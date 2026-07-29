@@ -1,7 +1,5 @@
 % This file was created by matlab2tikz.
 %
-\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
-%
 \begin{tikzpicture}
 
 \begin{axis}[%
@@ -16,48 +14,48 @@ xtick={1.00,2.00,3.00,4.00,5.00},
 xticklabels={{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
 ymin=0.00,
 ymax=100.00,
-ylabel style={font=\color{mycolor1}},
+ylabel style={font=\color{white!15!black}},
 ylabel={$\sym{power} [\%]$},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25},
-legend style={at={(0.03,0.03)}, anchor=south west, legend cell align=left, align=left}
+legend style={at={(0.03,0.03)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
 ]
-\addplot[ybar, bar width=0.178, fill=black, draw=mycolor1, area legend] table[row sep=crcr] {%
+\addplot[ybar, bar width=0.178, fill=black, draw=black, area legend] table[row sep=crcr] {%
 1.00	100.00\\
 2.00	100.00\\
-3.00	70.00\\
-4.00	100.00\\
-5.00	90.00\\
+3.00	81.43\\
+4.00	98.33\\
+5.00	98.60\\
 };
-\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
 0.51	0.00\\
 5.49	0.00\\
 };
 \addlegendentry{Basis \ac{CCD}}
 
-\addplot[ybar, bar width=0.178, fill=white!60!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	100.00\\
-2.00	100.00\\
-3.00	80.00\\
-4.00	100.00\\
-5.00	80.00\\
+\addplot[ybar, bar width=0.178, fill=white!60!black, draw=black, area legend] table[row sep=crcr] {%
+1.00	99.94\\
+2.00	99.99\\
+3.00	87.57\\
+4.00	93.79\\
+5.00	93.91\\
 };
-\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
 0.51	0.00\\
 5.49	0.00\\
 };
 \addlegendentry{$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$}
 
-\addplot[ybar, bar width=0.178, fill=white!30!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	100.00\\
-2.00	80.00\\
-3.00	70.00\\
-4.00	90.00\\
-5.00	70.00\\
+\addplot[ybar, bar width=0.178, fill=white!30!black, draw=black, area legend] table[row sep=crcr] {%
+1.00	99.83\\
+2.00	94.28\\
+3.00	64.53\\
+4.00	99.01\\
+5.00	75.04\\
 };
-\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
 0.51	0.00\\
 5.49	0.00\\
 };
@@ -68,43 +66,27 @@ legend style={at={(0.03,0.03)}, anchor=south west, legend cell align=left, align
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
 0.78	100.00	0.00	0.00\\
 1.78	100.00	0.00	0.00\\
-2.78	70.00	28.40	28.40\\
-3.78	100.00	0.00	0.00\\
-4.78	90.00	18.59	18.59\\
+2.78	81.43	0.76	0.76\\
+3.78	98.33	0.25	0.25\\
+4.78	98.60	0.23	0.23\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.00	100.00	0.00	0.00\\
-2.00	100.00	0.00	0.00\\
-3.00	80.00	24.79	24.79\\
-4.00	100.00	0.00	0.00\\
-5.00	80.00	24.79	24.79\\
+1.00	99.94	0.05	0.05\\
+2.00	99.99	0.02	0.02\\
+3.00	87.57	0.65	0.65\\
+4.00	93.79	0.47	0.47\\
+5.00	93.91	0.47	0.47\\
 };
 \addplot [color=black, line width=0.4pt, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.4pt}, error mark options={line width=0.4pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.22	100.00	0.00	0.00\\
-2.22	80.00	24.79	24.79\\
-3.22	70.00	28.40	28.40\\
-4.22	90.00	18.59	18.59\\
-5.22	70.00	28.40	28.40\\
+1.22	99.83	0.08	0.08\\
+2.22	94.28	0.46	0.46\\
+3.22	64.53	0.94	0.94\\
+4.22	99.01	0.19	0.19\\
+5.22	75.04	0.85	0.85\\
 };
-\end{axis}
-
-\begin{axis}[%
-width=1.227\figurewidth,
-height=1.227\figureheight,
-at={(-0.16\figurewidth,-0.135\figureheight)},
-scale only axis,
-xmin=0.00,
-xmax=1.00,
-ymin=0.00,
-ymax=1.00,
-axis line style={draw=none},
-ticks=none,
-axis x line*=bottom,
-axis y line*=left
-]
 \end{axis}
 \end{tikzpicture}%
