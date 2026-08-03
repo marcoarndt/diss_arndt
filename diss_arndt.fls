@@ -772,9 +772,14 @@ INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fpl
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 OUTPUT diss_arndt.lof
+INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
+INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
+INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT .\diss_arndt.lot
 INPUT .\diss_arndt.lot
 INPUT diss_arndt.lot
+INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplri.tfm
+INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplri.tfm
 OUTPUT diss_arndt.lot
 INPUT .\chapters\chapter1_einleitung.tex
 INPUT .\chapters\chapter1_einleitung.tex
@@ -843,7 +848,6 @@ INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\tex-gyre\ec-
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7m.vf
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmri.tfm
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplri8r.tfm
 INPUT .\plots\ma_abb2.02_doe_steps.pdf_tex
 INPUT .\plots\ma_abb2.02_doe_steps.pdf_tex
@@ -988,10 +992,6 @@ INPUT .\plots\ma_abb2.2.5_vdg_ccd.pdf
 INPUT .\plots\ma_abb2.2.5_vdg_ccd.pdf
 INPUT .\plots\ma_abb2.2.5_vdg_ccd.pdf
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplri.tfm
-INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplri.tfm
-INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\tex-gyre\ec-qplri.tfm
-INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplr9t.vf
-INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7y.vf
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7v.vf
@@ -1129,9 +1129,9 @@ INPUT tables\tab_results_emalt_power_ols.tex
 INPUT .\plots\ma_abb5.4.2_powerdev_ols.tex
 INPUT .\plots\ma_abb5.4.2_powerdev_ols.tex
 INPUT plots\ma_abb5.4.2_powerdev_ols.tex
-INPUT .\tables\tab_results_emalt_wbl_metrics.tex
-INPUT .\tables\tab_results_emalt_wbl_metrics.tex
-INPUT tables\tab_results_emalt_wbl_metrics.tex
+INPUT .\tables\tab_results_emalt_bias_wbl.tex
+INPUT .\tables\tab_results_emalt_bias_wbl.tex
+INPUT tables\tab_results_emalt_bias_wbl.tex
 INPUT .\plots\ma_abb5.4.3_betadev_wbl.tex
 INPUT .\plots\ma_abb5.4.3_betadev_wbl.tex
 INPUT plots\ma_abb5.4.3_betadev_wbl.tex
@@ -1150,6 +1150,8 @@ INPUT plots\ma_abb5.4.3_tradeoff_eco.tex
 INPUT .\chapters\chapter6_casestudy.tex
 INPUT .\chapters\chapter6_casestudy.tex
 INPUT chapters\chapter6_casestudy.tex
+INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
+INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\palatino\pplb9t.vf
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplb8r.tfm
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmb.tfm
@@ -1236,6 +1238,9 @@ INPUT plots\ma_abb5.1.4_msedev_snr1.tex
 INPUT .\plots\ma_abb5.1.4_powerdev_snr1.tex
 INPUT .\plots\ma_abb5.1.4_powerdev_snr1.tex
 INPUT plots\ma_abb5.1.4_powerdev_snr1.tex
+INPUT .\plots\ma_abb_app.d_kpi_all_coeffs.tex
+INPUT .\plots\ma_abb_app.d_kpi_all_coeffs.tex
+INPUT plots\ma_abb_app.d_kpi_all_coeffs.tex
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\vf\public\mathpazo\zplmr7t.vf
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\public\mathpazo\fplmr.tfm
 INPUT C:\Users\m-arn\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\palatino\pplr8r.tfm

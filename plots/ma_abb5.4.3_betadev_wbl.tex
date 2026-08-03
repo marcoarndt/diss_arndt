@@ -1,28 +1,31 @@
 % This file was created by matlab2tikz.
 %
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.951\figurewidth,
-height=\figureheight,
+width=\figurewidth,
+height=0.703\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
 bar shift auto,
+unbounded coords=jump,
 xmin=0.51,
 xmax=7.49,
 xtick={1.00,2.00,3.00,4.00,5.00,6.00,7.00},
 xticklabels={{$\hat{\sym{b}}$},{$\hat{\sym{beta}}_0$},{$\hat{\sym{beta}}_1$},{$\hat{\sym{beta}}_2$},{$\hat{\sym{beta}}_{12}$},{$\hat{\sym{beta}}_{11}$},{$\hat{\sym{beta}}_{22}$}},
+xticklabel style={rotate=30},
 ymin=-0.96,
 ymax=11.54,
-ylabel style={font=\color{white!15!black}},
+ylabel style={font=\color{mycolor1}},
 ylabel={Absoluter Schätzwert $\hat{\sym{thet}}_{\sym{idx_i}}$},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
-grid style={dotted, opacity=0.25},
-legend style={legend cell align=left, align=left, draw=white!15!black}
+legend style={legend cell align=left, align=left}
 ]
-\addplot[ybar, bar width=0.178, fill=black, draw=black, area legend] table[row sep=crcr] {%
+\addplot[ybar, bar width=0.178, fill=black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.00	4.97\\
 2.00	11.53\\
 3.00	-0.80\\
@@ -31,13 +34,13 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 6.00	-0.45\\
 7.00	-0.45\\
 };
-\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
 7.49	0.00\\
 };
 \addlegendentry{Basis \ac{CCD}}
 
-\addplot[ybar, bar width=0.178, fill=white!60!black, draw=black, area legend] table[row sep=crcr] {%
+\addplot[ybar, bar width=0.178, fill=white!60!black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.00	5.91\\
 2.00	11.54\\
 3.00	-0.83\\
@@ -46,13 +49,13 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 6.00	-0.49\\
 7.00	-0.49\\
 };
-\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
 7.49	0.00\\
 };
 \addlegendentry{$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$}
 
-\addplot[ybar, bar width=0.178, fill=white!30!black, draw=black, area legend] table[row sep=crcr] {%
+\addplot[ybar, bar width=0.178, fill=white!30!black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.00	3.37\\
 2.00	11.51\\
 3.00	-0.96\\
@@ -61,7 +64,7 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
 6.00	-0.59\\
 7.00	-0.19\\
 };
-\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
 7.49	0.00\\
 };
@@ -101,6 +104,10 @@ legend style={legend cell align=left, align=left, draw=white!15!black}
   table[row sep=crcr]{%
 6.65	-0.40\\
 7.35	-0.40\\
+};
+\addplot [color=black, line width=2.0pt]
+  table[row sep=crcr]{%
+nan	nan\\
 };
 \addlegendentry{Wahrer Nomineller Wert}
 

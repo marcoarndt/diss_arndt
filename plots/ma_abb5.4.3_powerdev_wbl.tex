@@ -1,10 +1,12 @@
 % This file was created by matlab2tikz.
 %
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.951\figurewidth,
-height=\figureheight,
+width=\figurewidth,
+height=0.795\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
 bar shift auto,
@@ -12,50 +14,50 @@ xmin=0.51,
 xmax=5.49,
 xtick={1.00,2.00,3.00,4.00,5.00},
 xticklabels={{$\sym{beta}_1$},{$\sym{beta}_2$},{$\sym{beta}_{12}$},{$\sym{beta}_{11}$},{$\sym{beta}_{22}$}},
+xticklabel style={rotate=30},
 ymin=0.00,
 ymax=100.00,
-ylabel style={font=\color{white!15!black}},
+ylabel style={font=\color{mycolor1}},
 ylabel={$\sym{power} [\%]$},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
-grid style={dotted, opacity=0.25},
-legend style={at={(0.03,0.03)}, anchor=south west, legend cell align=left, align=left, draw=white!15!black}
+legend style={at={(0.03,0.03)}, anchor=south west, legend cell align=left, align=left}
 ]
-\addplot[ybar, bar width=0.178, fill=black, draw=black, area legend] table[row sep=crcr] {%
+\addplot[ybar, bar width=0.178, fill=black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.00	100.00\\
 2.00	100.00\\
 3.00	81.43\\
 4.00	98.33\\
 5.00	98.60\\
 };
-\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
 5.49	0.00\\
 };
 \addlegendentry{Basis \ac{CCD}}
 
-\addplot[ybar, bar width=0.178, fill=white!60!black, draw=black, area legend] table[row sep=crcr] {%
+\addplot[ybar, bar width=0.178, fill=white!60!black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.00	99.94\\
 2.00	99.99\\
 3.00	87.57\\
 4.00	93.79\\
 5.00	93.91\\
 };
-\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
 5.49	0.00\\
 };
 \addlegendentry{$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$}
 
-\addplot[ybar, bar width=0.178, fill=white!30!black, draw=black, area legend] table[row sep=crcr] {%
+\addplot[ybar, bar width=0.178, fill=white!30!black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.00	99.83\\
 2.00	94.28\\
 3.00	64.53\\
 4.00	99.01\\
 5.00	75.04\\
 };
-\addplot[forget plot, color=white!15!black] table[row sep=crcr] {%
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
 5.49	0.00\\
 };

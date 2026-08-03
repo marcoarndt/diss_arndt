@@ -2,10 +2,10 @@
 % =======================================================================
 % APPENDIX C: Detailergebnisse der Monte-Carlo Simulation (Orthogonalität)
 % =======================================================================
-\section{Stabilitäts- und Konvergenzanalysen der Design-Modifikationen}
+\section{Orthogonalitäts-Analysen der Design-Modifikationen}
 \label{app:c}
 
-In diesem Anhang sind ergänzende statistische Visualisierungen zur Bewertung der geometrischen Design-Verzerrungen (vergleiche Abschnitt 5.3) aufgeführt.
+In diesem Anhang sind ergänzende Visualisierungen und Analysen zur Bewertung der geometrischen Design-Verzerrungen aufgeführt.
 
 \input{tables/tab_results_ortho_mse.tex}
 
@@ -74,4 +74,16 @@ In diesem Anhang sind ergänzende statistische Visualisierungen zur Bewertung de
     \input{plots/ma_abb5.1.4_powerdev_snr1.tex}
     \caption{Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien für $\sym{snr}=1$.}
     \label{fig:app.c_powerdev_snr1}
+\end{figure}
+
+
+\subsection{Effizienzanalysen} \label{app:c_effizienz}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{4cm}
+    \input{plots/ma_abb_app.d_kpi_all_coeffs.tex}
+    \caption{KPI ggü. \textit{D}-Effizienz aller Koeffizienten.}
+    \label{fig:app.c_kpi_all_coeffs}
 \end{figure}
