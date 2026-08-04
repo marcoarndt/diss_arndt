@@ -4883,6 +4883,48 @@
       \field{title}{Kostenrechnung mit Maschinenstundensätzen; Begriffe, Bezeichnungen, Zusammenhänge: VDI 3258 Blatt 1:1962-10}
       \field{year}{1962-10}
     \endentry
+    \entry{Stevens.2020}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2d3b4f61b3d7a1e50b8a4668e249a413}{%
+           family={Stevens},
+           familyi={S\bibinitperiod},
+           given={Nathaniel\bibnamedelima T.},
+           giveni={N\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=c808b810e0385a805d7b731ed1584bb0}{%
+           family={Rigdon},
+           familyi={R\bibinitperiod},
+           given={Steven\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
+           family={Anderson-Cook},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Christine\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0e186c57ca569b0fff29bf3f663c1c6}
+      \strng{fullhash}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{fullhashraw}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{bibnamehash}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{authorbibnamehash}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{authornamehash}{a0e186c57ca569b0fff29bf3f663c1c6}
+      \strng{authorfullhash}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{authorfullhashraw}{7fbea8685705220ea9d1f6727ff0564d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-4065}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{number}{1}
+      \field{title}{Bayesian probability of agreement for comparing the similarity of response surfaces}
+      \field{volume}{52}
+      \field{year}{2020}
+      \field{pages}{67\bibrangedash 80}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1080/00224065.2019.1569961
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

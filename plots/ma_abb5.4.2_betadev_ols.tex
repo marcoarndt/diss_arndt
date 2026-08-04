@@ -5,12 +5,11 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.474\figurewidth,
+width=0.951\figurewidth,
 height=\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
 bar shift auto,
-unbounded coords=jump,
 xmin=0.51,
 xmax=6.49,
 xtick={1.00,2.00,3.00,4.00,5.00,6.00},
@@ -23,7 +22,7 @@ axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
 grid style={dotted, opacity=0.25},
-legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=left}
+legend style={legend cell align=left, align=left}
 ]
 \addplot[ybar, bar width=0.178, fill=black, draw=mycolor1, area legend] table[row sep=crcr] {%
 1.00	24.03\\
@@ -65,7 +64,7 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
 0.51	0.00\\
 6.49	0.00\\
 };
-\addlegendentry{EmALT}
+\addlegendentry{\ac{EmALT}}
 
 \addplot [color=black, line width=2.0pt, forget plot]
   table[row sep=crcr]{%
@@ -96,10 +95,6 @@ legend style={at={(1.03,1)}, anchor=north west, legend cell align=left, align=le
   table[row sep=crcr]{%
 5.65	-6.00\\
 6.35	-6.00\\
-};
-\addplot [color=black, line width=2.0pt]
-  table[row sep=crcr]{%
-nan	nan\\
 };
 \addlegendentry{Wahrer Wert}
 

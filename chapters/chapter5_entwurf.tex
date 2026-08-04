@@ -712,7 +712,7 @@ An dieser Stelle werden zunächst die zugrundeliegenden Kostenpositionen, deren 
 Die detaillierte quantitative Auswertung dieses Modells erfolgt im Rahmen der Gesamtbewertung in Abschnitt~\ref{sec:weibull_transfer}, sobald die stochastischen Eigenschaften realer Lebensdauerdaten in die Betrachtung integriert sind.
 
 Auch bei einer vorab fest definierten Anzahl an Versuchspunkten ($\sym{N}$) und vorgegebenen Replikationen hängen die realen Versuchskosten maßgeblich von den individuellen Laufzeiten $\sym{t}_{\sym{idx_i}}$ der Prüflinge ab.
-Dies gilt insbesondere für \ac{EoL}\-Untersuchungen, bei denen Prüflinge oftmals sequenziell und bis zum Ausfallereignis unter stark variierenden Lastniveaus getestet werden.
+Dies gilt insbesondere für \ac{EoL}-Un\-ter\-such\-ung\-en, bei denen Prüflinge oftmals sequenziell und bis zum Ausfallereignis unter stark variierenden Lastniveaus getestet werden.
 Um diese Aufwände generisch und unabhängig vom spezifischen Prüflingstyp bilanzieren zu können, werden die Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ in drei wesentliche Hauptdomänen unterteilt \cite{Arndt.2025}:
 
 \begin{enumerate}
@@ -865,7 +865,7 @@ Daraus leitet sich die Parametrisierung für die nachfolgende \ac{MCS} ab:
 \end{itemize}
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.7\textwidth]{plots/ma_abb5.4.3_response_surface.pdf}
+    \includegraphics[width=0.8\textwidth]{plots/ma_abb5.4.3_response_surface.pdf}
     \caption{Antwortfläche der charakteristischen Systemlebensdauer $\sym{T}$ in Abhängigkeit der Faktoren $\sym{x}_{1}$ und $\sym{x}_{2}$. Die Projektion verdeutlicht die massive Extrapolationsdistanz zwischen dem \ac{DoE}-Zentrum und den geforderten Feld-Bedingungen.}
     \label{fig:ma_abb5.4.3_response_surface}
 \end{figure}
@@ -934,8 +934,8 @@ Es übertrifft die reduzierte Designvariante substanziell und unterschreitet das
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.9\textwidth}
-    \setlength\figureheight{6cm}
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{5cm}
     \input{plots/ma_abb5.4.2_powerdev_ols.tex}
     \caption{Vergleichende Analyse der absoluten statistischen Trennschärfe. Die asymmetrische Extrapolationsabsicherung (\ac{EmALT}) stellt die Detektionsrate im Vergleich zur reinen Ausdünnung nahezu vollständig wieder her.}
     \label{fig:ma_abb5.4.2_powerdev_ols}
@@ -960,10 +960,10 @@ Geringerer Stress erzwingt physikalisch jedoch exponentiell längere Testlaufzei
 Gleichzeitig minimiert das Design jedoch die Extrapolationsvarianz \ac{SPV} am beispielhaft anvisierten Prognosepunkt $(-0{,}7 ; -1{,}9)$ um ein Vielfaches gegenüber dem standardisierten Basis-\ac{CCD} und bewahrt die Detektionssicherheit sensibler Krümmungseffekte.
 
 Um diesen inhärenten Konflikt zwischen statistischer Prädiktionssicherheit und realem Ressourcenverbrauch messbar zu machen und eine objektive Entscheidungsgrundlage zu schaffen, bedarf es einer adäquaten Effizienz-Metrik.
-Da im Kontext der Lebensdauererprobung die zielgerichtete Extrapolation im Fokus steht, entspricht der relevante Informationsgehalt exakt dem Kehrwert der prädiktiven Varianz am fernen Prognosepunkt ($1 / \sym{SPV}$).
+Da im Kontext der Lebensdauererprobung die zielgerichtete Extrapolation im Fokus steht, entspricht der relevante Informationsgehalt exakt dem Kehrwert der prädiktiven Varianz am fernen Prognosepunkt ($1 / \sym{pred_var}$).
 Unter Einbezug der Notwendigkeit, die zugrundeliegenden Modellparameter zuverlässig zu identifizieren, wird dieser Ansatz generisch für einen beliebigen Regressionskoeffizienten $\hat{\sym{beta}}_i$ zum \textbf{\ac{EPI}} erweitert:
 \begin{equation} \label{eq:epi_eco}
-    \sym{epi} = \frac{\sym{power}(\hat{\sym{beta}}_{i})}{\sym{SPV} \cdot \sym{Er}(\sym{C}_{\sym{idx_cost_total}})} \times 10^6
+    \sym{epi} = \frac{\sym{power}(\hat{\sym{beta}}_{i})}{\sym{pred_var} \cdot \sym{Er}(\sym{C}_{\sym{idx_cost_total}})} \times 10^3
 \end{equation}
 Dieser Index überführt den multidimensionalen Zielkonflikt aus topologischer Geometrie, Inferenzstatistik und Ökonomie in ein skalares Optimierungskriterium:
 Die Metrik skaliert proportional zur statistischen Detektionssicherheit, während sowohl die Prädiktionsvarianz im Extrapolationsraum als auch der monetäre Ressourceneinsatz als inverse Faktoren fungieren.
@@ -985,16 +985,14 @@ Während die voll-orthogonalen Referenzdesigns bei den sensitiven Krümmungsterm
 In der ingenieurwissenschaftlichen Bewertung ist diese Zahl jedoch zu relativieren:
 Da der wahre Nominellwert des Krümmungseffekts kritisch auf $\sym{beta}_{22} = -0{,}40$ kalibriert ist, entspricht eine relative Abweichung von $-53\,\%$ einer absoluten Verschiebung von lediglich $\Delta \sym{beta}_{22} \approx -0{,}21$.
 Wie die vergleichende Darstellung der absoluten Schätzwerte in Abbildung~\ref{fig:ma_abb5.4.3_betadev_wbl} verdeutlicht, verharrt die rekonstruierte Antwortfläche damit im physikalisch plausiblen Korridor und bildet die progressive Verschleißkinematik ohne Vorzeichenwechsel oder entartete Gradienten ab.
-
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.9\textwidth}
-    \setlength\figureheight{6cm}
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{5cm}
     \input{plots/ma_abb5.4.3_betadev_wbl.tex}
     \caption{Absolute Schätzwerte der \ac{MLE}-Koeffizienten im Weibull-Modell ($\sym{snr}=1{,}20$). Der Schätzwert der Basislebensdauer $\hat{\sym{beta}}_0$ bleibt exakt; die Terme höherer Ordnung spiegeln die durch die Multikollinearität induzierte Varianzumverteilung wider.}
     \label{fig:ma_abb5.4.3_betadev_wbl}
 \end{figure}
-
 Ein herausragender methodischer Vorteil des \ac{EmALT}-Designs offenbart sich schließlich bei der Identifikation des intrinsischen Weibull-Formparameters $\hat{\sym{b}}$ (wahrer Wert $\sym{b} = 3{,}03$).
 Klassische, eng konzentrierte Versuchspläne überschätzen diesen Parameter bei kleinen Stichproben massiv: $\hat{\sym{b}} = 4{,}97$ im Basis-\ac{CCD} bzw. $\hat{\sym{b}} = 5{,}91$ im $\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$.
 Das \ac{EmALT}-Design hingegen stützt durch die weit in den Niedrigstressraum ausgreifenden Ankerpunkte den stochastischen Hebelarm der Likelihood-Funktion.
@@ -1010,7 +1008,7 @@ Das asymmetrische \ac{EmALT}-Design erkauft sich die Absicherung der Prädiktion
     \label{fig:ma_abb5.4.3_phisto_all_wbl}
 \end{figure}
 
-Auf eine isolierte, parameterweise Auswertung der Schätzvarianz (\ac{MSE}) wird an dieser Stelle verzichtet, da sich die stochastische Unsicherheit des Modells durch die asymmetrische Stützstellenallokation direkt in der lokalen $\sym{SPV}$ am fernen Prognosepunkt aggregiert und dort im Rahmen der ökonomischen Synthese über den \ac{EPI} ($\sym{eta}_{\textnormal{eco}}$) holistisch bewertet wird.
+Auf eine isolierte, parameterweise Auswertung der Schätzvarianz (\ac{MSE}) wird an dieser Stelle verzichtet, da sich die stochastische Unsicherheit des Modells durch die asymmetrische Stützstellenallokation direkt in der lokalen \ac{SPV} am fernen Prognosepunkt aggregiert und dort im Rahmen der ökonomischen Synthese über den \ac{EPI} ($\sym{eta}_{\textnormal{eco}}$) holistisch bewertet wird.
 
 Hinsichtlich der $\sym{power}$ manifestiert sich die Asymmetrie des Designs unmittelbar in der \ac{MLE}-Gütefunktion, vgl. Abbildung~\ref{fig:ma_abb5.4.3_powerdev_wbl}.
 Während das rein passiv ausgedünnte $\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$ einen verhältnismäßig symmetrischen Detektionsverlust der Krümmungsterme auf ca. $93{,}9\,\%$ verzeichnet, forciert die Translation der \acp{AP} im \ac{EmALT}-Design ein stark polarisiertes Verhalten.
@@ -1023,8 +1021,8 @@ Das \ac{EmALT}-Design opfert folglich bewusst einen Teil der extremen, oftmals �
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.9\textwidth}
-    \setlength\figureheight{6cm}
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{5cm}
     \input{plots/ma_abb5.4.3_powerdev_wbl.tex}
     \caption{Vergleichende Analyse der \ac{MLE}-$\sym{power}$. Das \ac{EmALT}-Design rettet die für die Modellierung essenziellen Terme vor dem vollständigen Zusammenbruch.}
     \label{fig:ma_abb5.4.3_powerdev_wbl}
@@ -1034,27 +1032,85 @@ Die abschließende ökonomische und stochastische Synthese manifestiert die fina
 In dieser Synthese kulminiert zugleich die fundamentale methodische Differenzierung zwischen \textbf{statistischer Effektivität} und \textbf{ökonomischer Effizienz}, welche den Kern dieser Arbeit prägt.
 Während die vorangegangenen Abschnitte nachgewiesen haben, dass das \ac{EmALT}-Design prinzipiell statistisch effektiv agiert - also die methodische Fähigkeit besitzt, die Modellparameter erwartungstreu zu schätzen und die Prädiktionsvarianz im Einsatzbereich gezielt abzusichern -, bewertet der \ac{EPI} erstmals die übergeordnete Effizienz: das konkrete Verhältnis aus dieser statistischen Zielerreichung und den hierfür real aufzuwendenden Prüfstandsressourcen.
 
-Der linke Teilplot in Abbildung~\ref{fig:ma_abb5.4.3_tradeoff_eco} veranschaulicht dieses Spannungsfeld entlang einer exponentiellen Pareto-Front (Entkopplungs-Paradoxon):
-Die Beibehaltung des orthogonalen Basis-\ac{CCD} charakterisiert sich durch minimale \ac{EoL}-Versuchsdauern und folglich geringe direkte Testkosten. Dennoch erweist sich dieser Ansatz als ineffizient, da die Vermeidung von Prüfkosten mit einer stochastisch inakzeptablen Prädiktionsunsicherheit im Feldbereich erkauft wird - das Design verfehlt somit bereits die Grundvoraussetzung der Effektivität.
-Das theoretische Feld-\ac{CCD} markiert das konträre Extremum: Zwar generiert es prinzipbedingt die maximale Effektivität am Prognosepunkt ($\sym{SPV} \approx 1{,}0$), provoziert jedoch durch unbeschleunigte Prüfzeiten eine massive Bilanzerhöhung des Kostenerwartungswerts $\sym{Er}(\sym{C}_{\sym{idx_cost_total}})$, was seine ökonomische Effizienz vollständig zunichtemacht.
+Der linke Teilplot in Abbildung~\ref{fig:ma_abb5.4.3_tradeoff_eco} veranschaulicht diese zwingende physikalisch-ökonomische Kopplung anhand einer exponentiellen Effizienzgrenze:
+Die Beibehaltung des orthogonalen Basis-\ac{CCD} charakterisiert sich durch minimale \ac{EoL}-Ver\-suchs\-dauern und folglich geringe direkte Testkosten. Dennoch erweist sich dieser Ansatz als ineffizient, da die Vermeidung von Prüfkosten mit einer stochastisch inakzeptablen Prädiktionsunsicherheit im Feldbereich erkauft wird - das Design verfehlt somit bereits die Grundvoraussetzung der Effektivität.
+Das theoretische Feld-\ac{CCD} markiert das konträre Extremum: Zwar generiert es prinzipbedingt die maximale Effektivität am Prognosepunkt (\ac{SPV}$ \approx 1{,}0$), provoziert jedoch durch unbeschleunigte Prüfzeiten eine massive Bilanzerhöhung des Kostenerwartungswerts $\sym{Er}(\sym{C}_{\sym{idx_cost_total}})$, was seine ökonomische Effizienz vollständig zunichtemacht.
 Das \ac{EmALT}-Design positioniert sich auf dieser Pareto-Kurve als das maßgebliche physikalisch-ökonomische Optimum:
 Es transformiert hohe statistische Effektivität durch die drastische Verkürzung der Versuchszeiten via \ac{ALT} in maximale ökonomische Effizienz.
 
 Dieser Befund belegt die unzureichende Validität klassischer \ac{DoE}-Metriken im Rahmen der Zuverlässigkeitstechnik.
-Während die konventionelle \ac{RSM} ein \textit{D}-optimales Design (Maximierung von $\sym{eff_D}$) als universelle Zielgröße postuliert, widerlegt die vergleichende Analyse in Abbildung~\ref{fig:ma_abb5.4.3_tradeoff_eco} (rechts) diese Prämisse fundamental.
+Während die konventionelle \ac{RSM} ein \textit{D}-op\-ti\-ma\-les Design (Maximierung von $\sym{eff_D}$) als universelle Zielgröße postuliert, widerlegt die vergleichende Analyse in Abbildung~\ref{fig:ma_abb5.4.3_tradeoff_eco} (rechts) diese Prämisse fundamental.
 Die Gegenüberstellung von \textit{D}-Effizienz und dem holistischen \ac{EPI} - hier exemplarisch für den hochsensitiven Krümmungsterm $\sym{epi}({\sym{beta}_{22}})$ visualisiert - offenbart eine strikt inverse Kausalität: Das Basis-\ac{CCD} erreicht zwar nominell die höchste \textit{D}-Effizienz, disqualifiziert sich jedoch unter Berücksichtigung der gewichteten Extrapolationsgüte im Kontext der Lebensdauererprobung vollständig.
 Demgegenüber dominiert das \ac{EmALT}-Design - ungeachtet seiner durch die geometrische Asymmetrie bedingten, klassisch geringsten \textit{D}-Effizienz - die tatsächliche \textbf{wirtschaftliche Effizienz} (\ac{EPI}) signifikant.
-Wenngleich die quantitative Ausprägung des \ac{EPI} durch die spezifische Parametrisierung des Kostenmodells und die Kalibrierung des Arbeitsbereiches ($\sym{snr} = 1{,}20$) determiniert wird, besitzt die identifizierte Pareto-Topologie universelle Gültigkeit für beschleunigte Lebensdauerprüfungen.
+Wenngleich die quantitative Ausprägung des \ac{EPI} durch die spezifische Parametrisierung des Kostenmodells und die Kalibrierung des Arbeitsbereiches mit $\sym{snr} = 1{,}20$ determiniert wird, besitzt die identifizierte Pareto-Topologie universelle Gültigkeit für beschleunigte Lebensdauerprüfungen.
+Das theoretische Feld-\ac{CCD} erzielt zwar durch \ac{SPV}$ = 2{,}60$ eine hohe Prognosegüte, verursacht jedoch durch unbeschleunigte Prüfzeiten prohibitive Erwartungskosten von $\sym{Er}(\sym{C}_{\sym{idx_cost_total}}) = 128{,}7\text{ kCU}$.
+Die unbeschleunigte Erprobung unter Feldbedingungen erweist sich gegenüber der für das \ac{EmALT}-Design geschätzten Kostenumfänge demnach als um den Faktor $1{,}59$ kostenintensiver, vergleiche Tabelle~\ref{tab:results_emalt_kpi_eco}.
+Das im \ac{ALT}-Bereich verortete Design unterbieten diesen Ressourcenaufwand drastisch, wobei das \ac{EmALT}-Design diese deutliche Ersparnis bei nahezu identischer Prädiktionsschärfe (\ac{SPV}$ = 2{,}39$) realisiert.
+Obgleich das Basis-\ac{CCD} mit $74{,}4\text{ kCU}$ den absolut geringsten monetären Aufwand erfordert, kollabieren seine $\sym{epi}$-Werte aufgrund der massiven Extrapolationsvarianz ($\sym{pred_var} = 20{,}5$) nahezu vollständig.
+Im Gegensatz dazu dominiert das \ac{EmALT}-Design die Metrik mit weitem Abstand -- und zeigt insbesondere bei den für die Krümmung essenziellen quadratischen Termen (wie $\hat{\sym{beta}}_{22}$) signifikant überlegene $\sym{epi}$-Werte.
+Die numerische Bilanz belegt damit unmissverständlich, dass das \ac{EmALT}-Konzept das globale Optimum aus Kostendämpfung durch Beschleunigung und zwingend erforderlicher Prognosesicherheit im fernen Feldbereich darstellt.
 Dass diese antagonistische Kausalität kein isoliertes Phänomen des quadratischen Terms darstellt, sondern für alle verbleibenden Modellkoeffizienten systematisch Bestand hat, wird durch die vollumfängliche Evaluation in Tabelle~\ref{tab:results_emalt_kpi_eco} und Anhang~\ref{app:c_effizienz} zweifelsfrei belegt.
-Ein rein durch klassische Optimalitätskriterien motiviertes Festhalten an orthogonalen Versuchsplänen erweist sich somit im Rahmen der Lebensdauererprobung als systematisch ineffizient, da vordergründig eingesparte Prüfstandsressourcen durch eine unzulässig hohe, potenziell sicherheitskritische Prognoseunsicherheit im Feldbetrieb kompensiert werden müssen.
+Ein rein durch klassische Optimalitätskriterien motiviertes Festhalten an orthogonalen Versuchsplänen erweist sich somit im Rahmen der Lebensdauererprobung mittels \ac{DoE} als systematisch ineffizient, da vordergründig eingesparte Prüfstandsressourcen durch eine unzulässig hohe, potenziell sicherheitskritische Prognoseunsicherheit im Feldbetrieb kompensiert werden müssen.
 
 \input{tables/tab_results_emalt_kpi_eco.tex}
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.9\textwidth}
-    \setlength\figureheight{5.5cm}
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{5cm}
     \input{plots/ma_abb5.4.3_tradeoff_eco.tex}
-    \caption{Links: Das Entkopplungs-Paradoxon als Pareto-Front zwischen Prädiktionsvarianz und Erwartungskosten. Das \ac{EmALT}-Design fungiert als ökonomisches Optimum. Rechts: Beweis des Versagens klassischer Optimalitätskriterien in der Zuverlässigkeitstechnik anhand des exemplarischen Verlaufs für den Krümmungsterm ($\sym{beta}_{22}$). Die scheinbar schlechteste D-Effizienz liefert den höchsten wirtschaftlichen Nutzen (\ac{EPI}, ${\sym{epi}}_{\sym{beta}_{22}}$); die vollständige Evaluation aller Koeffizienten findet sich in Anhang~\ref{app:c_effizienz}.}
+    \caption{Links: Exponentieller Zielkonflikt aus Prädiktionsvarianz und Erwartungskosten mit dem \ac{EmALT}-Design als ökonomischem Optimum. Rechts: Inverse Kausalität zwischen klassischer \textit{D}-Effizienz und \ac{EPI} am Beispiel von $\sym{beta}_{22}$ (vollständige Evaluation in Anhang~\ref{app:c_effizienz}).}
     \label{fig:ma_abb5.4.3_tradeoff_eco}
 \end{figure}
+
+\subsubsection{Konsequenzen für die Prognoseunsicherheit im Feldbetrieb} \label{subsubsec:ci_reliability}
+
+Die übergeordnete Zielsetzung dieser Arbeit -- die \textbf{Entwicklung effizienter multivariater Lebensdauertests} -- erfüllt sich vor diesem Hintergrund in ihrer finalen ingenieurswissenschaftlichen Konsequenz: der Konstruktion belastbarer Prognosemodelle für Lebensdauern und nicht zuletzt für Zuverlässigkeiten.
+Der ökonomische Mehrwert des \ac{EmALT}-Designs, holistisch quantifiziert durch den \ac{EPI}, verbleibt dabei nicht als abstrakte methodische Kennzahl, sondern übersetzt sich in der industriellen Praxis in eine höhere Präzision dieser Vorhersagemodelle bei effizienter Ressourcennutzung.
+Wie flankierende Untersuchungen zu \acp{CI} in optimierten Versuchsplänen belegen \cite{Arndt.2025}, korreliert die topologische Kontrolle der \ac{SPV} mit präziseren Schätzungen der Vertrauensbereiche für die prognostizierten Ausfallwahrscheinlichkeiten im realen Einsatzraum.
+
+Um den methodischen Transfer aufzuzeigen, wie aus den ermittelten Regressionsparametern in $\hat{\sym{theta}}$ nun ein finales Zuverlässigkeitsmodell generiert wird, visualisiert Abbildung~\ref{fig:ma_abb5.4.3_reliability_ci} den simulativen Verlauf der Überlebenswahrscheinlichkeit $\sym{R}(\sym{t})$ exakt am anvisierten Extrapolationspunkt $(-0{,}7 ; -1{,}9)$ im Feldbereich (vgl. Abschnitt~\ref{subsec:evg_plot}).
+Dargestellt sind die Zuverlässigkeitsfunktionen auf Grundlage der Gleichungen~\ref{eq:reldef}, \ref{eq:glm_link} und \ref{eq:var_T_general} sowie die korrespondierenden Bänder der $90\,\%$-\acp{CI}, resultierend aus der Fisher-Informationsmatrix (\ac{FIM}) der jeweiligen \ac{MLE}-Modellierung.
+Als objektive Referenz dient hierbei die Kurve des wahren Systemverhaltens nach bekannter Vorgabe aus Tabelle~\ref{tab:simulation_parameters_weibull} mit $\sym{b}=3$.
+
+Während die mittleren $\sym{R}(\sym{t})$-Prognosen (Punktschätzer) beider Designs -- im Rahmen der verbleibenden Abweichungen der Koeffizientenschätzungen in $\hat{\sym{beta}}$ -- den wahren physikalischen Degradationsverlauf valide approximieren, manifestieren sich im direkten Vergleich der Konfidenzbänder feststellbare topologische zusätzliche Unterschiede.
+Bedingt durch die massive Extrapolationsdistanz unterliegen naturgemäß beide Versuchspläne einer substanziellen Prognosevarianz, sodass ihre absoluten Streuungsamplituden auf einem vergleichbaren Grundniveau in $\sym{pred_var}$ verharren.
+Dennoch induziert das voll-orthogonale Basis-\ac{CCD} die prägnanteste Aufweitung der Vertrauensgrenzen.
+Demgegenüber gelingt es dem \ac{EmALT}-Design, diesen Unsicherheitsbereich durch die strategische Varianzdämpfung seiner Ankerpunkte sowohl kosteneffizienter als auch messbar zu verdichten.
+Die optisch leicht wellige Ausprägung der simulierten Vertrauensgrenzen $[\hat{\sym{R}}(\sym{t})_{\sym{idx_u}}, \hat{\sym{R}}(\sym{t})_{\sym{idx_o}}]$ ist dabei methodisch begründet: Sie resultiert aus der multidimensionalen Natur der Stressoren in Kombination mit der empirischen Extraktion der Schranken mittels der Kovarianzmatrix $\hat{\sym{V}}$.
+Die stochastischen Streuungen der $1\times 10^4$ Monte-Carlo-Schätzer transformieren sich stark nichtlinear durch die Weibull-Gleichung~(\ref{eq:reldef}), was bei der punktweisen Ermittlung der Perzentile über die fortlaufende Zeitachse $\sym{t}$ zu leichten lokalen Fluktuationen führt.
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{6.5cm}
+    \input{plots/ma_abb5.4.3_reliability_ci.tex}
+    \caption{Vergleich der prognostizierten Überlebenswahrscheinlichkeit $\sym{R}(\sym{t})$ am Feldbetriebspunkt inklusive $90\,\%$-Konfidenzband. Aufgrund der Distanz weisen beide Designs hohe Prognoseunschärfen auf, das \ac{EmALT}-Design (schwarz) reproduziert das wahre Zuverlässigkeitsmodell jedoch mit stellenweise geringerer Varianz als das Basis-\ac{CCD} (grau).}
+    \label{fig:ma_abb5.4.3_reliability_ci}
+\end{figure}
+
+In der industriellen Praxis und vor dem Kontext eines Prüflingsumfangs von $\sym{N}=13$ sind selbst derartige moderate Reduktionen der Vertrauensbereiche von Bedeutung, da normative Sicherheitsnachweise und Wartungsintervalle zumeist zwingend auf der unteren Vertrauensgrenze einer definierten $\sym{R}(\sym{t})$ basieren \cite{Meeker.2022,Bertsche.2022}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Methodische Synthese und Transfer} \label{sec:chap5_fazit}
+
+Das vorliegende Kapitel erbringt damit den theoretischen und simulativen Nachweis, dass klassische Prinzipien der statistischen Versuchsplanung zwar ein methodisch robustes Fundament für die Lebensdauererprobung bilden, in ihrer starren Ausprägung jedoch für die Lebensdauererprobung ökonomisch ineffizient sind.
+Die vollzogene Synthese liefert dabei drei zentrale Erkenntnisse für die Zuverlässigkeitstechnik:
+
+\begin{enumerate}
+    \item \textbf{Topologische Resilienz:} \acp{RSD} wie das \ac{CCD} reagieren auf periphere Modifikationen und Ausdünnungen erstaunlich robust, solange die Identifikation der Haupteffekte gesichert ist. Dies legitimiert die Abkehr vom Dogma der strengen Orthogonalität und eröffnet ein wertvolles geometrisches Gestaltungsbudget.
+    \item \textbf{Extrapolationsabsicherung:} Die \ac{SPV} verhält sich in gestörten Designs hochgradig richtungssensitiv.
+          Die entwickelte \ac{EmALT}-Positionierung nutzt das freigewordene Gestaltungsbudget proaktiv, um über asymmetrische \acp{AP} die Prognoseunsicherheit zielgerichtet entlang des Extrapolationsvektors zum fernen Feldbetriebspunkt zu minimieren.
+          Der \ac{EVG} dient hierbei als analytisches Instrumentarium, um die topologische Sensitivität von $\sym{pred_var}$ zu quantifizieren und die Ankerpunktpositionierung systematisch zu optimieren.
+    \item \textbf{Ökonomische Effizienz:} Die strenge Entkopplung von Design-Optimalität und Versuchsdauer verliert in der Lebensdauererprobung ihre Gültigkeit. Der neu eingeführte \ac{EPI} ($\sym{epi}$) weist nach, dass sich das \ac{EmALT}-Design im Zielkonflikt zwischen stochastischer Prädiktionsgüte und exponentiell skalierenden Prüfkosten als das überlegene physikalisch-ökonomische Optimum positioniert und klassisch \textit{D}-optimale Pläne signifikant dominiert.
+          Auch entlang der in diesem Kapitel entwickelten Methodik ergeben sich zudem Freiräume alternativer, ökonomisch effizienter Versuchspläne, die in der industriellen Praxis zu einer signifikanten Reduktion der Prüfstandsressourcen bei gleichzeitiger Absicherung der Prognosegüte führen.
+\end{enumerate}
+
+Trotz dieser eindeutigen Befunde bedarf es einer kritischen Würdigung der Simulationsergebnisse.
+Die numerische Evaluation basiert auf der Prämisse eines strukturell korrekten log-linearen \ac{AFT}-Modells sowie einer stetigen Degradationskinematik.
+Treten in der physikalischen Realität abrupte Wechsel der Schädigungsmechanismen zwischen \ac{ALT}-Niveau und Feldbereich auf, geraten rein modellbasierte Extrapolationen unweigerlich an ihre methodischen Grenzen.
+Gerade vor diesem Hintergrund entfaltet das \ac{EmALT}-Design jedoch einen weiteren, entscheidenden Praxisvorteil: Durch die strategische Verortung der \acp{AP} nahe dem realen Einsatzniveau fungieren diese Stützstellen nicht nur als stochastische Varianzdämpfer, sondern zugleich als physikalische Frühwarnsensoren.
+Im Rahmen der post-experimentellen Datenanalyse lassen sich diese Ankerpunkte analog zu \textit{Confirmation Experiments} auswerten \cite{Stevens.2020}.
+Entsprechende Metriken, wie etwa die \textit{Probability of Agreement}, können hierbei herangezogen werden, um empirisch zu validieren, ob die am Hochlastprüfstand extrahierten Degradationsgesetze im moderaten \textit{Use-Space} weiterhin Gültigkeit besitzen - eine Detektionsmöglichkeit, die durch reines \ac{ALT} vollständig verwehrt bliebe.

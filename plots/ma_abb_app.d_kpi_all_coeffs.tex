@@ -8,113 +8,147 @@
 \begin{tikzpicture}
 
 \begin{axis}[%
-width=0.264\figurewidth,
-height=0.415\figureheight,
-at={(0\figurewidth,0.585\figureheight)},
+width=0.958\figurewidth,
+height=0.146\figureheight,
+at={(0\figurewidth,0.854\figureheight)},
 scale only axis,
 xmin=46.40,
 xmax=72.89,
+xtick={50.00,55.00,60.00,65.00,70.00},
+xticklabels={\empty},
 ymin=0.00,
-ymax=0.00,
+ymax=6.44,
 ylabel style={font=\color{mycolor4}},
-ylabel={$\sym{epi}_{i}$},
+ylabel={$\sym{epi}$},
 axis background/.style={fill=white},
 title style={font=\bfseries\color{mycolor4}},
 title={\textbf{Effizienz für $\sym{beta}_1$}},
-axis x line*=bottom,
-axis y line*=left,
-xmajorgrids,
-ymajorgrids,
-grid style={dotted, opacity=0.3},
-legend style={at={(0.03,0.03)}, anchor=south west, legend cell align=left, align=left}
+legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left},
+grid=major,
+grid style={dotted, gray!50}
 ]
 \addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}]
   table[row sep=crcr]{%
-56.90	0.00\\
+56.90	0.62\\
 };
 \addlegendentry{Basis \ac{CCD}}
 
 \addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}]
   table[row sep=crcr]{%
-50.40	0.00\\
+50.40	0.69\\
 };
 \addlegendentry{$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$}
 
 \addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}]
   table[row sep=crcr]{%
-68.89	0.00\\
+68.89	5.15\\
 };
 \addlegendentry{\ac{EmALT}}
 
 \end{axis}
 
 \begin{axis}[%
-width=0.264\figurewidth,
-height=0.415\figureheight,
-at={(0.347\figurewidth,0.585\figureheight)},
+width=0.958\figurewidth,
+height=0.146\figureheight,
+at={(0\figurewidth,0.64\figureheight)},
 scale only axis,
 xmin=46.40,
 xmax=72.89,
+xtick={50.00,55.00,60.00,65.00,70.00},
+xticklabels={\empty},
 ymin=0.00,
-ymax=0.00,
+ymax=6.08,
+ylabel style={font=\color{mycolor4}},
+ylabel={$\sym{epi}$},
 axis background/.style={fill=white},
 title style={font=\bfseries\color{mycolor4}},
 title={\textbf{Effizienz für $\sym{beta}_2$}},
-axis x line*=bottom,
-axis y line*=left,
-xmajorgrids,
-ymajorgrids,
-grid style={dotted, opacity=0.3}
+grid=major,
+grid style={dotted, gray!50}
 ]
 \addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}, forget plot]
   table[row sep=crcr]{%
-56.90	0.00\\
+56.90	0.62\\
 };
 \addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}, forget plot]
   table[row sep=crcr]{%
-50.40	0.00\\
+50.40	0.69\\
 };
 \addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}, forget plot]
   table[row sep=crcr]{%
-68.89	0.00\\
+68.89	4.86\\
 };
 \end{axis}
 
 \begin{axis}[%
-width=0.264\figurewidth,
-height=0.415\figureheight,
-at={(0.694\figurewidth,0.585\figureheight)},
+width=0.958\figurewidth,
+height=0.146\figureheight,
+at={(0\figurewidth,0.427\figureheight)},
 scale only axis,
 xmin=46.40,
 xmax=72.89,
+xtick={50.00,55.00,60.00,65.00,70.00},
+xticklabels={\empty},
 ymin=0.00,
-ymax=0.00,
+ymax=4.16,
+ylabel style={font=\color{mycolor4}},
+ylabel={$\sym{epi}$},
 axis background/.style={fill=white},
 title style={font=\bfseries\color{mycolor4}},
 title={\textbf{Effizienz für $\sym{beta}_{12}$}},
-axis x line*=bottom,
-axis y line*=left,
-xmajorgrids,
-ymajorgrids,
-grid style={dotted, opacity=0.3}
+grid=major,
+grid style={dotted, gray!50}
 ]
 \addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}, forget plot]
   table[row sep=crcr]{%
-56.90	0.00\\
+56.90	0.50\\
 };
 \addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}, forget plot]
   table[row sep=crcr]{%
-50.40	0.00\\
+50.40	0.60\\
 };
 \addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}, forget plot]
   table[row sep=crcr]{%
-68.89	0.00\\
+68.89	3.33\\
 };
 \end{axis}
 
 \begin{axis}[%
-width=0.264\figurewidth,
-height=0.415\figureheight,
+width=0.958\figurewidth,
+height=0.146\figureheight,
+at={(0\figurewidth,0.213\figureheight)},
+scale only axis,
+xmin=46.40,
+xmax=72.89,
+xtick={50.00,55.00,60.00,65.00,70.00},
+xticklabels={\empty},
+ymin=0.00,
+ymax=6.38,
+ylabel style={font=\color{mycolor4}},
+ylabel={$\sym{epi}$},
+axis background/.style={fill=white},
+title style={font=\bfseries\color{mycolor4}},
+title={\textbf{Effizienz für $\sym{beta}_{11}$}},
+grid=major,
+grid style={dotted, gray!50}
+]
+\addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}, forget plot]
+  table[row sep=crcr]{%
+56.90	0.60\\
+};
+\addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}, forget plot]
+  table[row sep=crcr]{%
+50.40	0.65\\
+};
+\addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}, forget plot]
+  table[row sep=crcr]{%
+68.89	5.11\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=0.958\figurewidth,
+height=0.146\figureheight,
 at={(0\figurewidth,0\figureheight)},
 scale only axis,
 xmin=46.40,
@@ -122,63 +156,26 @@ xmax=72.89,
 xlabel style={font=\color{mycolor4}},
 xlabel={$\sym{eff_D}$ [\%]},
 ymin=0.00,
-ymax=0.00,
+ymax=4.84,
 ylabel style={font=\color{mycolor4}},
-ylabel={$\sym{epi}_{i}$},
-axis background/.style={fill=white},
-title style={font=\bfseries\color{mycolor4}},
-title={\textbf{Effizienz für $\sym{beta}_{11}$}},
-axis x line*=bottom,
-axis y line*=left,
-xmajorgrids,
-ymajorgrids,
-grid style={dotted, opacity=0.3}
-]
-\addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}, forget plot]
-  table[row sep=crcr]{%
-56.90	0.00\\
-};
-\addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}, forget plot]
-  table[row sep=crcr]{%
-50.40	0.00\\
-};
-\addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}, forget plot]
-  table[row sep=crcr]{%
-68.89	0.00\\
-};
-\end{axis}
-
-\begin{axis}[%
-width=0.264\figurewidth,
-height=0.415\figureheight,
-at={(0.347\figurewidth,0\figureheight)},
-scale only axis,
-xmin=46.40,
-xmax=72.89,
-xlabel style={font=\color{mycolor4}},
-xlabel={$\sym{eff_D}$ [\%]},
-ymin=0.00,
-ymax=0.00,
+ylabel={$\sym{epi}$},
 axis background/.style={fill=white},
 title style={font=\bfseries\color{mycolor4}},
 title={\textbf{Effizienz für $\sym{beta}_{22}$}},
-axis x line*=bottom,
-axis y line*=left,
-xmajorgrids,
-ymajorgrids,
-grid style={dotted, opacity=0.3}
+grid=major,
+grid style={dotted, gray!50}
 ]
 \addplot [color=mycolor1, line width=1.0pt, only marks, mark size=3.2pt, mark=*, mark options={solid, fill=black, draw=black}, forget plot]
   table[row sep=crcr]{%
-56.90	0.00\\
+56.90	0.61\\
 };
 \addplot [color=mycolor2, line width=1.0pt, only marks, mark size=1.9pt, mark=square*, mark options={solid, fill=gray, draw=black}, forget plot]
   table[row sep=crcr]{%
-50.40	0.00\\
+50.40	0.65\\
 };
 \addplot [color=mycolor3, line width=1.0pt, only marks, mark size=4.7pt, mark=diamond*, mark options={solid, fill=white!20!black, draw=black}, forget plot]
   table[row sep=crcr]{%
-68.89	0.00\\
+68.89	3.87\\
 };
 \end{axis}
 \end{tikzpicture}%

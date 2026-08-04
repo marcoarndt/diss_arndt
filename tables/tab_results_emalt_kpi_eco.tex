@@ -1,6 +1,6 @@
 \begin{table}[htbp]
     \centering
-    \caption{Ganzheitliche ökonomisch-statistische Gegenüberstellung aller Modellkoeffizienten. Der Index $\sym{epi}_{i}$ quantifiziert die prädiktive Effizienz unter Berücksichtigung der Erwartungskosten $\sym{Er}(\sym{C}_{\sym{idx_cost_total}})$.}
+    \caption{Ganzheitliche ökonomisch-statistische Gegenüberstellung aller Modellkoeffizienten. Der Index $\sym{epi}$ quantifiziert die prädiktive Effizienz unter Berücksichtigung der Erwartungskosten $\sym{Er}(\sym{C}_{\sym{idx_cost_total}})$.}
     \label{tab:results_emalt_kpi_eco}
     \renewcommand{\arraystretch}{1.2}
     \small
@@ -8,21 +8,17 @@
         \toprule
         \textbf{Szenario / Ressourcen} & \textbf{Metrik} & $\sym{beta}_{1}$ & $\sym{beta}_{2}$ & $\sym{beta}_{12}$ & $\sym{beta}_{11}$ & $\sym{beta}_{22}$ \\
         \midrule
-        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{Basis \ac{CCD}} \\ $\sym{Er}(\sym{C}_{\sym{idx_cost_total}}):$ 54162{,}4 kCU \\ $\sym{SPV}_{\textnormal{ext}}:$ 30{,}02 \end{tabular}} & $\Delta \sym{power}$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{Basis \ac{CCD}} \\ $\sym{Er}(\sym{C}_{\sym{idx_cost_total}}):$ 54{,}2 kCU \\ \ac{SPV}: 30{,}02 \end{tabular}} & $\Delta \sym{power}$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
          & rel. Bias & $-0{,}1\,\%$ & $+0{,}1\,\%$ & $-0{,}2\,\%$ & $+13{,}7\,\%$ & $+12{,}8\,\%$ \\
-         & $\sym{epi}_{i}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ \\
+         & $\sym{epi}$ & $\mathbf{0{,}62}$ & $\mathbf{0{,}62}$ & $\mathbf{0{,}50}$ & $\mathbf{0{,}60}$ & $\mathbf{0{,}61}$ \\
         \midrule
-        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$} \\ $\sym{Er}(\sym{C}_{\sym{idx_cost_total}}):$ 48179{,}3 kCU \\ $\sym{SPV}_{\textnormal{ext}}:$ 30{,}12 \end{tabular}} & $\Delta \sym{power}$ & $-0{,}1\,\%$ & $-0{,}0\,\%$ & $+6{,}1\,\%$ & $-4{,}5\,\%$ & $-4{,}7\,\%$ \\
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{$\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$} \\ $\sym{Er}(\sym{C}_{\sym{idx_cost_total}}):$ 48{,}2 kCU \\ \ac{SPV}: 30{,}12 \end{tabular}} & $\Delta \sym{power}$ & $-0{,}1\,\%$ & $-0{,}0\,\%$ & $+6{,}1\,\%$ & $-4{,}5\,\%$ & $-4{,}7\,\%$ \\
          & rel. Bias & $+3{,}7\,\%$ & $+3{,}4\,\%$ & $+6{,}8\,\%$ & $+23{,}2\,\%$ & $+22{,}1\,\%$ \\
-         & $\sym{epi}_{i}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ \\
+         & $\sym{epi}$ & $\mathbf{0{,}69}$ & $\mathbf{0{,}69}$ & $\mathbf{0{,}60}$ & $\mathbf{0{,}65}$ & $\mathbf{0{,}65}$ \\
         \midrule
-        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{\ac{EmALT}} \\ $\sym{Er}(\sym{C}_{\sym{idx_cost_total}}):$ 80978{,}9 kCU \\ $\sym{SPV}_{\textnormal{ext}}:$ 2{,}39 \end{tabular}} & $\Delta \sym{power}$ & $-0{,}2\,\%$ & $-5{,}7\,\%$ & $-16{,}9\,\%$ & $+0{,}7\,\%$ & $-23{,}6\,\%$ \\
+        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{\ac{EmALT}} \\ $\sym{Er}(\sym{C}_{\sym{idx_cost_total}}):$ 81{,}0 kCU \\ \ac{SPV}: 2{,}39 \end{tabular}} & $\Delta \sym{power}$ & $-0{,}2\,\%$ & $-5{,}7\,\%$ & $-16{,}9\,\%$ & $+0{,}7\,\%$ & $-23{,}6\,\%$ \\
          & rel. Bias & $+19{,}5\,\%$ & $-39{,}1\,\%$ & $-47{,}8\,\%$ & $+46{,}5\,\%$ & $-53{,}3\,\%$ \\
-         & $\sym{epi}_{i}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ & $\mathbf{0{,}00}$ \\
-        \midrule
-        \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}\textbf{Feld-\ac{CCD}} \\ $\sym{Er}(\sym{C}_{\sym{idx_cost_total}}):$ 128706{,}4 kCU \\ $\sym{SPV}_{\textnormal{ext}}:$ 2{,}60 \end{tabular}} & $\Delta \sym{power}$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
-         & rel. Bias & $-$ & $-$ & $-$ & $-$ & $-$ \\
-         & $\sym{epi}_{i}$ & $-$ & $-$ & $-$ & $-$ & $-$ \\
+         & $\sym{epi}$ & $\mathbf{5{,}15}$ & $\mathbf{4{,}86}$ & $\mathbf{3{,}33}$ & $\mathbf{5{,}11}$ & $\mathbf{3{,}87}$ \\
         \bottomrule
     \end{tabular*}
 \end{table}
