@@ -4660,6 +4660,49 @@
       \verb https://www.iapsam.org/PSAM16/paper.php?ID=PH20
       \endverb
     \endentry
+    \entry{Rittmaier.2025}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=237cd2690daa06ce75eb0a191e1bcbf0}{%
+           family={Rittmaier},
+           familyi={R\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{bce756dc5759b1bc87d9c7d067cda739}
+      \strng{fullhash}{92910794072f549b819af4c181fdd243}
+      \strng{fullhashraw}{92910794072f549b819af4c181fdd243}
+      \strng{bibnamehash}{92910794072f549b819af4c181fdd243}
+      \strng{authorbibnamehash}{92910794072f549b819af4c181fdd243}
+      \strng{authornamehash}{bce756dc5759b1bc87d9c7d067cda739}
+      \strng{authorfullhash}{92910794072f549b819af4c181fdd243}
+      \strng{authorfullhashraw}{92910794072f549b819af4c181fdd243}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 Annual Reliability and Maintainability Symposium (RAMS)}
+      \field{isbn}{979-8-3503-6774-4}
+      \field{title}{Simulative Analysis of Statistical Power of Optimal Test Designs}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/RAMS48127.2025.10935086
+      \endverb
+    \endentry
     \entry{Arndt.2024}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=cb1e3a90988f317beb3353678cbde418}{%

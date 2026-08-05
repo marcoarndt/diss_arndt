@@ -1,0 +1,82 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.951\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+bar shift auto,
+xmin=0.51,
+xmax=7.49,
+xtick={1.00,2.00,3.00,4.00,5.00,6.00,7.00},
+xticklabels={{$\hat{\sym{b}}$},{$\hat{\sym{beta}}_0$},{$\hat{\sym{beta}}_1$},{$\hat{\sym{beta}}_2$},{$\hat{\sym{beta}}_{12}$},{$\hat{\sym{beta}}_{11}$},{$\hat{\sym{beta}}_{22}$}},
+ymin=-5.00,
+ymax=10.38,
+ylabel style={font=\color{mycolor1}},
+ylabel={Schätzwert},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+legend style={legend cell align=left, align=left},
+grid=major,
+grid style={dotted, gray!50},
+y tick label style={/pgf/number format/precision=0}
+]
+\addplot[ybar, bar width=0.229, fill=white!60!black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	2.39\\
+2.00	9.94\\
+3.00	-2.31\\
+4.00	0.69\\
+5.00	0.22\\
+6.00	-0.01\\
+7.00	0.53\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.51	0.00\\
+7.49	0.00\\
+};
+\addlegendentry{Basis-\ac{CCD}}
+
+\addplot[ybar, bar width=0.229, fill=black, draw=mycolor1, area legend] table[row sep=crcr] {%
+1.00	2.11\\
+2.00	10.38\\
+3.00	-3.31\\
+4.00	1.84\\
+5.00	1.39\\
+6.00	-1.13\\
+7.00	-0.12\\
+};
+\addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
+0.51	0.00\\
+7.49	0.00\\
+};
+\addlegendentry{\ac{EmALT}}
+
+\addplot [color=black, only marks, forget plot]
+ plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.5pt}, error mark options={line width=0.5pt, mark size=6.0pt, rotate=90}]
+ table[row sep=crcr, y error plus index=2, y error minus index=3]{%
+0.86	2.39	0.90	0.90\\
+1.86	9.94	0.30	0.30\\
+2.86	-2.31	0.25	0.25\\
+3.86	0.69	0.25	0.25\\
+4.86	0.22	0.29	0.29\\
+5.86	-0.01	0.29	0.29\\
+6.86	0.53	0.29	0.29\\
+};
+\addplot [color=black, only marks, forget plot]
+ plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.5pt}, error mark options={line width=0.5pt, mark size=6.0pt, rotate=90}]
+ table[row sep=crcr, y error plus index=2, y error minus index=3]{%
+1.14	2.11	0.00	0.00\\
+2.14	10.38	0.00	0.00\\
+3.14	-3.31	0.00	0.00\\
+4.14	1.84	0.73	0.73\\
+5.14	1.39	0.73	0.73\\
+6.14	-1.13	0.52	0.52\\
+7.14	-0.12	0.30	0.30\\
+};
+\end{axis}
+\end{tikzpicture}%

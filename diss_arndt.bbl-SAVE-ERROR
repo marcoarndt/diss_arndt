@@ -4660,6 +4660,49 @@
       \verb https://www.iapsam.org/PSAM16/paper.php?ID=PH20
       \endverb
     \endentry
+    \entry{Rittmaier.2025}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=237cd2690daa06ce75eb0a191e1bcbf0}{%
+           family={Rittmaier},
+           familyi={R\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod}}}%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{bce756dc5759b1bc87d9c7d067cda739}
+      \strng{fullhash}{92910794072f549b819af4c181fdd243}
+      \strng{fullhashraw}{92910794072f549b819af4c181fdd243}
+      \strng{bibnamehash}{92910794072f549b819af4c181fdd243}
+      \strng{authorbibnamehash}{92910794072f549b819af4c181fdd243}
+      \strng{authornamehash}{bce756dc5759b1bc87d9c7d067cda739}
+      \strng{authorfullhash}{92910794072f549b819af4c181fdd243}
+      \strng{authorfullhashraw}{92910794072f549b819af4c181fdd243}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 Annual Reliability and Maintainability Symposium (RAMS)}
+      \field{isbn}{979-8-3503-6774-4}
+      \field{title}{Simulative Analysis of Statistical Power of Optimal Test Designs}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 7}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/RAMS48127.2025.10935086
+      \endverb
+    \endentry
     \entry{Arndt.2024}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=cb1e3a90988f317beb3353678cbde418}{%
@@ -4882,6 +4925,48 @@
       \field{labeltitlesource}{title}
       \field{title}{Kostenrechnung mit Maschinenstundensätzen; Begriffe, Bezeichnungen, Zusammenhänge: VDI 3258 Blatt 1:1962-10}
       \field{year}{1962-10}
+    \endentry
+    \entry{Stevens.2020}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2d3b4f61b3d7a1e50b8a4668e249a413}{%
+           family={Stevens},
+           familyi={S\bibinitperiod},
+           given={Nathaniel\bibnamedelima T.},
+           giveni={N\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=c808b810e0385a805d7b731ed1584bb0}{%
+           family={Rigdon},
+           familyi={R\bibinitperiod},
+           given={Steven\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
+           family={Anderson-Cook},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Christine\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0e186c57ca569b0fff29bf3f663c1c6}
+      \strng{fullhash}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{fullhashraw}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{bibnamehash}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{authorbibnamehash}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{authornamehash}{a0e186c57ca569b0fff29bf3f663c1c6}
+      \strng{authorfullhash}{7fbea8685705220ea9d1f6727ff0564d}
+      \strng{authorfullhashraw}{7fbea8685705220ea9d1f6727ff0564d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-4065}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{number}{1}
+      \field{title}{Bayesian probability of agreement for comparing the similarity of response surfaces}
+      \field{volume}{52}
+      \field{year}{2020}
+      \field{pages}{67\bibrangedash 80}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1080/00224065.2019.1569961
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
