@@ -1,6 +1,6 @@
 \begin{table}[htbp]
     \centering
-    \caption{Gegenüberstellung der ML-Parameterschätzungen und Standardfehler für das Basis-CCD und EmALT-Design auf Basis des Prüfstanddatensatzes ($N=26$).}
+    \caption{Gegenüberstellung der ML-Parameterschätzungen, Standardfehler sowie der empirischen Prognosegüte auf Basis des Prüfstanddatensatzes ($N=26$).}
     \label{tab:ieee_parameter_estimates}
     \renewcommand{\arraystretch}{1.2}
     \small
@@ -8,11 +8,18 @@
         \toprule
         \textbf{Design} & $\hat{\sym{b}}$ & $\hat{\sym{beta}}_{0}$ & $\hat{\sym{beta}}_{1}$ & $\hat{\sym{beta}}_{2}$ & $\hat{\sym{beta}}_{12}$ & $\hat{\sym{beta}}_{11}$ & $\hat{\sym{beta}}_{22}$ \\
         \midrule
-        Basis-CCD & 2{,}39 & 9{,}94 & -2{,}31 & 0{,}69 & 0{,}22 & -0{,}01 & 0{,}53 \\
-        \textit{(SE)} & (0{,}46) & (0{,}15) & (0{,}13) & (0{,}13) & (0{,}15) & (0{,}15) & (0{,}15) \\
+        Basis-CCD & 2{,}46 & 9{,}85 & -2{,}32 & 0{,}69 & 0{,}21 & 0{,}03 & 0{,}57 \\
+        \textit{(SE)} & (0{,}46) & (0{,}13) & (0{,}12) & (0{,}12) & (0{,}14) & (0{,}13) & (0{,}13) \\
         \midrule
-        EmALT & 2{,}11 & 10{,}38 & -3{,}31 & 1{,}84 & 1{,}39 & -1{,}13 & -0{,}12 \\
-        \textit{(SE)} & (0{,}00) & (0{,}00) & (0{,}00) & (0{,}37) & (0{,}37) & (0{,}26) & (0{,}15) \\
+        EmALT & 6{,}04 & 9{,}95 & -4{,}85 & 2{,}81 & 2{,}36 & -2{,}76 & 0{,}86 \\
+        \textit{(SE)} & (1{,}04) & (0{,}05) & (0{,}12) & (0{,}11) & (0{,}10) & (0{,}12) & (0{,}07) \\
+        \midrule
+        \multicolumn{8}{l}{\textbf{Empirische Evaluierung am Prognosepunkt $\sym{A}_{\sym{Pr}}=-1{,}8$, $\sym{B}_{\sym{Pr}}=-1{,}6$}} \\
+        \midrule
+        \textbf{Metrik} & \multicolumn{3}{c}{\textbf{Basis-CCD}} & \multicolumn{4}{c}{\textbf{EmALT}} \\
+        Gesamtkosten $\sym{C}_{\sym{total}}$ & \multicolumn{3}{c}{45{,}2 kCU} & \multicolumn{4}{c}{344{,}6 kCU} \\
+        Prädiktionsvarianz (\ac{SPV}) & \multicolumn{3}{c}{8{,}24} & \multicolumn{4}{c}{\textbf{0{,}15}} \\
+        \ac{CI}-Breite ($t = 5\cdot 10^5\,\text{h}$) & \multicolumn{3}{c}{14{,}8\,\%} & \multicolumn{4}{c}{\textbf{1{,}3\,\%}} \\
         \bottomrule
     \end{tabular*}
 \end{table}

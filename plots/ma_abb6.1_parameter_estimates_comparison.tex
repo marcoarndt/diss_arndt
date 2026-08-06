@@ -14,8 +14,8 @@ xmin=0.51,
 xmax=7.49,
 xtick={1.00,2.00,3.00,4.00,5.00,6.00,7.00},
 xticklabels={{$\hat{\sym{b}}$},{$\hat{\sym{beta}}_0$},{$\hat{\sym{beta}}_1$},{$\hat{\sym{beta}}_2$},{$\hat{\sym{beta}}_{12}$},{$\hat{\sym{beta}}_{11}$},{$\hat{\sym{beta}}_{22}$}},
-ymin=-5.00,
-ymax=10.38,
+ymin=-5.09,
+ymax=10.10,
 ylabel style={font=\color{mycolor1}},
 ylabel={Schätzwert},
 axis background/.style={fill=white},
@@ -27,13 +27,13 @@ grid style={dotted, gray!50},
 y tick label style={/pgf/number format/precision=0}
 ]
 \addplot[ybar, bar width=0.229, fill=white!60!black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	2.39\\
-2.00	9.94\\
-3.00	-2.31\\
+1.00	2.46\\
+2.00	9.85\\
+3.00	-2.32\\
 4.00	0.69\\
-5.00	0.22\\
-6.00	-0.01\\
-7.00	0.53\\
+5.00	0.21\\
+6.00	0.03\\
+7.00	0.57\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
@@ -42,13 +42,13 @@ y tick label style={/pgf/number format/precision=0}
 \addlegendentry{Basis-\ac{CCD}}
 
 \addplot[ybar, bar width=0.229, fill=black, draw=mycolor1, area legend] table[row sep=crcr] {%
-1.00	2.11\\
-2.00	10.38\\
-3.00	-3.31\\
-4.00	1.84\\
-5.00	1.39\\
-6.00	-1.13\\
-7.00	-0.12\\
+1.00	6.04\\
+2.00	9.95\\
+3.00	-4.85\\
+4.00	2.81\\
+5.00	2.36\\
+6.00	-2.76\\
+7.00	0.86\\
 };
 \addplot[forget plot, color=mycolor1] table[row sep=crcr] {%
 0.51	0.00\\
@@ -59,24 +59,24 @@ y tick label style={/pgf/number format/precision=0}
 \addplot [color=black, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.5pt}, error mark options={line width=0.5pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-0.86	2.39	0.90	0.90\\
-1.86	9.94	0.30	0.30\\
-2.86	-2.31	0.25	0.25\\
-3.86	0.69	0.25	0.25\\
-4.86	0.22	0.29	0.29\\
-5.86	-0.01	0.29	0.29\\
-6.86	0.53	0.29	0.29\\
+0.86	2.46	0.90	0.90\\
+1.86	9.85	0.25	0.25\\
+2.86	-2.32	0.24	0.24\\
+3.86	0.69	0.24	0.24\\
+4.86	0.21	0.28	0.28\\
+5.86	0.03	0.26	0.26\\
+6.86	0.57	0.26	0.26\\
 };
 \addplot [color=black, only marks, forget plot]
  plot [error bars/.cd, y dir=both, y explicit, error bar style={line width=0.5pt}, error mark options={line width=0.5pt, mark size=6.0pt, rotate=90}]
  table[row sep=crcr, y error plus index=2, y error minus index=3]{%
-1.14	2.11	0.00	0.00\\
-2.14	10.38	0.00	0.00\\
-3.14	-3.31	0.00	0.00\\
-4.14	1.84	0.73	0.73\\
-5.14	1.39	0.73	0.73\\
-6.14	-1.13	0.52	0.52\\
-7.14	-0.12	0.30	0.30\\
+1.14	6.04	2.04	2.04\\
+2.14	9.95	0.09	0.09\\
+3.14	-4.85	0.24	0.24\\
+4.14	2.81	0.21	0.21\\
+5.14	2.36	0.20	0.20\\
+6.14	-2.76	0.23	0.23\\
+7.14	0.86	0.14	0.14\\
 };
 \end{axis}
 \end{tikzpicture}%
