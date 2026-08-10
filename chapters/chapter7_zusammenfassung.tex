@@ -1,9 +1,46 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Kapitel 7 - Zusammenfassung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Kapitel 7 - Fazit und Ausblick %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Zusammenfassung und Ausblick} \label{chap:fazit}
 
-\section{Key Findings}
-\section{Diskussion}
-\section{Ausblick}
+\section{Key Findings} \label{sec:fazit_keyfindings}
+
+Die vorliegende Arbeit löst den fundamentalen methodischen Konflikt auf, der bei der Übertragung klassischer Prinzipien der statistischen Versuchsplanung auf die beschleunigte Lebensdauererprobung (\ac{ALT}) entsteht. 
+Der etablierte Paradigmenwechsel -- weg von der reinen Maximierung des Versuchsvolumens hin zu einer gerichteten Extrapolationsabsicherung -- manifestiert sich in vier zentralen wissenschaftlichen Erkenntnissen:
+
+\begin{enumerate}
+    \item \textbf{Widerlegung der klassischen Optimalitätskriterien für \ac{ALT}:}
+    Die Arbeit beweist methodisch, dass volumenbasierte Optimalitätsmaße (insbesondere die \textit{D}-Effizienz) für die Lebensdauererprobung systematisch ineffizient sind. Da der Fokus von \acp{ALT} auf der weiten Extrapolation in den Feldbereich liegt, führt ein rein orthogonal ausgerichtetes Design zwar zu einer isoliert hochpräzisen Parameterschätzung im Hochlastbereich, generiert jedoch eine unzulässig hohe Prädiktionsvarianz (\ac{SPV}) am fernen Prognosepunkt.
+    
+    \item \textbf{Topologische Resilienz als Gestaltungsbudget:}
+    Umfangreiche Sensitivitätsanalysen decken auf, dass klassische Versuchspläne wie das \ac{CCD} eine unerwartet hohe topologische Resilienz gegenüber strukturellen Ausdünnungen besitzen. Der Entfall unkritischer Stützstellen führt zu marginalen Verlusten in der statistischen Trennschärfe (\ac{power}). Diese Erkenntnis legitimiert den bewussten Verzicht auf strikte Orthogonalität und eröffnet ein geometrisches Gestaltungsbudget für praxisgerechte Design-Manipulationen.
+
+    \item \textbf{Das physikalisch-ökonomische Optimum (\ac{EmALT} und \ac{EPI}):}
+    Die Umwidmung dieses Gestaltungsbudgets in asymmetrische Ankerpunkte (\acp{AP}) nahe dem Feldbereich (\ac{EmALT}-Methodik) minimiert die Extrapolationsvarianz zielgerichtet. Der neu eingeführte Economic Extrapolation Power Index (\ac{EPI}) überführt den damit einhergehenden Zielkonflikt aus stochastischer Vorhersagegüte und exponentiell ansteigenden Prüfzeiten in eine skalare Bewertungsmetrik. Die Bilanzierung belegt, dass das \ac{EmALT}-Design das globale Optimum aus minimaler Prognoseunsicherheit und vertretbaren Prüfstandskosten darstellt.
+
+    \item \textbf{Empirische Falsifikation starrer Standarddesigns:}
+    Die industrielle Fallstudie belegt anhand realer Ausfalldaten, dass die rein informationstheoretische Varianzbetrachtung in der Praxis von einem weitaus kritischeren Effekt überlagert wird. Prädiktionsintervall-basierte Analysen (analog zu \textit{Confirmation Experiments}) falsifizieren das klassische Basis-\ac{CCD} an den Ankerpunkten signifikant. Das \ac{EmALT}-Design fungiert somit nicht primär als stochastischer Varianzdämpfer, sondern als physikalischer Frühwarnsensor, der eine unkonservative, sicherheitskritische Überschätzung der Bauteillebensdauer verhindert.
+\end{enumerate}
+
+
+\section{Diskussion} \label{sec:fazit_diskussion}
+
+Die entwickelte Methodik bietet ein weitreichendes Instrumentarium zur Steigerung der Modelleffizienz, bedarf jedoch hinsichtlich ihrer Anwendbarkeit und Skalierbarkeit einer kritischen Einordnung.
+
+Die fundamentale Prämisse der Extrapolationsabsicherung durch \ac{EmALT} beruht auf der Annahme einer stetigen Degradationskinematik. Das log-lineare \ac{AFT}-Modell geht von einem einheitlichen Ausfallmechanismus über den gesamten abgetasteten Parameterraum aus. Die Ankerpunkte verschieben die empirische Absicherung zwar signifikant näher an den Feldbereich, können jedoch abrupte physikalische Mechanismenwechsel, die erst bei noch geringeren Lasten (zwischen \ac{AP} und Feld-Niveau) auftreten, nicht detektieren. Das Modell verbleibt folglich eine stochastische Approximation der Realität.
+
+Ein methodischer Zirkelschluss der effizienten Versuchsplanung liegt zudem in der Notwendigkeit von \textit{A-priori}-Wissen. Die optimale Platzierung der Ankerpunkte innerhalb der \textit{Exposure-Area} sowie die Vorabkalkulation des \ac{EPI} erfordern Annahmen über die zugrundeliegenden Weibull-Parameter und das Kostengefüge. Entspricht die initiale Schätzung der Effektgrößen nicht der wahren Systemkinematik, verschiebt sich die topologische Effizienz des konzipierten Versuchsplans. Die Methodik ist somit in hohem Maße abhängig von der Qualität vorangegangener Screening-Untersuchungen oder bestehendem Domänenwissen.
+
+Hinsichtlich der algorithmischen Skalierbarkeit konzentrieren sich die grafischen und analytischen Nachweise (insbesondere der \ac{EVG}) im Rahmen dieser Arbeit auf den zweidimensionalen Versuchsraum ($\sym{k}=2$). Während die zugrundeliegende Informationsmatrix und die Berechnung der \ac{SPV} mathematisch dimensionsunabhängig operieren, steigt die Komplexität der Identifikation und Visualisierung der \textit{Exposure-Area} in höherdimensionalen Parameterräumen enorm an. Die manuelle Verortung von Ankerpunkten stößt bei multivariaten Problemen mit drei oder mehr unabhängigen Stressfaktoren rasch an kognitive und numerische Grenzen.
+
+
+\section{Ausblick} \label{sec:fazit_ausblick}
+
+Aus den identifizierten Restriktionen leiten sich direkte Impulse für die weiterführende wissenschaftliche Forschung im Bereich der Zuverlässigkeitstechnik und der statistischen Versuchsplanung ab.
+
+Zur Adressierung des dimensionalen Skalierungsproblems empfiehlt sich die Entwicklung automatisierter, meta-heuristischer Optimierungsalgorithmen. Die Überführung der \ac{EmALT}-Positionierung in ein \textit{Constrained Optimization Problem} -- bei welchem Algorithmen die Ankerpunkte unter Einhaltung numerischer \ac{SPV}-Schranken und anlagenspezifischer Parametergrenzen selbstständig in $k$-dimensionalen Räumen allokieren -- beschleunigt den industriellen Planungsprozess signifikant.
+
+Um die Abhängigkeit von \textit{A-priori}-Wissen zu verringern, bietet die Integration der \ac{EmALT}-Methodik in sequenzielle oder Bayes'sche Versuchsplanungsstrategien ein hohes methodisches Potenzial. Ein dynamisches \ac{DoE}, welches erste Ausfallzeiten aus dem faktoriellen Hochlast-Kern in Echtzeit auswertet, um die Koordinaten der nachgelagerten Ankerpunkte laufend (\textit{on-the-fly}) zu aktualisieren und an das sich abzeichnende Ausfallverhalten anzupassen, maximiert die Effizienz der Ressourcenallokation.
+
+Schließlich erfordert die Generalisierung des Ansatzes eine Untersuchung jenseits des hier fokussierten \ac{AFT}-Modells. Die Übertragung der gerichteten Extrapolationsabsicherung auf Modelle mit konkurrierenden Ausfallmechanismen (\textit{Competing Risks}) oder auf Degradationsmodelle, bei denen nicht erst der Totalausfall, sondern der kontinuierliche Verschleißverlauf als stochastische Zielgröße dient, stellt den logischen nächsten Schritt dar. Dies erweitert den Anwendungsbereich der \ac{EmALT}-Strategie auf die proaktive Zustandsüberwachung (\textit{Condition Monitoring}) und Predictive Maintenance.

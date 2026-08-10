@@ -6,32 +6,35 @@
 
 \section{Von der stochastischen Simulation zur physischen Lebensdauererprobung} \label{sec:case_intro}
 
-Die Ausführungen in Kapitel~\ref{chap:entwurf} erbringen auf Basis umfangreicher \acp{MCS} den theoretischen und algorithmischen Nachweis, dass das \ac{EmALT}-Design im Rahmen der multivariaten, effizienten Lebensdauererprobung signifikante informationstheoretische Vorteile gegenüber klassisch orthogonalen Versuchsplänen bietet.
-Für den finalen Transfer dieser Methodik in die industrielle Zuverlässigkeitstechnik dient das vorliegende Kapitel der ergänzenden empirischen Validierung an einem real vermessenen Hardwaredatensatz.
-Diese Fallstudie ist dabei bewusst als praxisnahe Ergänzung konzipiert und untermauert die numerischen Ergebnisse des vorherigen Kapitels durch die Betrachtung realer Bauteilversuche an Zahnriemen für Lenksysteme in automobilen Anwendungen \cite{Arndt.2026}.
+Die Ausführungen in Kapitel~\ref{chap:entwurf} erbringen auf Basis umfangreicher \acp{MCS} den theoretischen und algorithmischen Nachweis, dass das \ac{EmALT}-Design im Rahmen der multivariaten, effizienten Lebensdauererprobung signifikante informationstheoretische Vorteile gegenüber klassisch orthogonalen Versuchsplänen für \ac{ALT} bietet.
+Für den finalen Transfer dieser Methodik in die industrielle Zuverlässigkeitstechnik dient das vorliegende Kapitel der ergänzenden empirischen Validierung an einem real vermessenen Hardwaredatensatz aus Untersuchungen von \textcite{Arndt.2026}.
+Diese Fallstudie untermauert damit die numerischen Ergebnisse des vorherigen Kapitels durch die Betrachtung realer Bauteilversuche an Zahnriemen für Lenksysteme in automobilen Anwendungen.
 
 Der methodische Übergang von der Simulation zur physischen Erprobung impliziert zwei wesentliche Verschärfungen der Randbedingungen:
 Erstens weicht die idealisierte Gesetzmäßigkeit unendlicher Simulationsiterationen der harten statistischen Realität stark limitierter Stichprobenumfänge.
-Die nachfolgende Untersuchung basiert auf einem realen Versuchsdatensatz mit lediglich zweifacher Replikation und damit $\sym{N} = 26$ Prüflingen.
+Die nachfolgende Untersuchung basiert auf einem realen Versuchsdatensatz mit lediglich zweifacher Replikation und damit $\sym{N} = 26$ Versuchspunkt-Durchführungen.
 Zweitens unterliegen experimentelle \ac{EoL}-Versuche zwingenden physikalischen und normativen Restriktionen.
-In der Praxis können hochgradig beschleunigte Versuchspunkte (wie die extremen \acp{SP} im nordöstlichen Parameterraum) oftmals nicht wie theoretisch geplant abgefahren werden.
-Zu hohe Stressniveaus induzieren hierbei typischerweise eine Überlastung der Prüftechnik, provozieren unrepräsentative Ausfallmechanismen (bspw. Zahnabriss anstatt abrasiven Verschleißes) oder sind physikalisch schlichtweg nicht umsetzbar.
-
-Anstatt diese technologischen Restriktionen als Mangel zu betrachten, generieren sie aus Sicht der adaptiven Versuchsplanung ein zwingendes \textbf{geometrisches Gestaltungsbudget} nach Abschnitt~\ref{sec:adaptive_planung}.
-Die nicht realisierbaren Hochlast-Versuche werden aus der Design-Matrix gestrichen.
-Anstatt den Versuchsplan dadurch jedoch lediglich passiv auszudünnen und eine asymmetrische Varianzaufweitung in Kauf zu nehmen, wird das freigewordene Budget proaktiv umgewidmet: Die Versuchspunkte werden in die direkte Peripherie des anvisierten Feldbetriebspunktes im Niedrigstressbereich re-allokiert.
+Zu hohe Stressniveaus induzieren hierbei typischerweise eine Überlastung der Prüftechnik, provozieren unrepräsentative Ausfallmechanismen (bspw. Zahnabriss anstelle von Relaxationserscheinungen oder abrasivem Verschleiß) oder sind physikalisch schlichtweg nicht umsetzbar.
+Anstatt diese technologischen Restriktionen als Mangel zu betrachten, generieren sie aus Sicht der adaptiven Versuchsplanung durch \ac{EmALT} ein zwingendes \textbf{geometrisches Gestaltungsbudget} nach Abschnitt~\ref{sec:adaptive_planung}.
+Hier beispielhaft und abweichend von der rein theoriegeleiteten Ausdünnung redundanter \acp{ZP} speist sich dieses Budget im vorliegenden Fall aus dem zwingenden Entfall des nördlichen und westlichen \acp{SP} sowie des faktoriellen Eckpunktes $(1; -1)$.
+Diese topologische Limitierung ist physikalisch determiniert: Das komplexe tribologische Eingriffsverhalten des Zahnriemens verliert in diesem spezifischen, kombinierten Belastungsregime seine funktionale Plausibilität, wodurch abweichende, unrepräsentative Ausfallmechanismen provoziert werden können.
+Die nicht realisierbaren Hochlast-Versuche werden folglich aus der Design-Matrix gestrichen.
+Anstatt den Versuchsplan dadurch jedoch lediglich passiv auszudünnen und eine asymmetrische Varianzaufweitung in Kauf zu nehmen, wird das freigewordene Budget proaktiv umgewidmet: 
+Die Versuchspunkte werden in die direkte Peripherie des anvisierten Feldbetriebspunktes im Niedrigstressbereich re-allokiert.
+Da der originäre Basis-Datensatz nach \textcite{Arndt.2026} diese massiv entschärften Stressniveaus naturgemäß nicht abdeckt, werden die Positionierungen und Ausfallergebnisse der \acp{AP} beispielhaft aus einer empirischen Begleitstudie adaptiert.
+Dieser subtile methodische Transfer dient primär dem Zweck, das Wirkprinzip der \ac{EmALT}-Topologie an einem kohärenten Realdatensatz zu exemplifizieren und greifbar zu visualisieren.
 Entscheidend ist hierbei, dass die Reallokation algorithmisch optimiert nach den in Kapitel~\ref{chap:entwurf} entwickelten \ac{EmALT}-Kriterien in Kombination mit realen Prüfstandsbeschränkungen erfolgen kann.
 Tabelle~\ref{tab:case_ieee_dataset} fasst die experimentell ermittelten Ausfallzeiten des untersuchten Lenksystem-Zahnriemens für die jeweiligen Faktorkombinationen übersichtlich zusammen.
 
-\input{tables/tab_ieee_dataset.tex}
+\input{tables/tab_ieee_experimental_data.tex}
 
 Da diese \acp{AP} im Gegensatz zur theoretischen Simulation nun mit realen Ausfallzeiten vorliegen, ermöglicht dieser Datensatz einen einzigartigen, zweiseitigen Modellvergleich: Die Parameterschätzung und Lebensdauerprognose erfolgt separat für das klassische Basis-\ac{CCD} (ohne \acp{AP}, isoliert aus den Untersuchungen von \textcite{Arndt.2026}) sowie für das re-allokierte \ac{EmALT}-Design inklusive der Ankerpunkte.
-Dies erlaubt nicht nur die finale Evaluation der realen Modellanpassung, der \ac{SPV} und der verursachten Versuchskosten, sondern wirft vor allem eine fundamentale Validierungsfrage auf:
-Unterscheidet sich das durch die Ankerpunkte gestützte Zuverlässigkeitsmodell lediglich graduell in seiner Prognosevarianz vom Basis-Modell, oder erzwingen die Realdaten auf dem Extrapolationspfad ein signifikant abweichendes, neues Degradationsgesetz?
+Dies erlaubt nicht nur die finale Evaluation der realen Modellanpassung, der \ac{SPV} und der verursachten Versuchskosten, sondern rückt vor allem einen fundamentalen Validierungsaspekt in den Fokus.
+Die nachfolgende Analyse dient dem gezielten Nachweis, inwiefern die Realdaten auf dem Extrapolationspfad nicht nur eine graduelle Veränderung der Prognosevarianz bewirken, sondern ein signifikant abweichendes, neues Degradationsgesetz gegenüber dem ungestützten Basis-Modell erzwingen.
 
 \section{Empirische Modellschätzung und Anpassungsgüte} \label{sec:case_evaluation}
 
-Die \ac{MLE}-basierte Auswertung der Modelparameter nach Gleichung~\ref{eq:log_likelihood_explicit} offenbart für beide Design-Varianten zunächst signifikante Diskrepanzen in der Gewichtung der physikalischen Effekte.
+Die \ac{MLE}-basierte Auswertung der Modelparameter nach Gleichung~\ref{eq:log_likelihood_explicit} offenbart für beide Design-Varianten zunächst signifikante Diskrepanzen in der Gewichtung der physikalischen Effekte. 
 Abbildung~\ref{fig:ma_abb6.1_parameter_estimates} veranschaulicht die Gegenüberstellung der geschätzten Regressionskoeffizienten in $\hat{\sym{beta}}$ sowie des korrespondierenden Weibull-Formparameters $\hat{\sym{b}}$.
 
 \begin{figure}[htbp]
@@ -48,9 +51,7 @@ Diese numerische Verschiebung der Parameter manifestiert sich visuell prägnant 
 
 \begin{figure}[htbp]
     \centering
-    \setlength\figurewidth{0.9\textwidth}
-    \setlength\figureheight{6.5cm}
-    \input{plots/ma_abb6.1_response_surface_comparison_lin.tex}
+    \includegraphics[width=0.9\textwidth]{plots/ma_abb6.1_response_surface_comparison_lin.pdf}
     \caption{Modellanpassung im Parameterraum: Das Basis-\ac{CCD} (links) extrapoliert starr aus dem Hochlastzentrum. Das \ac{EmALT}-Design (rechts) wird durch die \acp{AP} im südwestlichen Quadranten gestützt und passt die Response Surface der wahren physikalischen Degradation im Niedrigstressbereich an.}
     \label{fig:ma_abb6.1_response_surface}
 \end{figure}
@@ -80,13 +81,17 @@ Dies führt zu einem stark ausgeprägten Konfidenzband, das bei einer beispielha
 Das \ac{EmALT}-Design hingegen reduziert die Varianz durch die implementierten \acp{AP} massiv: Die \ac{SPV} kollabiert auf $0{,}15$, wodurch sich die Breite des Konfidenzintervalls am Referenzpunkt auf hochpräzise $1{,}3\,\%$ verdichtet.
 Die Extrapolationsunsicherheit wird somit um einen Faktor von $11{,}2$ minimiert.
 
-Neben dieser Varianzdämpfung offenbart Abbildung~\ref{fig:ma_abb6.1_reliability_ci} jedoch ein noch kritischeres Phänomen: Die mittlere Prognosekurve (Punktschätzer) des \ac{EmALT}-Designs verläuft signifikant flacher und konservativer als jene des Basis-\ac{CCD}.
-Diese drastische Abweichung wirft die essenzielle suggestive Validierungsfrage auf: Decken die \acp{AP} hier lediglich eine Präzisierung der Vorhersageunschärfe auf, oder offenbaren sie eine fundamentale Modellabweichung infolge wirtschaftlich "gut gemeinter", aber stochastisch fehlerhafter Beschleunigung (\ac{ALT})?
-Haben die Ankerpunkte das Basis-Modell offiziell widerlegt?
+Diese enorme stochastische Absicherung spiegelt sich jedoch unweigerlich in der ökonomischen Realität der Kostengleichung wider.
+Während das Basis-\ac{CCD} mit aggregierten Gesamtkosten von lediglich $45{,}2\text{ kCU}$ vordergründig extrem wirtschaftlich erscheint, schlägt sich das \ac{EmALT}-Design mit prohibitiv wirkenden $344{,}6\text{ kCU}$ zu Buche.
+Dieser massive Kostenanstieg ist physikalisch determiniert: Die Verschiebung der Ankerpunkte in den Niedrigstress-Bereich (nahe dem Feldbetrieb) erzwingt exponentiell längere Testlaufzeiten der \ac{EoL}-Prüflinge bis zum Ausfall.
+Aus dieser Gegenüberstellung resultiert die ingenieurswissenschaftliche Notwendigkeit, diesen drastischen monetären Mehraufwand objektiv zu evaluieren. Es ist folglich zu verifizieren, ob das \ac{EmALT}-Design lediglich eine akademisch engere, praktisch jedoch marginale Konfidenzschranke um denselben physikalischen Sachverhalt generiert oder einen zwingenden methodischen Mehrwert liefert.
+
+Neben dieser Varianzdämpfung offenbart Abbildung~\ref{fig:ma_abb6.1_reliability_ci} hierzu ein kritisches Phänomen: Die mittlere Prognosekurve (Punktschätzer) des \ac{EmALT}-Designs verläuft signifikant flacher und konservativer als jene des Basis-\ac{CCD}.
+Diese drastische Abweichung lenkt den Fokus auf einen essenziellen Validierungsaspekt. Es gilt methodisch zu klären, ob die \acp{AP} hier lediglich eine Präzisierung der Vorhersageunschärfe bewirken oder vielmehr eine fundamentale Modellabweichung infolge einer stochastisch fehlerhaften Beschleunigung (\ac{ALT}) aufdecken und das ungestützte Basis-Modell damit in seiner Gültigkeit offiziell widerlegen.
 
 \subsection{Confirmation Experiments nach Stevens}
 
-Um diese Frage mathematisch zweifelsfrei zu beantworten, wird das Basis-\ac{CCD} anhand der real getesteten Ankerpunkte mittels \textit{prädiktionsintervall-basierter} Analysemethoden falsifiziert.
+Um diesen Umstand mathematisch zweifelsfrei zu bewerten, wird das Basis-\ac{CCD} anhand der real getesteten Ankerpunkte mittels \textit{prädiktionsintervall-basierter} Analysemethoden einer Validierung unterzogen.
 Hierfür fungieren die \acp{AP} als formale \textit{Confirmation Runs} \cite{Stevens.2019}.
 Die Logik ist zwingend: Wenn das durch das Basis-\ac{CCD} im Hochlastbereich extrahierte Modell die physikalische Realität korrekt beschreibt, müssen die realen Ausfallzeiten der fernen Ankerpunkte innerhalb des vom \ac{CCD} tolerierten Streubandes liegen.
 
@@ -109,9 +114,9 @@ Es extrapoliert die Lebensdauer unkonservativ und überschätzt die reale Bautei
 
 \subsection{Ökonomische Schlussfolgerung}
 
-Die Einbindung der \acp{AP} erzeugt logischerweise eine Verschiebung in der \ac{EoL}-Kostengleichung.
+Die Einbindung der \acp{AP} erzeugt logischerweise eine Verschiebung in der \ac{EoL}-Kostengleichung. 
 Während das Basis-\ac{CCD} mit aggregierten Gesamtkosten von $45{,}2\text{ kCU}$ extrem wirtschaftlich erscheint, beansprucht das \ac{EmALT}-Design $344{,}6\text{ kCU}$ -- wenngleich ein reines Feld-\ac{CCD} zur Erreichung vergleichbarer Varianzen überschlägig ein Vielfaches dieses Aufwands fordern würde.
-Die Falsifikation durch die \textit{Confirmation Runs} beantwortet die Frage nach der Rechtfertigung dieses monetären Mehraufwands jedoch unmissverständlich.
+Die Falsifikation durch die \textit{Confirmation Runs} belegt die absolute Rechtfertigung dieses monetären Mehraufwands jedoch unmissverständlich.
 Die Re-Allokation des Gestaltungsbudgets resultiert nicht einfach in einem "akademisch präziseren" Modell mit feineren Konfidenzgrenzen. Der Eingriff ist eine zwingende methodische Notwendigkeit.
 Ohne die durch das \ac{EmALT}-Design positionierten Ankerpunkte als physikalische Frühwarnsensoren wäre ein fundamental falsches, lebensgefährlich überschätztes Zuverlässigkeitsmodell für den Lenksystem-Zahnriemen freigegeben worden.
 
