@@ -1,7 +1,7 @@
 This is makeindex, version 2.16 [MiKTeX 24.4].
 Scanning style file ./diss_arndt.ist...........................done (27 attributes redefined, 0 ignored).
-Scanning input file diss_arndt.acn....done (714 entries accepted, 0 rejected).
-Sorting entries.........done (8077 comparisons).
-Generating output file diss_arndt.acr....done (315 lines written, 0 warnings).
+Scanning input file diss_arndt.acn....done (907 entries accepted, 0 rejected).
+Sorting entries..........done (10289 comparisons).
+Generating output file diss_arndt.acr....done (384 lines written, 0 warnings).
 Output written in diss_arndt.acr.
 Transcript written in diss_arndt.alg.

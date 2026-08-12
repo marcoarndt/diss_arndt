@@ -17,7 +17,7 @@ xticklabels={{$\hat{\sym{b}}$},{$\hat{\sym{beta}}_0$},{$\hat{\sym{beta}}_1$},{$\
 ymin=-5.09,
 ymax=10.10,
 ylabel style={font=\color{mycolor1}},
-ylabel={Schätzwert},
+ylabel={Absoluter Schätzwert $\hat{\sym{thet}}_{\sym{idx_i}}$},
 axis background/.style={fill=white},
 xmajorgrids,
 ymajorgrids,
@@ -78,24 +78,5 @@ y tick label style={/pgf/number format/precision=0}
 6.14	-2.76	0.23	0.23\\
 7.14	0.86	0.14	0.14\\
 };
-\end{axis}
-
-\begin{axis}[%
-width=1.227\figurewidth,
-height=1.227\figureheight,
-at={(-0.16\figurewidth,-0.135\figureheight)},
-scale only axis,
-xmin=0.00,
-xmax=1.00,
-ymin=0.00,
-ymax=1.00,
-axis line style={draw=none},
-ticks=none,
-axis x line*=bottom,
-axis y line*=left,
-grid=major,
-grid style={dotted, gray!50},
-y tick label style={/pgf/number format/precision=0}
-]
 \end{axis}
 \end{tikzpicture}%

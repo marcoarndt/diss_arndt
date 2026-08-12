@@ -1,22 +1,19 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'diss_arndt.blg'
-[444] biber-MSWIN64:340> INFO - === 
-[608] Biber.pm:419> INFO - Reading 'diss_arndt.bcf'
-[1169] Biber.pm:979> INFO - Found 128 citekeys in bib section 0
-[1203] Biber.pm:4419> INFO - Processing section 0
-[1266] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[1366] bibtex.pm:1713> INFO - LaTeX decoding ...
-[2073] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[3278] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[3278] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[3278] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[3278] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
-[3504] bbl.pm:660> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[3606] bbl.pm:763> INFO - Output to diss_arndt.bbl
-[3607] Biber.pm:131> WARN - ISBN '979-8-3503-6774-4' in entry 'Rittmaier.2025' is invalid - run biber with '--validate_datamodel' for details.
-[3607] Biber.pm:131> WARN - ISBN '979-8-3503-0769-6' in entry 'Arndt.2024' is invalid - run biber with '--validate_datamodel' for details.
-[3607] Biber.pm:131> WARN - ISBN '979-8-3503-6774-4' in entry 'Arndt.2025b' is invalid - run biber with '--validate_datamodel' for details.
-[3608] Biber.pm:131> WARN - misc entry 'AfA.2000' (bibliography.bib): Invalid format '23.07.2026' of date field 'urldate' - ignoring
-[3608] Biber.pm:131> WARN - legacy year field '2005-12' in entry 'VDI2884' is not an integer - this will probably not sort properly.
-[3608] Biber.pm:131> WARN - legacy year field '1962-10' in entry 'VDI3258' is not an integer - this will probably not sort properly.
-[3608] Biber.pm:133> INFO - WARNINGS: 6
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
+[116] biber-MSWIN64:340> INFO - === 
+[159] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
+[408] Biber.pm:994> INFO - Found 128 citekeys in bib section 0
+[424] Biber.pm:4463> INFO - Processing section 0
+[435] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[516] bibtex.pm:1713> INFO - LaTeX decoding ...
+[830] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[1322] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1323] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1323] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[1324] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[1452] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[1645] bbl.pm:779> INFO - Output to diss_arndt.bbl
+[1647] Biber.pm:131> WARN - misc entry 'AfA.2000' (bibliography.bib): Invalid format '23.07.2026' of date field 'urldate' - ignoring
+[1648] Biber.pm:131> WARN - legacy year field '2005-12' in entry 'VDI2884' is not an integer - this will probably not sort properly.
+[1648] Biber.pm:131> WARN - legacy year field '1962-10' in entry 'VDI3258' is not an integer - this will probably not sort properly.
+[1648] Biber.pm:133> INFO - WARNINGS: 3
