@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  14 AUG 2026 16:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  14 AUG 2026 16:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1753,7 +1753,7 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--382
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--383
  [] [] 
  []
 
@@ -1808,20 +1808,20 @@ Overfull \hbox (20.48994pt too wide) in alignment at lines 2--2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--220
+Underfull \hbox (badness 10000) in paragraph at lines 221--221
 []|\T1/qpl/m/n/12 (+10) Orthogonale Pro-jek-ti-ons-ma-trix, Prä-dik-ti-ons-ma-trix, Hat-
  []
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 418.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 419.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Underfull \hbox (badness 2173) in paragraph at lines 607--607
+Underfull \hbox (badness 2173) in paragraph at lines 608--608
 []|\T1/qpl/m/n/12 (+10) Standardisierte Va-ria-ble der Kleinst-wert-ver-tei-lung (SEV);
  []
 
 
-Overfull \hbox (20.48994pt too wide) in alignment at lines 2--608
+Overfull \hbox (20.48994pt too wide) in alignment at lines 2--609
  [] [] 
  []
 
@@ -2715,27 +2715,22 @@ Overfull \hbox (45.80244pt too wide) in paragraph at lines 101--44
  []
 
 
-Overfull \hbox (4.01169pt too wide) in paragraph at lines 48--52
-\T1/qpl/m/n/12 (-10) of-fen-bart ei-ne wert-vol-le An-rei-che-rung des un-ge-stütz-ten Ex-tra-po-la-ti-ons-mo-dells. Wäh-
- []
-
-
 
 [140]
 <plots/ma_abb6.1_response_surface_comparison_log.pdf, id=6134, 422.57875pt x 259.97125pt>
 File: plots/ma_abb6.1_response_surface_comparison_log.pdf Graphic file (type pdf)
 <use plots/ma_abb6.1_response_surface_comparison_log.pdf>
-Package pdftex.def Info: plots/ma_abb6.1_response_surface_comparison_log.pdf  used on input line 60.
+Package pdftex.def Info: plots/ma_abb6.1_response_surface_comparison_log.pdf  used on input line 59.
 (pdftex.def)             Requested size: 391.79184pt x 241.0369pt.
 
 
 [141 <./plots/ma_abb6.1_response_surface_comparison_log.pdf>] (plots/ma_abb6.1_reliability_ci_comparison.tex)
-Overfull \hbox (4.62938pt too wide) in paragraph at lines 5060--82
+Overfull \hbox (4.62938pt too wide) in paragraph at lines 5060--80
  [][] 
  []
 
 
-Underfull \hbox (badness 1681) in paragraph at lines 82--82
+Underfull \hbox (badness 1681) in paragraph at lines 80--80
 [][][]|\T1/qpl/m/n/12 (+10) Em-pi-ri-sche Le-bens-dau-er-pro-gno-se am Feld-punkt. Das [][][]EmALT[][]-
  []
 
@@ -2905,15 +2900,15 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 Here is how much of TeX's memory you used:
  78709 strings out of 473577
  1820636 string characters out of 5716318
- 4161983 words of memory out of 5000000
+ 4160983 words of memory out of 5000000
  99400 multiletter control sequences out of 15000+600000
  763139 words of font info for 443 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,26n,121p,10968b,3730s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (214 pages, 4311162 bytes).
+Output written on diss_arndt.pdf (214 pages, 4309631 bytes).
 PDF statistics:
- 7407 PDF objects out of 7423 (max. 8388607)
+ 7402 PDF objects out of 7423 (max. 8388607)
  889 named destinations out of 1000 (max. 500000)
  103733 words of extra memory for PDF output out of 106986 (max. 10000000)
 

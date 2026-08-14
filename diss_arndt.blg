@@ -1,19 +1,19 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
-[156] biber-MSWIN64:340> INFO - === 
-[231] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
-[487] Biber.pm:994> INFO - Found 129 citekeys in bib section 0
-[505] Biber.pm:4463> INFO - Processing section 0
-[533] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[602] bibtex.pm:1713> INFO - LaTeX decoding ...
-[880] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[1482] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1483] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1483] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[1484] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[1594] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[1723] bbl.pm:779> INFO - Output to diss_arndt.bbl
-[1724] Biber.pm:131> WARN - misc entry 'AfA.2000' (bibliography.bib): Invalid format '23.07.2026' of date field 'urldate' - ignoring
-[1725] Biber.pm:131> WARN - legacy year field '2005-12' in entry 'VDI2884' is not an integer - this will probably not sort properly.
-[1725] Biber.pm:131> WARN - legacy year field '1962-10' in entry 'VDI3258' is not an integer - this will probably not sort properly.
-[1725] Biber.pm:133> INFO - WARNINGS: 3
+[72] biber-MSWIN64:340> INFO - === 
+[102] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
+[279] Biber.pm:994> INFO - Found 129 citekeys in bib section 0
+[292] Biber.pm:4463> INFO - Processing section 0
+[300] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[359] bibtex.pm:1713> INFO - LaTeX decoding ...
+[582] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[930] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[931] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[932] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[933] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[981] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[1093] bbl.pm:779> INFO - Output to diss_arndt.bbl
+[1095] Biber.pm:131> WARN - misc entry 'AfA.2000' (bibliography.bib): Invalid format '23.07.2026' of date field 'urldate' - ignoring
+[1118] Biber.pm:131> WARN - legacy year field '2005-12' in entry 'VDI2884' is not an integer - this will probably not sort properly.
+[1118] Biber.pm:131> WARN - legacy year field '1962-10' in entry 'VDI3258' is not an integer - this will probably not sort properly.
+[1118] Biber.pm:133> INFO - WARNINGS: 3

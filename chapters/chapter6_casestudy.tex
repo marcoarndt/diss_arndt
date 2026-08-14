@@ -29,12 +29,12 @@ Tabelle~\ref{tab:ieee_experimental_data} fasst alle experimentell ermittelten Au
 Da die \acp{AP} im Gegensatz zur theoretischen Simulation nun mit realen Ausfallzeiten vorliegen, ermöglicht dieser Datensatz einen einzigartigen, zweiseitigen Modellvergleich:
 Die Parameterschätzung und Lebensdauerprognose erfolgen separat für das klassische Basis-\ac{CCD} (ohne \acp{AP}, isoliert aus den Untersuchungen von \textcite{Arndt.2026}) sowie für das reallokierte \ac{EmALT}-Design inklusive der Ankerpunkte mit vorliegenden \ac{EoL}-Zeiten.
 Dies erlaubt nicht nur die finale Evaluation der realen Modellanpassung, der \ac{SPV} und der verursachten Versuchskosten, sondern rückt vor allem einen fundamentalen Validierungs-Aspekt in den Fokus.
-Die nachfolgende Analyse dient dem gezielten Nachweis, inwiefern die Realdaten auf dem Extrapolationspfad nicht nur eine graduelle Veränderung der Prognosevarianz -- also der \ac{SPV} und deren Auswirkungen -- bewirken, sondern liefert Aufschluss darüber, in welchem Maße das Basis-Modell durch das \ac{EmALT}-Design bereichert und signifikant geschärft wird.
+Die nachfolgende Analyse dient dem gezielten Nachweis, inwiefern die Realdaten auf dem Extrapolationspfad nicht nur eine graduelle Veränderung der Prognosevarianz - also der \ac{SPV} und deren Auswirkungen - bewirken, sondern liefert Aufschluss darüber, in welchem Maße das Basis-Modell durch das \ac{EmALT}-Design bereichert und signifikant geschärft wird.
 
 \section{Empirische Modellschätzung und Anpassungsgüte} \label{sec:case_evaluation}
 
 Die \ac{MLE}-basierte Auswertung der Modellparameter nach Gleichung~\ref{eq:log_likelihood_explicit} und analog zu beispielsweise Abschnitt~\ref{subsec:ergebnisse_generic} offenbart für beide Design-Varianten zunächst messbare Diskrepanzen in der Ausprägung der Schätzwerte zu physikalischen Effekten.
-Abbildung~\ref{fig:ma_abb6.1_parameter_estimates} veranschaulicht die Gegenüberstellung der geschätzten Regressionskoeffizienten in $\hat{\sym{beta}}$ sowie des korrespondierenden Weibull-Formparameters $\hat{\sym{b}}$.
+Abbildung~\ref{fig:ma_abb6.1_parameter_estimates} veranschaulicht die Gegenüberstellung der geschätzten Regressionskoeffizienten in $\hat{\sym{Beta}}$ sowie des korrespondierenden Weibull-Formparameters $\hat{\sym{b}}$.
 
 \begin{figure}[htbp]
     \centering
@@ -45,11 +45,10 @@ Abbildung~\ref{fig:ma_abb6.1_parameter_estimates} veranschaulicht die Gegenüber
     \label{fig:ma_abb6.1_parameter_estimates}
 \end{figure}
 
-Die Integration der Ankerpunkte modifiziert das Regressionsmodell spürbar und offenbart eine wertvolle Anreicherung des ungestützten Extrapolationsmodells.
+Die Integration der Ankerpunkte modifiziert das Regressionsmodell messbar und offenbart eine wertvolle Anreicherung des ungestützten Extrapolationsmodells.
 Während die Konstante $\hat{\sym{beta}}_0$ sowie die Effekte $\hat{\sym{beta}}_2$ und $\hat{\sym{beta}}_{22}$ mit Abweichungen von rund $2\,\%$ bis $7\,\%$ ein im Hinblick auf den limitierten Stichprobenumfang von $\sym{N}=26$ absolut tolerierbares und hochgradig konsistentes Grundniveau aufzeigen, erfahren andere Terme eine signifikante Neukalibrierung.
 So wird der Haupteffekt $\hat{\sym{beta}}_1$ durch die Ankerpunkte drastisch gedämpft ($-1{,}34 \to -0{,}62$, ca. $-54\,\%$), während sich der quadratische Term $\hat{\sym{beta}}_{11}$ nahezu verdoppelt ($0{,}23 \to 0{,}57$, ca. $+148\,\%$).
 Zudem zeigt die Faktoren-Interaktion $\hat{\sym{beta}}_{12}$ eine vollständige Vorzeichenumkehr ($0{,}60 \to -0{,}37$).
-
 Flankierend korrigiert das \ac{EmALT}-Design die struktur- und stichprobenbedingte Unterschätzung des Weibull-Formparameters $\hat{\sym{b}}$.
 Das eng im Hochlastzentrum konzentrierte Basis-\ac{CCD} schätzt mit $\hat{\sym{b}}=1{,}25$ eine physikalisch verhältnismäßig breite Streuung der Lebensdauern.
 Die realen Ankerpunkte heben diesen Wert um $33\,\%$ auf ein Niveau von $\hat{\sym{b}}=1{,}66$ an, was einer geringeren, deterministischeren Bauteilstreuung entspricht.
@@ -62,18 +61,17 @@ Diese numerische Verschiebung der Parameter manifestiert sich visuell prägnant 
     \label{fig:ma_abb6.1_response_surface}
 \end{figure}
 
-Die dreidimensionale, gemeinsame Visualisierung der Regressionsflächen liefert die ingenieurswissenschaftliche Interpretation dieses methodischen Tunings:
-Das Basis-\ac{CCD} approximiert die Versuchspunkte im beschleunigten Zentrum präzise entlang der Ergebnislage, extrapoliert diesen steilen Gradienten jedoch linear und ungebremst in den fernen \textit{Use-Space}.
-Das \ac{EmALT}-Design hingegen registriert durch seine \acp{AP}, dass die Lebensdauer bei moderateren Lasten physikalisch nicht in dem Maße ansteigt, wie es die rein lineare Hochlast-Extrapolation vermuten ließe.
+Die dreidimensionale, gemeinsame Visualisierung der Regressionsflächen liefert die ingenieurswissenschaftliche Interpretation dieses methodischen Tunings - wohl berücksichtigend, dass die Approximation  der Response Surface nur eine richtungsabhängige, statistische Repräsentation der realen Lebensdauer ist:
+Das Basis-\ac{CCD} approximiert die Versuchspunkte im beschleunigten Zentrum präzise entlang der Ergebnislage, extrapoliert diesen steilen Gradienten jedoch exponentiell in den fernen \textit{Use-Space}.
+Das \ac{EmALT}-Design hingegen registriert durch seine \acp{AP}, dass die Lebensdauer bei moderateren Lasten physikalisch nicht in dem Maße ansteigt, wie es die initiale Hochlast-Extrapolation vermuten ließe.
 Die Response Surface erfährt durch die Ankerpunkte eine deutliche Dämpfung in Richtung geringerer Lebensdauern und taucht im Extrapolationsbereich messbar unter die Fläche des Basis-Modells ab.
-Die durch das \ac{EmALT}-Design induzierte Ausprägung der Wirkungsfläche im Feldbereich stellt somit nicht nur eine graduelle Reduktion der Prädiktionsvarianz dar, sondern eine konsequente und empirisch gestützte Verfeinerung des Regressionsmodells. Daraus ergibt sich die Notwendigkeit, die Auswirkungen auf die Zuverlässigkeitsprognose am Feldpunkt zu evaluieren und die grundlegende methodische Verträglichkeit beider Ansätze zu verifizieren.
+Die durch das \ac{EmALT}-Design induzierte Ausprägung der Wirkungsfläche im Feldbereich stellt somit nicht nur eine graduelle Reduktion der Prädiktionsvarianz dar, sondern eine konsequente und empirisch gestützte Verfeinerung des Regressionsmodells.
+Daraus ergibt sich die Notwendigkeit, die ingenieurwissenschaftlichen Auswirkungen auf die Zuverlässigkeitsprognose am Feldpunkt zu evaluieren und die grundlegende methodische Verträglichkeit beider Ansätze zu plausibilisieren.
 
 \section{Konsequenzen für die Zuverlässigkeit und Modellvalidierung} \label{sec:case_falsifikation}
-
 Die Korrektur der Antwortfläche wirkt sich unmittelbar auf die statistische Feldabsicherung am anvisierten Prognosepunkt $(-1{,}50 ; -1{,}80)$ aus.
 Abbildung~\ref{fig:ma_abb6.1_reliability_ci} transferiert das jeweilige Modell auf den resultierenden Verlauf der Überlebenswahrscheinlichkeit $\sym{R}(\sym{t})$.
 Dargestellt sind die Zuverlässigkeitsfunktionen auf Grundlage der Gleichungen~\ref{eq:reldef}, \ref{eq:glm_link} und \ref{eq:var_T_general} sowie die korrespondierenden Bänder der $90\,\%$-\acp{CI}, resultierend aus der Fisher-Informationsmatrix (\ac{FIM}).
-
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.9\textwidth}
@@ -82,9 +80,8 @@ Dargestellt sind die Zuverlässigkeitsfunktionen auf Grundlage der Gleichungen~\
     \caption{Empirische Lebensdauerprognose am Feldpunkt. Das \ac{EmALT}-Design liefert eine radikal verkleinerte Prädiktionsvarianz (schmales Konfidenzband). Sein Median verbleibt kohärent innerhalb des weiten Vertrauensbereichs des Basis-\ac{CCD}, zeichnet jedoch ein realitätsnäheres und konservativeres Ausfallverhalten.}
     \label{fig:ma_abb6.1_reliability_ci}
 \end{figure}
-
 Die Auswertung bestätigt zunächst eindrucksvoll die theoriegeleitete Erwartung zur Varianzreduktion aus Kapitel~\ref{chap:entwurf}:
-Das Basis-\ac{CCD} weist aufgrund der ungestützten Extrapolationsdistanz eine stark ausgeprägte Prädiktionsvarianz von $\sym{SPV} = 8{,}24$ auf.
+Das Basis-\ac{CCD} weist aufgrund der ungestützten Extrapolationsdistanz eine stark ausgeprägte Prädiktionsvarianz von $\sym{SPV} = 8{,}24$ im Prognosepunkt auf.
 Dies führt zu einem verhältnismäßig sehr breiten Konfidenzband für die Prognose im Feldbetriebspunkt, das bei einer beispielhaften Laufzeit von $5\times 10^5\text{ h}$ eine extreme Unschärfe von $14{,}8\,\%$ aufspannt.
 Das \ac{EmALT}-Design hingegen reduziert die Varianz durch die implementierten \acp{AP} massiv:
 Die \ac{SPV} kollabiert auf $0{,}15$, wodurch sich die Breite des Konfidenzintervalls am Referenzpunkt auf hochpräzise $1{,}3\,\%$ verdichtet.
@@ -93,12 +90,14 @@ Die Extrapolationsunsicherheit wird somit um einen Faktor von $11{,}2$ minimiert
 Neben dieser Varianzdämpfung offenbart Abbildung~\ref{fig:ma_abb6.1_reliability_ci} ein für die methodische Einordnung essenzielles Phänomen:
 Das \ac{EmALT}-Design zeichnet aufgrund der Dämpfung und des höheren Formparameters zwar einen flacheren, konservativeren Verlauf des Zuverlässigkeitsabfalls. Der Median-Schätzwert dieses angepassten Modells wird jedoch über weite Strecken der Laufzeit nahezu vollständig vom breiten Varianzbereich des Basis-\ac{CCD}-Modells abgedeckt.
 Dies belegt unmissverständlich, dass die beiden Modelle \textbf{nicht grundlegend verschieden} oder widersprüchlich sind.
-Die Nutzung von Ankerpunkten dementiert das Basis-\ac{CCD} nicht, sondern reichert es substanziell an. Das \ac{EmALT}-Design überführt die valide, aber extrapolationsbedingt unscharfe Basisprognose des \ac{CCD} schlichtweg in einen hochpräzisen und empirisch fundierten Vertrauenskorridor.
+Die Nutzung von Ankerpunkten dementiert das Basis-\ac{CCD} nicht, sondern reichert es substanziell an.
+Das \ac{EmALT}-Design überführt die valide, aber extrapolationsbedingt unscharfe Basisprognose des \ac{CCD} schlichtweg in einen hochpräzisen und empirisch fundierten Vertrauenskorridor.
 
 Diese stochastische Absicherung spiegelt sich unweigerlich in der ökonomischen Realität der Kostengleichung entsprechend Abschnitt~\ref{sec:kostenmodell} wider.
 Während das Basis-\ac{CCD} mit aggregierten Gesamtkosten von lediglich $45{,}2\text{ kCU}$ vordergründig extrem wirtschaftlich erscheint, schlägt sich das \ac{EmALT}-Design mit prohibitiv wirkenden $344{,}6\text{ kCU}$ zu Buche.
 Dieser massive Kostenanstieg ist physikalisch determiniert: Die Verschiebung der \acp{AP} in den Niedrigstress-Bereich (nahe dem Feldbetrieb) erzwingt exponentiell längere Testlaufzeiten der Prüflinge.
-Aus dieser Gegenüberstellung resultiert die Notwendigkeit, diesen monetären Mehraufwand objektiv zu evaluieren. Es gilt zu überprüfen, ob sich dieser Einsatz bei einem extremen Härtetest des Basis-Modells als zwingend wirtschaftliche und stochastische Notwendigkeit erweist.
+Aus dieser Gegenüberstellung resultiert die Notwendigkeit, diesen monetären Mehraufwand objektiv zu evaluieren.
+Es gilt zu überprüfen, ob sich dieser Einsatz bei einem extremen Härtetest des Basis-Modells als zwingend wirtschaftliche und stochastische Notwendigkeit erweist.
 
 \subsection{Confirmation Experiments: Der statistische Härtetest}\label{subsec:confirmationruns}
 
@@ -108,18 +107,12 @@ Die zugrundeliegende Prüflogik besagt: Wenn das durch das Basis-\ac{CCD} im Hoc
 
 Dazu wird für die \ac{AP}-Koordinaten das Prädiktionsintervall (\ac{PI}) des Basis-\ac{CCD} berechnet.
 Da die Ausfallzeiten Weibull-verteilt sind, definiert sich das \ac{PI} über das $5\,\%$- und $95\,\%$-Quantil der geschätzten Verteilung, auf welches additiv die epistemische Parameterunsicherheit über die $\Delta$-Methode der \ac{FIM} angewandt wird. Fällt die reale Lebensdauer aus diesem ohnehin schon massiv aufgeweiteten Toleranzband heraus, stößt das Basis-Modell an dieser spezifischen Stützstelle an seine statistischen Schranken.
-Die Auswertung liefert folgendes Resultat:
 
-\begin{itemize}
-    \item \textbf{Ankerpunkt 1 $(-3{,}15 ; -2{,}56)$:}
-          Das $90\,\%$-\ac{PI} des Basis-\ac{CCD} prognostiziert für diese Koordinate eine ausgedehnte Streuung von $[24{,}8\times 10^6 ; 38\,426{,}9\times 10^6]\text{ h}$.
-          Die vier realen Replikationsläufe fielen jedoch bereits bei $\approx 3{,}95$ bis $4{,}30\times 10^6\text{ h}$ aus. Sämtliche Messwerte unterschreiten das vom \ac{CCD} erlaubte Minimum massiv.
-    \item \textbf{Ankerpunkt 2 $(-2{,}42 ; -2{,}17)$:}
-          Das \ac{PI} des Basis-\ac{CCD} spannt einen Bereich von $[2{,}90\times 10^6 ; 542{,}3\times 10^6]\text{ h}$ auf.
-          Die realen Versuchsläufe versagten bei $1{,}85\times 10^6\text{ h}$ und $1{,}91\times 10^6\text{ h}$. Auch hier liegen die Laufzeiten hochgradig signifikant außerhalb des theoretisch zulässigen Toleranzbandes.
-\end{itemize}
-
-Dieser Grenztest verdeutlicht empirisch, dass das voll-orthogonale Basis-\ac{CCD} bei reiner Hochlast-Abtastung im fernen moderaten Stressbereich an statistische Grenzen stößt und tendenziell unkonservativ extrapoliert.
+Die quantitative Auswertung dieser Konfirmationsläufe offenbart eine systematische Diskrepanz an den Rändern des Versuchsraums.
+Die empirisch realisierten Ausfallzeiten an beiden Ankerpunkten -- welche sich im Bereich von rund $3{,}95$ bis $4{,}30\times 10^6\text{ h}$ für die erste und $1{,}85$ bis $1{,}91\times 10^6\text{ h}$ für die zweite Stützstelle bewegen -- verfehlen die durch das Basis-\ac{CCD} prognostizierten Minima der korrespondierenden $90\,\%$-Prädiktionsintervalle ($24{,}8\times 10^6\text{ h}$ respektive $2{,}90\times 10^6\text{ h}$) signifikant.
+Sämtliche Replikationsläufe unterschreiten somit das theoretisch zulässige, ohnehin extrapolationsbedingt stark aufgeweitete Toleranzband des ungestützten Modells massiv.
+Dieser Grenztest verdeutlicht empirisch, dass das voll-orthogonale Basis-\ac{CCD} bei reiner Hochlast-Abtastung im fernen, moderaten Stressbereich naturgemäß an seine statistischen Grenzen stößt und infolge der unterschätzten Streuung tendenziell unkonservativ extrapoliert.
+Die methodische Integration der Ankerpunkte erweist sich folglich nicht nur als elegante Option zur Steigerung der Modelleffizienz, sondern als eine gutmütige, zwingende Notwendigkeit: Sie bewahrt das Zuverlässigkeitsmodell vor sicherheitskritischen Überschätzungen der Bauteilfestigkeit und überführt die Extrapolation in einen realitätsnahen, präzisen Vertrauenskorridor.
 
 \subsection{Ökonomische Schlussfolgerung}
 
