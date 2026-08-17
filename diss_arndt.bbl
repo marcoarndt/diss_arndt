@@ -4963,7 +4963,7 @@
       \verb 10.1080/00224065.2019.1571344
       \endverb
     \endentry
-    \entry{Arndt.2026}{incollection}{}{}
+    \entry{Arndt.2026}{article}{}{}
       \name{author}{3}{}{%
         {{hash=cb1e3a90988f317beb3353678cbde418}{%
            family={Arndt},
@@ -4994,8 +4994,11 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{IEEE Transactions on Reliability}
+      \field{journaltitle}{IEEE Transactions on Reliability}
       \field{title}{Multivariate Damage-based Reliability Assessment of Toothed Belts for Vehicle Steering Systems}
+      \field{year}{2026}
+      \field{pages}{1\bibrangedash 13}
+      \range{pages}{13}
       \verb{doi}
       \verb 10.1109/TR.2026.3713009
       \endverb
