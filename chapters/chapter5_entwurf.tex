@@ -733,14 +733,13 @@ Um diese Aufwände generisch und unabhängig vom spezifischen Prüflingstyp bila
 
 Das zugrundeliegende strukturelle Wirknetz dieser Kostenpositionen ist in Abbildung~\ref{fig:cost_model_structure} visualisiert.
 Es verdeutlicht die Interdependenzen der Domänen und zeigt auf, wie die einzelnen Faktoren methodisch aggregiert werden, um die designspezifischen Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ abzuleiten.
-
 \begin{figure}[htbp]
     \centering
-    % \includegraphics[width=0.7\textwidth]{plots/ma_abb_cost_model.pdf} % Pfad bitte anpassen
-    \caption{\colorbox{yellow}{Struktur} des Kostenmodells zur Berechnung der Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ als Funktion der Versuchsplan-Implementierung, identifizierter Kostenfaktoren sowie zufallsbehafteter Versuchslaufzeiten $\sym{t}_{\sym{idx_i}}$ (in Anlehnung an \cite{Arndt.2025}).}
+    \def\svgwidth{0.5\textwidth}
+    \input{plots/ma_abb5.14_costmodel.pdf_tex}
+    \caption{Struktur des Kostenmodells zur Berechnung der Gesamtkosten $\sym{C}_{\sym{idx_cost_total}}$ als Funktion der Versuchsplan-Implementierung, identifizierter Kostenfaktoren sowie zufallsbehafteter Versuchslaufzeiten $\sym{t}_{\sym{idx_i}}$ (in Anlehnung an \cite{Arndt.2023b}).}
     \label{fig:cost_model_structure}
 \end{figure}
-
 Um die theoretischen Relationen dieser Kostendomänen in einen ingenieurspraktischen Kontext zu setzen, können für typische \ac{EoL}-Prüfszenarien im Maschinen- und Automobilbau charakteristische Annahmen getroffen werden.
 Die Investitionskosten für derartige Anlagen ($\sym{C}_{\sym{idx_cost_test_eq}}$) belaufen sich branchenüblich auf mittlere bis hohe sechsstellige Beträge, welche kalkulatorisch zumeist über eine Nutzungsdauer von sechs bis acht Jahren abgeschrieben werden \cite{AfA.2000}.
 Trotz dieser substanziellen Fixkosten verdeutlicht die praxisnahe Aufschlüsselung die absolute Dominanz der laufenden Durchführungskosten ($\sym{C}_{\sym{idx_cost_size}}$) bei \ac{EoL}-Untersuchungen:

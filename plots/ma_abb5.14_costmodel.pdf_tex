@@ -1,0 +1,103 @@
+%% Creator: Inkscape 1.3.2 (091e20e, 2023-11-25, custom), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'ma_abb5.14_costmodel.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{172.59307381bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.65798981)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.18046946,1.13144329){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sum$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.6744057,1.13144329){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sum$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.12790431,0.03552298){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Spezifische Testdesign Kosten\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.14163599,1.56181995){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}Basis-\ac{CCD} oder \ac{EmALT}\\\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.16617363,1.3725153){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_labor}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.66034567,0.96308276){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_test_eq}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.65663574,1.37088574){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_base_eq}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.52228922,1.23059088){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_instr}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.78953633,1.23059088){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_ctrl}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.16617363,0.96308271){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_ambient}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.3405572,0.91581224){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$+$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.88725067,0.91581224){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$+$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.78180002,0.6127749){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\overline{\sym{C}}_{\sym{idx_cost_size}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.28850048,0.77945293){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_maint}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.32618558,0.61726035){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{t}_{\sym{idx_i}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.1329405,0.64376712){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_ener}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.21604791,0.47628832){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_help}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.43156053,0.50081625){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_op}}$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.88725067,0.43709823){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$+$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.62670445,0.61253357){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sum$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.46802095,0.74608872){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\ac{MCS}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.46319367,0.32308684){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sum$\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{ma_abb5.14_costmodel.pdf}}%
+    \put(0.44990938,0.15466857){\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}$\sym{C}_{\sym{idx_cost_total}}$\end{tabular}}}}%
+  \end{picture}%
+\endgroup%
