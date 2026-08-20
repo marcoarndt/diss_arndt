@@ -140,7 +140,7 @@ isbn=true]{biblatex}
 \title{Entwicklung Effizienter Multivariater Lebensdauertests}
 
 % English title: set proper title case: https://titlecaseconverter.com/
-\subtitle{Efficient Multivariate Lifetime Testing}
+\subtitle{Development of Efficient Multivariate Life Tests}
 
 \author{Marco Arndt,~M.Sc.}
 \birthplace{Ravensburg}
@@ -160,7 +160,7 @@ isbn=true]{biblatex}
 % Glossary (Used symbols, acronyms, ...)
 \input{settings/glossaries}
 
-% Singular: \ac{cdf} Plural: \acp{cdf} 
+
 %%%
 \newacronym{ALT}{ALT}{Accelerated Lifetime Testing}
 \newacronym[plural=BEVs, longplural=Battery Electric Vehicles]{BEV}{BEV}{Battery Electric Vehicle}
@@ -444,37 +444,86 @@ isbn=true]{biblatex}
 \addchap{Vorwort}
 Thanks for your service.
 
-% Beispiel fürs Referenzieren eines Akronyms:
-% \ac{ISW}.
-% Automatische Bindestriche bei zusammengesetzten Akronymen: \ac{FE}[-Modelle]
+
 
 \cleardoublepage
-\addchap{Kurzfassung/Abstract}
-Die Absicherung technischer Produkte und Systeme hinsichtlich ihrer Funktionalität und Lebensdauer bildet eine zentrale Säule im modernen Produktentwicklungsprozess.
-Um Ausfälle innerhalb des Gewährleistungszeitraums zu vermeiden und gleichzeitig Entwicklungszeiten zu verkürzen, greift die Zuverlässigkeitstechnik auf beschleunigte Lebensdauerprüfungen (Accelerated Life Testing, ALT) zurück.
-Da das Schädigungsverhalten technischer Systeme meist von mehreren interagierenden Lastgrößen (wie Temperatur, Vibration oder mechanischer Spannung) abhängt, erfordert die empirische Modellierung den Einsatz multivariater statistischer Versuchsplanung (Design of Experiments, DoE).
-Als methodischer Standard hat sich hierfür die Response Surface Methodology (RSM) mit dem Central Composite Design (CCD) etabliert.
-Die direkte Übertragung klassischer DoE-Prinzipien auf die Zuverlässigkeitstechnik offenbart jedoch fundamentale methodische Konflikte. Während klassische Versuchspläne auf geometrische Orthogonalität, Symmetrie und eine optimale Schätzgüte im Zentrum des Versuchsraums (Interpolation) getrimmt sind, erfordert die Lebensdauererprobung zwingend die Extrapolation: Tests müssen bei stark erhöhten Lasten (meist im nordöstlichen Parameterraum) durchgeführt werden, um Ausfälle in wirtschaftlich vertretbarer Zeit zu erzwingen.
-Das eigentliche Ziel der Modellbildung ist jedoch die verlässliche Prognose unter wesentlich moderateren Feldbedingungen (im südwestlichen Parameterraum).
-Darüber hinaus verletzen Lebensdauerdaten mit ihrer inhärenten Asymmetrie (Weibull-Verteilung) und unvermeidbaren Zensierungen die klassischen Annahmen normalverteilter Fehlerterme.
-Die vorliegende Dissertation adressiert diese methodische Lücke und entwickelt ein holistisches Framework zur Auslegung hocheffizienter, multivariater Lebensdauertests.
-Als methodische Basis wird zunächst ein heuristisches Screening-Verfahren vorgestellt.
-Da die Komplexität multivariater Versuchspläne exponentiell mit der Anzahl der Faktoren skaliert, schließt dieser Ansatz die Lücke zwischen qualitativer Systemanalyse (etwa durch Design Structure Matrices und erweiterte Ishikawa-Diagramme) und der quantitativen Testplanung.
-Durch die konsequente Fokussierung auf zeitabhängige Degradationsmechanismen wird die Dimensionalität des Parameterraums im Vorfeld rational auf das essenzielle Maß verdichtet, ohne zeit- und kostenintensive experimentelle Vorversuche zu erfordern.
-Im informationstheoretischen Kern der Arbeit wird das CCD systematisch auf seine Robustheit gegenüber praxisüblichen Restriktionen untersucht. Umfangreiche Monte-Carlo-Simulationen auf Basis fiktiv-physikalischer Ground-Truth-Modelle belegen eine erstaunliche topologische Gutmütigkeit des Designs.
-Es wird quantitativ nachgewiesen, dass moderate Abweichungen von der Orthogonalität - wie der Ausfall redundanter Zentralpunkte oder stochastische Varianzen in der Lastansteuerung - die statistische Trennschärfe (Power) und die Schätzpräzision lediglich marginal kompromittieren. Der resultierende Design-Penalty wird in der Praxis meist vom inhärenten System- und Messrauschen überschattet.
-Diese nachgewiesene Fehlertoleranz legitimiert einen radikalen Paradigmenwechsel: den Übergang zur adaptiven Versuchsplanung. Der bewusste Verzicht auf starre Lehrbuch-Orthogonalität zugunsten reduzierter Prüfumfänge erschließt dem Planer ein wertvolles „geometrisches Gestaltungsbudget“.
-Anstatt Versuchspunkte lediglich zur passiven Kostensenkung zu streichen, werden freigewordene Stützstellen - etwa extrem verschleißkritische Sternpunkte - proaktiv modifiziert und als sogenannte Extrapolations-Ankerpunkte (AP) in Richtung des anvisierten Feldbereichs verlagert.
-Dieser strategische Brückenbau im Parameterraum stützt das Regressionsmodell auf dem Extrapolationspfad empirisch ab.
-Um den Leistungsgewinn dieser gerichteten Asymmetrie objektiv bewerten zu können, wird die Scaled Prediction Variance (SPV) als lokale Maßzahl für die Vorhersageunsicherheit etabliert. Da klassische Bewertungstools wie der Variance Dispersion Graph (VDG) aufgrund ihrer Rotationssymmetrie blinde Flecken bei gezielten Extrapolationen aufweisen, wird im Rahmen dieser Arbeit der Extrapolation Variance Graph (EVG) neu entwickelt. Der EVG ermöglicht eine richtungsabhängige Quantifizierung der Prognosevarianz und belegt visuell wie analytisch, dass die Setzung von Ankerpunkten die Unsicherheit im Feld-Betriebspunkt um signifikante Größenordnungen reduziert.
+\addchap{Kurzfassung}
+Die funktionale Absicherung technischer Produkte und Systeme über deren gesamten Lebenszyklus stellt eine zentrale Säule des industriellen Produktentwicklungsprozesses dar.
+Zur Vermeidung von Feldausfällen innerhalb des Gewährleistungszeitraums bei simultaner Reduktion der Entwicklungszyklen bedient sich die Zuverlässigkeitstechnik beschleunigter Lebensdauerprüfungen (\textit{Accelerated Life Testing}).
+Da die Degradationskinematik technischer Systeme zumeist von mehreren interagierenden Lastgrößen determiniert wird, erfordert die empirische Modellierung zwingend den Einsatz der multivariaten statistischen Versuchsplanung (\textit{Design of Experiments}).
+Als methodischer Standard hat sich hierbei die \textit{Response Surface Methodology} auf Basis des \textit{Central Composite Design (CCD)} etabliert.
 
-Um die Anwendbarkeit dieses adaptiven Konzepts für die industrielle Praxis zu garantieren, erfolgt anschließend die methodische Transformation von der idealisierten Normalverteilung (Ordinary Least Squares) hin zu multivariaten Lebensdauermodellen. Anhand Weibull-verteilter Daten und der Parameteridentifikation mittels Maximum-Likelihood-Estimation (MLE) wird validiert, dass der Extrapolations-Brückenbau auch unter Berücksichtigung von Frühausfällen und Zensierungen seine überlegene Prognosefähigkeit behält, was sich in messbar schmaleren Konfidenzintervallen im Feldbereich manifestiert.
+Die ungeprüfte Übertragung klassischer Design of Experiments - Prinzipien auf die Zuverlässigkeitstechnik offenbart jedoch fundamentale methodische Diskrepanzen.
+Während konventionelle Versuchspläne auf geometrische Orthogonalität, Symmetrie und eine maximale Schätzpräzision im Zentrum des Versuchsraums (Interpolation) ausgelegt sind, erfordert die Lebensdauererprobung prinzipbedingt die Extrapolation: Um Ausfälle in wirtschaftlich vertretbarer Zeit zu induzieren, müssen Versuche unter signifikant erhöhten Lasten (typischerweise im nordöstlichen Parameterraum) durchgeführt werden.
+Die primäre Zielsetzung der Modellbildung ist indes die Generierung verlässlicher Prognosen unter moderaten Feldbedingungen (im südwestlichen Parameterraum).
+Erschwerend verletzen Lebensdauerdaten durch ihre inhärente Asymmetrie (Weibull-Verteilung) und das Auftreten von Zensierungen die klassischen Prämissen normalverteilter Residuen.
 
-Den Abschluss der Methodik bildet ein eigens entwickeltes ökonomisches Effizienz- und Kostenmodell, welches den zwingenden Trade-off der Lebensdauererprobung quantifiziert: Ein Versuchspunkt, der näher an das Felderniveau rückt (Ankerpunkt), verbessert die statistische Prognosegüte drastisch, verursacht aber durch die verringerte Beschleunigung exponentiell längere Prüfstandslaufzeiten und somit höhere Kosten. Durch die Übersetzung der Testzeit in monetäre Aufwände und deren Gegenüberstellung mit dem Informationsgewinn liefert die Arbeit eine holistische Bewertungsmetrik. Eine abschließende Fallstudie validiert die Praxistauglichkeit des gesamten Frameworks.
+Die vorliegende Dissertation adressiert diesen methodischen Konflikt und entwickelt ein holistisches Framework zur Auslegung hocheffizienter, multivariater Lebensdauertests.
+Als Fundament dient die Einführung eines heuristischen Screening-Verfahrens.
+Da die Komplexität multivariater Versuchspläne exponentiell mit der Anzahl der Faktoren skaliert, fungiert dieser Ansatz als deterministischer Filter zwischen qualitativer Systemanalyse und quantitativer Testplanung.
+Durch die methodische Fokussierung auf zeitabhängige Degradationsmechanismen wird die Dimensionalität des Parameterraums im Vorfeld rational auf die vitalen Einflussgrößen reduziert, ohne aufwendige experimentelle Vorversuche zu erfordern.
 
-Die Dissertation beweist somit eindrücklich, dass sich Effizienz in der Versuchsplanung nicht durch die bedingungslose Minimierung von Testläufen definiert, sondern durch das optimale wirtschaftliche Gleichgewicht zwischen eingesetzten Ressourcen und dem Erhalt der statistischen Effektivität.\\
+Im informationstheoretischen Kern der Arbeit wird das CCD systematisch auf seine Robustheit gegenüber praxisinduzierten Restriktionen evaluiert.
+Umfangreiche Monte-Carlo-Simulationen auf Basis pseudo-physikalischer \textit{Ground-Truth}-Modelle belegen eine ausgeprägte topologische Resilienz des Designs.
+Es wird quantitativ nachgewiesen, dass moderate Orthogonalitätsabweichungen -- wie der Entfall redundanter Zentralpunkte oder stochastische Varianzen in der Lastansteuerung -- die statistische Trennschärfe (\textit{power}) und die Schätzpräzision lediglich marginal kompromittieren.
+Der resultierende methodische Informationsverlust (\textit{Design-Penalty}) wird in der Erprobungspraxis zumeist durch das inhärente System- und Messrauschen dominiert.
 
+Diese nach\-gewiesene Fehler\-toleranz legitimiert den Über\-gang zur adaptiven Versuchsplanung.
+Der bewusste Verzicht auf strikte geometrische Symmetrie zugunsten reduzierter Prüfumfänge erschließt ein wertvolles geometrisches Gestaltungsbudget.
+Anstatt Versuchspunkte ausschließlich zur passiven Kostensenkung zu eliminieren, werden freigewordene Stützstellen proaktiv modifiziert und als Ex\-tra\-po\-la\-tions-Anker\-punkte in Richtung des anvisierten Feldbereichs verlagert.
+Dieser strategische Brückenbau im Parameterraum - formalisiert im neu entwickelten \textbf{Extrapolation\-variance minimized Accelerated Lifetime Testing Design (EmALT)} - stützt das Regressionsmodell entlang des maßgeblichen Extrapolationspfads empirisch ab.
+Um den stochastischen Leistungsgewinn dieser gerichteten Asymmetrie objektiv bewerten zu können, wird die \textit{Scaled Prediction Variance} als formale Metrik für die Vor\-her\-sage\-un\-sicher\-heit herangezogen.
+Da klassische Bewertungswerkzeuge wie der \textit{Variance Dispersion Graph} infolge ihrer Rotationssymmetrie sicherheitskritische blinde Flecken (\textit{Blind Spots}) bei gerichteten Extrapolationen aufweisen, wird der \textbf{\textit{Extrapolation Variance Graph}} eingeführt.
+Dieser ermöglicht die richtungsabhängige Quantifizierung der Prognosevarianz und belegt formal, dass die Allokation von Ankerpunkten die Unsicherheit am Feld-Betriebspunkt massiv reduziert.
 
+Um den methodischen Transfer dieses adaptiven Konzepts in die industrielle Zuverlässigkeitspraxis zu gewährleisten, erfolgt die Übertragung der Methodik von der idealisierten \textit{Ordinary Least Squares}-Regression auf multivariate Lebensdauermodelle.
+Anhand Weibull-verteilter Daten und iterativer Parameteridentifikation mittels \textit{Maximum-Likelihood-Estimation} wird validiert, dass die Extrapolationsabsicherung auch unter den Bedingungen realer Prüfstandsrestriktionen, Frühausfällen und Zensierungen ihre überlegene Prognosefähigkeit bewahrt, was durch signifikant schmalere Konfidenzintervalle im Feldbereich belegt wird.
+
+Den Abschluss bildet die Synthese mit einem entwickelten ökonomischen Effizienz- und Kostenmodell, welches den Zielkonflikt der Lebensdauererprobung quantifiziert:
+Ein in den Feldbereich verschobener Ankerpunkt steigert die statistische Prognosegüte, verursacht jedoch durch die reduzierte Stressbeschleunigung exponentiell längere Laufzeiten und folglich höhere Prüfstandskosten.
+Durch die Translation der Versuchszeit in monetäre Aufwände und deren algorithmische Verknüpfung mit dem Informationsgewinn etabliert die Arbeit den \textbf{\textit{Economic Extrapolation Power Index}} als holistische Bewertungsmetrik.
+Eine empirische Fallstudie verifiziert abschließend die industrielle Praxistauglichkeit der entwickelten Systematik, indem das ungestützte Basismodell mittels prädiktiver \textbf{\textit{Confirmation Experiments}} einem statistischen Härtetest unterzogen wird, was das Zuverlässigkeitsmodell zwingend vor sicherheitskritischen Überschätzungen im Feldbetrieb bewahrt.
+
+Die Dissertation etabliert somit einen \textbf{allgemeingültigen Analyse-Leitpfad} und erbringt den Nachweis, dass sich Effizienz in der Versuchsplanung nicht über die bedingungslose Minimierung von Prüfläufen definiert, sondern durch das ökonomische Optimum zwischen minimalem Ressourceneinsatz und der zwingenden Absicherung der statistischen Vorhersagegüte im Einsatzbereich.
+\clearpage
+
+\addchap{Abstract}
+The functional assurance of technical products and systems throughout their entire life cycle constitutes a central pillar of the industrial product development process.
+To prevent field failures within the warranty period whilst simultaneously reducing development cycles, reliability engineering employs \textit{Accelerated Life Testing}.
+Since the degradation kinematics of technical systems are predominantly governed by multiple interacting stress factors, empirical modelling necessitates the application of multivariate statistical experimental design (\textit{Design of Experiments}).
+In this context, the \textit{Response Surface Methodology} based on the \textit{Central Composite Design (CCD)} has established itself as the methodological standard.
+
+However, the unverified transfer of classical \textit{Design of Experiments} principles to reliability engineering reveals fundamental methodological discrepancies.
+Whilst conventional experimental designs are configured for geometric orthogonality, symmetry, and maximal estimation precision at the centre of the design space (interpolation), life testing inherently demands extrapolation: to induce failures within an economically viable timeframe, tests must be conducted under significantly elevated loads (typically in the north-eastern parameter space).
+The primary objective of the modelling, however, is the generation of reliable prognoses under moderate field conditions (in the south-western parameter space).
+Exacerbating this issue, lifetime data intrinsically violates the classical premises of normally distributed residuals due to its inherent asymmetry (Weibull distribution) and the occurrence of censored observations.
+
+The present dissertation addresses this methodological conflict and develops a holistic framework for the configuration of highly efficient, multivariate life tests.
+The foundation is laid by the introduction of a heuristic screening procedure.
+As the complexity of multivariate experimental designs scales exponentially with the number of factors, this approach serves as a deterministic filter between qualitative system analysis and quantitative test planning.
+Through a methodological focus on time-dependent degradation mechanisms, the dimensionality of the parameter space is rationally reduced to the vital influential variables in advance, without necessitating laborious preliminary experiments.
+
+Within the information-theoretical core of the work, the CCD is systematically evaluated regarding its robustness against practice-induced restrictions.
+Extensive Monte Carlo simulations based on pseudo-physical \textit{ground-truth} models demonstrate a pronounced topological resilience of the design.
+It is quantitatively proven that moderate deviations from orthogonality - such as the omission of redundant centre points or stochastic variances in load control - compromise the statistical power (\textit{power}) and estimation precision only marginally.
+The resulting methodological loss of information (\textit{design penalty}) is, in testing practice, predominantly overshadowed by the inherent system and measurement noise.
+
+This substantiated fault tolerance legitimises the transition towards adaptive experimental design.
+The deliberate abandonment of strict geometric symmetry in favour of reduced test scopes unlocks a valuable geometric design budget.
+Instead of eliminating design points exclusively for passive cost reduction, freed support points are proactively modified and relocated towards the targeted field domain as extrapolation anchor points.
+This strategic bridge-building within the parameter space - formalised in the newly developed \textbf{Extrapolation-variance minimised Accelerated Lifetime Testing Design (EmALT)} - empirically supports the regression model along the crucial extrapolation path.
+To objectively evaluate the stochastic performance gain of this directed asymmetry, the \textit{Scaled Prediction Variance} is utilised as a formal metric for prediction uncertainty.
+Since classical evaluation tools such as the \textit{Variance Dispersion Graph} exhibit safety-critical blind spots during directed extrapolations due to their rotational symmetry, the \textbf{\textit{Extrapolation Variance Graph}} is introduced.
+This enables the direction-dependent quantification of prediction variance and formally proves that the allocation of anchor points substantially mitigates the uncertainty at the field operating point.
+
+To guarantee the methodological transfer of this adaptive concept into industrial reliability practice, the methodology is transitioned from idealised \textit{Ordinary Least Squares} regression to multivariate lifetime models.
+Utilising Weibull-distributed data and iterative parameter identification via \textit{Maximum-Likelihood-Estimation}, it is validated that the safeguarding of extrapolation retains its superior predictive capability even under the conditions of real test bench restrictions, early failures, and censoring, as evidenced by significantly narrower confidence intervals in the field domain.
+
+The synthesis is concluded by integrating a newly developed economic efficiency and cost model, which quantifies the inherent trade-off of life testing: an anchor point shifted into the field domain enhances the statistical prediction quality, yet causes exponentially longer test durations and consequently higher test bench costs due to the reduced stress acceleration.
+By translating the test duration into monetary expenditures and algorithmically linking them with the information gain, the work establishes the \textbf{\textit{Economic Extrapolation Power Index}} as a holistic evaluation metric.
+Finally, an empirical case study verifies the industrial applicability of the developed systematics by subjecting the unsupported baseline model to a rigorous statistical test via predictive \textbf{\textit{Confirmation Experiments}}, thus imperatively protecting the reliability model from safety-critical overestimations in field operation.
+
+Consequently, the dissertation establishes a \textbf{universally applicable analytical framework} and demonstrates that efficiency in experimental design is not defined by the unconditional minimisation of test runs, but rather by the economic optimum between minimal resource deployment and the imperative safeguarding of statistical prediction quality within the application domain.
 
 
 \colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}

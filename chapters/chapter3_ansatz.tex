@@ -1,107 +1,120 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Kapitel 3 - Ansatz %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Kapitel 3 - Ansatz %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Effiziente Testplanung für die multivariate Lebensdauererprobung} \label{chap:ansatz}
 
 \section{Bewertung des Standes der Forschung und Technik} \label{sec:bewertung_stand}
-Der in Kapitel~\ref{chap:stand} dargelegte Stand der Forschung und Technik zur Versuchsplanungsmethodik verdeutlicht, dass sowohl die Zuverlässigkeitstechnik als auch \ac{DoE} für sich genommen etablierte Disziplinen mit jeweils umfangreichen Methodenrepertoire darstellen.
-Die Schnittmenge beider Felder, die effiziente Planung multivariater Lebensdauerversuche unter Berücksichtigung nicht-normalverteilter Daten und Zensierung (Weibull-\ac{GLM}), weist jedoch spezifische Lücken auf, die den Bedarf an weiterführender Forschung begründen.
 
-\subsection{Eignung klassischer Response Surface Designs}
+Der in Kapitel~\ref{chap:stand} dargelegte Stand der Forschung und Technik verdeutlicht, dass sowohl die Zuverlässigkeitstechnik als auch die statistische Versuchsplanung (\ac{DoE}) isoliert betrachtet hochgradig etablierte Disziplinen mit einem profunden Methodenrepertoire darstellen.
+Die methodische Schnittmenge beider Felder - die effiziente Planung multivariater Lebensdauerversuche unter Berücksichtigung nicht-normalverteilter Ausfalldaten und Zensierungen (Weibull-\ac{GLM}) - offenbart jedoch fundamentale Konflikte, welche den zwingenden Bedarf an weiterführender Forschung begründen.
+
+\subsubsection{Eignung und Limitierung klassischer Response Surface Designs}
 Klassische Versuchspläne der \ac{RSM}, insbesondere das \ac{CCD}, haben sich als robuster Standard für die Modellierung nicht-linearer Zusammenhänge bewährt \cite{Kleppmann.2020,Rigdon.2022}.
-Ihre Stärken liegen in der sequenziellen \textit{Augmentierbarkeit}, der \textit{Rotierbarkeit} und der Fähigkeit zur unabhängigen Schätzung des reinen Fehlers (vgl. Abschnitt~\ref{subsubsec:rsm}).
-Zudem lässt sich aus dem am \ac{IMA} bislang generierten Wissensstand nach \textcite{Kremer.2021} ableiten, welche methodischen Vorgehen im Rahmen des \ac{L-DoE} sich bestenfalls dazu eigenen, adäquate Schätzungen für Modellparameter \cite{Kremer.2019b} und Vertrauensbereiche \cite{Kremer.2019c} zu erhalten.
-Für die spezifischen Anforderungen der Lebensdauererprobung, die häufig eine Extrapolation der Ergebnisse aus einem hochbelasteten \ac{ALT}-Testraum in einen niedriger belasteten Anwendungsraum erfordert, ist die starre Symmetrie des klassischen \ac{CCD} jedoch nicht zwangsläufig optimal.
-Ein geeigneter, \textit{effizienter} Umgang mit dieser Herausforderung ist bislang nicht etabliert.
-Es existieren zwar bereits vereinzelte Ansätze zur Modifikation von \acp{CCD}, wie die Arbeiten von \textcite{Ahn.2015, Donev.2004, Box.1951} und \textcite{Ardakani.2011} zeigen.
-Diese fokussieren sich jedoch zumeist auf generische Optimalitätskriterien oder spezifische geometrische Restriktionen und adressieren nicht explizit die Herausforderungen der probabilistischen Lebensdauerprognose unter Extrapolation im Kontext der statistischen \textbf{Trennschärfe} (\sym{power}).
-Obgleich für die Anwendung im Maschinen- und Fahrzeugbau von entscheidender Bedeutung, existiert bislang kein etabliertes Vorgehen, um die Versuchspunkt-Konstellation gezielt in Prognoserichtung zu optimieren und so die Extrapolationsfähigkeit zu maximieren, ohne die Balance zwischen Modellgüte und Versuchsaufwand zu gefährden.
+Ihre Stärken manifestieren sich in der sequenziellen \textit{Augmentierbarkeit}, der \textit{Rotierbarkeit} und der Fähigkeit zur unabhängigen Schätzung des reinen Fehlers - vgl. Abschnitt~\ref{subsubsec:rsm}.
+Basierend auf dem am \ac{IMA} generierten Wissensstand nach \textcite{Kremer.2021} lässt sich ableiten, welche methodischen Vorgehen im Rahmen des \ac{L-DoE} am besten geeignet sind, um erwartungstreue Schätzungen für Modellparameter \cite{Kremer.2019b} und Vertrauensbereiche \cite{Kremer.2019c} zu generieren.
 
+Für die spezifischen Anforderungen der Lebensdauererprobung ist die starre geometrische Symmetrie des klassischen \ac{CCD} jedoch hochgradig ineffizient.
+Die Zuverlässigkeitstechnik erfordert unweigerlich eine \textbf{Extrapolation}:
+Um Ausfälle in vertretbarer Zeit zu erzwingen, müssen die Tests bei erhöhten Lasten (\ac{ALT}) durchgeführt werden; das eigentliche Ziel der Modellbildung ist jedoch die verlässliche Prognose unter verhältnismäßig moderateren Feldbedingungen.
+Klassische \acp{RSD} sind mathematisch jedoch auf Interpolation und maximale Schätzgüte im Zentrum des Versuchsraums optimiert.
+Ein geeigneter, struktureller Umgang mit dieser Diskrepanz ist in der industriellen Praxis bislang nicht etabliert.
+Zwar existieren rudimentäre Ansätze zur Modifikation von \acp{CCD} (vgl. \textcite{Ahn.2015, Donev.2004, Box.1951} und \textcite{Ardakani.2011}), diese fokussieren sich jedoch primär auf den Erhalt generischer Optimalitätskriterien bei ungewollten Fehlerquellen.
+Sie adressieren nicht proaktiv die Herausforderung der probabilistischen Lebensdauerprognose im Extrapolationsraum unter Wahrung der statistischen \textbf{Trennschärfe} (\ac{power}).
+Es fehlt ein etabliertes Vorgehen, um die Versuchspunkt-Topologie gezielt in Prognoserichtung abzustützen und so die Extrapolationsfähigkeit zu maximieren, ohne die ökonomische Balance des Versuchsaufwands zu zerstören.
 
-\subsection{Limitierungen und Effizienzbegriffe moderner Versuchsplanung}
-Der Einsatz computergenerierter optimaler Versuchspläne erscheint zunächst als logischer Schritt, um maßgeschneiderte Designs für Lebensdauererprobungen zu entwerfen.
-Im Kontext multivariater Lebensdauertests (\ac{ALT}) erfährt der Begriff der \textbf{Effizienz} jedoch eine signifikante Komplexitätssteigerung gegenüber der klassischen linearen Versuchsplanung, die sich in den drei Dimensionen \textit{Modellabhängigkeit}, \textit{zeitliche Dynamik} und \textit{strukturelle Flexibilität} aufgliedert.
-Formal definiert sich die Effizienz eines Versuchsplans einerseits analytisch über die Informationsmatrix $\sym{M}(\sym{X}, \sym{theta})$ \cite{Khuri.2006,Stufken.2012}, andererseits generisch über das Verhältnis von Leistungsfähigkeit zur Informationsbeschaffung - ein Anspruch, der nach \textcite{Thommen.2022} in einem fundamentalen Spannungsfeld zum Grundsatz der Vollständigkeit steht.
-Damit determiniert die Effizienz maßgeblich die \textbf{Effektivität} und Wirtschaftlichkeit der Lebensdauererprobung und in letzter Instanz die Verlässlichkeit der Modellierung (vgl. Abschnitt~\ref{subsec:optimal}: \sym{power}) sowie die Prognosegüte der Zuverlässigkeit $\sym{R}(\sym{t})$.
+\subsection{Das methodische Paradoxon moderner Versuchsplanung}
+Der Einsatz computergenerierter, algorithmisch optimaler Versuchspläne erscheint zunächst als logische Konsequenz, um maßgeschneiderte Designs für \acp{ALT} zu entwerfen.
+Im Kontext multivariater Lebensdauertests erfährt der Begriff der \textbf{Effizienz} jedoch eine signifikante Komplexitätssteigerung gegenüber der klassischen linearen Versuchsplanung, welche sich in den Dimensionen \textit{Modellabhängigkeit}, \textit{zeitliche Dynamik} und \textit{strukturelle Flexibilität} niederschlägt.
 
-\subsubsection{Modellabhängigkeit und Lokale Optimalität}
-Erstens stößt die zugrundeliegende Modellierung mittels Weibull-\acp{GLM} auf ein fundamentales Problem, das von \textcite{Khuri.2006} und \textcite{Stufken.2012} hinlänglich diskutiert wird.
-Im Gegensatz zu klassischen linearen Modellen (unter Normalverteilungsannahme) hängt die Fisher-Informationsmatrix $\sym{FIM}$ bei \acp{GLM} nicht allein von den Einstellungen der Faktoren $\sym{X}$ ab, sondern vollständig von den wahren, aber unbekannten Modellparametern $\sym{theta}$ (insbesondere dem Formparameter $\hat{\sym{b}}$ und via der Link-Funktion dem Lageparameter $\hat{\sym{T}}$):
+\subsubsection{Modellabhängigkeit und das Problem der lokalen Optimalität}
+Die zugrundeliegende Modellierung mittels Weibull-\acp{GLM} stößt auf ein fundamentales stochastisches Hindernis \cite{Khuri.2006,Stufken.2012}.
+Im Gegensatz zu klassischen \ac{OLS}-Modellen (Normalverteilung) hängt die Fisher-Informationsmatrix $\sym{M}(\sym{X}, \sym{theta})$ bei \acp{GLM} nicht allein von den geometrischen Einstellungen der Faktoren $\sym{X}$ ab, sondern zwingend von den wahren, aber vorab unbekannten Modellparametern $\sym{theta}$ (insbesondere dem Weibull-Formparameter $\sym{b}$ und via der Link-Funktion dem Lageparameter $\sym{T}$):
 \begin{equation}
     \sym{M}(\sym{X}, \sym{theta}) = \sym{E} \left[ - \frac{\partial^2 \sym{L_like}(\sym{theta})}{\partial \sym{theta}^2} \right].
     \label{eq:fisher_info_depend}
 \end{equation}
-Daraus resultiert das Paradoxon, dass zur Konstruktion eines optimalen Plans bereits Kenntnisse über die zu ermittelnden Parameter vorliegen müssten.
-Zwar existieren auf Basis von Exponential- oder Poissonverteilung diverse Algorithmen zur numerischen Bestimmung optimaler Versuchspläne für \acp{GLM} \cite{Khuri.2006}, und auch für Experimente mit binärer Antwortstruktur (logistische oder Probit-Modelle) wurden Ansätze entwickelt \cite{Yang.2011}.
-Diese Verfahren setzen jedoch stets voraus, dass die wahren Parameterwerte $\sym{theta}$ bekannt sind oder verlässlich geschätzt werden können - beispielsweise mittels initialem \textit{best guess}.
-Folglich sind solche Designs, wie \textcite{Stufken.2012} ausführen, allenfalls nur \textbf{lokal optimal}.
-Da die Parameter im Vorfeld einer Lebensdaueruntersuchung unbekannt sind, existieren keine universell optimalen \ac{GLM}-Designs für die Weibull-Lebensdauermodellierung.
-Ein Design, das für einen angenommenen Parametersatz optimal ist, kann sich bei Abweichung der realen Werte als ineffizient erweisen („The designs may be poor if the choice of values is far from the true parameter values“, \textcite{Stufken.2012}).
+Daraus resultiert ein Zirkelschluss: Zur Konstruktion eines idealen optimalen Plans müssten exakt jene Parameterwerte bereits bekannt sein, die der Versuch erst ermitteln soll.
+Zwar existieren numerische Algorithmen zur Bestimmung optimaler Versuchspläne für \acp{GLM} \cite{Khuri.2006, Yang.2011}, diese erfordern jedoch zwingend einen initialen \textit{Best Guess} der wahren Werte.
+Stimmen diese anfänglichen Schätzungen nicht mit der physikalischen Realität überein, entartet das Design und verliert seine Integrität vollständig (\glqq The designs may be poor if the choice of values is far from the true parameter values\grqq, \textcite{Stufken.2012}).
+Solche computergenerierten Pläne sind folglich lediglich \textbf{lokal optimal} und bergen bei Fehleinschätzungen ein extremes Ausfallrisiko für die gesamte Testkampagne.
 
 \subsubsection{Zeitliche und Strukturelle Effizienz}
 Zweitens muss die \textbf{zeitliche Effizienz} berücksichtigt werden.
-Da die Information in Lebensdauertests stochastisch über die Zeit generiert wird und womöglich durch Zensierung limitiert ist, wird die Varianz der Schätzung maßgeblich durch die Anzahl der tatsächlich ausgefallenen Einheiten getrieben \cite{Nelson.2005}.\\
+Da die Information in Lebensdauertests stochastisch über die Zeit generiert wird und durch Prüfstandskapazitäten oder Zensierung limitiert ist, skaliert die Schätzvarianz maßgeblich mit den tatsächlichen Ausfallzeiten \cite{Nelson.2005}.
+Ein Versuchsplan ist im Lebensdauer-Kontext folglich nur dann effizient, wenn er die exponentiell skalierende Testdauer bei unbeeinträchtigter statistischer Effektivität minimiert.
 
-\textbf{Ein Versuchsplan gilt folglich nur dann als effizient, wenn er die erwartete Testdauer bei gegebener Präzision und damit unbeeinträchtigter Effektivität minimiert.}\\
-
-Drittens bietet die Klasse der \ac{OMARS}-Designs eine Antwort auf die Forderung nach \textbf{struktureller Effizienz} und Flexibilität.
-Im direkten Vergleich zum etablierten \ac{CCD}, das durch seine geometrische Konstruktion eine starre Anzahl an Versuchen fordert, ermöglichen \ac{OMARS}-Designs zwar eine Entkopplung von Faktoren- und Versuchsanzahl (z.B. $\sym{N}=40$ statt $\sym{N} \ge 45$ für $\sym{k}=6$).
-Sie resultieren jedoch in einer finalen Versuchspunktverteilung, die sich im Kontext von Aufwänden in \ac{EoL}-Testing rational nur schwer sequenziell erweitern oder anpassen lässt.
-Strategisch verfolgen sie einen \textit{One-Step}-Ansatz \cite{Goos.2025}, der Screening und Optimierung integriert, um Rüstzeiten und zeitliche Drifts zu vermeiden.
-Der Preis für diese Effizienz ist ein kontrolliertes Maß an \textit{Aliasing} zwischen Effekten zweiter Ordnung.
-Damit qualifizieren sich diese Designs insbesondere für ressourcenbeschränkte Untersuchungen, wenngleich das \ac{CCD} seine Stärke in der Robustheit und sequenziellen Kontrollierbarkeit behält.
+Drittens adressiert die Klasse der \ac{OMARS}-Designs die Forderung nach \textbf{struktureller Flexibilität}.
+Im direkten Vergleich zum \ac{CCD} ermöglichen sie die Entkopplung von Faktoren- und Versuchsanzahl (z.\,B. $\sym{N}=40$ statt $\sym{N} \ge 45$ für $\sym{k}=6$).
+Dieser \textit{One-Step}-Ansatz \cite{Goos.2025}, der Screening und Optimierung in einer singulären Matrix integriert, ist jedoch im Kontext von \ac{EoL}-Testing rational nur schwer sequenziell erweiterbar.
+Der Preis für diese strukturelle Effizienz ist zudem ein kontrolliertes Maß an \textit{Aliasing} (Vermengung) zwischen Effekten zweiter Ordnung.
 
 \subsection{Schlussfolgerung für die Testplanung}
-Aus der Diskrepanz zwischen theoretischem Anspruch (optimale \ac{GLM}-Designs) und praktischer Anwendbarkeit (unbekannte Parameter) leitet sich die Notwendigkeit einer pragmatischen und zugleich statistisch fundierten Vorgehensweise ab.
-Anstatt sich auf die Suche nach einem theoretisch \textbf{\textit{optimalen} \ac{GLM}-Design} zu versteifen, das aufgrund der Parameterabhängigkeit in der Praxis kaum robust umsetzbar ist, erscheint die Adaption bewährter Standard-Designs (\ac{CCD}) vielversprechender.
-Dabei dürfen die etablierten Optimalitätskriterien jedoch nicht als alleiniges Entwurfsziel fungieren, sondern müssen durch praxisrelevante Benchmark-Metriken ergänzt werden:
+Aus der Diskrepanz zwischen dem theoretischen Anspruch lokaler \ac{GLM}-Optimalpläne und ihrer enormen Anfälligkeit in der Praxis leitet sich die Notwendigkeit einer pragmatischeren, robusteren Vorgehensweise ab.
+Anstatt ein artifizielles theoretisches Optimum zu berechnen, das bei Parameterabweichungen kollabiert, erweist sich die gezielte \textbf{Adaption bewährter, topologisch robuster Standard-Designs (\ac{CCD})} als der ingenieurswissenschaftlich überlegene Pfad.
+
+Dabei dürfen die etablierten Optimalitätskriterien jedoch nicht als pauschales, alleiniges Entwurfsziel fungieren. Sie müssen in einen multidimensionalen Benchmark überführt werden:
 \begin{itemize}
-    \item \textbf{Modellierungsgüte (A-, D-Kriterien):} Diese Metriken sichern ab, dass die Parameterschätzung (Bestimmung von $\sym{theta}$) auch im modifizierten Design statistisch solide und präzise bleibt.
-    \item \textbf{Prognosefähigkeit (G-, I-, V-Kriterien):} Diese Metriken gewinnen im Kontext der Lebensdauererprobung an primärer Bedeutung, da das Ziel die präzise Vorhersage der Zuverlässigkeit $\sym{R}(\sym{t})$ unter Einsatzbedingungen (Extrapolation) ist.
-    \item \textbf{Testdauer und Ressourceneffizienz:} Diese Metriken berücksichtigen die praktischen Rahmenbedingungen von Lebensdauertests, indem sie die erwartete Testdauer und den Ressourcenverbrauch minimieren, ohne die statistische Aussagekraft unzulässig zu beschneiden.
-    \item \textbf{Trennschärfe (Power):} Sie fungiert als die entscheidende „Erfolgsgarantie“ des Tests. Insbesondere bei kostenintensiven \ac{EoL}-Versuchen ist es ökonomisch riskant, ein Design zu wählen, das zwar theoretisch optimal schätzt, aber praktisch relevante Effekte mit hoher Wahrscheinlichkeit übersieht. Die Power muss daher als primäres Entscheidungskriterium gegen Einsparpotenziale abgewogen werden.
+    \item \textbf{Modellierungsgüte (A-, D-Kriterien):} Sichern ab, dass die Parameterschätzung ($\sym{theta}$) auch nach geometrischen Modifikationen des Designs numerisch stabil bleibt.
+    \item \textbf{Prognosefähigkeit (G-, I-, V-Kriterien):} Besitzen in der Lebensdauererprobung die absolute Priorität, da die präzise Vorhersage der Zuverlässigkeit $\sym{R}(\sym{t})$ im fernen Einsatzbereich (\textit{Extrapolation}) das eigentliche Versuchsziel darstellt.
+    \item \textbf{Testdauer und Ressourceneffizienz:} Limitieren die Versuchsplanung durch die harte Realität exponentiell ansteigender \ac{EoL}-Prüfzeiten.
+    \item \textbf{Trennschärfe ($\sym{power}$):} Fungiert als unabdingbare Erfolgsgarantie.
+          Ein theoretisch varianzminimales Design, das in der Praxis den Nachweis essenzieller physikalischer Effekte verfehlt, ist ökonomisch wertlos.
 \end{itemize}
 
-Eine effiziente Testplanung für die multivariate Lebensdauererprobung erfordert folglich weit mehr als die Maximierung theoretischer Informationsmaße.
-Sie verlangt einen strategischen Kompromiss: Das Design muss flexibel genug sein, um Extrapolationen durch \ac{ALT} gezielt zu unterstützen (Prognosegüte), robust genug, um die Unsicherheiten der nicht-linearen \ac{GLM}-Parameterschätzung abzufangen (Modellierungsgüte), und dabei eine statistische Trennschärfe gewährleisten, die das Investitionsrisiko des Versuchs rechtfertigt.
-Nur wenn die Wahrscheinlichkeit der Effektdetektion (\ac{power}) in einem ökonomisch vertretbaren Verhältnis zu den Testkosten steht, ist die Bedingung der Effizienz erfüllt und Effektivität gewährleistet.
+Eine effiziente Testplanung erfordert folglich einen strategischen Kompromiss: Das Design muss asymmetrisch genug sein, um Extrapolationen zielgerichtet abzusichern, robust genug, um die Unsicherheiten der nicht-linearen \ac{MLE} abzufangen, und gleichzeitig eine Trennschärfe gewährleisten, die das extreme Investitionsrisiko von Lebensdauerversuchen rechtfertigt.
 
-\section{Forschungsfragen und Aufbau der Arbeit} \label{sec:forschungsfragen}
-Das übergeordnete Ziel dieser Arbeit, die Entwicklung effizienter multivariater Lebensdauerversuche, fußt damit auf der Prämisse, dass etablierte Standard-Designs nicht zwingend durch vollkommen neuartige Algorithmen ersetzt, sondern vielmehr intelligent adaptiert werden können und müssen.
-Als methodischer Anker und Referenzpunkt dient hierbei das \textbf{\ac{CCD}}.
-Dieser Konsens begründet sich auf einer Synthese aus verfahrenstechnischen, physikalischen und statistischen Vorzügen, die das \ac{CCD} für die Zuverlässigkeitsmodellierung im Maschinen- und Fahrzeugbau prädestinieren - wenn gleich die in dieser Arbeit vorgestellte Strategie auch generisch auf weitere \acp{RSD} übertragbar ist.
-Dies lässt sich aus praktischen Erfahrungen wie beispielsweise nach \textcite{Myers.2016,Kleppmann.2020,Rigdon.2022} sowie einer Vielzahl wissenschaftlicher Publikationen ableiten (vgl. Kapitel~\ref{chap:stand}) und umfasst insbesondere folgende Aspekte:
+\section{Forschungsfragen und Anspruch der Arbeit} \label{sec:forschungsfragen}
+
+Das übergeordnete Ziel dieser Arbeit - die Entwicklung effizienter multivariater Lebensdauerversuche - fußt auf der Prämisse, dass etablierte Standard-Designs nicht zwingend durch hochkomplexe, fehleranfällige Algorithmen ersetzt, sondern vielmehr intelligent und zielgerichtet adaptiert werden müssen.
+Als methodischer Anker dient hierbei das \textbf{\ac{CCD}}.
+Dieser Konsens stützt sich auf eine Synthese aus verfahrenstechnischen, physikalischen und statistischen Vorzügen, die das \ac{CCD} für die Zuverlässigkeitsmodellierung prädestinieren \cite{Myers.2016,Kleppmann.2020,Rigdon.2022}:
+
 \begin{enumerate}
-    \item \textbf{Sequenzielle Augmentierbarkeit:} Das Design unterstützt ideal den ökonomischen Zwang zur Ressourceneffizienz. Es ermöglicht eine schrittweise Erweiterung vom Screening über lineare Modelle bis hin zur quadratischen Modellierung. Dies erlaubt den Abbruch oder die Ausweitung von Versuchen basierend auf Zwischenergebnissen und minimiert das Risiko von Fehlinvestitionen bei zeitintensiven Lebensdauertests \cite{Bertsche.2022}.
-    \item \textbf{Universelle Prädiktionseigenschaften:} Da der exakte Betriebsbereich oder das Optimum der Zuverlässigkeit a priori oft unbekannt sind und Tests beschleunigt (\ac{ALT}, Offset zwischen Test- und Feldraum) stattfinden, bietet die Rotierbarkeit des Designs günstige Voraussetzungen für eine richtungsunabhängige Prädiktionsgüte \cite{Meeker.2022,Montgomery.2020}.
-    \item \textbf{Wissenschaftliche Fundierung:} Das \ac{CCD} ist als breit diskutierter und gut erforschter Standard etabliert, was die Akzeptanz und Vergleichbarkeit der Ergebnisse im wissenschaftlichen und industriellen Umfeld sicherstellt, vgl. \textcite{Kleppmann.2020,Montgomery.2020,Rigdon.2022}.
-    \item \textbf{Validierung physikalischer Modelle:} Durch die Variation auf fünf Faktorstufen ($-\symsub{alpha}{idx_D}, -1, 0, +1, +\symsub{alpha}{idx_D}$) ermöglicht das Design - im Gegensatz zu einfacheren Plänen - die Überprüfung der Gültigkeit physikalischer Beschleunigungsgesetze (z.B. Arrhenius) und die Detektion von Linearitätsabweichungen bei hohen Lasten \cite{Yang.2007,Modarres.2017,Meeker.2022}.
-    \item \textbf{Schätzung des reinen Fehlers:} Die Integration mehrfacher \acp{ZP} erlaubt eine robuste Schätzung der natürlichen Streuung (\textit{Pure Error}) unabhängig vom Anpassungsfehler des Modells (\textit{Lack of Fit}). Dies ist für die Berechnung verlässlicher Vertrauensbereiche der Zuverlässigkeit essenziell \cite{Meeker.2022}.
-    \item \textbf{Orthogonale Blockbildung:} Das Design lässt sich exzellent in orthogonale Blöcke unterteilen \cite{Montgomery.2020,Rigdon.2022}. Dies ist für Langzeitversuche von entscheidender Bedeutung, um zeitliche Trends durch beispielsweise Chargenunterschiede statistisch zu bereinigen, ohne die Parameterschätzung zu verzerren.
-    \item \textbf{Robustheit gegen Datenverlust:} Aufgrund seiner symmetrischen Struktur weist das \ac{CCD} eine hohe Toleranz gegenüber fehlenden Werten (\textit{Missing Data}) auf, was die Auswertbarkeit des Versuchs auch bei unvorhergesehenen Ausfällen oder technischer Zensierung auf dem Prüfstand weitgehend sichert \cite{Montgomery.2020,Myers.2016}.
+    \item \textbf{Sequenzielle Augmentierbarkeit:} Ermöglicht eine schrittweise Erweiterung (Screening $\to$ lineares Modell $\to$ quadratisches Modell) und minimiert das Risiko von Fehlinvestitionen bei zeitintensiven Langzeittests \cite{Bertsche.2022}.
+    \item \textbf{Universelle Prädiktionseigenschaften:} Die Rotierbarkeit des Designs bietet bei initial unbekannter Lage des Zuverlässigkeitsoptimums ideale Voraussetzungen für eine richtungsunabhängige Basis-Prädiktionsgüte \cite{Meeker.2022}.
+    \item \textbf{Validierung physikalischer Modelle:} Die Variation auf fünf Faktorstufen erlaubt die Überprüfung komplexer Beschleunigungsgesetze und die Detektion von Linearitätsabweichungen bei Extrembelastungen \cite{Yang.2007,Modarres.2017}.
+    \item \textbf{Schätzung des reinen Fehlers:} Mehrfache \acp{ZP} erlauben eine vom Modellanpassungsfehler (\textit{Lack of Fit}) unabhängige Schätzung der natürlichen Systemstreuung (\textit{Pure Error}) \cite{Meeker.2022}.
+    \item \textbf{Robustheit gegen Datenverlust:} Die symmetrische Grundstruktur garantiert eine extrem hohe Toleranz gegenüber unvorhergesehenen Zensierungen (\textit{Missing Data}) am Prüfstand \cite{Montgomery.2020}.
 \end{enumerate}
-Die vorliegende Arbeit zielt ausgehend davon somit darauf ab, das \ac{CCD} als bewährtes Grundkonstrukt nicht zu verwerfen, sondern es gezielt für die spezifischen Anforderungen der Lebensdauerprognose zu modifizieren.
-Dies führt zur zentralen \textbf{Forschungsfrage} dieser Arbeit:\\
 
-\textbf{Wie können effiziente, multivariate Testdesigns (\acp{RSD}) entwickelt und geplant werden, um eine beschleunigte Lebensdauererprobung zum Zweck einer multivariaten Zuverlässigkeitsmodellierung umzusetzen?}\\
+Die vorliegende Arbeit zielt darauf ab, diese überlegene Grundarchitektur nicht zu verwerfen, sondern ihre ungenutzten geometrischen Freiheitsgrade proaktiv für die spezifischen Anforderungen der Lebensdauer-Extrapolation umzuwidmen.
+Dies führt zur zentralen \textbf{Hauptforschungsfrage} dieser Arbeit:
 
-Zur Beantwortung dieser Hauptfragestellung werden folgende Teilfragestellungen abgeleitet:
+\begin{center}
+    \textbf{Wie können effiziente, multivariate Testdesigns (\acp{RSD}) entwickelt und geplant werden, um eine beschleunigte Lebensdauererprobung zum Zweck einer multivariaten Zuverlässigkeitsmodellierung umzusetzen?}
+\end{center}
+
+Zur strukturierten Beantwortung dieser Hauptfragestellung werden folgende Teilfragestellungen abgeleitet:
 \begin{enumerate}
-    \item \textbf{Adaptionsbedarf und -strategie:} Wie können konventionelle Planungsstrategien und Testdesigns - allen voran \acp{CCD} - adäquat zum Zweck der beschleunigten Lebensdauererprobung (\ac{ALT}) angepasst werden?
-    \item \textbf{Bewertungsmethodik:} Wie können die Auswirkungen derartiger Anpassungen (Manipulationen der Orthogonalität) an \acp{CCD} auf die Prognosegüte quantitativ charakterisiert und vergleichbar bewertet werden?
+    \item \textbf{Adaptionsbedarf und -strategie:} Wie können konventionelle Planungsstrategien und Testdesigns -- allen voran das \ac{CCD} -- adäquat und ressourceneffizient zum Zweck der beschleunigten Lebensdauererprobung (\ac{ALT}) und der damit verbundenen Extrapolationspflicht angepasst werden?
+    \item \textbf{Bewertungsmethodik:} Wie können die Auswirkungen derartiger asymmetrischer Modifikationen und Orthogonalitätsmanipulationen auf die Prognosegüte quantitativ charakterisiert und stochastisch wie ökonomisch objektiv bewertet werden?
 \end{enumerate}
+
+Über die spezifische Optimierung der Referenzdesigns hinaus formuliert diese Arbeit den Anspruch, einen \textbf{allgemeingültigen Analyse-Leitpfad} zu etablieren.
+Die zur Beantwortung der Forschungsfragen entwickelten Instrumente -- die richtungssensitive Varianzbewertung (\ac{EVG}), die stochastisch-ökonomische Bilanzierung (\ac{EPI}) sowie die prädiktive Validierung mittels \textit{Confirmation Experiments} -- bilden ein universelles Methodengerüst.
+Dieses befähigt den Versuchsplaner, prinzipiell beliebige Modifikationen an multivariaten Testdesigns quantitativ zu charakterisieren und die Lebensdauererprobung in unterschiedlichsten industriellen Kontexten objektiv, skalierbar und effizient abzusichern.
 
 \subsection{Aufbau der Arbeit}
-Der weitere Aufbau der Arbeit orientiert sich an der logischen Abfolge von der Parameteridentifikation bis zur Design-Optimierung.
-In \colorbox{yellow}{\textbf{Kapitel 4}} wird zunächst das Themenfeld des Screenings adressiert.
-Hier wird ein Vorschlag zu einem heuristischen Screening-Ansatz vorgestellt, der darauf abzielt, die Effizienz im Prozess der Parameterselektion gezielt für Lebensdauer-beeinflussende Faktoren zu steigern und somit die Basis für nachfolgende \acp{RSD} unter dem Prädikat \textit{effizient} zu legen.
-Grundsätzlich neu ist hierbei die Behandlung mutmaßlicher Wechselwirkungen der Lebensdauer-beeinflussenden Faktoren sowie die Berücksichtigung von Änderungen in der signifikanten Aktivmenge der Einflussparameter durch den Screening-Prozess.
-Darauf aufbauend widmet sich \colorbox{yellow}{\textbf{Kapitel 5}} der generischen Untersuchung und Bewertung von Versuchsplanabweichungen, ausgehend vom \ac{CCD} als Referenz.
-Zwar erfolgt die Demonstration der Methodik exemplarisch am \ac{CCD}, der Anspruch auf Gültigkeit erstreckt sich jedoch auch auf andere \acp{RSD}.
-Dies begründet sich durch die in Abschnitt~\ref{subsec:optimal} dargelegten Eigenschaften, welche universell auf der Fisher-Informationsmatrix sowie der empirischen Datenlage basieren.
-In diesem Kontext werden ein Kostenmodell sowie ein neu entwickeltes Tool zur Bewertung der Prädiktionsgüte in Abhängigkeit der \ac{SPV} eingeführt.
-Daraus abgeleitet werden konkrete Strategieempfehlungen für die Anpassung von \acp{CCD}, etwa zur Optimierung der Extrapolationsfähigkeit, vorgestellt und diskutiert.
-Abschließend ist in \colorbox{yellow}{\textbf{Kapitel 6}} die Vorstellung einer Fallstudie dokumentiert, um die erarbeitete Methodik an einem praxisnahen Anwendungsbeispiel zu veranschaulichen und die theoretischen Erkenntnisse in den operativen Kontext zu transferieren.
+Der weitere strukturelle Aufbau der Arbeit folgt der logischen Methodenkette von der qualitativen Parameterselektion bis zur sto\-chas\-tisch-öko\-no\-misch\-en Design-Op\-ti\-mier\-ung.
+In \textbf{Kapitel~\ref{chap:screening}} wird zunächst die Dimensionierung des Parameterraums adressiert.
+Es präsentiert einen heuristischen Screening-Ansatz, welcher die Effizienz der Variablenselektion spezifisch für lebensdauerbeeinflussende Faktoren maximiert.
+Der methodische Mehrwert liegt hierbei in der expliziten Berücksichtigung latenter Wechselwirkungen sowie in der Erfassung dynamischer Änderungen der signifikanten Aktivmenge während des Screening-Prozesses.
+Dies legt das erforderliche Fundament für die darauf folgende effiziente quantitative Versuchsplanung.
+Darauf aufbauend vollzieht \textbf{Kapitel~\ref{chap:entwurf}} den methodischen Paradigmenwechsel für die beschleunigte Lebensdauererprobung.
+Ausgehend vom klassischen \ac{CCD} als Referenz quantifizieren umfangreiche numerische Sensitivitätsanalysen zunächst die topologische Resilienz dieses Standard-Designs gegenüber Praxisrestriktionen und pragmatisch induzierten Orthogonalitätsabweichungen.
+Aus dem hierdurch legitimierten geometrischen Gestaltungsbudget wird im Anschluss das adaptive \ac{EmALT}-Design abgeleitet.
+Flankiert von der Einführung neuartiger Analysewerkzeuge - dem richtungssensitiven \ac{EVG} zur Bewertung der skalierten Prädiktionsvarianz \ac{SPV} sowie dem \ac{EPI} zur Kostenbilanzierung - erbringt dieses Kapitel den mathematischen Beweis, dass sich der Zielkonflikt aus stochastischer Extrapolationssicherheit und ansteigenden Prüfkosten deterministisch optimieren lässt.
+Abschließend überführt \textbf{Kapitel~\ref{chap:casestudy}} das theoretische und simulative Instrumentarium in die industrielle Erprobungspraxis.
+Anhand einer empirischen Fallstudie zu Lenksystem-Zahnriemen wird das \ac{EmALT}-Konzept an realen Versuchsdaten nachvollzogen.
+Mittels prädiktionsintervall-basierter Analysemethoden (\textit{Confirmation Experiments}) wird hierbei der zwingende Nachweis erbracht, dass die asymmetrische Extrapolationsabsicherung keine rein akademische Optimierung darstellt, sondern das Zuverlässigkeitsmodell in der Praxis zwingend vor sicherheitskritischen Überschätzungen im Feldbetrieb bewahrt.
+
+
+
+
+
+
+
+
 % \subsubsection{Abgrenzung zu weiteren Themen in der \ac{RSM}} \label{subsubsec:abgrenzung}
 % \begin{itemize}
 %     \item \textbf{\ac{GLM} Mixed Models}, \textbf{Random Effects} (Generalized Linear Mixed Models) \cite[Myers 2010 Kap.7.1.2]{Myers.2010}

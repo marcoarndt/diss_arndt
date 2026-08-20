@@ -578,14 +578,15 @@ In der äußeren Sphäre ($\sym{r}=\sqrt{2}$) reduziert sich die \ac{SPV} dadurc
     \caption{Vorhersagegüte bei Variation der \ac{ZP}-Anzahl $\sym{n}_{\sym{idx_C}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren.}
     \label{fig:ma_abb5.2.1_fdsvdg_nc}
 \end{figure}
-Die Ineffizienz redundanter Zentralpunkte in dieser Hinsicht lässt sich am Grenzwert der \ac{SPV} im Zentrum analytisch beweisen.
-Da die Schätzvarianz im Ursprung durch den Mittelwert der \acp{ZP} dominiert wird ($\sym{pred_var}\approx \sym{sigma}^2 / \symsub{n}{idx_C}$), ergibt sich für ein zweidimensionales \ac{CCD} mit einer Kernstruktur aus $\symsub{n}{idx_F} + \symsub{n}{idx_S} = 8$ Basis-Versuchspunkten:
+Die Reduktion des Grenznutzens lässt sich anhand des Grenzwerts der \ac{SPV} im Versuchszentrum ($\sym{x}_0 = 0$) formal belegen.
+Unter der Prämisse, dass die Schätzvarianz im Ursprung orthogonaler Versuchspläne primär durch die mittlere Varianz der Zentralpunkte determiniert wird ($\text{Var}(\hat{\sym{y}}) \approx \sym{sigma}^2 / \symsub{n}{idx_C}$), ergibt sich für ein zweidimensionales \ac{CCD} mit einer Struktur aus $\symsub{n}{idx_F} + \symsub{n}{idx_S} = 8$ Randpunkten und einer zunehmenden Anzahl an Zentralpunkten $\symsub{n}{idx_C}$:
 \begin{equation} \label{eq:spv_limit_center}
-    \lim_{\symsub{n}{idx_C} \to \infty} \sym{pred_var}= \lim_{\symsub{n}{idx_C} \to \infty} \frac{(\symsub{n}{idx_F} + \symsub{n}{idx_S} + \symsub{n}{idx_C}) \cdot \frac{\sym{sigma}^2}{\symsub{n}{idx_C}}}{\sym{sigma}^2} = \lim_{\symsub{n}{idx_C} \to \infty} \left( \frac{8}{\symsub{n}{idx_C}} + 1 \right) = 1
+    \lim_{\symsub{n}{idx_C} \to \infty} \sym{SPV}(0) = \lim_{\symsub{n}{idx_C} \to \infty} \frac{\sym{N} \cdot \text{Var}(\hat{\sym{y}}(0))}{\sym{sigma}^2} = \lim_{\symsub{n}{idx_C} \to \infty} \frac{(8 + \symsub{n}{idx_C}) \cdot \frac{\sym{sigma}^2}{\symsub{n}{idx_C}}}{\sym{sigma}^2} = \lim_{\symsub{n}{idx_C} \to \infty} \left( \frac{8}{\symsub{n}{idx_C}} + 1 \right) = 1
 \end{equation}
-Dieses Konvergenzverhalten verdeutlicht den abnehmenden Grenznutzen:
-Die \ac{SPV} stagniert am absoluten Minimum von $1$.
-Eine Erhöhung über $\symsub{n}{idx_C} \approx 3$ hinaus leistet somit keinen Beitrag für die ferne Extrapolation und legitimiert die Freigabe dieser Ressourcen für das Gestaltungsbudget.
+Dieses asymptotische Konvergenzverhalten liefert den Nachweis, dass die \ac{SPV} im Zentrum am absoluten Minimum von $1$ stagniert.
+Eine Erhöhung der Zentralpunktanzahl über $\symsub{n}{idx_C} \approx 3$ hinaus erweist sich als statistisch redundant für die globale Modellanpassung und insbesondere für die ferne Extrapolation.
+Folglich ist die Reallokation dieser Versuchsressourcen für das geometrische Gestaltungsbudget methodisch begründet.
+
 
 Demgegenüber nehmen die Sternpunkte (\textit{Fall IV: \ac{SP}}) eine kritischere Rolle ein, da sie die Varianztopologie in der Peripherie dominieren.
 Wird ein Sternpunkt zensiert oder ausgelassen (hier exemplarisch im Hochlastbereich), wächst die \ac{SPV} in dieser Region massiv an.
@@ -611,24 +612,24 @@ Infolgedessen wird ein wesentlicher Teil des Versuchsraums durch unverhältnism�
     \caption{Vorhersagegüte bei Variation der \ac{SP}-Anzahl $\sym{n}_{\sym{idx_S}}$ für einen \ac{CCD} mit $\sym{k}=2$ Faktoren. \ac{SPV}-Werte für verschiedene Varianten entfallener Sternpunkte. Abbildung \ref{fig:ma_abb5.2.1_vdg_omitted} zeigt den Fall des vollständigen Entfalls der Sternpunkte $(\symsub{alpha}{idx_D};0)$ und $(0;\symsub{alpha}{idx_D})$ im Hochlastbereich.}
     \label{fig:ma_abb5.2.1_fdsvdg_omitted}
 \end{figure}
-Gleichzeitig führt diese asymmetrische Störung zu einer komplexen, nicht mehr radialsymmetrischen Varianzstruktur, wodurch die \ac{SPV} über den \ac{VDG} ihre Interpretierbarkeit verliert.
-Abbildung~\ref{fig:ma_abb5.2.1_vdg_omitted} verdeutlicht diesen Informationsverlust:
-Zwar ist eine starke Aufweitung des radialen Streubereichs erkennbar, die exakte geometrische Ausrichtung dieser Varianzspitzen bleibt jedoch verborgen.
+Diese asymmetrische Störung erzeugt jedoch eine komplexe, anisotrope Varianzstruktur, an der die klassische \ac{VDG}-Darstellung fundamental scheitert.
+Abbildung~\ref{fig:ma_abb5.2.1_vdg_omitted} verdeutlicht diesen methodischen Informationsverlust:
+Zwar ist eine extreme radiale Aufweitung des Streubereichs (Min-Max-Bänder) erkennbar, die exakte geometrische \textit{Richtung} dieser fatalen Varianzspitzen bleibt durch die sphärische Aggregation jedoch vollständig verborgen.
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.7\textwidth]{plots/ma_abb5.2.1_contour_spv.pdf}
     \caption{Dreidimensionale Darstellung der \ac{SPV} und zugehöriger Konturverlauf für ein beispielhaft asymmetrisch manipuliertes Versuchsdesign: es entfallen $(0;\symsub{alpha}{idx_D})$ \textit{und} $(\symsub{alpha}{idx_D};0)$ eines \ac{CCD} mit $\sym{k}=2$ Faktoren.}
     \label{fig:ma_abb5.2.1_contour_spv}
 \end{figure}
-Die Ursache dieser Anisotropie offenbart erst der dreidimensionale Konturverlauf in Abbildung~\ref{fig:ma_abb5.2.1_contour_spv}.
-Aus ingenieurwissenschaftlicher Perspektive ist diese Richtungsabhängigkeit hochgradig kritisch, da sie die Vorhersagegüte entlang des Extrapolationspfads massiv beeinträchtigt.
-Für die Versuchsplanung folgen daraus drei essenzielle Erkenntnisse:
+Die wahre Ausprägung dieser Asymmetrie offenbart erst der dreidimensionale Konturverlauf in Abbildung~\ref{fig:ma_abb5.2.1_contour_spv}.
+Aus ingenieurwissenschaftlicher Perspektive ist eine solche Richtungsabhängigkeit hochgradig kritisch, da sie die Vorhersagegüte entlang des maßgeblichen Extrapolationspfads unbemerkt zerstören kann.
+Für die Zuverlässigkeitsplanung resultieren hieraus drei zwingende Paradigmen:
 \begin{enumerate}
-    \item Lokale Fehlstellen in der Versuchsmatrix prägen sich unmittelbar als stark divergierende Varianzspitzen (\textit{Peaks}) in exakt jener Himmelsrichtung der fehlenden Stützstelle aus.
-    \item Die Prognosegüte in fernen Feldbereichen verhält sich hochgradig richtungssensitiv; pauschale Aussagen über die radiale Extrapolationsfähigkeit sind bei asymmetrischen Modifikationen durch \ac{VDG} und \ac{FDS} unzulässig.
-    \item Rotationssymmetrisch aggregierende Visualisierungen wie der \ac{VDG} maskieren die erfolgskritische Richtungsabhängigkeit und deuten lediglich auf das Vorhandensein extremer Streuungen hin.
+    \item Lokale Fehlstellen in der Versuchsmatrix prägen sich unmittelbar als massiv divergierende Varianzspitzen (\textit{Blind Spots}) in exakt jener topologischen Himmelsrichtung der fehlenden Stützstelle aus.
+    \item Die Prognosegüte im fernen Feldbereich verhält sich in asymmetrischen Designs hochgradig richtungssensitiv; pauschale Rückschlüsse über die radiale Extrapolationsfähigkeit mittels \ac{VDG} oder \ac{FDS} sind mathematisch unzulässig und industriell fahrlässig.
+    \item Sphärisch mittelnde Visualisierungen maskieren die erfolgskritische Richtungsabhängigkeit vollständig und deuten lediglich global auf die Existenz von Streuungen hin.
 \end{enumerate}
-Für die effiziente Auslegung multivariater \ac{ALT}-Szenarien resultiert hieraus die zwingende Notwendigkeit eines neuen Bewertungswerkzeugs, welches die Richtungsabhängigkeit explizit erfasst, um eine Interpretationsfähigkeit der Prognosesicherheit im realen Betriebspunkt zu garantieren.
+Für die effiziente Auslegung multivariater \ac{ALT}-Szenarien erzwingt dieses Defizit die Entwicklung eines spezialisierten Bewertungswerkzeugs, welches die \ac{SPV} exakt entlang des physikalischen Lastpfads quantifiziert.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -678,16 +679,11 @@ Hierbei wird deutlich, wie die gesetzten \acp{AP} die Varianztopologie im Zielqu
     \label{fig:ma_abb5.2.2_contour}
 \end{figure}
 
-Der quantitative Nutzen dieser gezielten Manipulation manifestiert sich abschließend in der direkten Gegenüberstellung von klassischem \ac{VDG} und dem neuen \ac{EVG} (vgl. Abbildung~\ref{fig:ma_abb5.2.2_evg}).
-Wird das asymmetrisch modifizierte Design konventionell über den \ac{VDG} evaluiert, zeigt sich im Vergleich zum ungestörten Basis-\ac{CCD} lediglich eine marginale, durchschnittliche Erhöhung der Varianz.
-Der \ac{VDG} maskiert den lokalen Informationsgewinn der gesetzten \acp{AP} durch seine sphärische Mittelung somit nahezu vollständig.
-
-Der \ac{EVG} offenbart hingegen den tatsächlichen, zielgerichteten Erfolg der Modifikation:
-Durch die explizite Auswertung exakt entlang des Extrapolationsvektors $\vec{e}$ wird die \ac{SPV} richtungsabhängig und korrekt bis in den fernen Prognosepunkt quantifiziert.
-Hierbei wird ersichtlich, dass die strategisch platzierten \acp{AP} einen messbaren Sattelpunkt im radialen Anstieg der Varianz erzwingen.
-Diese topologische Stützung drückt die Vorhersageunsicherheit auf dem Extrapolationspfad im Vergleich zum starren Standard-Design massiv nach unten.
-Insbesondere für die industrielle Lebensdauerversuchsplanung erweist sich diese präzise, zielgerichtete Varianzbestimmung als essenzielles Werkzeug:
-Sie liefert dem versuchsplanenden Ingenieur den belastbaren Nachweis der Extrapolationsgüte exakt in jenem Parameterbereich, in dem die Zuverlässigkeitsaussage für den Feldbetrieb gefordert ist.
+Der quantitative Nutzen dieser gezielten topologischen Manipulation manifestiert sich abschließend in der direkten Gegenüberstellung des klassischen \ac{VDG} mit dem neu eingeführten \ac{EVG} (vgl. Abbildung~\ref{fig:ma_abb5.2.2_evg}).
+Wird das \ac{EmALT}-Design konventionell über den \ac{VDG} evaluiert, maskiert dessen sphärische Mittelung den lokalen Informationsgewinn nahezu vollständig; das Design erscheint hierdurch fälschlicherweise kaum vorteilhafter als der Standard.
+Der \ac{EVG} quantifiziert hingegen den tatsächlichen, zielgerichteten Erfolg der Modifikation: Durch die explizite Auswertung exakt entlang des Extrapolationsvektors $\vec{e}$ wird die \ac{SPV} richtungsabhängig bis in den fernen Prognosepunkt aufgeschlüsselt.
+Hierbei wird ersichtlich, dass die strategisch platzierten Ankerpunkte (\acp{AP}) einen markanten Sattelpunkt im radialen Varianzanstieg erzwingen.
+Diese topologische Stützung reduziert die Vorhersageunsicherheit auf dem Extrapolationspfad im Vergleich zum starren Standard-Design massiv.
 
 \begin{figure}[htbp]
     \centering
@@ -697,8 +693,10 @@ Sie liefert dem versuchsplanenden Ingenieur den belastbaren Nachweis der Extrapo
     \caption{Der klassische \ac{VDG} verschleiert den lokalen Design-Nutzen des um \acp{AP} modifizierten \ac{CCD} durch radiale Mittelung. Der \ac{EVG} belegt hingegen die signifikante \ac{SPV}-Reduktion zielgerichtet entlang des Extrapolationsvektors zum Prognosepunkt.}
     \label{fig:ma_abb5.2.2_evg}
 \end{figure}
-Diese richtungsabhängige Reduktion der Vorhersagevarianz belegt eindrücklich, dass eine Abkehr von der reinen Symmetrie und Orthogonalität in \ac{ALT}-Szenarien hochgradig effizient ist.
-Das gewonnene geometrische Budget wird nicht verschwendet, sondern wertsteigernd investiert.
+
+Diese richtungsabhängige Varianzdämpfung erbringt den formalen Nachweis, dass eine gezielte Abkehr von strikter geometrischer Symmetrie im Kontext von Lebensdauerversuchen hochgradig effizient ist.
+Das durch topologische Ausdünnung gewonnene Gestaltungsbudget wird folglich nicht als passive Kosteneinsparung verbucht, sondern proaktiv zur Sicherstellung einer belastbaren Prognosegüte im Feldbereich reinvestiert.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1118,7 +1116,13 @@ Die vollzogene Synthese liefert dabei drei zentrale Erkenntnisse für die Zuverl
 
 Trotz dieser eindeutigen Befunde bedarf es einer kritischen Würdigung der Simulationsergebnisse.
 Die numerische Evaluation basiert auf der Prämisse eines strukturell korrekten log-linearen \ac{AFT}-Modells sowie einer stetigen Degradationskinematik.
-Treten in der physikalischen Realität abrupte Wechsel der Schädigungsmechanismen zwischen \ac{ALT}-Niveau und Feldbereich auf, geraten rein modellbasierte Extrapolationen unweigerlich an ihre methodischen Grenzen.
-Gerade vor diesem Hintergrund entfaltet das \ac{EmALT}-Design jedoch einen weiteren, entscheidenden Praxisvorteil: Durch die strategische Verortung der \acp{AP} nahe dem realen Einsatzniveau fungieren diese Stützstellen nicht nur als stochastische Varianzdämpfer, sondern zugleich als physikalische Frühwarnsensoren.
-Im Rahmen der post-experimentellen Datenanalyse lassen sich diese Ankerpunkte analog zu \textit{Confirmation Experiments} nach \textcite{Stevens.2019} auswerten.
-Entsprechende Metriken, wie etwa die \textit{Probability of Agreement}, können hierbei herangezogen werden, um empirisch zu validieren, ob die am Hochlastprüfstand extrahierten Degradationsgesetze im moderaten \textit{Use-Space} weiterhin Gültigkeit besitzen - eine Detektionsmöglichkeit, die durch reines \ac{ALT} vollständig verwehrt bliebe.
+Treten in der physikalischen Realität abrupte Wechsel der Schädigungsmechanismen zwischen Hochlast- (\ac{ALT}) und Feldbereich auf, geraten rein modellbasierte Extrapolationen unweigerlich an ihre methodischen Grenzen.
+Gerade vor diesem Hintergrund entfaltet das \ac{EmALT}-Design jedoch einen weiteren, entscheidenden Praxisvorteil:
+Durch die strategische Verortung der Ankerpunkte nahe dem realen Einsatzniveau fungieren diese Stützstellen nicht nur als stochastische Varianzdämpfer, sondern zugleich als physikalische Frühwarnsensoren.
+Im Rahmen der post-experimentellen Datenanalyse lassen sich diese Ankerpunkte analog zu \textit{Confirmation Experiments} \cite{Stevens.2019} auswerten.
+Entsprechende Metriken, wie etwa die \textit{Probability of Agreement}, können hierbei herangezogen werden, um empirisch zu validieren, ob die am Hochlastprüfstand extrahierten Degradationsgesetze im moderaten \textit{Use-Space} weiterhin Gültigkeit besitzen - eine Detektionsmöglichkeit, die durch reine Hochlastprüfungen vollständig verwehrt bliebe.
+
+Während die durchgeführten Sensitivitätsanalysen und Monte-Carlo-Simulationen die theoretischen Gesetzmäßigkeiten des \ac{EmALT}-Designs unter kontrollierten stochastischen Randbedingungen zweifelsfrei verifiziert haben, erfordert der Transfer in die Zuverlässigkeitspraxis einen finalen empirischen Härtetest.
+Im nachfolgenden Kapitel~\ref{chap:casestudy} wird das hergeleitete Instrumentarium daher auf eine physische Fallstudie übertragen.
+Anhand der realen multivariaten Lebensdauererprobung von Lenksystem-Zahnriemen wird das klassische Basis-Modell mittels \textit{Confirmation Experiments} gezielt herausgefordert.
+Es wird empirisch nachgewiesen, dass die theoriebasierte Extrapolationsabsicherung durch das \ac{EmALT}-Konzept weit mehr als eine effiziente Varianzdämpfung ist: Sie erweist sich als zwingende methodische Notwendigkeit, um das Zuverlässigkeitsmodell im realen Feldbetrieb vor fatalen, sicherheitskritischen Überschätzungen zu bewahren.
