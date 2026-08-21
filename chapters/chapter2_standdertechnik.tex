@@ -301,7 +301,7 @@ Das erklärte Ziel ist es, den kausalen Zusammenhang zwischen Einflussfaktoren u
 Darin abgebildete Einflussfaktoren sollen also per se \textbf{statistisch signifikant} und somit relevant für das Systemverhalten sein.
 So kann beispielsweise die zufallsverteilte Lebensdauer $\sym{tau}$ in Abhängigkeit von $\sym{k} \geq 2$ technischen Beanspruchungen zunächst empirisch untersucht und anschließend modelliert sowie optimiert werden (\textit{Schritt~1} in Abbildung~\ref{fig:ma_abb2.02_doe_steps}).
 
-Im Zentrum der Betrachtung steht damit generell ein technisches \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der \textbf definiert.
+Im Zentrum der Betrachtung steht damit generell ein technisches \textbf{System}, welches abstrakt als Produkt oder Prozess verstanden wird und den Zustand der Ausgangsgröße in Abhängigkeit der einwirkenden Eingangsgrößen definiert.
 Die zu untersuchende oder zu optimierende Ausgangsgröße wird als \textbf{Systemantwort} $\sym{y}$ (engl. \textbf{Response}) bezeichnet.
 Die gezielt kontrollierbaren und variierten Eingangsgrößen sind \textbf{Faktoren} (\textbf{Steuergrößen}), während nicht kontrollierbare oder unbekannte Einflüsse als \textbf{Störgrößen} (engl. \textbf{Noise}) klassifiziert werden (\textit{Schritt~2}, vgl. \cite{Kleppmann.2020}).
 Eine visuelle Aufstellung des genannten Zusammenspiels der Parameter kann dem Parameterdiagramm, kurz \textbf{P-Diagramm}, in Abbildung~\ref{fig:ma_abb2.03_p_diagramm} entnommen werden \cite{Montgomery.2020}.
@@ -624,7 +624,7 @@ Anschließend wird der Plan zu einem \textbf{voll-faktoriellen Versuchsplan} erw
 Daraufhin werden \textbf{\acp{ZP}} ergänzt, um das Vorhandensein von Krümmungen zu validieren.
 Abschließend werden bei Bedarf die \textbf{\acp{SP}} hinzugefügt, um ein vollständiges \ac{CCD} zu realisieren.
 Insbesondere in der Lebensdauererprobung ist eine derartige schrittweise Vorgehensweise sinnvoll, um den Versuchsumfang zu minimieren und dennoch eine fundierte Modellierung der Systemantwort zu gewährleisten.
-Schließlich kann ein hierbei sequentiell ausgewertet und ausgewählt werden, inwiefern ein optimiertes Modell mit ausgewählten Termen gegenüber einem konventionellen Modell quadratischer Ordnung überlegen wäre, um die Modellantwort abzuschätzen, vgl. \textcite{Paschal.2024}.
+Hierbei kann sequenziell ausgewertet und entschieden werden, inwiefern ein reduziertes Modell mit ausgewählten Termen gegenüber einem vollen Modell quadratischer Ordnung überlegen ist, um die Systemantwort präzise abzuschätzen \cite{Paschal.2024}.
 Gleichzeitig erlaubt diese Strategie eine flexible Anpassung an unerwartete Ergebnisse in den einzelnen Phasen der Untersuchung, während lokale Optima von Zuverlässigkeiten im Sinne von \ac{DfR} im Vorfeld ohnehin nicht bekannt sind.
 In Abhängigkeit der Anpassung zur Wahl eines geeigneten Modells, linear oder quadratisch, kann die Versuchsplanung so stets an die aktuellen Erkenntnisse angepasst werden.
 Dies folgt im Wesentlichen einer übergeordneten Logik der Modellkomplexität:
@@ -957,7 +957,7 @@ Erstens sind alle Haupteffekte orthogonal zueinander, was eine unabhängige Sch�
 Zweitens sind die Haupteffekte vollständig unkorreliert mit sämtlichen Effekten zweiter Ordnung (sowohl Zweifach-Wechselwirkungen als auch quadratische Terme).
 Das verbleibende Aliasing (Vermengung) beschränkt sich somit ausschließlich auf die Gruppe der Effekte zweiter Ordnung untereinander und wird algorithmisch minimiert (engl. \textit{Minimally Aliased}).
 Dies erlaubt eine signifikante Flexibilisierung der Stichprobengröße im Vergleich zu starr definierten Plänen wie dem \ac{CCD}, bei gleichzeitigem Erhalt der robusten Schätzbarkeit der primären Haupteffekte.
-Die Generierung eines solchen \ac{OMARS}-DesignsST erfolgt dabei nicht über geometrische Konstruktionsvorschriften (wie beim \ac{CCD}), sondern algorithmisch durch die Lösung eines ganzzahligen linearen Optimierungsproblems (engl. \textbf{\ac{ILP}}).
+Die Generierung eines solchen \ac{OMARS}-Designs erfolgt dabei nicht über geometrische Konstruktionsvorschriften (wie beim \ac{CCD}), sondern algorithmisch durch die Lösung eines ganzzahligen linearen Optimierungsproblems (engl. \textbf{\ac{ILP}}).
 Basierend auf der Kandidatenmenge \sym{cand_set} (üblicherweise entsprechend einem voll-faktoriellen $3^{\sym{num_fac}}$ Plan) wird ein Vektor binärer Entscheidungsvariablen $\sym{dec_var} \in \{0,1\}^{|\sym{cand_set}|}$ gesucht, der folgende mathematische Restriktionen simultan erfüllt:
 
 \begin{itemize}
@@ -1137,7 +1137,7 @@ Der negative Erwartungswert dieser Matrix führt damit zur Erwartung der Fisher-
         -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}} \partial \sym{thet}_1} & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}} \partial \sym{thet}_2} & \cdots & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}}^2}
     \end{bmatrix}.
 \end{equation}
-
+Im Gegensatz zu klassischen linearen Modellen mit normalverteiltem Fehler hängt die Informationsmatrix im \ac{GLM}-Framework somit nicht ausschließlich von der geometrischen Versuchsmatrix $\sym{X}$ ab, sondern ist eine explizite Funktion des zu schätzenden Parametervektors $\sym{theta}$.
 Die asymptotische Varianz-Kovarianz-Matrix $\hat{\sym{V}}$ der Parameterschätzer wird anschließend durch die Inversion der Fisher-Informationsmatrix für $\hat{\sym{theta}}=\sym{theta}$ approximiert \cite{Yang.2007,Rasch.2018}:
 \begin{equation} \label{eq:var_covar_glm}
     \hat{\sym{V}} \approx {\sym{FIM}_{\sym{idx_O}}}^{-1}=

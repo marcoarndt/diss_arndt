@@ -1,95 +1,89 @@
-\section{Sensitivitätsanalyse}
-\label{app:sensitivity}
 
-In diesem Anhang sind die detaillierten Ergebnisse der Sensitivitätsanalyse für die verschiedenen Parameterkombinationen tabellarisch zusammengefasst. Die Tabellen zeigen die Power des Tests in Abhängigkeit von den Störfaktoren $C$ (Zentrums-Läufe) und $D$ (Stern-Läufe).
+% =======================================================================
+% APPENDIX C: Detailergebnisse der Monte-Carlo Simulation (Orthogonalität)
+% =======================================================================
+\section{Orthogonalitäts-Analysen der Design-Modifikationen}
+\label{app:c}
 
-% --- SEKTION: C = +1 ---
+In diesem Anhang sind ergänzende Visualisierungen und Analysen zur Bewertung der geometrischen Design-Verzerrungen aufgeführt.
 
-\begin{table}[!ht]
+\input{tables/tab_results_ortho_mse.tex}
+
+% \begin{figure}[htbp]
+%     \centering
+%     \setlength\figurewidth{0.9\textwidth}
+%     \setlength\figureheight{4cm}
+%     \input{plots/ma_abb5.1.4_betadev.tex}
+%     \caption{Absolute Schätzwerte der Modellkoeffizienten inklusive der $95\,\%$-Konfidenzintervalle für $\sym{snr}=1$.}
+%     \label{fig:app.c_betadev}
+% \end{figure}
+
+
+\begin{figure}[htbp]
     \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=+1$}
-    \label{tab:sens_cplus1_dplus1}
-    \resizebox{\textwidth}{!}{%
-        \input{tables/table_sens_Cplus_1_Dplus_1.tex}
-    }
-\end{table}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{16cm}
+    \input{plots/ma_abb_app.c_convergence_power.tex}
+    \caption{Laufende Konvergenz der Trennschärfe für alle Modellparameter. Die Schätzungen stabilisieren sich bei der $\sym{n}_{\sym{idx_MC}}=10^4$ reproduzierbar.}
+    \label{fig:app.c_conv_power}
+\end{figure}
 
-\begin{table}[!ht]
+\begin{figure}[htbp]
     \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=0$}
-    \label{tab:sens_cplus1_d00}
-    \resizebox{\textwidth}{!}{%
-        \input{tables/table_sens_Cplus_1_D00.tex}
-    }
-\end{table}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{16cm}
+    \input{plots/ma_abb_app.c_convergence_beta.tex}
+    \caption{Konvergenz der \ac{OLS}-Parameterschätzwerte ($\hat{\sym{beta}}_i$). Alle Modelle erweisen sich unabhängig von der geometrischen Verzerrung als erwartungstreu. Die Schätzungen stabilisieren sich bei der $\sym{n}_{\sym{idx_MC}}=10^4$ reproduzierbar.}
+    \label{fig:app.c_conv_beta}
+\end{figure}
 
-\begin{table}[!ht]
+\begin{figure}[htbp]
     \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=+1, D=-1$}
-    \label{tab:sens_cplus1_dminus1}
-    \resizebox{\textwidth}{!}{%
-        \input{tables/table_sens_Cplus_1_Dminus_1.tex}
-    }
-\end{table}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{16cm}
+    \input{plots/ma_abb_app.c_pvalue_hist.tex}
+    \caption{Relative Häufigkeiten der in der Simulation ermittelten $\sym{p-Wert}$e der Signifikanztests.}
+    \label{fig:app.c_pval_hist}
+\end{figure}
 
-\clearpage % Neue Seite für die nächste Gruppe
-
-% --- SEKTION: C = 0 ---
-
-\begin{table}[!ht]
+\begin{figure}[htbp]
     \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=+1$}
-    \label{tab:sens_c00_dplus1}
-    \resizebox{\textwidth}{!}{%
-        \input{tables/table_sens_C00_Dplus_1.tex}
-    }
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=0$}
-    \label{tab:sens_c00_d00}
-    \resizebox{\textwidth}{!}{%
-        \input{tables/table_sens_C00_D00.tex}
-    }
-\end{table}
-
-\begin{table}[!ht]
-    \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=0, D=-1$}
-    \label{tab:sens_c00_dminus1}
-    \resizebox{\textwidth}{!}{%
-        \input{tables/table_sens_C00_Dminus_1.tex}
-    }
-\end{table}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{19cm}
+    \input{plots/ma_abb_app.c_korrelation_all.tex}
+    \caption{Korrelierende Metriken zur prozentualen Trennschärfe-Änderung ($\Delta \sym{power}$ [\%]) über alle Koeffizienten und Szenarien ergänzend zu Abbildung~\ref{fig:ma_abb5.1.4_korrelation}.}
+    \label{fig:app.c_corr_all}
+\end{figure}
 
 \clearpage
+\subsection{Szenarien bei Arbeitspunkt \ac{SNR}$=1$} \label{app:c_snr1}
 
-% --- SEKTION: C = -1 ---
-
-\begin{table}[!ht]
+\begin{figure}[htbp]
     \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=+1$}
-    \label{tab:sens_cminus1_dplus1}
-    \resizebox{\textwidth}{!}{%
-        \input{tables/table_sens_Cminus_1_Dplus_1.tex}
-    }
-\end{table}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{4cm}
+    \input{plots/ma_abb5.1.4_msedev_snr1.tex}
+    \caption{Güte der Schätzer (\ac{MSE}) für $\sym{snr}=1$.}
+    \label{fig:app.c_msedev_snr1}
+\end{figure}
 
-\begin{table}[!ht]
+\begin{figure}[htbp]
     \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=0$}
-    \label{tab:sens_cminus1_d00}
-    \resizebox{\textwidth}{!}{%
-        \input{tables/table_sens_Cminus_1_D00.tex}
-    }
-\end{table}
+    \setlength\figurewidth{0.9\textwidth}
+    \setlength\figureheight{4cm}
+    \input{plots/ma_abb5.1.4_powerdev_snr1.tex}
+    \caption{Trennschärfe mit $95\,\%$-Konfidenzintervallen in Abhängigkeit der Störszenarien für $\sym{snr}=1$.}
+    \label{fig:app.c_powerdev_snr1}
+\end{figure}
 
-\begin{table}[!ht]
+
+\subsection{Effizienzanalysen} \label{app:c_effizienz}
+
+\begin{figure}[htbp]
     \centering
-    \caption{Ergebnisse der Sensitivitätsanalyse für Konfiguration $C=-1, D=-1$}
-    \label{tab:sens_cminus1_dminus1}
-    \resizebox{\textwidth}{!}{%
-        \input{tables/table_sens_Cminus_1_Dminus_1.tex}
-    }
-\end{table}
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{16cm}
+    \input{plots/ma_abb_app.d_kpi_all_coeffs.tex}
+    \caption{\ac{KPI} ggü. \textit{D}-Effizienz aller Koeffizienten.}
+    \label{fig:app.c_kpi_all_coeffs}
+\end{figure}

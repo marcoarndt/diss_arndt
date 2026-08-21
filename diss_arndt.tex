@@ -24,7 +24,7 @@ BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thic
 
 %% ======= Recommended packages (not necessarily needed) ======= 
 
-\usepackage{shellesc} % shell escape alternative: more flexible than --shell-escape flag
+\usepackage{shellesc} % shell escape alternative: more flexible than -shell-escape flag
 					  % for glossaries-extra, tikz external package
 
 % use this to debug where borders are hurt:
@@ -97,7 +97,7 @@ isbn=true]{biblatex}
 \usepackage{siunitx}
 \sisetup{%round-mode = places, 
 	%round-precision = 3, % 
-	range-phrase=~--~, % --, % \qtyrange{from}{to}{unit}
+	range-phrase=~-~, % -, % \qtyrange{from}{to}{unit}
 	table-number-alignment = center, 
 	table-omit-exponent=false, % turn of exp representation in tables
 	exponent-product=\cdot,
@@ -441,9 +441,33 @@ isbn=true]{biblatex}
 \maketitle
 \onehalfspacing % line spacing: 1,5
 
-\addchap{Vorwort}
-Thanks for your service.
 
+\addchap{Vorwort}
+Die vorliegende Arbeit entstand während meiner Tätigkeit als akademischer Mitarbeiter am Institut für Maschinenelemente (IMA) der Universität Stuttgart.
+
+Mein tiefster Dank gilt meinem Doktorvater und Mentor Herrn PD Dr.-Ing. habil. Martin Dazer.
+Als sein Stellvertreter im Fachbereich Zuverlässigkeitstechnik durfte ich neben seinem herausragenden Fachwissen eine außergewöhnliche Förderung erfahren.
+Seine stetige Unterstützung, die unzähligen Diskussionen und sein uneingeschränktes Vertrauen legten das absolute Fundament für diese Arbeit.
+Für dieses freundschaftliche Miteinander bin ich zutiefst dankbar.
+
+Besonderer Dank gebührt Herrn Prof. Dr.-Ing. Bernd Bertsche, dem ehemaligen Leiter des Instituts für Maschinenelemente.
+Er schuf das inspirierende wissenschaftliche Umfeld am IMA, das unvergleichbar den methodischen Rahmen für diese Forschungsarbeit erst ermöglichte.
+
+Herzlich danke ich Herrn Prof. Dr. \textcolor{yellow}{Name} für die Übernahme des Mitberichts und die kritische Durchsicht meiner Arbeit, sowie Herrn Prof. Dr. \textcolor{yellow}{Name} für die Übernahme des Prüfungsvorsitzes.
+
+Für die hervorragende Zusammenarbeit im Industrieprojekt danke ich Herrn Dr. sc. ETH Wolfram Raither.
+Unser freundschaftlicher Austausch und die fruchtbaren Gespräche waren stets eine wertvolle Inspirationsquelle.
+
+Mein Dank gilt ebenso allen Mitarbeiterinnen und Mitarbeitern des IMA für das einzigartige Arbeitsklima.
+Allen voran danke ich Philipp Mell für den stets fachlich bereichernden und befruchtenden Austausch sowie für das akribische Korrekturlesen dieser Arbeit.
+Giuseppe Mannone, Kim Hintz und Erich Rittmaier danke ich für die wertvollen Diskussionen und die großartige gemeinsame Zeit am Institut.
+Ein besonderer Dank gilt Dr.-Ing. Kevin Lucan für das vertrauensvolle, unternehmerische Umfeld und die großen individuellen Freiheiten, von denen ich und viele ehemalige Kollegen nachhaltig profitieren dürfen.
+Gleichermaßen danke ich allen studentischen Hilfskräften und Verfassern von Abschlussarbeiten für ihre tatkräftige Unterstützung.
+
+Der wichtigste Dank gebührt meiner Familie. Meiner Ehefrau Marei und meiner Tochter Karla danke ich von ganzem Herzen für den unermüdlichen Rückhalt und die grenzenlose Geduld in all den Phasen, in denen diese Arbeit meine Zeit beansprucht hat.
+
+\vspace{2cm}
+\noindent Ravensburg, im September 2026 \hfill Marco Arndt
 
 
 \cleardoublepage
@@ -465,7 +489,7 @@ Durch die methodische Fokussierung auf zeitabhängige Degradationsmechanismen wi
 
 Im informationstheoretischen Kern der Arbeit wird das CCD systematisch auf seine Robustheit gegenüber praxisinduzierten Restriktionen evaluiert.
 Umfangreiche Monte-Carlo-Simulationen auf Basis pseudo-physikalischer \textit{Ground-Truth}-Modelle belegen eine ausgeprägte topologische Resilienz des Designs.
-Es wird quantitativ nachgewiesen, dass moderate Orthogonalitätsabweichungen -- wie der Entfall redundanter Zentralpunkte oder stochastische Varianzen in der Lastansteuerung -- die statistische Trennschärfe (\textit{power}) und die Schätzpräzision lediglich marginal kompromittieren.
+Es wird quantitativ nachgewiesen, dass moderate Orthogonalitätsabweichungen - wie der Entfall redundanter Zentralpunkte oder stochastische Varianzen in der Lastansteuerung - die statistische Trennschärfe (\textit{power}) und die Schätzpräzision lediglich marginal kompromittieren.
 Der resultierende methodische Informationsverlust (\textit{Design-Penalty}) wird in der Erprobungspraxis zumeist durch das inhärente System- und Messrauschen dominiert.
 
 Diese nach\-gewiesene Fehler\-toleranz legitimiert den Über\-gang zur adaptiven Versuchsplanung.
@@ -526,19 +550,19 @@ Finally, an empirical case study verifies the industrial applicability of the de
 Consequently, the dissertation establishes a \textbf{universally applicable analytical framework} and demonstrates that efficiency in experimental design is not defined by the unconditional minimisation of test runs, but rather by the economic optimum between minimal resource deployment and the imperative safeguarding of statistical prediction quality within the application domain.
 
 
-\colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
-\todo{
-    \begin{itemize}
-        \item
-        \item Abstract / Kurzfassung / Danksagung
-        \item Bilder prüfen
-        \item "mark changes after your Oral presentation for review"
-        \item "textcolor blue" in definitions ändern
-        \item "Print" Funktion aktivieren
-        \item "nocite" Funktion deaktivieren in main Z.269
-    \end{itemize}
-}\
-\colorbox{yellow}{--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--TODO--}
+% \colorbox{yellow}{-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-}
+% \todo{
+%     \begin{itemize}
+%         \item
+%         \item Abstract / Kurzfassung / Danksagung
+%         \item Bilder prüfen
+%         \item "mark changes after your Oral presentation for review"
+%         \item "textcolor blue" in definitions ändern
+%         \item "Print" Funktion aktivieren
+%         \item "nocite" Funktion deaktivieren in main Z.269
+%     \end{itemize}
+% }\
+% \colorbox{yellow}{-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-}
 
 \cleardoublepage
 \ifpdf
@@ -554,7 +578,7 @@ Consequently, the dissertation establishes a \textbf{universally applicable anal
 \addchap{Nomenklatur}
 \label{chap:nomenklatur}
 
-% --- Abkürzungen ---
+% -- Abkürzungen --
 \section*{Abkürzungen}
 \addcontentsline{toc}{section}{Abkürzungen}
 % \glssetwidest{...} ist hier nicht mehr nötig, da Spaltenbreiten im Stil definiert sind
@@ -566,7 +590,7 @@ Consequently, the dissertation establishes a \textbf{universally applicable anal
 \endgroup
 
 
-% --- Indizes ---
+% -- Indizes --
 \section*{Indizes}
 \addcontentsline{toc}{section}{Indizes}
 \begingroup
@@ -574,7 +598,7 @@ Consequently, the dissertation establishes a \textbf{universally applicable anal
 \printglossary[type=indices,style=linelesssymbunitlong,title={},nonumberlist,nogroupskip]
 \endgroup
 
-% --- Formelverzeichnis ---
+% -- Formelverzeichnis --
 \section*{Formelzeichen}
 \addcontentsline{toc}{section}{Formelzeichen}
 \begingroup
@@ -629,7 +653,6 @@ Consequently, the dissertation establishes a \textbf{universally applicable anal
 \clearpage
 \input{chapters/anhang/anhangb/anhangb.tex}
 \clearpage
-\input{chapters/anhang/anhangc/anhangc.tex}
-\clearpage
+
 
 \end{document}

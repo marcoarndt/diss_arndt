@@ -17,11 +17,11 @@ Das daraus gewonnene Bewusstsein über die erstaunliche Robustheit des \ac{CCD} 
 Hierbei wird untersucht, wie durch den Verzicht redundanter Versuche "freigewordene" Prüfkapazitäten als strategische Brückenpunkte genutzt werden können, um die \ac{SPV} bei der Extrapolation in den realen Feldbereich zu minimieren.
 Zur richtungsabhängigen Veranschaulichung dieser Extrapolationsabsicherung wird eine dedizierte visuelle Bewertungsmethodik, der \ac{EVG}, eingeführt.
 
+Den ökonomischen Rahmen spannt in Abschnitt~\ref{sec:kostenmodell} eine Effizienz- und Kostenmodellierung auf, welche die resultierenden Testlaufzeiten in reale Prüfstandskosten übersetzt.
 Darauf aufbauend werden die bis dato unter Normalverteilungsannahme abgeleiteten Design-Modifikationen in Abschnitt~\ref{sec:weibull_transfer} auf multivariate Lebensdauermodelle übertragen.
-Anhand lebensdauerverteilter Daten $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ und der Parameteridentifikation via \ac{MLE} wird validiert, ob das \ac{CCD} auch mit adaptivem Brückenbau und unter erschwerten Bedingungen von Zensierungen und Lebensdauerskalierungen seine überlegene Prognosefähigkeit behält, welche maßgeblich über die resultierenden Konfidenzintervalle im Prognosebereich (Feldlast-Niveau) evaluiert wird.
-Den Abschluss bildet in Abschnitt \ref{sec:kostenmodell} eine ökonomische Effizienz- und Kostenmodellierung, die das holistische Bild vervollständigt.
-Indem die resultierenden Testlaufzeiten in reale Prüfstandskosten übersetzt werden, wird die statistische Testgüte - repräsentiert durch \ac{power} und \ac{SPV} - direkt mit dem monetären Aufwand verknüpft.
-Nur durch diesen finalen Trade-off lässt sich die zentrale Kernfrage der Effizienz beantworten: \textit{Wie viel Trennschärfe ist finanzierbar?}
+Anhand lebensdauerverteilter Daten $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ und der Parameteridentifikation via \ac{MLE} wird validiert, ob das \ac{CCD} auch mit adaptivem Brückenbau und unter den Bedingungen von Zensierungen seine überlegene Prognosefähigkeit behält.
+Durch die Verknüpfung der statistischen Testgüte (\sym{power}, \ac{SPV}) mit dem monetären Aufwand über den neu entwickelten \ac{EPI} wird abschließend der fundamentale Trade-off beantwortet:
+\textit{Wie viel Trennschärfe ist finanzierbar?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,8 +38,8 @@ Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design
 Entgegen bereits erfolgter Untersuchungen durch \textcite{Box.1963}, \textcite{Ahn.2015}, \textcite{Donev.2004}, \textcite{Zhang.2021} sowie \textcite{Jang.2002} oder vergleichbare Arbeiten liegt der Fokus hierbei allerdings nicht auf der reinen geometrischen Verzerrung und der Analyse sowie Bewertung durch geeignete Optimalitätskriterien (entsprechend Abschnitt~\ref{subsec:optimal}).
 Die hier erwähnten Beiträge konzentrieren sich primär auf die geometrische Charakterisierung der Design-Abweichungen und deren Einfluss auf die Struktur der Design-Matrix bzw. geeigneter Optimalätskriterien.
 Vielmehr soll eine Quantifizierung der Auswirkungen auf die Schätzpräzision und insbesondere die Trennschärfe im Kontext von Lebensdauerprognosen erfolgen.
-Die Bewertung mittels Optimalitätskriterien wäre aus genannten Gründen ohnehin nicht zielführend, da im Umkehrschluss die Erfüllung der Kriterien im Planungsprozess erneut Unkenntnis über die tatsächlichen Auswirkungen auf die Schätzpräzision und Trennschärfe erzeugen würde.
-Dies hat zur Folge, dass zunächst eine numerische Simulation erforderlich ist, um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bevor überhaupt eine Bewertung der Design-Alternativen erfolgen kann.
+Die ausschließliche Bewertung mittels klassischer Optimalitätskriterien greift zu kurz, da sie keine direkte Aussage über die tatsächlichen Auswirkungen auf Schätzvarianz und Trennschärfe unter stochastischem Rauschen erlaubt.
+Dies erfordert den Einsatz numerischer Simulationen, um die Effekte von Design-Abweichungen auf die statistische Güte quantitativ zu bestimmen.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -669,7 +669,7 @@ Die grau hinterlegte Anker-Exposition markiert dabei exakt jenen Parameterbereic
     \label{fig:ma_abb5.2.2_exposure_scatter}
 \end{figure}
 Werden, wie in diesem Beispiel, konkrete Ankerpunkte identifiziert und fixiert, lässt sich das resultierende asymmetrische Design zur Überprüfung in einem 3D-Konturplot visualisieren (vgl. Abbildung~\ref{fig:ma_abb5.2.2_contour}).
-Beispielhaft zu dieser Stelle sowie in den nachfolgenden Abschnitten werden hier die \acp{AP} auf die Koordinaten $(-0{,}85 ; -2{,}60)$, $(-1{,}10 ; -2{,}35)$ und $(-0{,}85 ; -2{,}35)$ fixiert und als und das Design-Layout \ac{EmALT} evaluiert.
+Beispielhaft werden die \acp{AP} an dieser Stelle sowie in den nachfolgenden Abschnitten auf die Koordinaten $(-0{,}85 ; -2{,}60)$, $(-1{,}10 ; -2{,}35)$ und $(-0{,}85 ; -2{,}35)$ fixiert und als Design-Layout \ac{EmALT} evaluiert.
 Hierbei wird deutlich, wie die gesetzten \acp{AP} die Varianztopologie im Zielquadranten eindrücken und den divergierenden Anstieg der \ac{SPV} gezielt dämpfen.
 
 \begin{figure}[htbp]
@@ -922,7 +922,8 @@ Flankierend weisen die aggregierten Wahrscheinlichkeitsdichten der Signifikanzte
     \caption{Aggregierte $\sym{p-Wert}$ Histogramme der verglichenen Designvarianten. Der konforme Verlauf belegt die Abwesenheit systematischer Verzerrungen in der Signifikanzprüfung.}
     \label{fig:ma_abb5.4.2_phisto_all_ols}
 \end{figure}
-
+Ergänzend zur Verteilungsprüfung der Teststatistiken bestätigt die stichprobenartige Auswertung der standardisierten Residuen $\sym{resid_std}_{\sym{idx_i}}$ (vgl. Gleichung~\eqref{eq:resid_standardized}) sowie der Devianz-Residuen $\sym{resid_Dev}$ (Gleichung~\eqref{eq:resid_deviance}), dass die asymmetrische Stützstellenallokation im \ac{EmALT}-Design keine systematischen Strukturbrüche in der Residuenstreuung induziert.
+Die Residuen verharren trendfrei und folgen im Mittel der theoretischen Extremwertverteilung $\sym{SEV}(0, 1)$, womit die Grundannahmen der \ac{GLM}-Inferenz auch unter gerichteter Orthogonalitätsabweichung vollumfänglich erfüllt bleiben.
 Der geometrische Eingriff entlädt sich folglich primär in der Schätzvarianz - siehe \ac{MSE}, Tabelle~\ref{tab:results_emalt_mse_ols}.
 Zwar weitet die topologisch induzierte Multikollinearität die Vertrauensbereiche auf, doch erweist sich das \ac{EmALT}-Design der ersatzlosen Ausdünnung als deutlich überlegen:
 Die reinvestierten Extrapolations-\acp{AP} dämpfen den Varianzanstieg im direkten Vergleich spürbar für alle Regressionskoeffizienten in $\sym{Beta}$.
@@ -969,6 +970,7 @@ Unter Einbezug der Notwendigkeit, die zugrundeliegenden Modellparameter zuverlä
 \begin{equation} \label{eq:epi_eco}
     \sym{epi} = \frac{\sym{power}(\hat{\sym{beta}}_{i})}{\sym{pred_var} \cdot \sym{Er}(\sym{C}_{\sym{idx_cost_total}})} \times 10^3
 \end{equation}
+Der Faktor $10^3$ dient hierbei als dimensionslose Skalierungskonstante zur Überführung der resultierenden Kennwerte in einen numerisch handhabbaren Wertebereich.
 Dieser Index überführt den multidimensionalen Zielkonflikt aus topologischer Geometrie, Inferenzstatistik und Ökonomie in ein skalares Optimierungskriterium:
 Die Metrik skaliert proportional zur statistischen Detektionssicherheit, während sowohl die Prädiktionsvarianz im Extrapolationsraum als auch der monetäre Ressourceneinsatz als inverse Faktoren fungieren.
 Um den Nachweis für die absolute Notwendigkeit dieses Trade-offs zu erbringen, erweitert das nachfolgende \ac{MCS}-Setup hier die bisherige Evaluierung um ein begleitendes, viertes Referenz-Design: das Feld-\ac{CCD}.
@@ -1074,8 +1076,9 @@ Der ökonomische Mehrwert des \ac{EmALT}-Designs, holistisch quantifiziert durch
 Wie flankierende Untersuchungen zu \acp{CI} in optimierten Versuchsplänen belegen \cite{Arndt.2025}, korreliert die topologische Kontrolle der \ac{SPV} mit präziseren Schätzungen der Vertrauensbereiche für die prognostizierten Ausfallwahrscheinlichkeiten im realen Einsatzraum.
 
 Um den methodischen Transfer aufzuzeigen, wie aus den ermittelten Regressionsparametern in $\hat{\sym{theta}}$ nun ein finales Zuverlässigkeitsmodell generiert wird, visualisiert Abbildung~\ref{fig:ma_abb5.4.3_reliability_ci} den simulativen Verlauf der Überlebenswahrscheinlichkeit $\sym{R}(\sym{t})$ exakt am anvisierten Extrapolationspunkt $(-0{,}7 ; -1{,}9)$ im Feldbereich (vgl. Abschnitt~\ref{subsec:evg_plot}).
-Dargestellt sind die Zuverlässigkeitsfunktionen auf Grundlage der Gleichungen~\ref{eq:reldef}, \ref{eq:glm_link} und \ref{eq:var_T_general} sowie die korrespondierenden Bänder der $90\,\%$-\acp{CI}, resultierend aus der Fisher-Informationsmatrix (\ac{FIM}) der jeweiligen \ac{MLE}-Modellierung.
+Dargestellt sind die Zuverlässigkeitsfunktionen auf Grundlage der Gleichungen~\eqref{eq:reldef}, \eqref{eq:glm_link} und \eqref{eq:var_T_general} sowie die korrespondierenden Bänder der $90\,\%$-\acp{CI}, resultierend aus der Invertierung der beobachteten Fisher-Informationsmatrix $\symsub{FIM}{idx_O}$ der jeweiligen \ac{MLE}-Modellierung.
 Als objektive Referenz dient hierbei die Kurve des wahren Systemverhaltens nach bekannter Vorgabe aus Tabelle~\ref{tab:simulation_parameters_weibull} mit $\sym{b}=3$.
+
 
 Während die mittleren $\sym{R}(\sym{t})$-Prognosen (Punktschätzer) beider Designs - im Rahmen der verbleibenden Abweichungen der Koeffizientenschätzungen in $\hat{\sym{beta}}$ - den wahren physikalischen Degradationsverlauf valide approximieren, manifestieren sich im direkten Vergleich der Konfidenzbänder feststellbare topologische zusätzliche Unterschiede.
 Bedingt durch die massive Extrapolationsdistanz unterliegen naturgemäß beide Versuchspläne einer substanziellen Prognosevarianz, sodass ihre absoluten Streuungsamplituden auf einem vergleichbaren Grundniveau in $\sym{pred_var}$ verharren.
@@ -1122,7 +1125,7 @@ Durch die strategische Verortung der Ankerpunkte nahe dem realen Einsatzniveau f
 Im Rahmen der post-experimentellen Datenanalyse lassen sich diese Ankerpunkte analog zu \textit{Confirmation Experiments} \cite{Stevens.2019} auswerten.
 Entsprechende Metriken, wie etwa die \textit{Probability of Agreement}, können hierbei herangezogen werden, um empirisch zu validieren, ob die am Hochlastprüfstand extrahierten Degradationsgesetze im moderaten \textit{Use-Space} weiterhin Gültigkeit besitzen - eine Detektionsmöglichkeit, die durch reine Hochlastprüfungen vollständig verwehrt bliebe.
 
-Während die durchgeführten Sensitivitätsanalysen und Monte-Carlo-Simulationen die theoretischen Gesetzmäßigkeiten des \ac{EmALT}-Designs unter kontrollierten stochastischen Randbedingungen zweifelsfrei verifiziert haben, erfordert der Transfer in die Zuverlässigkeitspraxis einen finalen empirischen Härtetest.
+Während die durchgeführten Sensitivitätsanalysen und \acp{MCS} die theoretischen Gesetzmäßigkeiten des \ac{EmALT}-Designs unter kontrollierten stochastischen Randbedingungen zweifelsfrei verifiziert haben, erfordert der Transfer in die Zuverlässigkeitspraxis einen finalen empirischen Härtetest.
 Im nachfolgenden Kapitel~\ref{chap:casestudy} wird das hergeleitete Instrumentarium daher auf eine physische Fallstudie übertragen.
 Anhand der realen multivariaten Lebensdauererprobung von Lenksystem-Zahnriemen wird das klassische Basis-Modell mittels \textit{Confirmation Experiments} gezielt herausgefordert.
 Es wird empirisch nachgewiesen, dass die theoriebasierte Extrapolationsabsicherung durch das \ac{EmALT}-Konzept weit mehr als eine effiziente Varianzdämpfung ist: Sie erweist sich als zwingende methodische Notwendigkeit, um das Zuverlässigkeitsmodell im realen Feldbetrieb vor fatalen, sicherheitskritischen Überschätzungen zu bewahren.

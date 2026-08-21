@@ -1,0 +1,197 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=0.432\figurewidth,
+height=0.941\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=8.00,
+xmax=16.00,
+xlabel style={font=\color{mycolor1}},
+xlabel={$\ln(\hat{T})$},
+ymin=-3.00,
+ymax=3.00,
+ylabel style={font=\color{mycolor1}},
+ylabel={$r_{\textnormal{Dev}}$},
+axis background/.style={fill=white},
+title style={font=\color{mycolor1}},
+title={Devianz-Residuen},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.5},
+grid=major,
+grid style={dotted, gray!50},
+y tick label style={/pgf/number format/precision=0}
+]
+\addplot [color=gray, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=white!90!black, gray}, forget plot]
+  table[row sep=crcr]{%
+11.84	-1.23\\
+8.42	1.16\\
+13.33	-0.03\\
+12.29	2.75\\
+9.37	1.36\\
+13.14	-0.63\\
+13.25	1.77\\
+10.11	-0.35\\
+10.80	0.15\\
+10.80	0.24\\
+10.80	-0.49\\
+10.80	0.10\\
+10.80	0.12\\
+11.84	-0.57\\
+8.42	-0.73\\
+13.33	-0.27\\
+12.29	2.71\\
+9.37	1.84\\
+13.14	-0.45\\
+13.25	2.06\\
+10.11	-0.78\\
+10.80	0.91\\
+10.80	-0.52\\
+10.80	-0.22\\
+10.80	0.84\\
+10.80	-0.39\\
+};
+\addplot [color=black, only marks, mark size=4.3pt, mark=diamond*, mark options={solid, fill=white!20!black, black}, forget plot]
+  table[row sep=crcr]{%
+12.13	-1.02\\
+13.78	-1.32\\
+14.12	1.06\\
+11.23	2.68\\
+15.95	0.97\\
+13.02	-1.13\\
+15.95	1.04\\
+10.44	0.10\\
+11.01	0.51\\
+11.01	0.61\\
+11.01	-0.26\\
+11.01	0.45\\
+11.01	0.47\\
+12.13	-0.21\\
+13.78	-1.40\\
+14.12	0.84\\
+11.23	2.62\\
+15.95	1.00\\
+13.02	-0.86\\
+15.95	0.95\\
+10.44	-0.40\\
+11.01	1.37\\
+11.01	-0.29\\
+11.01	0.07\\
+11.01	1.30\\
+11.01	-0.14\\
+};
+\addplot [color=black, line width=1.0pt, forget plot]
+  table[row sep=crcr]{%
+8.00	0.00\\
+16.00	0.00\\
+};
+\addplot [color=red!60!teal, dashed, line width=1.2pt, forget plot]
+  table[row sep=crcr]{%
+8.00	2.00\\
+16.00	2.00\\
+};
+\addplot [color=red!60!teal, dashed, line width=1.2pt, forget plot]
+  table[row sep=crcr]{%
+8.00	-2.00\\
+16.00	-2.00\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=0.432\figurewidth,
+height=0.941\figureheight,
+at={(0.568\figurewidth,0\figureheight)},
+scale only axis,
+xmin=0.00,
+xmax=3.99,
+xlabel style={font=\color{mycolor1}},
+xlabel={$r_{\textnormal{CS}}$},
+ymin=0.00,
+ymax=3.99,
+ylabel style={font=\color{mycolor1}},
+ylabel={Theor. Quantil $-\ln(1-F)$},
+axis background/.style={fill=white},
+title style={font=\color{mycolor1}},
+title={Cox-Snell-Residuen},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.5},
+legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left},
+grid=major,
+grid style={dotted, gray!50},
+y tick label style={/pgf/number format/precision=0}
+]
+\addplot [color=black, dashed, line width=1.2pt, forget plot]
+  table[row sep=crcr]{%
+0.00	0.00\\
+3.99	3.99\\
+};
+\addplot [color=gray, line width=1.0pt, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=white!90!black, gray}]
+  table[row sep=crcr]{%
+0.01	0.03\\
+0.01	0.07\\
+0.05	0.11\\
+0.07	0.15\\
+0.08	0.20\\
+0.17	0.24\\
+0.24	0.29\\
+0.34	0.34\\
+0.38	0.40\\
+0.78	0.46\\
+0.86	0.52\\
+0.89	0.59\\
+0.90	0.66\\
+1.03	0.73\\
+1.23	0.81\\
+1.29	0.90\\
+1.40	1.00\\
+1.44	1.11\\
+1.52	1.23\\
+1.57	1.37\\
+1.61	1.53\\
+1.68	1.73\\
+1.76	1.97\\
+1.92	2.28\\
+2.00	2.74\\
+2.77	3.63\\
+};
+\addlegendentry{Basis-CCD}
+
+\addplot [color=black, line width=1.0pt, only marks, mark size=4.3pt, mark=diamond*, mark options={solid, fill=white!20!black, black}]
+  table[row sep=crcr]{%
+0.01	0.03\\
+0.01	0.07\\
+0.17	0.11\\
+0.19	0.15\\
+0.28	0.20\\
+0.28	0.24\\
+0.30	0.29\\
+0.31	0.34\\
+0.33	0.40\\
+0.38	0.46\\
+0.50	0.52\\
+0.58	0.59\\
+0.60	0.66\\
+0.62	0.73\\
+0.90	0.81\\
+0.93	0.90\\
+1.15	1.00\\
+1.23	1.11\\
+1.28	1.23\\
+1.32	1.37\\
+1.46	1.53\\
+2.12	1.73\\
+2.39	1.97\\
+2.59	2.28\\
+2.96	2.74\\
+3.12	3.63\\
+};
+\addlegendentry{EmALT}
+
+\end{axis}
+\end{tikzpicture}%

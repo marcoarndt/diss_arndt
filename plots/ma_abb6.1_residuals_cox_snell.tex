@@ -1,0 +1,97 @@
+% This file was created by matlab2tikz.
+%
+\definecolor{mycolor1}{rgb}{0.12941,0.12941,0.12941}%
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=\figurewidth,
+height=0.94\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmin=0.00,
+xmax=3.99,
+xlabel style={font=\color{mycolor1}},
+xlabel={$r_{\textnormal{CS}}$},
+ymin=0.00,
+ymax=3.99,
+ylabel style={font=\color{mycolor1}},
+ylabel={Theoretisches Quantil $-\ln(1-F)$},
+axis background/.style={fill=white},
+xmajorgrids,
+ymajorgrids,
+grid style={dotted, opacity=0.5},
+legend style={at={(0.03,0.97)}, anchor=north west, legend cell align=left, align=left},
+grid=major,
+grid style={dotted, gray!50},
+y tick label style={/pgf/number format/precision=0}
+]
+\addplot [color=black, dashed, line width=1.2pt, forget plot]
+  table[row sep=crcr]{%
+0.00	0.00\\
+3.99	3.99\\
+};
+\addplot [color=gray, line width=1.0pt, only marks, mark size=2.5pt, mark=*, mark options={solid, fill=white!90!black, gray}]
+  table[row sep=crcr]{%
+0.01	0.03\\
+0.01	0.07\\
+0.05	0.11\\
+0.07	0.15\\
+0.08	0.20\\
+0.17	0.24\\
+0.24	0.29\\
+0.34	0.34\\
+0.38	0.40\\
+0.78	0.46\\
+0.86	0.52\\
+0.89	0.59\\
+0.90	0.66\\
+1.03	0.73\\
+1.23	0.81\\
+1.29	0.90\\
+1.40	1.00\\
+1.44	1.11\\
+1.52	1.23\\
+1.57	1.37\\
+1.61	1.53\\
+1.68	1.73\\
+1.76	1.97\\
+1.92	2.28\\
+2.00	2.74\\
+2.77	3.63\\
+};
+\addlegendentry{Basis-\ac{CCD}}
+
+\addplot [color=black, line width=1.0pt, only marks, mark size=4.3pt, mark=diamond*, mark options={solid, fill=white!20!black, black}]
+  table[row sep=crcr]{%
+0.01	0.03\\
+0.01	0.07\\
+0.17	0.11\\
+0.19	0.15\\
+0.28	0.20\\
+0.28	0.24\\
+0.30	0.29\\
+0.31	0.34\\
+0.33	0.40\\
+0.38	0.46\\
+0.50	0.52\\
+0.58	0.59\\
+0.60	0.66\\
+0.62	0.73\\
+0.90	0.81\\
+0.93	0.90\\
+1.15	1.00\\
+1.23	1.11\\
+1.28	1.23\\
+1.32	1.37\\
+1.46	1.53\\
+2.12	1.73\\
+2.39	1.97\\
+2.59	2.28\\
+2.96	2.74\\
+3.12	3.63\\
+};
+\addlegendentry{\ac{EmALT}}
+
+\end{axis}
+\end{tikzpicture}%

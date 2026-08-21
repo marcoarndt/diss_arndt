@@ -10,7 +10,7 @@
 \typeout{}
 
 \ProcessOptions\relax
-\newcommand{\documentfontsize}{12pt}
+\newcommand{\documentfontsize}{12pt} %12pt
 \newcommand{\titlewidth}{1.0}
 \newcommand{\paperformatScr}{a4}
 \newcommand{\paperformatGeom}{a4paper}
@@ -21,7 +21,7 @@
 \newcommand{\linkcolor}{uniSblue}
 
 \DeclareOption{smallfont}{
-    \renewcommand{\documentfontsize}{12pt}
+    \renewcommand{\documentfontsize}{12pt} %12pt
 }
 
 \DeclareOption{accepted}{
