@@ -1,0 +1,84 @@
+%% Creator: Inkscape 1.4.4 (dcaf3e7, 2026-05-05), www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'ma_abb1_aufbau.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \newcommand*\fsize{\dimexpr\f@size pt\relax}%
+  \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{144.66456985bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,1.16761481)%
+    \lineheight{1}%
+    \setlength\tabcolsep{0pt}%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{ma_abb1_aufbau.pdf}}%
+    \put(0.24304619,1.13011029){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:einleitung}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{ma_abb1_aufbau.pdf}}%
+    \put(0.24311536,1.07129078){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Einleitung}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{ma_abb1_aufbau.pdf}}%
+    \put(0.24284633,0.90939133){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Stand der Technik und Forschung}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{ma_abb1_aufbau.pdf}}%
+    \put(0.24371524,0.81531185){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:ansatz}}\end{tabular}}}}%
+    \put(0.24304618,0.97615214){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:stand}}\end{tabular}}}}%
+    \put(0.24730516,0.75937653){\makebox(0,0)[t]{\lineheight{1.04999995}\smash{\begin{tabular}[t]{c}\textit{Forschungsbedarf in der effizienten }\\\textit{Testplanung für multivariate }\\\textit{Lebensdauermodellierungen}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{ma_abb1_aufbau.pdf}}%
+    \put(0.24347695,0.60919086){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:screening}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{ma_abb1_aufbau.pdf}}%
+    \put(0.24772024,0.55117893){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Methodik zum heuristischen }\\\textit{Parameterscreening}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{ma_abb1_aufbau.pdf}}%
+    \put(0.24378441,0.43850608){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:entwurf}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{ma_abb1_aufbau.pdf}}%
+    \put(0.24737433,0.38907448){\makebox(0,0)[t]{\lineheight{1.04999995}\smash{\begin{tabular}[t]{c}\textit{Numerische Untersuchung zur }\\\textit{statistischen Effektivität }\\\textit{effizienter Lebensdauertests}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{ma_abb1_aufbau.pdf}}%
+    \put(0.24353843,0.24148424){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:casestudy}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{ma_abb1_aufbau.pdf}}%
+    \put(0.24365374,0.17525046){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Fallstudie}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{ma_abb1_aufbau.pdf}}%
+    \put(0.24317685,0.08411606){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:fazit}}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{ma_abb1_aufbau.pdf}}%
+    \put(0.24294626,0.02433366){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Zusammenfassung und Ausblick}\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{ma_abb1_aufbau.pdf}}%
+  \end{picture}%
+\endgroup%

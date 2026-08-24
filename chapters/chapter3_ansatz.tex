@@ -32,9 +32,10 @@ Im Kontext multivariater Lebensdauertests erfährt der Begriff der \textbf{Effiz
 Die zugrundeliegende Modellierung mittels Weibull-\acp{GLM} stößt auf ein fundamentales stochastisches Hindernis \cite{Khuri.2006,Stufken.2012}.
 Im Gegensatz zu klassischen \ac{OLS}-Modellen (Normalverteilung) hängt die Fisher-Informationsmatrix $\sym{M}(\sym{X}, \sym{theta})$ bei \acp{GLM} nicht allein von den geometrischen Einstellungen der Faktoren $\sym{X}$ ab, sondern zwingend von den wahren, aber vorab unbekannten Modellparametern $\sym{theta}$ (insbesondere dem Weibull-Formparameter $\sym{b}$ und via der Link-Funktion dem Lageparameter $\sym{T}$):
 \begin{equation}
-    \sym{M}(\sym{X}, \sym{theta}) = \sym{Er} \left[ \frac{\partial^2 \sym{Lambda}(\sym{theta})}{\partial \sym{theta}^2} \right].
+    \sym{M}(\sym{X}, \sym{theta}) = - \sym{Er} \left[ \frac{\partial^2 \sym{Lambda}(\sym{theta})}{\partial \sym{theta}^2} \right].
     \label{eq:fisher_matrix_glm}
 \end{equation}
+
 Hieraus resultiert ein Zirkelschluss: Zur Konstruktion eines idealen optimalen Plans müssten exakt jene Parameterwerte bereits bekannt sein, die der Versuch erst ermitteln soll \cite{Stufken.2012}.
 Zwar existieren numerische Algorithmen zur Bestimmung optimaler Versuchspläne für \acp{GLM} \cite{Khuri.2006, Yang.2011}, diese erfordern jedoch zwingend einen initialen \textit{Best Guess} der wahren Werte.
 Stimmen diese anfänglichen Schätzungen nicht mit der physikalischen Realität überein, entartet das Design und verliert seine Integrität vollständig (\glqq The designs may be poor if the choice of values is far from the true parameter values\grqq, \textcite{Stufken.2012}).
@@ -144,5 +145,5 @@ Die Beantwortung der formulierten Forschungsfragen erfolgt entlang einer geschlo
           Kopplung der MLE-basierten Weibull-AFT-Modellierung mit einem dynamischen Prüfstandskostenmodell und Etablierung des \ac{EPI} zur Bestimmung des Pareto-Optimums aus Testdauer und Prognosegüte.
 
     \item \textbf{Stufe 5: Empirische Validierung \& Falsifikation (Kapitel~\ref{chap:casestudy}):} \\
-          Experimenteller Härtetest an realen Bauteilprüfungen (Lenksystem-Zahnriemen) mittels \textit{Confirmation Experiments} (Abschnitt~\ref{subsec:confirmationruns}) und Prädiktionsintervallen zur Verifikation der Schutzwirkung gegen feldbetriebliche Sicherheitsüberschätzungen.
+          Experimenteller Härtetest an realen Bauteilprüfungen (Lenk\-system-Zahn\-riem\-en) mittels \textit{Confirmation Experiments} (Abschnitt~\ref{subsec:confirmationruns}) und Prädiktionsintervallen zur Verifikation der Schutzwirkung gegen feldbetriebliche Sicherheitsüberschätzungen.
 \end{itemize}

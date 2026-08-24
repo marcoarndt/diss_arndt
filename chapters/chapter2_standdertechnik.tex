@@ -171,7 +171,7 @@ Die Flexibilität der Verteilung zeigt sich in den Spezialfällen des Formparame
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Parameterschätzverfahren} \label{subsec:schätzer}
-Soll eine geschlossene mathematische Beschreibung des stochastischen Ausfallverhaltens eines Produktes gefunden werden, ist das im vorherigen Abschnitten~\ref{subsec:paramleben} definierte parametrische Verteilungsmodell $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ zu schätzen.
+Soll eine geschlossene mathematische Beschreibung des stochastischen Ausfallverhaltens eines Produktes gefunden werden, ist das in Abschnitt~\ref{subsec:paramleben} definierte parametrische Verteilungsmodell $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ zu schätzen.
 Die Modellparameter der Grundgesamtheit sind in der praktischen Anwendung jedoch unbekannt.
 Die zentrale Problemstellung der \textbf{Parameterschätzung} besteht somit darin, aus der empirischen Stichprobe bestehend aus $\sym{n}$ Realisierungen $\sym{t}_{1}, \dots, \symsub{t}{n}$ der Zufallsvariable $\sym{tau}$ statistisch fundierte Schätzwerte $\hat{\sym{T}}$ und $\hat{\sym{b}}$ zu gewinnen.
 Diese sind Voraussetzung, um das Lebensdauermodell (z.B. Gleichung~\eqref{eq:weibull_cdf}) zu quantifizieren und prädiktive Aussagen zu Quantilen oder der Zuverlässigkeit $\sym{R}(\sym{t})$ zu ermöglichen.
@@ -735,49 +735,52 @@ Während der $\sym{A2}$-Indikator die Gesamtmatrix bewertet, stehen genau diese 
 Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz (und damit der \ac{MSE}) eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.
 Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Kleppmann.2020,Montgomery.2021}.
 
-Ergänzend zur globalen Bewertung der Multikollinearität durch den \ac{VIF} erlaubt die Betrachtung der sogenannten \textbf{Prädiktionsmatrix} (engl. auch \textbf{Hat-Matrix})
-\begin{equation}
-    \sym{Hat} = \sym{X}(\sym{X}'\sym{X})^{-1}\sym{X}'
-    \label{eq:hat_matrix}
-\end{equation}
-eine lokale Diagnose der Versuchspunkte.
-Die Diagonalelemente $\sym{h}_{\sym{idx_i}\sym{idx_i}} \in \left[ \frac{1}{\sym{n}}, 1 \right]$ dieser Projektionsmatrix, bezeichnet als \textbf{Hebelwerte} (engl. \textbf{Leverage}), quantifizieren den Einfluss eines einzelnen Versuchslaufs auf die Modellvorhersage.
-Punkte mit hohen Hebelwerten (typischerweise $\sym{h}_{\sym{idx_i}\sym{idx_i}}> 2\sym{p}/\sym{n}$) befinden sich geometrisch weit vom Zentrum des Versuchsraums entfernt und dominieren die Regression, was den Plan anfällig für Ausreißer in diesen spezifischen Einstellungen macht \cite{Siebertz.2026,Montgomery.2021}.
+Zur lokalen Diagnose von Versuchspunkten und deren Auswirkung auf die Regressionsparameter existieren in der Fachliteratur etablierte Maßzahlen wie die Hebelwerte ($\sym{h}_{\sym{idx_i}\sym{idx_i}}$) der Prädiktionsmatrix, die Cook-Distanz ($\symsub{D}{idx_i}$) sowie detaillierte Einflussstatistiken wie $\sym{dfbetas}$, $\sym{dffits}$ und $\sym{covratio}$ - vergleiche Werke von \textcite{Siebertz.2026, Montgomery.2021, Belsley.2004, Fahrmeir.2009}.
+Da es sich hierbei jedoch um rein retrospektive Diagnostikwerkzeuge handelt, die bereits vorliegende Versuchsergebnisse zwingend voraussetzen, finden sie im Rahmen der a priori Testplanung dieser Arbeit keine weitere Anwendung.
 
-Während Hebelwerte jedoch lediglich das \textit{Potenzial} einer Beobachtung zur Modellbeeinflussung aufgrund ihrer geometrischen Exponiertheit indizieren, quantifizieren Einflussstatistiken die \textit{tatsächliche} Auswirkung auf die Regressionsparameter und die Vorhersagegüte.
-Die Identifikation solcher Beobachtungen erfolgt methodisch durch den iterativen Ausschluss des $i$-ten Datensatzes (\textit{Leave-One-Out}-Methodik) und den Vergleich der resultierenden Modellstatistiken mit dem ursprünglichen Modell basierend auf $\sym{n}$ Beobachtungen \cite{Belsley.2004, Montgomery.2021}.
-Als globales Maß für den Einfluss der $i$-ten Beobachtung auf den Vektor aller geschätzten Regressionskoeffizienten $\hat{\sym{Beta}}$ dient die \textbf{Cook-Distanz} ($\sym{D}_i$).
-Sie verknüpft die Information des intern studentisierten Residuums $\symsub{r}{idx_i}$ mit dem Hebelwert $\sym{h}_{\sym{idx_i}\sym{idx_i}}$:
-% ...
-\begin{equation}
-    \symsub{D}{idx_i} = \frac{\sym{r}_{\sym{idx_i}}^2}{\sym{p}} \cdot \frac{\sym{h}_{\sym{idx_i}\sym{idx_i}}}{1-\sym{h}_{\sym{idx_i}\sym{idx_i}}}.
-    \label{eq:cooks_d}
-\end{equation}
-% ...
-Ein hoher Wert (typischerweise $\symsub{D}{idx_i} > 1$ oder $\symsub{D}{idx_i} > 4/\sym{n}$) signalisiert, dass das Entfernen der Beobachtung zu einer signifikanten Verschiebung der Modellparameter führen würde, da der Punkt sowohl weit vom Zentrum liegt als auch einen großen Fehler aufweist \cite{Fahrmeir.2009,Belsley.2004}.
+% Ergänzend zur globalen Bewertung der Multikollinearität durch den \ac{VIF} erlaubt die Betrachtung der sogenannten \textbf{Prädiktionsmatrix} (engl. auch \textbf{Hat-Matrix})
+% \begin{equation}
+%     \sym{Hat} = \sym{X}(\sym{X}'\sym{X})^{-1}\sym{X}'
+%     \label{eq:hat_matrix}
+% \end{equation}
+% eine lokale Diagnose der Versuchspunkte.
+% Die Diagonalelemente $\sym{h}_{\sym{idx_i}\sym{idx_i}} \in \left[ \frac{1}{\sym{n}}, 1 \right]$ dieser Projektionsmatrix, bezeichnet als \textbf{Hebelwerte} (engl. \textbf{Leverage}), quantifizieren den Einfluss eines einzelnen Versuchslaufs auf die Modellvorhersage.
+% Punkte mit hohen Hebelwerten (typischerweise $\sym{h}_{\sym{idx_i}\sym{idx_i}}> 2\sym{p}/\sym{n}$) befinden sich geometrisch weit vom Zentrum des Versuchsraums entfernt und dominieren die Regression, was den Plan anfällig für Ausreißer in diesen spezifischen Einstellungen macht \cite{Siebertz.2026,Montgomery.2021}.
 
-Für eine differenzierte Analyse auf Ebene der einzelnen Modellterme wird die Metrik $\sym{dfbetas}$ (Difference in Betas, Standardized) herangezogen.
-Sie misst die standardisierte Änderung eines spezifischen Regressionskoeffizienten $\sym{beta}_{\sym{idx_j}}$ bei Ausschluss der $\sym{idx_i}$-ten Beobachtung:
-\begin{equation}
-    \sym{dfbetas}_{\sym{idx_j},\sym{idx_i}} = \frac{\hat{\sym{beta}}_{\sym{idx_j}} - \hat{\sym{beta}}_{\sym{idx_j}(-\sym{idx_i})}}{\sqrt{\hat{\sym{sigma}}_{(-\sym{idx_i})}^2 (\sym{X}'\sym{X})^{-1}_{\sym{idx_j}\sym{idx_j}}}},
-    \label{eq:dfbetas}
-\end{equation}
-wobei $\hat{\sym{beta}}_{\sym{idx_j}(-\sym{idx_i})}$ den Koeffizienten ohne die $\sym{idx_i}$-te Beobachtung und $\hat{\sym{sigma}}_{(-\sym{idx_i})}^2$ die entsprechende Fehlerquadratschätzung darstellt.
-Hiermit lässt sich prüfen, ob einzelne Versuche die Schätzung eines Effekt-Terms verzerren (kritischer Schwellenwert oft $> 2/\sqrt{\sym{n}}$) \cite{Belsley.2004,Montgomery.2021}.
+% Während Hebelwerte jedoch lediglich das \textit{Potenzial} einer Beobachtung zur Modellbeeinflussung aufgrund ihrer geometrischen Exponiertheit indizieren, quantifizieren Einflussstatistiken die \textit{tatsächliche} Auswirkung auf die Regressionsparameter und die Vorhersagegüte.
+% Die Identifikation solcher Beobachtungen erfolgt methodisch durch den iterativen Ausschluss des $i$-ten Datensatzes (\textit{Leave-One-Out}-Methodik) und den Vergleich der resultierenden Modellstatistiken mit dem ursprünglichen Modell basierend auf $\sym{n}$ Beobachtungen \cite{Belsley.2004, Montgomery.2021}.
+% Als globales Maß für den Einfluss der $i$-ten Beobachtung auf den Vektor aller geschätzten Regressionskoeffizienten $\hat{\sym{Beta}}$ dient die \textbf{Cook-Distanz} ($\sym{D}_i$).
+% Sie verknüpft die Information des intern studentisierten Residuums $\symsub{r}{idx_i}$ mit dem Hebelwert $\sym{h}_{\sym{idx_i}\sym{idx_i}}$:
+% % ...
+% \begin{equation}
+%     \symsub{D}{idx_i} = \frac{\sym{r}_{\sym{idx_i}}^2}{\sym{p}} \cdot \frac{\sym{h}_{\sym{idx_i}\sym{idx_i}}}{1-\sym{h}_{\sym{idx_i}\sym{idx_i}}}.
+%     \label{eq:cooks_d}
+% \end{equation}
+% % ...
+% Ein hoher Wert (typischerweise $\symsub{D}{idx_i} > 1$ oder $\symsub{D}{idx_i} > 4/\sym{n}$) signalisiert, dass das Entfernen der Beobachtung zu einer signifikanten Verschiebung der Modellparameter führen würde, da der Punkt sowohl weit vom Zentrum liegt als auch einen großen Fehler aufweist \cite{Fahrmeir.2009,Belsley.2004}.
 
-Ergänzend beschreibt $\sym{dffits}$ (Difference in Fits) die Änderung des Vorhersagewertes an der Stelle $\sym{idx_i}$ selbst, normiert auf die Standardabweichung der Anpassung:
-\begin{equation}
-    \sym{dffits}_{\sym{idx_i}} = \frac{\hat{\sym{y}}_{\sym{idx_i}} - \hat{\sym{y}}_{\sym{idx_i}(-\sym{idx_i})}}{\sqrt{\hat{\sym{sigma}}_{(-\sym{idx_i})}^2 \sym{h}_{\sym{idx_i}\sym{idx_i}}}}.
-    \label{eq:dffits}
-\end{equation}
+% Für eine differenzierte Analyse auf Ebene der einzelnen Modellterme wird die Metrik $\sym{dfbetas}$ (Difference in Betas, Standardized) herangezogen.
+% Sie misst die standardisierte Änderung eines spezifischen Regressionskoeffizienten $\sym{beta}_{\sym{idx_j}}$ bei Ausschluss der $\sym{idx_i}$-ten Beobachtung:
+% \begin{equation}
+%     \sym{dfbetas}_{\sym{idx_j},\sym{idx_i}} = \frac{\hat{\sym{beta}}_{\sym{idx_j}} - \hat{\sym{beta}}_{\sym{idx_j}(-\sym{idx_i})}}{\sqrt{\hat{\sym{sigma}}_{(-\sym{idx_i})}^2 (\sym{X}'\sym{X})^{-1}_{\sym{idx_j}\sym{idx_j}}}},
+%     \label{eq:dfbetas}
+% \end{equation}
+% wobei $\hat{\sym{beta}}_{\sym{idx_j}(-\sym{idx_i})}$ den Koeffizienten ohne die $\sym{idx_i}$-te Beobachtung und $\hat{\sym{sigma}}_{(-\sym{idx_i})}^2$ die entsprechende Fehlerquadratschätzung darstellt.
+% Hiermit lässt sich prüfen, ob einzelne Versuche die Schätzung eines Effekt-Terms verzerren (kritischer Schwellenwert oft $> 2/\sqrt{\sym{n}}$) \cite{Belsley.2004,Montgomery.2021}.
 
-Abschließend bewertet die $\sym{covratio}$ den Einfluss auf die Präzision der Schätzung.
-Sie setzt die Determinante der Varianz-Kovarianz-Matrix ohne die $\sym{idx_i}$-te Beobachtung ins Verhältnis zur ursprünglichen Matrix:
-\begin{equation}
-    \sym{covratio}_{\sym{idx_i}} = \frac{\det((\sym{X}_{(-\sym{idx_i})}'\sym{X}_{(-\sym{idx_i})})^{-1})}{\det((\sym{X}'\sym{X})^{-1})}.
-    \label{eq:covratio}
-\end{equation}
-Werte, die signifikant von $1$ abweichen (Grenzen $1 \pm 3\sym{p}/\sym{n}$), zeigen an, dass die Beobachtung die Konfidenzbereiche der Koeffizienten unverhältnismäßig beeinflusst \cite{Belsley.2004}.
+% Ergänzend beschreibt $\sym{dffits}$ (Difference in Fits) die Änderung des Vorhersagewertes an der Stelle $\sym{idx_i}$ selbst, normiert auf die Standardabweichung der Anpassung:
+% \begin{equation}
+%     \sym{dffits}_{\sym{idx_i}} = \frac{\hat{\sym{y}}_{\sym{idx_i}} - \hat{\sym{y}}_{\sym{idx_i}(-\sym{idx_i})}}{\sqrt{\hat{\sym{sigma}}_{(-\sym{idx_i})}^2 \sym{h}_{\sym{idx_i}\sym{idx_i}}}}.
+%     \label{eq:dffits}
+% \end{equation}
+
+% Abschließend bewertet die $\sym{covratio}$ den Einfluss auf die Präzision der Schätzung.
+% Sie setzt die Determinante der Varianz-Kovarianz-Matrix ohne die $\sym{idx_i}$-te Beobachtung ins Verhältnis zur ursprünglichen Matrix:
+% \begin{equation}
+%     \sym{covratio}_{\sym{idx_i}} = \frac{\det((\sym{X}_{(-\sym{idx_i})}'\sym{X}_{(-\sym{idx_i})})^{-1})}{\det((\sym{X}'\sym{X})^{-1})}.
+%     \label{eq:covratio}
+% \end{equation}
+% Werte, die signifikant von $1$ abweichen (Grenzen $1 \pm 3\sym{p}/\sym{n}$), zeigen an, dass die Beobachtung die Konfidenzbereiche der Koeffizienten unverhältnismäßig beeinflusst \cite{Belsley.2004}.
 
 \subsubsection{Optimalitätskriterien}
 Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix $(\sym{X}'\sym{X})^{-1}$ den Informationsgehalt trotz Korrelationen zu maximieren.

@@ -8,47 +8,18 @@ Nach der qualitativen Vorselektion relevanter Einflussgrößen (Kapitel~\ref{cha
 Die zentrale wissenschaftliche Zielsetzung besteht in der Entwicklung adäquater, multivariater Lebensdauertests, welche etablierte Standard-\acp{RSD} gezielt an die spezifischen Anforderungen der Lebensdauerprognose anpassen.
 Das \ac{CCD} bildet hierbei das methodische Fundament, da es durch seine sequenzielle Augmentierbarkeit (Screening $\to$ lineares Modell $\to$ quadratische Modellterme) im Kontext kostenintensiver \ac{EoL}-Tests eine unübertroffene operative Flexibilität bietet (vgl. Abschnitt~\ref{sec:forschungsfragen}).
 
-Um den Paradigmenwechsel von klassischen, starren \ac{DoE}-Ansätzen hin zu hochgradig effizienten Lebensdauertests methodisch abzusichern, gliedert sich dieses Kapitel in vier aufeinander aufbauende Schwerpunkte - ausgehend von einer idealisierten Theorie (Normalverteilung, \ac{OLS}) hin zur komplexen, gekoppelten Realität der Zuverlässigkeitstechnik (Weibull, \ac{MLE}, Prüfkosten):
+Um den Paradigmenwechsel von klassischen, starren \ac{DoE}-Ansätzen hin zu hochgradig effizienten Lebensdauertests methodisch abzusichern, gliedert sich dieses Kapitel in eine geschlossene fünfstufige Sequenz - ausgehend von einer kontrollierten simulationsbasierten Modellumgebung hin zur gekoppelten stochastisch-ökonomischen Realität der Zuverlässigkeitstechnik:
 
-Zunächst wird in Abschnitt \ref{sec:abweichungen} die statistische Sensitivität des ungestörten Designs evaluiert, um die Robustheit von Standard-Versuchsplänen gegenüber Praxisrestriktionen zu prüfen.
-Unabhängig von einer Beschleunigung via \ac{ALT} wird quantifiziert, wie das \ac{CCD} auf typische, unbeabsichtigte Restriktionen - wie Anlagenlimits, asymmetrische Ausfälle oder Streuungen der Effekte - reagiert.
-Mittels Monte-Carlo-Simulationen (\ac{MCS}) auf Basis eines fiktiv-physikalischen \textit{Ground-Truth}-Modells wird nachgewiesen, ab welchem Grad solche Orthogonalitätsabweichungen die Schätzpräzision und insbesondere die statistische Trennschärfe (\ac{power}) kompromittieren.
-Das daraus gewonnene Bewusstsein über die erstaunliche Robustheit des \ac{CCD} legitimiert in einem zweiten Schritt (Abschnitt~\ref{sec:adaptive_planung}) den gezielten, asymmetrischen Eingriff in die Planmatrix im Sinne einer adaptiven Versuchsplanung.
-Hierbei wird untersucht, wie durch den Verzicht redundanter Versuche "freigewordene" Prüfkapazitäten als strategische Brückenpunkte genutzt werden können, um die \ac{SPV} bei der Extrapolation in den realen Feldbereich zu minimieren.
-Zur richtungsabhängigen Veranschaulichung dieser Extrapolationsabsicherung wird eine dedizierte visuelle Bewertungsmethodik, der \ac{EVG}, eingeführt.
+Zunächst etabliert \textbf{Abschnitt~\ref{sec:simulationsmethodik}} die ganzheitliche Simulations- und Auswertearchitektur auf Basis eines flexiblen \textit{Ground-Truth}-Modells.
+Darauf aufbauend quantifiziert \textbf{Abschnitt~\ref{sec:abweichungen}} die statistische Sensitivität und Robustheit klassischer Designs gegenüber Praxisrestriktionen: Mittels \ac{MCS} wird nachgewiesen, in welchem Maße Orthogonalitätsabweichungen die Schätzpräzision und die statistische Trennschärfe (\sym{power}) kompromittieren und welches nutzbare geometrische Gestaltungsbudget hieraus resultiert.
+Das gewonnene Bewusstsein über die topologische Resilienz legitimiert in \textbf{Abschnitt~\ref{sec:adaptive_planung}} den Übergang zur adaptiven Versuchsplanung, in welcher freigewordene Stützstellen als strategische Ankerpunkte (\acp{AP}) reinvestiert werden, deren richtungssensitive Wirkung entlang des Extrapolationspfads über den neu entwickelten \ac{EVG} visualisiert wird.
+Den ökonomischen Rahmen spannt in \textbf{Abschnitt~\ref{sec:kostenmodell}} ein Kostenmodell auf, welches die stochastischen Testlaufzeiten in reale Prüfstandsaufwände übersetzt.
+In \textbf{Abschnitt~\ref{sec:weibull_transfer}} erfolgt schließlich der Transfer auf multivariate Lebensdauermodelle: Ausgehend von einer OLS-Baseline unter Normalverteilung wird das \ac{EmALT}-Konzept im Weibull-AFT-Raum mittels iterativer \ac{MLE} validiert und über den \ac{EPI} im Pareto-Optimum aus Testaufwand und Prognosegüte ganzheitlich bilanziert.
 
-Den ökonomischen Rahmen spannt in Abschnitt~\ref{sec:kostenmodell} eine Effizienz- und Kostenmodellierung auf, welche die resultierenden Testlaufzeiten in reale Prüfstandskosten übersetzt.
-Darauf aufbauend werden die bis dato unter Normalverteilungsannahme abgeleiteten Design-Modifikationen in Abschnitt~\ref{sec:weibull_transfer} auf multivariate Lebensdauermodelle übertragen.
-Anhand lebensdauerverteilter Daten $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ und der Parameteridentifikation via \ac{MLE} wird validiert, ob das \ac{CCD} auch mit adaptivem Brückenbau und unter den Bedingungen von Zensierungen seine überlegene Prognosefähigkeit behält.
-Durch die Verknüpfung der statistischen Testgüte (\sym{power}, \ac{SPV}) mit dem monetären Aufwand über den neu entwickelten \ac{EPI} wird abschließend der fundamentale Trade-off beantwortet:
-\textit{Wie viel Trennschärfe ist finanzierbar?}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Effektivität von Versuchsplänen mit Orthogonalitätsabweichungen} \label{sec:abweichungen}
-Generell können sich Orthogonalitätsabweichungen durch physikalische Restriktionen der technischen Versuchsausführung, die spezifische Performance und Funktionalität des Systems oder Produkts oder durch möglicherweise bewusste Manipulation des Versuchsraums im Kontext von \ac{ALT} zur Steigerung der Extrapolationsgüte ergeben.
-Insbesondere bei Lebensdauerprognosen sind solche Eingriffe praxisrelevant und begründet: Die Verschiebung der Versuchspunkte in Richtung höherer Lastniveaus verkürzt die Prüfzeit und senkt die Kosten, während eine Verortung nahe dem Operationsbereich die Modellanpassung verbessert und die Extrapolationsunsicherheit reduziert.
-
-Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
-Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht - vgl. Abschnitt~\ref{subsubsec:rsm}.
-Geometrische Verzerrungen führen zwangsläufig zu einem Verlust dieser Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
-Besonders kritisch ist, dass die Auswirkungen peripherer Parameterstufen (\acp{SP}) im augmentierten Ansatz erst spät im sequenziellen Prozess sichtbar werden - nämlich dann, wenn das initial rein \textit{faktorielle} Design um die \acp{SP} erweitert wird.
-Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design-Abweichungen systematisch zu quantifizieren.
-Entgegen bereits erfolgter Untersuchungen durch \textcite{Box.1963}, \textcite{Ahn.2015}, \textcite{Donev.2004}, \textcite{Zhang.2021} sowie \textcite{Jang.2002} oder vergleichbare Arbeiten liegt der Fokus hierbei allerdings nicht auf der reinen geometrischen Verzerrung und der Analyse sowie Bewertung durch geeignete Optimalitätskriterien (entsprechend Abschnitt~\ref{subsec:optimal}).
-Die hier erwähnten Beiträge konzentrieren sich primär auf die geometrische Charakterisierung der Design-Abweichungen und deren Einfluss auf die Struktur der Design-Matrix bzw. geeigneter Optimalätskriterien.
-Vielmehr soll eine Quantifizierung der Auswirkungen auf die Schätzpräzision und insbesondere die Trennschärfe im Kontext von Lebensdauerprognosen erfolgen.
-Die ausschließliche Bewertung mittels klassischer Optimalitätskriterien greift zu kurz, da sie keine direkte Aussage über die tatsächlichen Auswirkungen auf Schätzvarianz und Trennschärfe unter stochastischem Rauschen erlaubt.
-Dies erfordert den Einsatz numerischer Simulationen, um die Effekte von Design-Abweichungen auf die statistische Güte quantitativ zu bestimmen.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Methodik zur simulativen Ermittlung von Auswirkungen durch Orthogonalitätsabweichungen} \label{subsec:simulationsmethodik}
+\section{Methodik zur simulativen Ermittlung von Auswirkungen durch Orthogonalitätsabweichungen} \label{subsec:simulationsmethodik}
 Um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bedarf es einer kontrollierten Untersuchungsumgebung, in der - im Gegensatz zu physischen Experimenten - die \textbf{wahre} Natur des Systems global bekannt ist.
 Durch den Vergleich von beiderseits Modellierungs- als auch Analyse-Ergebnissen mit einer vorab definierten Wahrheit (engl. \textit{Ground Truth}) lassen sich \acp{KPI} wie die Schätzpräzision und allen voran die \ac{power} bestimmen.
-Zu diesem Zweck wird für die Untersuchungen eine allgemeingültige Simulationsumgebung geschaffen, die auf einem scheinbar-physikalischen Modell basiert \cite{Arndt.2023,Arndt.2022c}.\\
+Zu diesem Zweck wird für die Untersuchungen eine allgemeingültige Simulationsumgebung geschaffen, die auf einem pseudo-physikalischen Modell basiert \cite{Arndt.2023,Arndt.2022c}.\\
 
 \textbf{Pseudo-physikalisches Simulationsmodell} \\
 Das zugrundeliegende Systemverhalten im Sinne einer \textit{Ground Truth} wird durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert.
@@ -89,7 +60,7 @@ So wird gewährleistet, dass später beobachtete Schätzfehler oder $\sym{power}
     \end{tabular}
 \end{table}
 
-\textbf{Simulationsalgorithmus und Monte-Carlo-Ansatz} \\
+\minisec{Simulationsalgorithmus und Monte-Carlo-Ansatz}
 Das Modell der \textit{Ground Truth} wird zunächst mit den zu untersuchenden Versuchsplänen gekoppelt.
 Für jeden Stützpunkt des Versuchsplans (die Versuchspunkte) werden die korrespondierenden Systemantworten simuliert.
 Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels Parameterschätzverfahren (\ac{OLS}, \ac{MLE}), entsprechend der ausgeführten Methodik aus Abschnitt~\ref{subsubsec:mle}.
@@ -99,6 +70,35 @@ Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
     \item \textbf{Präzision der Parameterschätzung:} Durch den (Mittelwert-) Vergleich der geschätzten Parameter $\hat{\sym{Beta}}$ mit den \textit{wahren} Koeffizienten $\sym{Beta}_{\text{true}}$ lassen sich systematischer Schätzfehler (\textbf{Bias}) und Varianz (\textbf{\ac{MSE}}) der Schätzung ermitteln.
     \item \textbf{Bestimmung der Trennschärfe $\sym{power}$:} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis dieser Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:power}).
 \end{enumerate}
+Die systematische Kopplung dieser stochastischen Inferenzschritte mit der versuchsplanerischen Topologie und dem dynamischen Kostenmodell ist in Abbildung~\ref{fig:mcs_framework} als geschlossene Simulationsarchitektur zusammengefasst.
+Der modulare Aufbau verdeutlicht die iterative Kapselung: Ausgehend von einer definierten Ground Truth und der gewählten Design-Matrix $\sym{X}$ werden in $n_{\sym{idx_MC}} = 10^4$ Simulationsdurchläufen Ausfallzeiten generiert, auf deren Basis eine vollwertige \ac{MLE}-Modellschätzung und Signifikanzanalyse erfolgt.
+Am Ausgang der Schleife spaltet sich die Auswertung in die Bestimmung der statistischen Effektivität und die Akkumulation stochastischer Prüfstandskosten auf, welche in Abschnitt~\ref{sec:ldoe} ganzheitlich synthetisiert werden.
+\begin{figure}[htbp]
+    \centering
+    \def\svgwidth{0.88\textwidth}
+    % \input{plots/ma_abb5.0_mcs_flowchart.pdf_tex}
+    \caption{Methodische Architektur der Monte-Carlo-Simulationsumgebung zur ganzheitlichen stochastisch-ökonomischen Bewertung multivariater Lebensdauertests.}
+    \label{fig:mcs_framework}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Effektivität von Versuchsplänen mit Orthogonalitätsabweichungen} \label{sec:abweichungen}
+Generell können sich Orthogonalitätsabweichungen durch physikalische Restriktionen der technischen Versuchsausführung, die spezifische Performance und Funktionalität des Systems oder Produkts oder durch möglicherweise bewusste Manipulation des Versuchsraums im Kontext von \ac{ALT} zur Steigerung der Extrapolationsgüte ergeben.
+Insbesondere bei Lebensdauerprognosen sind solche Eingriffe praxisrelevant und begründet: Die Verschiebung der Versuchspunkte in Richtung höherer Lastniveaus verkürzt die Prüfzeit und senkt die Kosten, während eine Verortung nahe dem Operationsbereich die Modellanpassung verbessert und die Extrapolationsunsicherheit reduziert.
+
+Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
+Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht - vgl. Abschnitt~\ref{subsubsec:rsm}.
+Geometrische Verzerrungen führen zwangsläufig zu einem Verlust dieser Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
+Besonders kritisch ist, dass die Auswirkungen peripherer Parameterstufen (\acp{SP}) im augmentierten Ansatz erst spät im sequenziellen Prozess sichtbar werden - nämlich dann, wenn das initial rein \textit{faktorielle} Design um die \acp{SP} erweitert wird.
+Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design-Abweichungen systematisch zu quantifizieren.
+Entgegen bereits erfolgter Untersuchungen durch \textcite{Box.1963}, \textcite{Ahn.2015}, \textcite{Donev.2004}, \textcite{Zhang.2021} sowie \textcite{Jang.2002} oder vergleichbare Arbeiten liegt der Fokus hierbei allerdings nicht auf der reinen geometrischen Verzerrung und der Analyse sowie Bewertung durch geeignete Optimalitätskriterien (entsprechend Abschnitt~\ref{subsec:optimal}).
+Die hier erwähnten Beiträge konzentrieren sich primär auf die geometrische Charakterisierung der Design-Abweichungen und deren Einfluss auf die Struktur der Design-Matrix bzw. geeigneter Optimalätskriterien.
+Vielmehr soll eine Quantifizierung der Auswirkungen auf die Schätzpräzision und insbesondere die Trennschärfe im Kontext von Lebensdauerprognosen erfolgen.
+Die ausschließliche Bewertung mittels klassischer Optimalitätskriterien greift zu kurz, da sie keine direkte Aussage über die tatsächlichen Auswirkungen auf Schätzvarianz und Trennschärfe unter stochastischem Rauschen erlaubt.
+Dies erfordert den Einsatz numerischer Simulationen, um die Effekte von Design-Abweichungen auf die statistische Güte quantitativ zu bestimmen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -581,7 +581,10 @@ In der äußeren Sphäre ($\sym{r}=\sqrt{2}$) reduziert sich die \ac{SPV} dadurc
 Die Reduktion des Grenznutzens lässt sich anhand des Grenzwerts der \ac{SPV} im Versuchszentrum ($\sym{x}_0 = 0$) formal belegen.
 Unter der Prämisse, dass die Schätzvarianz im Ursprung orthogonaler Versuchspläne primär durch die mittlere Varianz der Zentralpunkte determiniert wird ($\text{Var}(\hat{\sym{y}}) \approx \sym{sigma}^2 / \symsub{n}{idx_C}$), ergibt sich für ein zweidimensionales \ac{CCD} mit einer Struktur aus $\symsub{n}{idx_F} + \symsub{n}{idx_S} = 8$ Randpunkten und einer zunehmenden Anzahl an Zentralpunkten $\symsub{n}{idx_C}$:
 \begin{equation} \label{eq:spv_limit_center}
-    \lim_{\symsub{n}{idx_C} \to \infty} \sym{SPV}(0) = \lim_{\symsub{n}{idx_C} \to \infty} \frac{\sym{N} \cdot \text{Var}(\hat{\sym{y}}(0))}{\sym{sigma}^2} = \lim_{\symsub{n}{idx_C} \to \infty} \frac{(8 + \symsub{n}{idx_C}) \cdot \frac{\sym{sigma}^2}{\symsub{n}{idx_C}}}{\sym{sigma}^2} = \lim_{\symsub{n}{idx_C} \to \infty} \left( \frac{8}{\symsub{n}{idx_C}} + 1 \right) = 1
+    \begin{split}
+        \lim_{\symsub{n}{idx_C} \to \infty} \sym{SPV}(0) & = \lim_{\symsub{n}{idx_C} \to \infty} \frac{\sym{N} \cdot \text{Var}(\hat{\sym{y}}(0))}{\sym{sigma}^2} = \lim_{\symsub{n}{idx_C} \to \infty} \frac{(8 + \symsub{n}{idx_C}) \cdot \frac{\sym{sigma}^2}{\symsub{n}{idx_C}}}{\sym{sigma}^2} \\[1ex]
+                                                         & = \lim_{\symsub{n}{idx_C} \to \infty} \left( \frac{8}{\symsub{n}{idx_C}} + 1 \right) = 1
+    \end{split}
 \end{equation}
 Dieses asymptotische Konvergenzverhalten liefert den Nachweis, dass die \ac{SPV} im Zentrum am absoluten Minimum von $1$ stagniert.
 Eine Erhöhung der Zentralpunktanzahl über $\symsub{n}{idx_C} \approx 3$ hinaus erweist sich als statistisch redundant für die globale Modellanpassung und insbesondere für die ferne Extrapolation.
@@ -808,10 +811,12 @@ Abschnitt~\ref{sec:kostenmodell} versieht diese topologischen Aspekte schließli
 Der vorliegende Abschnitt bildet abschließend die Brücke zu lebensdauerverteilten Daten.
 Für die industrielle \ac{EoL}-Versuchsplanung greift das bisherige, idealisierte Setup aus Sicht der spezifischen Datenlage noch zu kurz, da reale Ausfallzeiten streng positiv, oftmals rechtsschief verteilt und durch Prüfzeitverkürzungen zensiert sind \cite{Meeker.2022}.
 In einem finalen Syntheseschritt erfährt die Methodik der Extrapolationsabsicherung (\textbf{EmALT}) daher den Transfer in die komplexe stochastische Realität der Zuverlässigkeitstechnik.
+In diesem finalen Syntheseschritt erfährt die Methodik der Extrapolationsabsicherung (\textbf{\ac{EmALT}}) den Transfer in die stochastische Realität der Zuverlässigkeitstechnik, indem der in Abbildung~\ref{fig:mcs_framework} etablierte Gesamt-Simulationspfad nun vollumfänglich aktiviert wird.
+Während in den Vorstudien (Abschnitte~\ref{sec:abweichungen} und~\ref{sec:adaptive_planung}) primär die statistische Effektivität unter idealisierter Normalverteilung betrachtet wurde, koppelt die nachfolgende Untersuchung nun die iterative \ac{MLE}  Ausfalldaten mit dem dynamischen Kostenmodell.
 Das gewählte \ac{EmALT} orientiert sich wie gehabt an dem in Abschnitt~\ref{subsec:evg_plot} beispielhaft gewählten Set an \acp{AP} im südwestlichen Quadranten, um die Prädiktionsvarianz entlang des Extrapolationsvektors zum realen Feldbetriebspunkt zu minimieren.
 Dazu transformiert die Methodik das zugrundeliegende Regressionsmodell in ein log-lineares \ac{AFT}-Modell auf Basis einer Weibull-verteilten Lebensdauer $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ und bettet dieses in die etablierte Monte-Carlo-Simulationsumgebung ein.
 
-Um die Effektivität der adaptiven Extrapolationsabsicherung abschließend zu quantifizieren, evaluiert die nachfolgende \ac{MCS} drei spezifische Design-Konfigurationen gegeneinander.
+Um die Effektivität der adaptiven Extrapolationsabsicherung abschließend zu quantifizieren, evaluiert die nachfolgende \ac{MCS} drei spe\-zi\-fi\-sche De\-sign-Kon\-fi\-gu\-ra\-tio\-nen gegeneinander.
 Alle Konfigurationen verfügen über den exakt gleichen Ressourcenaufwand von $\sym{N} = 13$ Versuchspunkten:
 \begin{enumerate}
     \item \textbf{Basis \ac{CCD} (Referenz):} Der klassische rotationssymmetrische Versuchsplan, bestehend aus dem faktoriellen Kern ($\sym{n}_{\sym{idx_F}}=4$), vier axialen \acp{SP} ($\sym{n}_{\sym{idx_S}}=4$, mit $\symsub{alpha}{idx_D}=\sqrt{2}$) sowie fünf redundanten \acp{ZP} ($\sym{n}_{\sym{idx_C}}=5$).
@@ -951,9 +956,9 @@ Alle im nachfolgenden Transfer auf Lebensdauermodelle auftretenden Effekte ordne
 
 \subsection{Effizientes \ac{L-DoE} und der Economic Extrapolation Power Index} \label{sec:ldoe}
 
-Schließlich vollzieht der nun vorliegende Abschnitt den finalen Übertrag in die stochastische und ökonomische Realität der Lebensdaueranalyse.
+Die Synthese aus stochastischer Lebensdauermodellierung und varianzbasierter Versuchsplanung vollzieht den Übergang in die physikalische und ökonomische Realität beschleunigter Zuverlässigkeitstests.
 Auf Basis Weibull-verteilter Ausfallzeiten und einer log-linearen \ac{AFT}-Modellierung findet die Parameteridentifikation hier nun iterativ via \ac{MLE} statt.
-Dieser Wechsel der mathematischen Domäne impliziert jedoch weit mehr als den Austausch des Schätzalgorithmus:
+Dieser Übergang der mathematischen Domäne impliziert jedoch weit mehr als den Austausch des Schätzalgorithmus:
 Er aktiviert zwingend die in Abschnitt~\ref{sec:kostenmodell} eingeführte dynamische Kostenstruktur der Lebensdauererprobung.
 
 In klassischen, landwirtschaftlichen oder chemischen Versuchsplänen entsprechen die experimentellen Kosten zumeist linear der bloßen Anzahl an Versuchen: $\sym{C} \propto \sym{N}$.
@@ -983,27 +988,29 @@ Da die asymptotische Erwartungstreue des \ac{MLE}-Schätzers mathematisch erst f
 
 \input{tables/tab_results_emalt_bias_wbl.tex}
 
-Die detaillierte Analyse des relativen systematischen Schätzfehlers offenbart dabei zwei wesentliche stochastische Effekte:
-Erstens verharren die Regressionskonstanten $\hat{\sym{beta}}_0$ über alle drei Design-Szenarien hinweg auf einem vernachlässigbaren Niveau nahezu perfekter Erwartungstreue (im \ac{EmALT} sogar exakt $-0{,}00\,\%$).
-Die fundamentale Skalierung der charakteristischen Basislebensdauer im Koordinatenursprung bleibt somit durch die geometrische Umstrukturierung vollkommen unberührt.
-Zweitens entlädt sich die in Abschnitt~\ref{subsec:spvbias} identifizierte Multikollinearität des \ac{EmALT}-Designs ($\ac{VIF} = 5{,}91$ für $\hat{\sym{beta}}_{22}$) im Zusammenspiel mit der \ac{MLE} in einer Umverteilung der relativen Schätzfehler.
-Während die voll-orthogonalen Referenzdesigns bei den sensitiven Krümmungstermen moderat überschätzen ($+12{,}79\,\%$ bis $+23{,}17\,\%$), verzeichnen die Terme höherer Ordnung im \ac{EmALT} betragsmäßig höhere relative Abweichungen (beispielsweise $-53{,}26\,\%$ bei $\hat{\sym{beta}}_{22}$).
-In der ingenieurwissenschaftlichen Bewertung ist diese Zahl jedoch zu relativieren:
-Da der wahre Nominellwert des Krümmungseffekts kritisch auf $\sym{beta}_{22} = -0{,}40$ kalibriert ist, entspricht eine relative Abweichung von $-53\,\%$ einer absoluten Verschiebung von lediglich $\Delta \sym{beta}_{22} \approx -0{,}21$.
-Wie die vergleichende Darstellung der absoluten Schätzwerte in Abbildung~\ref{fig:ma_abb5.4.3_betadev_wbl} verdeutlicht, verharrt die rekonstruierte Antwortfläche damit im physikalisch plausiblen Korridor und bildet die progressive Verschleißkinematik ohne Vorzeichenwechsel oder entartete Gradienten ab.
+Die detaillierte Analyse des relativen systematischen Schätzfehlers offenbart zwei fundamentale stochastische Gesetzmäßigkeiten:
+Erstens verharrt die Schätzung der Regressionskonstante $\hat{\symsub{beta}{idx_0}}$ über alle drei Design-Szenarien hinweg auf einem Niveau exzellenter Erwartungstreue (im \ac{EmALT} mit einem relativen Bias von $-0{,}00\,\%$).
+Die Skalierung der charakteristischen Basislebensdauer im Koordinatenursprung bleibt von der asymmetrischen Topologie somit vollkommen unberührt.
+Zweitens entlädt sich die in Abschnitt~\ref{subsec:spvbias} identifizierte Multikollinearität des \ac{EmALT}-Designs (\ac{VIF} $= 5{,}91$ für $\hat{\sym{beta}}_{22}$) im Zusammenspiel mit der iterativen \ac{MLE} in einer term-spezifischen Varianzumverteilung.
+Während die orthogonalen Referenzpläne bei den Krümmungstermen moderat überschätzen ($+12{,}79\,\%$ bis $+23{,}17\,\%$), verzeichnet das \ac{EmALT}-Design bei $\hat{\sym{beta}}_{22}$ eine relative Abweichung von $-53{,}26\,\%$.
+In der ingenieurwissenschaftlichen Bewertung relativiert sich diese Zahl jedoch unmittelbar:
+Da der wahre Nominellwert des Krümmungseffekts bei $\hat{\sym{beta}}_{22} = -0{,}40$ liegt, entspricht dies einer absoluten Verschiebung von lediglich $\Delta \hat{\sym{beta}}_{22} \approx -0{,}21$.
+Entscheidend für die prädiktive Validität ist hierbei die lineare Prädiktorkombination $\symsub{x_loc}{idx_0}' \hat{\sym{Beta}}$: Durch die gezielt induzierten Kovarianzen kompensieren sich die Einzelfehler auf dem Extrapolationspfad, sodass die rekonstruierte Wirkungsfläche (vgl. Abbildung~\ref{fig:ma_abb5.4.3_betadev_wbl}) die monotone Schädigungskinetik ohne Gradientenumkehr mathematisch stabil abbildet.
+
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.8\textwidth}
     \setlength\figureheight{5cm}
     \input{plots/ma_abb5.4.3_betadev_wbl.tex}
-    \caption{Absolute Schätzwerte der \ac{MLE}-Koeffizienten im Weibull-Modell ($\sym{snr}=1{,}20$). Der Schätzwert der Basislebensdauer $\hat{\sym{beta}}_0$ bleibt exakt; die Terme höherer Ordnung spiegeln die durch die Multikollinearität induzierte Varianzumverteilung wider.}
+    \caption{Absolute Schätzwerte der \ac{MLE}-Koeffizienten im Weibull-Modell ($\sym{snr}=1{,}20$). Der Schätzwert der Basislebensdauer $\hat{\symsub{beta}{idx_0}}$ bleibt exakt; die Terme höherer Ordnung spiegeln die durch die Multikollinearität induzierte Varianzumverteilung wider.}
     \label{fig:ma_abb5.4.3_betadev_wbl}
 \end{figure}
-Ein herausragender methodischer Vorteil des \ac{EmALT}-Designs offenbart sich schließlich bei der Identifikation des intrinsischen Weibull-Formparameters $\hat{\sym{b}}$ (wahrer Wert $\sym{b} = 3{,}03$).
-Klassische, eng konzentrierte Versuchspläne überschätzen diesen Parameter bei kleinen Stichproben massiv: $\hat{\sym{b}} = 4{,}97$ im Basis-\ac{CCD} bzw. $\hat{\sym{b}} = 5{,}91$ im $\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$.
-Das \ac{EmALT}-Design hingegen stützt durch die weit in den Niedrigstressraum ausgreifenden Ankerpunkte den stochastischen Hebelarm der Likelihood-Funktion.
-Mit $\hat{\sym{b}} = 3{,}37$ schätzt es den wahren Formparameter mit Abstand am präzisesten.
-Das asymmetrische \ac{EmALT}-Design erkauft sich die Absicherung der Prädiktionsvarianz folglich nicht durch eine Entartung der Modellparameter, sondern liefert im Gegenteil die physikalisch konsistenteste Beschreibung der zugrundeliegenden Ausfalldynamik.
+
+Ein herausragender methodischer Vorteil des \ac{EmALT}-Designs offenbart sich bei der Identifikation des intrinsischen Weibull-Formparameters $\hat{\sym{b}}$ (wahrer Wert $\sym{b} = 3{,}00$).
+Klassische, eng konzentrierte Hochlast-Versuchspläne überschätzen diesen Parameter bei kleinen Stichproben massiv ($\hat{\sym{b}} = 4{,}97$ im Basis-\ac{CCD} bzw. $\hat{\sym{b}} = 5{,}91$ im $\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$), was in der industriellen Praxis zu einer fatalen Unterschätzung der realen Bauteilstreuung führen würde.
+Das \ac{EmALT}-Design hingegen stützt durch die weit in den Niedrigstressbereich ausgreifenden Ankerpunkte den stochastischen Hebelarm der Likelihood-Funktion.
+Mit $\hat{\sym{b}} = 3{,}37$ rekonstruiert es die werkstoffphysikalische Ausfallstreuung mit überlegener Präzision.
+Flankierend belegen die aggregierten Wahrscheinlichkeitsdichten der Signifikanztests in Abbildung~\ref{fig:ma_abb5.4.3_phisto_all_wbl} eine artefaktfreie, theoriekonforme Verteilung der $p$-Werte, womit die statistische Validität der Likelihood-Ratio-Inferenz auch unter asymmetrischer Stützstellenallokation zweifelsfrei nachgewiesen ist.
 
 \begin{figure}[htbp]
     \centering
@@ -1014,16 +1021,11 @@ Das asymmetrische \ac{EmALT}-Design erkauft sich die Absicherung der Prädiktion
     \label{fig:ma_abb5.4.3_phisto_all_wbl}
 \end{figure}
 
-Auf eine isolierte, parameterweise Auswertung der Schätzvarianz (\ac{MSE}) wird an dieser Stelle verzichtet, da sich die stochastische Unsicherheit des Modells durch die asymmetrische Stützstellenallokation direkt in der lokalen \ac{SPV} am fernen Prognosepunkt aggregiert und dort im Rahmen der ökonomischen Synthese über den \ac{EPI} ($\sym{eta}_{\textnormal{eco}}$) holistisch bewertet wird.
+Auf eine isolierte, parameterweise Ausweisung der Schätzvarianz (\ac{MSE}) wird an dieser Stelle verzichtet, da sich die stochastische Unsicherheit des Modells infolge der Asymmetrie primär in der lokalen \ac{SPV} am fernen Prognosepunkt bündelt und dort im Rahmen der ökonomischen Synthese über den \ac{EPI} ($\sym{epi}$) holistisch bewertet wird.
 
-Hinsichtlich der $\sym{power}$ manifestiert sich die Asymmetrie des Designs unmittelbar in der \ac{MLE}-Gütefunktion, vgl. Abbildung~\ref{fig:ma_abb5.4.3_powerdev_wbl}.
-Während das rein passiv ausgedünnte $\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$ einen verhältnismäßig symmetrischen Detektionsverlust der Krümmungsterme auf ca. $93{,}9\,\%$ verzeichnet, forciert die Translation der \acp{AP} im \ac{EmALT}-Design ein stark polarisiertes Verhalten.
-Die Detektionsgarantie des ungestörten quadratischen Effektes $\hat{\sym{beta}}_{11}$ erfährt eine signifikante Stabilisierung und übertrifft mit $99{,}01\,\%$ gar das makellose Niveau des Basis-\ac{CCD} ($98{,}33\,\%$).
-Im Gegenzug verzeichnet der korrespondierende Krümmungseffekt der modifizierten Stressachse ($\hat{\sym{beta}}_{22}$) einen methodisch unvermeidbaren Trennschärfe-Rückgang auf $75{,}04\,\%$.
-Auch $\hat{\sym{beta}}_{12}$ reagiert auf die topologische Verzerrung mit einem reduzierten Detektionsniveau von $64{,}53\,\%$.
-In der Gesamtbewertung der Zuverlässigkeitstechnik ist dieses stochastische Opfer jedoch relativierend einzuordnen:
-Eine \textit{a posteriori} $\sym{power}$ von rund $75\,\%$ stellt für Terme zweiter Ordnung in experimentellen Lebensdaueranalysen gemeinhin eine statistisch völlig hinreichende Nachweiswahrscheinlichkeit dar \cite{Cohen.1988}.
-Das \ac{EmALT}-Design opfert folglich bewusst einen Teil der extremen, oftmals überdimensionierten statistischen Konfidenz lokaler Modellparameter, um im Gegenzug die entscheidende Informationsstruktur am fernen Prognosepunkt abzusichern, ohne am Prüfstand vollständig zu kollabieren.
+Hinsichtlich der statistischen Trennschärfe stabilisiert die Reallokation der Stützstellen den ungestörten quadratischen Haupteffekt $\hat{\sym{beta}}_{11}$ mit $\sym{power} = 99{,}01\,\%$ auf einem Niveau, welches das Basis-\ac{CCD} ($98{,}33\,\%$) sogar leicht übertrifft (vgl. Abbildung~\ref{fig:ma_abb5.4.3_powerdev_wbl}).
+Zwar erfährt der Krümmungsterm der modifizierten Achse ($\hat{\sym{beta}}_{22}$) infolge der geometrischen Asymmetrie einen Rückgang der Detektionswahrscheinlichkeit auf $75{,}04\,\%$ (bei $\hat{\sym{beta}}_{12}$ auf $64{,}53\,\%$), doch verbleibt dieser Wert vollumfänglich im Bereich statistisch hinreichender Test-Power ($\ge 75\,\%$) für Terme höherer Ordnung \cite{Cohen.1988}.
+Das \ac{EmALT}-Design opfert somit kontrolliert redundante Überkapazitäten lokaler Parameterkonfidenzen, um die primäre Zielgröße - die Minimierung der Extrapolationsvarianz am fernen Einsatzpunkt - ohne budgetäre Mehrbelastung zu garantieren.
 
 \begin{figure}[htbp]
     \centering
@@ -1051,7 +1053,7 @@ Demgegenüber dominiert das \ac{EmALT}-Design - ungeachtet seiner durch die geom
 Wenngleich die quantitative Ausprägung des \ac{EPI} durch die spezifische Parametrisierung des Kostenmodells und die Kalibrierung des Arbeitsbereiches mit $\sym{snr} = 1{,}20$ determiniert wird, besitzt die identifizierte Pareto-Topologie universelle Gültigkeit für beschleunigte Lebensdauerprüfungen.
 Das theoretische Feld-\ac{CCD} erzielt zwar durch \ac{SPV}$ = 2{,}60$ eine hohe Prognosegüte, verursacht jedoch durch unbeschleunigte Prüfzeiten prohibitive Erwartungskosten von $\sym{Er}(\sym{C}_{\sym{idx_cost_total}}) = 128{,}7\text{ kCU}$.
 Die unbeschleunigte Erprobung unter Feldbedingungen erweist sich gegenüber der für das \ac{EmALT}-Design geschätzten Kostenumfänge demnach als um den Faktor $1{,}59$ kostenintensiver, vergleiche Tabelle~\ref{tab:results_emalt_kpi_eco}.
-Das im \ac{ALT}-Bereich verortete Design unterbieten diesen Ressourcenaufwand drastisch, wobei das \ac{EmALT}-Design diese deutliche Ersparnis bei nahezu identischer Prädiktionsschärfe (\ac{SPV}$ = 2{,}39$) realisiert.
+Das im \ac{ALT}-Bereich verortete Design unterbietet diesen Ressourcenaufwand drastisch, wobei das \ac{EmALT}-Design diese deutliche Ersparnis bei nahezu identischer Prädiktionsschärfe (\ac{SPV}$ = 2{,}39$) realisiert.
 Obgleich das Basis-\ac{CCD} mit $74{,}4\text{ kCU}$ den absolut geringsten monetären Aufwand erfordert, kollabieren seine $\sym{epi}$-Werte aufgrund der massiven Extrapolationsvarianz ($\sym{pred_var} = 20{,}5$) nahezu vollständig.
 Im Gegensatz dazu dominiert das \ac{EmALT}-Design die Metrik mit weitem Abstand -- und zeigt insbesondere bei den für die Krümmung essenziellen quadratischen Termen (wie $\hat{\sym{beta}}_{22}$) signifikant überlegene $\sym{epi}$-Werte.
 Die numerische Bilanz belegt damit unmissverständlich, dass das \ac{EmALT}-Konzept das globale Optimum aus Kostendämpfung durch Beschleunigung und zwingend erforderlicher Prognosesicherheit im fernen Feldbereich darstellt.

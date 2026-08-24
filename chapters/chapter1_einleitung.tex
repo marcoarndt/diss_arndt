@@ -4,7 +4,7 @@
 
 \chapter{Einleitung} \label{chap:einleitung}
 
-Die funktionale Absicherung technischer Produkte und Systeme über ihren gesamten Lebenszyklus bildet das fundamentale Fundament der industriellen Produktentwicklung.
+Die funktionale Absicherung technischer Produkte und Systeme über ihren gesamten Lebenszyklus bildet das Fundament einer beherrschten industriellen Produktentwicklung.
 Motiviert durch zugesicherte Systemeigenschaften, die Wahrung der Markenintegrität sowie zunehmend restriktive normative und regulatorische Rahmenbedingungen ist ein proaktives Zuverlässigkeitsmanagement unerlässlich.
 Aus der Marktperspektive manifestiert sich dies in der Anforderung, dass komplexe technische Systeme - von automatisierten Fahrzeugarchitekturen über vernetzte mechatronische Subsysteme bis hin zu energie- und antriebstechnischen Anlagen - ihre spezifizierte Funktionalität über den definierten Einsatz- und Gewährleistungszeitraum ausfallfrei erfüllen.
 
@@ -26,7 +26,7 @@ Führen derartige Unschärfen dennoch zu unerwarteten Feldausfällen, resultiere
 
 Um diesen Risiken bereits in frühen Entwicklungsphasen präventiv zu begegnen, muss die Zuverlässigkeitstechnik zunehmend komplexeren Randbedingungen genügen.
 Die Transformation hin zur Elektromobilität, der Trend zum extremen Leichtbau sowie verkürzte Entwicklungszyklen verschieben die operativen Belastungsgrenzen kontinuierlich.
-In modernen Fahrzeugarchitekturen hängt die Gesamtzuverlässigkeit beispielsweise von der Interaktion einer dreistelligen Anzahl vernetzter elektronischer Steuergeräte (\acp{ECU}) \cite{dat.2025} sowie der Dauerhaltbarkeit mechatronischer Komponenten unter kombinierten Vibrations-, Temperatur- und Feuchtelastkollektiven ab.
+In modernen Fahrzeugarchitekturen hängt die Gesamtzuverlässigkeit beispielsweise von der Interaktion einer dreistelligen Anzahl vernetzter elektronischer Steuergeräte (\acp{ECU}) \cite{dat.2025} sowie der Dauerhaltbarkeit mechatronischer Komponenten unter kombinierten Vi\-bra\-tions-, Tem\-pe\-ra\-tur- und Feuchte-Lastkollektiven ab.
 Gleichzeitig erfordert die Dimensionierung von Traktionsbatterien in \acp{BEV} ein präzises Verständnis der elektrochemischen Alterungskinetik unter simultan wirkenden thermischen, mechanischen und zyklischen elektrischen Stressoren.
 
 Während Produktdesigns im Zuge fortlaufender Effizienzsteigerungen bis an ihre physikalischen Belastungsgrenzen ausgereizt werden, verliert die Kausalitätskette zwischen Einzelbelastung und Systemversagen an analytischer Eindeutigkeit.
@@ -48,13 +48,13 @@ Der wissenschaftliche Beitrag gliedert sich in vier zentrale methodische Kernele
 \begin{itemize}
       \item \textbf{Deterministische Parameterselektion (Heuristisches Screening):}
             Etablierung eines formalisierten Screening-Verfahrens, welches qualitative Ingenieurmethoden in matrixbasierte Bewertungsalgorithmen überführt.
-            Der Ansatz isoliert lebensdauerkritische Stressoren und deren latente Wechselwirkungen deterministisch, wodurch der Versuchsraum vor einer kombinatorischen Explosion geschützt wird, ohne aufwendige experimentelle Vorversuche zu erfordern.
+            Der Ansatz isoliert lebensdauer-kritische Stressoren und deren latente Wechselwirkungen deterministisch, wodurch der Versuchsraum vor einer kombinatorischen Explosion geschützt wird, ohne aufwendige experimentelle Vorversuche zu erfordern.
       \item \textbf{Quantifizierung topologischer Resilienz:}
             Systematischer simulativer Nachweis mittels Monte-Carlo-Methoden, dass klassische Response Surface Designs eine signifikante Robustheit der Schätzpräzision und Test-Power gegenüber praxis\-in\-duzierten Orthogonalitätsabweichungen aufweisen.
             Hier\-aus wird die methodische Existenz eines nutzbaren geometrischen \textit{Gestaltungsbudgets} abgeleitet.
-      \item \textbf{Adaptive Versuchsplanung und richtungssensitive Varianzbewertung:}
+      \item \textbf{Adaptive Versuchsplanung und richtungs-sensitive Varianzbewertung:}
             Pro\-ak\-tive Umwidmung des identifizierten Gestaltungsbudgets in strategisch allokierte Extrapolations-Ankerpunkte zur empirischen Absicherung des Prognosepfads.
-            Flankierend wird eine richtungssensitive Bewertungsmethodik eingeführt, welche die Entwicklung der Prädiktionsvarianz gezielt entlang des physikalischen Extrapolationsvektors quantifiziert und optimiert.
+            Flankierend wird eine richtungs-sensitive Bewertungsmethodik eingeführt, welche die Entwicklung der Prädiktionsvarianz gezielt entlang des physikalischen Extrapolationsvektors quantifiziert und optimiert.
       \item \textbf{Ökonomische Synthese und empirische Falsifikation:}
             Etablierung einer ganzheitlichen Bewertungsmetrik zur simultanen Bilanzierung von statistischer Test-Power, Extrapolationsunsicherheit und realen Prüfstandskosten.
             Anhand einer industriellen Fallstudie und prädiktionsintervall-basierter \textit{Confirmation Experiments} wird empirisch nachgewiesen, dass die entwickelte Methodik Zuverlässigkeitsmodelle im Feldbetrieb nachweislich vor sicherheitskritischen Überschätzungen bewahrt.
@@ -62,23 +62,23 @@ Der wissenschaftliche Beitrag gliedert sich in vier zentrale methodische Kernele
 
 \section{Aufbau der Arbeit} \label{sec:aufbau}
 
-Der strukturelle Aufbau der vorliegenden Arbeit orientiert sich an der methodischen Sequenz einer effizienten multivariaten Versuchskampagne (vgl. Abbildung~\ref{fig:uebersicht_aufbau}).
+Der strukturelle Aufbau der vorliegenden Arbeit orientiert sich an der methodischen Sequenz einer effizienten multivariaten Versuchskampagne (vgl. Abbildung~\ref{fig:aufbau}).
 
 Nach der in diesem Kapitel dargelegten Problemstellung widmet sich \textbf{Kapitel~\ref{chap:stand}} dem aktuellen Stand der Forschung und Technik.
 Dort werden die mathematisch-statistischen Grundlagen der Zuverlässigkeitsdatenanalyse, der Maxi\-mum-Like\-li\-hood-Schätz\-ung, der statistischen Versuchsplanung (\ac{DoE}) sowie der multivariaten Modellbildung im Rahmen von \acp{GLM} systematisch aufbereitet.
 \textbf{Kapitel~\ref{chap:ansatz}} synthetisiert diese Grundlagen, identifiziert die inhärenten Schwachstellen klassischer Optimalitätskriterien bei Lebensdauerprüfungen und leitet hieraus die zentralen Forschungsfragen der Dissertation ab.
 
 \textbf{Kapitel~\ref{chap:screening}} behandelt die Dimensionierung des Versuchsraums und stellt das entwickelte heuristische Screening-Framework zur Isolierung relevanter Einflussgrößen und Interaktionspfade vor.
-Darauf aufbauend vollzieht \textbf{Kapitel~\ref{chap:entwurf}} den methodischen Schritt zur quantitativen Versuchsplanung: Ausgehend von der quantifizierten topologischen Resilienz klassischer Designs werden die Methodik der richtungssensitiven Varianzanalyse, das Konzept der asymmetrischen Extrapolationsabsicherung sowie die ökonomisch-statistische Effizienzbilanzierung hergeleitet und im Weibull-Kontext simulativ validiert.
+Darauf aufbauend vollzieht \textbf{Kapitel~\ref{chap:entwurf}} den methodischen Schritt zur quantitativen Versuchsplanung: Ausgehend von der quantifizierten topologischen Resilienz klassischer Designs werden die Methodik der richtungs-sensitive Varianzanalyse, das Konzept der asymmetrischen Extrapolationsabsicherung sowie die ökonomisch-statistische Effizienzbilanzierung hergeleitet und im Weibull-Kontext simulativ validiert.
 
 In \textbf{Kapitel~\ref{chap:casestudy}} erfolgt der Transfer in die industrielle Praxis.
 Anhand eines realen Datensatzes zur Lebensdauerprüfung von Lenksystem-Zahnriemen wird die Leistungsfähigkeit der entwickelten Methodik durch statistische Bestätigungsversuche empirisch verifiziert und der resultierende ökonomische Business Case dargelegt.
 Die Arbeit schließt in \textbf{Kapitel~\ref{chap:fazit}} mit einer Zusammenfassung der Kernergebnisse, einer kritischen Diskussion methodischer Anwendungsgrenzen sowie einem Ausblick auf weiterführende Forschungsfelder ab.
 
-% Platzhalter für die im Aufbau befindliche Übersichtsgrafik:
-% \begin{figure}[htbp]
-%     \centering
-%     \includegraphics[width=\textwidth]{figures/kapitel1_aufbau.pdf}
-%     \caption{Methodischer Ablauf und Kapitelstruktur der Dissertation.}
-%     \label{fig:uebersicht_aufbau}
-% \end{figure}
+\begin{figure}[htbp]
+      \centering
+      \def\svgwidth{0.9\textwidth}
+      \input{plots/ma_abb1_aufbau.pdf_tex}
+      \caption{Aufbau der Arbeit.}
+      \label{fig:aufbau}
+\end{figure}
