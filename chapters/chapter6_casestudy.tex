@@ -24,13 +24,11 @@ Da der originäre Basis-Datensatz nach \textcite{Arndt.2026} diese massiv entsch
 Dieser subtile methodische Transfer dient primär dem Zweck, das Wirkprinzip der \ac{EmALT}-Topologie an einem kohärenten Realdatensatz methodisch geschlossen zu exemplifizieren und greifbar zu visualisieren.
 Entscheidend ist hierbei, dass die Reallokation algorithmisch optimiert in Relation zum Prognosepunkt und nach den in Kapitel~\ref{chap:entwurf} entwickelten \ac{EmALT}-Kriterien in Kombination mit realen Prüfstandsbeschränkungen erfolgen kann.
 Tabelle~\ref{tab:ieee_experimental_data} fasst alle experimentell ermittelten Ausfallzeiten des untersuchten Lenksystem-Zahnriemens für die jeweiligen Faktorkombinationen übersichtlich zusammen.
-
 \input{tables/tab_ieee_experimental_data.tex}
-
-Da die \acp{AP} im Gegensatz zur theoretischen Simulation nun mit realen Ausfallzeiten vorliegen, ermöglicht dieser Datensatz einen einzigartigen, zweiseitigen Modellvergleich:
-Die Parameterschätzung und Lebensdauerprognose erfolgen separat für das klassische Basis-\ac{CCD} (ohne \acp{AP}, isoliert aus den Untersuchungen von \textcite{Arndt.2026}) sowie für das reallokierte \ac{EmALT}-Design inklusive der Ankerpunkte mit vorliegenden \ac{EoL}-Zeiten -- analog zu dem bekannten Vorgehen aus beispielsweise Abschnitt~\ref{subsec:ergebnisse_generic}.
-Dies erlaubt nicht nur die finale Evaluation der realen Modellanpassung, der \ac{SPV} sowie der verursachten Versuchskosten, sondern rückt vor allem einen fundamentalen Validierungs-Aspekt in den Fokus.
-Die nachfolgende Analyse dient dem gezielten Nachweis, inwiefern die Realdaten auf dem Extrapolationspfad nicht nur eine graduelle Veränderung der Prognosevarianz -- also der \ac{SPV} und deren Auswirkungen -- bewirken, sondern liefert Aufschluss darüber, in welchem Maße das Basis-Modell durch das \ac{EmALT}-Design signifikant geschärft und empirisch bereichert wird.
+Da die \acp{AP} im Gegensatz zur theoretischen Simulation nun mit realen Ausfallzeiten unterlegt sind, ermöglicht dieser Datensatz einen einzigartigen, zweiseitigen Modellvergleich:
+Die Parameterschätzung und Lebensdauerprognose erfolgen separat für das klassische Basis-\ac{CCD} (ohne \acp{AP}, isoliert aus den Untersuchungen von \textcite{Arndt.2026}) sowie für das reallokierte \ac{EmALT}-Design inklusive der Ankerpunkte.
+Dies erlaubt nicht nur die finale Evaluation der realen Modellanpassung, der \ac{SPV} sowie der verursachten Versuchskosten, sondern rückt vor allem einen fundamentalen Validierungs-Aspekt in den Fokus:
+Die nachfolgende Analyse liefert den empirischen Nachweis, in welchem Maße reale Degradationsdaten auf dem Extrapolationspfad das ungestützte Basis-Modell vor fatalen Fehlprädiktionen schützen und zu einer signifikant geschärften Lebensdauerprognose führen.
 
 \section{Modellschätzung und Anpassungsgüte} \label{sec:case_evaluation}
 
@@ -130,7 +128,7 @@ Es gilt zu überprüfen, ob sich dieser Einsatz bei einem statistischen Härtete
 
 Um das Basis-\ac{CCD} einem belastbaren Härtetest zu unterziehen, wird dieses anhand der real getesteten Ankerpunkte mittels \textit{prädiktionsintervall-basierter} Analysemethoden herausgefordert.
 Hierfür fungieren die \acp{AP} als formale \textit{Confirmation Runs} nach \textcite{Stevens.2019}.
-Die zugrundeliegende Prüflogik besagt: Wenn das durch das Basis-\ac{CCD} im Hochlastbereich extrahierte Modell die physikalische Realität auch an den Rändern des Versuchsraums noch abdeckt, müssen die realen Ausfallzeiten der fernen Ankerpunkte zwingend innerhalb des vom \ac{CCD} tolerierten Streubandes liegen.
+Die zugrundeliegende Prüflogik besagt: Wenn das durch das Basis-\ac{CCD} im Hochlastbereich extrahierte Modell die physikalische Realität auch an den Rändern des Versuchsraums noch valide abbildet, müssen die realen Ausfallzeiten der fernen Ankerpunkte zwingend innerhalb des vom \ac{CCD} prädizierten Streubandes liegen.
 Sollten die empirischen Ausfallzeiten dieses Intervall wider Erwarten verfehlen, wäre das Basis-Modell stochastisch falsifiziert und müsste zwingend um zusätzliche Stützstellen korrigiert werden, um fatale Fehlauslegungen im Feldbereich zu verhindern.
 Dazu wird für die \ac{AP}-Koordinaten das \ac{PI} des Basis-\ac{CCD} berechnet.
 Da die Ausfallzeiten Weibull-verteilt sind, definiert sich das \ac{PI} über das $5\,\%$- und $95\,\%$-Quantil der geschätzten Verteilung, auf welches additiv die epistemische Parameterunsicherheit über die $\Delta$-Methode der \ac{FIM} angewandt wird.
@@ -139,16 +137,17 @@ Die quantitative Auswertung dieser Konfirmationsläufe liefert ein hochgradig au
 Die empirisch realisierten Ausfallzeiten an beiden peripheren Ankerpunkten (welche sich im Bereich von rund $3{,}95$ bis $4{,}30\times 10^6\text{ h}$ für die erste und $1{,}85$ bis $1{,}91\times 10^6\text{ h}$ für die zweite Stützstelle bewegen) liegen \textbf{vollständig innerhalb} der durch das Basis-\ac{CCD} berechneten $90\,\%$-\acp{PI}.
 Das ungestützte Basis-Modell wird durch die realen Testläufe somit formell statistisch bestätigt und keineswegs falsifiziert.
 
-Eine ingenieurswissenschaftliche Betrachtung der berechneten Intervallgrenzen offenbart jedoch die fundamentale Schwäche der reinen Hochlast-Extrapolation: Bedingt durch die extreme Prädiktionsvarianz spannen die Vertrauensbereiche des Basis-\ac{CCD} an diesen Koordinaten unbrauchbare Größenordnungen auf -- von minimal $3{,}63\times 10^5\text{ h}$ bis hin zu $8{,}23\times 10^{12}\text{ h}$ am ersten Ankerpunkt sowie von $7{,}11\times 10^4\text{ h}$ bis $1{,}51\times 10^{10}\text{ h}$ am zweiten.
-Dieser Härtetest verdeutlicht empirisch die Konsequenz des Zielkonflikts:
-Das orthogonale Basis-\ac{CCD} liefert zwar eine mathematisch konsistente Schätzung, büßt jedoch infolge der ungebremsten Varianzinflation im Extrapolationsraum jegliche praktische Trennschärfe ein und verliert seine Eignung für normative Zuverlässigkeitsnachweise.
-Die methodische Allokation der \acp{AP} stellt somit keine rein akademische Optimierung dar, sondern eine zwingende methodische Notwendigkeit:
-Sie überführt die prinzipiell valide, jedoch hochgradig unscharfe Hochlast-Extrapolation in ein belastbares, praxistaugliches Prognosemodell mit eng geführten Vertrauensgrenzen.
+Eine ingenieurswissenschaftliche Betrachtung der berechneten Intervallgrenzen entlarvt jedoch die fundamentale Schwäche der reinen Hochlast-Extrapolation: Bedingt durch die extreme Prädiktionsvarianz spannen die Vertrauensbereiche des Basis-\ac{CCD} an diesen Koordinaten unbrauchbare Größenordnungen auf -- von minimal $3{,}63\times 10^5\text{ h}$ bis hin zu exorbitanten $8{,}23\times 10^{12}\text{ h}$ am ersten Ankerpunkt sowie von $7{,}11\times 10^4\text{ h}$ bis $1{,}51\times 10^{10}\text{ h}$ am zweiten.
+Dieser Härtetest verdeutlicht empirisch den Kern des Problems:
+Das orthogonale Basis-\ac{CCD} besteht den formalen statistischen Test ($90\,\%$ Coverage) paradoxerweise nur deshalb, weil seine ungebremste Varianzinflation im Extrapolationsraum ein Streuband erzeugt, das mehrere Zehnerpotenzen umfasst.
+Für normative Zuverlässigkeitsnachweise und Garantieentscheidungen verliert es dadurch jegliche praktische Trennschärfe.
+Die methodische Allokation der \acp{AP} stellt somit keine rein akademische Optimierung dar, sondern eine zwingende ingenieurswissenschaftliche Notwendigkeit:
+Sie zwingt das ausufernde Konfidenzband der Hochlast-Extrapolation in ein belastbares, praxistaugliches Prognosemodell mit eng geführten und empirisch fundierten Vertrauensgrenzen.
 
 \subsection{Ökonomische Schlussfolgerung und industrieller Business Case} \label{subsec:oekonomische_schlussfolgerung}
 
 Die Validierung am extremen Randbereich durch die \textit{Confirmation Runs} liefert den abschließenden, formellen Beleg für die Natur der \ac{EoL}-Kostengleichung.
-Vordergründig suggeriert der rein monetäre Vergleich eine Ineffizienz des \ac{EmALT}-Designs: Einem ressourcenschonenden Basis-\ac{CCD} mit Gesamtkosten von lediglich $68{,}3\text{ kCU}$ steht ein Prüfstandsaufwand von $371{,}2\text{ kCU}$ gegenüber.
+Vordergründig suggeriert der rein monetäre Vergleich eine Ineffizienz des \ac{EmALT}-Designs: Einem ressourcenschonenden Basis-\ac{CCD} mit Gesamtkosten von lediglich $68{,}3\text{ kCU}$ steht im \ac{EmALT}-Design ein geforderter Prüfstandsaufwand von $371{,}2\text{ kCU}$ gegenüber.
 Werden diese Versuchspläne jedoch der industriellen Realität der Zuverlässigkeitsfreigabe unterzogen, entlarvt sich die reine \ac{ALT}-Kostenreduktion des Basis-Designs als irreführende Investition.
 
 Der entscheidende ingenieurswissenschaftliche Maßstab für die Testeffizienz ist nicht die alleinige Minimierung der nominalen Prüfkosten, sondern die Minimierung von Garantierisiken bei gleichzeitiger Sicherstellung der \textit{Time-to-Market}.

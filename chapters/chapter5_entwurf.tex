@@ -10,74 +10,48 @@ Das \ac{CCD} bildet hierbei das methodische Fundament, da es durch seine sequenz
 
 Um den Paradigmenwechsel von klassischen, starren \ac{DoE}-Ansätzen hin zu hochgradig effizienten Lebensdauertests methodisch abzusichern, gliedert sich dieses Kapitel in eine geschlossene fünfstufige Sequenz - ausgehend von einer kontrollierten simulationsbasierten Modellumgebung hin zur gekoppelten stochastisch-ökonomischen Realität der Zuverlässigkeitstechnik:
 
-Zunächst etabliert \textbf{Abschnitt~\ref{sec:simulationsmethodik}} die ganzheitliche Simulations- und Auswertearchitektur auf Basis eines flexiblen \textit{Ground-Truth}-Modells.
+Zunächst etabliert \textbf{Abschnitt~\ref{subsec:simulationsmethodik}} die ganzheitliche Simulations- und Auswertearchitektur auf Basis eines flexiblen \textit{Ground-Truth}-Modells als methodisches Fundament des Kapitels.
 Darauf aufbauend quantifiziert \textbf{Abschnitt~\ref{sec:abweichungen}} die statistische Sensitivität und Robustheit klassischer Designs gegenüber Praxisrestriktionen: Mittels \ac{MCS} wird nachgewiesen, in welchem Maße Orthogonalitätsabweichungen die Schätzpräzision und die statistische Trennschärfe (\sym{power}) kompromittieren und welches nutzbare geometrische Gestaltungsbudget hieraus resultiert.
 Das gewonnene Bewusstsein über die topologische Resilienz legitimiert in \textbf{Abschnitt~\ref{sec:adaptive_planung}} den Übergang zur adaptiven Versuchsplanung, in welcher freigewordene Stützstellen als strategische Ankerpunkte (\acp{AP}) reinvestiert werden, deren richtungssensitive Wirkung entlang des Extrapolationspfads über den neu entwickelten \ac{EVG} visualisiert wird.
 Den ökonomischen Rahmen spannt in \textbf{Abschnitt~\ref{sec:kostenmodell}} ein Kostenmodell auf, welches die stochastischen Testlaufzeiten in reale Prüfstandsaufwände übersetzt.
 In \textbf{Abschnitt~\ref{sec:weibull_transfer}} erfolgt schließlich der Transfer auf multivariate Lebensdauermodelle: Ausgehend von einer OLS-Baseline unter Normalverteilung wird das \ac{EmALT}-Konzept im Weibull-AFT-Raum mittels iterativer \ac{MLE} validiert und über den \ac{EPI} im Pareto-Optimum aus Testaufwand und Prognosegüte ganzheitlich bilanziert.
 
-\section{Methodik zur simulativen Ermittlung von Auswirkungen durch Orthogonalitätsabweichungen} \label{subsec:simulationsmethodik}
-Um die Auswirkungen von Design-Abweichungen auf die statistische Güte quantifizieren zu können, bedarf es einer kontrollierten Untersuchungsumgebung, in der - im Gegensatz zu physischen Experimenten - die \textbf{wahre} Natur des Systems global bekannt ist.
-Durch den Vergleich von beiderseits Modellierungs- als auch Analyse-Ergebnissen mit einer vorab definierten Wahrheit (engl. \textit{Ground Truth}) lassen sich \acp{KPI} wie die Schätzpräzision und allen voran die \ac{power} bestimmen.
-Zu diesem Zweck wird für die Untersuchungen eine allgemeingültige Simulationsumgebung geschaffen, die auf einem pseudo-physikalischen Modell basiert \cite{Arndt.2023,Arndt.2022c}.\\
+\section{Methodische Simulationsarchitektur und pseudo-physikalisches Modell} \label{subsec:simulationsmethodik}
 
-\textbf{Pseudo-physikalisches Simulationsmodell} \\
-Das zugrundeliegende Systemverhalten im Sinne einer \textit{Ground Truth} wird durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert.
-Dies entspricht exakt der Struktur, die als Ergebnis einer \ac{RSM}-Auswertung (vgl. Gleichung~\ref{eq:quadric_std_model}) erwartet wird und welche die Basis für die Lebensdauer- bzw. Zuverlässigkeitsmodellierung eines technischen Produktes bildet.
-Um die Anforderungen an eine multivariate Untersuchung ($\sym{k} \ge 2$) zu erfüllen und die Komplexität handhabbar zu halten, wird im Basisszenario von zwei Faktoren ($\sym{x}_1, \sym{x}_2$) ausgegangen.
-Die Begrenzung auf $\sym{k}=2$ Faktoren stellt zugleich eine bewusste, konservative \textit{Worst-Case}-Betrachtung dar, da sich die negativen Auswirkungen einzelner geometrischer Störfälle mit zunehmender Dimensionalität des Versuchsplans signifikant verdünnen, weil die Informationsmatrix durch eine absolut höhere Anzahl intakter Stützpunkte robuster abgestützt werden würde \cite{Arndt.2022}.
-Das Modell berücksichtigt neben den Haupteffekten explizit die für die Lebensdaueranalyse kritischen Wechselwirkungen ersten Grades sowie quadratische Terme zur Abbildung von Nichtlinearitäten:
+Um die statistische Leistungsfähigkeit und Effektivität modifizierter Versuchspläne objektiv zu quantifizieren, bedarf es einer kontrollierten Untersuchungsumgebung, in welcher - im Gegensatz zu empirischen Prüfstandsläufen - das wahre Systemverhalten a priori exakt bekannt ist.
+Erst der systematische Abgleich der Modellierungs- und Schätzergebnisse mit einer mathematisch definierten Referenz (engl. \textit{Ground Truth}) ermöglicht die deterministische Berechnung von zentralen Gütemetriken (\acp{KPI}) wie Schätzgüte, Varianzinflation und statistischer Trennschärfe (\sym{power}).
+Zu diesem Zweck wird nachfolgend eine allgemeingültige, modulare Simulationsumgebung etabliert, welche als Auswertebasis für sämtliche Untersuchungen dieses Kapitels dient \cite{Arndt.2023,Arndt.2022c}.
 
+\minisec{Pseudo-physikalisches Ground-Truth-Modell}
+Das zugrundeliegende Systemverhalten wird durch ein polynomiales Regressionsmodell zweiter Ordnung approximiert.
+Dies entspricht exakt der Modellstruktur, die als Ergebnis einer klassischen \ac{RSM}-Auswertung (vgl. Gleichung~\eqref{eq:quadric_std_model}) resultiert und das Fundament für multivariate Lebensdauer- und Zuverlässigkeitsmodelle bildet.
+Um die Grundanforderungen an eine multivariate Untersuchung ($\sym{k} \ge 2$) abzubilden und die mathematische Nachvollziehbarkeit zu wahren, wird im Basisszenario von zwei Einflussfaktoren ($\sym{x}_1, \sym{x}_2$) ausgegangen.
+Die Begrenzung auf $\sym{k}=2$ Faktoren stellt methodisch eine konservative \textit{Worst-Case}-Betrachtung dar: Da sich die negativen Auswirkungen lokaler topologischer Störungen mit zunehmender Dimensionalität des Versuchsplans über eine größere Anzahl verbleibender orthogonaler Stützstellen verteilen, reagiert ein zweidimensionaler Versuchsraum statistisch am empfindlichsten auf geometrische Verzerrungen \cite{Arndt.2022}.
+Das Modell berücksichtigt neben den Haupteffekten explizit die für Lebensdaueranalysen kritischen Wechselwirkungen ersten Grades sowie quadratische Terme zur Erfassung von Systemkrümmungen:
 \begin{equation} \label{eq:simulation_model}
     \sym{y}_{\sym{idx_sim}} = \sym{beta}_{0} + \sym{beta}_{1}\sym{x}_{1} + \sym{beta}_{2}\sym{x}_{2} + \sym{beta}_{12}\sym{x}_{1}\sym{x}_{2} + \sym{beta}_{11}\sym{x}_{1}^2 + \sym{beta}_{22}\sym{x}_{2}^2 + \sym{epsilon}.
 \end{equation}
 
-Um zunächst ein vollständig stochastisches Verhalten abbilden zu können, sind die Modellparameter nicht deterministisch fixiert.
-Den Regressionskoeffizienten $\symsub{beta}{idx_j}$ werden zwar nominale Startwerte zugewiesen (vgl. Tabelle~\ref{tab:simulation_parameters}), diese werden jedoch in jedem Simulationslauf mit einer definierten Streuung überlagert.
-Zusätzlich wird die resultierende Systemantwort $\sym{y}_{\sym{idx_sim}}$ mit einer Reststreuung $\sym{epsilon}$ beaufschlagt, um die inhärente \textbf{aleatorische Unsicherheit} des Systems (Messfehler, unbekannte Einflüsse) abzubilden.
-Mathematisch wird dies proportional durch normalverteilte Zufallsvariablen modelliert, sodass für den Fehlerterm sowie für die fluktuierenden Modellparameter um ihre nominalen Startwerte ($\sym{beta}_{\sym{idx_j}, \sym{idx_nom}}$) gilt:
-\begin{equation} \label{eq:simulation_stochastics}
-    \sym{epsilon} \sim \mathcal{N}(0, \symsub{sigma}{idx_sim}^2) \quad \text{und} \quad \symsub{beta}{idx_j} \sim \mathcal{N}(\sym{beta}_{\sym{idx_j}, \sym{idx_nom}}, \symsub{sigma}{idx_sim}^2).
-\end{equation}
-
-Die bewusste Wahl der Normalverteilung als zugrundeliegende Stochastik ist für diese isolierte Designuntersuchung methodisch zwingend und in einem ersten Schritt zweckdienlich:
-Sie entspricht der elementaren Grundannahme klassischer Regressionsmodelle (Gauß-Markow-Theorem) und stellt sicher, dass die nachfolgende statistische Inferenz (Berechnung von $\sym{p-Wert}$ und \acp{CI}) im ungestörten Basis-Design ideal und erwartungstreu abläuft.
-So wird gewährleistet, dass später beobachtete Schätzfehler oder $\sym{power}$-Verluste ausschließlich auf die induzierten geometrischen Orthogonalitätsabweichungen (Design-Penalties) zurückzuführen sind und nicht durch systematische, verteilungsbedingte Residuenfehler (wie beispielsweise durch Form- und Lageparameter der Weibull-Verteilung \cite{Meeker.2022}) verfälscht werden.
-
-\begin{table}[htbp]
-    \centering
-    \caption{Nominale Startwerte und Streuparameter des pseudo-physikalischen Simulationsmodells}
-    \label{tab:simulation_parameters}
-    \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{@{}lr@{}}
-        \toprule
-        \textbf{Modellparameter}                                                           & \textbf{Default-Wert} \\
-        \midrule
-        Regressionskonstante $\sym{beta}_{0}$                                              & $30$                  \\
-        Regressionskoeffizienten $\symsub{beta}{idx_j}$ (für $j \in \{1, 2, 12, 11, 22\}$) & $10$                  \\
-        Standardabweichung der Systemantwort $\symsub{sigma}{idx_sim}$                     & $1$                   \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\minisec{Simulationsalgorithmus und Monte-Carlo-Ansatz}
-Das Modell der \textit{Ground Truth} wird zunächst mit den zu untersuchenden Versuchsplänen gekoppelt.
-Für jeden Stützpunkt des Versuchsplans (die Versuchspunkte) werden die korrespondierenden Systemantworten simuliert.
-Anschließend erfolgt die Rückrechnung des Regressionsmodells mittels Parameterschätzverfahren (\ac{OLS}, \ac{MLE}), entsprechend der ausgeführten Methodik aus Abschnitt~\ref{subsubsec:mle}.
-Um statistisch belastbare Aussagen zu treffen und \textbf{epistemische Unsicherheiten} auf einen minimalen numerischen Approximationsfehler zu reduzieren, wird das Verfahren in eine \ac{MCS} mit $\symsub{n}{idx_MC} = 1\times10^4$ Iterationen eingebettet - vergleiche Abschnitt~\ref{subsec:optimal} für entsprechende Hintergründe.
-Dieser Ansatz erlaubt die Bewertung zweier zentraler Kriterien:
+\minisec{Simulationsarchitektur und Monte-Carlo-Inferenz}
+Die definierte \textit{Ground Truth} wird mit der jeweils zu untersuchenden Design-Matrix $\sym{X}$ gekoppelt.
+Für jeden Stützpunkt des Versuchsplans werden stochastische Systemantworten generiert, aus welchen anschließend über geeignete Schätzverfahren (\ac{OLS}, \ac{MLE}) die Modellparameter rückgerechnet werden (vgl. Abschnitte~\ref{subsubsec:mle} und \ref{subsec:modellbildung}).
+Um epistemische Unsicherheiten zu minimieren und eine reproduzierbare numerische Konvergenz sicherzustellen, ist das Verfahren in eine \ac{MCS} mit $\symsub{n}{idx_MC} = 1\times10^4$ Iterationen eingebettet.
+Dieser Aufbau erlaubt die simultane Analyse zweier elementarer Bewertungskriterien:
 \begin{enumerate}
-    \item \textbf{Präzision der Parameterschätzung:} Durch den (Mittelwert-) Vergleich der geschätzten Parameter $\hat{\sym{Beta}}$ mit den \textit{wahren} Koeffizienten $\sym{Beta}_{\text{true}}$ lassen sich systematischer Schätzfehler (\textbf{Bias}) und Varianz (\textbf{\ac{MSE}}) der Schätzung ermitteln.
-    \item \textbf{Bestimmung der Trennschärfe $\sym{power}$:} Für jeden Simulationslauf wird geprüft, ob die signifikanten Effekte korrekt erkannt wurden ($\sym{p-Wert} < \sym{alpha}$). Das Verhältnis dieser Treffer zur Gesamtzahl der Simulationen ergibt die empirische \ac{power} (vgl. Gleichung~\ref{eq:power}).
+    \item \textbf{Präzision der Parameterschätzung:} Durch den Erwartungswert-Vergleich der geschätzten Koeffizienten $\hat{\sym{Beta}}$ mit den wahren Modellparametern $\sym{Beta}_{\text{true}}$ werden der systematische Schätzfehler (\textbf{Bias}) sowie die Schätzvarianz (\textbf{\ac{MSE}}) exakt quantifiziert.
+    \item \textbf{Empirische Trennschärfe (\sym{power}):} Für jeden Simulationslauf wird über statistische Hypothesentests (ANOVA bzw. Likelihood-Ratio-Test) geprüft, ob signifikante Effekte vor dem Hintergrund des stochastischen Rauschens korrekt identifiziert werden ($\sym{p-Wert} < \sym{alpha}$). Der relative Anteil erfolgreicher Identifikationen definiert die empirische Test-Power (vgl. Gleichung~\eqref{eq:power}, in Anlehnung an \cite{Cohen.1988,Kremer.2021,Arndt.2022c}).
 \end{enumerate}
-Die systematische Kopplung dieser stochastischen Inferenzschritte mit der versuchsplanerischen Topologie und dem dynamischen Kostenmodell ist in Abbildung~\ref{fig:mcs_framework} als geschlossene Simulationsarchitektur zusammengefasst.
-Der modulare Aufbau verdeutlicht die iterative Kapselung: Ausgehend von einer definierten Ground Truth und der gewählten Design-Matrix $\sym{X}$ werden in $n_{\sym{idx_MC}} = 10^4$ Simulationsdurchläufen Ausfallzeiten generiert, auf deren Basis eine vollwertige \ac{MLE}-Modellschätzung und Signifikanzanalyse erfolgt.
-Am Ausgang der Schleife spaltet sich die Auswertung in die Bestimmung der statistischen Effektivität und die Akkumulation stochastischer Prüfstandskosten auf, welche in Abschnitt~\ref{sec:ldoe} ganzheitlich synthetisiert werden.
+
+Die systematische Kopplung dieser stochastischen Inferenzschritte mit der geometrischen Design-Topologie und dem dynamischen Kostenmodell ist in Abbildung~\ref{fig:mcs_framework} als geschlossene Simulationsarchitektur zusammengefasst.
+Der modulare Aufbau verdeutlicht die iterative Abarbeitung: Ausgehend von der definierten Ground Truth und der Versuchsmatrix $\sym{X}$ werden in $\sym{n}_{\sym{idx_MC}} = 10^4$ Durchläufen Systemantworten generiert.
+Auf deren Basis erfolgt je nach Untersuchungsziel entweder eine lineare \ac{OLS}-Regression zur verteilungsunabhängigen Analyse geometrischer Verzerrungen (Abschnitte~\ref{sec:abweichungen} bis \ref{subsec:spvbias}) oder eine iterative \ac{MLE}-Schätzung für Weibull-verteilte Ausfalldaten (Abschnitt~\ref{sec:ldoe}).
+Am Ausgang der Simulationsschleife werden die statistische Effektivität (\sym{power}, \sym{MSE}, richtungsspezifische \ac{SPV}) und die akkumulierten Prüfstandskosten simultan bereitgestellt, um im \ac{EPI} (Abschnitt~\ref{sec:ldoe}) ganzheitlich synthetisiert zu werden.
+
 \begin{figure}[htbp]
     \centering
-    \def\svgwidth{0.88\textwidth}
-    % \input{plots/ma_abb5.0_mcs_flowchart.pdf_tex}
-    \caption{Methodische Architektur der Monte-Carlo-Simulationsumgebung zur ganzheitlichen stochastisch-ökonomischen Bewertung multivariater Lebensdauertests.}
+    \def\svgwidth{1\textwidth}
+    \input{plots/ma_abb5.1_mcs.pdf_tex}
+    \caption{Methodische Architektur der Monte-Carlo-Simulationsumgebung zur ganzheitlichen stochastisch-ökonomischen Bewertung multivariater Lebensdauertests für sämtliche Abschnitte in Kapitel~\ref{chap:entwurf}.}
     \label{fig:mcs_framework}
 \end{figure}
 
@@ -86,48 +60,76 @@ Am Ausgang der Schleife spaltet sich die Auswertung in die Bestimmung der statis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Effektivität von Versuchsplänen mit Orthogonalitätsabweichungen} \label{sec:abweichungen}
-Generell können sich Orthogonalitätsabweichungen durch physikalische Restriktionen der technischen Versuchsausführung, die spezifische Performance und Funktionalität des Systems oder Produkts oder durch möglicherweise bewusste Manipulation des Versuchsraums im Kontext von \ac{ALT} zur Steigerung der Extrapolationsgüte ergeben.
-Insbesondere bei Lebensdauerprognosen sind solche Eingriffe praxisrelevant und begründet: Die Verschiebung der Versuchspunkte in Richtung höherer Lastniveaus verkürzt die Prüfzeit und senkt die Kosten, während eine Verortung nahe dem Operationsbereich die Modellanpassung verbessert und die Extrapolationsunsicherheit reduziert.
 
-Allerdings bergen solche Modifikationen das Risiko, die statistische Integrität des Designs zu beeinträchtigen.
-Im Idealfall sind die Design-Matrix-Spalten eines \ac{CCD} orthogonal zueinander, was eine unabhängige Schätzung der Modellparameter ermöglicht - vgl. Abschnitt~\ref{subsubsec:rsm}.
-Geometrische Verzerrungen führen zwangsläufig zu einem Verlust dieser Orthogonalität (vgl. Gleichung~\ref{eq:skalar}).
-Besonders kritisch ist, dass die Auswirkungen peripherer Parameterstufen (\acp{SP}) im augmentierten Ansatz erst spät im sequenziellen Prozess sichtbar werden - nämlich dann, wenn das initial rein \textit{faktorielle} Design um die \acp{SP} erweitert wird.
-Daher ist es essenziell, die Robustheit des \ac{CCD} gegenüber typischen Design-Abweichungen systematisch zu quantifizieren.
-Entgegen bereits erfolgter Untersuchungen durch \textcite{Box.1963}, \textcite{Ahn.2015}, \textcite{Donev.2004}, \textcite{Zhang.2021} sowie \textcite{Jang.2002} oder vergleichbare Arbeiten liegt der Fokus hierbei allerdings nicht auf der reinen geometrischen Verzerrung und der Analyse sowie Bewertung durch geeignete Optimalitätskriterien (entsprechend Abschnitt~\ref{subsec:optimal}).
-Die hier erwähnten Beiträge konzentrieren sich primär auf die geometrische Charakterisierung der Design-Abweichungen und deren Einfluss auf die Struktur der Design-Matrix bzw. geeigneter Optimalätskriterien.
-Vielmehr soll eine Quantifizierung der Auswirkungen auf die Schätzpräzision und insbesondere die Trennschärfe im Kontext von Lebensdauerprognosen erfolgen.
-Die ausschließliche Bewertung mittels klassischer Optimalitätskriterien greift zu kurz, da sie keine direkte Aussage über die tatsächlichen Auswirkungen auf Schätzvarianz und Trennschärfe unter stochastischem Rauschen erlaubt.
-Dies erfordert den Einsatz numerischer Simulationen, um die Effekte von Design-Abweichungen auf die statistische Güte quantitativ zu bestimmen.
+In der industriellen Erprobungspraxis resultieren Abweichungen von der idealen Versuchsgeometrie häufig aus physikalischen Anlagenrestriktionen, Bauteilgrenzen oder der gezielten Lastanhebung im Rahmen von \acp{ALT}.
+Die Verschiebung von Versuchspunkten in Hochlastbereiche forciert den Ausfallmechanismus und verkürzt die Prüfzeit, während Stützstellen nahe dem Nennbetrieb die Extrapolationsunsicherheit im Feld dämpfen.
+
+Solche Modifikationen bergen jedoch das Risiko, die statistische Integrität des Versuchsplans empfindlich zu schwächen.
+Im Idealfall sind die Spalten der Design-Matrix $\sym{X}$ eines \ac{CCD} orthogonal zueinander, was die vollkommen unkorrelierte Schätzung aller Modellparameter garantiert (vgl. Abschnitt~\ref{subsubsec:rsm}).
+Geometrische Verzerrungen heben diese Orthogonalität unweigerlich auf ($\langle \symsub{x}{idx_i}, \symsub{x}{idx_j} \rangle \neq 0$).
+Besonders kritisch ist hierbei, dass die Konsequenzen asymmetrischer Stützstellenverschiebungen im klassischen sequenziellen Augmentierungsprozess erst spät zutage treten - nämlich bei der Erweiterung des faktoriellen Kerns um axiale \acp{SP}.
+
+Während sich bisherige Forschungsarbeiten \cite{Box.1963,Ahn.2015,Donev.2004,Zhang.2021,Jang.2002} vorwiegend auf die rein algebraische Charakterisierung der Design-Matrix und abstrakte Optimalitätskriterien (Abschnitt~\ref{subsec:optimal}) beschränken, greift dieser Ansatz für die Zuverlässigkeitstechnik zu kurz: Rein geometrische Matrixmaße erlauben keine verlässliche Aussage über die tatsächliche Schätzvarianz und die statistische Trennschärfe unter stochastischen Rauschbedingungen.
+Zur belastbaren Quantifizierung dieser Praxisrestriktionen wird daher nachfolgend auf die in Abschnitt~\ref{sec:simulationsmethodik} etablierte Simulationsarchitektur zurückgegriffen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
-Um zunächst die Robustheit des methodischen Ansatzes gegenüber den eingangs erwähnten Einflüsse zu bewerten, wird eine Sensitivitätsanalyse durchgeführt, welche einem \textbf{\ac{DoE} on Experimental Design}-Ansatz folgt:
-Die Eigenschaften des Versuchsplans sowie die der \textit{Ground Truth} werden als Faktoren eines übergeordneten Meta-Designs derart variiert, sodass deren Einfluss auf die Effektivität der Schätzung und damit auf insbesondere die Trennschärfe der Effekte im \ac{GLM} quantifiziert werden kann \cite{Arndt.2023}.
-Hierfür wird eine aus praxisnahen Überlegungen abgeleitete Auswahl geometrischer Manipulationen, stochastischer Einflüsse sowie methodischer Parameter herangezogen:
+
+Um die Robustheit klassischer Response Surface Designs gegenüber den eingangs identifizierten Praxisrestriktionen fundiert zu bewerten, wird eine umfassende Sensitivitätsanalyse durchgeführt.
+Diese folgt methodisch einem \textbf{\ac{DoE} on Experimental Design}-Ansatz: Die topologischen Eigenschaften des Versuchsplans sowie die stochastischen Randbedingungen der \textit{Ground Truth} werden als Faktoren eines übergeordneten Meta-Designs derart variiert, dass deren funktionale Auswirkung auf die Schätzgüte und insbesondere auf die statistische Trennschärfe (\sym{power}) im polynomialen Regressionsmodell zweiter Ordnung quantifiziert werden kann \cite{Arndt.2023}.
+Hierfür wird ein Spektrum aus acht praxisrelevanten Geometrie-, Stör- und Inferenzparametern definiert:
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
     \setlength{\parskip}{0pt}
-    \item Manipulation von \acp{SP} über deren axialen Abstand;
-    \item Manipulation von \acp{SP} durch co-faktorielle Korrelation;
-    \item Variation der Anzahl der \acp{ZP};
-    \item Variation der Anzahl der \acp{SP};
-    \item Variation der Standardabweichung der Effektstärken (Effekt-Rauschen);
-    \item Änderung des relativen Verhältnisses von Effektstärken untereinander;
-    \item Variation der Standardabweichung der Systemantwort (System-Rauschen, auch \ac{SNR});
-    \item Variation des Signifikanzniveaus.
+    \item Geometrischer \ac{SP}-Abstand ($\symsub{alpha}{idx_D}$) zur Erfassung radialer Stauchungen oder Streckungen;
+    \item Asymmetrischer \ac{SP}-Shift infolge parasitärer co-faktorieller Stellgrößenkopplung;
+    \item Diskrete Variation der Zentralpunktanzahl ($\symsub{n}{idx_C}$);
+    \item Diskrete Variation der Sternpunktanzahl ($\symsub{n}{idx_S}$) durch partiellen Stützstellenentfall;
+    \item Streuung der wahren Modellparameter (epistemisches Effekt-Rauschen);
+    \item Relatives Amplitudenverhältnis konkurrierender Haupteffekte ($\sym{beta}_1/\sym{beta}_2$);
+    \item Standardabweichung des experimentellen Versuchsfehlers (System- und Messrauschen, \ac{SNR});
+    \item Vorgegebenes statistisches Signifikanzniveau ($\sym{alpha}$).
 \end{enumerate}
-Insbesondere die Berücksichtigung der Verhältnismäßigkeit von Effektstärken sowie der Rauschparameter ist von zentraler Bedeutung, da sie die \ac{SNR} im Modell direkt beeinflussen und damit die Detektionswahrscheinlichkeit der Effekte maßgeblich steuern, gleichzeitig aber eine gegen unendlich tendierende Variationsmöglichkeit bieten, die in einem reinen Screening-Ansatz nicht abgedeckt werden könnte.
-Zur formalen Beschreibung des Untersuchungsraums werden diese acht Einflussgrößen im Vektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]^\top$ zusammengefasst und in Tabelle~\ref{tab:sensitivitaetsfaktoren} definiert.
-Die Integration dieser Faktoren in das Meta-Design erfolgt dabei methodisch differenziert: Während die kontinuierlichen Stör- und Geometrieparameter ($\symsub{xi_factor}{idx_fac_a}, \symsub{xi_factor}{idx_fac_b}, \symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_f}, \symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_h}$) den Versuchsraum eines \ac{CCD} aufspannen, um stetige Sensitivitäten (Regressionskoeffizienten) zu schätzen, werden die strukturellen Designgrößen der Stützstellenanzahl ($\symsub{xi_factor}{idx_fac_c}, \symsub{xi_factor}{idx_fac_d}$) als kategoriale Blockfaktoren über drei diskrete Stufen behandelt.
-Diese Trennung ist zwingend geboten, da Variationen in der Stützstellenanzahl die topologische Struktur der Design-Matrix $\sym{X}$ und deren Freiheitsgrade diskontinuierlich verändern.
-Ein rein kontinuierliches Meta-Modell würde hier zu unzulässigen Interpolationen über strukturelle Singularitäten hinweg führen - beispielsweise beim vollständigen Verlust der Schätzbarkeit quadratischer Terme bei extremer Ausdünnung.
-Folglich werden die kontinuierlichen Sensitivitäten der Rauschparameter stets \textit{innerhalb} konsistenter topologischer Design-Strukturen ermittelt, während der Haupteffekt der Stützstellenreduktion separat über die diskreten Mittelwertverschiebungen (Level-Shifts) der \ac{power} zwischen den Blöcken quantifiziert wird.
-Weiter erfüllt der \ac{DoE}-Ansatz mittels \ac{CCD} den Anspruch, für die Sensitivitätsanalyse eine effiziente und notwendige statistische Inferenz und Kausalität zu identifizieren, wohingegen alternative Ansätze wie die reine Korrelationsanalyse, \textit{Space-Filling Designs} (wie \textit{Latin Hypercube Sampling} oder \textit{Sobol}-Sequenzen) oder die Anwendung von \ac{ML}-Modellen zur Schätzung von Sensitivitäten darüber hinaus Assoziationen für explorative Prädiktionen liefern würden \cite{Zio.2013,Kleppmann.2020}.
 
-Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation der faktoriellen Versuchspunkte oder die Einführung von Lebensdauermodellen werden dabei bewusst ausgeschlossen, um die Komplexität des Meta-Designs handhabbar zu halten und die Interpretation der Ergebnisse durch eine pragmatische Auswahl und im Fokus der in Kapitel~\ref{chap:ansatz} postulierten Zielsetzung zu erleichtern.
+Um die stochastische Realität technischer Systeme ohne deterministische Verzerrungen abzubilden, werden die wahren Modellparameter $\symsub{beta}{idx_j}$ nicht starr fixiert.
+Ausgehend von kalibrierten nominalen Startwerten $\sym{beta}_{\sym{idx_j}, \sym{idx_nom}}$ (vgl. Tabelle~\ref{tab:simulation_parameters}) unterliegen die Koeffizienten in jedem Monte-Carlo-Lauf einer stochastischen Schwankung.
+Zusätzlich wird die Systemantwort $\sym{y}_{\sym{idx_sim}}$ mit einem additiven Restfehler $\sym{epsilon}$ beaufschlagt, welcher die unkontrollierbare aleatorische Unsicherheit (Messrauschen, Umwelteinflüsse) modelliert:
+\begin{equation} \label{eq:simulation_stochastics}
+    \sym{epsilon} \sim \mathcal{N}(0, \symsub{sigma}{idx_sim}^2) \quad \text{und} \quad \symsub{beta}{idx_j} \sim \mathcal{N}(\sym{beta}_{\sym{idx_j}, \sym{idx_nom}}, \symsub{sigma}{idx_sim}^2).
+\end{equation}
+
+Die bewusste Wahl der Normalverteilung für diese grundlegende Sensitivitätsstudie ist methodisch zwingend:
+Sie erfüllt exakt die Prämissen des Gauß-Markow-Theorems und stellt sicher, dass die statistische Inferenz ($\sym{p-Wert}$- und Vertrauensbereichsberechnung) im ungestörten Basis-Design vollkommen erwartungstreu und varianzminimal operiert.
+Etwaige Schätzfehler oder Einbrüche der \sym{power} lassen sich somit kausal und isoliert auf die induzierten geometrischen Orthogonalitätsabweichungen (Design-Penalties) zurückführen, ohne durch verteilungsbedingte Asymmetrien oder Zensierungsmechanismen überlagert zu werden \cite{Meeker.2022}.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Nominale Startwerte und Streuparameter des pseudo-physikalischen Simulationsmodells}
+    \label{tab:simulation_parameters}
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{@{}lr@{}}
+        \toprule
+        \textbf{Modellparameter}                                                                     & \textbf{Default-Wert} \\
+        \midrule
+        Regressionskonstante $\sym{beta}_{0}$                                                        & $30$                  \\
+        Regressionskoeffizienten $\symsub{beta}{idx_j}$ (für $\sym{idx_j} \in \{1, 2, 12, 11, 22\}$) & $10$                  \\
+        Standardabweichung der Systemantwort $\symsub{sigma}{idx_sim}$                               & $1$                   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+Zur formalen mathematischen Beschreibung des Sensitivitätsraums werden die acht Einflussgrößen im Parametervektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]^\top$ zusammengefasst und gemäß Tabelle~\ref{tab:sensitivitaetsfaktoren} parametrisiert.
+Die versuchsplanerische Einbindung dieser Faktoren in das Meta-Design erfolgt methodisch differenziert:
+Während die sechs kontinuierlichen Geometrie- und Rauschparameter ($\symsub{xi_factor}{idx_fac_a}, \symsub{xi_factor}{idx_fac_b}, \symsub{xi_factor}{idx_fac_e}, \symsub{xi_factor}{idx_fac_f}, \symsub{xi_factor}{idx_fac_g}, \symsub{xi_factor}{idx_fac_h}$) den stetigen Parameterraum eines \ac{CCD} aufspannen, werden die strukturellen Stützstellenzahlen ($\symsub{xi_factor}{idx_fac_c}, \symsub{xi_factor}{idx_fac_d}$) als kategoriale Blockfaktoren über jeweils drei diskrete Stufen $(-1, 0, +1)$ variiert.
+Diese strikte methodische Entkopplung ist zwingend geboten: Eine Reduktion der Stützstellen verändert die Rang- und Freiheitsgradstruktur der Informationsmatrix $\sym{M}$ diskontinuierlich.
+Ein rein kontinuierliches Meta-Modell würde über strukturelle Singularitäten hinweg interpolieren - etwa bei einem vollständigen Verlust der Schätzbarkeit quadratischer Terme infolge extremer Ausdünnung.
+Aus diesem Grund werden die kontinuierlichen Sensitivitäten der Geometrie- und Rauschparameter isoliert innerhalb der resultierenden $3 \times 3 = 9$ diskreten Topologie-Blöcke ermittelt (vollständig dokumentiert in den Tabellen~A1 bis A9 in Anhang~\ref{app:c}), während der Haupteffekt der Stützstellenreduktion separat über die Niveauverschiebungen (\textit{Level-Shifts}) der \sym{power} zwischen den Blöcken quantifiziert wird.
+
+Gegenüber alternativen Screening-Verfahren wie reinen Korrelationsanalysen, \textit{Space-Filling Designs} oder datengetriebenen Machine-Learning-Modellen gewährleistet dieser hierarchische \ac{DoE}-Ansatz eine formal abgesicherte statistische Kausalitätsprüfung zur eindeutigen Trennung von Haupteffekten, Interaktionen und Krümmungsanteilen auf die resultierende Trennschärfe \cite{Kleppmann.2020,Zio.2013}.
+Weitere Variationsdimensionen - wie eine Erhöhung der Faktorenanzahl $\sym{k}>2$ oder eine Modifikation der faktoriellen Eckpunkte - werden hierbei bewusst ausgeschlossen, um die Dimensionalität des Meta-Designs analytisch beherrschbar zu halten und den Fokus stringent auf die Beantwortung von Teilforschungsfrage~1 zu richten.
+
 \begin{table}[htbp]
     \centering
     \caption{Definition und Parametrisierung der Untersuchungsfaktoren für die Sensitivitätsanalyse}
@@ -135,69 +137,67 @@ Etwaige Ergänzungen wie die Variation der Anzahl der Faktoren, die Manipulation
     \renewcommand{\arraystretch}{1.3}
     \begin{tabular}{@{}l p{0.45\textwidth} l l@{}}
         \toprule
-         & \textbf{Beschreibung}                                                  & \textbf{Wertebereich} & \textbf{Charakteristik} \\
+         & \textbf{Beschreibung}                                               & \textbf{Wertebereich} & \textbf{Charakteristik} \\
         \midrule
 
         $\symsub{xi_factor}{idx_fac_a}$
          & \textbf{\ac{SP}-Abstand ($\symsub{alpha}{idx_D}$)} \newline
-        Variation des Abstands der \acp{SP} zum Zentrum (z.B. flächenzentriert, rotierbar und extendiert).
-         & $[1,00;\, 2\cdot\symsub{alpha}{idx_D}]$
-         & Kont. (\ac{CCD})                                                                                                         \\
+        Variation des axialen Sternpunktabstands zum Zentrum (flächenzentriert, rotierbar, extendiert).
+         & $[1{,}00;\, 2\cdot\symsub{alpha}{idx_D}]$
+         & Kontinuierlich (\ac{CCD})                                                                                             \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_b}$
          & \textbf{\ac{SP}-Shift} \newline
-        Asymmetrische / Co-Faktorielle Verschiebung eines \ac{SP}s zur Simulation geometrischer Verzerrungen und Faktoren-Korrelation.
-         & $[0,10;\, \phantom{0}\phantom{0}\symsub{alpha}{idx_D}]$
-         & Kont. (\ac{CCD})                                                                                                         \\
+        Asymmetrische, co-faktorielle Verschiebung eines \ac{SP} zur Simulation von Stellgrößen-Korrelationen.
+         & $[0{,}10;\, \symsub{alpha}{idx_D}]$
+         & Kontinuierlich (\ac{CCD})                                                                                             \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_c}$
          & \textbf{\acp{ZP} ($\symsub{n}{idx_C}$)} \newline
-        Variation der Anzahl der \acp{ZP} $\symsub{n}{idx_C}>0$.
-         & $[1,00;\, \phantom{0}8,00]$
-         & Diskret (Faktoriell)                                                                                                     \\
+        Diskrete Variation der Zentralpunktanzahl $\symsub{n}{idx_C} \in \{1, 5, 8\}$.
+         & $[1{,}00;\, 8{,}00]$
+         & Diskret (Blockfaktor)                                                                                                 \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_d}$
          & \textbf{\acp{SP} ($\symsub{n}{idx_S}$)} \newline
-        Variation durch Entfall von maximal $50\,\%$ der \acp{SP} (z.B. durch Zensierung oder Funktionalitätsverlust).
-         & $[2,00;\, \phantom{0}4,00]$
-         & Diskret (Faktoriell)                                                                                                     \\
+        Diskrete Variation der Sternpunktanzahl $\symsub{n}{idx_S} \in \{2, 3, 4\}$ (Entfall bis $50\,\%$).
+         & $[2{,}00;\, 4{,}00]$
+         & Diskret (Blockfaktor)                                                                                                 \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_e}$
          & \textbf{Effekt-Rauschen} \newline
-        Verhältnis zwischen pseudo-physikalischem Modellkoeffizienten und Systemabweichung bzw. Effektstreuung $\symsub{beta}{idx_i}/\sym{sigma}$.
-         & $[0,80;\,\phantom{0} 1,20]$
-         & Kont. (\ac{CCD})                                                                                                         \\
+        Streuung der wahren Modellparameter bezogen auf den Nominalwert ($\symsub{sigma}{idx_sim}/\symsub{beta}{idx_i}$).
+         & $[0{,}80;\, 1{,}20]$
+         & Kontinuierlich (\ac{CCD})                                                                                             \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_f}$
          & \textbf{Effekt-Verhältnis ($\sym{beta}_1/\sym{beta}_2$)} \newline
-        Verhältnis zweier Haupteffekte zueinander: zwischen gleichwertiger Effektstärke oder einem Anteil von $10\,\%$.
-         & $[0,10;\,\phantom{0} 1,00]$
-         & Kont. (\ac{CCD})                                                                                                         \\
+        Amplitudenverhältnis zweier linearer Haupteffekte zueinander.
+         & $[0{,}10;\, 1{,}00]$
+         & Kontinuierlich (\ac{CCD})                                                                                             \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_g}$
-         & \textbf{Mess-Rauschen ($\sym{snr}$: $\sym{y}/\sym{epsilon}$)} \newline
-        Verhältnis zwischen den Modellkoeffizienten und dem Wert des Streuparameters der Systemantwort.
-         & $[0,80;\, \phantom{0}1,20]$
-         & Kont. (\ac{CCD})                                                                                                         \\
+         & \textbf{Mess-Rauschen (\ac{SNR}: $\sym{y}/\sym{epsilon}$)} \newline
+        Verhältnis zwischen mittlerer Effektamplitude und Standardabweichung des Fehlers.
+         & $[0{,}80;\, 1{,}20]$
+         & Kontinuierlich (\ac{CCD})                                                                                             \\
         \addlinespace
 
         $\symsub{xi_factor}{idx_fac_h}$
          & \textbf{Signifikanzniveau ($\sym{alpha}$)} \newline
-        Das gewählte Signifikanzniveau.
-         & $[0,02;\, \phantom{0}0,08]$
-         & Kont. (\ac{CCD})                                                                                                         \\
+        Vorgegebene Irrtumswahrscheinlichkeit für statistische Hypothesentests.
+         & $[0{,}02;\, 0{,}08]$
+         & Kontinuierlich (\ac{CCD})                                                                                             \\
 
         \bottomrule
     \end{tabular}
 \end{table}
-
-So werden schließlich Haupteffekte, Interaktionen sowie quadratische Effekte auf die Trennschärfe als wesentlicher Performance-\ac{KPI} und damit Metrik zur Effektivität ermittelt.
 
 \subsection{Ergebnisse der Sensitivitätsanalyse und Quantifizierung der Trennschärfe} \label{subsec:ergebnisse_sensitivitaet}
 
@@ -243,8 +243,7 @@ Da das Rauschen sowie das Signifikanzniveau ($\symsub{xi_factor}{idx_fac_h}$) be
 \end{table}
 
 Aus dieser Gegenüberstellung kristallisiert sich eine fundamentale Erkenntnis für die Versuchsökonomie heraus: Wenn die Nachweiswahrscheinlichkeit der linearen Haupteffekte ohnehin durch nicht-dispositive Systemrestriktionen limitiert wird, ist zu prüfen, ob eine gezielte Ausdünnung des Versuchsplans (Reduktion der Stützstellen $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$) die statistische Aussagekraft in der Praxis überhaupt signifikant kompromittiert.
-Tabelle~\ref{tab:impact_cd} quantifiziert diesen passiven „\textit{Design-Penalty}“.
-
+Tabelle~\ref{tab:impact_cd} quantifiziert diesen passiven „\textit{Design-Penalty}“ als mittleren Trennschärfe-Verlust infolge der Stützstellenausdünnung.
 \begin{table}[htbp]
     \centering
     \caption{Systematischer Trennschärfe-Verlust ($\Delta \sym{power}$) bei Reduktion der Versuchsstützpunkte. Während lineare Haupteffekte relativ robust gegenüber einer Design-Ausdünnung bleiben, zeigt sich der primäre \textit{Design-Penalty} in der Schätzung der quadratischen Terme.}
@@ -279,7 +278,9 @@ Hierin verbirgt sich die zentrale mathematische Rechtfertigung für die im weite
 Einerseits zeigt Tabelle~\ref{tab:impact_cd}, dass die Reduktion klassischer Stützstellen die Detektion von Haupteffekten kaum gefährdet.
 Dies erzeugt ein ungenutztes \textbf{geometrisches Gestaltungsbudget}, da diese Punkte für die reine Effektidentifikation hochgradig ineffizient sind.
 Andererseits belegt Tabelle~\ref{tab:summary_power_sensitivity} eindrücklich, dass die Geometrie (speziell der Sternpunktabstand $\symsub{xi_factor}{idx_fac_a}$) mit einem herausragenden Index von $\sym{Eff}=3{,}72$ den massivsten Hebel auf exakt jene quadratischen Terme besitzt, die bei passiver Stützstellenreduktion am stärksten leiden.
-Dieses ungenutzte Budget sollte folglich nicht zur reinen Kostensenkung gestrichen, sondern durch proaktive Design-Manipulationen (asymmetrische Ankerpunkte) umgewidmet werden. Dies gilt umso mehr, als das physikalische Systemverhalten (Effektstärken und Rauschniveau) in realen \ac{ALT}-Szenarien naturgemäß als unveränderliche Randbedingung zu akzeptieren ist. Nur so lässt sich der enorme geometrische Hebel nutzen, um die quadratische Modellkrümmung abzustützen und die Extrapolationsvarianz im Feldbereich gezielt zu minimieren.
+Dieses ungenutzte Budget sollte folglich nicht zur reinen Kostensenkung gestrichen, sondern durch proaktive Design-Manipulationen (asymmetrische, gezielt topologische Reallokationen von Versuchspunkten) umgewidmet werden.
+Dies gilt umso mehr, als das physikalische Systemverhalten (Effektstärken und Rauschniveau) in realen \ac{ALT}-Szenarien naturgemäß als unveränderliche Randbedingung zu akzeptieren ist.
+Nur so lässt sich der enorme geometrische Hebel nutzen, um die quadratische Modellkrümmung abzustützen und die Extrapolationsvarianz im Feldbereich gezielt zu minimieren.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -299,7 +300,7 @@ Aus dem Verständnis dieser kausalen Zusammenhänge lassen sich schließlich gen
 Dementsprechend werden basierend auf der Simulationsmethodik aus Abschnitt~\ref{subsec:simulationsmethodik} vier spezifische, voneinander isolierte Störszenarien definiert, welche typische Einzelrestriktionen in multivariaten Lebensdauerversuchen abbilden \cite{Arndt.2022,Mell.2022}:
 
 \begin{itemize}
-    \item \textbf{Fall I (Axialer Shift):} \acp{SP} ($\symsub{n}{idx_S}\geq 1$) können aufgrund von Anlagenrestriktionen nicht auf dem nominellen Abstand $\symsub{alpha}{idx_D}$ gefahren werden oder würden einen durch \ac{ALT} induzierten Wechsel des Ausfallmechanismus provozieren.
+    \item \textbf{Fall I (Axialer Abstandsfehler):} \acp{SP} ($\symsub{n}{idx_S}\geq 1$) können aufgrund von Anlagenrestriktionen nicht auf dem nominellen Abstand $\symsub{alpha}{idx_D}$ gefahren werden oder würden einen durch \ac{ALT} induzierten Wechsel des Ausfallmechanismus provozieren.
           Zur methodischen Einordnung wird dieser Fall in drei Stufen simuliert: eine axiale Stauchung auf $80\,\%$, eine Streckung auf $120\,\%$ sowie der Rückzug auf die Nennlasten des rein faktoriellen Würfels (\textit{\ac{FC}}, $\symsub{alpha}{idx_D}=1$).
     \item \textbf{Fall II (Co-faktorielle Korrelation):} Ein \ac{SP} ist nicht mehr achsenrein isoliert realisierbar. Spezifische, physikalische Systemfunktionalitäten (beispielsweise kombinierte Einflüsse durch Temperatur und mechanische Kraft) könnten die simultane (parasitäre) Aussteuerung eines zweiten Faktors erzwingen, wodurch eine asymmetrische geometrische Korrelation im ansonsten orthogonalen Raum entsteht.
           Dieser Fall wird in einer leichten und einer starken Ausprägung untersucht, indem der Sternpunkt der $\sym{x}_1$-Achse durch einen parasitären Stellgrößenanteil von $\sym{x}_2 = 0{,}1$ sowie $\sym{x}_2 = 1{,}0$ überlagert wird.
@@ -347,7 +348,7 @@ Die Anwendung solch identischer Zufallszahlen (\textit{Common Random Numbers}) �
 
 \begin{table}[htbp]
     \centering
-    \caption{Kalibrierte Startwerte und statistische Eigenschaften des additiven Normalverteilungs-Basismodells}
+    \caption{Kalibrierte Startwerte und statistische Eigenschaften des additiven Nor\-mal\-ver\-tei\-lungs-Ba\-sis\-mo\-dells}
     \label{tab:simulation_parameters_normal}
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{@{}lccccc@{}}
@@ -485,7 +486,7 @@ Die Autoren belegen durch simulative Analysen, dass computergenerierte Optimalpl
 Ein rein volumenbasiertes Kriterium wie die \textit{D}-Optimalität liefert demnach keinen deterministischen Garant für die Detektionssicherheit spezifischer Modelleffekte in verzerrten Topologien.
 
 Abbildung~\ref{fig:ma_abb5.1.4_korrelation} fasst diese korrelativen Beziehungen zusammen und bestätigt die in \cite{Rittmaier.2025} identifizierte Kausalität zwischen spezifischen Optimalitätszielen und der resultierenden Schätzgüte nun quantitativ für asymmetrisch gestörte Versuchspläne.
-Während der rein algebraische $\sym{A2}$-Indikator aufgrund der oftmals nichtlinearen Klippeneffekte von Trennschärfe-Verlusten nur ein extrem schwaches Bestimmtheitsmaß als Prädiktor liefert, erweisen sich exakt jene Metriken als hochgradig robust, die direkt mit den spezialisierten Optimalitätskriterien korrespondieren:
+Während der rein algebraische $\sym{A2}$-Indikator aufgrund der oftmals nichtlinearen Schwellenwert- und Sättigungseffekte der Sigmoidalfunktion von Trennschärfe-Verlusten nur ein extrem schwaches Bestimmtheitsmaß als Prädiktor liefert, erweisen sich exakt jene Metriken als hochgradig robust, die direkt mit den spezialisierten Optimalitätskriterien korrespondieren:
 Einerseits fungiert der \textbf{\ac{MSE}} infolge der zugrundeliegenden Prüfmathematik (in welcher die Teststatistik invers proportional zu $1/\sqrt{\ac{MSE}}$ skaliert) als nahezu perfekter und deterministischer Prädiktor für den Trennschärfe-Erhalt isolierter Koeffizienten.
 Dies untermauert das Paradigma der \textit{A}-Optimalität, deren primäre Zielfunktion exakt in der Minimierung dieser durchschnittlichen Koeffizientenvarianz liegt \cite{Rittmaier.2025, Montgomery.2020}.
 Andererseits erweist sich die $\sym{eff_I}$ als hochgradig verlässliches globales Maß.
@@ -526,7 +527,7 @@ Die Minimierung der Prognoseunsicherheit auf dem Extrapolationspfad ist kein rei
 Im Folgenden wird das aus topologisch unkritischen Zentral- und Sternpunkten freigewordene Gestaltungsbudget daher proaktiv genutzt, um diese Stützstellen gezielt in Richtung des anvisierten Feldbereichs zu verschieben.
 Diese asymmetrische, zielgerichtete Versuchsplanungsstrategie wird im weiteren Verlauf unter dem Akronym \textbf{\ac{EmALT}} eingeführt.
 Positionsoptimierte Ankerpunkte investieren das gewonnene Budget exakt dort, wo es zur Stützung der kritischen Modellkrümmung und der Extrapolationsgüte gefordert wird, während die Grundstruktur des \ac{CCD} als stabiler Identifikationskern erhalten bleibt.
-Ein iterativer, datengetriebener Optimierungsprozess erlaubt es, die Stützstellen sukzessive in Richtung des anvisierten Feldbereichs zu verschieben und die \ac{SPV} entlang des Extrapolationspfads gezielt zu minimieren wie in nachfolgendem Abschnitt~\ref{sec:adaptive_planung} beschrieben.
+Ein \textit{a priori} durchgeführter Optimierungsprozess der Design-Matrix erlaubt es, die Stützstellen sukzessive in Richtung des anvisierten Feldbereichs zu verschieben und die \ac{SPV} entlang des Extrapolationspfads gezielt zu minimieren wie in nachfolgendem Abschnitt~\ref{sec:adaptive_planung} beschrieben.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -542,7 +543,7 @@ Anstatt das in Abschnitt~\ref{sec:abweichungen} erarbeitete geometrische Budget 
 Die durch die nachgewiesene Robustheit zur Disposition stehenden Stützstellen - etwa substituierbare \acp{ZP} oder für den Schädigungsmechanismus irrelevante Sternpunkte (\acp{SP}) - werden gezielt in Richtung des anvisierten Feldbereichs verlagert.
 Dieser strategische \textit{Brückenbau im Parameterraum} erzeugt asymmetrische \acp{AP}, die das Regressionsmodell auf dem Extrapolationspfad empirisch absichern, während der Gesamtversuchsumfang $\sym{N}$ des \ac{CCD} unverändert bleibt \cite{Arndt.2024,Arndt.2025b,Arndt.2025}.
 Das gewählte \ac{RSD} bleibt dabei als stabiler Kern erhalten und gewährleistet weiterhin die notwendige Identifikationsgüte für die Haupteffekte und Interaktionen.
-Zudem erfolgt nach Vorbild der sequenziellen Versuchsplanung aus Abschnitt~\ref{subsec:strategie} eine Erweiterung der Augmentierung sowie eine iterative, datengetriebene Verfeinerung der Stützstellenpositionen, um die \ac{SPV} im kritischen Extrapolationspfad sukzessive zu optimieren \cite{Arndt.2025}.
+Zudem erfolgt nach Vorbild der sequenziellen Versuchsplanung aus Abschnitt~\ref{subsec:strategie} eine Erweiterung der Augmentierung sowie eine iterative, varianzgetriebene Verfeinerung der Stützstellenpositionen, um die \ac{SPV} im kritischen Extrapolationspfad sukzessive zu optimieren \cite{Arndt.2025}.
 Um den Leistungsgewinn dieser gerichteten Design-Manipulationen objektiv bewerten zu können, wird die \ac{SPV} aus ihrer globalen Integralbetrachtung gelöst.
 Es bedarf ihrer Anwendung als lokale Maßzahl, die die Vorhersageunsicherheit gemäß Gleichung~\ref{eq:pred_variance_scaled} punktgenau im kritischen Betriebspunkt quantifiziert.
 
@@ -657,12 +658,13 @@ Um die Varianzdivergenz auf der kritischen Extrapolationsachse abzustützen, wir
 Diese Versuchspunkte fungieren fortan als Extrapolations-\acp{AP}.
 Soll die skalierte Vorhersagevarianz $\nu(\sym{r}_{\textnormal{fix}}, \sym{e_vec})$ in einem spezifischen Prognosepunkt minimiert werden, lässt sich die Ermittlung der optimalen \ac{AP}-Allokation algorithmisch als diskretes Suchproblem formulieren.
 Für eine gegebene Anzahl freier Stützstellen $\sym{n}_{\sym{idx_AP}}$ (im vorliegenden Visualisierungsbeispiel $\sym{n}_{\sym{idx_AP}} = 3$) wird die Designmatrix um die Vektoren potenzieller \acp{AP} aus der Kandidatenmenge $\sym{cand_set}$ erweitert.
-Da Prüfstandsrestriktionen eine punktgenaue Ansteuerung des theoretischen Optimums in der Praxis oft verhindern, identifiziert der Algorithmus die gesamte Menge aller \ac{AP}-Kombinationen, deren resultierende Varianz einen tolerierbaren Zielbereich nicht überschreitet. Dieser wird über eine relative Toleranzmarge $\sym{q}$ (beispielsweise ein Aufschlag von $5\,\%$ auf das absolute Minimum, $\sym{q}=0{,}05$) definiert:
+Da Prüfstandsrestriktionen eine punktgenaue Ansteuerung des theoretischen Optimums in der Praxis oft verhindern, identifiziert der Algorithmus jene Teilmenge des Parameterraums, in der eine Platzierung der Ankerpunkte die resultierende Varianz unterhalb einer definierten Toleranzschranke hält.
+Dieser Bereich wird über eine relative Toleranzmarge $\sym{q}$ (beispielsweise ein Aufschlag von $5\,\%$ auf das absolute Minimum, $\sym{q}=0{,}05$) definiert:
 \begin{equation} \label{eq:anchor_exposure}
     \sym{X_exposure} = \left\{ \sym{x}_{\sym{idx_AP}, \sym{idx_i}} \in \sym{cand_set} \;\middle|\; \nu(\sym{r}_{\textnormal{fix}}, \sym{e_vec}) \le \min(\nu) \cdot (1 + \sym{q}) \right\}
 \end{equation}
 Die Menge dieser zulässigen Koordinaten spannt die sogenannte \textbf{Anker-Exposition} (\textit{Exposure-Area}) $\sym{X_exposure}$ auf.
-Jede physikalisch realisierbare Kombination der drei umgewidmeten Versuchspunkte innerhalb dieses Toleranzfeldes garantiert dem Versuchsplaner, dass das Regressionsmodell auf dem Extrapolationspfad empirisch hochgradig effizient verankert wird. Gleichzeitig bleibt ausreichend Flexibilität für die technische Umsetzung am Prüfstand gewahrt.
+Jede physikalisch realisierbare Setzung der drei umgewidmeten Versuchspunkte innerhalb dieses Toleranzfeldes garantiert dem Versuchsplaner, dass das Regressionsmodell auf dem Extrapolationspfad empirisch hochgradig effizient verankert wird. Gleichzeitig bleibt ausreichend Flexibilität für die technische Umsetzung am Prüfstand gewahrt.
 Abbildung~\ref{fig:ma_abb5.2.2_exposure_scatter} illustriert diese Methodik exemplarisch: Das unveränderte Basis-\ac{CCD} wird um drei strategisch investierte Extrapolations-\acp{AP} im südwestlichen Quadranten erweitert.
 Die grau hinterlegte Anker-Exposition markiert dabei exakt jenen Parameterbereich, in dem eine beliebige Platzierung dieser \acp{AP} die Prädiktionsvarianz im anvisierten Prognosepunkt $(-0{,}7 ; -1{,}9)$ zuverlässig auf den definierten Schwellenwert limitiert.
 \begin{figure}[htbp]
@@ -705,7 +707,7 @@ Das durch topologische Ausdünnung gewonnene Gestaltungsbudget wird folglich nic
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Kostenstruktur der Lebensdauererprobung} \label{sec:kostenmodell}
 
-Die vorangegangenen Abschnitte~\ref{sec:abweichungen} und \ref{sec:adaptive_planung} zeigen, dass eine adaptive Manipulation der Orthogonalität eines Versuchsplans ein wertvolles geometrisches Gestaltungsbudget freisetzen kann.
+Während Abschnitt~\ref{sec:abweichungen} nachwies, dass die inhärente topologische Resilienz klassischer Versuchspläne ein wertvolles geometrisches Gestaltungsbudget freisetzt, demonstrierte Abschnitt~\ref{sec:adaptive_planung} die proaktive Reinvestition dieses Budgets: Die zielgerichtete Allokation asymmetrischer Ankerpunkte minimiert die Prädiktionsvarianz im Extrapolationsraum signifikant.
 Die bisherige Evaluierung fokussierte sich dabei primär auf die \textbf{statistische Effektivität} der Versuchsdesigns - also auf deren fundamentale methodische Fähigkeit, die wahren physikalischen Zusammenhänge unverfälscht (\textit{Bias}, \ac{MSE}, Optimalitäten) und mit der geforderten Nachweissicherheit (\ac{power}) zu identifizieren.
 Statistische Effektivität bildet jedoch lediglich die unabdingbare Grundvoraussetzung für die industrielle \ac{EoL}-Versuchsplanung.
 Ein effektiver Versuchsplan wird in der Praxis erst dann zu einem \textbf{effizienten} Versuchsplan, wenn er die geforderten statistischen Zielvorgaben unter minimalem Ressourceneinsatz und zwingend innerhalb eines limitierten Zielbudgets erreicht.
@@ -744,7 +746,7 @@ Es verdeutlicht die Interdependenzen der Domänen und zeigt auf, wie die einzeln
 Um die theoretischen Relationen dieser Kostendomänen in einen ingenieurspraktischen Kontext zu setzen, können für typische \ac{EoL}-Prüfszenarien im Maschinen- und Automobilbau charakteristische Annahmen getroffen werden.
 Die Investitionskosten für derartige Anlagen ($\sym{C}_{\sym{idx_cost_test_eq}}$) belaufen sich branchenüblich auf mittlere bis hohe sechsstellige Beträge, welche kalkulatorisch zumeist über eine Nutzungsdauer von sechs bis acht Jahren abgeschrieben werden \cite{AfA.2000}.
 Trotz dieser substanziellen Fixkosten verdeutlicht die praxisnahe Aufschlüsselung die absolute Dominanz der laufenden Durchführungskosten ($\sym{C}_{\sym{idx_cost_size}}$) bei \ac{EoL}-Untersuchungen:
-Durch die inhärente Auslegung auf Dauerlauf -- oftmals im 24/7-Betrieb mit Auslastungen von weit über 4.000 Betriebsstunden pro Jahr -- degeneriert der Anteil der reinen Anlagenabschreibung pro Betriebsstunde auf einen marginalen Bruchteil der Investitionssumme.
+Durch die inhärente Auslegung auf Dauerlauf - oftmals im 24/7-Betrieb mit Auslastungen von weit über 4.000 Betriebsstunden pro Jahr - degeneriert der Anteil der reinen Anlagenabschreibung pro Betriebsstunde auf einen marginalen Bruchteil der Investitionssumme.
 
 Die tatsächliche Kostendynamik wird stattdessen von zwei operativen Hebeln determiniert:
 Erstens skaliert der lastabhängige Energieverbrauch $\sym{C}_{\sym{idx_cost_ener}}$ proportional mit den Laufzeiten $\sym{t}_{\sym{idx_i}}$.
@@ -780,7 +782,7 @@ Diese normierten Verhältnisangaben verdeutlichen das Spannungsfeld zwischen sta
         Durchführung          & Hilfs- und Betriebsstoffe                         & $\sym{C}_{\sym{idx_cost_help}}$                        & $\ll 0{,}005\,\%$                                                                                                         \\
         Durchführung          & Rüst- und Bedienpersonal                          & $\sym{C}_{\sym{idx_cost_op}}$                          & $\approx 0{,}015\,\% - 0{,}025\,\%$ p.\,Ah                                                                                \\
         \bottomrule
-        \multicolumn{4}{@{}p{\linewidth}@{}}{\footnotesize \textsuperscript{a} bei 6--8 Jahren Nutzungsdauer \cite{AfA.2000}; \textsuperscript{b} in Anlehnung an VDI 3258 \cite{VDI3258}; \textsuperscript{c} gem. VDI 2884 \cite{VDI2884}.}                          \\
+        \multicolumn{4}{@{}p{\linewidth}@{}}{\footnotesize \textsuperscript{a} bei 6-8 Jahren Nutzungsdauer \cite{AfA.2000}; \textsuperscript{b} in Anlehnung an VDI 3258 \cite{VDI3258}; \textsuperscript{c} gem. VDI 2884 \cite{VDI2884}.}                           \\
         \multicolumn{4}{@{}p{\linewidth}@{}}{\footnotesize \textit{Anmerkung:} Bh = Betriebsstunde (Anlage aktiv), Ah = Arbeitsstunde (Personal aktiv).}
     \end{tabular}
 \end{table}
@@ -805,18 +807,18 @@ Die vorangegangenen Abschnitte dieses Kapitels bauen die methodischen Grundlagen
 In Abschnitt~\ref{sec:abweichungen} evaluieren Sensitivitätsanalysen generelle Einflüsse von Orthogonalitätsabweichungen auf die Variabilität von Trennschärfe (\ac{power}) und Schätzfehler (\textit{Bias}).
 Diese Betrachtung gipfelt in Abschnitt~\ref{subsec:ergebnisse_generic} in der Erkenntnis, dass praxismotivierte Designmodifikationen hinsichtlich ihrer Auswirkungen auf die statistische Effektivität oftmals tolerabel bleiben.
 Abschnitt~\ref{sec:adaptive_planung} greift diese Erkenntnis auf und bewertet sie aus der Perspektive einer für \acp{ALT} motivierten Optimierung der Prädiktionsvarianz.
-Es zeigt sich, wie freigewordene Versuchspunkte - das identifizierte geometrische Gestaltungsbudget - proaktiv genutzt werden, um die Extrapolationsvarianz für die multidimensionale und beschleunigte Lebensdauererprobung gezielt zu minimieren.
+Es zeigt sich, wie freigewordene Versuchspunkte -- das identifizierte geometrische Gestaltungsbudget -- proaktiv genutzt werden, um die Extrapolationsvarianz für die multidimensionale und beschleunigte Lebensdauererprobung gezielt zu minimieren.
 Abschnitt~\ref{sec:kostenmodell} versieht diese topologischen Aspekte schließlich mit einem monetären Preisschild. Das eingeführte Kostenmodell dient der objektiven Quantifizierung ökonomischer Vergünstigungen, welche aus der asymmetrischen Re-Allokation der Versuchspunkte resultieren.
 
 Der vorliegende Abschnitt bildet abschließend die Brücke zu lebensdauerverteilten Daten.
 Für die industrielle \ac{EoL}-Versuchsplanung greift das bisherige, idealisierte Setup aus Sicht der spezifischen Datenlage noch zu kurz, da reale Ausfallzeiten streng positiv, oftmals rechtsschief verteilt und durch Prüfzeitverkürzungen zensiert sind \cite{Meeker.2022}.
-In einem finalen Syntheseschritt erfährt die Methodik der Extrapolationsabsicherung (\textbf{EmALT}) daher den Transfer in die komplexe stochastische Realität der Zuverlässigkeitstechnik.
-In diesem finalen Syntheseschritt erfährt die Methodik der Extrapolationsabsicherung (\textbf{\ac{EmALT}}) den Transfer in die stochastische Realität der Zuverlässigkeitstechnik, indem der in Abbildung~\ref{fig:mcs_framework} etablierte Gesamt-Simulationspfad nun vollumfänglich aktiviert wird.
-Während in den Vorstudien (Abschnitte~\ref{sec:abweichungen} und~\ref{sec:adaptive_planung}) primär die statistische Effektivität unter idealisierter Normalverteilung betrachtet wurde, koppelt die nachfolgende Untersuchung nun die iterative \ac{MLE}  Ausfalldaten mit dem dynamischen Kostenmodell.
-Das gewählte \ac{EmALT} orientiert sich wie gehabt an dem in Abschnitt~\ref{subsec:evg_plot} beispielhaft gewählten Set an \acp{AP} im südwestlichen Quadranten, um die Prädiktionsvarianz entlang des Extrapolationsvektors zum realen Feldbetriebspunkt zu minimieren.
-Dazu transformiert die Methodik das zugrundeliegende Regressionsmodell in ein log-lineares \ac{AFT}-Modell auf Basis einer Weibull-verteilten Lebensdauer $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ und bettet dieses in die etablierte Monte-Carlo-Simulationsumgebung ein.
+In einem finalen Syntheseschritt vollzieht die Methodik der Extrapolationsabsicherung (\textbf{\ac{EmALT}}) daher den Transfer in die komplexe stochastische Realität der Zuverlässigkeitstechnik, indem der in Abbildung~\ref{fig:mcs_framework} etablierte Gesamt-Simulationspfad nun vollumfänglich aktiviert wird.
+Während in den Vorstudien (Abschnitte~\ref{sec:abweichungen} und~\ref{sec:adaptive_planung}) primär die statistische Effektivität unter idealisierter Normalverteilung betrachtet wurde, koppelt die nachfolgende Untersuchung nun die iterative \ac{MLE} von Ausfalldaten direkt mit dem dynamischen Kostenmodell.
 
-Um die Effektivität der adaptiven Extrapolationsabsicherung abschließend zu quantifizieren, evaluiert die nachfolgende \ac{MCS} drei spe\-zi\-fi\-sche De\-sign-Kon\-fi\-gu\-ra\-tio\-nen gegeneinander.
+Um die geometrischen Eigenschaften der neuen \ac{EmALT}-Topologie jedoch sauber von den verteilungsspezifischen Eigenheiten der Weibull-Schätzung zu trennen, erfolgt die Evaluierung in einem \textbf{zweistufigen Prozess}: Zunächst wird die asymmetrische Versuchsplanung isoliert unter idealisierten \ac{OLS}-Bedingungen validiert (Abschnitt~\ref{subsec:spvbias}), bevor in Abschnitt~\ref{sec:ldoe} der vollständige stochastisch-ökonomische Transfer auf das Weibull-Modell stattfindet.
+Das gewählte \ac{EmALT} orientiert sich dabei wie gehabt an dem in Abschnitt~\ref{subsec:evg_plot} beispielhaft gewählten Set an \acp{AP} im südwestlichen Quadranten, um die Prädiktionsvarianz entlang des Extrapolationsvektors zum realen Feldbetriebspunkt zu minimieren.
+
+Um die Effektivität der adaptiven Extrapolationsabsicherung abschließend zu quantifizieren, evaluiert die nachfolgende \ac{MCS} drei spezifische Design-Konfigurationen gegeneinander.
 Alle Konfigurationen verfügen über den exakt gleichen Ressourcenaufwand von $\sym{N} = 13$ Versuchspunkten:
 \begin{enumerate}
     \item \textbf{Basis \ac{CCD} (Referenz):} Der klassische rotationssymmetrische Versuchsplan, bestehend aus dem faktoriellen Kern ($\sym{n}_{\sym{idx_F}}=4$), vier axialen \acp{SP} ($\sym{n}_{\sym{idx_S}}=4$, mit $\symsub{alpha}{idx_D}=\sqrt{2}$) sowie fünf redundanten \acp{ZP} ($\sym{n}_{\sym{idx_C}}=5$).
@@ -831,12 +833,12 @@ Entsprechend der Vorgehensweise in Abschnitt~\ref{subsec:ergebnisse_generic} eva
 
 \subsection{Signal-Rausch-Kalibrierung unter dem Sparsity of Effects Principle} \label{subsec:weibull_kalibrierung}
 
-Um die in der linearen Vorstudie (Abschnitt~\ref{sec:abweichungen}) etablierte methodische Vergleichbarkeit der Trennschärfe-Verluste aufrechtzuerhalten, erfährt das Referenz-Design für die Weibull-Simulation eine Sensibilisierung auf exakt denselben kritischen Arbeitspunkt $\sym{snr} = 1{,}20$ (vgl. Abschnitt~\ref{subsec:ergebnisse_generic}).
-Da absolute Regressionskoeffizienten in $\sym{Beta}$ zwischen dem additiven Normalverteilungsraum und Lebensdauermodellen nicht translationsinvariant sind, erfordert dieser Transfer die Ausnutzung der zugrundeliegenden Verteilungsmechanik.
+Um die in der linearen Vorstudie (Abschnitt~\ref{sec:abweichungen}) etablierte methodische Vergleichbarkeit der Trennschärfe-Verluste aufrechtzuerhalten, erfährt das Referenz-Design für die spätere Weibull-Simulation in Abschnitt~\ref{sec:ldoe} zunächst eine Sensibilisierung auf exakt denselben kritischen Arbeitspunkt $\sym{snr} = 1{,}20$.
+Da absolute Regressionskoeffizienten in $\sym{Beta}$ zwischen dem additiven Normalverteilungsraum und Lebensdauermodellen nicht translationsinvariant sind, erfordert dieser finale Transfer vorab die Ausnutzung der zugrundeliegenden Verteilungsmechanik.
 
 Beim Übergang zum \ac{AFT}-Modell ändert sich die Interpretation des Modells grundlegend:
 Aufgrund der strengen Positivität und der ausgeprägten Wertebereichsdynamik realer Ausfallzeiten modelliert die Regression nicht die Lebensdauer $\sym{t}$ selbst, sondern deren natürlichen Logarithmus $\ln(\sym{t})$ als Zielgröße.
-Unterliegt die physikalische Lebensdauer $\sym{t}$ einer Weibull-Verteilung, folgt ihr logarithmierter Wert $\ln(\sym{t})$ axiomatisch einer \ac{SEV} -- in der Literatur äquivalent als Gumbel-Verteilung für Minima bezeichnet \cite{Meeker.2022}.
+Unterliegt die physikalische Lebensdauer $\sym{t}$ einer Weibull-Verteilung, folgt ihr logarithmierter Wert $\ln(\sym{t})$ axiomatisch einer \ac{SEV} - in der Literatur äquivalent als Gumbel-Verteilung für Minima bezeichnet \cite{Meeker.2022}.
 Das \ac{AFT}-Modell formuliert sich in diesem logarithmischen Raum als lineares Regressionsmodell:
 \begin{equation}
     \ln(\sym{t}) = \sym{x}'\sym{beta} + \sym{sigma}_{\textnormal{SEV}} \cdot \sym{epsilon} \quad \text{mit} \quad \sym{epsilon} \sim \textnormal{SEV}(0, 1)
@@ -898,6 +900,10 @@ Daraus leitet sich die Parametrisierung für die nachfolgende \ac{MCS} ab:
 
 Analog zur Methodik aus Abschnitt~\ref{subsec:ergebnisse_generic} erfolgt die Auswertung der drei Design-Konfigurationen in einer stringenten zweistufigen Sequenz: Zunächst quantifizieren \textit{a priori} Design-Metriken den topologischen Orthogonalitätsverlust, bevor die probabilistische \ac{MCS} die tatsächlichen Auswirkungen auf Schätzpräzision und Entdeckungswahrscheinlichkeit beziffert.
 
+Die \textit{Ground Truth} der Simulation bildet in diesem methodischen Zwischenschritt nochmals das in Tabelle~\ref{tab:simulation_parameters_normal} definierte, normalverteilte Basismodell.
+Diese temporäre Rückkehr zur \ac{OLS}-Baseline ist zwingend erforderlich, um eine direkte und unverfälschte Vergleichbarkeit der durch \ac{EmALT} induzierten Varianzumverteilung gegenüber den generischen Orthogonalitätsabweichungen aus Abschnitt~\ref{subsec:ergebnisse_generic} zu gewährleisten, ohne dass diese durch die asymmetrische Schiefe und den inhärenten Bias der Weibull-\ac{MLE} überlagert werden.
+Abschnitt~\ref{sec:ldoe} schafft nachfolgend schließlich den finalen Übertrag auf die multivariate Lebensdauererprobung und behandelt Lebensdauer-verteilte (Weibull) Daten.
+
 Die algebraische Auswertung entlang Tabelle~\ref{tab:results_emalt_metrics_ols} bestätigt das erwartete Spannungsfeld:
 Der proaktive asymmetrische Eingriff bei Designmodifikationen nach \ac{EmALT} erzwingt den partiellen Verlust der Orthogonalität - messbar im Anstieg der Werte von $\sym{A2}$ und $\ac{VIF}$.
 Im direkten Vergleich zum rein passiv ausgedünnten Design $\textnormal{\ac{CCD}}_{-\textnormal{\ac{AP}}}$ belegt die \textit{I-Effizienz} jedoch den strukturellen Mehrwert einer nach Abschnitt~\ref{sec:adaptive_planung} motivierten Reallokation von Versuchspunkten zur Optimierung der Prädiktionsvarianzen im Feldbereich:
@@ -956,8 +962,8 @@ Alle im nachfolgenden Transfer auf Lebensdauermodelle auftretenden Effekte ordne
 
 \subsection{Effizientes \ac{L-DoE} und der Economic Extrapolation Power Index} \label{sec:ldoe}
 
-Die Synthese aus stochastischer Lebensdauermodellierung und varianzbasierter Versuchsplanung vollzieht den Übergang in die physikalische und ökonomische Realität beschleunigter Zuverlässigkeitstests.
-Auf Basis Weibull-verteilter Ausfallzeiten und einer log-linearen \ac{AFT}-Modellierung findet die Parameteridentifikation hier nun iterativ via \ac{MLE} statt.
+Nachdem im vorangegangenen Abschnitt die topologische Leistungsfähigkeit des \ac{EmALT}-Designs unter idealisierten Bedingungen nachgewiesen wurde, vollzieht die Synthese aus stochastischer Lebensdauermodellierung und varianzbasierter Versuchsplanung nun den finalen Übergang in die physikalische und ökonomische Realität beschleunigter Zuverlässigkeitstests.
+Auf Basis Weibull-verteilter Ausfallzeiten $\sym{t} \sim \sym{W}(\sym{T}, \sym{b})$ und einer log-linearen \ac{AFT}-Modellierung findet die Parameteridentifikation hier nun iterativ via \ac{MLE} statt.
 Dieser Übergang der mathematischen Domäne impliziert jedoch weit mehr als den Austausch des Schätzalgorithmus:
 Er aktiviert zwingend die in Abschnitt~\ref{sec:kostenmodell} eingeführte dynamische Kostenstruktur der Lebensdauererprobung.
 
@@ -981,11 +987,9 @@ Die Metrik skaliert proportional zur statistischen Detektionssicherheit, währen
 Um den Nachweis für die absolute Notwendigkeit dieses Trade-offs zu erbringen, erweitert das nachfolgende \ac{MCS}-Setup hier die bisherige Evaluierung um ein begleitendes, viertes Referenz-Design: das Feld-\ac{CCD}.
 Diese Konfiguration translatiert die orthogonale Designmatrix unskaliert auf die Koordinaten des fernen Prognosepunktes - den Feldbetriebsbereich.
 Methodisch fungiert dieses Konstrukt als analytischer Grenzwert, der das stochastische Ideal einer varianzarmen Interpolation unter Feldbedingungen mit der resultierenden, physikalisch determinierten Kostenfunktion kontrastiert.
-
 Die probabilistische Auswertung der \ac{MCS} belegt unter diesen Prämissen zunächst die grundlegende numerische Stabilität der iterativen \ac{MLE} unter den Bedingungen stark eingeschränkter Stichprobenumfänge ($\sym{N}=13$).
-Beim Übergang von der idealisierten \ac{OLS}-Regression zur \ac{MLE} rechtsschiefer \ac{SEV}-Residuen tritt theoriekonform der Effekt des Stichprobenbias kleiner Stichproben (\textit{Small-Sample Bias}) auf \cite{Meeker.2022}.
-Da die asymptotische Erwartungstreue des \ac{MLE}-Schätzers mathematisch erst für $N \to \infty$ konvergiert, induziert der Stichprobenumfang von $\sym{N}=13$ eine systematische Varianz- und Parameterverschiebung, welche in Tabelle~\ref{tab:results_emalt_bias_wbl} quantifiziert wird.
-
+Beim Übergang von der idealisierten \ac{OLS}-Regression zur \ac{MLE} rechtsschiefer \ac{SEV}-Residuen tritt theoriekonform eine systematische Verzerrung infolge des geringen Stichprobenumfangs (\textit{Small-Sample Bias}) auf \cite{Meeker.2022}.
+Da die asymptotische Erwartungstreue des \ac{MLE}-Schätzers mathematisch erst für $N \to \infty$ konvergiert, induziert der limitierte Prüfumfang von $\sym{N}=13$ eine systematische Varianz- und Parameterverschiebung, welche in Tabelle~\ref{tab:results_emalt_bias_wbl} quantifiziert wird.
 \input{tables/tab_results_emalt_bias_wbl.tex}
 
 Die detaillierte Analyse des relativen systematischen Schätzfehlers offenbart zwei fundamentale stochastische Gesetzmäßigkeiten:
@@ -1055,7 +1059,7 @@ Das theoretische Feld-\ac{CCD} erzielt zwar durch \ac{SPV}$ = 2{,}60$ eine hohe 
 Die unbeschleunigte Erprobung unter Feldbedingungen erweist sich gegenüber der für das \ac{EmALT}-Design geschätzten Kostenumfänge demnach als um den Faktor $1{,}59$ kostenintensiver, vergleiche Tabelle~\ref{tab:results_emalt_kpi_eco}.
 Das im \ac{ALT}-Bereich verortete Design unterbietet diesen Ressourcenaufwand drastisch, wobei das \ac{EmALT}-Design diese deutliche Ersparnis bei nahezu identischer Prädiktionsschärfe (\ac{SPV}$ = 2{,}39$) realisiert.
 Obgleich das Basis-\ac{CCD} mit $74{,}4\text{ kCU}$ den absolut geringsten monetären Aufwand erfordert, kollabieren seine $\sym{epi}$-Werte aufgrund der massiven Extrapolationsvarianz ($\sym{pred_var} = 20{,}5$) nahezu vollständig.
-Im Gegensatz dazu dominiert das \ac{EmALT}-Design die Metrik mit weitem Abstand -- und zeigt insbesondere bei den für die Krümmung essenziellen quadratischen Termen (wie $\hat{\sym{beta}}_{22}$) signifikant überlegene $\sym{epi}$-Werte.
+Im Gegensatz dazu dominiert das \ac{EmALT}-Design die Metrik mit weitem Abstand - und zeigt insbesondere bei den für die Krümmung essenziellen quadratischen Termen (wie $\hat{\sym{beta}}_{22}$) signifikant überlegene $\sym{epi}$-Werte.
 Die numerische Bilanz belegt damit unmissverständlich, dass das \ac{EmALT}-Konzept das globale Optimum aus Kostendämpfung durch Beschleunigung und zwingend erforderlicher Prognosesicherheit im fernen Feldbereich darstellt.
 Dass diese antagonistische Kausalität kein isoliertes Phänomen des quadratischen Terms darstellt, sondern für alle verbleibenden Modellkoeffizienten systematisch Bestand hat, wird durch die vollumfängliche Evaluation in Tabelle~\ref{tab:results_emalt_kpi_eco} und Anhang~\ref{app:c_effizienz} zweifelsfrei belegt.
 Ein rein durch klassische Optimalitätskriterien motiviertes Festhalten an orthogonalen Versuchsplänen erweist sich somit im Rahmen der Lebensdauererprobung mittels \ac{DoE} als systematisch ineffizient, da vordergründig eingesparte Prüfstandsressourcen durch eine unzulässig hohe, potenziell sicherheitskritische Prognoseunsicherheit im Feldbetrieb kompensiert werden müssen.

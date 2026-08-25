@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{144.66456985bp}%
+    \setlength{\unitlength}{133.49837494bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,35 +50,38 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,1.16761481)%
+  \begin{picture}(1,1.26527745)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{ma_abb1_aufbau.pdf}}%
-    \put(0.24304619,1.13011029){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:einleitung}}\end{tabular}}}}%
+    \put(0.26197068,1.22463594){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:einleitung}}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{ma_abb1_aufbau.pdf}}%
-    \put(0.24311536,1.07129078){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Einleitung}\end{tabular}}}}%
+    \put(0.26204564,1.16089659){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Einleitung}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{ma_abb1_aufbau.pdf}}%
-    \put(0.24284633,0.90939133){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Stand der Technik und Forschung}\end{tabular}}}}%
+    \put(0.26175411,0.9854554){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Stand der Technik und Forschung}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{ma_abb1_aufbau.pdf}}%
-    \put(0.24371524,0.81531185){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:ansatz}}\end{tabular}}}}%
-    \put(0.24304618,0.97615214){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:stand}}\end{tabular}}}}%
-    \put(0.24730516,0.75937653){\makebox(0,0)[t]{\lineheight{1.04999995}\smash{\begin{tabular}[t]{c}\textit{Forschungsbedarf in der effizienten }\\\textit{Testplanung für multivariate }\\\textit{Lebensdauermodellierungen}\end{tabular}}}}%
+    \put(0.26269569,0.88350683){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:ansatz}}\end{tabular}}}}%
+    \put(0.26197067,1.05780027){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:stand}}\end{tabular}}}}%
+    \put(0.26658588,0.82289293){\makebox(0,0)[t]{\lineheight{1.04999995}\smash{\begin{tabular}[t]{c}\textit{Forschungsbedarf in der effizienten }\\\textit{Testplanung für multivariate }\\\textit{Lebensdauermodellierungen}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{ma_abb1_aufbau.pdf}}%
-    \put(0.24347695,0.60919086){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:screening}}\end{tabular}}}}%
+    \put(0.26243747,0.66014528){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:screening}}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=6]{ma_abb1_aufbau.pdf}}%
-    \put(0.24772024,0.55117893){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Methodik zum heuristischen }\\\textit{Parameterscreening}\end{tabular}}}}%
+    \put(0.26703568,0.59728107){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Methodik zum heuristischen }\\\textit{Parameterscreening}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{ma_abb1_aufbau.pdf}}%
-    \put(0.24378441,0.43850608){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:entwurf}}\end{tabular}}}}%
+    \put(0.26277065,0.47518393){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:entwurf}}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{ma_abb1_aufbau.pdf}}%
-    \put(0.24737433,0.38907448){\makebox(0,0)[t]{\lineheight{1.04999995}\smash{\begin{tabular}[t]{c}\textit{Numerische Untersuchung zur }\\\textit{statistischen Effektivität }\\\textit{effizienter Lebensdauertests}\end{tabular}}}}%
+    \put(0.26666084,0.42161773){\makebox(0,0)[t]{\lineheight{1.04999995}\smash{\begin{tabular}[t]{c}\textit{Numerische Untersuchung zur }\\\textit{statistischen Effektivität }\\\textit{effizienter Lebensdauertests}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{ma_abb1_aufbau.pdf}}%
-    \put(0.24353843,0.24148424){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:casestudy}}\end{tabular}}}}%
+    \put(0.2625041,0.26168261){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:casestudy}}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{ma_abb1_aufbau.pdf}}%
-    \put(0.24365374,0.17525046){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Fallstudie}\end{tabular}}}}%
+    \put(0.26262905,0.18990884){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Fallstudie}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{ma_abb1_aufbau.pdf}}%
-    \put(0.24317685,0.08411606){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:fazit}}\end{tabular}}}}%
+    \put(0.26211227,0.0911517){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Kapitel~\ref{chap:fazit}}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=12]{ma_abb1_aufbau.pdf}}%
-    \put(0.24294626,0.02433366){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Zusammenfassung und Ausblick}\end{tabular}}}}%
+    \put(0.26186239,0.02636892){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Zusammenfassung und Ausblick}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=13]{ma_abb1_aufbau.pdf}}%
+    \put(0.53143743,0.6600606){\makebox(0,0)[lt]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{l}Heuristische Reduktion des \\hochdimensionalen Para-\\meterraums auf lebens-\\dauerkritische Stressoren \end{tabular}}}}%
+    \put(0.53143743,0.28224704){\makebox(0,0)[lt]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{l}Empirische Validierung der \\Extrapolationsabsicherung \\mittels realer Prüfstandsdaten, \\prädiktiver Konfirmationstests \\und Aufwandsbewertung.\end{tabular}}}}%
+    \put(0.53143743,0.47747411){\makebox(0,0)[lt]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{l}Simulativer Nachweis topo-\\logischer Resilienz, Entwick-\\lung des \ac{EmALT}-Designs \\und ökonomisch-statistische \\Effizienzbilanzierung.\end{tabular}}}}%
   \end{picture}%
 \endgroup%

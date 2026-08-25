@@ -51,6 +51,8 @@ BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thic
   \usepackage{multirow}   % tables
   \usepackage{upgreek}    % upright greek letters
   \usepackage{longtable}  % tables across multiple pages
+  \usepackage{bbding}
+
 
 
 % Citation style. If your institute has specific requirements, configure here:
@@ -465,7 +467,8 @@ Giuseppe Mannone, Kim Hintz und Erich Rittmaier danke ich für die wertvollen Di
 Ein besonderer Dank gilt Dr.-Ing. Kevin Lucan für das vertrauensvolle, unternehmerische Umfeld und die großen individuellen Freiheiten, von denen ich und viele ehemalige Kollegen nachhaltig profitieren dürfen.
 Gleichermaßen danke ich allen studentischen Hilfskräften und Verfassern von Abschlussarbeiten für ihre tatkräftige Unterstützung.
 
-Der wichtigste Dank gebührt meiner Familie. Meiner Ehefrau Marei und meiner Tochter Karla danke ich von ganzem Herzen für den unermüdlichen Rückhalt und die grenzenlose Geduld in all den Phasen, in denen diese Arbeit meine Zeit beansprucht hat.
+Der wichtigste Dank gebührt meiner Familie.
+Meiner Ehefrau Marei und meiner Tochter Karla danke ich von ganzem Herzen für den unermüdlichen Rückhalt und die grenzenlose Geduld in all den Phasen, in denen diese Arbeit meine Zeit beansprucht hat.
 
 \vspace{2cm}
 \noindent Ravensburg, im September 2026 \hfill Marco Arndt
@@ -476,17 +479,17 @@ Der wichtigste Dank gebührt meiner Familie. Meiner Ehefrau Marei und meiner Toc
 Die funktionale Absicherung technischer Produkte und Systeme über deren gesamten Lebenszyklus stellt eine zentrale Säule des industriellen Produktentwicklungsprozesses dar.
 Zur Vermeidung von Feldausfällen innerhalb des Gewährleistungszeitraums bei simultaner Reduktion der Entwicklungszyklen bedient sich die Zuverlässigkeitstechnik beschleunigter Lebensdauerprüfungen (\textit{Accelerated Life Testing}).
 Da die Degradationskinematik technischer Systeme zumeist von mehreren interagierenden Lastgrößen determiniert wird, erfordert die empirische Modellierung zwingend den Einsatz der multivariaten statistischen Versuchsplanung (\textit{Design of Experiments}).
-Als methodischer Standard hat sich hierbei die \textit{Response Surface Methodology} auf Basis des \textit{Central Composite Design (CCD)} etabliert.
+Als methodische für ingenieurs-wissenschaftliche Anwendungen adäquat hat sich hierbei die \textit{Response Surface Methodology} auf Basis des \textit{Central Composite Design (CCD)} etabliert.
 
 Die ungeprüfte Übertragung klassischer Design of Experiments - Prinzipien auf die Zuverlässigkeitstechnik offenbart jedoch fundamentale methodische Diskrepanzen.
-Während konventionelle Versuchspläne auf geometrische Orthogonalität, Symmetrie und eine maximale Schätzpräzision im Zentrum des Versuchsraums (Interpolation) ausgelegt sind, erfordert die Lebensdauererprobung prinzipbedingt die Extrapolation: Um Ausfälle in wirtschaftlich vertretbarer Zeit zu induzieren, müssen Versuche unter signifikant erhöhten Lasten (typischerweise im nordöstlichen Parameterraum) durchgeführt werden.
-Die primäre Zielsetzung der Modellbildung ist indes die Generierung verlässlicher Prognosen unter moderaten Feldbedingungen (im südwestlichen Parameterraum).
-Erschwerend verletzen Lebensdauerdaten durch ihre inhärente Asymmetrie (Weibull-Verteilung) und das Auftreten von Zensierungen die klassischen Prämissen normalverteilter Residuen.
+Während konventionelle Versuchspläne auf geometrische Orthogonalität, Symmetrie und eine maximale Schätzpräzision im Zentrum des Versuchsraums (Interpolation) ausgelegt sind, erfordert die Lebensdauererprobung prinzipbedingt die Extrapolation: Um Ausfälle während (\textit{End of Life Testing}) in wirtschaftlich vertretbarer Zeit zu induzieren, müssen Versuche unter signifikant erhöhten Lasten (\textit{typischerweise im nordöstlichen Parameterraum}) durchgeführt werden.
+Die primäre Zielsetzung der Modellbildung ist indes die Generierung verlässlicher Prognosen unter moderaten Feldbedingungen (\textit{im südwestlichen Parameterraum}).
+Erschwerend verletzen Lebensdauerdaten durch ihre inhärente Asymmetrie (i.d.R.\textit{Weibull}-Verteilung) und das Auftreten von Zensierungen die klassischen Prämissen normalverteilter Residuen.
 
 Die vorliegende Dissertation adressiert diesen methodischen Konflikt und entwickelt ein holistisches Framework zur Auslegung hocheffizienter, multivariater Lebensdauertests.
 Als Fundament dient die Einführung eines heuristischen Screening-Verfahrens.
 Da die Komplexität multivariater Versuchspläne exponentiell mit der Anzahl der Faktoren skaliert, fungiert dieser Ansatz als deterministischer Filter zwischen qualitativer Systemanalyse und quantitativer Testplanung.
-Durch die methodische Fokussierung auf zeitabhängige Degradationsmechanismen wird die Dimensionalität des Parameterraums im Vorfeld rational auf die vitalen Einflussgrößen reduziert, ohne aufwendige experimentelle Vorversuche zu erfordern.
+Durch die methodische Fokussierung auf zeitabhängige Degradationsmechanismen wird die Dimensionalität des Parameterraums im Vorfeld rational auf die vitalen Einflussgrößen reduziert, ohne zunächst aufwendige experimentelle Vorversuche zu erfordern.
 
 Im informationstheoretischen Kern der Arbeit wird das CCD systematisch auf seine Robustheit gegenüber praxisinduzierten Restriktionen evaluiert.
 Umfangreiche Monte-Carlo-Simulationen auf Basis pseudo-physikalischer \textit{Ground-Truth}-Modelle belegen eine ausgeprägte topologische Resilienz des Designs.
@@ -495,14 +498,14 @@ Der resultierende methodische Informationsverlust (\textit{Design-Penalty}) wird
 
 Diese nach\-gewiesene Fehler\-toleranz legitimiert den Über\-gang zur adaptiven Versuchsplanung.
 Der bewusste Verzicht auf strikte geometrische Symmetrie zugunsten reduzierter Prüfumfänge erschließt ein wertvolles geometrisches Gestaltungsbudget.
-Anstatt Versuchspunkte ausschließlich zur passiven Kostensenkung zu eliminieren, werden freigewordene Stützstellen proaktiv modifiziert und als Ex\-tra\-po\-la\-tions-Anker\-punkte in Richtung des anvisierten Feldbereichs verlagert.
+Anstatt Versuchspunkte ausschließlich zur passiven Kostensenkung zu eliminieren, werden freigewordene Stützstellen proaktiv modifiziert und während dem bereits etablierten Augmentierungs-Vorgang bei der Versuchsumsetzung als Ex\-tra\-po\-la\-tions-Anker\-punkte in Richtung des anvisierten Feldbereichs verlagert.
 Dieser strategische Brückenbau im Parameterraum - formalisiert im neu entwickelten \textbf{Extrapolation\-variance minimized Accelerated Lifetime Testing Design (EmALT)} - stützt das Regressionsmodell entlang des maßgeblichen Extrapolationspfads empirisch ab.
 Um den stochastischen Leistungsgewinn dieser gerichteten Asymmetrie objektiv bewerten zu können, wird die \textit{Scaled Prediction Variance} als formale Metrik für die Vor\-her\-sage\-un\-sicher\-heit herangezogen.
 Da klassische Bewertungswerkzeuge wie der \textit{Variance Dispersion Graph} infolge ihrer Rotationssymmetrie sicherheitskritische blinde Flecken (\textit{Blind Spots}) bei gerichteten Extrapolationen aufweisen, wird der \textbf{\textit{Extrapolation Variance Graph}} eingeführt.
 Dieser ermöglicht die richtungsabhängige Quantifizierung der Prognosevarianz und belegt formal, dass die Allokation von Ankerpunkten die Unsicherheit am Feld-Betriebspunkt massiv reduziert.
 
 Um den methodischen Transfer dieses adaptiven Konzepts in die industrielle Zuverlässigkeitspraxis zu gewährleisten, erfolgt die Übertragung der Methodik von der idealisierten \textit{Ordinary Least Squares}-Regression auf multivariate Lebensdauermodelle.
-Anhand Weibull-verteilter Daten und iterativer Parameteridentifikation mittels \textit{Maximum-Likelihood-Estimation} wird validiert, dass die Extrapolationsabsicherung auch unter den Bedingungen realer Prüfstandsrestriktionen, Frühausfällen und Zensierungen ihre überlegene Prognosefähigkeit bewahrt, was durch signifikant schmalere Konfidenzintervalle im Feldbereich belegt wird.
+Anhand Weibull-verteilter Daten und iterativer Parameteridentifikation mittels \textit{Maximum-Likelihood-Estimation} wird validiert, dass die Extrapolationsabsicherung auch unter den Bedingungen realer Prüfstandsrestriktionen ihre überlegene Prognosefähigkeit bewahrt, was durch signifikant schmalere Konfidenzintervalle im Feldbereich belegt wird.
 
 Den Abschluss bildet die Synthese mit einem entwickelten ökonomischen Effizienz- und Kostenmodell, welches den Zielkonflikt der Lebensdauererprobung quantifiziert:
 Ein in den Feldbereich verschobener Ankerpunkt steigert die statistische Prognosegüte, verursacht jedoch durch die reduzierte Stressbeschleunigung exponentiell längere Laufzeiten und folglich höhere Prüfstandskosten.

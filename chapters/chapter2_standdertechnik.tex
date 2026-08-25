@@ -294,7 +294,7 @@ Die Anwendung von \ac{DoE} versteht sich grundsätzlich als Verfahrenskette entl
     \centering
     \def\svgwidth{0.9\textwidth}
     \input{plots/ma_abb2.02_doe_steps.pdf_tex}
-    \caption{\ac{DoE} Steps gemäß \cite{Coleman.1993}}
+    \caption{\ac{DoE} Prozess-Schritte gemäß \cite{Coleman.1993}}
     \label{fig:ma_abb2.02_doe_steps}
 \end{figure}
 Das erklärte Ziel ist es, den kausalen Zusammenhang zwischen Einflussfaktoren und Systemantwort funktional abzubilden.
@@ -464,14 +464,14 @@ Mathematisch wird die Anzahl der Versuche dabei auf
 reduziert, wobei $\sym{p_f}$ den Grad der Fraktionierung (die Anzahl der Generatoren) angibt.
 Die Validität dieses Vorgehens stützt sich auf zwei fundamentale empirische Postulate \cite{Montgomery.2021,Rigdon.2022}:
 \begin{itemize}
-    \item Die \textbf{Effekthierarchie} besagt, dass Effekte niedrigerer Ordnung -- primär Haupteffekte -- in der Regel eine größere Amplitude aufweisen und mit höherer Wahrscheinlichkeit signifikant sind als Effekte höherer Ordnung.
+    \item Die \textbf{Effekthierarchie} besagt, dass Effekte niedrigerer Ordnung - primär Haupteffekte - in der Regel eine größere Amplitude aufweisen und mit höherer Wahrscheinlichkeit signifikant sind als Effekte höherer Ordnung.
     \item Die \textbf{Effektvererbung} impliziert, dass das Auftreten signifikanter Wechselwirkungen oder quadratischer Terme strukturell an die Signifikanz ihrer korrespondierenden Haupteffekte gekoppelt ist.
 \end{itemize}
 Eine direkte Konsequenz dieser Reduktion („Der Preis der Einsparung“) ist jedoch, dass sich in teil-faktoriellen Versuchsplänen bestimmte Effekte nicht mehr isoliert betrachten lassen (vgl. Abbildung~\ref{fig:abb2.05.1_vfdesign_plot} für den Fall einer Fraktionierung).
 So sind beispielsweise Haupteffekte unter Umständen nicht mehr zweifelsfrei von Wechselwirkungen höherer Ordnung zu unterscheiden. Da sich diese Effekte statistisch überlagern, spricht man von einer \textbf{Vermengung} (engl. \textbf{Aliasing}).
 Die Schwere dieser Vermengung wird dabei über die \textbf{Auflösung} (engl. Resolution) des Versuchsplans klassifiziert (z.\,B. Auflösung III, IV oder V).
 Wird dieser Informationsverlust jedoch bewusst in Kauf genommen und ingenieurwissenschaftlich bewertet, ermöglicht dies eine signifikante Reduktion des Versuchsumfangs, um effizient die dominanten Faktoren aus der initialen Parametermenge zu isolieren.
-Diese Vorgehensweise ist von hoher Relevanz, da Lebensdauertests -- ob als beschleunigte Prüfung mittels \ac{ALT} oder unter Feldbedingungen -- durch die inhärente Zeitabhängigkeit der Systemantwort erhebliche Kapazitäten binden und Ergebnisse nicht ad hoc verfügbar sind.
+Diese Vorgehensweise ist von hoher Relevanz, da Lebensdauertests - ob als beschleunigte Prüfung mittels \ac{ALT} oder unter Feldbedingungen - durch die inhärente Zeitabhängigkeit der Systemantwort erhebliche Kapazitäten binden und Ergebnisse nicht ad hoc verfügbar sind.
 Im Sinne einer ressourceneffizienten Gesamtstrategie sollten die Screening-Versuche daher idealerweise so konzipiert sein, dass sie nahtlos in einen nachfolgenden, höher aufgelösten Versuchsplan integriert (\textbf{augmentiert}) werden können.
 
 \subsubsection{Wirkungsflächenversuchspläne} \label{subsubsec:rsm}
@@ -497,7 +497,7 @@ Ein \ac{CCD} entsteht durch die Augmentierung des ursprünglichen voll- (oder te
         \setlength\figureheight{\figurewidth}
 
         \input{plots/ma_abb2.07_CCD_design.tex}
-        \caption{Versuchsplan (CCD)}
+        \caption{Versuchsplan (\ac{CCD})}
         \label{fig:abb2.07.1_ccd_plot}
     \end{subfigure}
     \hfill
@@ -735,7 +735,7 @@ Während der $\sym{A2}$-Indikator die Gesamtmatrix bewertet, stehen genau diese 
 Der \ac{VIF} dient als Maßzahl für Multikollinearität und quantifiziert den Faktor, um den sich die Varianz (und damit der \ac{MSE}) eines geschätzten Koeffizienten im Vergleich zu einem vollständig orthogonalen Design aufgrund von Korrelationen zwischen den Faktoren erhöht (vergleiche auch \textbf{Konditionszahl}) \cite{Hedderich.2020}.
 Während bei orthogonalen Plänen (Idealfall) ein $\text{\ac{VIF}} = 1$ vorliegt, deuten hohe Werte (typischerweise $>5$ oder $>10$) auf eine instabile Modellschätzung hin \cite{Kleppmann.2020,Montgomery.2021}.
 
-Zur lokalen Diagnose von Versuchspunkten und deren Auswirkung auf die Regressionsparameter existieren in der Fachliteratur etablierte Maßzahlen wie die Hebelwerte ($\sym{h}_{\sym{idx_i}\sym{idx_i}}$) der Prädiktionsmatrix, die Cook-Distanz ($\symsub{D}{idx_i}$) sowie detaillierte Einflussstatistiken wie $\sym{dfbetas}$, $\sym{dffits}$ und $\sym{covratio}$ - vergleiche Werke von \textcite{Siebertz.2026, Montgomery.2021, Belsley.2004, Fahrmeir.2009}.
+Zur lokalen Diagnose von Versuchspunkten und deren Auswirkung auf die Regressionsparameter existieren in der Fachliteratur etablierte Maßzahlen wie die Hebelwerte $\sym{h}_{\sym{idx_i}\sym{idx_i}}$ der Prädiktionsmatrix (engl. auch \textbf{Hat-Matrix}) $\sym{Hat} = \sym{X}(\sym{X}'\sym{X})^{-1}\sym{X}'$, die Cook-Distanz ($\symsub{D}{idx_i}$) sowie detaillierte Einflussstatistiken wie $\sym{dfbetas}$, $\sym{dffits}$ und $\sym{covratio}$ - vergleiche Werke von \textcite{Siebertz.2026, Montgomery.2021, Belsley.2004, Fahrmeir.2009}.
 Da es sich hierbei jedoch um rein retrospektive Diagnostikwerkzeuge handelt, die bereits vorliegende Versuchsergebnisse zwingend voraussetzen, finden sie im Rahmen der a priori Testplanung dieser Arbeit keine weitere Anwendung.
 
 % Ergänzend zur globalen Bewertung der Multikollinearität durch den \ac{VIF} erlaubt die Betrachtung der sogenannten \textbf{Prädiktionsmatrix} (engl. auch \textbf{Hat-Matrix})
@@ -1075,7 +1075,7 @@ Folglich wird eine zufallsverteilte Lebensdauer $\sym{tau}$ für ein Weibull-\ac
     \sym{f}(\sym{t}, \sym{X}) = \sym{b} \cdot \sym{t}^{\sym{b}-1} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} \right)}
     \cdot e^{-\sym{t}^{\sym{b}} e^{-\sym{b} \left( \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} \right)}}, \quad \sym{t} > 0.
 \end{equation}
-beschrieben und analog zu Gleichungen~\ref{eq:mle_likelihood_simple}--\ref{eq:mle_loglikelihood_censored} in die \textbf{\ac{GLL}-Funktion} überführt \cite{Russell.2019,Yang.2007,Aitkin.1980}:
+beschrieben und analog zu Gleichungen~\ref{eq:mle_likelihood_simple} - \ref{eq:mle_loglikelihood_censored} in die \textbf{\ac{GLL}-Funktion} überführt \cite{Russell.2019,Yang.2007,Aitkin.1980}:
 \begin{equation} \label{eq:log_likelihood_explicit}
     \begin{split}
         \sym{Lambda} & = \ln \left( \sym{L_like}(\symsub{t}{idx_i}; \sym{b}, \symsub{beta}{idx_0}, \dots, \symsub{beta}{k}) \right)                                                                                                                                                                                                                                                                                                        \\
