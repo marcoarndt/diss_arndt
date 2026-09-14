@@ -4,77 +4,72 @@
 
 \chapter{Einleitung} \label{chap:einleitung}
 
-Die funktionale Absicherung technischer Produkte und Systeme über ihren gesamten Lebenszyklus bildet das Fundament einer beherrschten industriellen Produktentwicklung.
-Motiviert durch zugesicherte Systemeigenschaften, die Wahrung der Markenintegrität sowie zunehmend restriktive normative und regulatorische Rahmenbedingungen ist ein proaktives Zuverlässigkeitsmanagement unerlässlich.
-Aus der Marktperspektive manifestiert sich dies in der Anforderung, dass komplexe technische Systeme - von automatisierten Fahrzeugarchitekturen über vernetzte mechatronische Subsysteme bis hin zu energie- und antriebstechnischen Anlagen - ihre spezifizierte Funktionalität über den definierten Einsatz- und Gewährleistungszeitraum ausfallfrei erfüllen.
+Die funktionale Absicherung technischer Produkte und Systeme über ihre gesamte \replaced[id=Daz]{Lebensdauer}{Lebenszyklus} bildet das Fundament einer beherrschten industriellen Produktentwicklung.
+Motiviert durch zugesicherte Systemeigenschaften, die Wahrung der Markenintegrität sowie zunehmend restriktive und regulatorische Rahmenbedingungen ist ein proaktives Zuverlässigkeitsmanagement, \added[id=Daz]{innerhalb dessen die Lebensdauererprobung eine grundlegende Validierungsmethode darstellt}, für Produkthersteller unerlässlich.
+Aus der Marktperspektive manifestiert sich dies in der Anforderung, dass komplexe technische Systeme - von automatisierten Fahrzeugarchitekturen über vernetzte mechatronische Subsysteme bis hin zu energie- und antriebstechnischen Anlagen - ihre spezifizierte Funktionalität über den definierten Einsatz- und Gewährleistungszeitraum \deleted[id=Daz]{ausfallfrei} erfüllen.
 
-Die Zuverlässigkeitstechnik stellt das methodische Instrumentarium bereit, um dieses Ausfallverhalten über den Produktlebenszyklus hinweg quantitativ zu beherrschen.
-Das Spektrum reicht von deterministischen Methoden der funktionalen Sicherheit (\textit{Safety}) über die stochastische Analyse von Felddaten bis hin zu Verfahren der statistischen Versuchsplanung für die beschleunigte Lebensdauererprobung (engl. \ac{ALT}).
-Das zentrale Ergebnis dieser probabilistischen Modellierung ist die Bestimmung der zeitabhängigen Überlebenswahrscheinlichkeit (Zuverlässigkeit $\sym{R}(\sym{t})$), welche die Wahrscheinlichkeit quantifiziert, dass ein System unter definierten Betriebs- und Umgebungsbedingungen bis zu einem Zeitpunkt $\sym{t}$ funktionsfähig bleibt \cite{Bertsche.2022}.
-Ungenügende Zuverlässigkeitsprognosen in der industriellen Praxis resultieren selten aus einem rein quantitativen Mangel an Prüfstandskapazitäten.
-Vielmehr begründen sich Fehleinschätzungen primär darin, dass im Betrieb simultan \textit{mehrere} heterogene Stressoren auf das System einwirken.
-Die resultierenden Schädigungsmechanismen werden maßgeblich durch latente Wechselwirkungen getrieben, welche durch isolierte, univariate Versuchsstrategien methodisch nicht erfasst werden können \cite{Meeker.2022, Rigdon.2022}.
+Die Zuverlässigkeitstechnik stellt die \added[id=Daz]{erforderlichen Methoden} bereit, um das Produkt-Ausfallverhalten über die Einsatzdauer hinweg quantitativ zu beherrschen.
+Das Spektrum reicht von \replaced[id=Daz]{präventiven}{deterministischen} Methoden der funktionalen Sicherheit über die stochastische Analyse von Felddaten bis hin zu Verfahren der statistischen Versuchsplanung für die beschleunigte Lebensdauererprobung - engl. \ac{ALT}.
+Ein \highlight[id=Daz, comment={präziser}]{zentrales Ergebnis} ist darauf aufbauend die probabilistische Modellierung der zeitabhängigen Überlebenswahrscheinlichkeit bzw. Zuverlässigkeit $\sym{R}(\sym{t})$, welche die Wahrscheinlichkeit quantifiziert, dass ein System unter definierten Betriebs- und Umgebungsbedingungen bis zu einem Zeitpunkt $\sym{t}$ funktionsfähig bleibt \cite{Bertsche.2022}.
+Ungenügende Zuverlässigkeitsprognosen in der industriellen Praxis resultieren dabei \replaced[id=Daz]{nicht ausschließlich}{selten} aus einem rein quantitativen Mangel an Prüfstandskapazitäten.
+Vielmehr begründen sich Fehleinschätzungen \replaced[id=Daz]{auch}{primär} darin, dass im Betrieb simultan \textit{mehrere} heterogene Stressoren als Einflussparameter auf das System einwirken.
+Auch können resultierenden Schädigungsmechanismen durch latente Wechselwirkungen getrieben werden, welche durch isolierte, univariate Versuchsstrategien methodisch schlichtweg nicht erfasst werden können \cite{Meeker.2022, Rigdon.2022}.
 
-Die Beherrschung dieser multivariaten Beanspruchungskollektive erfordert folglich den Einsatz statistischer Versuchsmethoden.
-Mit der fortschreitenden mechatronischen Integration und Funktionsverdichtung gewinnt die multivariate Lebensdauererprobung eine existenzielle Bedeutung für die ressourceneffiziente Produktabsicherung.
+Die Beherrschung multivariater Beanspruchungskollektive erfordert folglich den Einsatz passender, statistischer Versuchsmethoden.
+Mit der fortschreitenden mechatronischen Integration und Funktionsverdichtung gewinnt die multivariate Lebensdauererprobung damit eine existenzielle Bedeutung für die ressourceneffiziente Produktabsicherung.
 
 \section{Forschungsperspektive und Problembeschreibung} \label{sec:problembeschreibung}
 
-Werden multivariate Interdependenzen bei der Lebensdauerabsicherung nicht methodisch aufgelöst, weicht die industrielle Praxis häufig auf kostenintensive Kompensationsstrategien aus:
-Restrisiken werden durch pauschale Sicherheitsfaktoren abgefangen, präventive Wartungs- und Austauschintervalle konservativ verkürzt oder Produkte vor Erreichen ihrer physikalischen Verschleißgrenze vorsorglich substituiert.
-Führen derartige Unschärfen dennoch zu unerwarteten Feldausfällen, resultieren daraus erhebliche Gewährleistungsaufwände, Rückrufaktionen und nachhaltige Reputationsverluste.
+\added[id=Daz, comment={knapper formuliert}]{Werden multivariate} Interdependenzen bei der Lebensdauerabsicherung methodisch unzureichend aufgelöst, ist in der industriellen Praxis das Ausweichen auf kostenintensive Kompensationsstrategien eine gängige aber unvorteilhafte Folge:
+Komponenten werden konservativ überdimensioniert, Austauschintervalle präventiv verkürzt oder unerkannte Wechselwirkungen provozieren fatale Feldausfälle mit unter Umständen kapitalen Gewährleistungs- und Reputationsfolgen.
+Um Lebensdauer-dominierende Schädigungsmechanismen unter multivariaten Beanspruchungskollektiven empirisch und ausfallbasiert zu quantifizieren und gleichzeitig ressourcenintensive Prüfzeiten zu minimieren, ist die methodische Kopplung von statistischer Versuchsplanung - \ac{DoE} - mit der \ac{EoL}-Erprobung durch \ac{ALT} zwingend erforderlich.
 
-Um diesen Risiken bereits in frühen Entwicklungsphasen präventiv zu begegnen, muss die Zuverlässigkeitstechnik zunehmend komplexeren Randbedingungen genügen.
-Die Transformation hin zur Elektromobilität, der Trend zum extremen Leichtbau sowie verkürzte Entwicklungszyklen verschieben die operativen Belastungsgrenzen kontinuierlich.
-In modernen Fahrzeugarchitekturen hängt die Gesamtzuverlässigkeit beispielsweise von der Interaktion einer dreistelligen Anzahl vernetzter elektronischer Steuergeräte (\acp{ECU}) \cite{dat.2025} sowie der Dauerhaltbarkeit mechatronischer Komponenten unter kombinierten Vi\-bra\-tions-, Tem\-pe\-ra\-tur- und Feuchte-Lastkollektiven ab.
-Gleichzeitig erfordert die Dimensionierung von Traktionsbatterien in \acp{BEV} ein präzises Verständnis der elektrochemischen Alterungskinetik unter simultan wirkenden thermischen, mechanischen und zyklischen elektrischen Stressoren.
 
-Während Produktdesigns im Zuge fortlaufender Effizienzsteigerungen bis an ihre physikalischen Belastungsgrenzen ausgereizt werden, verliert die Kausalitätskette zwischen Einzelbelastung und Systemversagen an analytischer Eindeutigkeit.
-Daraus folgt zwingend, dass die Fähigkeit zur präzisen, empirisch gestützten Le\-bens\-dau\-er- und Zuverlässigkeitsprognose unter multivariaten Belastungen eine zentrale Schlüsselkompetenz moderner Entwicklungsprozesse darstellt.
-Dies erfordert die methodische Integration der statistischen Versuchsplanung (\ac{DoE}) in die beschleunigte Lebensdauererprobung (\ac{ALT}).
+An dieser methodischen Schnittstelle offenbart sich jedoch eine fundamentale Diskrepanz zwischen dem statistischen Werkzeug und der ingenieurtechnischen Zielsetzung:
+Klassische Konzepte der \ac{RSM} und etablierte Versuchsdesigns (wie das \ac{CCD}) sind stochastisch und topologisch strikt auf Interpolation ausgelegt \cite{Rigdon.2022,Kremer.2021}.
+Ihre geometrische Struktur minimiert die Schätzvarianz exakt im Zentrum des experimentellen Versuchsraums.
+Die angewandte Zuverlässigkeitsmodellierung erfordert hingegen die Überbrückung zweier räumlich getrennter Domänen:
+Um physikalische Ausfälle innerhalb strenger ökonomischer Restriktionen zu provozieren, muss die \ac{ALT}-Prüfung zwingend im Hochlastbereich erfolgen - im \textit{Test-Parameterraum}.
+Die prädiktive Anwendung der erzeugten Modelle - die Absicherung der Systemlebensdauer - verlangt jedoch eine Prognose unter moderaten Feldbedingungen - im \textit{Betriebs-Parameterraum}.
+Da der experimentelle Prüfraum und der reale Betriebsraum topologisch getrennt sind, wird das Regressionsmodell unweigerlich zur fernen Extrapolation gezwungen.
 
-Hierbei offenbart sich jedoch die fundamentale methodische Diskrepanz der vorliegenden Problemstellung:
-Klassische Konzepte der Versuchsplanung und der \ac{RSM} sind mathematisch auf geometrische Symmetrie, Orthogonalität und eine minimale Schätzvarianz im \textit{Zentrum} des Versuchsraums (Interpolation) ausgelegt.
-Die Lebensdauererprobung erzwingt hingegen aus ökonomischen und zeitlichen Restriktionen die Prüfung unter signifikant erhöhten Beanspruchungsniveaus (\ac{ALT}), um Ausfälle in vertretbaren Testdauern zu provozieren.
-Das eigentliche Ziel der Zuverlässigkeitsmodellierung liegt jedoch in der präzisen Vorhersage der Systemlebensdauer im fernen, moderaten Feldbereich (\textit{Extrapolation}).
-Dieser strukturelle Widerspruch zwischen dem auf Interpolation optimierten Standard-DoE und den asymmetrischen, extrapolationsorientierten Anforderungen der Lebensdauererprobung führt bei Verwendung konventioneller Standardpläne zu signifikanten, unkontrollierten Prognoseunsicherheiten im Feldbetrieb.
+Dieser strukturelle Widerspruch zwischen einem interpolationsoptimierten Versuchsentwurf und der extrapolationsbasierten Zu\-ver\-läs\-sig\-keits\-an\-wen\-dung führt in der Prüf\-praxis zu einer drastischen Fehl\-al\-lo\-ka\-tion ex\-pe\-ri\-men\-tel\-ler Ressourcen:
+Stand\-ard-\acp{DoE} konzentrieren ihre maximale Schätzpräzision im prädiktiv irrelevanten aber ökonomisch interessanten Hochlastbereich, während die Vorhersagegüte entlang des kritischen Extrapolationspfads in Richtung der realen Einsatzbedingungen kollabiert und die Prädiktionsvarianz massiv divergiert.
+Die unmodifizierte Anwendung klassischer, zentrums-fokussierter Versuchspläne in der Lebensdauererprobung generiert demnach lediglich Scheingenauigkeiten im unmittelbaren Prüfraum, induziert am maßgeblichen Feld-Betriebspunkt jedoch unkontrollierbare stochastische Unsicherheiten.
 
 \section{Beitrag dieser Arbeit} \label{sec:beitrag}
 
-Ausgehend von diesem methodischen Konflikt formuliert die vorliegende Dissertation eine neuartige Systematik zur Auslegung hocheffizienter, multivariater Lebensdauertests.
-Liegt ein System vor, dessen Zuverlässigkeit unter Einwirkung mehrerer interagierender Stressfaktoren experimentell abzusichern ist, stellt diese Arbeit das theoretische, simulative und empirische Instrumentarium bereit, um den Zielkonflikt zwischen stochastischer Extrapolationsgüte und exponentiell skalierenden Prüfkosten aufzulösen.
-Der wissenschaftliche Beitrag gliedert sich in vier zentrale methodische Kernelemente:
+Ausgehend von diesem \added[id=Daz, comment={schärfung Konflikt/Kern}]{mathematisch-topologischen Widerspruch} formuliert die vorliegende Dissertation eine neuartige Systematik zur Auslegung hocheffizienter, multivariater Lebensdauertests.
+Liegt ein System vor, dessen Zuverlässigkeit unter Einwirkung mehrerer interagierender Stressfaktoren experimentell durch \ac{EoL} abzusichern ist, stellt diese Arbeit die erforderlichen theoretischen, simulativen und empirischen Methoden zur Verfügung, um klassische Versuchspläne in extrapolations-optimierte Lebensdauerprüfungen zu transformieren.
+Der wissenschaftliche Kern der Arbeit besteht folglich in der gezielten topologischen Absicherung der Vorhersagegüte für Lebensdauern bzw. Zuverlässigkeiten im Parameterraum der Feldbetriebspunkte - die zwingende mathematische Voraussetzung, um \ac{ALT} unter ökonomischen Restriktionen überhaupt stochastisch belastbar zu legitimieren.
+
+Der wissenschaftliche Beitrag gliedert sich somit in \replaced[id=Daz, comment={Kap 4 raus}]{drei}{ vier} zentrale Kernelemente:
 
 \begin{itemize}
-      \item \textbf{Deterministische Parameterselektion (Heuristisches Screening):}
-            Etablierung eines formalisierten Screening-Verfahrens, welches qualitative Ingenieurmethoden in matrixbasierte Bewertungsalgorithmen überführt.
-            Der Ansatz isoliert lebensdauer-kritische Stressoren und deren latente Wechselwirkungen deterministisch, wodurch der Versuchsraum vor einer kombinatorischen Explosion geschützt wird, ohne aufwendige experimentelle Vorversuche zu erfordern.
       \item \textbf{Quantifizierung topologischer Resilienz:}
-            Systematischer simulativer Nachweis mittels Monte-Carlo-Methoden, dass klassische Response Surface Designs eine signifikante Robustheit der Schätzpräzision und Test-Power gegenüber praxis\-in\-duzierten Orthogonalitätsabweichungen aufweisen.
-            Hier\-aus wird die methodische Existenz eines nutzbaren geometrischen \textit{Gestaltungsbudgets} abgeleitet.
+            Systematischer, simulativer Nachweis mittels Monte-Carlo-Methoden, dass klassische \acp{RSD} eine signifikante Robustheit gegenüber praxis\-in\-duzierten, \replaced[id=Daz, comment={allgemeiner}]{strukturellen Modifikationen}{Orthogonalitätsabweichungen} aufweisen.
+            Hier\-aus werden neben der methodischen Existenz eines nutzbaren geometrischen \textit{Gestaltungsbudgets} auch die adäquaten Bewertungsmetriken für die Versuchsplaneignung abgeleitet.
       \item \textbf{Adaptive Versuchsplanung und richtungs-sensitive Varianzbewertung:}
-            Pro\-ak\-tive Umwidmung des identifizierten Gestaltungsbudgets in strategisch allokierte Extrapolations-Ankerpunkte zur empirischen Absicherung des Prognosepfads.
-            Flankierend wird eine richtungs-sensitive Bewertungsmethodik eingeführt, welche die Entwicklung der Prädiktionsvarianz gezielt entlang des physikalischen Extrapolationsvektors quantifiziert und optimiert.
-      \item \textbf{Ökonomische Synthese und empirische Falsifikation:}
-            Etablierung einer ganzheitlichen Bewertungsmetrik zur simultanen Bilanzierung von statistischer Test-Power, Extrapolationsunsicherheit und realen Prüfstandskosten.
-            Anhand einer industriellen Fallstudie und prädiktionsintervall-basierter \textit{Confirmation Experiments} wird empirisch nachgewiesen, dass die entwickelte Methodik Zuverlässigkeitsmodelle im Feldbetrieb nachweislich vor sicherheitskritischen Überschätzungen bewahrt.
+            Pro\-ak\-tive Umwidmung des identifizierten Gestaltungsbudgets zur gezielten Anpassung des Versuchsplans in Richtung des angestrebten Prognosebereichs im Feld-Parameterraum, formalisiert im adaptiven \textit{\ac{EmALT}-Design}.
+            Zur objektiven Quantifizierung des stochastischen Leistungsgewinns wird begleitend der \ac{EVG} als neuartiges Bewertungswerkzeug eingeführt, welches die Prognoseunsicherheit zum Prädiktionspunkt gerichtet erfasst.
+      \item \textbf{Ökonomische Synthese:}
+            Etablierung einer ganzheitlichen Bewertungsmetrik zur simultanen Bilanzierung von statistischer Trennschärfe, Extrapolationsunsicherheit und realen Prüfstandskosten.
 \end{itemize}
+
 
 \section{Aufbau der Arbeit} \label{sec:aufbau}
 
 Der strukturelle Aufbau der vorliegenden Arbeit orientiert sich an der methodischen Sequenz einer effizienten multivariaten Versuchskampagne (vgl. Abbildung~\ref{fig:aufbau}).
 
 Nach der in diesem Kapitel dargelegten Problemstellung widmet sich \textbf{Kapitel~\ref{chap:stand}} dem aktuellen Stand der Forschung und Technik.
-Dort werden die mathematisch-statistischen Grundlagen der Zuverlässigkeitsdatenanalyse, der Maxi\-mum-Like\-li\-hood-Schätz\-ung, der statistischen Versuchsplanung (\ac{DoE}) sowie der multivariaten Modellbildung im Rahmen von \acp{GLM} systematisch aufbereitet.
+Dort werden die mathematisch-statistischen Grundlagen der Zu\-ver\-lässig\-keits-Daten\-analyse, der \ac{MLE}, der statistischen Versuchsplanung (\ac{DoE}) sowie der multivariaten Modellbildung im Rahmen von \acp{GLM} systematisch aufbereitet.
 \textbf{Kapitel~\ref{chap:ansatz}} synthetisiert diese Grundlagen, identifiziert die inhärenten Schwachstellen klassischer Optimalitätskriterien bei Lebensdauerprüfungen und leitet hieraus die zentralen Forschungsfragen der Dissertation ab.
 
-\textbf{Kapitel~\ref{chap:screening}} behandelt die Dimensionierung des Versuchsraums und stellt das entwickelte heuristische Screening-Framework zur Isolierung relevanter Einflussgrößen und Interaktionspfade vor.
-Darauf aufbauend vollzieht \textbf{Kapitel~\ref{chap:entwurf}} den methodischen Schritt zur quantitativen Versuchsplanung: Ausgehend von der quantifizierten topologischen Resilienz klassischer Designs werden die Methodik der richtungs-sensitive Varianzanalyse, das Konzept der asymmetrischen Extrapolationsabsicherung sowie die ökonomisch-statistische Effizienzbilanzierung hergeleitet und im Weibull-Kontext simulativ validiert.
+Darauf aufbauend vollzieht zunächst \textbf{Kapitel~\ref{chap:entwurf}} den methodischen Schritt zur quantitativen Versuchsplanung: Ausgehend von der quantifizierten \replaced[id=Daz]{strukturellen Robustheit}{topologischen Resilienz} klassischer Designs werden die Methodik der richtungssensitiven Varianzanalyse, das Konzept der asymmetrischen Extrapolationsabsicherung sowie die ökonomisch-statistische Effizienzbilanzierung hergeleitet und im Weibull-Kontext simulativ aufgezeigt.
 
 In \textbf{Kapitel~\ref{chap:casestudy}} erfolgt der Transfer in die industrielle Praxis.
 Anhand eines realen Datensatzes zur Lebensdauerprüfung von Lenksystem-Zahnriemen wird die Leistungsfähigkeit der entwickelten Methodik durch statistische Bestätigungsversuche empirisch verifiziert und der resultierende ökonomische Business Case dargelegt.
 Die Arbeit schließt in \textbf{Kapitel~\ref{chap:fazit}} mit einer Zusammenfassung der Kernergebnisse, einer kritischen Diskussion methodischer Anwendungsgrenzen sowie einem Ausblick auf weiterführende Forschungsfelder ab.
-
 \begin{figure}[htbp]
       \centering
       \def\svgwidth{0.9\textwidth}

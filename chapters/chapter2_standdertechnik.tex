@@ -20,40 +20,42 @@ Weiterführende Konzepte und vertiefte methodische Ansätze zur Zuverlässigkeit
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Begriffe und Definitionen} \label{subsec:begriffezuv}
-Der \textbf{Ausfall}, engl. \textbf{\ac{EoL}}, eines Produkts bezeichnet das Ende der Lebensdauer durch Verlust der geforderten Funktionalität.
-Maßgeblich hierfür sind von außen einwirkende \textbf{Belastungen} (\textit{einzelne} oder zeitgleich \textit{mehrere} Einflussparameter - Kräfte und Momente im mechanischen Kontext) sowie die daraus resultierenden inneren \textbf{Beanspruchungen} (innere Kräfte, Momente und lokale Spannungen).
+Der \textit{Ausfall} eines Produkts bezeichnet das Ende der Lebensdauer durch Verlust der geforderten Funktionalität.
+Maßgeblich hierfür sind \added[id=Daz]{für Ermüdungsausfälle} von außen einwirkende \textit{Belastungen} (\textit{einzelne} oder zeitgleich \textit{mehrere} Einflussparameter - Kräfte und Momente im mechanischen Kontext) sowie die daraus resultierenden inneren \textit{Beanspruchungen} (innere Kräfte, Momente und lokale Spannungen).
 Die Ausfallzeit wird als kontinuierliche Zufallsvariable $\sym{tau}>0$ verstanden.
 Die fundamentalen Funktionen zur probabilistischen Beschreibung des Lebensdauerverhaltens sind gemeinsam mit deskriptiven Statistiken in Tabelle~\ref{tab:mathdefs} zusammengefasst \cite{Bertsche.2022,Meeker.2022,Birolini.2017}.
 {
 \renewcommand{\arraystretch}{1.5}
 \begin{longtable}{@{} p{\textwidth} @{}}
     \caption{Mathematische Definitionen der Zuverlässigkeitsfunktionen}
-    \label{tab:mathdefs}                                                                                                                                           \\
+    \label{tab:mathdefs}                                                                                                                                         \\
     \toprule
     \endfirsthead
-    \caption*{Tabelle \ref{tab:mathdefs} (\textit{Fortsetzung}): Mathematische Definitionen}                                                                       \\
+    \caption*{Tabelle \ref{tab:mathdefs} (\textit{Fortsetzung}): Mathematische Definitionen}                                                                     \\
     \toprule
     \endhead
     \bottomrule
     \endlastfoot
 
-    \textbf{Ausfallwahrscheinlichkeit} (engl. \textbf{\ac{cdf}}): \newline
-    Wahrscheinlichkeit eines Ausfalls bis zum Zeitpunkt $\sym{t}$.
-    \begin{equation} \label{eq:probdef}
-        \sym{F}(\sym{t}) = \sym{Pr}(\sym{tau}\leq \sym{t}) = \int_{0}^{\sym{t}} \sym{f}(\sym{t}) \,d\sym{t}
-    \end{equation}                                                             \\
 
-    \textbf{Zuverlässigkeit} (engl. Reliability): \newline
-    Überlebenswahrscheinlichkeit über den Zeitpunkt $\sym{t}$ hinaus.
-    \begin{equation} \label{eq:reldef}
-        \sym{R}(\sym{t}) = 1 - \sym{F}(\sym{t}) = \int_{\sym{t}}^{\infty} \sym{f}(\sym{t}) \,d\sym{t}
-    \end{equation}                                                    \\
-
-    \textbf{Wahrscheinlichkeitsdichte} (engl. \textbf{\ac{pdf}}): \newline
-    Änderungsrate der Ausfallwahrscheinlichkeit (Ausfallintensität).
+    \textbf{Wahrscheinlichkeitsdichte} (engl. \textit{\ac{pdf}}): \newline
+    Änderungsrate der Ausfallwahrscheinlichkeit.
     \begin{equation} \label{eq:pdfdef}
         \sym{f}(\sym{t}) = \frac{d}{d\sym{t}}\sym{F}(\sym{t}) = \frac{d}{d\sym{t}}\sym{Pr}(\sym{tau} \leq \sym{t}), \quad \sym{t} \geq 0.
     \end{equation} \\
+
+    \textbf{Kummulative Ausfallwahrscheinlichkeit} (engl. \textit{\ac{cdf}}): \newline
+    Wahrscheinlichkeit eines Ausfalls bis zum Zeitpunkt $\sym{t}$.
+    \begin{equation} \label{eq:probdef}
+        \sym{F}(\sym{t}) = \sym{Pr}(\sym{tau}\leq \sym{t}) = \int_{0}^{\sym{t}} \sym{f}(\sym{t}) \,d\sym{t}
+    \end{equation}                                                           \\
+
+    \textbf{Zuverlässigkeit}: \newline
+    Überlebenswahrscheinlichkeit über den Zeitpunkt $\sym{t}$ hinaus.
+    \begin{equation} \label{eq:reldef}
+        \sym{R}(\sym{t}) = 1 - \sym{F}(\sym{t}) = \int_{\sym{t}}^{\infty} \sym{f}(\sym{t}) \,d\sym{t}
+    \end{equation}                                                  \\
+
 
     \textbf{Ausfallrate} (engl. Hazard-Function): \newline
     Momentanes Ausfallrisiko, bedingt auf das Überleben bis $\sym{t}$.
@@ -66,7 +68,7 @@ Die fundamentalen Funktionen zur probabilistischen Beschreibung des Lebensdauerv
 
 \subsection{Deskriptive Statistik für Lebensdauerdaten} \label{subsec:stat1}
 Um die theoretischen Parameter der Grundgesamtheit in der Praxis nutzbar zu machen, müssen diese auf Basis empirisch ermittelter Lebensdauerdaten (Stichprobe vom Umfang $\sym{n}$ mit Werten $\sym{x}_{1}, \dots, \symsub{x}{n}$) approximiert werden.
-Die deskriptive Statistik liefert hierfür Methoden zur Berechnung von \textbf{Lageparametern} (Zentrum) und \textbf{Streuungsmaßen} (Breite).
+Die deskriptive Statistik liefert hierfür Methoden zur Berechnung von \textit{Lageparametern} (Zentrum) und \textit{Streuungsmaßen} (Breite).
 Tabelle~\ref{tab:deskriptive_statistik} fasst die theoretischen Definitionen der Zufallsvariable $\sym{tau}$ sowie die grundlegenden Zuverlässigkeitsfunktionen und ihre korrespondierenden empirischen Schätzer kompakt zusammen.
     {
         \renewcommand{\arraystretch}{1.5}
@@ -82,7 +84,7 @@ Tabelle~\ref{tab:deskriptive_statistik} fasst die theoretischen Definitionen der
             \endlastfoot
 
             \textbf{Erwartungswert und Mittelwert}: \newline
-            Erwartungswert $\sym{mu}$ des theoretischen Lageparameters der Grundgesamtheit. Der arithmetische Mittelwert $\sym{x_bar}$ dient als üblicher, \textbf{empirischer Schätzer} für eine endliche Stichprobe.
+            Erwartungswert $\sym{mu}$ des theoretischen Lageparameters der Grundgesamtheit. Der arithmetische Mittelwert $\sym{x_bar}$ dient als üblicher, \textit{empirischer Schätzer} für eine endliche Stichprobe.
             \begin{equation} \label{eq:theo_mean}
                 \sym{mu} = \sym{E}[\sym{tau}] = \int_{0}^{\infty} \sym{t} \cdot \sym{f}(\sym{t}) d\sym{t} \quad \text{geschätzt durch} \quad \sym{x_bar} = \frac{1}{\sym{n}} \sum_{\sym{idx_i}=1}^{\sym{n}} \symsub{x}{idx_i}
             \end{equation} \\
@@ -113,12 +115,12 @@ Andernfalls können nur nichtparametrische Modellierungsansätze zur Schätzung 
 Die Verteilungsmodelle hingegen bieten eine geschlossene mathematische Form für \ac{cdf} und \ac{pdf} und ermöglichen es, das komplexe Ausfallverhalten durch eine geringe Anzahl von Parametern zu charakterisieren.\
 
 \subsubsection{Weibull-Verteilung} \label{subsubsec:weibull}
-In der Zuverlässigkeitstechnik hat sich die \textbf{Weibull-Verteilung} aufgrund ihrer hohen Flexibilität als das am häufigsten verwendete Modell etabliert.
-Je nach zugrundeliegendem physikalischen Ausfallmechanismus finden jedoch auch andere statistische Verteilungen Anwendung, wie beispielsweise die \textbf{Lognormal-Verteilung} (häufig bei Ermüdungs-, Korrosions- oder Diffusionsprozessen), die \textbf{Exponentialverteilung} (zur Modellierung von Zufallsausfällen ohne Alterungseffekte) oder die \textbf{Beta-Verteilung} (allgemein zur formenreichen Modellierung von $\sym{R}$ über dem festen Intervall $[0,1]$).
+In der Zu\-ver\-läs\-sig\-keits\-tech\-nik hat sich die \textit{Wei\-bull-Ver\-teil\-ung} auf\-grund ihrer hohen Flexi\-bi\-li\-tät als das am häufigsten verwendete Modell etabliert.
+Je nach zugrundeliegendem physikalischen Ausfallmechanismus finden jedoch auch andere statistische Verteilungen Anwendung, wie beispielsweise die \textit{Lognormal-Verteilung} (häufig bei Ermüdungs-, Korrosions- oder Diffusionsprozessen) oder die \textit{Exponentialverteilung} (zur Modellierung von Zufallsausfällen ohne Alterungseffekte) \deleted[id=Daz]{oder die \textit{Beta-Verteilung} (allgemein zur formenreichen Modellierung von $\sym{R}$ über dem festen Intervall $[0,1]$)} \cite{Yang.2007,Birolini.2017}.
 Für weitere Ausführungen dazu sei an dieser Stelle jedoch auf bereits ausreichend diskutierte Aufbereitungen von \textcite{Bertsche.2022,Birolini.2017,Yang.2007,Hedderich.2020,Rigdon.2022} verwiesen.
 
 Die (zweiparametrige) Weibull-Verteilung ist das Standardmodell zur Beschreibung der Lebensdauer von technischen Produkten ohne die Berücksichtigung eines möglichen dritten Parameters - der ausfallfreien Zeit \symsub{t}{idx_0}.
-Sie wird durch den \textbf{Formparameter}  $\sym{b} > 0$ (Weibull-Modul) und die \textbf{charakteristische Lebensdauer} $\sym{T} > 0$ (Skalenparameter), welche dem $63,2$-ten Perzentil $\sym{t}_{0,632}$ entspricht, beschrieben.
+Sie wird durch den \textit{Formparameter}  $\sym{b} > 0$ (Weibull-Modul) und die \textit{charakteristische Lebensdauer} $\sym{T} > 0$ (Skalenparameter), welche dem $63,2$-ten Perzentil $\sym{t}_{0,632}$ entspricht, beschrieben.
 Unabhängig von $\sym{b}$ gilt hier somit: $\sym{F}(\sym{T})=1-e^{-1} \approx 63,2 \%$.
 Folgt die Lebensdauer-Zufallsvariable $\sym{tau}$ dieser Verteilung, wird dies mathematisch als $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ notiert.
 Damit ist sie in der Lage, alle drei Phasen der "Badewannenkurve" (Frühausfälle mit $\sym{b}<1$, Zufallsausfälle $\sym{b}\approx 1$, Verschleißausfälle mit $\sym{b}>1$) durch die Wahl ihrer Parametrisierung abzubilden, vgl. \textcite{Bertsche.2022}.
@@ -158,7 +160,7 @@ Die Einheit des Skalenparameters $\sym{T}$ entspricht der des Messwertes. Die ch
             \bottomrule
         \end{longtable}
     }
-Die Flexibilität der Verteilung zeigt sich in den Spezialfällen des Formparameters: Für $\sym{b}=1$ geht sie in die Exponentialverteilung über ($\sym{lambda} = \text{konst.}$), während sie sich für $\sym{b} \approx 3,6$ einer Normalverteilung annähert (vgl. Abb.~\ref{fig:abb2.1_weibull}) \cite{Rinne.2008, Kececioglu.2002}.
+Die Flexibilität der Verteilung zeigt sich in den Spezialfällen des Formparameters: Für $\sym{b}=1$ geht sie in die Exponentialverteilung über ($\sym{lambda} = \text{konst.}$), während sie sich für $\sym{b} \approx 3,6$ \highlight[id=Daz, comment={b=3,60235 -> Schiefe=0}]{einer Normalverteilung} annähert (vgl. Abb.~\ref{fig:abb2.1_weibull}) \cite{Rinne.2008, Kececioglu.2002}.
 \begin{figure}[htbp]
     \centering
     \input{plots/ma_abb2.01_weibull}
@@ -173,82 +175,73 @@ Die Flexibilität der Verteilung zeigt sich in den Spezialfällen des Formparame
 \subsection{Parameterschätzverfahren} \label{subsec:schätzer}
 Soll eine geschlossene mathematische Beschreibung des stochastischen Ausfallverhaltens eines Produktes gefunden werden, ist das in Abschnitt~\ref{subsec:paramleben} definierte parametrische Verteilungsmodell $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ zu schätzen.
 Die Modellparameter der Grundgesamtheit sind in der praktischen Anwendung jedoch unbekannt.
-Die zentrale Problemstellung der \textbf{Parameterschätzung} besteht somit darin, aus der empirischen Stichprobe bestehend aus $\sym{n}$ Realisierungen $\sym{t}_{1}, \dots, \symsub{t}{n}$ der Zufallsvariable $\sym{tau}$ statistisch fundierte Schätzwerte $\hat{\sym{T}}$ und $\hat{\sym{b}}$ zu gewinnen.
-Diese sind Voraussetzung, um das Lebensdauermodell (z.B. Gleichung~\eqref{eq:weibull_cdf}) zu quantifizieren und prädiktive Aussagen zu Quantilen oder der Zuverlässigkeit $\sym{R}(\sym{t})$ zu ermöglichen.
-Eine wesentliche Komplikation hierbei sind jedoch das mögliche Auftreten von unvollständigen bzw. \textbf{zensierten} Daten sowie \textit{multivariate} Abhängigkeiten der Belastungen zur Messgröße.
-Während für die Schätzung von Verteilungsparametern einfache Verfahren, wie die \textbf{Momentenmethode} oder die \textbf{Methode der kleinsten Fehlerquadrate} - engl. \textbf{\ac{OLS}}, die beispielsweise bei der \textbf{\ac{MMR}} im Wahrscheinlichkeitsnetz Anwendung findet, existieren, sind diese für die umfassende Analyse vielschichtiger Lebensdauerdaten in der Regel unzureichend und hier nur der Vollständigkeit wegen erwähnt - vgl. \cite{Bertsche.2022,Montgomery.2021}.
-Das universell anwendbare und robuste Verfahren, das Herausforderungen wie zensierte Daten und multivariate Modelle inhärent behandelt, ist die \textbf{\ac{MLE}} \cite{Meeker.2022,Nelson.1990}.
+Die zentrale Problemstellung der \textit{Parameterschätzung} besteht somit darin, aus der empirischen Stichprobe bestehend aus $\sym{n}$ Realisierungen $\sym{t}_{1}, \dots, \symsub{t}{n}$ der Zufallsvariable $\sym{tau}$ statistisch fundierte Schätzwerte $\hat{\sym{T}}$ und $\hat{\sym{b}}$ zu gewinnen.
+Diese sind Voraussetzung, um das Lebensdauermodell (z.B. Gleichung~\eqref{eq:weibull_cdf}) zu quantifizieren und prädiktive Aussagen zu Quantilen \highlight[id=Daz]{der Lebensdauer oder der} Zuverlässigkeit $\sym{R}(\sym{t})$ zu ermöglichen.
+Eine wesentliche Komplikation hierbei sind jedoch das mögliche Auftreten von unvollständigen bzw. \textit{zensierten} Daten sowie \textit{multivariate} Abhängigkeiten der Belastungen zur Messgröße.
+Während für die Schätzung von Verteilungsparametern einfache Verfahren, wie die \textit{Momentenmethode} oder die \textit{Methode der kleinsten Fehlerquadrate} - engl. \textit{\ac{OLS}}, die beispielsweise bei der \textit{\ac{MMR}} im Wahrscheinlichkeitsnetz Anwendung findet, existieren, sind diese für die umfassende Analyse vielschichtiger Lebensdauerdaten in der Regel unzureichend und hier nur der Vollständigkeit wegen erwähnt - vgl. \cite{Bertsche.2022,Montgomery.2021}.
+Das universell anwendbare und robuste Verfahren, das Herausforderungen wie zensierte Daten und multivariate Modelle inhärent behandelt, ist die \textit{\ac{MLE}} \cite{Meeker.2022,Nelson.1990}.
 
-\subsubsection{Maximum-Likelihood-Estimation} \label{subsubsec:mle}
 Das Grundprinzip der \ac{MLE} besteht darin, diejenigen Parameterwerte (z.B. $\hat{\sym{T}}, \hat{\sym{b}}$) als Schätzwerte auszuwählen, welche die Wahrscheinlichkeit (engl. Likelihood) maximieren, die empirisch beobachtete Stichprobe (bestehend aus unabhängigen Ausfällen und Zensierungen) zu erhalten.
-Mathematisch wird die Wahrscheinlichkeit der Realisierung von $\sym{t_vec} = (\sym{t}_{1}, \dots, \symsub{t}{n})$ einer Stichprobe durch die \textbf{Likelihood-Funktion} $\sym{L_like}$ bestimmt. Diese ist eine Funktion des unbekannten Parametervektors $\sym{theta}$, der $\sym{k}$ zu schätzende Parameter enthält (z.B. $\sym{theta} = (\sym{T}, \sym{b})$ mit $\sym{k}=2$).\
+Mathematisch wird die Wahrscheinlichkeit der Realisierung von $\sym{t_vec} = (\sym{t}_{1}, \dots, \symsub{t}{n})$ einer Stichprobe durch die \textit{Likelihood-Funktion} $\sym{L_like}$ bestimmt.
+Diese ist eine Funktion des unbekannten Parametervektors $\sym{theta}$, der $\sym{k}$ zu schätzende Parameter enthält (z.B. $\sym{theta} = (\sym{T}, \sym{b})$ mit $\sym{k}=2$).\
 
-Für den vereinfachten Fall, dass die Stichprobe ausschließlich aus $\sym{n}$ exakten Ausfallereignissen (vollständige Daten) besteht, ist die Likelihood-Funktion $\sym{L_like}$ das Produkt der einzelnen Wahrscheinlichkeitsdichten $\sym{f}(\cdot)$:
-\begin{equation} \label{eq:mle_likelihood_simple}
-    \sym{L_like}(\sym{t_vec} | \sym{theta}) \propto \prod_{\sym{idx_i}=1}^{\sym{n}} \sym{f}(\symsub{t}{idx_i} | \sym{theta}).
-\end{equation}
-Zur Vereinfachung der numerischen Berechnung wird in der Anwendung die \textbf{Log-Likelihood-Funktion} $\sym{Lambda}$ verwendet. Durch die Logarithmierung wird das Produkt (Gleichung~\eqref{eq:mle_likelihood_simple}) in eine äquivalente, leichter zu maximierende Summe überführt:
-\begin{equation} \label{eq:mle_loglikelihood_simple}
-    \sym{Lambda} \defeq \ln\left( \sym{L_like}(\sym{theta}) \right) \propto \sum_{\sym{idx_i}=1}^{\sym{n}} \ln \left[ \sym{f}(\symsub{t}{idx_i} | \sym{theta}) \right].
-\end{equation}
-Wie zuvor dargelegt, ist dieser vereinfachte Ansatz für Lebensdauerdaten jedoch oft unzureichend, da er das Auftreten von zensierten Daten vernachlässigt.
-Für die praktische Anwendung existiert jedoch die entsprechende Erweiterung der Likelihood-Funktion um die Differenzierung etwaiger Testausgänge als \textit{Durchläufer}.
-Dazu wird die Stichprobe als Paarung von $\symsub{t}{idx_i}, \symsub{delta}{idx_i}$ für $\sym{t_vec}$ definiert, wobei $\symsub{t}{idx_i}$ der beobachteten Zeit und $\symsub{delta}{idx_i}$ einem Statusindikator ($\symsub{delta}{idx_i}=1$ für einen exakten Ausfall; $\symsub{delta}{idx_i}=0$ für eine Rechts-Zensierung) entspricht \cite{Meeker.2022,Kalbfleisch.2002}.
-$\sym{L_like}$ für rechts-zensierte Lebensdauerdaten lautet somit:
+\highlight[id=Daz, comment={gekürzt}]{In der analytischen }Zuverlässigkeitstechnik umfassen empirische Datensätze in der praktischen Anwendung sowohl exakte Ausfallereignisse als auch rechts-zensierte Beobachtungen (\textit{Durchläufer}).
+Zur simultanen Abbildung beider Ereignistypen wird die Stichprobe für $\sym{t_vec}$ formal über die Paarung $(\symsub{t}{idx_i}, \symsub{delta}{idx_i})$ definiert.
+Dabei entspricht $\symsub{t}{idx_i}$ der beobachteten Zeit und $\symsub{delta}{idx_i}$ einem Statusindikator, der für einen exakten Ausfall den Wert $\symsub{delta}{idx_i}=1$ und für eine Rechts-Zensierung den Wert $\symsub{delta}{idx_i}=0$ annimmt \cite{Meeker.2022,Kalbfleisch.2002}.
+
+Unter der Annahme stochastisch unabhängiger Beobachtungen ergibt sich die Like\-li\-hood-Funk\-tion $\sym{L_like}$ für rechts-zensierte Lebensdauerdaten in Abhängigkeit des Parametervektors $\sym{theta}$ somit direkt als Produkt aus den Wahrscheinlichkeitsdichten $\sym{f}(\cdot)$ und den Zuverlässigkeiten $\sym{R}(\cdot)$:
 \begin{equation} \label{eq:mle_likelihood_censored}
-    \sym{L_like}(\sym{t_vec} | \sym{theta}) \propto \prod_{\sym{idx_i}=1}^{\sym{n}} \left[ \sym{f}(\symsub{t}{idx_i} | \sym{theta})^{\symsub{delta}{idx_i}} \cdot \sym{R}(\symsub{t}{idx_i} | \sym{theta})^{1 - \symsub{delta}{idx_i}} \right]
+    \sym{L_like}(\sym{t_vec} | \sym{theta}) \propto \prod_{\sym{idx_i}=1}^{\sym{n}} \left[ \sym{f}(\symsub{t}{idx_i} | \sym{theta})^{\symsub{delta}{idx_i}} \cdot \sym{R}(\symsub{t}{idx_i} | \sym{theta})^{1 - \symsub{delta}{idx_i}} \right].
 \end{equation}
-und definiert die Log-Likelihood Funktion als:
+
+Zur Gewährleistung der numerischen Stabilität bei der algorithmischen Optimierung wird der Ausdruck standardmäßig in die \textit{Log-Likelihood-Funktion} $\sym{Lambda}$ überführt.
+Die Logarithmierung transformiert das Produkt in eine rechentechnisch leichter zu maximierende Summe:
 \begin{equation} \label{eq:mle_loglikelihood_censored}
     \sym{Lambda} \defeq \ln\left(\sym{L_like}(\sym{t_vec} | \sym{theta})\right) \propto \sum_{\sym{idx_i}=1}^{\sym{n}} \left[ \symsub{delta}{idx_i} \cdot \ln \sym{f}(\symsub{t}{idx_i} | \sym{theta}) + (1 - \symsub{delta}{idx_i}) \cdot \ln \sym{R}(\symsub{t}{idx_i} | \sym{theta}) \right].
 \end{equation}
 
-Der Parametervektor $\hat{\sym{theta}}$, der den Wert von $\sym{Lambda}(\sym{theta})$ maximiert, liefert die \ac{MLE}-Werte.
-Die Schätzwerte repräsentieren die (asymptotisch) effizientesten Schätzwerte für die Parameter der Grundgesamtheit.
+Der Parametervektor $\hat{\sym{theta}}$, der den Wert von $\sym{Lambda}(\sym{theta})$ maximiert, liefert die Schätzwerte der \ac{MLE}.
+Die Schätzwerte repräsentieren die (asymptotisch) effizientesten Werte für die Parameter der Grundgesamtheit.
 Dies erfolgt mathematisch durch Nullsetzen $\sym{k}$ partieller Ableitungen von $\sym{Lambda}$, sofern mathematisch entsprechende Schätzwerte in geschlossener Form durch $\partial\sym{Lambda}/\partial \sym{theta} \stackrel{!}{=} 0$ identifiziert werden können \cite{Nelson.2005,Rinne.2008}.
 Andernfalls werden numerische Optimierungsalgorithmen, vgl. Newton-Raphson-Verfahren, Patternsearch und vergleichbare, dafür herangezogen - siehe weiterführend \cite{Nelson.2005,Qiao.1994} sowie detaillierte Untersuchungen von \textcite{Kremer.2019b}.
-An dieser Stelle sei erwähnt, dass systematische Verzerrungen (engl. \textbf{Bias}) in $\hat{\sym{theta}}$ aufgrund kleiner Stichprobenumfänge auftreten können \cite{Abernethy.2006} - jedoch auch korrigierbar sind, vgl. Arbeiten von \textcite{Hirose.1999,Ross.1996}.
+An dieser Stelle sei erwähnt, dass systematische Verzerrungen in $\hat{\sym{theta}}$ aufgrund kleiner Stichprobenumfänge auftreten können \cite{Abernethy.2006} - jedoch auch korrigierbar sind, vgl. Arbeiten von \textcite{Hirose.1999,Ross.1996}.
 
 Die Qualität der Parameterschätzung beeinflusst daraus nicht nur die Prädiktionsgüte zur Schätzung der Lebensdauer oder Zuverlässigkeit - sie bedingt schließlich auch die Effizienz des Schätzverfahrens.
 Wird im Sinne eines effizienten Verfahrens zur multivariaten Lebensdauermodellbildung eine Methodik gesucht, ist auch die Qualität der Parameterschätzung damit entscheidend.
-Vertrauensbereiche, oder engl. \textbf{\acp{CI}}, können eine Metrik für die Qualität der Modellierung einnehmen, da sie die Unsicherheit oder \textit{Unschärfe} in der Prädiktion bemessen.
+Vertrauensbereiche - \textit{\acp{CI}} - können eine Metrik für die Qualität der Modellierung einnehmen, da sie die Unsicherheit oder \textit{Unschärfe} in der Prädiktion bemessen.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\subsubsection{Vertrauensbereiche} \label{subsubsec:ci}
-Die \ac{MLE} liefert nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern auch die Quantifizierung von deren statistischer Unsicherheit (Präzision).
-Obwohl verschiedene Ansätze, wie die numerisch anspruchsvolleren Berechnungen nach Likelihood-Ratio-Methode, Bootstrap-Perzentil-Methode oder Monte-Carlo-Approximation existieren, ist das gängigste Verfahren zur Berechnung von \acp{CI} die Approximation mittels asymptotischer Normalverteilung der \ac{MLE}-Schätzer $\hat{\sym{theta}}$ \cite{Bertsche.2022,Nelson.1990}.
-Dies erfolgt über die \textbf{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß \textcite{Kremer.2019c} bezüglich des Rechenaufwands und resultierender Modellqualität vergleichsweise effizient quantifiziert.
+Die \ac{MLE} liefert nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern auch die Grundlage zur Quantifizierung von deren statistischen Unsicherheit (Präzision).
+Obwohl verschiedene Ansätze, wie die numerisch anspruchsvolleren Berechnungen nach \ac{LR-Test}-Methode, Bootstrap-Perzentil-Methode oder Mon\-te-Car\-lo-Ap\-pro\-xi\-ma\-tion existieren, ist das gängigste Verfahren zur Berechnung von \acp{CI} die Approximation mittels asymptotischer Normalverteilung der \ac{MLE}-Schätzer $\hat{\sym{theta}}$ \cite{Bertsche.2022,Nelson.1990}.
+Dies erfolgt über die \textit{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß \textcite{Kremer.2019c} bezüglich des Rechenaufwands und resultierender Modellqualität vergleichsweise effizient quantifiziert.
 So wird diese Methodik auch in gängiger Applikationen als Standard angewandt, vgl. \cite{Nelson.2005,Nelson.1990,Yang.2007}.
-In der praktischen Anwendung wird die Fisher-Informationsmatrix auf Basis der resultierenden Schätzwerte $\hat{\sym{theta}} = \sym{theta}$ so als Schätzung zur Beobachtung nach $\symsub{FIM}{idx_O}$ verwendet \cite{Nelson.1990,Lawless.2003}.
-Diese ist definiert als die negative \textbf{Hesse-Matrix} $\sym{H}$ der Log-Likelihood-Funktion, ausgewertet an der Stelle der \ac{MLE}-Schätzwerte
+\highlight[id=Daz, comment={korrigiert}]{Da die} theoretische Fisher-Informationsmatrix die Kenntnis der wahren Parameter $\sym{theta}$ erfordert, wird in der statistischen Praxis stattdessen die \textit{beobachtete} Fisher-Informationsmatrix $\symsub{FIM}{idx_O}$ (engl. \textit{Observed Fisher Information}) herangezogen \cite{Nelson.1990,Lawless.2003}.
+Diese ist definiert als die negative \textit{Hesse-Matrix} $\sym{H}$ der Log-Likelihood-Funktion, ausgewertet an der Stelle der \ac{MLE}-Schätzwerte
 $\hat{\sym{theta}}$:
 \begin{equation} \label{eq:fim_o}
     \symsub{FIM}{idx_O} \defeq - \sym{H}(\hat{\sym{theta}}) = - \left[ \frac{\partial^2 \sym{Lambda}(\sym{theta})}{\partial \symsub{thet}{idx_j} \partial \symsub{thet}{idx_l}} \right]_{\sym{theta} = \hat{\sym{theta}}}.
 \end{equation}
 Die Matrix $\sym{H}$ entspricht der ($\sym{k} \times \sym{k}$)-Matrix der $\sym{k}$ zweiten partiellen Ableitungen von $\sym{Lambda}$ (vgl. Gl.~\eqref{eq:mle_loglikelihood_censored}).
-Eine Invertierung ${\hat{\sym{FIM}}_{\sym{idx_O}}}^{-1}$ ergibt die geschätzte \textbf{Varianz-Kovarianz-Matrix} $\hat{\sym{V}}$:
+Eine Invertierung ${\hat{\sym{FIM}}_{\sym{idx_O}}}^{-1}$ ergibt die geschätzte \textit{Varianz-Kovarianz-Matrix} $\hat{\sym{V}}$:
 \begin{equation} \label{eq:var_covar}
     \hat{\sym{V}} \approx {\hat{\sym{FIM}}_{\sym{idx_O}}}^{-1}.
 \end{equation}
 Die Diagonalelemente dieser Matrix $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}$ entsprechen den Varianzen $\sym{Var}(\hat{\sym{thet}}_{\sym{idx_j}})$ der einzelnen Parameterschätzwerte \cite{Nelson.1990}.
-Die Nicht-Diagonalelemente $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_l}}$ (für $\sym{idx_j} \neq \sym{idx_l}$) repräsentieren die \textbf{Kovarianzen} $\sym{Cov}(\hat{\sym{thet}}_{\sym{idx_j}}, \hat{\sym{thet}}_{\sym{idx_l}})$ \cite{Nelson.1990,Yang.2007}.
+Die Nicht-Diagonalelemente $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_l}}$ (für $\sym{idx_j} \neq \sym{idx_l}$) repräsentieren die \textit{Kovarianzen} $\sym{Cov}(\hat{\sym{thet}}_{\sym{idx_j}}, \hat{\sym{thet}}_{\sym{idx_l}})$ \cite{Nelson.1990,Yang.2007}.
 Diese Kovarianzen sind von entscheidender Bedeutung, da sie die statistische Abhängigkeit zwischen den Schätzwerten (z.B. zwischen $\hat{\sym{T}}$ und $\hat{\sym{b}}$) quantifizieren, welche für die Berechnung der \acp{CI} von abgeleiteten Funktionen wie $\hat{\sym{R}}(\sym{t})$ erforderlich sind \cite{Meeker.2022}.
 Basierend auf der Annahme der asymptotischen Normalität der Schätzer wird ein zweiseitiges $(1-\sym{alpha})$-\ac{CI} für einen einzelnen Parameter $\hat{\sym{thet}}_{\sym{idx_j}}$ direkt aus dessen Varianz approximiert durch:
 \begin{equation} \label{eq:ci_normal}
     [\sym{thet}_{\sym{idx_j},\sym{idx_u}},\sym{thet}_{\sym{idx_j},\sym{idx_o}}]  = \hat{\sym{thet}}_{\sym{idx_j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}},
 \end{equation}
 wobei $\sym{z}_{1-\sym{alpha}/2}$ dem $(1-\sym{alpha}/2)$-Quantil der Standardnormalverteilung entspricht.
-Da Lebensdauerparameter (z.B. $\sym{T}, \sym{b}$) üblicherweise auf $\sym{RR}_{>0}$ beschränkt sind, werden \acp{CI} robust über eine Log-Transformation der Parameter berechnet, um physikalisch unmögliche (negative) Intervallgrenzen zu vermeiden \cite{Meeker.2022,Yang.2007,Nelson.1990}:
+Da Lebensdauerparameter (z.\,B. $\sym{T}, \sym{b}$) definitionsgemäß auf $\sym{RR}_{>0}$ beschränkt sind, erfolgt die Berechnung der \acp{CI} standardmäßig über eine Log-Transformation der Parameter.
+Diese Vorgehensweise schließt physikalisch unmögliche (negative) Intervallgrenzen mathematisch konsistent aus \cite{Meeker.2022,Yang.2007,Nelson.1990}:
 \begin{equation} \label{eq:ci_ln}
     [\sym{thet}_{\sym{idx_j},\sym{idx_u}}, \sym{thet}_{\sym{idx_j},\sym{idx_o}}] = \hat{\sym{thet}}_{\sym{idx_j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}}}{\hat{\sym{thet}}_{\sym{idx_j}}} \right).
 \end{equation}
 
-Die Berechnung dieser \acp{CI} für Schätzwerte $\sym{g_func}(\hat{\sym{theta}})$ zu Größen wie $\hat{\sym{R}}(\sym{t})$ oder $\hat{\sym{t}}_{\sym{idx_q}}$  erfolgt mittels \textbf{Delta-Methode} \cite{Nelson.1990,Meeker.2022}.
+Die Berechnung dieser \acp{CI} für Schätzwerte $\sym{g_func}(\hat{\sym{theta}})$ zu Größen wie $\hat{\sym{R}}(\sym{t})$ oder $\hat{\sym{t}}_{\sym{idx_q}}$  erfolgt mittels \textit{Delta-Methode} \cite{Nelson.1990,Meeker.2022}.
 Dieses auf einer Taylor-Reihenentwicklung basierende Verfahren (Gauß'sche Fehlerfortpflanzung) approximiert die Varianz der Funktion $\hat{\sym{g_func}}=\sym{g_func}(\hat{\sym{theta}})$ unter Einbeziehung der gesamten Varianz-Kovarianz-Matrix.
-Dazu wird der \textbf{Gradientenvektor} $\sym{g_grad}$ der Funktion $\sym{g_func}$ (z.B. $\sym{g_func} = \sym{R}(\sym{t})$) bezüglich des $\sym{k}$-dimensionalen Parametervektors $\sym{theta}$ gebildet:
+Dazu wird der \textit{Gradientenvektor} $\sym{g_grad}$ der Funktion $\sym{g_func}$ (z.B. $\sym{g_func} = \sym{R}(\sym{t})$) bezüglich des $\sym{k}$-dimensionalen Parametervektors $\sym{theta}$ gebildet:
 \begin{equation} \label{eq:delta_method_gradient}
     \sym{g_grad} \defeq \left[ \frac{\partial \sym{g_func}(\sym{theta})}{\partial \sym{thet}_{1}}, \dots, \frac{\partial \sym{g_func}(\sym{theta})}{\partial \symsub{thet}{k}} \right]^T_{\sym{theta} = \hat{\sym{theta}}}.
 \end{equation}
@@ -264,7 +257,7 @@ Sollen auch hier nur positive Werte für $\sym{g_func}$ berücksichtigt werden, 
 
 \section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
 Multivariate Lebensdauertests erfordern definitionsgemäß die Betrachtung mehrerer $\sym{k}\geq 2$ Einflussfaktoren als Versuchsparameter.
-Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten - auch unter dem Begriff \textbf{\ac{L-DoE}} zusammengefasst - sowie der darauffolgenden Lebensdauermodellbildung.
+Dementsprechend entscheidend ist das Verständnis der wesentlichen Grundlagen im Umgang mit statistischer Versuchsplanung (\ac{DoE}) für Lebensdauerdaten - nach \textcite{Kremer.2021} auch unter dem Begriff \textit{\ac{L-DoE}} zusammengefasst - sowie der darauffolgenden Lebensdauermodellbildung.
 Während detaillierte Übersichten zur Historie von \ac{DoE} von anfänglichen einschlägigen Beschreibungen durch \textcite{Fisher.1935}, außerdem maßgebliche Weiterentwicklungen durch \textcite{Box.1978} oder evolutionäre Schritte durch \textcite{Taguchi.2005} ausgiebig in Werken von \textcite{Kleppmann.2020,Rigdon.2022,Montgomery.2020} beschrieben sind, wird im Folgenden auf die wesentlichen Inhalte für die Forschungsschwerpunkte eingegangen.
 
 Der primäre Anspruch von \ac{DoE} besteht in der effizienten Planung empirischer Datenerhebungen, um Zielgrößen in Abhängigkeit erklärender Variablen zunächst robust zu modellieren und schließlich zu optimieren.
@@ -283,6 +276,32 @@ Vor diesem Hintergrund fokussiert sich dieser Abschnitt auf eine gezielte Auswah
 Für eine grundsätzlichere Auseinandersetzung mit konventionellen Methoden und Werkzeugen von \ac{DoE} sei, mit Blick auf den Fokus der vorliegenden Arbeit, hingegen auf die einschlägige Literatur von \textcite{Kleppmann.2020}, \textcite{Siebertz.2026}, \textcite{Hinkelmann.2012} sowie vornehmlich \textcite{Montgomery.2020} und \textcite{Myers.2016} verwiesen.
 Diese Werke behandeln intensiv die Inhalte grundsätzlicher statistischer Versuchsplanung, welche um Perspektiven zu \ac{L-DoE} bereits durch am \ac{IMA} entstandene Dissertationen von \textcite{Dazer.2019}, \textcite{Herzig.2021}, \textcite{Grundler.2024} und maßgeblich durch \textcite{Kremer.2021} fortschreitend ergänzt wurden.
 Konsequenterweise werden Hintergründe zum Umgang mit normalverteilten Daten oder Abweichungen davon im Rahmen des \ac{DoE}, die Diskussion zu einschlägigen Vor- und Nachteilen auch unter Abgrenzung zu Alternativen wie \ac{OFAT}, die Regressionsmodellierung auf Basis der \textbf{\ac{ANOVA}}, konventionelle Hypothesentests sowie fundamentale Ausführungen zu \ac{ALT} in den nachfolgenden Ausführungen nicht explizit betrachtet, sondern als bekannt vorausgesetzt.
+
+\section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
+
+Multivariate Lebensdauertests erfordern definitionsgemäß die Variation mehrerer Einflussfaktoren ($\sym{k} \geq 2$).
+Die systematische Planung derartiger experimenteller Untersuchungen erfolgt mittels Methoden von \ac{DoE}, was im spezifischen Kontext der Zuverlässigkeitstechnik nach \textcite{Kremer.2021} auch unter dem Paradigma \textit{\ac{L-DoE}} zusammengefasst wird.
+Während detaillierte historische Abrisse zur klassischen Versuchsplanung der einschlägigen Standardliteratur zu entnehmen sind \cite{Fisher.1935, Box.1978, Montgomery.2020}, fokussiert dieser Abschnitt explizit auf die methodischen Anforderungen mehrdimensionaler Lebensdauertests.
+
+Der primäre Anspruch von \ac{DoE} besteht in der ökonomisch effizienten empirischen Modellierung einer Systemantwort in Abhängigkeit erklärender Variablen.
+In der Zuverlässigkeitstechnik zielt dies auf die parametrische Charakterisierung des multivariaten Ausfallverhaltens ab.
+Eine fundamentale methodische Herausforderung stellt hierbei jedoch die zwingende Integration der beschleunigten Lebensdauererprobung (\ac{ALT}) dar:
+Um physikalische Ausfälle innerhalb vertretbarer Prüfzeiten zu provozieren, operieren die Versuchspläne gezwungenermaßen in einem hochbelasteten \textit{Test-Parameterraum}.
+Die eigentliche Zielsetzung der Modellbildung - die prädiktive Absicherung der Zuverlässigkeit - verlangt jedoch verlässliche Vorhersagen im moderaten \textit{Betriebs-Parameterraum}.
+Diese räumliche Diskrepanz erzwingt eine formale stochastische Extrapolation.
+Bisherige Ansätze des \ac{L-DoE} fokussieren primär auf die reine statistische Modellbildung und klammern diesen Beschleunigungs- und Extrapolationsaspekt weitgehend aus.
+Dadurch bleibt die tatsächliche prädiktive Vorhersagegüte und geometrische Effizienz der Versuchspläne im Feldbetrieb oft unberücksichtigt.
+
+Um diese Herausforderung zu bewältigen, sind empirische Best-Guess-Ansätze oder die in der industriellen Praxis noch häufig anzutreffende \ac{OFAT}-Methodik (\textit{One Factor At a Time}) unzureichend.
+Sie binden experimentelle Ressourcen ineffizient und sind systembedingt nicht in der Lage, multivariate Wechselwirkungen aufzulösen \cite{Kleppmann.2020,Siebertz.2026}.
+Da die topologische Struktur eines Versuchsplans die erreichbare Modellierungs- und Extrapolationsgüte deterministisch begrenzt, ist eine präzise mathematische Bewertung der Plangüte vor der Versuchsdurchführung damit unerlässlich.
+Hierfür dienen etablierte statistische Metriken wie die Prädiktionsvarianz sowie formale Optimalitätskriterien \cite{Montgomery.2020, Goos.2011}.
+
+Vor diesem Hintergrund strukturiert sich der weitere Verlauf dieses Kapitels wie folgt:
+Zunächst werden in Abschnitt~\ref{subsec:begriffedoe} die relevanten Grundbegriffe und Bewertungsmetriken zur Qualifizierung multivariater Versuchspläne eingeführt.
+Anschließend erfolgt in Abschnitt~\ref{subsec:pläne} eine Übersicht der für Lebensdauertests geeigneten \ac{DoE}-Strukturen, bevor abschließend in Abschnitt~\ref{subsec:modellbildung} die verallgemeinerte statistische Modellbildung (Weibull-\ac{GLM}) beleuchtet wird.
+Fundamentales Grundlagenwissen zur klassischen Regressionsmodellierung (\ac{ANOVA}), zum Umgang mit unzensierten normalverteilten Daten sowie die detaillierte mathematische Widerlegung der \ac{OFAT}-Methodik werden im Folgenden als bekannt vorausgesetzt.
+Für diese Themenkomplexe sei auf Standardwerke von \textcite{Montgomery.2020}, \textcite{Kleppmann.2020} sowie themenverwandte Vorarbeiten am \ac{IMA} \cite{Dazer.2019, Herzig.2021} verwiesen.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

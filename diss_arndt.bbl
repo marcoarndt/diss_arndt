@@ -98,8 +98,8 @@
       \strng{authornamehash}{3108999677b731b9b6ef01ad029f17fc}
       \strng{authorfullhash}{5bbe4ce7176f019d042db7c48104aad0}
       \strng{authorfullhashraw}{5bbe4ce7176f019d042db7c48104aad0}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{"}This book improves Meeker and Escobar (1998, Wiley) not only in terms of organization and presentation, but also in extensions and modifications to the technical material. It presents state-of-the-art, computer-based statistical methods for reliability data analysis and for test planning of industrial products. It also improves long time established techniques as it demonstrates how to apply the new graphical, numerical, or simulation-based methods to a broad range of models encountered in reliability data analysis. Bayesian methods in solving practical problems (e.g. models involving random effects or censoring that arises in reliability studies) are now incorporated where appropriate; the computations are done with WinBUGS. Ample exercises that extend and strengthen the concepts in the book are included. The criterion for integrating material in the book is that the authors have in-hand or have seen real applications for the methodology. The book is specifically geared for a one-semester course on the topic in either a statistics or engineering department at either the upper-undergraduate or beginning graduate levels. R functions and subroutines, along with an extensive list of data sets, are included on a massive web site that is meticulously maintained by the authors{"}--}
@@ -146,8 +146,8 @@
       \strng{authornamehash}{5c8f62ba392933db331eb31d518225a6}
       \strng{authorfullhash}{d27a45dcb741548bd1d12638bcaa086f}
       \strng{authorfullhashraw}{d27a45dcb741548bd1d12638bcaa086f}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{"}Experimental design has been used extensively and successfully to aid in quality achievement; however, there have been fewer successful applications in reliability. Experiments in reliability are inherently different from other industrial experiments since lifetimes usually do not follow a normal distribution, which is often the assumption in experimental design. Written by internationally known experts in the fields of experimental design methodology and reliability data analysis, this book illustrates how experimental design and tests can improve the reliability of the outcome. Focusing on reliability applications and methods, this book describes and illustrates methods for designing experiments and analyzes the results when the response is a lifetime. This book is organized into four main parts: Part One begins with an introduction to reliability, lifetime distributions, and inference for parameter of lifetime distributions; Part Two focuses on design of experiments, optimal design, and robust design; Part Three features coverage of lifetime regression, parametric regression models, the Cox Proportional Hazard Model, and design strategies for reliability achievement; and Part Four addresses accelerated testing, models for acceleration, and design of experiments for accelerated testing. The authors also utilize R, SAS{\circledR}, and JMP{\circledR} software throughout as appropriate, and a supplemental website contains the related data sets{"}--}
@@ -164,24 +164,32 @@
       \verb https://onlinelibrary.wiley.com/doi/book/10.1002/9781119237754
       \endverb
     \endentry
-    \entry{dat.2025}{misc}{}{}
-      \list{location}{1}{%
-        {Ostfildern, Deutschland}%
+    \entry{Kremer.2021}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \strng{namehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{fullhash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{fullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{bibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorbibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authornamehash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorfullhash}{ab1e473436714f07a37d7a30b43f0cb0}
+      \strng{authorfullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{DAT Report 2025: Kurzbericht}
-      \field{urlday}{13}
-      \field{urlmonth}{6}
-      \field{urlyear}{2025}
-      \field{year}{2025}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.dat.de/fileadmin/protected/DAT_Report/2025/DAT-Report-2025-Kurzbericht.pdf
-      \endverb
-      \verb{url}
-      \verb https://www.dat.de/fileadmin/protected/DAT_Report/2025/DAT-Report-2025-Kurzbericht.pdf
+      \field{abstract}{Die Erfahrung zeigt, dass sich sowohl die meisten historischen Unfälle und oft damit verbundenen Rückrufaktionen auf einen suboptimalen Zuverlässigkeits- und Erprobungsprozess zurückführen lassen. Und auch wenn durch den zunehmenden Wettbewerbsdruck die Unternehmen gezwungen sind schonend mit den Ressourcen umzugehen, kann keine Berechnung oder gar Simulation die Erprobung komplett ersetzen. Die Zuverlässigkeit zählt mittlerweile zu einem wichtigen Schlüsselfaktor in einem Qualitätsprozess und erfreut sich zudem einer stetig wachsenden Beliebtheit. Immer mehr Käufer von Neu- und Gebrauchtwagen sehen die Zuverlässigkeit als das wichtigste Kaufkriterium an. Auf der anderen Seite wird vermehrt der Nachweis der Systemzuverlässigkeit von Anlagen und Anlagenkomponenten verlangt. In der Regel beruht jeder Zuverlässigkeitsnachweis auf einem geeigneten Lebensdauermodell, das den Zusammenhang zwischen der Lebensdauer und der Belastung charakterisiert. Die existierenden Lebensdauermodelle sind jedoch oft auf bestimmte Anwendungen limitiert und daher auch nicht allgemeingültig. Viele von diesen Ansätzen können oft mechanische und thermische Belastungen abbilden. Allerdings besteht oft keine Möglichkeit geometrische Designparameter oder Fertigungsparameter zu berücksichtigen. Was jedoch viel wichtiger ist: Gängige Modellierungsansätze bilden keine Wechselwirkungen zwischen den einzelnen Belastungsfaktoren ab. Die einzige Möglichkeit dieses Problem zu lösen ist der Weg über Experimente. Die statistische Versuchsplanung (DoE) stellt ein geeignetes Rahmenwerk an statistischen Werkzeugen zur Verfügung, um auf Grundlage effizienten Experimenten ein empirisches Modell zu entwickeln. Das Problem besteht allerdings darin, dass DoE normalverteilte Residuen voraussetzt. Im Falle von Lebensdauertests ist die Zielgrö{ß}e in der Regel weibullverteilt und folgt keiner Normalverteilung mehr. In diesem Ursprünglichen Zustand ist keine sinnvolle Lebensdauermodellierung möglich. Die fehlende Kenntnis eines Lebensdauermodells erschwert aber sämtliche Aussagen bezüglich der Lebensdauer von technischen Systemen. Das wiederum führt dazu, dass keine vernünftige Zuverlässigkeitsanforderungen definiert werden kann. Folglich bleibt ein Zuverlässigkeitsnachweis aus. Um diesen Ansprüchen gerecht zu werden, wird im Rahmen dieser Arbeit eine Möglichkeit vorgestellt anwendungsspezifische Lebensdauermodelle zu entwickeln. Dieser Ansatz greift den klassischen DoE-Gedanken auf und entwickelt diesen zu Lebensdauer-DoE (L-DoE) weiter. Nach der kritischen Auseinandersetzung mit den Ansätzen zur Entwicklung von Lebensdauermodellen nach dem Stand der Technik werden Schwachstellen aufgedeckt und Optimierungspotenziale aufgezeigt. Um anwendungspezifische Ausfallprognosen unter realen Feldbedinungen zu ermöglichen, wird eine Methodik entwickelt, die den neuen L-DoE-Ansatz als wichtiges Kernelement beinhaltet. Neben der Systemanalyse und der Vorselektion relevanter Belastungsfaktoren, hat die neue Methodik die Entwicklung eines L-DoE-Modells im Versuch und die Integration von Felddaten zum Inhalt. Zur Entwicklung eines L-DoE-Modells stehen dabei vier unterschiedliche Ansätze zur Verfügung: der Box-Cox-Ansatz, Generalized-Logarithmic-Linear-Ansatz, Proportional-Hazard-Ansatz nund der Lifetime-Regression-Ansatz zur Verfügung. Eine Analyse dieser Ansätze zeigt, dass der Box-Cox-Ansatz sehr ungenaue Ausfallprognosen liefern kann. Dies lässt sich auf die Verwischung der Effekt infolge der Transformation der Daten zurückführen. Da Lebensdauerprognosen stark von den geschätzten Modellparametern abhängt, ist das Verfahren zur Parameterschätzung sehr entscheidend. In der Zuverlässigkeitstechnik hat sich dabei der Maximum-Likelihood-Estimation-Ansatz durchgesetzt, bei dem die unbekannten Modellparameter durch die Maximierung der Likelihoodfunktion bestimmt werden. Gängige MLE-Verfahren, wie beispielsweise Newton-Raphson, sind auf die Kenntnis von Startwerten angewiesen. Das erweist sich in der Praxis vor allem bei multidimensionalen Modellen als sehr schwierig. Zur Lösung dieses Problems werden vier Ansätze entwickelt und am Beispiel von zwei unterschiedlich komplexen Lebensdauermodellen untersucht. Die Pattern-Search-Ansatz, Latin-Hypercube-Steepest-Ascent-Ansatz und Latin-Hypercube-Pattern-Search-Ansatz zeigen dabei die besten Ergebnisse. Allgemein lässt sich aber sagen, dass es stark vom Lebensdauermodell abhängt welches Verfahren zur Parameterschätzung eingesetzt werden soll. Damit bereits vor der eigentlichen Versuchsplanung der Versuchsaufwand abgeschätzt werden kann, wird eine auf der Monte-Carlo-Simulation basierende Methodik zur Trennschärfeanalyse entwickelt und anhand einer Simulationsstudie demonstriert. Erste Ergebnisse zeigen, dass die Trennschärfe erwartungsgemä{ß} mit zunehmendem Stichprobenumfang zunimmt. Au{ß}erdem ist bei dem in der Praxis am häufigsten auftretende Fall, dass die Stichprobengrö{ß}e aus drei Prüflingen besteht hohe Aufmerksamkeit geboten. Dies kann unter Umständen dazu führen, dass wahre Effekte erkannt werden obwohl in Wirklichkeit die Ergebnisse auf den Zufall zurückzuführen sind. Gerade bei stark überdimensionierten Produkten muss mit langen Laufzeiten gerechnet werden, um erste Ausfälle im Feld zu erhalten. Aus diesem Grund liegen oft keinerlei Felddaten vor, mit denen ein Lebensdauermodell unter Feldbedingungen mit der L-DoE-Methodik entwickelt werden kann. Die einzige Möglichkeit sind ineffiziente Lebensdauertests unter realen Feldbedingungen. Alternative Möglichkeiten Vorwissen bei der Modellierung zu berücksichtigen sind derzeit nicht zuverlässig genug. Darüber hinaus steht gerade bei Neuentwicklungen oft kein Vorwissen zur Verfügung. Gelöst wird das Problem dadurch, dass ein neuer Ansatz zur Extrapolation auf das Feldniveau entwickelt wird. Der Kerngedanke beruht darin die mit L-DoE entwickelten Lebensdauermodelle mit den physikalisch basierten Modellen, wie beispielsweise dem Arrhenius-Modell zu verknüpfen. Dadurch werden allgemeingültige Zusammenhänge zwischen der Lebensdauer und Belastung angenommen, die Extrapolationen zulassen. Um die Anwendbarkeit zu erleichtern, wird die L-DoE-Methodik softwaretechnisch in MATLAB umgesetzt. Die Übertragung der Stichprobenergebnisse auf die Grundgesamtheit erfolgt mit Hilfe von Vertrauensintervallen. Dazu wird im Rahmen der Arbeit eine Methodik vorgestellt, um die entwickelten L-DoE-Modelle in die Berechnung und Simulation von Vertrauensintervallen zu integrieren. Dazu werden die Fisher-Vertrauensintervall, Pseudo-Vertrauensintervall, Nicht-Parametrische-Booststrap-Perzentil-Vertrauensintervall und Monte-Carlo-Vertrauensintervall entwickelt. Im Anschluss werden die entwickelten Ansätze einer Simulationsstudie unterzogen. Hierbei zeigen alle Ansätze unterschiedlich gro{ß}e Vertrauensintervalle. Im letzten Teil dieser Arbeit wird die neue Methodik um den L-DoE-Ansatz auf ein exemplarisches Zahnriemengetriebe angewandt und ein Lebensdauermodell entwickelt.}
+      \field{title}{Statistische Versuchsplanung in der Lebensdauererprobung mit Vertrauensintervallen}
+      \field{type}{phdthesis}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.18419/OPUS-11728
       \endverb
     \endentry
     \entry{Birolini.2017}{book}{}{}
@@ -206,8 +214,8 @@
       \strng{authornamehash}{ecf114aa7badca10474bfa02e9cccde1}
       \strng{authorfullhash}{ecf114aa7badca10474bfa02e9cccde1}
       \strng{authorfullhashraw}{ecf114aa7badca10474bfa02e9cccde1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-662-54208-8}
@@ -239,8 +247,8 @@
       \strng{authornamehash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
       \strng{authorfullhash}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
       \strng{authorfullhashraw}{254c3e5bb0c3e09bf3f73d96c9ff17d5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780471715290}
@@ -296,8 +304,8 @@
       \strng{authorfullhash}{ff763cc26b32bb473793196242a1df93}
       \strng{authorfullhashraw}{ff763cc26b32bb473793196242a1df93}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-662-50371-3}
@@ -328,8 +336,8 @@
       \strng{authornamehash}{2b29e200d0b5b68f183a9ee86c92791a}
       \strng{authorfullhash}{2b29e200d0b5b68f183a9ee86c92791a}
       \strng{authorfullhashraw}{2b29e200d0b5b68f183a9ee86c92791a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{01621459}
@@ -371,8 +379,8 @@
       \strng{authornamehash}{de8d73d8f167dd75b610703e373a22a1}
       \strng{authorfullhash}{de8d73d8f167dd75b610703e373a22a1}
       \strng{authorfullhashraw}{de8d73d8f167dd75b610703e373a22a1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-662-62293-3}
@@ -404,8 +412,8 @@
       \strng{authornamehash}{ec8317a15ab9b47e1eacf21fc05589c1}
       \strng{authorfullhash}{ec8317a15ab9b47e1eacf21fc05589c1}
       \strng{authorfullhashraw}{ec8317a15ab9b47e1eacf21fc05589c1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The Most Comprehensive Book on the Subject Chronicles the Development of the Weibull Distribution in Statistical Theory and Applied Statistics Exploring one of the most important distributions in statistics, The Weibull Distribution: A Handbook focuses on its origin, statistical properties, and related distributions. The book also presents various approaches to estimate the parameters of the Weibull distribution under all possible situations of sampling data as well as approaches to parameter and goodness-of-fit testing. Describes the Statistical Methods, Concepts, Theories, and Applications of This Distribution Compiling findings from dozens of scientific journals and hundreds of research papers, the author first gives a careful and thorough mathematical description of the Weibull distribution and all of its features. He then deals with Weibull analysis, using classical and Bayesian approaches along with graphical and linear maximum likelihood techniques to estimate the three Weibull parameters. The author also explores the inference of Weibull processes, Weibull parameter testing, and different types of goodness-of-fit tests and methods. Successfully Apply the Weibull Model By using inferential procedures for estimating, testing, forecasting, and simulating data, this self-contained, detailed handbook shows how to solve statistical life science and engineering problems. Cover -- Title -- Copyright -- Contents -- Preface -- List of Figures -- List of Tables -- Part I: Genesis, theory and description -- Chapter 1: History and meaning of the WEIBULL distribution -- Chapter 2: Definition and properties of the WEIBULL distribution -- Chapter 3: Related distributions -- Chapter 4: WEIBULL processes and WEIBULL renewal theory -- Chapter 5: Order statistics and related variables -- Chapter 6: Characterizations -- Part II: Applications and inference -- Chapter 7: WEIBULL applications and aids in doing WEIBULL analysis -- Chapter 8: Collecting life data -- Chapter 9: Parameter estimation - Graphical approaches -- Chapter 10: Parameter estimation - Least squares and linear approaches -- Chapter 11: Parameter estimation - Maximum likelihood approaches -- Chapter 12: Parameter estimation - Methods of moments -- Chapter 13: Parameter estimation - More classical approaches and comparisons -- Chapter 14: Parameter estimation - BAYESIAN approaches -- Chapter 15: Parameter estimation - Further approaches -- Chapter 16: Parameter estimation in accelerated life testing -- Chapter 17: Parameter estimation for mixed WEIBULL models -- Chapter 18: Inference of WEIBULL processes -- Chapter 19: Estimation of percentiles and reliability including tolerance limits -- Chapter 20: Prediction of future random quantities -- Chapter 21: WEIBULL parameter testing -- Chapter 22: WEIBULL goodness-of-fit testing and related problems -- Part III: Appendices -- Table of the gamma, digamma and trigamma functions -- Abbreviations -- Mathematical and statistical notations -- Bibliography -- Author index -- Subject index.}
@@ -442,8 +450,8 @@
       \strng{authornamehash}{2e1bd4c711f964987d8fef154f2ba2f0}
       \strng{authorfullhash}{2e1bd4c711f964987d8fef154f2ba2f0}
       \strng{authorfullhashraw}{2e1bd4c711f964987d8fef154f2ba2f0}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This volume includes the binomial tests of comparison and up-to-date information on Accept-Reject Tests, the Sequential Probability Ratio Test, Bayesian MTBF and Reliability Demonstration Tests, as well as other very important accelerated tests such as Arrhenius, Eyring, Bazovsky, and Inverse Power Law}
@@ -483,8 +491,8 @@
       \strng{authornamehash}{d5b92f1f1d7a32f637a9fa8267ad1bf4}
       \strng{authorfullhash}{99eadd8af988e76081d9186d2fd2c617}
       \strng{authorfullhashraw}{99eadd8af988e76081d9186d2fd2c617}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{"}In statistics, linear regression is a linear approach to modelling the relationship between a scalar response and one or more explanatory variables. A linear regression model attempts to explain the relationship between two or more variables using a straight line.{"}--}
@@ -517,8 +525,8 @@
       \strng{authorfullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
       \strng{authorfullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Accelerated Testing Statistical Models, Test Plans, and Data Analyses -- Contents -- Preface -- 1. Introduction and Background -- 1. Survey of Methodology and Applications -- 2. Types of Data -- 3. Types of Acceleration and Stress Loading -- 4. Engineering Considerations -- 5. Common Accelerated Tests -- 6. Statistical Considerations -- Problems -- 2. Models for Life Tests with Constant Stress -- 1. Introduction -- 2. Basic Concepts and the Exponential Distribution -- 3. Normal Distribution -- 4. Lognormal Distribution -- 5. Weibull Distribution -- 6. Extreme Value Distribution -- 7. Other Distributions -- 8. Life-Stress Relationships -- 9. Arrhenius Life-Temperature Relationship -- 10. Inverse Power Relationship -- 11. Endurance (Fatigue) Limit Relationships and Distributions -- 12. Other Single Stress Relationships -- 13. Multivariable Relationships -- 14. Spread in Log Life Depends on Stress -- Problems -- 3. Graphical Data Analysis -- 1. Introduction -- 2. Complete Data and Arrhenius-Lognormal Model -- 3. Complete Data and Power-Weibull Model -- 4. Singly Censored Data -- 5. Multiply Censored Data -- 6. Interval (Read-out) Data -- Problems -- 4. Complete Data and Least Squares Analyses -- 1. Introduction -- 2. Least-Squares Methods for Lognormal Life -- 3. Checks on the Linear-Lognormal Model and Data -- 4. Least-Squares Methods for Weibull and Exponential Life -- 5. Checks on the Linear-Weibull Model and Data -- 6. Multivariable Relationships -- Problems -- 5. Censored Data and Maximum Ukelihood Methods -- 1. Introduction to Maximum Likelihood -- 2. Fit the Simple Model to Right Censored Data -- 3. Assess the Simple Model and Right Censored Data -- 4. Other Models and Types of Data -- 5. Maximum Likelihood Calculations -- Problems -- 6. Test Plans -- 1. Plans for the Simple Model and Complete Data.}
@@ -557,8 +565,8 @@
       \strng{authornamehash}{d14758bf8b584eaa358587db5a5f2774}
       \strng{authorfullhash}{d14758bf8b584eaa358587db5a5f2774}
       \strng{authorfullhashraw}{d14758bf8b584eaa358587db5a5f2774}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Contains additional discussion and examples on left truncation as well as material on more general censoring and truncation patterns. Introduces the martingale and counting process formulation swil lbe in a new chapter. Develops multivariate failure time data in a separate chapter and extends the material on Markov and semi Markov formulations. Presents new examples and applications of data analysis Front Matter -- Introduction -- Failure Time Models -- Inference in Parametric Models and Related Topics -- Relative Risk (Cox) Regression Models -- Counting Processes and Asymptotic Theory -- Likelihood Construction and Further Results -- Rank Regression and the Accelerated Failure Time Model -- Competing Risks and Multistate Models -- Modeling and Analysis of Recurrent Event Data -- Analysis of Correlated Failure Time Data -- Additional Failure Time Data Topics -- Glossary of Notation -- Appendix A: Some Sets of Data -- Appendix B: Supporting Technical Material -- Bibliography -- Author Index -- Subject Index -- Wiley Series in Probability and Statistics. Failure time models --Inference in parametric models and related topics --Relative risk (Cox)regression models --Counting processes and asymptotic theory --Likelihood construction and further results --Rank regression and the accelerated failure time model --Competing risks and multi-state models --Modeling and analysis of recurrent event data --Analysis of correlated failure time data --Additional failure time data topics --Appendix A: Some sets of data --Appendix B: Some supporting technical material.}
@@ -600,8 +608,8 @@
       \strng{authorfullhash}{8fc1a2b86e1326c2fe08563c8a81c59b}
       \strng{authorfullhashraw}{8fc1a2b86e1326c2fe08563c8a81c59b}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{WILEY-INTERSCIENCE PAPERBACK SERIES The Wiley-Interscience Paperback Series consists of selected books that have been made more accessible to consumers in an effort to increase global appeal and general circulation. With these new unabridged softcover volumes, Wiley hopes to extend the lives of these works by making them available to future generations of statisticians, mathematicians, and scientists. {"}Many examples drawn from the author's experience of engineering applications are used to illustrate the theoretical results, which are presented in a cookbook fashion...it provides an excellent}
@@ -638,8 +646,8 @@
       \strng{authornamehash}{366c7df0b59760b6d5b451ecc4d94e03}
       \strng{authorfullhash}{366c7df0b59760b6d5b451ecc4d94e03}
       \strng{authorfullhashraw}{366c7df0b59760b6d5b451ecc4d94e03}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Newton---Raphson's method plays a fundamental role in the maximum likelihood estimation of the two parameters of the Weibull probability distribution. It is well known that the method depends on the initial point of the iterative process and the iteration does not always converge. In the present article, we introduce an effective iterative procedure for estimating the subject parameter. Our proposed method always converges and does not depend on the initial point of the iteration. It will also be shown by numerical examples that our method converges faster than the popular Newton---Raphson method.}
@@ -707,8 +715,8 @@
       \strng{editorfullhash}{e398fadf316c6698a920a5613e8fb9e9}
       \strng{editorfullhashraw}{e398fadf316c6698a920a5613e8fb9e9}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 29th European Safety and Reliability Conference (ESREL)}
@@ -743,8 +751,8 @@
       \strng{authornamehash}{72428f479388991b9fb020dff299038f}
       \strng{authorfullhash}{72428f479388991b9fb020dff299038f}
       \strng{authorfullhashraw}{72428f479388991b9fb020dff299038f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{5. ed.}
@@ -768,8 +776,8 @@
       \strng{authornamehash}{a5499b1679a871e0639ff4cba54fe95f}
       \strng{authorfullhash}{a5499b1679a871e0639ff4cba54fe95f}
       \strng{authorfullhashraw}{a5499b1679a871e0639ff4cba54fe95f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{10709878}
@@ -800,8 +808,8 @@
       \strng{authornamehash}{5624c38077822c81ba36774b4f549a77}
       \strng{authorfullhash}{5624c38077822c81ba36774b4f549a77}
       \strng{authorfullhashraw}{5624c38077822c81ba36774b4f549a77}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{10709878}
@@ -841,8 +849,8 @@
       \strng{authorfullhash}{24084f1a715650339527050d213206f7}
       \strng{authorfullhashraw}{24084f1a715650339527050d213206f7}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2019 Annual Reliability and Maintainability Symposium (RAMS)}
@@ -877,8 +885,8 @@
       \strng{authornamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
       \strng{authorfullhash}{9c8522a82bdbffcb9e6b888b265dd0d3}
       \strng{authorfullhashraw}{9c8522a82bdbffcb9e6b888b265dd0d3}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. ed.}
@@ -917,8 +925,8 @@
       \strng{authornamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
       \strng{authorfullhash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
       \strng{authorfullhashraw}{494ebe44e88b7af1b3bd5a6b4274fbf2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780203738733}
@@ -993,8 +1001,8 @@
       \strng{authorfullhash}{80129b89e5b04c5d52c6d180f09396f2}
       \strng{authorfullhashraw}{80129b89e5b04c5d52c6d180f09396f2}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{0471093157}
@@ -1030,8 +1038,8 @@
       \strng{authornamehash}{3f2df364a007491176bd3e047c324d88}
       \strng{authorfullhash}{3f2df364a007491176bd3e047c324d88}
       \strng{authorfullhashraw}{3f2df364a007491176bd3e047c324d88}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780471413349}
@@ -1067,8 +1075,8 @@
       \strng{authorfullhash}{622bb48821228d9a7605a21d73f0fc9d}
       \strng{authorfullhashraw}{622bb48821228d9a7605a21d73f0fc9d}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{10., überarbeitete Auflage}
@@ -1099,9 +1107,8 @@
       \strng{authornamehash}{7d4a838891cb5c31eb1e3e089777efa0}
       \strng{authorfullhash}{7d4a838891cb5c31eb1e3e089777efa0}
       \strng{authorfullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
-      \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{10th}
@@ -1136,8 +1143,8 @@
       \strng{authornamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
       \strng{authorfullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
       \strng{authorfullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{"}This Third Edition covers design of experiments and integrates computer experiments with other design topics. The main changes in this Third Edition are two new chapters, one on computer experiments, the other on optimal design. Computer experiments have become very popular in experimental design because increasingly more and more experiments are conducted on a computer, such as running finite element simulations, instead of conducting physical experiments. This book starts each chapter with a real experiment. Then, the authors develop the needed tools in subsequent sections. Finally, the chapter ends with the application of these tools to the experiment. Each chapter includes exercises, and the authors have added new exercise problems with selected solutions to the Instructor's solutions manual. This is an ideal book for design of experiments courses at the upper-undergraduate and graduate levels. It is also a valuable resource for practicing engineers and statisticians. Design of experiments (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships. This information is needed to manage process inputs in order to optimize the output{"}--}
@@ -1260,9 +1267,8 @@
       \strng{authornamehash}{1f49c6d22773878487629b490053f3fc}
       \strng{authorfullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
       \strng{authorfullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3. Auflage}
@@ -1298,8 +1304,8 @@
       \strng{authornamehash}{e9b8290c4891fab41ae653f4590250b9}
       \strng{authorfullhash}{e9b8290c4891fab41ae653f4590250b9}
       \strng{authorfullhashraw}{e9b8290c4891fab41ae653f4590250b9}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1st}
@@ -1326,8 +1332,8 @@
       \strng{authornamehash}{f2f71db52401837c018a82537cd40e41}
       \strng{authorfullhash}{f2f71db52401837c018a82537cd40e41}
       \strng{authorfullhashraw}{f2f71db52401837c018a82537cd40e41}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1st}
@@ -1368,8 +1374,8 @@
       \strng{authorfullhash}{01c14a626dccac2c615539582f23bfbd}
       \strng{authorfullhashraw}{01c14a626dccac2c615539582f23bfbd}
       \field{extraname}{1}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{4}
@@ -1396,8 +1402,8 @@
       \strng{authornamehash}{b2d5e4d5be1aedd86811d93b996f7c35}
       \strng{authorfullhash}{b2d5e4d5be1aedd86811d93b996f7c35}
       \strng{authorfullhashraw}{b2d5e4d5be1aedd86811d93b996f7c35}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Diese Arbeit widmet sich zum einen dem Ziel einer individuell anforderungsgerechten Zuverlässigkeitstestplanung im Zielkonflikt zwischen statistischer Genauigkeit, Testkosten und -zeit und zum anderen der Berechnung des dafür benötigten Vorwissens über das Produktausfallverhalten. Bei der Lebensdauer eines technischen Systems handelt es sich um eine Zufallsvariable, die Testingenieure in Kombination mit vielen möglichen Teststrategien und Randbedingungen bei der Planung von Zuverlässigkeitstests vor eine Herausforderung stellt. In einem Zuverlässigkeits-DOE werden die End-of-Life Tests und die ausfallfreien Tests im Spannungsfeld von Genauigkeit, Kosten und Zeit untersucht. Die Resultate zeigen die besten Anwendungsbereiche der jeweiligen Teststrategie und können für die Planung von Zuverlässigkeitstests mit unterschiedlichen Anforderungen verwendet werden. Ausfallfreie Tests, wie der Success Run, benötigen eine hohe Produktüberdimensionierung, um passable Erfolgsaussichten zu garantieren. Ausfallbasierte Teststrategien dagegen, sind zwar häufig kostenintensiver, dafür aber universeller einsetzbar. Durch die eingeführte Normierung aller zeitabhängigen Grö{ß}en lässt sich das Planungskonzept auf beliebige Produkte übertragen. Das produktspezifische Vorwissen wird im Rahmen dieser Arbeit nicht aus Felddaten oder Vorgängerprodukten gewonnen, sondern mit einem Ansatz zur stochastischen Lebensdauerberechnung ermittelt. Während konventionelle Lebensdauerberechnungskonzepte versuchen, die Streuung von Lebensdauerdaten durch konservative Annahmen und Sicherheitsfaktoren zu kompensieren, wird in diesem Konzept die Streuung zur realitätsnahen Berechnung der Lebensdauer berücksichtigt. Systematische Streuungen der Materialeigenschaften von Toleranzen und der äu{ß}eren Lasteinwirkung werden statistisch modelliert und für die Berechnung der Verteilungsfunktionen von Belastung und Belastbarkeit genutzt. Aus deren Überlappung werden die stochastischen Lebensdauerdaten berechnet. Durch Weibullanalyse resultieren die berechneten Lebensdauerdaten im produktspezifischen Ausfallverhalten. Die Anwendbarkeit der stochastischen Lebensdauerberechnung und der daraus abgeleiteten optimalen Testplanung werden anhand eines Nutzfahrzeugbremssattels für strukturmechanisches Versagen unter Beweis gestellt.}
@@ -1427,8 +1433,8 @@
       \strng{authornamehash}{1b17d112f7833c081ab1d64dd0ef11ef}
       \strng{authorfullhash}{1b17d112f7833c081ab1d64dd0ef11ef}
       \strng{authorfullhashraw}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Zentraler Kernpunkt des Zielkonflikts in der heutigen Produktentwicklung sind die immer weiter steigenden Kundenanforderungen bei einer gleichzeitig geforderten Reduktion der Entwicklungskosten. Beschleunigte Lebensdauertests sind daher für die Erprobung und den Zuverlässigkeitsnachweis unverzichtbar. Die vorliegende Arbeit betrachtet die Probability of Test Success als entscheidenden Parameter des erweiterten Zuverlässigkeitsziels, bei dem die Wahrscheinlichkeit eines erfolgreichen Zuverlässigkeitsnachweises durch Planung effizienter Zuverlässigkeitstests maximiert werden kann. Damit ist es möglich, die Grenzen des Zuverlässigkeitsnachweises und damit auch die Grenzen der Auslegung unter Berücksichtigung der Randbedingungen zu finden und Leichtbauanwendungen kostenoptimal auszulegen und gleichzeitig zuverlässigkeitstechnisch abzusichern. Die praxisrelevanten beschleunigten End-of-Life-Tests wurden in dieser Arbeit in das Konzept der Probability of Test Success integriert, um Handlungsempfehlungen für die Planung effizienter Zuverlässigkeitstests abzuleiten. Diese umfassen Empfehlungen zur Wahl und Verteilung der Prüflinge und der Lage der beschleunigten Lastniveaus, zur Berücksichtigung von beschleunigten Success-Run-Tests sowie zu Zensierungsstrategien und zusätzlichen beschleunigten Lastniveaus. Darüber hinaus wurde eine Einordnung des erweiterten Konzepts in die Produktauslegung vorgenommen. Für die untersuchten Anwendungen konnte gezeigt werden, dass das erweiterte Konzept der Probability of Test Success und die Vorgehensweise zur anforderungsgerechten Produktauslegung das Potenzial besitzt, die Zuverlässigkeitstestplanung bereits in der Produktauslegung zu berücksichtigen, die minimal mögliche Dimensionierung zu finden und dabei die Gesamtkosten zu reduzieren. Dieses Potenzial besteht insbesondere für Leichtbauanwendungen, bei welchen minimale Dimensionierung zentral ist, die Erfüllung der Zuverlässigkeits- und Lebensdaueranforderungen jedoch gewährleistet sein muss. Die Nachweisbarkeit eines Zuverlässigkeitsziels unter Berücksichtigung der Probability of Test Success kann mit dem erweiterten Konzept nun erstmals auch für die praxisrelevanten beschleunigten End-of-Life-Erprobungsstrategien berücksichtigt und quantifiziert werden.}
@@ -1461,8 +1467,8 @@
       \strng{authornamehash}{f784da2389a332859e32df8d9d618d14}
       \strng{authorfullhash}{f784da2389a332859e32df8d9d618d14}
       \strng{authorfullhashraw}{f784da2389a332859e32df8d9d618d14}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Zentraler Gegenstand dieser Arbeit ist der Nachweis der Zuverlässigkeit von Systemen und die Planung der dazu notwendigen Tests. Selbst einfache Produkte können durch mehrere Ursachen und Mechanismen ausfallen und besitzen dazu meist mehrere Komponenten und Subsysteme. Diese Arbeit behandelt die Planung von Tests für den effizienten Nachweis der Systemzuverlässigkeit, welche die Systemstruktur und die Komponenten mit der Kombina- tion von Tests dieser Elemente berücksichtigt. Dazu wird die Probability of Test Success als zentrale, objektive Bewertungsmetrik verwendet. Sie ist fähig, die Wahrscheinlichkeit für einen erfolgreichen Zuverlässigkeitsnachweis anzugeben und erlaubt damit beispielsweise auch die Frage nach dem erforderlichen Stichprobenumfang bei ausfallbasierten Tests zu beantworten. Durch die vorgenommene Einordnung der Probability of Test Success in den statistischen Kontext eines Hypothesentests kann die Probability of Test Success auch als Trennschärfe verstanden werden. Dadurch werden Berechnungsmethoden entwickelt, die diesen Kontext ausnutzen. Ebenso ermöglicht dies die notwendige Erweiterung auf Systeme mit mehreren Ausfallmoden sowie die Berücksichtigung der Unsicherheit in der Vorkenntnis und die zusätzliche Berücksichtigung der Vorkenntnis mit dem Satz von Bayes. Ein ganzheitliches Vorgehen zeigt auf, wie im individuellen Fall der effizienteste Test identifiziert werden kann. Das hei{ß}t ein Test, welcher sowohl den Nachweis mit hoher Wahrscheinlichkeit erbringt, als auch die gesetzten Grenzen bezüglich des zur Verfügung stehenden Budgets einhält und die Ressourcen dabei möglichst effizient einsetzt. Untersuchungen zeigen, dass sich daraus ein grundsätzliches Verständnis zu den Tests, der Vorkenntnis und den Systemen ableiten lässt. Beispielsweise sind ausfallfreie Tests auf Komponentenebene den ausfallbasierten Tests aus statistischer Sicht fast immer unterlegen. Zudem verhält sich der Effekt von hohem Aufwand auf die Güte des Tests bei ausfallbasierten und ausfallfreien Tests gegensätzlich. Werden bei einem ausfallbasierten Test mehr Prüflinge verwendet, so steigt die Wahrscheinlichkeit für einen erfolgreichen Nachweis. Bei den ausfallfreien Tests sinkt dagegen die Wahrscheinlichkeit für einen erfolgreichen Nachweis. Das bedeutet, dass ausfallfreie Testverfahren nur dann mit hoher Wahrscheinlichkeit einen Nachweis erbringen können, wenn die dabei gewonnene Aussage von schlechter statistischer Güte ist. Zudem sind sie unfähig, Zuverlässigkeitsnachweise für Systeme zu erbringen, welche die Anforderung nur wenig übererfüllen. Werden die Komponenten des Systems ausfallbasiert getestet, um den Nachweis zu erbringen, so ermöglichen die entwickelten Methoden eine optimale Aufteilung der Prüflinge zu berechnen. Neben der Auswahl der Testart erlaubt diese Arbeit demnach die Untersuchung der optimalen Testgestaltung, sodass der Nachweis mit grö{ß}tmöglicher Wahrscheinlichkeit erbracht werden kann. Hierzu zählen auch Kombinationen verschiedener Testtypen und Komponenten des Systems. Es lassen sich beispielsweise ausfallbasierte Komponententests mit ausfallfreien Dauerlauftests auf Systemebene kombinieren und hinsichtlich deren Eignung für den Zuverlässigkeitsnachweis bewerten. Durch die zusätzliche Berücksichtigung der Vorkenntnis mittels des Satzes von Bayes lassen sich Testaufwände einsparen. Die Bewertung solcher Tests ist durch die erarbeiteten Methoden ebenso möglich und stellt sicher, dass der effizienteste Test zum Nachweis der Zuverlässigkeit gefunden werden kann. Weitere Untersuchungen ergeben ergänzende Erkenntnisse. Die Anwendung des ganzheitlichen Verfahrens am Fallbeispiel eines Synchronmotors demonstriert zusätzlich den Nutzen der entwickelten Methoden und Prozesse. Die Arbeit leistet damit einen Beitrag zur umfassenden und statistisch fundierten Planung von Zuverlässigkeitstests zum Nachweis von Systemen. Sie konzentriert sich dabei auf die statistischen Aspekte und erlaubt den objektiven Vergleich und Bewertung von Tests verschiedener Systemebenen und Arten, sowie Kombinationen davon zum Nachweis der Systemzuverlässigkeit. Um möglichst effiziente Tests zu ermöglichen, wird eine Methode mit dem Satz von Bayes integriert. Die Güte der Planung selbst wird durch die Berücksichtigung der Unsicherheit der Eingangsdaten mitbewertet.}
@@ -1474,35 +1480,6 @@
       \endverb
       \verb{file}
       \verb Grundler 2024 - Zuverl{\"a}ssigkeitsnachweis von Systemen durch Komponenten:Attachments/Grundler 2024 - Zuverl{\"a}ssigkeitsnachweis von Systemen durch Komponenten.pdf:application/pdf
-      \endverb
-    \endentry
-    \entry{Kremer.2021}{thesis}{}{}
-      \name{author}{1}{}{%
-        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
-           family={Kremer},
-           familyi={K\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{fullhash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{fullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{bibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authorbibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authornamehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authorfullhash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authorfullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
-      \field{extraname}{1}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Die Erfahrung zeigt, dass sich sowohl die meisten historischen Unfälle und oft damit verbundenen Rückrufaktionen auf einen suboptimalen Zuverlässigkeits- und Erprobungsprozess zurückführen lassen. Und auch wenn durch den zunehmenden Wettbewerbsdruck die Unternehmen gezwungen sind schonend mit den Ressourcen umzugehen, kann keine Berechnung oder gar Simulation die Erprobung komplett ersetzen. Die Zuverlässigkeit zählt mittlerweile zu einem wichtigen Schlüsselfaktor in einem Qualitätsprozess und erfreut sich zudem einer stetig wachsenden Beliebtheit. Immer mehr Käufer von Neu- und Gebrauchtwagen sehen die Zuverlässigkeit als das wichtigste Kaufkriterium an. Auf der anderen Seite wird vermehrt der Nachweis der Systemzuverlässigkeit von Anlagen und Anlagenkomponenten verlangt. In der Regel beruht jeder Zuverlässigkeitsnachweis auf einem geeigneten Lebensdauermodell, das den Zusammenhang zwischen der Lebensdauer und der Belastung charakterisiert. Die existierenden Lebensdauermodelle sind jedoch oft auf bestimmte Anwendungen limitiert und daher auch nicht allgemeingültig. Viele von diesen Ansätzen können oft mechanische und thermische Belastungen abbilden. Allerdings besteht oft keine Möglichkeit geometrische Designparameter oder Fertigungsparameter zu berücksichtigen. Was jedoch viel wichtiger ist: Gängige Modellierungsansätze bilden keine Wechselwirkungen zwischen den einzelnen Belastungsfaktoren ab. Die einzige Möglichkeit dieses Problem zu lösen ist der Weg über Experimente. Die statistische Versuchsplanung (DoE) stellt ein geeignetes Rahmenwerk an statistischen Werkzeugen zur Verfügung, um auf Grundlage effizienten Experimenten ein empirisches Modell zu entwickeln. Das Problem besteht allerdings darin, dass DoE normalverteilte Residuen voraussetzt. Im Falle von Lebensdauertests ist die Zielgrö{ß}e in der Regel weibullverteilt und folgt keiner Normalverteilung mehr. In diesem Ursprünglichen Zustand ist keine sinnvolle Lebensdauermodellierung möglich. Die fehlende Kenntnis eines Lebensdauermodells erschwert aber sämtliche Aussagen bezüglich der Lebensdauer von technischen Systemen. Das wiederum führt dazu, dass keine vernünftige Zuverlässigkeitsanforderungen definiert werden kann. Folglich bleibt ein Zuverlässigkeitsnachweis aus. Um diesen Ansprüchen gerecht zu werden, wird im Rahmen dieser Arbeit eine Möglichkeit vorgestellt anwendungsspezifische Lebensdauermodelle zu entwickeln. Dieser Ansatz greift den klassischen DoE-Gedanken auf und entwickelt diesen zu Lebensdauer-DoE (L-DoE) weiter. Nach der kritischen Auseinandersetzung mit den Ansätzen zur Entwicklung von Lebensdauermodellen nach dem Stand der Technik werden Schwachstellen aufgedeckt und Optimierungspotenziale aufgezeigt. Um anwendungspezifische Ausfallprognosen unter realen Feldbedinungen zu ermöglichen, wird eine Methodik entwickelt, die den neuen L-DoE-Ansatz als wichtiges Kernelement beinhaltet. Neben der Systemanalyse und der Vorselektion relevanter Belastungsfaktoren, hat die neue Methodik die Entwicklung eines L-DoE-Modells im Versuch und die Integration von Felddaten zum Inhalt. Zur Entwicklung eines L-DoE-Modells stehen dabei vier unterschiedliche Ansätze zur Verfügung: der Box-Cox-Ansatz, Generalized-Logarithmic-Linear-Ansatz, Proportional-Hazard-Ansatz nund der Lifetime-Regression-Ansatz zur Verfügung. Eine Analyse dieser Ansätze zeigt, dass der Box-Cox-Ansatz sehr ungenaue Ausfallprognosen liefern kann. Dies lässt sich auf die Verwischung der Effekt infolge der Transformation der Daten zurückführen. Da Lebensdauerprognosen stark von den geschätzten Modellparametern abhängt, ist das Verfahren zur Parameterschätzung sehr entscheidend. In der Zuverlässigkeitstechnik hat sich dabei der Maximum-Likelihood-Estimation-Ansatz durchgesetzt, bei dem die unbekannten Modellparameter durch die Maximierung der Likelihoodfunktion bestimmt werden. Gängige MLE-Verfahren, wie beispielsweise Newton-Raphson, sind auf die Kenntnis von Startwerten angewiesen. Das erweist sich in der Praxis vor allem bei multidimensionalen Modellen als sehr schwierig. Zur Lösung dieses Problems werden vier Ansätze entwickelt und am Beispiel von zwei unterschiedlich komplexen Lebensdauermodellen untersucht. Die Pattern-Search-Ansatz, Latin-Hypercube-Steepest-Ascent-Ansatz und Latin-Hypercube-Pattern-Search-Ansatz zeigen dabei die besten Ergebnisse. Allgemein lässt sich aber sagen, dass es stark vom Lebensdauermodell abhängt welches Verfahren zur Parameterschätzung eingesetzt werden soll. Damit bereits vor der eigentlichen Versuchsplanung der Versuchsaufwand abgeschätzt werden kann, wird eine auf der Monte-Carlo-Simulation basierende Methodik zur Trennschärfeanalyse entwickelt und anhand einer Simulationsstudie demonstriert. Erste Ergebnisse zeigen, dass die Trennschärfe erwartungsgemä{ß} mit zunehmendem Stichprobenumfang zunimmt. Au{ß}erdem ist bei dem in der Praxis am häufigsten auftretende Fall, dass die Stichprobengrö{ß}e aus drei Prüflingen besteht hohe Aufmerksamkeit geboten. Dies kann unter Umständen dazu führen, dass wahre Effekte erkannt werden obwohl in Wirklichkeit die Ergebnisse auf den Zufall zurückzuführen sind. Gerade bei stark überdimensionierten Produkten muss mit langen Laufzeiten gerechnet werden, um erste Ausfälle im Feld zu erhalten. Aus diesem Grund liegen oft keinerlei Felddaten vor, mit denen ein Lebensdauermodell unter Feldbedingungen mit der L-DoE-Methodik entwickelt werden kann. Die einzige Möglichkeit sind ineffiziente Lebensdauertests unter realen Feldbedingungen. Alternative Möglichkeiten Vorwissen bei der Modellierung zu berücksichtigen sind derzeit nicht zuverlässig genug. Darüber hinaus steht gerade bei Neuentwicklungen oft kein Vorwissen zur Verfügung. Gelöst wird das Problem dadurch, dass ein neuer Ansatz zur Extrapolation auf das Feldniveau entwickelt wird. Der Kerngedanke beruht darin die mit L-DoE entwickelten Lebensdauermodelle mit den physikalisch basierten Modellen, wie beispielsweise dem Arrhenius-Modell zu verknüpfen. Dadurch werden allgemeingültige Zusammenhänge zwischen der Lebensdauer und Belastung angenommen, die Extrapolationen zulassen. Um die Anwendbarkeit zu erleichtern, wird die L-DoE-Methodik softwaretechnisch in MATLAB umgesetzt. Die Übertragung der Stichprobenergebnisse auf die Grundgesamtheit erfolgt mit Hilfe von Vertrauensintervallen. Dazu wird im Rahmen der Arbeit eine Methodik vorgestellt, um die entwickelten L-DoE-Modelle in die Berechnung und Simulation von Vertrauensintervallen zu integrieren. Dazu werden die Fisher-Vertrauensintervall, Pseudo-Vertrauensintervall, Nicht-Parametrische-Booststrap-Perzentil-Vertrauensintervall und Monte-Carlo-Vertrauensintervall entwickelt. Im Anschluss werden die entwickelten Ansätze einer Simulationsstudie unterzogen. Hierbei zeigen alle Ansätze unterschiedlich gro{ß}e Vertrauensintervalle. Im letzten Teil dieser Arbeit wird die neue Methodik um den L-DoE-Ansatz auf ein exemplarisches Zahnriemengetriebe angewandt und ein Lebensdauermodell entwickelt.}
-      \field{title}{Statistische Versuchsplanung in der Lebensdauererprobung mit Vertrauensintervallen}
-      \field{type}{phdthesis}
-      \field{year}{2021}
-      \verb{doi}
-      \verb 10.18419/OPUS-11728
       \endverb
     \endentry
     \entry{Coleman.1993}{article}{}{}
@@ -1596,8 +1573,8 @@
       \strng{authornamehash}{7aa05a2685adf946e74256782bec5282}
       \strng{authorfullhash}{7aa05a2685adf946e74256782bec5282}
       \strng{authorfullhashraw}{7aa05a2685adf946e74256782bec5282}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Als Ms. gedr}
@@ -3183,8 +3160,8 @@
       \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
       \strng{authorfullhashraw}{f938eb5ea778b1893dcdfbcde1ea455d}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 16th International Probabilistic Safety Assessment and Management Conference (PSAM16)}
@@ -3211,8 +3188,8 @@
       \strng{authornamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
       \strng{authorfullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
       \strng{authorfullhashraw}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1st}
@@ -3859,536 +3836,6 @@
       \verb 10.1109/RAMS48127.2025.10935086
       \endverb
     \endentry
-    \entry{Arndt.2023c}{article}{}{}
-      \name{author}{4}{}{%
-        {{hash=cb1e3a90988f317beb3353678cbde418}{%
-           family={Arndt},
-           familyi={A\bibinitperiod},
-           given={Marco},
-           giveni={M\bibinitperiod}}}%
-        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
-           family={Dazer},
-           familyi={D\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-        {{hash=a8792b60927a47d7d27d6e577f06d803}{%
-           family={Raither},
-           familyi={R\bibinitperiod},
-           given={Wolfram},
-           giveni={W\bibinitperiod}}}%
-        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
-           family={Bertsche},
-           familyi={B\bibinitperiod},
-           given={Bernd},
-           giveni={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{b18fafb45b39de1207e36f000129af31}
-      \strng{fullhash}{f4be653f312765a5dc616d9a112196cf}
-      \strng{fullhashraw}{f4be653f312765a5dc616d9a112196cf}
-      \strng{bibnamehash}{f4be653f312765a5dc616d9a112196cf}
-      \strng{authorbibnamehash}{f4be653f312765a5dc616d9a112196cf}
-      \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
-      \strng{authorfullhash}{f4be653f312765a5dc616d9a112196cf}
-      \strng{authorfullhashraw}{f4be653f312765a5dc616d9a112196cf}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{For the investigation of influence of various parameters on properties and outputs of components or systems, Design of Experiments (DOE) offers the most efficient approach to create a{\&}nbsp;comprehensive empirical insight into product performance. However, especially if product lifetime is treated as the investigation objective, the main focus of attention must be placed on the efficiency of testing---if only to comply with the principle of DOE, even before testing begins. Without actual test runs, a{\&}nbsp;pre-selection of relevant factors influencing the target quantity can be performed here and strategically adjusted in scale compared to the subsequent method. In this work, common heuristic tools and methods are analyzed and evaluated with respect to a{\&}nbsp;deliberate preselection of influencing factors versus the challenges in lifetime testing and degradation behaviors. Several factors as well as their interactions are taken into account to achieve this. For this purpose, these methods are partially extended and adapted in their focus in order to finally be made applicable in a{\&}nbsp;suitable procedure. An illustration of this is also provided in a{\&}nbsp;selected use case with limited empirical and experimental prior-knowledge, in which a{\&}nbsp;sample of relevant influences is identified through qualitative heuristic decision making with respect to parameters that influence product lifetime.}
-      \field{issn}{0015-7899}
-      \field{journaltitle}{Forschung im Ingenieurwesen}
-      \field{number}{4}
-      \field{title}{Parameter assessment for reliability modeling of machine components using heuristic screening}
-      \field{volume}{87}
-      \field{year}{2023}
-      \field{pages}{1347\bibrangedash 1370}
-      \range{pages}{24}
-      \verb{doi}
-      \verb 10.1007/s10010-023-00711-5
-      \endverb
-      \verb{file}
-      \verb Arndt, Dazer et al. 2023 - Parameter assessment for reliability modeling (5):Attachments/Arndt, Dazer et al. 2023 - Parameter assessment for reliability modeling (5).pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://link.springer.com/article/10.1007/s10010-023-00711-5#citeas
-      \endverb
-      \verb{url}
-      \verb https://link.springer.com/article/10.1007/s10010-023-00711-5#citeas
-      \endverb
-    \endentry
-    \entry{Krallmann.2013}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=ab1e99aafe79e38c865654048d69e2c9}{%
-           family={Krallmann},
-           familyi={K\bibinitperiod},
-           given={Hermann},
-           giveni={H\bibinitperiod}}}%
-        {{hash=4f8a4bb4517674ff3c46d03547c88134}{%
-           family={Bobrik},
-           familyi={B\bibinitperiod},
-           given={Annette},
-           giveni={A\bibinitperiod}}}%
-        {{hash=aec517b4b10c0d0167d84b3e3c06f5b0}{%
-           family={Levina},
-           familyi={L\bibinitperiod},
-           given={Olga},
-           giveni={O\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {München}%
-      }
-      \list{publisher}{1}{%
-        {Oldenbourg-Verl.}%
-      }
-      \strng{namehash}{0e80095edc36972de9e2a1faba5e937d}
-      \strng{fullhash}{7c9bc1529ee6d25cf37a652f98781dbe}
-      \strng{fullhashraw}{7c9bc1529ee6d25cf37a652f98781dbe}
-      \strng{bibnamehash}{7c9bc1529ee6d25cf37a652f98781dbe}
-      \strng{authorbibnamehash}{7c9bc1529ee6d25cf37a652f98781dbe}
-      \strng{authornamehash}{0e80095edc36972de9e2a1faba5e937d}
-      \strng{authorfullhash}{7c9bc1529ee6d25cf37a652f98781dbe}
-      \strng{authorfullhashraw}{7c9bc1529ee6d25cf37a652f98781dbe}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{6., überarb. und erw. Aufl.}
-      \field{isbn}{978-3-486-72982-5}
-      \field{title}{Systemanalyse im Unternehmen: Prozessorientierte Methoden der Wirtschaftsinformatik}
-      \field{year}{2013}
-      \verb{doi}
-      \verb 10.1524/9783486729825
-      \endverb
-    \endentry
-    \entry{Wallace.2007}{book}{}{}
-      \name{editor}{6}{}{%
-        {{hash=5cae9f0f5604562303e38287160cf9d9}{%
-           family={Wallace},
-           familyi={W\bibinitperiod},
-           given={Ken},
-           giveni={K\bibinitperiod}}}%
-        {{hash=ebfef24ebb8e436dc150ff7760ed8d76}{%
-           family={Pahl},
-           familyi={P\bibinitperiod},
-           given={Gerhard},
-           giveni={G\bibinitperiod}}}%
-        {{hash=3ef03332e0b0fca2547a93058102d8a1}{%
-           family={Beitz},
-           familyi={B\bibinitperiod},
-           given={Wolfgang},
-           giveni={W\bibinitperiod}}}%
-        {{hash=502d001917782be467412a33cb557f57}{%
-           family={Feldhusen},
-           familyi={F\bibinitperiod},
-           given={Jörg},
-           giveni={J\bibinitperiod}}}%
-        {{hash=013ec710ca8a4acbf6b2cfc9ef514325}{%
-           family={Grote},
-           familyi={G\bibinitperiod},
-           given={Karl-Heinrich},
-           giveni={K\bibinithyphendelim H\bibinitperiod}}}%
-        {{hash=861d0429e0f26bd3d90f47c55d1b2c39}{%
-           family={Blessing},
-           familyi={B\bibinitperiod},
-           given={Lucienne\bibnamedelimb T.\bibnamedelimi M.},
-           giveni={L\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {London}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{8ee86a64cff29a76d651c080aa0b03e7}
-      \strng{fullhash}{7408193dc444193a5f9d8ef0d75b0fa9}
-      \strng{fullhashraw}{7408193dc444193a5f9d8ef0d75b0fa9}
-      \strng{bibnamehash}{7408193dc444193a5f9d8ef0d75b0fa9}
-      \strng{editorbibnamehash}{7408193dc444193a5f9d8ef0d75b0fa9}
-      \strng{editornamehash}{8ee86a64cff29a76d651c080aa0b03e7}
-      \strng{editorfullhash}{7408193dc444193a5f9d8ef0d75b0fa9}
-      \strng{editorfullhashraw}{7408193dc444193a5f9d8ef0d75b0fa9}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{editor}
-      \field{labeltitlesource}{title}
-      \field{edition}{3. ed.}
-      \field{isbn}{1846283183}
-      \field{title}{Engineering design: A systematic approach}
-      \field{year}{2007}
-      \verb{urlraw}
-      \verb http://site.ebrary.com/lib/librarytitles/docDetail.action?docID=10230457
-      \endverb
-      \verb{url}
-      \verb http://site.ebrary.com/lib/librarytitles/docDetail.action?docID=10230457
-      \endverb
-    \endentry
-    \entry{Montgomery.2020b}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
-           family={Montgomery},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima C.},
-           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, NJ}%
-      }
-      \list{publisher}{1}{%
-        {Wiley}%
-      }
-      \strng{namehash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{fullhash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{fullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{bibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{authorbibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{authornamehash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{authorfullhash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{authorfullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{Eighth edition, EMEA edition}
-      \field{isbn}{9781119657118}
-      \field{title}{Introduction to statistical quality control}
-      \field{year}{2020}
-    \endentry
-    \entry{Bruckner.2019}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=b34e283d2d96594abe1958a8c2ef78de}{%
-           family={Brückner},
-           familyi={B\bibinitperiod},
-           given={Claudia},
-           giveni={C\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {München}%
-      }
-      \list{publisher}{1}{%
-        {Hanser}%
-      }
-      \strng{namehash}{b34e283d2d96594abe1958a8c2ef78de}
-      \strng{fullhash}{b34e283d2d96594abe1958a8c2ef78de}
-      \strng{fullhashraw}{b34e283d2d96594abe1958a8c2ef78de}
-      \strng{bibnamehash}{b34e283d2d96594abe1958a8c2ef78de}
-      \strng{authorbibnamehash}{b34e283d2d96594abe1958a8c2ef78de}
-      \strng{authornamehash}{b34e283d2d96594abe1958a8c2ef78de}
-      \strng{authorfullhash}{b34e283d2d96594abe1958a8c2ef78de}
-      \strng{authorfullhashraw}{b34e283d2d96594abe1958a8c2ef78de}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{2., vollständig überarbeitete und erweiterte Auflage}
-      \field{isbn}{978-3-446-45575-7}
-      \field{title}{Qualitätsmanagement: Das Praxishandbuch für die Automobilindustrie}
-      \field{year}{2019}
-      \verb{doi}
-      \verb 10.3139/9783446459724
-      \endverb
-    \endentry
-    \entry{Breiing.1997}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=608756c1af646d73b472832f7c02bccc}{%
-           family={Breiing},
-           familyi={B\bibinitperiod},
-           given={Alois},
-           giveni={A\bibinitperiod}}}%
-        {{hash=14d252c9850b2922747dd3a4cb651149}{%
-           family={Knosala},
-           familyi={K\bibinitperiod},
-           given={Ryszard},
-           giveni={R\bibinitperiod}}}%
-      }
-      \list{location}{2}{%
-        {Berlin}%
-        {Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{c2ea1f8d0398fab3a435afb00eaea2da}
-      \strng{fullhash}{c2ea1f8d0398fab3a435afb00eaea2da}
-      \strng{fullhashraw}{c2ea1f8d0398fab3a435afb00eaea2da}
-      \strng{bibnamehash}{c2ea1f8d0398fab3a435afb00eaea2da}
-      \strng{authorbibnamehash}{c2ea1f8d0398fab3a435afb00eaea2da}
-      \strng{authornamehash}{c2ea1f8d0398fab3a435afb00eaea2da}
-      \strng{authorfullhash}{c2ea1f8d0398fab3a435afb00eaea2da}
-      \strng{authorfullhashraw}{c2ea1f8d0398fab3a435afb00eaea2da}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-3-642-63908-1}
-      \field{title}{Bewerten technischer Systeme: Theoretische und methodische Grundlagen bewertungstechnischer Entscheidungshilfen}
-      \field{year}{1997}
-      \verb{doi}
-      \verb 10.1007/978-3-642-59229-4
-      \endverb
-    \endentry
-    \entry{Albers.2005}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=906a3ac09a59f152230c19d503021c04}{%
-           family={Albers},
-           familyi={A\bibinitperiod},
-           given={Sönke},
-           giveni={S\bibinitperiod}}}%
-      }
-      \list{location}{2}{%
-        {Wiesbaden}%
-        {s.l.}%
-      }
-      \list{publisher}{1}{%
-        {Gabler Verlag}%
-      }
-      \strng{namehash}{906a3ac09a59f152230c19d503021c04}
-      \strng{fullhash}{906a3ac09a59f152230c19d503021c04}
-      \strng{fullhashraw}{906a3ac09a59f152230c19d503021c04}
-      \strng{bibnamehash}{906a3ac09a59f152230c19d503021c04}
-      \strng{authorbibnamehash}{906a3ac09a59f152230c19d503021c04}
-      \strng{authornamehash}{906a3ac09a59f152230c19d503021c04}
-      \strng{authorfullhash}{906a3ac09a59f152230c19d503021c04}
-      \strng{authorfullhashraw}{906a3ac09a59f152230c19d503021c04}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{1: Einführung -- Technologie-und Innovationsmanagement -- Dimensionen der Innovation -- Bedeutung von Innovationen für die Wettbewerbsfähigkeit -- Management des Wissens als Hauptaufgabe des Technologie-und Innovationsmanagements -- 2: Strategisches Management von Innovationen -- Forschungs-und Entwicklungsstrategien -- Technologietransfer -- Technologie-Frühaufklärung -- Corporate Venturing -- Management von Technologieallianzen und Kooperationen -- Strategisches Patentmanagement -- Produktimitation als Innovationsstrategie -- Globales Management von Innovation -- 3: Forschung und Entwicklung als Produktion von Innovationen -- Technologiemanagement -- Neuproduktentwicklungsmanagement -- Quellen für Neuproduktideen -- Kreativitätstechniken -- Werkzeuge für Entwicklungsmethodiken -- IT- Unterstützung bei der Innovationsentwicklung -- Experimentation Strategies and Technological Change -- 4: Vermarktung von Innovationen -- Präferenzforschung für Innovationen -- Planung der Produkteigenschaften -- Timing der Markteinführung von Innovationen -- Diffusion und Adoption von Innovationen -- Prognose des Markterfolgs von Produktinnovationen -- 5: Organisation von Innovationen -- Schlüsselpersonen der Innovation -- Initiativen für Innovationen -- Projektmanagement -- Führung von Innovationsteams -- Schnittstellenmanagement im Innovationsprozess -- Inkubatoren für die Kommerzialisierung neuer Technologien -- 6: Finanzierung und Controlling von Innovationen -- F{\&}E Controlling -- Innovationscontrolling -- Innovationsfinanzierung und Venture Capital Markt -- 7: Trends im Technologie- und Innovationsmanagement -- Innovationsnetzwerke -- Systementwickler und Modullieferanten -- Service-Innovation -- Innovationsmanagement in der Net Economy --- E-Business -- Open Source {\&} Co.: Innovative User-Netzwerke -- Betriebswirtschaftliche Perspektiven des Ubiquitous Computing -- 8: Praxis-Beispiele -- Innovationsportfolio-Management -- Kunden als Innovationsmotor bei Henkel -- Strategisches Innovations-Management bei Siemens -- Empathic Design in der BMW Group -- Technologie-Portfoliomanagement in der Pharmaindustrie -- Intellectual Property Management in der Finanzdienstleistungsbranche -- Stichwortverzeichnis. Die Anforderungen an das Management von Innovation haben sich in den letzten Jahren deutlich verändert: Weitere Globalisierung des Wettbewerbs, Fragmentierung der Märkte und zunehmende Individualisierung der Kundenwünsche erfordern eine höhere Produktvielfalt und oft kürzere Innovationszyklen. Demgegenüber steigen Komplexität und Dynamik der Technologieentwicklung stark an. Renommierte Wissenschaftler aus dem internationalen Umfeld und Führungskräfte aus unterschiedlichen Branchen geben in 45 Beiträgen Antwort auf aktuelle Fragen wie: - Wie sollen neue Technologien und Innovation geführt werden? - Welche Technologien soll man auswählen? - Wie wird Innovation organisiert? - Wie werden Innovationsprozesse effektiv und effizient geführt? - Wie soll man Innovationen vermarkten? - Welche Methoden stehen zur Verfügung, welche haben sich bewährt? - Wie lässt sich Innovation wirksam schützen? Die Autoren dokumentieren auf einer breiten, interdisziplinären Basis den derzeitigen Erkenntnisstand aus der Sicht unterschiedlicher Wissenschaften und stellen darüber hinaus die zukünftigen Hauptentwicklungsrichtungen im Technologie- und Innovationsmanagement vor. In Unternehmensbeispielen werden aktuelle Themen aufgegriffen und deren Umsetzung in die Praxis beschrieben. Das {"}Handbuch Technologie- und Innovationsmanagement{"} richtet sich an Führungskräfte, die für Innovationsaktivitäten und Unternehmensentwicklung verantwortlich sind oder diese planen. Dozenten und Studierenden liefert es Anregungen für die eigene Arbeit.}
-      \field{isbn}{978-3-322-90787-5}
-      \field{series}{SpringerLink Bücher}
-      \field{title}{Handbuch Technologie- und Innovationsmanagement: Strategie --- Umsetzung --- Controlling}
-      \field{year}{2005}
-      \verb{doi}
-      \verb 10.1007/978-3-322-90786-8
-      \endverb
-    \endentry
-    \entry{Thompson.1999}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=60343ddaf7c0fa7ddcdc58e5a0a7ece8}{%
-           family={Thompson},
-           familyi={T\bibinitperiod},
-           given={Graham},
-           giveni={G\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {London}%
-      }
-      \list{publisher}{1}{%
-        {Professional Engineering Publ}%
-      }
-      \strng{namehash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
-      \strng{fullhash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
-      \strng{fullhashraw}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
-      \strng{bibnamehash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
-      \strng{authorbibnamehash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
-      \strng{authornamehash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
-      \strng{authorfullhash}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
-      \strng{authorfullhashraw}{60343ddaf7c0fa7ddcdc58e5a0a7ece8}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{1860581358}
-      \field{title}{Improving maintainability and reliability through design}
-      \field{year}{1999}
-    \endentry
-    \entry{Kremer.2018b}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
-           family={Kremer},
-           familyi={K\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{fullhash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{fullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{bibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authorbibnamehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authornamehash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authorfullhash}{ab1e473436714f07a37d7a30b43f0cb0}
-      \strng{authorfullhashraw}{ab1e473436714f07a37d7a30b43f0cb0}
-      \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{antriebstechnik}
-      \field{number}{11}
-      \field{title}{Ermittlung von lebensdauerbeeinflussenden Faktoren bei Zahnriemengetrieben}
-      \field{urlday}{22}
-      \field{urlmonth}{1}
-      \field{urlyear}{2026}
-      \field{volume}{2018}
-      \field{year}{11}
-      \field{urldateera}{ce}
-      \field{pages}{148\bibrangedash 153}
-      \range{pages}{6}
-      \verb{urlraw}
-      \verb https://digital.antriebstechnik.de/antriebstechnik-11-2018/62195350
-      \endverb
-      \verb{url}
-      \verb https://digital.antriebstechnik.de/antriebstechnik-11-2018/62195350
-      \endverb
-    \endentry
-    \entry{Buzan.2010}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=5e421b673a9a8ebf1fef8443bedc3036}{%
-           family={Buzan},
-           familyi={B\bibinitperiod},
-           given={Tony},
-           giveni={T\bibinitperiod}}}%
-        {{hash=731a13c27f66472eaf245e1c51925ca7}{%
-           family={Buzan},
-           familyi={B\bibinitperiod},
-           given={Barry},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Harlow u.a.}%
-      }
-      \list{publisher}{1}{%
-        {Pearson, BBC Active}%
-      }
-      \strng{namehash}{ae9ecf9af164a1dd2398717b74ab18b6}
-      \strng{fullhash}{ae9ecf9af164a1dd2398717b74ab18b6}
-      \strng{fullhashraw}{ae9ecf9af164a1dd2398717b74ab18b6}
-      \strng{bibnamehash}{ae9ecf9af164a1dd2398717b74ab18b6}
-      \strng{authorbibnamehash}{ae9ecf9af164a1dd2398717b74ab18b6}
-      \strng{authornamehash}{ae9ecf9af164a1dd2398717b74ab18b6}
-      \strng{authorfullhash}{ae9ecf9af164a1dd2398717b74ab18b6}
-      \strng{authorfullhashraw}{ae9ecf9af164a1dd2398717b74ab18b6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{1. publ}
-      \field{isbn}{9781406647167}
-      \field{title}{The mind map book: Unlock your creativity, boost your memory, change your life}
-      \field{year}{2010}
-      \verb{urlraw}
-      \verb https://permalink.obvsg.at/AC11808619
-      \endverb
-      \verb{url}
-      \verb https://permalink.obvsg.at/AC11808619
-      \endverb
-    \endentry
-    \entry{Tittmann.2019}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=10afebe382e3dcea7a3e463c31573265}{%
-           family={Tittmann},
-           familyi={T\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {München}%
-      }
-      \list{publisher}{1}{%
-        {Hanser}%
-      }
-      \strng{namehash}{10afebe382e3dcea7a3e463c31573265}
-      \strng{fullhash}{10afebe382e3dcea7a3e463c31573265}
-      \strng{fullhashraw}{10afebe382e3dcea7a3e463c31573265}
-      \strng{bibnamehash}{10afebe382e3dcea7a3e463c31573265}
-      \strng{authorbibnamehash}{10afebe382e3dcea7a3e463c31573265}
-      \strng{authornamehash}{10afebe382e3dcea7a3e463c31573265}
-      \strng{authorfullhash}{10afebe382e3dcea7a3e463c31573265}
-      \strng{authorfullhashraw}{10afebe382e3dcea7a3e463c31573265}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{3., aktualisierte Auflage}
-      \field{isbn}{978-3-446-46052-2}
-      \field{series}{Mathematik-Studienhilfen}
-      \field{title}{Graphentheorie: Eine anwendungsorientierte Einführung : mit 115 Bildern, zahlreichen Beispielen und 92 Aufgaben}
-      \field{year}{2019}
-      \verb{doi}
-      \verb 10.3139/9783446465039
-      \endverb
-    \endentry
-    \entry{Klein.2011}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=1f4ca49bc5f596180e2b8593999ff85b}{%
-           family={Klein},
-           familyi={K\bibinitperiod},
-           given={Bernd},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {München}%
-      }
-      \list{publisher}{1}{%
-        {De Gruyter}%
-      }
-      \strng{namehash}{1f4ca49bc5f596180e2b8593999ff85b}
-      \strng{fullhash}{1f4ca49bc5f596180e2b8593999ff85b}
-      \strng{fullhashraw}{1f4ca49bc5f596180e2b8593999ff85b}
-      \strng{bibnamehash}{1f4ca49bc5f596180e2b8593999ff85b}
-      \strng{authorbibnamehash}{1f4ca49bc5f596180e2b8593999ff85b}
-      \strng{authornamehash}{1f4ca49bc5f596180e2b8593999ff85b}
-      \strng{authorfullhash}{1f4ca49bc5f596180e2b8593999ff85b}
-      \strng{authorfullhashraw}{1f4ca49bc5f596180e2b8593999ff85b}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Mit Design of Experiments wird ein sehr wirksames Instrument zur Verkürzung von Innovationszeiten und Steigerung von Qualitäten angewandt. Dieses Lehrbuch führt in den theoretischen Hintergrund der Methode ausführlich ein und vertieft das Verständnis anhand einer Vielzahl von Beispielen und Fallstudien. Durch Übungsaufgaben können die vorgestellten Lösungsansätze praktisch nachvollzogen und der Umgang mit den Methoden trainiert werden}
-      \field{edition}{3rd ed.}
-      \field{isbn}{978-3-486-71136-3}
-      \field{title}{Versuchsplanung - DoE: Einführung in die Taguchi/Shainin-Methodik}
-      \field{year}{2011}
-      \verb{doi}
-      \verb 10.1524/9783486711363
-      \endverb
-    \endentry
-    \entry{Siebertz.2017}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=d645d85000fb1a9b0b0e6f3fc20617de}{%
-           family={Siebertz},
-           familyi={S\bibinitperiod},
-           given={Karl},
-           giveni={K\bibinitperiod}}}%
-        {{hash=3f85d9aa754c21d01f35494bf2062cfd}{%
-           family={{van Bebber}},
-           familyi={v\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=e9e55f9152a098501c9682b22bf119e3}{%
-           family={Hochkirchen},
-           familyi={H\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
-      }
-      \list{location}{2}{%
-        {Berlin}%
-        {Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer Vieweg}%
-      }
-      \strng{namehash}{1f49c6d22773878487629b490053f3fc}
-      \strng{fullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{fullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{bibnamehash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{authorbibnamehash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{authornamehash}{1f49c6d22773878487629b490053f3fc}
-      \strng{authorfullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \strng{authorfullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{2. Auflage}
-      \field{isbn}{978-3-662-55742-6}
-      \field{series}{VDI-Buch}
-      \field{title}{Statistische Versuchsplanung: Design of Experiments (DoE)}
-      \field{year}{2017}
-    \endentry
     \entry{Arndt.2023}{misc}{}{}
       \name{author}{2}{}{%
         {{hash=cb1e3a90988f317beb3353678cbde418}{%
@@ -4411,8 +3858,8 @@
       \strng{authorfullhash}{06de43da47c8b5ca086684bf9c477217}
       \strng{authorfullhashraw}{06de43da47c8b5ca086684bf9c477217}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{6th International Conference on Design of Experiments (ICODOE 2022)}
@@ -4451,9 +3898,9 @@
       \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
       \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
       \strng{authorfullhashraw}{f938eb5ea778b1893dcdfbcde1ea455d}
-      \field{extraname}{3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Probabilistic Safety Assessment and Management PSAM 16, June 26-July 1, 2022, Honolulu, Hawaii}
@@ -4481,8 +3928,8 @@
       \strng{authornamehash}{002f69bf140cceda97f81a168d86ceec}
       \strng{authorfullhash}{002f69bf140cceda97f81a168d86ceec}
       \strng{authorfullhashraw}{002f69bf140cceda97f81a168d86ceec}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -4521,8 +3968,8 @@
       \strng{authornamehash}{8201088e1c474774d574c18a45ec8a11}
       \strng{authorfullhash}{8201088e1c474774d574c18a45ec8a11}
       \strng{authorfullhashraw}{8201088e1c474774d574c18a45ec8a11}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1863-8171}
@@ -4556,8 +4003,8 @@
       \strng{authornamehash}{46d7f24768b0de2e46147ba3da205e84}
       \strng{authorfullhash}{46d7f24768b0de2e46147ba3da205e84}
       \strng{authorfullhashraw}{46d7f24768b0de2e46147ba3da205e84}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0361-0926}
@@ -4594,8 +4041,8 @@
       \strng{authornamehash}{a39584d47f804edfd114dc151188882f}
       \strng{authorfullhash}{a39584d47f804edfd114dc151188882f}
       \strng{authorfullhashraw}{a39584d47f804edfd114dc151188882f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-1-4471-4587-5}
@@ -4635,8 +4082,8 @@
       \strng{authornamehash}{aa6a0f34515feb94cc32a153a3881c95}
       \strng{authorfullhash}{65ded0308e8c55f83fce848dc9c7fc67}
       \strng{authorfullhashraw}{65ded0308e8c55f83fce848dc9c7fc67}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the Probabilistic Safety Assessment and Management Conference 2022}
@@ -4675,8 +4122,8 @@
       \strng{authorfullhash}{06de43da47c8b5ca086684bf9c477217}
       \strng{authorfullhashraw}{06de43da47c8b5ca086684bf9c477217}
       \field{extraname}{3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2024 Annual Reliability and Maintainability Symposium (RAMS)}
@@ -4718,9 +4165,9 @@
       \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
       \strng{authorfullhash}{4780ea36ecf2a378970a5be3178e63ac}
       \strng{authorfullhashraw}{4780ea36ecf2a378970a5be3178e63ac}
-      \field{extraname}{4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2025 Annual Reliability and Maintainability Symposium (RAMS)}
@@ -4755,8 +4202,8 @@
       \strng{authorfullhash}{06de43da47c8b5ca086684bf9c477217}
       \strng{authorfullhashraw}{06de43da47c8b5ca086684bf9c477217}
       \field{extraname}{4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{35th European Safety and Reliability}
@@ -4781,8 +4228,8 @@
       \strng{authornamehash}{b5600d23cdf0d4d8215c5226567cc95a}
       \strng{authorfullhash}{b5600d23cdf0d4d8215c5226567cc95a}
       \strng{authorfullhashraw}{b5600d23cdf0d4d8215c5226567cc95a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{AfA-Tabelle für die allgemein verwendbaren Anlagegüter (AfA-Tabelle AV): {§} 193ff AO , {§} 7 Abs 1 EStG}
@@ -4803,8 +4250,8 @@
       \strng{authorfullhash}{22cc2729553d6923a2fcc3a42ea6111f}
       \strng{authorfullhashraw}{22cc2729553d6923a2fcc3a42ea6111f}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Beschaffung, Betrieb und Instandhaltung von Produktionsmitteln unter Anwendung von Life Cycle Costing (LCC): VDI 2884:2005-12}
@@ -4837,8 +4284,8 @@
       \strng{authornamehash}{bc1d15cafe38fb30b19109cd3fb8b07e}
       \strng{authorfullhash}{bc1d15cafe38fb30b19109cd3fb8b07e}
       \strng{authorfullhashraw}{bc1d15cafe38fb30b19109cd3fb8b07e}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Dieses Buch ist mittlerweile ein Standardwerk für die Entwicklung und Konstruktion als Kern der Integrierten Produkterstellung (IPE). Drei Schwerpunkte stehen dabei im Vordergrund: die integrierende Denkweise, die Methodenanwendung und die empirische Konstruktionslehre. Die sechste Auflage enthält zahlreiche Neuerungen bzw. Überarbeitungen bei folgenden Themen: Qualitätsmanagement, Sicherheitsmanagement, Verhalten in Krisen, Methoden des Variantenmanagements, Baukastenkonstruktion, Richtlinie VDI 2221 (Anpassung 2016), Kreativität, Unsicherheit bei Entscheidungen, Open Innovation, Entwicklung von mechatronischen Produkten, Anforderungsmanagement, Änderungsmanagement u.v.m.}
@@ -4866,8 +4313,8 @@
       \strng{authorfullhash}{22cc2729553d6923a2fcc3a42ea6111f}
       \strng{authorfullhashraw}{22cc2729553d6923a2fcc3a42ea6111f}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Kostenrechnung mit Maschinenstundensätzen; Begriffe, Bezeichnungen, Zusammenhänge: VDI 3258 Blatt 1:1962-10}
@@ -4936,7 +4383,7 @@
       \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
       \strng{authorfullhash}{c28327a1d4a309e9498e3b3241b90755}
       \strng{authorfullhashraw}{c28327a1d4a309e9498e3b3241b90755}
-      \field{extraname}{5}
+      \field{extraname}{4}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}

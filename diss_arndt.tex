@@ -6,8 +6,8 @@
 
 
 \documentclass[
-% accepted, % uncomment this after your oral exam for the final print (changes title page)
-% print,% use this flag for printing (turns links black)
+%  accepted, % uncomment this after your oral exam for the final print (changes title page)
+%  print,% use this flag for printing (turns links black)
 english, ngerman,% Language: last one is the main language used in the document
 smallfont, % if you wish a smaller font. This is 12pt for the manuscript, 
 twoside, % one of {oneside, twoside} -> onesided or twosided layout. for twosided print choose twoside
@@ -124,7 +124,8 @@ isbn=true]{biblatex}
 % \usepackage[%final % keyword "final" is to hide changes highlighting
 % 				]{changes}
 \usepackage[draft]{changes} % --->>> \usepackage[final]{changes}
-\definechangesauthor[name={Dazer}, color=Plum]{R1}
+\definechangesauthor[name={Dazer}, color=magenta]{Daz}
+% \definechangesauthor[name={Mell}, color=orange]{Mell}
 %\definechangesauthor[name=Prof. Mit berichter, color=OliveGreen]{OtherProf}
 
 % Other settings you may find useful
@@ -139,18 +140,18 @@ isbn=true]{biblatex}
 
 % search for images in folder img/, i.e. instead of  \includegraphics{img/...}, just use \includegraphics{...}
 % \graphicspath{{img/}}
-\graphicspath{{img/}{plots/}} % add more paths as needed
+\graphicspath{{img/}{plots/}}
 
-\title{Entwicklung Effizienter Multivariater Lebensdauertests}
+\title{Effiziente Multivariate Lebensdauertests}
 
 % English title: set proper title case: https://titlecaseconverter.com/
-\subtitle{Development of Efficient Multivariate Life Tests}
+\subtitle{Efficient Multivariate Life Tests}
 
 \author{Marco Arndt,~M.Sc.}
 \birthplace{Ravensburg}
 
 \examiner{PD Dr.-Ing. habil. Martin Dazer}
-\coexaminer{tbd.}
+\coexaminer{Univ.-Prof. Dr.-Ing. Sven Matthiesen}
 \faculty{Konstruktions-, Produktions- und Fahrzeugtechnik} % Fak. 7
 \institute{Institut für Maschinenelemente}
 \dateoforalexamination{1. Januar 2026}
@@ -177,7 +178,7 @@ isbn=true]{biblatex}
 \newacronym{EoL}{EoL}{End-of-Life}
 \newacronym{EPI}{EPI}{Economic Extrapolation Power Index}
 \newacronym{EmALT}{EmALT}{Extrapolation\-variance minimized Accelerated Lifetime Testing}
-\newacronym[plural=MLEs, longplural=Maximum-Likelihood-Estimations]{MLE}{MLE}{Maximum-Likelihood-Estimation}
+\newacronym[plural=MLEs, longplural=Max\-imum-Like\-li\-hood-Es\-ti\-ma\-tions]{MLE}{MLE}{Maximum-Likelihood-Estimation}
 \newacronym{MMR}{MMR}{Median-Rank-Regression-Methode}
 \newacronym{OLS}{OLS}{Ordinary Least Squares}
 \newacronym[plural=pdfs, longplural=Probability Density Functions]{pdf}{\textit{pdf}}{Probability Density Function}
@@ -543,7 +544,6 @@ Consequently, the dissertation establishes a \textbf{universally applicable anal
 % \colorbox{yellow}{-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-}
 % \todo{
 %     \begin{itemize}
-%         \item "mark changes after your Oral presentation for review"
 %         \item "textcolor blue" in definitions ändern
 %         \item "Print" Funktion aktivieren
 %         \item "nocite" Funktion deaktivieren in main Z.269
@@ -599,13 +599,14 @@ Consequently, the dissertation establishes a \textbf{universally applicable anal
 %%
 
 %\printglossary[type=symbols,style={symbunitlong}, title={Symbolverzeichnis}]
-
-
 \cleardoublepage
-\listoffigures
+\listofchanges
 
-\cleardoublepage
-\listoftables
+% \cleardoublepage
+% \listoffigures
+
+% \cleardoublepage
+% \listoftables
 
 \raggedbottom % prefer having whitespace on bottom of pages (instead of stretching content to have common bottom line)
 % This is required by the publisher
@@ -617,7 +618,7 @@ Consequently, the dissertation establishes a \textbf{universally applicable anal
 \input{chapters/chapter1_einleitung.tex}
 \input{chapters/chapter2_standdertechnik.tex}
 \input{chapters/chapter3_ansatz.tex}
-\input{chapters/chapter4_screening.tex}
+% \input{chapters/chapter4_screening.tex}
 \input{chapters/chapter5_entwurf.tex}
 \input{chapters/chapter6_casestudy.tex}
 \input{chapters/chapter7_zusammenfassung.tex}
