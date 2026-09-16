@@ -124,8 +124,8 @@ isbn=true]{biblatex}
 % \usepackage[%final % keyword "final" is to hide changes highlighting
 % 				]{changes}
 \usepackage[draft]{changes} % --->>> \usepackage[final]{changes}
-\definechangesauthor[name={Dazer}, color=magenta]{Daz}
-% \definechangesauthor[name={Mell}, color=orange]{Mell}
+\definechangesauthor[name={Martin}, color=magenta]{Daz}
+\definechangesauthor[name={Heiko}, color=orange]{Mell}
 %\definechangesauthor[name=Prof. Mit berichter, color=OliveGreen]{OtherProf}
 
 % Other settings you may find useful
@@ -178,9 +178,10 @@ isbn=true]{biblatex}
 \newacronym{EoL}{EoL}{End-of-Life}
 \newacronym{EPI}{EPI}{Economic Extrapolation Power Index}
 \newacronym{EmALT}{EmALT}{Extrapolation\-variance minimized Accelerated Lifetime Testing}
-\newacronym[plural=MLEs, longplural=Max\-imum-Like\-li\-hood-Es\-ti\-ma\-tions]{MLE}{MLE}{Maximum-Likelihood-Estimation}
+\newacronym[plural=MLEs, longplural=Max\-imum-Like\-li\-hood-Es\-ti\-ma\-tions]{MLE}{MLE}{Maximum Likelihood Estimation}
 \newacronym{MMR}{MMR}{Median-Rank-Regression-Methode}
 \newacronym{OLS}{OLS}{Ordinary Least Squares}
+\newacronym{IWLS}{IWLS}{Iteratively Weighted Least Squares}
 \newacronym[plural=pdfs, longplural=Probability Density Functions]{pdf}{\textit{pdf}}{Probability Density Function}
 \newacronym{IMA}{IMA}{Institut für Maschinenelemente}
 \newacronym{ANOVA}{ANOVA}{Varianzanalyse, engl. Analysis of Variance}
@@ -333,7 +334,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Fehlerterm-Matrix}, text={\ensuremath{\bm{\upepsilon}}}]{Epsilon}{\ensuremath{\bm{\upepsilon}}}
 \glsxtrnewsymbol[type=formulas, description={Fisher-Informationsmatrix}, text={\ensuremath{\mathbf{F}}}]{FIM}{\ensuremath{\mathbf{F}}}
 \glsxtrnewsymbol[type=formulas, description={Gradientenvektor der Funktion \sym{g_func}}, text={\ensuremath{\mathbf{g}'}}]{g_grad}{\ensuremath{\mathbf{g}'}}
-\glsxtrnewsymbol[type=formulas, description={Hessian-Matrix (der Log-Likelihood-Funktion)}, text={\ensuremath{\mathbf{H_f}}}]{H}{\ensuremath{\mathbf{H_f}}}
+\glsxtrnewsymbol[type=formulas, description={Hesse-Matrix (der Log-Likelihood-Funktion)}, text={\ensuremath{\mathbf{H_f}}}]{H}{\ensuremath{\mathbf{H_f}}}
 \glsxtrnewsymbol[type=formulas, description={Orthogonale Projektionsmatrix, Prädiktionsmatrix, Hat-Matrix}, text={\ensuremath{\mathbf{H}}}]{Hat}{\ensuremath{\mathbf{H}}}
 \glsxtrnewsymbol[type=formulas, description={Informationsmatrix $\sym{X}'\sym{X}$}, text={\ensuremath{\mathbf{M}}}]{M}{\ensuremath{\mathbf{M}}}
 \glsxtrnewsymbol[type=formulas, description={Vektor der Ausfallzeiten}, text={\ensuremath{\mathbf{t}}}]{t_vec}{\ensuremath{\mathbf{t}}}
@@ -343,6 +344,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={Versuchsplan-Matrix oder Modellmatrix}, text={\ensuremath{\mathbf{X}}}]{X}{\ensuremath{\mathbf{X}}}
 \glsxtrnewsymbol[type=formulas, description={Antwortmatrix}, text={\ensuremath{\mathbf{y}}}]{Y}{\ensuremath{\mathbf{y}}}
 \glsxtrnewsymbol[type=formulas, description={Vektor der Einflussfaktoren im Meta-Design der Sensitivitätsanalyse}, text={\ensuremath{\bm{\xi}}}]{xi_vek}{\ensuremath{\bm{\xi}}}
+\glsxtrnewsymbol[type=formulas, description={Gewichtsmatrix (Diagonalmatrix im angenommenen GLM)}, text={\ensuremath{\mathbf{W}}}]{W_mat}{\ensuremath{\mathbf{W}}}
 
 % ===========================================================================
 % 3. GRIECHISCHE SKALARE
@@ -398,6 +400,7 @@ isbn=true]{biblatex}
 \glsxtrnewsymbol[type=formulas, description={E-Optimalitätskriterium (Eigenwert-Minimierung)}, text={\ensuremath{E_{\textnormal{opt}}}}]{E_opt}{\ensuremath{E_{\textnormal{opt}}}}
 \glsxtrnewsymbol[type=formulas, description={G-Optimalitätskriterium (Minimierung max. Prädiktionsvarianz)}, text={\ensuremath{G_{\textnormal{opt}}}}]{G_opt}{\ensuremath{G_{\textnormal{opt}}}}
 \glsxtrnewsymbol[type=formulas, description={I-Optimalitätskriterium (Minimierung durchschn. Prädiktionsvarianz)}, text={\ensuremath{I_{\textnormal{opt}}}}]{I_opt}{\ensuremath{I_{\textnormal{opt}}}}
+\glsxtrnewsymbol[type=formulas, description={U-Optimalitätskriterium (Minimierung der Prädiktionsvarianz am spezifischen Extrapolations- oder Betriebspunkt $\symsub{x_loc}{idx_0}$)}, text={\ensuremath{U_{\textnormal{opt}}}}]{U_opt}{\ensuremath{U_{\textnormal{opt}}}}
 \glsxtrnewsymbol[type=formulas, description={S-Optimalitätskriterium (Abstands-Maximierung)}, text={\ensuremath{S_{\textnormal{opt}}}}]{S_opt}{\ensuremath{S_{\textnormal{opt}}}}
 \glsxtrnewsymbol[type=formulas, description={U-Optimalitätskriterium (Minimierung Prädiktionsvarianz)}, text={\ensuremath{U_{C_{\textnormal{opt}}}}}]{UCopt}{\ensuremath{U_{C_{\textnormal{opt}}}}}
 \glsxtrnewsymbol[type=formulas, description={V-Optimalitätskriterium (Punktuelle Varianz-Minimierung)}, text={\ensuremath{V_{\textnormal{opt}}}}]{V_opt}{\ensuremath{V_{\textnormal{opt}}}}
@@ -600,7 +603,7 @@ Consequently, the dissertation establishes a \textbf{universally applicable anal
 
 %\printglossary[type=symbols,style={symbunitlong}, title={Symbolverzeichnis}]
 \cleardoublepage
-\listofchanges
+\listofchanges[style=summary]
 
 % \cleardoublepage
 % \listoffigures

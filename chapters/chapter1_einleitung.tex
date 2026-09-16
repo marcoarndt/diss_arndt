@@ -9,7 +9,7 @@ Motiviert durch zugesicherte Systemeigenschaften, die Wahrung der Markenintegrit
 Aus der Marktperspektive manifestiert sich dies in der Anforderung, dass komplexe technische Systeme - von automatisierten Fahrzeugarchitekturen über vernetzte mechatronische Subsysteme bis hin zu energie- und antriebstechnischen Anlagen - ihre spezifizierte Funktionalität über den definierten Einsatz- und Gewährleistungszeitraum \deleted[id=Daz]{ausfallfrei} erfüllen.
 
 Die Zuverlässigkeitstechnik stellt die \added[id=Daz]{erforderlichen Methoden} bereit, um das Produkt-Ausfallverhalten über die Einsatzdauer hinweg quantitativ zu beherrschen.
-Das Spektrum reicht von \replaced[id=Daz]{präventiven}{deterministischen} Methoden der funktionalen Sicherheit über die stochastische Analyse von Felddaten bis hin zu Verfahren der statistischen Versuchsplanung für die beschleunigte Lebensdauererprobung - engl. \ac{ALT}.
+Das Spektrum reicht von \replaced[id=Daz]{präventiven}{deterministischen} Methoden der funktionalen Sicherheit über die stochastische Analyse von Felddaten bis hin zu Verfahren der statistischen Versuchsplanung für die beschleunigte Lebensdauererprobung - engl. \textit{\ac{ALT}}.
 Ein \highlight[id=Daz, comment={präziser}]{zentrales Ergebnis} ist darauf aufbauend die probabilistische Modellierung der zeitabhängigen Überlebenswahrscheinlichkeit bzw. Zuverlässigkeit $\sym{R}(\sym{t})$, welche die Wahrscheinlichkeit quantifiziert, dass ein System unter definierten Betriebs- und Umgebungsbedingungen bis zu einem Zeitpunkt $\sym{t}$ funktionsfähig bleibt \cite{Bertsche.2022}.
 Ungenügende Zuverlässigkeitsprognosen in der industriellen Praxis resultieren dabei \replaced[id=Daz]{nicht ausschließlich}{selten} aus einem rein quantitativen Mangel an Prüfstandskapazitäten.
 Vielmehr begründen sich Fehleinschätzungen \replaced[id=Daz]{auch}{primär} darin, dass im Betrieb simultan \textit{mehrere} heterogene Stressoren als Einflussparameter auf das System einwirken.
@@ -22,11 +22,11 @@ Mit der fortschreitenden mechatronischen Integration und Funktionsverdichtung ge
 
 \added[id=Daz, comment={knapper formuliert}]{Werden multivariate} Interdependenzen bei der Lebensdauerabsicherung methodisch unzureichend aufgelöst, ist in der industriellen Praxis das Ausweichen auf kostenintensive Kompensationsstrategien eine gängige aber unvorteilhafte Folge:
 Komponenten werden konservativ überdimensioniert, Austauschintervalle präventiv verkürzt oder unerkannte Wechselwirkungen provozieren fatale Feldausfälle mit unter Umständen kapitalen Gewährleistungs- und Reputationsfolgen.
-Um Lebensdauer-dominierende Schädigungsmechanismen unter multivariaten Beanspruchungskollektiven empirisch und ausfallbasiert zu quantifizieren und gleichzeitig ressourcenintensive Prüfzeiten zu minimieren, ist die methodische Kopplung von statistischer Versuchsplanung - \ac{DoE} - mit der \ac{EoL}-Erprobung durch \ac{ALT} zwingend erforderlich.
+Um Lebensdauer-dominierende Schädigungsmechanismen unter multivariaten Beanspruchungskollektiven empirisch und ausfallbasiert zu quantifizieren und gleichzeitig ressourcenintensive Prüfzeiten zu minimieren, ist die methodische Kopplung von statistischer Versuchsplanung - \textit{\ac{DoE}} - mit der \textit{\ac{EoL}}-Erprobung durch \ac{ALT} zwingend erforderlich.
 
 
 An dieser methodischen Schnittstelle offenbart sich jedoch eine fundamentale Diskrepanz zwischen dem statistischen Werkzeug und der ingenieurtechnischen Zielsetzung:
-Klassische Konzepte der \ac{RSM} und etablierte Versuchsdesigns (wie das \ac{CCD}) sind stochastisch und topologisch strikt auf Interpolation ausgelegt \cite{Rigdon.2022,Kremer.2021}.
+Klassische Konzepte der \textit{\ac{RSM}} und etablierte Versuchsdesigns (wie das \textit{\ac{CCD}}) sind stochastisch und topologisch strikt auf Interpolation ausgelegt \cite{Rigdon.2022,Kremer.2021}.
 Ihre geometrische Struktur minimiert die Schätzvarianz exakt im Zentrum des experimentellen Versuchsraums.
 Die angewandte Zuverlässigkeitsmodellierung erfordert hingegen die Überbrückung zweier räumlich getrennter Domänen:
 Um physikalische Ausfälle innerhalb strenger ökonomischer Restriktionen zu provozieren, muss die \ac{ALT}-Prüfung zwingend im Hochlastbereich erfolgen - im \textit{Test-Parameterraum}.
@@ -46,14 +46,14 @@ Der wissenschaftliche Kern der Arbeit besteht folglich in der gezielten topologi
 Der wissenschaftliche Beitrag gliedert sich somit in \replaced[id=Daz, comment={Kap 4 raus}]{drei}{ vier} zentrale Kernelemente:
 
 \begin{itemize}
-      \item \textbf{Quantifizierung topologischer Resilienz:}
-            Systematischer, simulativer Nachweis mittels Monte-Carlo-Methoden, dass klassische \acp{RSD} eine signifikante Robustheit gegenüber praxis\-in\-duzierten, \replaced[id=Daz, comment={allgemeiner}]{strukturellen Modifikationen}{Orthogonalitätsabweichungen} aufweisen.
-            Hier\-aus werden neben der methodischen Existenz eines nutzbaren geometrischen \textit{Gestaltungsbudgets} auch die adäquaten Bewertungsmetriken für die Versuchsplaneignung abgeleitet.
-      \item \textbf{Adaptive Versuchsplanung und richtungs-sensitive Varianzbewertung:}
-            Pro\-ak\-tive Umwidmung des identifizierten Gestaltungsbudgets zur gezielten Anpassung des Versuchsplans in Richtung des angestrebten Prognosebereichs im Feld-Parameterraum, formalisiert im adaptiven \textit{\ac{EmALT}-Design}.
-            Zur objektiven Quantifizierung des stochastischen Leistungsgewinns wird begleitend der \ac{EVG} als neuartiges Bewertungswerkzeug eingeführt, welches die Prognoseunsicherheit zum Prädiktionspunkt gerichtet erfasst.
-      \item \textbf{Ökonomische Synthese:}
-            Etablierung einer ganzheitlichen Bewertungsmetrik zur simultanen Bilanzierung von statistischer Trennschärfe, Extrapolationsunsicherheit und realen Prüfstandskosten.
+    \item \textbf{Quantifizierung topologischer Resilienz:}\\
+          Systematischer, simulativer Nachweis mittels Monte-Carlo-Methoden, dass klassische \acp{RSD} eine signifikante Robustheit gegenüber praxis\-in\-duzierten, \replaced[id=Daz, comment={allgemeiner}]{strukturellen Modifikationen}{Orthogonalitätsabweichungen} aufweisen.
+          Hier\-aus werden neben der methodischen Existenz eines nutzbaren geometrischen \textit{Gestaltungsbudgets} auch die adäquaten Bewertungsmetriken für die Versuchsplaneignung abgeleitet.
+    \item \textbf{Adaptive Versuchsplanung und richtungs-sensitive Varianzbewertung:}\\
+          Pro\-ak\-tive Umwidmung des identifizierten Gestaltungsbudgets zur gezielten Anpassung des Versuchsplans in Richtung des angestrebten Prognosebereichs im Feld-Parameterraum, formalisiert im adaptiven \textit{\ac{EmALT}-Design}.
+          Zur objektiven Quantifizierung des stochastischen Leistungsgewinns wird begleitend der \textit{\ac{EVG}} als neuartiges Bewertungswerkzeug eingeführt, welches die Prognoseunsicherheit zum Prädiktionspunkt gerichtet erfasst.
+    \item \textbf{Ökonomische Synthese:}\\
+          Etablierung einer ganzheitlichen Bewertungsmetrik zur simultanen Bilanzierung von statistischer Trennschärfe, Extrapolationsunsicherheit und realen Prüfstandskosten.
 \end{itemize}
 
 
@@ -62,7 +62,7 @@ Der wissenschaftliche Beitrag gliedert sich somit in \replaced[id=Daz, comment={
 Der strukturelle Aufbau der vorliegenden Arbeit orientiert sich an der methodischen Sequenz einer effizienten multivariaten Versuchskampagne (vgl. Abbildung~\ref{fig:aufbau}).
 
 Nach der in diesem Kapitel dargelegten Problemstellung widmet sich \textbf{Kapitel~\ref{chap:stand}} dem aktuellen Stand der Forschung und Technik.
-Dort werden die mathematisch-statistischen Grundlagen der Zu\-ver\-lässig\-keits-Daten\-analyse, der \ac{MLE}, der statistischen Versuchsplanung (\ac{DoE}) sowie der multivariaten Modellbildung im Rahmen von \acp{GLM} systematisch aufbereitet.
+Dort werden die mathematisch-statistischen Grundlagen der Zu\-ver\-lässig\-keits-Daten\-analyse, der \textit{\ac{MLE}}, der statistischen Versuchsplanung (\ac{DoE}) sowie der multivariaten Modellbildung im Rahmen von \textit{\acp{GLM}} systematisch aufbereitet.
 \textbf{Kapitel~\ref{chap:ansatz}} synthetisiert diese Grundlagen, identifiziert die inhärenten Schwachstellen klassischer Optimalitätskriterien bei Lebensdauerprüfungen und leitet hieraus die zentralen Forschungsfragen der Dissertation ab.
 
 Darauf aufbauend vollzieht zunächst \textbf{Kapitel~\ref{chap:entwurf}} den methodischen Schritt zur quantitativen Versuchsplanung: Ausgehend von der quantifizierten \replaced[id=Daz]{strukturellen Robustheit}{topologischen Resilienz} klassischer Designs werden die Methodik der richtungssensitiven Varianzanalyse, das Konzept der asymmetrischen Extrapolationsabsicherung sowie die ökonomisch-statistische Effizienzbilanzierung hergeleitet und im Weibull-Kontext simulativ aufgezeigt.
@@ -71,9 +71,9 @@ In \textbf{Kapitel~\ref{chap:casestudy}} erfolgt der Transfer in die industriell
 Anhand eines realen Datensatzes zur Lebensdauerprüfung von Lenksystem-Zahnriemen wird die Leistungsfähigkeit der entwickelten Methodik durch statistische Bestätigungsversuche empirisch verifiziert und der resultierende ökonomische Business Case dargelegt.
 Die Arbeit schließt in \textbf{Kapitel~\ref{chap:fazit}} mit einer Zusammenfassung der Kernergebnisse, einer kritischen Diskussion methodischer Anwendungsgrenzen sowie einem Ausblick auf weiterführende Forschungsfelder ab.
 \begin{figure}[htbp]
-      \centering
-      \def\svgwidth{0.9\textwidth}
-      \input{plots/ma_abb1_aufbau.pdf_tex}
-      \caption{Aufbau der Arbeit.}
-      \label{fig:aufbau}
+    \centering
+    \def\svgwidth{0.9\textwidth}
+    \input{plots/ma_abb1_aufbau.pdf_tex}
+    \caption{Aufbau der Arbeit.}
+    \label{fig:aufbau}
 \end{figure}

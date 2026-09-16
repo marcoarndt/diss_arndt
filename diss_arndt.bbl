@@ -56,14 +56,10 @@
       \field{labeltitlesource}{title}
       \field{edition}{4. Auflage}
       \field{isbn}{978-3-662-65023-3}
-      \field{series}{Lehrbuch}
       \field{title}{Zuverlässigkeit im Fahrzeug- und Maschinenbau: Ermittlung von Bauteil- und System-Zuverlässigkeiten}
       \field{year}{2022}
-      \verb{urlraw}
-      \verb http://www.springer.com/
-      \endverb
-      \verb{url}
-      \verb http://www.springer.com/
+      \verb{doi}
+      \verb 10.1007/978-3-662-65024-0
       \endverb
     \endentry
     \entry{Meeker.2022}{book}{}{}
@@ -1016,37 +1012,72 @@
       \verb http://www.loc.gov/catdir/description/wiley033/77015087.html
       \endverb
     \endentry
-    \entry{Taguchi.2005}{book}{}{}
+    \entry{Montgomery.2020}{book}{}{}
       \name{author}{1}{}{%
-        {{hash=3f2df364a007491176bd3e047c324d88}{%
-           family={Taguchi},
-           familyi={T\bibinitperiod},
-           given={Genichi},
-           giveni={G\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
       }
       \list{location}{1}{%
-        {Hoboken, NJ}%
+        {Hoboken, NJ, USA}%
       }
       \list{publisher}{1}{%
-        {Wiley}%
+        {John Wiley {\&} Sons, Inc}%
       }
-      \strng{namehash}{3f2df364a007491176bd3e047c324d88}
-      \strng{fullhash}{3f2df364a007491176bd3e047c324d88}
-      \strng{fullhashraw}{3f2df364a007491176bd3e047c324d88}
-      \strng{bibnamehash}{3f2df364a007491176bd3e047c324d88}
-      \strng{authorbibnamehash}{3f2df364a007491176bd3e047c324d88}
-      \strng{authornamehash}{3f2df364a007491176bd3e047c324d88}
-      \strng{authorfullhash}{3f2df364a007491176bd3e047c324d88}
-      \strng{authorfullhashraw}{3f2df364a007491176bd3e047c324d88}
+      \strng{namehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{fullhash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{fullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{bibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorbibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authornamehash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorfullhash}{7d4a838891cb5c31eb1e3e089777efa0}
+      \strng{authorfullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{9780471413349}
-      \field{title}{Taguchi's quality engineering handbook}
-      \field{year}{2005}
+      \field{edition}{10th}
+      \field{isbn}{9781119722106}
+      \field{title}{Design and Analysis of Experiments}
+      \field{year}{2020}
+    \endentry
+    \entry{Coleman.1993}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9bef0f636ff6b70b78978555d2510a1d}{%
+           family={Coleman},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{fullhash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{fullhashraw}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{bibnamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{authorbibnamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{authornamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{authorfullhash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \strng{authorfullhashraw}{1d15985a5d6d6ff86d3d5d2bdb63db71}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{1}
+      \field{title}{A Systematic Approach to Planning for a Designed Industrial Experiment}
+      \field{volume}{35}
+      \field{year}{1993}
+      \field{pages}{1}
+      \range{pages}{1}
       \verb{doi}
-      \verb 10.1002/9780470258354
+      \verb 10.2307/1269280
       \endverb
     \endentry
     \entry{Kleppmann.2020}{book}{}{}
@@ -1085,155 +1116,6 @@
       \field{title}{Versuchsplanung: Produkte und Prozesse optimieren}
       \field{year}{2020}
     \endentry
-    \entry{Montgomery.2020}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
-           family={Montgomery},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima C.},
-           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, NJ, USA}%
-      }
-      \list{publisher}{1}{%
-        {John Wiley {\&} Sons, Inc}%
-      }
-      \strng{namehash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{fullhash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{fullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{bibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{authorbibnamehash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{authornamehash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{authorfullhash}{7d4a838891cb5c31eb1e3e089777efa0}
-      \strng{authorfullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{10th}
-      \field{isbn}{9781119722106}
-      \field{title}{Design and Analysis of Experiments}
-      \field{year}{2020}
-    \endentry
-    \entry{Wu.2021}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=8f7b81c89f3e6d3d658748723f89ff1c}{%
-           family={Wu},
-           familyi={W\bibinitperiod},
-           given={Chien-Fu},
-           giveni={C\bibinithyphendelim F\bibinitperiod}}}%
-        {{hash=5ca9417a5ceabf98b7d814febe5a681a}{%
-           family={Hamada},
-           familyi={H\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, NJ, USA}%
-      }
-      \list{publisher}{1}{%
-        {Wiley}%
-      }
-      \strng{namehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{fullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{fullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{bibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{authorbibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{authornamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{authorfullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \strng{authorfullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{{"}This Third Edition covers design of experiments and integrates computer experiments with other design topics. The main changes in this Third Edition are two new chapters, one on computer experiments, the other on optimal design. Computer experiments have become very popular in experimental design because increasingly more and more experiments are conducted on a computer, such as running finite element simulations, instead of conducting physical experiments. This book starts each chapter with a real experiment. Then, the authors develop the needed tools in subsequent sections. Finally, the chapter ends with the application of these tools to the experiment. Each chapter includes exercises, and the authors have added new exercise problems with selected solutions to the Instructor's solutions manual. This is an ideal book for design of experiments courses at the upper-undergraduate and graduate levels. It is also a valuable resource for practicing engineers and statisticians. Design of experiments (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships. This information is needed to manage process inputs in order to optimize the output{"}--}
-      \field{edition}{Third edition}
-      \field{isbn}{9781119470106}
-      \field{series}{Wiley series in probability and statistics}
-      \field{title}{Experiments: Planning, analysis and optimization}
-      \field{year}{2021}
-      \verb{urlraw}
-      \verb https://zbmath.org/?q=an%3A1460.62003
-      \endverb
-      \verb{url}
-      \verb https://zbmath.org/?q=an%3A1460.62003
-      \endverb
-    \endentry
-    \entry{Meeker.1993}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=06c9248ef411ccbabea6465250ba6c45}{%
-           family={Meeker},
-           familyi={M\bibinitperiod},
-           given={William\bibnamedelima Q.},
-           giveni={W\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
-        {{hash=cbb2ef219bd70f7277cfeb8abb93206a}{%
-           family={Escobar},
-           familyi={E\bibinitperiod},
-           given={Luis\bibnamedelima A.},
-           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \strng{namehash}{0d3370a9ae58ddda43d3c5677bf1b162}
-      \strng{fullhash}{0d3370a9ae58ddda43d3c5677bf1b162}
-      \strng{fullhashraw}{0d3370a9ae58ddda43d3c5677bf1b162}
-      \strng{bibnamehash}{0d3370a9ae58ddda43d3c5677bf1b162}
-      \strng{authorbibnamehash}{0d3370a9ae58ddda43d3c5677bf1b162}
-      \strng{authornamehash}{0d3370a9ae58ddda43d3c5677bf1b162}
-      \strng{authorfullhash}{0d3370a9ae58ddda43d3c5677bf1b162}
-      \strng{authorfullhashraw}{0d3370a9ae58ddda43d3c5677bf1b162}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{03067734}
-      \field{journaltitle}{International Statistical Review / Revue Internationale de Statistique}
-      \field{number}{1}
-      \field{title}{A Review of Recent Research and Current Issues in Accelerated Testing}
-      \field{volume}{61}
-      \field{year}{1993}
-      \field{pages}{147}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.2307/1403600
-      \endverb
-    \endentry
-    \entry{Elsayed.2007}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=1b70b4277963e6ce3eecea049942a294}{%
-           family={Elsayed},
-           familyi={E\bibinitperiod},
-           given={E.\bibnamedelimi A.},
-           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=8c6d18e2d167e1a3dc88c0166bbc3471}{%
-           family={Zhang},
-           familyi={Z\bibinitperiod},
-           given={Hao},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{c4bbba558c5a7a98d5147750339f19e6}
-      \strng{fullhash}{c4bbba558c5a7a98d5147750339f19e6}
-      \strng{fullhashraw}{c4bbba558c5a7a98d5147750339f19e6}
-      \strng{bibnamehash}{c4bbba558c5a7a98d5147750339f19e6}
-      \strng{authorbibnamehash}{c4bbba558c5a7a98d5147750339f19e6}
-      \strng{authornamehash}{c4bbba558c5a7a98d5147750339f19e6}
-      \strng{authorfullhash}{c4bbba558c5a7a98d5147750339f19e6}
-      \strng{authorfullhashraw}{c4bbba558c5a7a98d5147750339f19e6}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{09518320}
-      \field{journaltitle}{Reliability Engineering {\&} System Safety}
-      \field{number}{3}
-      \field{title}{Design of PH-based accelerated life testing plans under multiple-stress-type}
-      \field{volume}{92}
-      \field{year}{2007}
-      \field{pages}{286\bibrangedash 292}
-      \range{pages}{7}
-      \verb{doi}
-      \verb 10.1016/j.ress.2006.04.016
-      \endverb
-    \endentry
     \entry{Siebertz.2026}{book}{}{}
       \name{author}{3}{}{%
         {{hash=d645d85000fb1a9b0b0e6f3fc20617de}{%
@@ -1267,8 +1149,8 @@
       \strng{authornamehash}{1f49c6d22773878487629b490053f3fc}
       \strng{authorfullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
       \strng{authorfullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3. Auflage}
@@ -1276,70 +1158,6 @@
       \field{series}{VDI-Buch}
       \field{title}{Statistische Versuchsplanung: Design of Experiments (DoE)}
       \field{year}{2026}
-    \endentry
-    \entry{Goos.2011}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=bd639e8bc0dd4c3689cb8b7cc745dbe5}{%
-           family={Goos},
-           familyi={G\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-        {{hash=de511b43605b30524c08cd416cf11604}{%
-           family={Jones},
-           familyi={J\bibinitperiod},
-           given={Bradley\bibnamedelima A.},
-           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, NJ}%
-      }
-      \list{publisher}{1}{%
-        {John Wiley {\&} Sons, Inc}%
-      }
-      \strng{namehash}{e9b8290c4891fab41ae653f4590250b9}
-      \strng{fullhash}{e9b8290c4891fab41ae653f4590250b9}
-      \strng{fullhashraw}{e9b8290c4891fab41ae653f4590250b9}
-      \strng{bibnamehash}{e9b8290c4891fab41ae653f4590250b9}
-      \strng{authorbibnamehash}{e9b8290c4891fab41ae653f4590250b9}
-      \strng{authornamehash}{e9b8290c4891fab41ae653f4590250b9}
-      \strng{authorfullhash}{e9b8290c4891fab41ae653f4590250b9}
-      \strng{authorfullhashraw}{e9b8290c4891fab41ae653f4590250b9}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{1st}
-      \field{isbn}{9780470744611}
-      \field{title}{Optimal Design of Experiments: A Case Study Approach}
-      \field{year}{2011}
-    \endentry
-    \entry{Hinkelmann.2012}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=f2f71db52401837c018a82537cd40e41}{%
-           family={Hinkelmann},
-           familyi={H\bibinitperiod},
-           given={Klaus},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {John Wiley {\&} Sons, Inc}%
-      }
-      \strng{namehash}{f2f71db52401837c018a82537cd40e41}
-      \strng{fullhash}{f2f71db52401837c018a82537cd40e41}
-      \strng{fullhashraw}{f2f71db52401837c018a82537cd40e41}
-      \strng{bibnamehash}{f2f71db52401837c018a82537cd40e41}
-      \strng{authorbibnamehash}{f2f71db52401837c018a82537cd40e41}
-      \strng{authornamehash}{f2f71db52401837c018a82537cd40e41}
-      \strng{authorfullhash}{f2f71db52401837c018a82537cd40e41}
-      \strng{authorfullhashraw}{f2f71db52401837c018a82537cd40e41}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{1st}
-      \field{isbn}{978-0470-53068-9}
-      \field{title}{Design and Analysis of Experiments - Volume 3: Special Designs and Applications}
-      \field{year}{2012}
     \endentry
     \entry{Myers.2016}{book}{}{}
       \name{author}{3}{}{%
@@ -1374,150 +1192,14 @@
       \strng{authorfullhash}{01c14a626dccac2c615539582f23bfbd}
       \strng{authorfullhashraw}{01c14a626dccac2c615539582f23bfbd}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{4}
       \field{isbn}{978-1-118-91601-8}
       \field{title}{Response Surface Methodology: Process and Product Optimization Using Designed Experiments}
       \field{year}{2016}
-    \endentry
-    \entry{Dazer.2019}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
-           family={Dazer},
-           familyi={D\bibinitperiod},
-           given={Martin},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Universität Stuttgart}%
-      }
-      \strng{namehash}{b2d5e4d5be1aedd86811d93b996f7c35}
-      \strng{fullhash}{b2d5e4d5be1aedd86811d93b996f7c35}
-      \strng{fullhashraw}{b2d5e4d5be1aedd86811d93b996f7c35}
-      \strng{bibnamehash}{b2d5e4d5be1aedd86811d93b996f7c35}
-      \strng{authorbibnamehash}{b2d5e4d5be1aedd86811d93b996f7c35}
-      \strng{authornamehash}{b2d5e4d5be1aedd86811d93b996f7c35}
-      \strng{authorfullhash}{b2d5e4d5be1aedd86811d93b996f7c35}
-      \strng{authorfullhashraw}{b2d5e4d5be1aedd86811d93b996f7c35}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Diese Arbeit widmet sich zum einen dem Ziel einer individuell anforderungsgerechten Zuverlässigkeitstestplanung im Zielkonflikt zwischen statistischer Genauigkeit, Testkosten und -zeit und zum anderen der Berechnung des dafür benötigten Vorwissens über das Produktausfallverhalten. Bei der Lebensdauer eines technischen Systems handelt es sich um eine Zufallsvariable, die Testingenieure in Kombination mit vielen möglichen Teststrategien und Randbedingungen bei der Planung von Zuverlässigkeitstests vor eine Herausforderung stellt. In einem Zuverlässigkeits-DOE werden die End-of-Life Tests und die ausfallfreien Tests im Spannungsfeld von Genauigkeit, Kosten und Zeit untersucht. Die Resultate zeigen die besten Anwendungsbereiche der jeweiligen Teststrategie und können für die Planung von Zuverlässigkeitstests mit unterschiedlichen Anforderungen verwendet werden. Ausfallfreie Tests, wie der Success Run, benötigen eine hohe Produktüberdimensionierung, um passable Erfolgsaussichten zu garantieren. Ausfallbasierte Teststrategien dagegen, sind zwar häufig kostenintensiver, dafür aber universeller einsetzbar. Durch die eingeführte Normierung aller zeitabhängigen Grö{ß}en lässt sich das Planungskonzept auf beliebige Produkte übertragen. Das produktspezifische Vorwissen wird im Rahmen dieser Arbeit nicht aus Felddaten oder Vorgängerprodukten gewonnen, sondern mit einem Ansatz zur stochastischen Lebensdauerberechnung ermittelt. Während konventionelle Lebensdauerberechnungskonzepte versuchen, die Streuung von Lebensdauerdaten durch konservative Annahmen und Sicherheitsfaktoren zu kompensieren, wird in diesem Konzept die Streuung zur realitätsnahen Berechnung der Lebensdauer berücksichtigt. Systematische Streuungen der Materialeigenschaften von Toleranzen und der äu{ß}eren Lasteinwirkung werden statistisch modelliert und für die Berechnung der Verteilungsfunktionen von Belastung und Belastbarkeit genutzt. Aus deren Überlappung werden die stochastischen Lebensdauerdaten berechnet. Durch Weibullanalyse resultieren die berechneten Lebensdauerdaten im produktspezifischen Ausfallverhalten. Die Anwendbarkeit der stochastischen Lebensdauerberechnung und der daraus abgeleiteten optimalen Testplanung werden anhand eines Nutzfahrzeugbremssattels für strukturmechanisches Versagen unter Beweis gestellt.}
-      \field{title}{Zuverlässigkeitstestplanung mit Berücksichtigung von Vorwissen aus stochastischen Lebensdauerberechnungen}
-      \field{year}{2019}
-      \field{dateera}{ce}
-      \verb{doi}
-      \verb 10.18419/OPUS-10501
-      \endverb
-    \endentry
-    \entry{Herzig.2021}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=1b17d112f7833c081ab1d64dd0ef11ef}{%
-           family={Herzig},
-           familyi={H\bibinitperiod},
-           given={Thomas},
-           giveni={T\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Universität Stuttgart}%
-      }
-      \strng{namehash}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \strng{fullhash}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \strng{fullhashraw}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \strng{bibnamehash}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \strng{authorbibnamehash}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \strng{authornamehash}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \strng{authorfullhash}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \strng{authorfullhashraw}{1b17d112f7833c081ab1d64dd0ef11ef}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Zentraler Kernpunkt des Zielkonflikts in der heutigen Produktentwicklung sind die immer weiter steigenden Kundenanforderungen bei einer gleichzeitig geforderten Reduktion der Entwicklungskosten. Beschleunigte Lebensdauertests sind daher für die Erprobung und den Zuverlässigkeitsnachweis unverzichtbar. Die vorliegende Arbeit betrachtet die Probability of Test Success als entscheidenden Parameter des erweiterten Zuverlässigkeitsziels, bei dem die Wahrscheinlichkeit eines erfolgreichen Zuverlässigkeitsnachweises durch Planung effizienter Zuverlässigkeitstests maximiert werden kann. Damit ist es möglich, die Grenzen des Zuverlässigkeitsnachweises und damit auch die Grenzen der Auslegung unter Berücksichtigung der Randbedingungen zu finden und Leichtbauanwendungen kostenoptimal auszulegen und gleichzeitig zuverlässigkeitstechnisch abzusichern. Die praxisrelevanten beschleunigten End-of-Life-Tests wurden in dieser Arbeit in das Konzept der Probability of Test Success integriert, um Handlungsempfehlungen für die Planung effizienter Zuverlässigkeitstests abzuleiten. Diese umfassen Empfehlungen zur Wahl und Verteilung der Prüflinge und der Lage der beschleunigten Lastniveaus, zur Berücksichtigung von beschleunigten Success-Run-Tests sowie zu Zensierungsstrategien und zusätzlichen beschleunigten Lastniveaus. Darüber hinaus wurde eine Einordnung des erweiterten Konzepts in die Produktauslegung vorgenommen. Für die untersuchten Anwendungen konnte gezeigt werden, dass das erweiterte Konzept der Probability of Test Success und die Vorgehensweise zur anforderungsgerechten Produktauslegung das Potenzial besitzt, die Zuverlässigkeitstestplanung bereits in der Produktauslegung zu berücksichtigen, die minimal mögliche Dimensionierung zu finden und dabei die Gesamtkosten zu reduzieren. Dieses Potenzial besteht insbesondere für Leichtbauanwendungen, bei welchen minimale Dimensionierung zentral ist, die Erfüllung der Zuverlässigkeits- und Lebensdaueranforderungen jedoch gewährleistet sein muss. Die Nachweisbarkeit eines Zuverlässigkeitsziels unter Berücksichtigung der Probability of Test Success kann mit dem erweiterten Konzept nun erstmals auch für die praxisrelevanten beschleunigten End-of-Life-Erprobungsstrategien berücksichtigt und quantifiziert werden.}
-      \field{title}{Anforderungsgerechte Produktauslegung durch Planung effizienter beschleunigter Zuverlässigkeitstests}
-      \field{year}{2021}
-      \field{dateera}{ce}
-      \verb{doi}
-      \verb 10.18419/OPUS-12001
-      \endverb
-      \verb{file}
-      \verb Herzig 2021 - Anforderungsgerechte Produktauslegung durch Planung effizienter:Attachments/Herzig 2021 - Anforderungsgerechte Produktauslegung durch Planung effizienter.pdf:application/pdf
-      \endverb
-    \endentry
-    \entry{Grundler.2024}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=f784da2389a332859e32df8d9d618d14}{%
-           family={Grundler},
-           familyi={G\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Universität Stuttgart}%
-      }
-      \strng{namehash}{f784da2389a332859e32df8d9d618d14}
-      \strng{fullhash}{f784da2389a332859e32df8d9d618d14}
-      \strng{fullhashraw}{f784da2389a332859e32df8d9d618d14}
-      \strng{bibnamehash}{f784da2389a332859e32df8d9d618d14}
-      \strng{authorbibnamehash}{f784da2389a332859e32df8d9d618d14}
-      \strng{authornamehash}{f784da2389a332859e32df8d9d618d14}
-      \strng{authorfullhash}{f784da2389a332859e32df8d9d618d14}
-      \strng{authorfullhashraw}{f784da2389a332859e32df8d9d618d14}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Zentraler Gegenstand dieser Arbeit ist der Nachweis der Zuverlässigkeit von Systemen und die Planung der dazu notwendigen Tests. Selbst einfache Produkte können durch mehrere Ursachen und Mechanismen ausfallen und besitzen dazu meist mehrere Komponenten und Subsysteme. Diese Arbeit behandelt die Planung von Tests für den effizienten Nachweis der Systemzuverlässigkeit, welche die Systemstruktur und die Komponenten mit der Kombina- tion von Tests dieser Elemente berücksichtigt. Dazu wird die Probability of Test Success als zentrale, objektive Bewertungsmetrik verwendet. Sie ist fähig, die Wahrscheinlichkeit für einen erfolgreichen Zuverlässigkeitsnachweis anzugeben und erlaubt damit beispielsweise auch die Frage nach dem erforderlichen Stichprobenumfang bei ausfallbasierten Tests zu beantworten. Durch die vorgenommene Einordnung der Probability of Test Success in den statistischen Kontext eines Hypothesentests kann die Probability of Test Success auch als Trennschärfe verstanden werden. Dadurch werden Berechnungsmethoden entwickelt, die diesen Kontext ausnutzen. Ebenso ermöglicht dies die notwendige Erweiterung auf Systeme mit mehreren Ausfallmoden sowie die Berücksichtigung der Unsicherheit in der Vorkenntnis und die zusätzliche Berücksichtigung der Vorkenntnis mit dem Satz von Bayes. Ein ganzheitliches Vorgehen zeigt auf, wie im individuellen Fall der effizienteste Test identifiziert werden kann. Das hei{ß}t ein Test, welcher sowohl den Nachweis mit hoher Wahrscheinlichkeit erbringt, als auch die gesetzten Grenzen bezüglich des zur Verfügung stehenden Budgets einhält und die Ressourcen dabei möglichst effizient einsetzt. Untersuchungen zeigen, dass sich daraus ein grundsätzliches Verständnis zu den Tests, der Vorkenntnis und den Systemen ableiten lässt. Beispielsweise sind ausfallfreie Tests auf Komponentenebene den ausfallbasierten Tests aus statistischer Sicht fast immer unterlegen. Zudem verhält sich der Effekt von hohem Aufwand auf die Güte des Tests bei ausfallbasierten und ausfallfreien Tests gegensätzlich. Werden bei einem ausfallbasierten Test mehr Prüflinge verwendet, so steigt die Wahrscheinlichkeit für einen erfolgreichen Nachweis. Bei den ausfallfreien Tests sinkt dagegen die Wahrscheinlichkeit für einen erfolgreichen Nachweis. Das bedeutet, dass ausfallfreie Testverfahren nur dann mit hoher Wahrscheinlichkeit einen Nachweis erbringen können, wenn die dabei gewonnene Aussage von schlechter statistischer Güte ist. Zudem sind sie unfähig, Zuverlässigkeitsnachweise für Systeme zu erbringen, welche die Anforderung nur wenig übererfüllen. Werden die Komponenten des Systems ausfallbasiert getestet, um den Nachweis zu erbringen, so ermöglichen die entwickelten Methoden eine optimale Aufteilung der Prüflinge zu berechnen. Neben der Auswahl der Testart erlaubt diese Arbeit demnach die Untersuchung der optimalen Testgestaltung, sodass der Nachweis mit grö{ß}tmöglicher Wahrscheinlichkeit erbracht werden kann. Hierzu zählen auch Kombinationen verschiedener Testtypen und Komponenten des Systems. Es lassen sich beispielsweise ausfallbasierte Komponententests mit ausfallfreien Dauerlauftests auf Systemebene kombinieren und hinsichtlich deren Eignung für den Zuverlässigkeitsnachweis bewerten. Durch die zusätzliche Berücksichtigung der Vorkenntnis mittels des Satzes von Bayes lassen sich Testaufwände einsparen. Die Bewertung solcher Tests ist durch die erarbeiteten Methoden ebenso möglich und stellt sicher, dass der effizienteste Test zum Nachweis der Zuverlässigkeit gefunden werden kann. Weitere Untersuchungen ergeben ergänzende Erkenntnisse. Die Anwendung des ganzheitlichen Verfahrens am Fallbeispiel eines Synchronmotors demonstriert zusätzlich den Nutzen der entwickelten Methoden und Prozesse. Die Arbeit leistet damit einen Beitrag zur umfassenden und statistisch fundierten Planung von Zuverlässigkeitstests zum Nachweis von Systemen. Sie konzentriert sich dabei auf die statistischen Aspekte und erlaubt den objektiven Vergleich und Bewertung von Tests verschiedener Systemebenen und Arten, sowie Kombinationen davon zum Nachweis der Systemzuverlässigkeit. Um möglichst effiziente Tests zu ermöglichen, wird eine Methode mit dem Satz von Bayes integriert. Die Güte der Planung selbst wird durch die Berücksichtigung der Unsicherheit der Eingangsdaten mitbewertet.}
-      \field{title}{Zuverlässigkeitsnachweis von Systemen durch Komponenten- und Systemtests unter Berücksichtigung von Vorkenntnissen}
-      \field{year}{2024}
-      \field{dateera}{ce}
-      \verb{doi}
-      \verb 10.18419/OPUS-14393
-      \endverb
-      \verb{file}
-      \verb Grundler 2024 - Zuverl{\"a}ssigkeitsnachweis von Systemen durch Komponenten:Attachments/Grundler 2024 - Zuverl{\"a}ssigkeitsnachweis von Systemen durch Komponenten.pdf:application/pdf
-      \endverb
-    \endentry
-    \entry{Coleman.1993}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=9bef0f636ff6b70b78978555d2510a1d}{%
-           family={Coleman},
-           familyi={C\bibinitperiod},
-           given={David\bibnamedelima E.},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
-           family={Montgomery},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima C.},
-           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-      }
-      \strng{namehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
-      \strng{fullhash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
-      \strng{fullhashraw}{1d15985a5d6d6ff86d3d5d2bdb63db71}
-      \strng{bibnamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
-      \strng{authorbibnamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
-      \strng{authornamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
-      \strng{authorfullhash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
-      \strng{authorfullhashraw}{1d15985a5d6d6ff86d3d5d2bdb63db71}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0040-1706}
-      \field{journaltitle}{Technometrics}
-      \field{number}{1}
-      \field{title}{A Systematic Approach to Planning for a Designed Industrial Experiment}
-      \field{volume}{35}
-      \field{year}{1993}
-      \field{pages}{1}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.2307/1269280
-      \endverb
     \endentry
     \entry{Gundlach.2004}{thesis}{}{}
       \name{author}{1}{}{%
@@ -1538,8 +1220,8 @@
       \strng{authornamehash}{378b8e259b386f1d908f287a81d3f95f}
       \strng{authorfullhash}{378b8e259b386f1d908f287a81d3f95f}
       \strng{authorfullhashraw}{378b8e259b386f1d908f287a81d3f95f}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Entwicklung eines ganzheitlichen Vorgehensmodells zur problemorientierten Anwendung des statistischen Versuchsplanung}
@@ -1573,8 +1255,8 @@
       \strng{authornamehash}{7aa05a2685adf946e74256782bec5282}
       \strng{authorfullhash}{7aa05a2685adf946e74256782bec5282}
       \strng{authorfullhashraw}{7aa05a2685adf946e74256782bec5282}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Als Ms. gedr}
@@ -1621,8 +1303,8 @@
       \strng{authornamehash}{56a2d4cb584abea19ecced826e5f6a8e}
       \strng{authorfullhash}{a4d6bc6a63af810baa307cce673cc7d5}
       \strng{authorfullhashraw}{a4d6bc6a63af810baa307cce673cc7d5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3. ed.}
@@ -1631,6 +1313,50 @@
       \field{year}{2007}
       \verb{doi}
       \verb 10.1007/978-1-84628-319-2
+      \endverb
+    \endentry
+    \entry{Wu.2021}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=8f7b81c89f3e6d3d658748723f89ff1c}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Chien-Fu},
+           giveni={C\bibinithyphendelim F\bibinitperiod}}}%
+        {{hash=5ca9417a5ceabf98b7d814febe5a681a}{%
+           family={Hamada},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ, USA}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{fullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{fullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{bibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorbibnamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authornamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorfullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \strng{authorfullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}This Third Edition covers design of experiments and integrates computer experiments with other design topics. The main changes in this Third Edition are two new chapters, one on computer experiments, the other on optimal design. Computer experiments have become very popular in experimental design because increasingly more and more experiments are conducted on a computer, such as running finite element simulations, instead of conducting physical experiments. This book starts each chapter with a real experiment. Then, the authors develop the needed tools in subsequent sections. Finally, the chapter ends with the application of these tools to the experiment. Each chapter includes exercises, and the authors have added new exercise problems with selected solutions to the Instructor's solutions manual. This is an ideal book for design of experiments courses at the upper-undergraduate and graduate levels. It is also a valuable resource for practicing engineers and statisticians. Design of experiments (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships. This information is needed to manage process inputs in order to optimize the output{"}--}
+      \field{edition}{Third edition}
+      \field{isbn}{9781119470106}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Experiments: Planning, analysis and optimization}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://zbmath.org/?q=an%3A1460.62003
+      \endverb
+      \verb{url}
+      \verb https://zbmath.org/?q=an%3A1460.62003
       \endverb
     \endentry
     \entry{Daenzer.2002}{book}{}{}
@@ -1660,8 +1386,8 @@
       \strng{editornamehash}{b269b5dbab6e5ecbbae3964a901e5ae2}
       \strng{editorfullhash}{b269b5dbab6e5ecbbae3964a901e5ae2}
       \strng{editorfullhashraw}{b269b5dbab6e5ecbbae3964a901e5ae2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{edition}{11., durchges. Aufl.}
@@ -1701,8 +1427,8 @@
       \strng{authornamehash}{06d8c16d8df8ef3e1f2d308a2fea81c7}
       \strng{authorfullhash}{dff827c6c99690c358cc79e787dc805a}
       \strng{authorfullhashraw}{dff827c6c99690c358cc79e787dc805a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-540-87888-9}
@@ -1710,6 +1436,101 @@
       \field{year}{2008}
       \verb{doi}
       \verb 10.1007/978-3-540-87889-6
+      \endverb
+    \endentry
+    \entry{Arndt.2023c}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=cb1e3a90988f317beb3353678cbde418}{%
+           family={Arndt},
+           familyi={A\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b2d5e4d5be1aedd86811d93b996f7c35}{%
+           family={Dazer},
+           familyi={D\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a8792b60927a47d7d27d6e577f06d803}{%
+           family={Raither},
+           familyi={R\bibinitperiod},
+           given={Wolfram},
+           giveni={W\bibinitperiod}}}%
+        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
+           family={Bertsche},
+           familyi={B\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{fullhash}{f4be653f312765a5dc616d9a112196cf}
+      \strng{fullhashraw}{f4be653f312765a5dc616d9a112196cf}
+      \strng{bibnamehash}{f4be653f312765a5dc616d9a112196cf}
+      \strng{authorbibnamehash}{f4be653f312765a5dc616d9a112196cf}
+      \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
+      \strng{authorfullhash}{f4be653f312765a5dc616d9a112196cf}
+      \strng{authorfullhashraw}{f4be653f312765a5dc616d9a112196cf}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For the investigation of influence of various parameters on properties and outputs of components or systems, Design of Experiments (DOE) offers the most efficient approach to create a{\&}nbsp;comprehensive empirical insight into product performance. However, especially if product lifetime is treated as the investigation objective, the main focus of attention must be placed on the efficiency of testing---if only to comply with the principle of DOE, even before testing begins. Without actual test runs, a{\&}nbsp;pre-selection of relevant factors influencing the target quantity can be performed here and strategically adjusted in scale compared to the subsequent method. In this work, common heuristic tools and methods are analyzed and evaluated with respect to a{\&}nbsp;deliberate preselection of influencing factors versus the challenges in lifetime testing and degradation behaviors. Several factors as well as their interactions are taken into account to achieve this. For this purpose, these methods are partially extended and adapted in their focus in order to finally be made applicable in a{\&}nbsp;suitable procedure. An illustration of this is also provided in a{\&}nbsp;selected use case with limited empirical and experimental prior-knowledge, in which a{\&}nbsp;sample of relevant influences is identified through qualitative heuristic decision making with respect to parameters that influence product lifetime.}
+      \field{issn}{0015-7899}
+      \field{journaltitle}{Forschung im Ingenieurwesen}
+      \field{number}{4}
+      \field{title}{Parameter assessment for reliability modeling of machine components using heuristic screening}
+      \field{volume}{87}
+      \field{year}{2023}
+      \field{pages}{1347\bibrangedash 1370}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1007/s10010-023-00711-5
+      \endverb
+      \verb{file}
+      \verb Arndt, Dazer et al. 2023 - Parameter assessment for reliability modeling (5):Attachments/Arndt, Dazer et al. 2023 - Parameter assessment for reliability modeling (5).pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/article/10.1007/s10010-023-00711-5#citeas
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/article/10.1007/s10010-023-00711-5#citeas
+      \endverb
+    \endentry
+    \entry{Monroe.2008}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=62e3ef3d2fec635cf52f4fa441e1bd08}{%
+           family={Monroe},
+           familyi={M\bibinitperiod},
+           given={Eric\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3acacc1f684ef378918a00ece495d31b}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Rong},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{213920aa947a9ef3844f00da276f16af}
+      \strng{fullhash}{213920aa947a9ef3844f00da276f16af}
+      \strng{fullhashraw}{213920aa947a9ef3844f00da276f16af}
+      \strng{bibnamehash}{213920aa947a9ef3844f00da276f16af}
+      \strng{authorbibnamehash}{213920aa947a9ef3844f00da276f16af}
+      \strng{authornamehash}{213920aa947a9ef3844f00da276f16af}
+      \strng{authorfullhash}{213920aa947a9ef3844f00da276f16af}
+      \strng{authorfullhashraw}{213920aa947a9ef3844f00da276f16af}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-4065}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{number}{4}
+      \field{title}{Experimental Design Considerations for Accelerated Life Tests with Nonlinear Constraints and Censoring}
+      \field{volume}{40}
+      \field{year}{2008}
+      \field{pages}{355\bibrangedash 367}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1080/00224065.2008.11917742
       \endverb
     \endentry
     \entry{Box.1957}{article}{}{}
@@ -1733,8 +1554,8 @@
       \strng{authornamehash}{d41f15c7631a78ee4ad0aede691ad677}
       \strng{authorfullhash}{d41f15c7631a78ee4ad0aede691ad677}
       \strng{authorfullhashraw}{d41f15c7631a78ee4ad0aede691ad677}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Annals of Mathematical Statistics}
@@ -1766,8 +1587,8 @@
       \strng{authornamehash}{eba72515134a9243ad73893f377d508c}
       \strng{authorfullhash}{eba72515134a9243ad73893f377d508c}
       \strng{authorfullhashraw}{eba72515134a9243ad73893f377d508c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -1799,8 +1620,8 @@
       \strng{authornamehash}{0f4ea4b7232a0b8c44af01d054c4ff93}
       \strng{authorfullhash}{0f4ea4b7232a0b8c44af01d054c4ff93}
       \strng{authorfullhashraw}{0f4ea4b7232a0b8c44af01d054c4ff93}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -1814,6 +1635,42 @@
       \verb{doi}
       \verb 10.1198/TECH.2010.09113
       \endverb
+    \endentry
+    \entry{Goos.2011}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=bd639e8bc0dd4c3689cb8b7cc745dbe5}{%
+           family={Goos},
+           familyi={G\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=de511b43605b30524c08cd416cf11604}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Bradley\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley {\&} Sons, Inc}%
+      }
+      \strng{namehash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{fullhash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{fullhashraw}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{bibnamehash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{authorbibnamehash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{authornamehash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{authorfullhash}{e9b8290c4891fab41ae653f4590250b9}
+      \strng{authorfullhashraw}{e9b8290c4891fab41ae653f4590250b9}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{9780470744611}
+      \field{title}{Optimal Design of Experiments: A Case Study Approach}
+      \field{year}{2011}
     \endentry
     \entry{Dean.2017}{book}{}{}
       \name{author}{3}{}{%
@@ -1847,8 +1704,8 @@
       \strng{authornamehash}{84508ee195d2ab676b0d69ad6e098507}
       \strng{authorfullhash}{cf3fc23c2608632bed93c6faef5f2fc8}
       \strng{authorfullhashraw}{cf3fc23c2608632bed93c6faef5f2fc8}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second edition}
@@ -1884,8 +1741,8 @@
       \strng{authornamehash}{6eb96cefa94addb37eb003547b1710b5}
       \strng{authorfullhash}{6eb96cefa94addb37eb003547b1710b5}
       \strng{authorfullhashraw}{6eb96cefa94addb37eb003547b1710b5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00359246}
@@ -1934,8 +1791,8 @@
       \strng{authorfullhash}{35659a935d55876c452f11fb3d0af504}
       \strng{authorfullhashraw}{35659a935d55876c452f11fb3d0af504}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0748-8017}
@@ -1966,8 +1823,8 @@
       \strng{authornamehash}{23959d092ae2a5edd5aa42a886a57cec}
       \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
       \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0954-4828}
@@ -2003,8 +1860,8 @@
       \strng{authornamehash}{e1bf28b7ee62f39111c5ebc4d6d21679}
       \strng{authorfullhash}{e1bf28b7ee62f39111c5ebc4d6d21679}
       \strng{authorfullhashraw}{e1bf28b7ee62f39111c5ebc4d6d21679}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2326-8999}
@@ -2043,8 +1900,8 @@
       \strng{authornamehash}{5b6d82aee353f8f289b23762f039622f}
       \strng{authorfullhash}{5b6d82aee353f8f289b23762f039622f}
       \strng{authorfullhashraw}{5b6d82aee353f8f289b23762f039622f}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Cover; Half Title; Series Page; Title Page; Copyright Page; Dedication; Contents; Preface; 1. Generalized Linear Models; 1.1 Introduction; 1.2 Mathematics of the general linear model; 1.3 Towards the generalized linear model; 1.4 Generalized linear models; 1.5 Estimating the values of the model parameters; 2. Background Material; 2.1 Introduction; 2.2 Maximisation or minimisation of a function; 2.2.1 A function of one variable; 2.2.2 A function of more than one variable; 2.3 Restrictions on independent variables; 2.4 Constrained optimisation in R; 2.4.1 The function constrOptim}
@@ -2090,8 +1947,8 @@
       \strng{authornamehash}{49813af522fea15c0ac8ee3cfd8d3931}
       \strng{authorfullhash}{49813af522fea15c0ac8ee3cfd8d3931}
       \strng{authorfullhashraw}{49813af522fea15c0ac8ee3cfd8d3931}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Optimal Design of Experiments offers a rare blend of linear algebra, convex analysis, and statistics. The optimal design for statistical experiments is first formulated as a concave matrix optimization problem. Using tools from convex analysis, the problem is solved generally for a wide class of optimality criteria such as D-, A-, or E-optimality. The book then offers a complementary approach that calls for the study of the symmetry properties of the design problem, exploiting such notions as matrix majorization and the Kiefer information matrix ordering. The results are illustrated with optimal designs for polynomial fit models, Bayes designs, balanced incomplete block designs, exchangeable designs on the cube, rotatable designs on the sphere, and many other examples. Since the book's initial publication in 1993, readers have used its methods to derive optimal designs on the circle, optimal mixture designs, and optimal designs in other statistical models. Using local linearization techniques, the methods described in the book prove useful even for nonlinear cases, in identifying practical designs of experiments. Audience: anyone involved in planning statistical experiments, including mathematical statisticians, applied statisticians, and mathematicians interested in matrix optimization problems Includes bibliographical references (p. 432-447) and index Optimal Design of Experiments offers a rare blend of linear algebra, convex analysis, and statistics. The optimal design for statistical experiments is first formulated as a concave matrix optimization problem. Using tools from convex analysis, the problem is solved generally for a wide class of optimality criteria such as D-, A-, or E-optimality. The book then offers a complementary approach that calls for the study of the symmetry properties of the design problem, exploiting such notions as matrix majorization and the Kiefer information matrix ordering. The results are illustrated with optimal designs for polynomial fit models, Bayes designs, balanced incomplete block designs, exchangeable designs on the cube, rotatable designs on the sphere, and many other examples. Since the book's initial publication in 1993, readers have used its methods to derive optimal designs on the circle, optimal mixture designs, and optimal designs in other statistical models. Using local linearization techniques, the methods described in the book prove useful even for nonlinear cases, in identifying practical designs of experiments. Audience: anyone involved in planning statistical experiments, including mathematical statisticians, applied statisticians, and mathematicians interested in matrix optimization problems}
@@ -2126,8 +1983,8 @@
       \strng{authornamehash}{0f0d568b2491039855ed3fe37d54ee0e}
       \strng{authorfullhash}{0f0d568b2491039855ed3fe37d54ee0e}
       \strng{authorfullhashraw}{0f0d568b2491039855ed3fe37d54ee0e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1359-8538}
@@ -2168,8 +2025,8 @@
       \strng{authorfullhash}{622bb48821228d9a7605a21d73f0fc9d}
       \strng{authorfullhashraw}{622bb48821228d9a7605a21d73f0fc9d}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Jede Neu- oder Weiterentwicklung von Produkten und Fertigungsprozessen durchläuft eine Vielzahl von Versuchen. Aber Versuche kosten Zeit und Geld, und manche Ergebnisse sind nicht reproduzierbar. Versuchsplanung (auch DOE = Design of Experiments genannt) hilft dabei, mit möglichst geringem Aufwand reproduzierbare Ergebnisse zu erhalten. Dieses Buch zeigt Praktikern in Entwicklung, Konstruktion und Fertigung, sowie Studenten, wie mit Versuchsplanung Produkte und Prozesse optimiert werden können. Versuchsplanung ist ein wesentlicher Bestandteil der Six-Sigma-Strategie. Anhand von vielen Beispielen wird beschrieben, wie man 'durch systematische Beobachtung Informationen sammeln, 'durch einfache Versuche einfache Probleme lösen, 'mit wenigen Einzelversuchen die Bedeutung vieler Faktoren gleichzeitig beurteilen und so die wichtigen von den unwichtigen trennen, 'robuste Produkte und Prozesse entwickeln, 'die Abhängigkeit mehrerer Zielgrö{ß}en von mehreren Faktoren gleichzeitig erfassen und ein gemeinsames Optimum suchen, und 'schrittweise Fertigungsprozesse und Produkte verbessern kann. Ziel des Buches ist, einen anwendungsorientierten Überblick zu geben. Es verbindet die Methoden der klassischen Statistischen Versuchsplanung mit Ideen von D. Shainin, G. Taguchi und vielen anderen zu einer neuen Kombination. So können die Vorteile aller Methoden genutzt werden. Visualisierungen in JavaTM bzw. JavaScript erlauben es, statistische Grundlagen spielerisch zu erleben und besser zu verstehen. In der 9. Auflage wurden die Versuchspläne und Optimierungsansätze erweitert, andere Kapitel wurden aktualisiert. Für die beiliegende DVD haben zahlreiche Hersteller die aktuellsten Demos ihrer Versuchsplanungs- bzw. Statistiksoftware zur Verfügung gestellt. Mit den Beispieldaten auf der DVD kann der Anwender die Programme anhand bekannter Beispiele selbst testen und das für seine Bedürfnisse am besten geeignete auswählen. Prof. Dr. Wilhelm Kleppmann war von 1986 bis 1991 Betreuer von Versuchsplanungsprojekten bei Siemens. Seither lehrt er an der Hochschule Aalen in den Studiengängen Elektronik, Informatik, Maschinenbau/Fertigungstechnik und Kunststofftechnik. Für Firmen und für die DGQ (Deutsche Gesellschaft für Qualität e.V.) führt er Lehrgänge und Pilotprojekte zur Versuchsplanung durch. Prof. Dr. Wilhelm Kleppmann, Hochschule Aalen, Beethovenstrasse 1, 73430 Aalen email: wilhelm.kleppmannhtw-aalen.de Internet: http://www.elektronik.htw-aalen.de/kleppmann/}
@@ -2843,6 +2700,98 @@
       \field{title}{Optimum Experimental Designs, with SAS}
       \field{year}{2007}
     \endentry
+    \entry{Seo.2015}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=35414f33d3578c648de8846cc11e80d0}{%
+           family={Seo},
+           familyi={S\bibinitperiod},
+           given={Kangwon},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3acacc1f684ef378918a00ece495d31b}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Rong},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{fullhash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{fullhashraw}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{bibnamehash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{authorbibnamehash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{authornamehash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{authorfullhash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{authorfullhashraw}{111b353ec48bf68b0c276b2719b6f67f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The R Journal}
+      \field{number}{2}
+      \field{title}{ALTopt: An R Package for Optimal Experimental Design of Accelerated Life Testing}
+      \field{volume}{7}
+      \field{year}{2015}
+      \field{pages}{177}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.32614/RJ-2015-029
+      \endverb
+      \verb{file}
+      \verb Seo, Pan 2015 - ALTopt An R Package:Attachments/Seo, Pan 2015 - ALTopt An R Package.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Monroe.2010}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=62e3ef3d2fec635cf52f4fa441e1bd08}{%
+           family={Monroe},
+           familyi={M\bibinitperiod},
+           given={Eric\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3acacc1f684ef378918a00ece495d31b}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Rong},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
+           family={Anderson-Cook},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Christine\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=eee9a27c4461b65ac2489492c39aa52c}{%
+           family={Borror},
+           familyi={B\bibinitperiod},
+           given={Connie\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
+      \strng{fullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{fullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{bibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{authorbibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{authornamehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
+      \strng{authorfullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{authorfullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-4065}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{number}{2}
+      \field{title}{Sensitivity Analysis of Optimal Designs for Accelerated Life Testing}
+      \field{volume}{42}
+      \field{year}{2010}
+      \field{pages}{121\bibrangedash 135}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/00224065.2010.11917811
+      \endverb
+    \endentry
     \entry{Monroe.2011}{article}{}{}
       \name{author}{5}{}{%
         {{hash=62e3ef3d2fec635cf52f4fa441e1bd08}{%
@@ -2879,6 +2828,7 @@
       \strng{authornamehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
       \strng{authorfullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
       \strng{authorfullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -3159,9 +3109,9 @@
       \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
       \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
       \strng{authorfullhashraw}{f938eb5ea778b1893dcdfbcde1ea455d}
-      \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 16th International Probabilistic Safety Assessment and Management Conference (PSAM16)}
@@ -3188,8 +3138,8 @@
       \strng{authornamehash}{bdc9d2bd4b5cf01092c051b69f2f483b}
       \strng{authorfullhash}{bdc9d2bd4b5cf01092c051b69f2f483b}
       \strng{authorfullhashraw}{bdc9d2bd4b5cf01092c051b69f2f483b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1st}
@@ -3218,8 +3168,8 @@
       \strng{authornamehash}{5e366e99b3c71b7753f79f011fac39b1}
       \strng{authorfullhash}{5e366e99b3c71b7753f79f011fac39b1}
       \strng{authorfullhashraw}{5e366e99b3c71b7753f79f011fac39b1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1369-7412}
@@ -3261,8 +3211,8 @@
       \strng{authornamehash}{fd8a9d47b8ea8caa8fce9c49492fe069}
       \strng{authorfullhash}{fd8a9d47b8ea8caa8fce9c49492fe069}
       \strng{authorfullhashraw}{fd8a9d47b8ea8caa8fce9c49492fe069}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-031-12408-2}
@@ -3306,8 +3256,8 @@
       \strng{authornamehash}{360122917dc07abd38b27440bffeda7a}
       \strng{authorfullhash}{4f6b0ad12b1a228cf6e95e4ed4091377}
       \strng{authorfullhashraw}{4f6b0ad12b1a228cf6e95e4ed4091377}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781119388630}
@@ -3368,8 +3318,8 @@
       \strng{editornamehash}{61d905494540936b3d274e4f1ecc7932}
       \strng{editorfullhash}{1d09a69e762b0c44bd50a855ccc5337c}
       \strng{editorfullhashraw}{1d09a69e762b0c44bd50a855ccc5337c}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 30th European Safety and Reliability Conference and 15th Probabilistic Safety Assessment and Management Conference}
@@ -3409,8 +3359,8 @@
       \strng{authornamehash}{0559b359e32bccb6527f54a2911e9798}
       \strng{authorfullhash}{0559b359e32bccb6527f54a2911e9798}
       \strng{authorfullhashraw}{0559b359e32bccb6527f54a2911e9798}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{"}An Introduction to Generalized Linear Models, Fourth Edition provides a cohesive framework for statistical modelling, with an emphasis on numerical and graphical methods. This new edition of a bestseller has been updated with new sections on non-linear associations, strategies for model selection, and a Postface on good statistical practice. Like its predecessor, this edition presents the theoretical background of generalized linear models (GLMs) before focusing on methods for analyzing particular kinds of data. It covers Normal, Poisson, and Binomial distributions; linear regression models; classical estimation and model fitting methods; and frequentist methods of statistical inference. After forming this foundation, the authors explore multiple linear regression, analysis of variance (ANOVA), logistic regression, log-linear models, survival analysis, multilevel modeling, Bayesian models, and Markov chain Monte Carlo (MCMC) methods. Introduces GLMs in a way that enables readers to understand the unifying structure that underpins themDiscusses common concepts and principles of advanced GLMs, including nominal and ordinal regression, survival analysis, non-linear associations and longitudinal analysisConnects Bayesian analysis and MCMC methods to fit GLMsContains numerous examples from business, medicine, engineering, and the social sciencesProvides the example code for R, Stata, and WinBUGS to encourage implementation of the methodsOffers the data sets and solutions to the exercises onlineDescribes the components of good statistical practice to improve scientific validity and reproducibility of results. Using popular statistical software programs, this concise and accessible text illustrates practical approaches to estimation, model fitting, and model comparisons.{"}--Provided by publisher}
@@ -3464,8 +3414,8 @@
       \strng{editornamehash}{f2f71db52401837c018a82537cd40e41}
       \strng{editorfullhash}{f2f71db52401837c018a82537cd40e41}
       \strng{editorfullhashraw}{f2f71db52401837c018a82537cd40e41}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Design and analysis of experiments}
@@ -3501,8 +3451,8 @@
       \strng{authornamehash}{0121dff43349d108c5cc99bf210f0f79}
       \strng{authorfullhash}{0121dff43349d108c5cc99bf210f0f79}
       \strng{authorfullhashraw}{0121dff43349d108c5cc99bf210f0f79}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0035-9254}
@@ -3544,8 +3494,8 @@
       \strng{authornamehash}{fc004a97c21adebe39252fa234f7b0db}
       \strng{authorfullhash}{fc004a97c21adebe39252fa234f7b0db}
       \strng{authorfullhashraw}{fc004a97c21adebe39252fa234f7b0db}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. ed.}
@@ -3589,8 +3539,8 @@
       \strng{authornamehash}{e91d83cc311fae6b023556eae85bbd5d}
       \strng{authorfullhash}{e91d83cc311fae6b023556eae85bbd5d}
       \strng{authorfullhashraw}{e91d83cc311fae6b023556eae85bbd5d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781119385288}
@@ -3898,7 +3848,7 @@
       \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
       \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
       \strng{authorfullhashraw}{f938eb5ea778b1893dcdfbcde1ea455d}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -4165,7 +4115,7 @@
       \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
       \strng{authorfullhash}{4780ea36ecf2a378970a5be3178e63ac}
       \strng{authorfullhashraw}{4780ea36ecf2a378970a5be3178e63ac}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -4341,8 +4291,8 @@
       \strng{authornamehash}{976af4a14f6160271f00376e3e5335bf}
       \strng{authorfullhash}{976af4a14f6160271f00376e3e5335bf}
       \strng{authorfullhashraw}{976af4a14f6160271f00376e3e5335bf}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-4065}
@@ -4383,9 +4333,9 @@
       \strng{authornamehash}{b18fafb45b39de1207e36f000129af31}
       \strng{authorfullhash}{c28327a1d4a309e9498e3b3241b90755}
       \strng{authorfullhashraw}{c28327a1d4a309e9498e3b3241b90755}
-      \field{extraname}{4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Reliability}
@@ -4420,8 +4370,8 @@
       \strng{authornamehash}{a75345ef3c8ce3f1e6cd2200a8ccd36b}
       \strng{authorfullhash}{a75345ef3c8ce3f1e6cd2200a8ccd36b}
       \strng{authorfullhashraw}{a75345ef3c8ce3f1e6cd2200a8ccd36b}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-540-89321-9}
@@ -4451,8 +4401,8 @@
       \strng{authornamehash}{1e25dfb48354228b81bd77a4e66dfd8b}
       \strng{authorfullhash}{1e25dfb48354228b81bd77a4e66dfd8b}
       \strng{authorfullhashraw}{1e25dfb48354228b81bd77a4e66dfd8b}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1. Aufl.}
@@ -4525,8 +4475,8 @@
       \strng{editornamehash}{416db1111252b32a772b6f80a75c9652}
       \strng{editorfullhash}{b86c3dca421dd2285e97d4a95e19afb4}
       \strng{editorfullhashraw}{b86c3dca421dd2285e97d4a95e19afb4}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Frontiers in Statistical Quality Control 10}
