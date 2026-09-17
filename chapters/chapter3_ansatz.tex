@@ -4,6 +4,16 @@
 
 \chapter{Effiziente Testplanung für die multivariate Lebensdauererprobung} \label{chap:ansatz}
 
+Einfügen:\\
+
+Im Kontext der Lebensdauerdatenanalyse, bei der zudem nicht-normalverteilte und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten folglich ohnehin nicht mehr über klassische \textit{\sym{t}-Tests} ableiten.
+Aus der Arbeit von \textcite{Nelder.1972} kommen hier \textit{Verallgemeinerte Lineare Modelle}, engl. \textit{\acp{GLM}} zum Einsatz, bei denen die Signifikanz der Koeffizienten $\symsub{beta}{idx_j}$ vorzugsweise über den \textit{\ac{LR-Test}} (oder approximativ über \textit{Wald-Tests} - vergleiche hierzu Arbeiten von \textcite{Rigdon.2022,Meeker.2022,Montgomery.2020,McCulloch.2001}) ermittelt wird.
+Da für diese komplexen Verteilungsmodelle - insbesondere unter dem Einfluss von Orthogonalitätsabweichungen und bei kleinen Stichprobenumfängen $\sym{n}$ - keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, erfolgt die Untersuchung in der modernen Praxis numerisch mittels \textit{\ac{MCS}} \cite{Kremer.2021,Arndt.2022,Khuri.2006}.
+Hierbei wird der geplante Versuchsplan virtuell vielfach durchlaufen (z.B. $\symsub{n}{idx_MC}=10^4$ Simulationsläufe).
+Für jeden Lauf werden basierend auf einem angenommenen Modell Ausfallzeiten generiert, verrauscht bzw. mit Streuung überlagert und/oder zensiert.
+Anschließend erfolgt die Modellbildung und Hypothesenprüfung.
+Der Anteil der Simulationsläufe, in denen der definierte Effekt korrekt als signifikant ($\sym{p-Wert} < \sym{alpha}$) erkannt wird, entspricht der geschätzten $\sym{power}$ des Designs.
+
 \section{Bewertung des Standes der Forschung und Technik} \label{sec:bewertung_stand}
 
 Der in Kapitel~\ref{chap:stand} dargelegte Stand der Forschung und Technik verdeutlicht, dass sowohl die Zuverlässigkeitstechnik als auch die statistische Versuchsplanung (\ac{DoE}) isoliert betrachtet hochgradig etablierte Disziplinen mit einem profunden Methodenrepertoire darstellen \cite{Bertsche.2022, Montgomery.2020}.

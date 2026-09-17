@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  17 SEP 2026 01:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  18 SEP 2026 00:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1416,7 +1416,14 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
- (diss_arndt.aux)
+ (diss_arndt.aux
+
+LaTeX Warning: Label `eq:mle_likelihood_censored' multiply defined.
+
+
+LaTeX Warning: Label `eq:mle_loglikelihood_censored' multiply defined.
+
+)
 \openout1 = `diss_arndt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 446.
@@ -1687,18 +1694,19 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 20.
 Package tocbasic Info: Using my definition of `\numberline' on input line 21.
 Package tocbasic Info: Using my definition of `\numberline' on input line 22.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
+Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
-Package tocbasic Info: Using my definition of `\numberline' on input line 28.
-Package tocbasic Info: Using my definition of `\numberline' on input line 33.
+Package tocbasic Info: Using my definition of `\numberline' on input line 32.
+Package tocbasic Info: Using my definition of `\numberline' on input line 38.
 Package tocbasic Info: Using my definition of `\numberline' on input line 39.
-Package tocbasic Info: Using my definition of `\numberline' on input line 40.
-Package tocbasic Info: Using my definition of `\numberline' on input line 42.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
 
 
 [11
 
 
 ]
+Package tocbasic Info: Using my definition of `\numberline' on input line 44.
 Package tocbasic Info: Using my definition of `\numberline' on input line 45.
 Package tocbasic Info: Using my definition of `\numberline' on input line 46.
 Package tocbasic Info: Using my definition of `\numberline' on input line 47.
@@ -1706,47 +1714,47 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 48.
 Package tocbasic Info: Using my definition of `\numberline' on input line 49.
 Package tocbasic Info: Using my definition of `\numberline' on input line 50.
 Package tocbasic Info: Using my definition of `\numberline' on input line 51.
-Package tocbasic Info: Using my definition of `\numberline' on input line 52.
 
-Overfull \hbox (14.09702pt too wide) in paragraph at lines 52--52
+Overfull \hbox (14.09702pt too wide) in paragraph at lines 51--51
  [][] []\T1/qpl/m/n/10.95 (-10) Ergebnisse der Sen-si-ti-vi-täts-ana-ly-se und Quan-ti-fi-zie-rung der Trenn- 
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 53.
+Package tocbasic Info: Using my definition of `\numberline' on input line 52.
 
-Overfull \hbox (7.72926pt too wide) in paragraph at lines 53--53
+Overfull \hbox (7.72926pt too wide) in paragraph at lines 52--52
  [][] []\T1/qpl/m/n/10.95 (-10) Generische Aus-wir-kun-gen re-le-van-ter Or-tho-go-na-li-täts-ab-wei-chun- 
  []
 
-Package tocbasic Info: Using my definition of `\numberline' on input line 56.
+Package tocbasic Info: Using my definition of `\numberline' on input line 55.
 
-Overfull \hbox (2.79085pt too wide) in paragraph at lines 56--56
+Overfull \hbox (2.79085pt too wide) in paragraph at lines 55--55
  [][] []\T1/qpl/m/n/10.95 (-10) Fazit: Sta-tis-ti-sche Ef-fek-ti-vi-tät als Ba-sis der ex-plo-ra-ti-ven Ver-suchs- 
  []
 
+Package tocbasic Info: Using my definition of `\numberline' on input line 56.
 Package tocbasic Info: Using my definition of `\numberline' on input line 57.
 Package tocbasic Info: Using my definition of `\numberline' on input line 58.
-Package tocbasic Info: Using my definition of `\numberline' on input line 59.
 
-Overfull \hbox (15.34474pt too wide) in paragraph at lines 59--59
+Overfull \hbox (15.34474pt too wide) in paragraph at lines 58--58
  [][] []\T1/qpl/m/n/10.95 (-10) Richtungsabhängige Be-wer-tung: Der Ex-tra-po-la-ti-on Va-rian-ce Graph 
  []
 
+Package tocbasic Info: Using my definition of `\numberline' on input line 59.
 Package tocbasic Info: Using my definition of `\numberline' on input line 60.
 Package tocbasic Info: Using my definition of `\numberline' on input line 61.
 Package tocbasic Info: Using my definition of `\numberline' on input line 62.
 Package tocbasic Info: Using my definition of `\numberline' on input line 63.
-Package tocbasic Info: Using my definition of `\numberline' on input line 64.
+Package tocbasic Info: Using my definition of `\numberline' on input line 65.
 Package tocbasic Info: Using my definition of `\numberline' on input line 66.
 Package tocbasic Info: Using my definition of `\numberline' on input line 67.
 Package tocbasic Info: Using my definition of `\numberline' on input line 68.
-Package tocbasic Info: Using my definition of `\numberline' on input line 69.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [12]
+Package tocbasic Info: Using my definition of `\numberline' on input line 69.
 Package tocbasic Info: Using my definition of `\numberline' on input line 70.
 Package tocbasic Info: Using my definition of `\numberline' on input line 71.
 Package tocbasic Info: Using my definition of `\numberline' on input line 72.
@@ -1758,7 +1766,6 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 77.
 Package tocbasic Info: Using my definition of `\numberline' on input line 78.
 Package tocbasic Info: Using my definition of `\numberline' on input line 79.
 Package tocbasic Info: Using my definition of `\numberline' on input line 80.
-Package tocbasic Info: Using my definition of `\numberline' on input line 81.
 )
 \tf@toc=\write11
 \openout11 = `diss_arndt.toc'.
@@ -1793,7 +1800,7 @@ Overfull \hbox (23.39185pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (23.39185pt too wide) in alignment at lines 2--349
+Overfull \hbox (23.39185pt too wide) in alignment at lines 2--348
  [] [] 
  []
 
@@ -1847,11 +1854,11 @@ Overfull \hbox (23.39185pt too wide) in alignment at lines 2--2
  [] [] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 406.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 402.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (23.39185pt too wide) in alignment at lines 2--589
+Overfull \hbox (23.39185pt too wide) in alignment at lines 2--582
  [] [] 
  []
 
@@ -1896,57 +1903,57 @@ File: ts1qpl.fd 2009/09/25 v1.2 font definition file for TS1/qpl
 )
 
 [3{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}] (plots/ma_abb1_aufbau.pdf_tex
-<plots/ma_abb1_aufbau.pdf, id=546, page=1, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=545, page=1, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=548, page=2, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=547, page=2, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=549, page=3, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=548, page=3, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page3 used on input line 60.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=550, page=4, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=549, page=4, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page4 used on input line 62.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=553, page=5, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=552, page=5, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page5 used on input line 66.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=555, page=6, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=554, page=6, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page6 used on input line 68.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=556, page=7, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=555, page=7, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page7 used on input line 70.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=558, page=8, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=557, page=8, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 8>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page8 used on input line 72.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=559, page=9, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=558, page=9, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 9>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page9 used on input line 74.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=561, page=10, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=560, page=10, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 10>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page10 used on input line 76.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=562, page=11, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=561, page=11, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 11>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page11 used on input line 78.
@@ -2040,183 +2047,116 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 [16]
 
-[17] (plots/ma_abb2.02_doe_steps.pdf_tex
-<plots/ma_abb2.02_doe_steps.pdf, id=1226, page=1, 350.42117pt x 111.38583pt>
-File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
-<use plots/ma_abb2.02_doe_steps.pdf, page 1>
-Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 365.6724pt x 116.23792pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1227, page=2, 350.42117pt x 111.38583pt>
-File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
-<use plots/ma_abb2.02_doe_steps.pdf, page 2>
-Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page2 used on input line 59.
-(pdftex.def)             Requested size: 365.6724pt x 116.23792pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1228, page=3, 350.42117pt x 111.38583pt>
-File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
-<use plots/ma_abb2.02_doe_steps.pdf, page 3>
-Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page3 used on input line 62.
-(pdftex.def)             Requested size: 365.6724pt x 116.23792pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1229, page=4, 350.42117pt x 111.38583pt>
-File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
-<use plots/ma_abb2.02_doe_steps.pdf, page 4>
-Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page4 used on input line 65.
-(pdftex.def)             Requested size: 365.6724pt x 116.23792pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1230, page=5, 350.42117pt x 111.38583pt>
-File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
-<use plots/ma_abb2.02_doe_steps.pdf, page 5>
-Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page5 used on input line 68.
-(pdftex.def)             Requested size: 365.6724pt x 116.23792pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1231, page=6, 350.42117pt x 111.38583pt>
-File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
-<use plots/ma_abb2.02_doe_steps.pdf, page 6>
-Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page6 used on input line 71.
-(pdftex.def)             Requested size: 365.6724pt x 116.23792pt.
-<plots/ma_abb2.02_doe_steps.pdf, id=1232, page=7, 350.42117pt x 111.38583pt>
-File: plots/ma_abb2.02_doe_steps.pdf Graphic file (type pdf)
-<use plots/ma_abb2.02_doe_steps.pdf, page 7>
-Package pdftex.def Info: plots/ma_abb2.02_doe_steps.pdf , page7 used on input line 74.
-(pdftex.def)             Requested size: 365.6724pt x 116.23792pt.
-) (plots/ma_abb2.03_p_diagramm.pdf_tex
-<plots/ma_abb2.03_p_diagramm.pdf, id=1244, page=1, 266.19023pt x 171.65889pt>
-File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
-<use plots/ma_abb2.03_p_diagramm.pdf, page 1>
-Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page1 used on input line 56.
-(pdftex.def)             Requested size: 325.04556pt x 209.61212pt.
-<plots/ma_abb2.03_p_diagramm.pdf, id=1245, page=2, 266.19023pt x 171.65889pt>
-File: plots/ma_abb2.03_p_diagramm.pdf Graphic file (type pdf)
-<use plots/ma_abb2.03_p_diagramm.pdf, page 2>
-Package pdftex.def Info: plots/ma_abb2.03_p_diagramm.pdf , page2 used on input line 67.
-(pdftex.def)             Requested size: 325.04556pt x 209.61212pt.
-)
+LaTeX Warning: Marginpar on page 17 moved.
 
-[18 <./plots/ma_abb2.02_doe_steps.pdf> <./plots/ma_abb2.02_doe_steps.pdf
 
-pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./plots/ma_abb2.02_doe_steps.pdf
 
-pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./plots/ma_abb2.02_doe_steps.pdf
+[17]
 
-pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./plots/ma_abb2.02_doe_steps.pdf
+[18]
 
-pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./plots/ma_abb2.02_doe_steps.pdf
-
-pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./plots/ma_abb2.02_doe_steps.pdf
-
-pdfTeX warning: pdflatex (file ./plots/ma_abb2.02_doe_steps.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] (plots/ma_abb2.04.1_effekt.tex)
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 323.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 323.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 323.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 323.
- (plots/ma_abb2.04.2_effekt.tex)
-
-[19 <./plots/ma_abb2.03_p_diagramm.pdf> <./plots/ma_abb2.03_p_diagramm.pdf
-
-pdfTeX warning: pdflatex (file ./plots/ma_abb2.03_p_diagramm.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
+[19]
 
 [20]
+Overfull \hbox (11.88037pt too wide) in paragraph at lines 366--369
+[][][][][][][][][] \T1/qpl/m/n/10.95 (-10) Pa-ra-me-ter-set sys-te-ma-tisch zu un-ter-su-chen, eta-bliert der $\OT1/pplx/m/n/10.95 2[]$ \T1/qpl/m/it/10.95 (-10) voll-fak^^?
+ []
 
-[21] (plots/ma_abb2.05_FF_design.tex)
-Overfull \hbox (17.99956pt too wide) in paragraph at lines 43--389
+
+
+[21]
+
+[22] (plots/ma_abb2.07_CCD_design.tex)
+Overfull \hbox (8.14264pt too wide) in paragraph at lines 159--411
  [][] 
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-
-[22] (plots/ma_abb2.06_effektabstand.tex)
 
 [23]
 
-[24]
-
-[25] (plots/ma_abb2.07_CCD_design.tex)
-Overfull \hbox (8.14264pt too wide) in paragraph at lines 159--488
+[24] (plots/ma_abb2.08.2_strategy.tex
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 50.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 50.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 50.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 50.
+)
+Overfull \hbox (4.00127pt too wide) in paragraph at lines 51--484
  [][] 
  []
 
 
-
-[26]
-
-[27] (plots/ma_abb2.08.1_strategy.tex)
-Overfull \hbox (32.91075pt too wide) in paragraph at lines 51--559
- [][] 
- []
-
-
-Overfull \hbox (9.31279pt too wide) in paragraph at lines 564--568
- [][] 
- []
-
-(plots/ma_abb2.08.2_strategy.tex)
-Overfull \hbox (14.15909pt too wide) in paragraph at lines 51--574
- [][] 
- []
-
-
-Overfull \hbox (12.96555pt too wide) in paragraph at lines 579--583
+Overfull \hbox (0.77689pt too wide) in paragraph at lines 489--493
  [][] 
  []
 
 (plots/ma_abb2.08.3_strategy.tex)
-Overfull \hbox (17.0589pt too wide) in paragraph at lines 55--589
+Overfull \hbox (6.90108pt too wide) in paragraph at lines 55--499
  [][] 
  []
 
 
-Overfull \hbox (17.03256pt too wide) in paragraph at lines 594--598
+Overfull \hbox (0.77689pt too wide) in paragraph at lines 504--508
  [][] 
  []
 
 (plots/ma_abb2.08.4_strategy.tex)
 
-[28]
-
-[29]
-<plots/ma_abb2.2.5_fds_ccd.pdf, id=1718, 239.89626pt x 187.70125pt>
+[25]
+<plots/ma_abb2.2.5_fds_ccd.pdf, id=1640, 239.89626pt x 187.70125pt>
 File: plots/ma_abb2.2.5_fds_ccd.pdf Graphic file (type pdf)
 <use plots/ma_abb2.2.5_fds_ccd.pdf>
-Package pdftex.def Info: plots/ma_abb2.2.5_fds_ccd.pdf  used on input line 667.
+Package pdftex.def Info: plots/ma_abb2.2.5_fds_ccd.pdf  used on input line 567.
 (pdftex.def)             Requested size: 190.96404pt x 149.41653pt.
-<plots/ma_abb2.2.5_vdg_ccd.pdf, id=1721, 239.89626pt x 190.7125pt>
+<plots/ma_abb2.2.5_vdg_ccd.pdf, id=1643, 239.89626pt x 190.7125pt>
 File: plots/ma_abb2.2.5_vdg_ccd.pdf Graphic file (type pdf)
 <use plots/ma_abb2.2.5_vdg_ccd.pdf>
-Package pdftex.def Info: plots/ma_abb2.2.5_vdg_ccd.pdf  used on input line 675.
+Package pdftex.def Info: plots/ma_abb2.2.5_vdg_ccd.pdf  used on input line 575.
 (pdftex.def)             Requested size: 190.96404pt x 151.81358pt.
 
 
+[26]
+
+[27]
+
+[28 <./plots/ma_abb2.2.5_fds_ccd.pdf> <./plots/ma_abb2.2.5_vdg_ccd.pdf>]
+Overfull \hbox (5.9391pt too wide) in paragraph at lines 608--609
+\T1/qpl/m/n/10.95 (-10) for-ma-ti-ons-ma-trix, wel-che als \T1/qpl/m/it/10.95 (-10) Va^^?ri^^?anz-^^?Ko^^?va^^?ri^^?anz-^^?Ma^^?trix \T1/qpl/m/n/10.95 (-10) (oder \T1/qpl/m/it/10.95 (-10) Di^^?sper^^?si^^?ons^^?ma^^?trix\T1/qpl/m/n/10.95 (-10) ) $\OT1/zplm/m/n/10.95 ([][][][][][][][][][][][][][][])[]$
+ []
+
+
+
+[29]
+
 [30]
-
-[31]
-
-[32 <./plots/ma_abb2.2.5_fds_ccd.pdf> <./plots/ma_abb2.2.5_vdg_ccd.pdf>]
-
-[33]
-
-[34]
-Underfull \hbox (badness 1194) in paragraph at lines 809--812
+Underfull \hbox (badness 1194) in paragraph at lines 710--713
 []|\T1/qpl/m/n/10.95 (+10) Minimierung der Prä-dik-ti-ons-va-ri-anz an ei-nem spe-zi-fi-schen
  []
 
-[35] [36]
+[31] [32]
 
-[37] [38]
+[33] [34]
+
+[35]
+
+[36]
+
+[37]
+
+[38]
 
 [39]
 
 [40]
+Overfull \hbox (11.136pt too wide) in paragraph at lines 942--965
+\T1/qpl/m/n/10.95 (-10) Ein-bin-dung in die [][][]GLM[][]-Struktur fin-det sich in [].
+ []
+
+
 
 [41]
 
@@ -2226,140 +2166,133 @@ Underfull \hbox (badness 1194) in paragraph at lines 809--812
 
 [44]
 
-[45]
+[45]) (chapters/chapter3_ansatz.tex
 
 [46]
-
-[47]
-
-[48]
-
-[49]
-
-[50]) (chapters/chapter3_ansatz.tex
-
-[51]
-
-[52
-
-
-]
 chapter 3.
 
-Overfull \hbox (4.34488pt too wide) in paragraph at lines 9--11
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Overfull \hbox (4.34488pt too wide) in paragraph at lines 19--21
 \T1/qpl/m/n/10.95 (-10) fun-da-men-ta-le Kon-flik-te, wel-che den zwin-gen-den Be-darf an wei-ter-füh-ren-der For-schung
  []
 
 
 
-[53]
+[47
 
-[54]
-Overfull \hbox (4.25618pt too wide) in paragraph at lines 56--58
+
+]
+
+[48]
+
+[49]
+Overfull \hbox (4.25618pt too wide) in paragraph at lines 66--68
 \T1/qpl/m/n/10.95 (-10) Aus der Dis-kre-panz zwi-schen dem theo-re-ti-schen An-spruch lo-ka-ler [][][]GLM[][]-Optimalpläne
  []
 
 
 
-[55]
-
-[56]
-Overfull \hbox (0.39955pt too wide) in paragraph at lines 81--83
+[50]
+Overfull \hbox (0.39955pt too wide) in paragraph at lines 91--93
 \T1/qpl/m/n/10.95 (-10) Zentralpunkt-Replikationen er-mög-li-chen die mo-del-lu-n-ab-hän-gi-ge Tren-nung von
  []
 
 
 
-[57]
+[51]
 
-LaTeX Warning: Reference `chap:screening' on page 58 undefined on input line 135.
+[52]
+
+LaTeX Warning: Reference `chap:screening' on page 53 undefined on input line 145.
 
 
-Overfull \hbox (19.75897pt too wide) in paragraph at lines 141--143
+Overfull \hbox (19.75897pt too wide) in paragraph at lines 151--153
 []\T1/qpl/b/n/10.95 (-10) Stufe 3: Fort^^?füh^^?rung der Aug^^?men^^?tie^^?rung & Ad^^?ap^^?ti^^?ve Test^^?pla^^?nung (Ab^^?schnitt [][]4.3[][]): 
  []
 
 
 
-[58]) (chapters/chapter5_entwurf.tex
+[53]) (chapters/chapter5_entwurf.tex
 
-[59]
+[54]
+chapter 4.
 
-[60
+LaTeX Warning: Reference `chap:screening' on page 55 undefined on input line 7.
+
+
+
+[55
 
 
 ]
-chapter 4.
 
-LaTeX Warning: Reference `chap:screening' on page 61 undefined on input line 7.
+[56]
 
-
-
-[61]
-
-[62]
-
-LaTeX Warning: Reference `subsubsec:mle' on page 63 undefined on input line 37.
+LaTeX Warning: Reference `subsubsec:mle' on page 57 undefined on input line 37.
 
 
 
-[63] (plots/ma_abb5.1_mcs.pdf_tex
-<plots/ma_abb5.1_mcs.pdf, id=3325, page=1, 191.57175pt x 262.59198pt>
+[57] (plots/ma_abb5.1_mcs.pdf_tex
+<plots/ma_abb5.1_mcs.pdf, id=3245, page=1, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3329, page=2, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3249, page=2, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3352, page=3, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3272, page=3, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page3 used on input line 64.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3368, page=4, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3288, page=4, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page4 used on input line 68.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3379, page=5, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3299, page=5, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page5 used on input line 71.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3387, page=6, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3307, page=6, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page6 used on input line 74.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3395, page=7, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3315, page=7, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page7 used on input line 77.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3397, page=8, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3317, page=8, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 8>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page8 used on input line 79.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3400, page=9, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3320, page=9, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 9>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page9 used on input line 81.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3402, page=10, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3322, page=10, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 10>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page10 used on input line 83.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3403, page=11, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3323, page=11, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 11>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page11 used on input line 85.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3410, page=12, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3330, page=12, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 12>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page12 used on input line 88.
@@ -2370,27 +2303,27 @@ File: Uding.fd 1996/02/01 v1.0 BBding font definitions
 )
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/ding/m/n/10.95'
 (microtype)             (new value: 10.95pt) on input line 90.
-<plots/ma_abb5.1_mcs.pdf, id=3414, page=13, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3334, page=13, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 13>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page13 used on input line 91.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3415, page=14, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3335, page=14, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 14>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page14 used on input line 93.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3422, page=15, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3342, page=15, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 15>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page15 used on input line 97.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3424, page=16, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3344, page=16, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 16>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page16 used on input line 99.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3425, page=17, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3345, page=17, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 17>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page17 used on input line 101.
@@ -2400,13 +2333,13 @@ Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page17 used on input line 101
 LaTeX Warning: Float too large for page by 52.73378pt on input line 56.
 
 
-LaTeX Warning: Reference `sec:simulationsmethodik' on page 64 undefined on input line 73.
+LaTeX Warning: Reference `sec:simulationsmethodik' on page 58 undefined on input line 73.
 
 
 
-[64]
+[58]
 
-[65 <./plots/ma_abb5.1_mcs.pdf> <./plots/ma_abb5.1_mcs.pdf
+[59 <./plots/ma_abb5.1_mcs.pdf> <./plots/ma_abb5.1_mcs.pdf
 
 pdfTeX warning: pdflatex (file ./plots/ma_abb5.1_mcs.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./plots/ma_abb5.1_mcs.pdf
@@ -2461,14 +2394,14 @@ Overfull \hbox (0.71191pt too wide) in paragraph at lines 87--88
 
 
 
-[66]
+[60]
 Overfull \hbox (0.8356pt too wide) in paragraph at lines 130--132
 []\T1/qpl/m/n/10.95 (-10) Gegenüber al-ter-na-ti-ven Screening-Verfahren wie rei-nen Kor-re-la-ti-ons-ana-ly-sen, \T1/qpl/m/it/10.95 (-10) Space-^^?
  []
 
 
 
-[67]
+[61]
 Underfull \hbox (badness 1540) in paragraph at lines 144--146
 \T1/qpl/m/n/10.95 (+10) Variation des axia-len Stern-punktab-
  []
@@ -2505,226 +2438,226 @@ Underfull \hbox (badness 4441) in paragraph at lines 193--195
 
 
 
+[62]
+
+[63]
+
+[64]
+
+[65]
+
+[66]
+
+[67]
+
 [68]
 
 [69]
 
 [70]
 
-[71]
+[71] (tables/tab_results_ortho_metrics.tex)
 
-[72]
-
-[73]
-
-[74]
-
-[75]
-
-[76]
-
-[77] (tables/tab_results_ortho_metrics.tex)
-
-[78] (plots/ma_abb5.1.4_msedev.tex) (tables/tab_results_ortho_bias.tex) (plots/ma_abb5.1.4_betadev.tex)
+[72] (plots/ma_abb5.1.4_msedev.tex) (tables/tab_results_ortho_bias.tex) (plots/ma_abb5.1.4_betadev.tex)
 Overfull \hbox (4.03264pt too wide) in paragraph at lines 154--420
  [][] 
  []
 
 (plots/ma_abb5.1.4_betakonv.tex)
 
-[79]
+[73]
 
-[80] (tables/tab_results_ortho_power.tex
+[74] (tables/tab_results_ortho_power.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 [][][]|\T1/qpl/m/n/10.95 (+10) Simulations-ergebnisse: Durch-schnitt-li-che Trennschärfe-Änderung
  []
 
 )
 
-[81] (plots/ma_abb5.1.4_powerdev.tex)
+[75] (plots/ma_abb5.1.4_powerdev.tex)
 Overfull \hbox (0.60976pt too wide) in paragraph at lines 244--455
  [][] 
  []
 
 (plots/ma_abb5.1.4_powerkonv.tex) (plots/ma_abb5.1.4_phisto.tex)
 
-[82]
+[76]
 
-[83]
+[77]
 
-[84] (plots/ma_abb5.1.4_korrelation.tex)
+[78] (plots/ma_abb5.1.4_korrelation.tex)
 
-[85]
+[79]
 
-[86]
+[80]
 
-[87] (plots/ma_abb5.2.1_fds_nc.tex) (plots/ma_abb5.2.1_vdg_nc.tex)
+[81] (plots/ma_abb5.2.1_fds_nc.tex) (plots/ma_abb5.2.1_vdg_nc.tex)
 Overfull \hbox (0.69661pt too wide) in paragraph at lines 207--576
  [][] 
  []
 
 
 
-[88] (plots/ma_abb5.2.1_fds_omitted.tex) (plots/ma_abb5.2.1_vdg_omitted.tex)
+[82] (plots/ma_abb5.2.1_fds_omitted.tex) (plots/ma_abb5.2.1_vdg_omitted.tex)
 Overfull \hbox (0.69661pt too wide) in paragraph at lines 261--613
  [][] 
  []
 
-<plots/ma_abb5.2.1_contour_spv.pdf, id=4276, 307.1475pt x 226.8475pt>
+<plots/ma_abb5.2.1_contour_spv.pdf, id=4196, 307.1475pt x 226.8475pt>
 File: plots/ma_abb5.2.1_contour_spv.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.1_contour_spv.pdf>
 Package pdftex.def Info: plots/ma_abb5.2.1_contour_spv.pdf  used on input line 624.
 (pdftex.def)             Requested size: 284.41255pt x 210.06947pt.
 
 
-[89]
+[83]
 
-[90]
+[84]
 
-[91 <./plots/ma_abb5.2.1_contour_spv.pdf>]
+[85 <./plots/ma_abb5.2.1_contour_spv.pdf>]
 
-[92]
-<plots/ma_abb5.2.2_exposure_scatter.pdf, id=4410, 261.97874pt x 261.97874pt>
+[86]
+<plots/ma_abb5.2.2_exposure_scatter.pdf, id=4330, 261.97874pt x 261.97874pt>
 File: plots/ma_abb5.2.2_exposure_scatter.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.2_exposure_scatter.pdf>
 Package pdftex.def Info: plots/ma_abb5.2.2_exposure_scatter.pdf  used on input line 672.
 (pdftex.def)             Requested size: 243.78572pt x 243.79361pt.
-<plots/ma_abb5.2.2_contour.pdf, id=4420, 349.305pt x 271.0125pt>
+<plots/ma_abb5.2.2_contour.pdf, id=4340, 349.305pt x 271.0125pt>
 File: plots/ma_abb5.2.2_contour.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.2_contour.pdf>
 Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 682.
 (pdftex.def)             Requested size: 325.04556pt x 252.20442pt.
 
 
-[93]
+[87]
 
-[94 <./plots/ma_abb5.2.2_exposure_scatter.pdf>]
+[88 <./plots/ma_abb5.2.2_exposure_scatter.pdf>]
 
-[95 <./plots/ma_abb5.2.2_contour.pdf>] (plots/ma_abb5.2.2_evg.tex)
+[89 <./plots/ma_abb5.2.2_contour.pdf>] (plots/ma_abb5.2.2_evg.tex)
 
-[96]
+[90]
 
-[97] (plots/ma_abb5.14_costmodel.pdf_tex
-<plots/ma_abb5.14_costmodel.pdf, id=4596, page=1, 173.2403pt x 287.23065pt>
+[91] (plots/ma_abb5.14_costmodel.pdf_tex
+<plots/ma_abb5.14_costmodel.pdf, id=4516, page=1, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4597, page=2, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4517, page=2, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4598, page=3, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4518, page=3, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page3 used on input line 60.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4599, page=4, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4519, page=4, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page4 used on input line 62.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4602, page=5, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4522, page=5, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page5 used on input line 64.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4605, page=6, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4525, page=6, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page6 used on input line 66.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4608, page=7, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4528, page=7, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page7 used on input line 68.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4611, page=8, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4531, page=8, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 8>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page8 used on input line 70.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4614, page=9, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4534, page=9, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 9>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page9 used on input line 72.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4617, page=10, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4537, page=10, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 10>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page10 used on input line 74.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4620, page=11, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4540, page=11, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 11>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page11 used on input line 76.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4621, page=12, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4541, page=12, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 12>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page12 used on input line 78.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4622, page=13, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4542, page=13, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 13>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page13 used on input line 80.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4625, page=14, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4545, page=14, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 14>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page14 used on input line 82.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4628, page=15, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4548, page=15, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 15>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page15 used on input line 84.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4631, page=16, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4551, page=16, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 16>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page16 used on input line 86.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4634, page=17, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4554, page=17, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 17>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page17 used on input line 88.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4637, page=18, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4557, page=18, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 18>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page18 used on input line 90.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4640, page=19, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4560, page=19, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 19>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page19 used on input line 92.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4641, page=20, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4561, page=20, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 20>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page20 used on input line 94.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4642, page=21, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4562, page=21, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 21>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page21 used on input line 96.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4644, page=22, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4564, page=22, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 22>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page22 used on input line 98.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4645, page=23, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4565, page=23, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 23>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page23 used on input line 100.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
 )
 
-[98]
+[92]
 
-[99 <./plots/ma_abb5.14_costmodel.pdf> <./plots/ma_abb5.14_costmodel.pdf
+[93 <./plots/ma_abb5.14_costmodel.pdf> <./plots/ma_abb5.14_costmodel.pdf
 
 pdfTeX warning: pdflatex (file ./plots/ma_abb5.14_costmodel.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./plots/ma_abb5.14_costmodel.pdf
@@ -2792,51 +2725,51 @@ pdfTeX warning: pdflatex (file ./plots/ma_abb5.14_costmodel.pdf): PDF inclusion:
 pdfTeX warning: pdflatex (file ./plots/ma_abb5.14_costmodel.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
-[100]
+[94]
 
-[101]
+[95]
 Overfull \hbox (1.89955pt too wide) in paragraph at lines 818--820
 \T1/qpl/m/n/10.95 (-10) schnitt [][]4.5.2[][]), be-vor in Ab-schnitt [][]4.5.3[][] der voll-stän-di-ge stochastisch-ökonomische Trans-
  []
 
 
 
-[102]
+[96]
 Overfull \hbox (0.29921pt too wide) in paragraph at lines 832--833
 \T1/qpl/m/n/10.95 (-10) Entsprechend der Vor-ge-hens-wei-se in Ab-schnitt [][]4.2.3[][] eva-lu-iert die [][][]MCS[][] die drei Design-
  []
 
 
 
-[103]
+[97]
 
-[104]
+[98]
 
-[105]
-<plots/ma_abb5.4.3_response_surface.pdf, id=4901, 414.54875pt x 243.91125pt>
+[99]
+<plots/ma_abb5.4.3_response_surface.pdf, id=4821, 414.54875pt x 243.91125pt>
 File: plots/ma_abb5.4.3_response_surface.pdf Graphic file (type pdf)
 <use plots/ma_abb5.4.3_response_surface.pdf>
 Package pdftex.def Info: plots/ma_abb5.4.3_response_surface.pdf  used on input line 879.
 (pdftex.def)             Requested size: 325.04556pt x 191.25488pt.
 
 
-[106 <./plots/ma_abb5.4.3_response_surface.pdf>] (tables/tab_results_emalt_metrics_ols.tex)
+[100 <./plots/ma_abb5.4.3_response_surface.pdf>] (tables/tab_results_emalt_metrics_ols.tex)
 Overfull \hbox (12.04578pt too wide) in paragraph at lines 907--913
 \T1/qpl/m/n/10.95 (-10) nungs-feld: Der proak-ti-ve asym-me-tri-sche Ein-griff bei De-si-gnmo-di-fi-ka-tio-nen nach [][][]EmALT[][]
  []
 
 
 
-[107] (tables/tab_results_emalt_bias_ols.tex) (plots/ma_abb5.4.2_betadev_ols.tex) (plots/ma_abb5.4.2_phisto_all_ols.tex) (tables/tab_results_emalt_mse_ols.tex
+[101] (tables/tab_results_emalt_bias_ols.tex) (plots/ma_abb5.4.2_betadev_ols.tex) (plots/ma_abb5.4.2_phisto_all_ols.tex) (tables/tab_results_emalt_mse_ols.tex
 Underfull \hbox (badness 1406) in paragraph at lines 3--3
 [][][]|\T1/qpl/m/n/10.95 (+10) Schätz-va-ri-anz ([][][]MSE[][]) der ein-zel-nen Ko-ef-fi-zi-en-ten bei OLS-Baseline
  []
 
 )
 
-[108]
+[102]
 
-[109] (tables/tab_results_emalt_power_ols.tex
+[103] (tables/tab_results_emalt_power_ols.tex
 Underfull \hbox (badness 3364) in paragraph at lines 3--3
 [][][]|\T1/qpl/m/n/10.95 (+10) Durch-schnitt-li-cher Trenn-schärfe-Verlust ($\OT1/zplm/m/n/10.95 ^^A[][][][][][][]$\T1/qpl/m/n/10.95 (+10) ) bei OLS-Baseline
  []
@@ -2848,113 +2781,113 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[110]
+[104]
 
-[111] (tables/tab_results_emalt_bias_wbl.tex
+[105] (tables/tab_results_emalt_bias_wbl.tex
 Underfull \hbox (badness 2735) in paragraph at lines 3--3
 [][][]|\T1/qpl/m/n/10.95 (+10) Re-la-ti-ver sys-te-ma-ti-scher Schätz-feh-ler (Bi-as) in Pro-zent bei GLLW-
  []
 
 )
 
-[112] (plots/ma_abb5.4.3_betadev_wbl.tex
+[106] (plots/ma_abb5.4.3_betadev_wbl.tex
 
 Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 110.
 
  [warning /pgfplots/warning/plot without coordinates]
 )
 
-[113] (plots/ma_abb5.4.3_phisto_all_wbl.tex
+[107] (plots/ma_abb5.4.3_phisto_all_wbl.tex
 
 Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 166.
 
  [warning /pgfplots/warning/plot without coordinates]
 ) (plots/ma_abb5.4.3_powerdev_wbl.tex)
 
-[114]
+[108]
 
-[115]
+[109]
 
-[116] (tables/tab_results_emalt_kpi_eco.tex) (plots/ma_abb5.4.3_tradeoff_eco.tex)
+[110] (tables/tab_results_emalt_kpi_eco.tex) (plots/ma_abb5.4.3_tradeoff_eco.tex)
 
-[117]
+[111]
 
-[118] (plots/ma_abb5.4.3_reliability_ci.tex)
+[112] (plots/ma_abb5.4.3_reliability_ci.tex)
 Overfull \hbox (2.93262pt too wide) in paragraph at lines 11076--1101
  [][] 
  []
 
 
 
-[119]
+[113]
 
-[120]
+[114]
 
-[121]) (chapters/chapter6_casestudy.tex
+[115]) (chapters/chapter6_casestudy.tex
 
-[122]
+[116]
 
-[123]
+[117]
 
-[124
+[118
 
 
 ]
 chapter 5.
 (tables/tab_ieee_experimental_data.tex)
 
-[125]
+[119]
 
-[126]
+[120]
 
-[127] (plots/ma_abb6.1_parameter_estimates_comparison.tex)
+[121] (plots/ma_abb6.1_parameter_estimates_comparison.tex)
 
-[128]
-<plots/ma_abb6.1_response_surface_comparison_log.pdf, id=5806, 425.59pt x 259.97125pt>
+[122]
+<plots/ma_abb6.1_response_surface_comparison_log.pdf, id=5726, 425.59pt x 259.97125pt>
 File: plots/ma_abb6.1_response_surface_comparison_log.pdf Graphic file (type pdf)
 <use plots/ma_abb6.1_response_surface_comparison_log.pdf>
 Package pdftex.def Info: plots/ma_abb6.1_response_surface_comparison_log.pdf  used on input line 59.
 (pdftex.def)             Requested size: 365.6724pt x 223.38448pt.
 
 
-[129 <./plots/ma_abb6.1_response_surface_comparison_log.pdf>]
-<plots/ma_abb6.1_residuals_combined.pdf, id=5853, 472.76625pt x 230.8625pt>
+[123 <./plots/ma_abb6.1_response_surface_comparison_log.pdf>]
+<plots/ma_abb6.1_residuals_combined.pdf, id=5773, 472.76625pt x 230.8625pt>
 File: plots/ma_abb6.1_residuals_combined.pdf Graphic file (type pdf)
 <use plots/ma_abb6.1_residuals_combined.pdf>
 Package pdftex.def Info: plots/ma_abb6.1_residuals_combined.pdf  used on input line 78.
 (pdftex.def)             Requested size: 385.9889pt x 188.4912pt.
 
 
-[130] (plots/ma_abb6.1_reliability_ci_comparison.tex)
+[124] (plots/ma_abb6.1_reliability_ci_comparison.tex)
 Overfull \hbox (4.14655pt too wide) in paragraph at lines 5060--104
  [][] 
  []
 
 
 
-[131 <./plots/ma_abb6.1_residuals_combined.pdf>]
+[125 <./plots/ma_abb6.1_residuals_combined.pdf>]
 
-[132]
+[126]
 Overfull \hbox (1.3437pt too wide) in paragraph at lines 115--120
 \T1/qpl/m/n/10.95 (-10) Ein-ord-nung es-sen-zi-el-les Phä-no-men: Das [][][]EmALT[][]-Design zeich-net auf-grund der Dämp-
  []
 
 
 
-[133]
+[127]
 
-[134]
+[128]
 
-[135]) (chapters/chapter7_zusammenfassung.tex
+[129]) (chapters/chapter7_zusammenfassung.tex
 
-[136]
+[130]
 chapter 6.
 
-LaTeX Warning: Reference `chap:screening' on page 137 undefined on input line 15.
+LaTeX Warning: Reference `chap:screening' on page 131 undefined on input line 15.
 
 
 
-[137
+[131
 
 
 ]
@@ -2969,19 +2902,19 @@ Overfull \hbox (0.64565pt too wide) in paragraph at lines 33--37
 
 
 
-[138]
+[132]
 
-LaTeX Warning: Reference `chap:screening' on page 139 undefined on input line 57.
+LaTeX Warning: Reference `chap:screening' on page 133 undefined on input line 57.
 
 
 
-[139])
+[133])
 
-[140]
+[134]
 
-[141]
+[135]
 
-[142
+[136
 
 
 ]
@@ -2998,7 +2931,24 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[143{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
+[137{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
+
+[138]
+
+[139]
+
+[140]
+
+[141]
+
+[142]
+
+[143]
+Overfull \hbox (2.13684pt too wide) in paragraph at lines 637--637
+\T1/qpl/m/it/10.95 (-10) with SAS\T1/qpl/m/n/10.95 (-10) . 1st. New York: Ox-ford Uni-ver-si-ty Press Inc, 2007. \T1/qpl/m/sc/10.95/50ls (-10) isbn\T1/qpl/m/n/10.95 (-10) : 9780199296590. 
+ []
+
+
 
 [144]
 
@@ -3011,50 +2961,33 @@ Package microtype Info: Loading generic protrusion settings for font family
 [148]
 
 [149]
-Overfull \hbox (2.13684pt too wide) in paragraph at lines 637--637
-\T1/qpl/m/it/10.95 (-10) with SAS\T1/qpl/m/n/10.95 (-10) . 1st. New York: Ox-ford Uni-ver-si-ty Press Inc, 2007. \T1/qpl/m/sc/10.95/50ls (-10) isbn\T1/qpl/m/n/10.95 (-10) : 9780199296590. 
- []
+
+[150
 
 
-
-[150]
+] (chapters/anhang/anhanga/anhanga.tex (tables/table_sens_Cplus_1_Dplus_1.tex) (tables/table_sens_Cplus_1_D00.tex) (tables/table_sens_Cplus_1_Dminus_1.tex)
 
 [151]
 
 [152]
 
-[153]
+[153] (tables/table_sens_C00_Dplus_1.tex) (tables/table_sens_C00_D00.tex) (tables/table_sens_C00_Dminus_1.tex)
 
-[154]
+[154
+
+]
 
 [155]
 
-[156
+[156] (tables/table_sens_Cminus_1_Dplus_1.tex) (tables/table_sens_Cminus_1_D00.tex) (tables/table_sens_Cminus_1_Dminus_1.tex))
 
+[157
 
-] (chapters/anhang/anhanga/anhanga.tex (tables/table_sens_Cplus_1_Dplus_1.tex) (tables/table_sens_Cplus_1_D00.tex) (tables/table_sens_Cplus_1_Dminus_1.tex)
-
-[157]
+]
 
 [158]
 
-[159] (tables/table_sens_C00_Dplus_1.tex) (tables/table_sens_C00_D00.tex) (tables/table_sens_C00_Dminus_1.tex)
-
-[160
-
-]
-
-[161]
-
-[162] (tables/table_sens_Cminus_1_Dplus_1.tex) (tables/table_sens_Cminus_1_D00.tex) (tables/table_sens_Cminus_1_Dminus_1.tex))
-
-[163
-
-]
-
-[164]
-
-[165] (chapters/anhang/anhangb/anhangb.tex (tables/tab_results_ortho_mse.tex) (plots/ma_abb_app.c_convergence_power.tex) (plots/ma_abb_app.c_convergence_beta.tex)
+[159] (chapters/anhang/anhangb/anhangb.tex (tables/tab_results_ortho_mse.tex) (plots/ma_abb_app.c_convergence_power.tex) (plots/ma_abb_app.c_convergence_beta.tex)
 
 LaTeX Warning: Float too large for page by 19.93176pt on input line 38.
 
@@ -3068,17 +3001,17 @@ LaTeX Warning: Float too large for page by 77.81639pt on input line 56.
 
 
 
-[166
+[160
 
 ]
 
-[167]
+[161]
 
-[168]
+[162]
 
-[169]
+[163]
 
-[170]
+[164]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 12.50409pt on input line 59.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
@@ -3099,11 +3032,11 @@ Overfull \hbox (0.60976pt too wide) in paragraph at lines 244--75
 
 (plots/ma_abb_app.d_kpi_all_coeffs.tex))
 
-[171
+[165
 
 ]
 
-[172]
+[166]
 \Changes@OutFile=\write12
 \openout12 = `diss_arndt.soc'.
 
@@ -3119,6 +3052,9 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `diss_arndt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
@@ -3126,17 +3062,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 80136 strings out of 473577
- 1852518 string characters out of 5716318
- 4170508 words of memory out of 5000000
- 100895 multiletter control sequences out of 15000+600000
- 750815 words of font info for 418 fonts, out of 8000000 for 9000
+ 80007 strings out of 473577
+ 1848340 string characters out of 5716318
+ 4171049 words of memory out of 5000000
+ 100815 multiletter control sequences out of 15000+600000
+ 744155 words of font info for 408 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  122i,26n,121p,10968b,3333s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\m-arn\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbding/dpi657\bbding10.pk><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (198 pages, 4256303 bytes).
+Output written on diss_arndt.pdf (192 pages, 4220113 bytes).
 PDF statistics:
- 6964 PDF objects out of 7423 (max. 8388607)
- 832 named destinations out of 1000 (max. 500000)
- 95665 words of extra memory for PDF output out of 106986 (max. 10000000)
+ 6881 PDF objects out of 7423 (max. 8388607)
+ 820 named destinations out of 1000 (max. 500000)
+ 91524 words of extra memory for PDF output out of 106986 (max. 10000000)
 

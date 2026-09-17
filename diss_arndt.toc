@@ -17,67 +17,66 @@
 \contentsline {subsection}{\numberline {2.1.3}Parametrische Lebensdauermodelle}{10}{subsection.2.1.3}%
 \contentsline {subsubsection}{\nonumberline Weibull-Verteilung}{11}{subsubsection*.30}%
 \contentsline {subsection}{\numberline {2.1.4}Parameterschätzverfahren}{12}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}Statistische Versuchsplanung und Modellbildung}{17}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Grundlagen zur statistischen Versuchsplanung}{18}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Parameter-Screening}{21}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Statistische Versuchsplanung zur Lebensdauererprobung}{22}{subsection.2.2.3}%
-\contentsline {subsubsection}{\nonumberline $2^{\glsadd {k}\glslink {k}{\textcolor {blue}{\ensuremath {\ensuremath {k}}}}}$ Faktorielle Versuchspläne}{22}{subsubsection*.47}%
-\contentsline {subsubsection}{\nonumberline $2^{\glsadd {k}\glslink {k}{\textcolor {blue}{\ensuremath {\ensuremath {k}}}}-\glsadd {p_f}\glslink {p_f}{\textcolor {blue}{\ensuremath {\ensuremath {p_{\textnormal {f}}}}}}}$ Teil-faktorielle Versuchspläne}{24}{subsubsection*.52}%
-\contentsline {subsubsection}{\nonumberline Wirkungsflächenversuchspläne}{26}{subsubsection*.54}%
-\contentsline {subsection}{\numberline {2.2.4}Strategische Vorgehensweisen}{28}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Bewertung und Optimierung von Versuchsplanung}{30}{subsection.2.2.5}%
-\contentsline {subsubsection}{\nonumberline Orthogonalität, Ausgewogenheit und Multikollinearität}{32}{subsubsection*.62}%
-\contentsline {subsubsection}{\nonumberline Optimalitätskriterien}{34}{subsubsection*.64}%
-\contentsline {subsubsection}{\nonumberline Forschungsschwerpunkte in der \cgls {RSM}}{39}{subsubsection*.66}%
-\contentsline {subsubsection}{\nonumberline Signifikanz und Trennschärfe}{41}{subsubsection*.68}%
-\contentsline {subsection}{\numberline {2.2.6}Statistische Modellbildung}{43}{subsection.2.2.6}%
-\contentsline {subsubsection}{\nonumberline Weibull-\cgls {GLM}}{44}{subsubsection*.70}%
-\contentsline {subsubsection}{\nonumberline Signifikanzanalyse}{46}{subsubsection*.73}%
-\contentsline {subsubsection}{\nonumberline Erwartungswerte und Konfidenzintervalle}{47}{subsubsection*.75}%
-\contentsline {subsubsection}{\nonumberline Vertrauensbereiche für Funktionswerte und Weibull-\cgls {GLM}}{48}{subsubsection*.78}%
-\contentsline {subsubsection}{\nonumberline Modellgüte und Residuenanalyse}{49}{subsubsection*.80}%
-\contentsline {chapter}{\numberline {3}Effiziente Testplanung für die multivariate Lebensdauererprobung}{53}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Bewertung des Standes der Forschung und Technik}{53}{section.3.1}%
-\contentsline {paragraph}{\nonumberline Eignung und Limitierung klassischer Response Surface Designs}{53}{paragraph*.83}%
-\contentsline {subsection}{\numberline {3.1.1}Das methodische Paradoxon moderner Versuchsplanung}{54}{subsection.3.1.1}%
-\contentsline {paragraph}{\nonumberline Modellabhängigkeit und das Problem der lokalen Optimalität}{54}{paragraph*.85}%
-\contentsline {paragraph}{\nonumberline Zeitliche und strukturelle Effizienz}{55}{paragraph*.87}%
-\contentsline {subsection}{\numberline {3.1.2}Schlussfolgerung für die Testplanung}{55}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Forschungsfragen und wissenschaftliche Zielsetzung}{56}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Methodische Forschungsarchitektur}{58}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Statistische Effektivität als Fundament effizienter Lebensdauertests}{61}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Methodische Simulationsarchitektur und pseudo-physikalisches Modell}{62}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Effektivität von Versuchsplänen mit Orthogonalitätsabweichungen}{64}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen}{66}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Ergebnisse der Sensitivitätsanalyse und Quantifizierung der Trennschärfe}{68}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Generische Auswirkungen relevanter Orthogonalitätsabweichungen}{72}{subsection.4.2.3}%
-\contentsline {subsubsection}{\nonumberline Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}{75}{subsubsection*.94}%
-\contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{77}{subsubsection*.97}%
-\contentsline {subsection}{\numberline {4.2.4}Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung}{86}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Adaptive Versuchsplanung zur Extrapolationsabsicherung}{87}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Die Scaled Prediction Variance als Prognosemetrik}{88}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)}{91}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Kostenstruktur der Lebensdauererprobung}{97}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Übertragung auf multivariate Lebensdauermodelle}{102}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Signal-Rausch-Kalibrierung unter dem Sparsity of Effects Principle}{104}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Generische Auswirkungen asymmetrischer Versuchsplanung}{107}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Effizientes \cgls {L-DoE} und der Economic Extrapolation Power Index}{110}{subsection.4.5.3}%
-\contentsline {subsubsection}{\nonumberline Konsequenzen für die Prognoseunsicherheit im Feldbetrieb}{117}{subsubsection*.132}%
-\contentsline {section}{\numberline {4.6}Methodische Synthese und Transfer}{121}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Empirische Validierung der Extrapolationsabsicherung}{125}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Modellschätzung und Anpassungsgüte}{128}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Residuenanalyse und Verifikationsdiagnostik}{130}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Konsequenzen für die Zuverlässigkeitsmodellierung}{131}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Confirmation Experiments: Der statistische Härtetest}{133}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Ökonomische Schlussfolgerung und industrieller Business Case}{135}{subsection.5.2.2}%
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{137}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Diskussion}{139}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Ausblick}{140}{section.6.2}%
-\contentsline {chapter}{\nonumberline Literatur}{143}{chapter*.139}%
-\contentsline {chapter}{Anhang}{157}{chapter*.139}%
-\contentsline {section}{\numberline {A}Sensitivitätsanalyse}{157}{section.Alph0.1}%
-\contentsline {section}{\numberline {B}Orthogonalitäts-Analysen der Design-Modifikationen}{166}{section.Alph0.2}%
-\contentsline {subsection}{\numberline {B.1}Szenarien bei Arbeitspunkt SNR$=1$}{171}{subsection.Alph0.2.1}%
-\contentsline {subsection}{\numberline {B.2}Effizienzanalysen}{171}{subsection.Alph0.2.2}%
+\contentsline {section}{\numberline {2.2}Statistische Versuchsplanung und Modellbildung}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Grundlagen zur statistischen Versuchsplanung}{19}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Parameter-Screening}{20}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Statistische Versuchsplanung zur Lebensdauererprobung}{21}{subsection.2.2.3}%
+\contentsline {subsubsection}{\nonumberline Faktorielle Versuchspläne zur linearen Modellbildung}{21}{subsubsection*.41}%
+\contentsline {subsubsection}{\nonumberline Wirkungsflächenversuchspläne zur quadratischen Modellbildung}{22}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {2.2.4}Strategische Vorgehensweisen}{25}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Bewertung und Optimierung von Versuchsplanung}{26}{subsection.2.2.5}%
+\contentsline {subsubsection}{\nonumberline Orthogonalität, Ausgewogenheit und Multikollinearität}{28}{subsubsection*.54}%
+\contentsline {subsubsection}{\nonumberline Optimalitätskriterien}{30}{subsubsection*.57}%
+\contentsline {subsubsection}{\nonumberline Forschungsschwerpunkte in der \cgls {RSM}}{35}{subsubsection*.59}%
+\contentsline {subsubsection}{\nonumberline Signifikanz und Trennschärfe}{37}{subsubsection*.62}%
+\contentsline {subsection}{\numberline {2.2.6}Statistische Modellbildung}{39}{subsection.2.2.6}%
+\contentsline {subsubsection}{\nonumberline Weibull-\cgls {GLM}}{40}{subsubsection*.65}%
+\contentsline {subsubsection}{\nonumberline Signifikanzanalyse}{42}{subsubsection*.68}%
+\contentsline {subsubsection}{\nonumberline Erwartungswerte und Konfidenzintervalle}{43}{subsubsection*.70}%
+\contentsline {subsubsection}{\nonumberline Vertrauensbereiche für Funktionswerte und Weibull-\cgls {GLM}}{44}{subsubsection*.73}%
+\contentsline {subsubsection}{\nonumberline Modellgüte und Residuenanalyse}{45}{subsubsection*.75}%
+\contentsline {chapter}{\numberline {3}Effiziente Testplanung für die multivariate Lebensdauererprobung}{47}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Bewertung des Standes der Forschung und Technik}{47}{section.3.1}%
+\contentsline {paragraph}{\nonumberline Eignung und Limitierung klassischer Response Surface Designs}{48}{paragraph*.78}%
+\contentsline {subsection}{\numberline {3.1.1}Das methodische Paradoxon moderner Versuchsplanung}{49}{subsection.3.1.1}%
+\contentsline {paragraph}{\nonumberline Modellabhängigkeit und das Problem der lokalen Optimalität}{49}{paragraph*.80}%
+\contentsline {paragraph}{\nonumberline Zeitliche und strukturelle Effizienz}{49}{paragraph*.82}%
+\contentsline {subsection}{\numberline {3.1.2}Schlussfolgerung für die Testplanung}{50}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Forschungsfragen und wissenschaftliche Zielsetzung}{51}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Methodische Forschungsarchitektur}{53}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Statistische Effektivität als Fundament effizienter Lebensdauertests}{55}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Methodische Simulationsarchitektur und pseudo-physikalisches Modell}{56}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Effektivität von Versuchsplänen mit Orthogonalitätsabweichungen}{58}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Sensitivitätsanalyse geometrischer und stochastischer Einflussgrößen}{60}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Ergebnisse der Sensitivitätsanalyse und Quantifizierung der Trennschärfe}{62}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Generische Auswirkungen relevanter Orthogonalitätsabweichungen}{66}{subsection.4.2.3}%
+\contentsline {subsubsection}{\nonumberline Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}{69}{subsubsection*.89}%
+\contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{71}{subsubsection*.92}%
+\contentsline {subsection}{\numberline {4.2.4}Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung}{80}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Adaptive Versuchsplanung zur Extrapolationsabsicherung}{81}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Die Scaled Prediction Variance als Prognosemetrik}{82}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)}{85}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Kostenstruktur der Lebensdauererprobung}{91}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Übertragung auf multivariate Lebensdauermodelle}{96}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Signal-Rausch-Kalibrierung unter dem Sparsity of Effects Principle}{98}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Generische Auswirkungen asymmetrischer Versuchsplanung}{101}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Effizientes \cgls {L-DoE} und der Economic Extrapolation Power Index}{104}{subsection.4.5.3}%
+\contentsline {subsubsection}{\nonumberline Konsequenzen für die Prognoseunsicherheit im Feldbetrieb}{111}{subsubsection*.127}%
+\contentsline {section}{\numberline {4.6}Methodische Synthese und Transfer}{115}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Empirische Validierung der Extrapolationsabsicherung}{119}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Modellschätzung und Anpassungsgüte}{122}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Residuenanalyse und Verifikationsdiagnostik}{124}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Konsequenzen für die Zuverlässigkeitsmodellierung}{125}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Confirmation Experiments: Der statistische Härtetest}{127}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Ökonomische Schlussfolgerung und industrieller Business Case}{129}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{131}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Diskussion}{133}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Ausblick}{134}{section.6.2}%
+\contentsline {chapter}{\nonumberline Literatur}{137}{chapter*.134}%
+\contentsline {chapter}{Anhang}{151}{chapter*.134}%
+\contentsline {section}{\numberline {A}Sensitivitätsanalyse}{151}{section.Alph0.1}%
+\contentsline {section}{\numberline {B}Orthogonalitäts-Analysen der Design-Modifikationen}{160}{section.Alph0.2}%
+\contentsline {subsection}{\numberline {B.1}Szenarien bei Arbeitspunkt SNR$=1$}{165}{subsection.Alph0.2.1}%
+\contentsline {subsection}{\numberline {B.2}Effizienzanalysen}{165}{subsection.Alph0.2.2}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
