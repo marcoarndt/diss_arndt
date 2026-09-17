@@ -175,13 +175,13 @@ Die Flexibilität der Verteilung zeigt sich in den Spezialfällen des Formparame
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Parameterschätzverfahren} \label{subsec:schätzer}
 
-Soll eine geschlossene mathematische Beschreibung des stochastischen Ausfallverhaltens gefunden werden, sind die in Abschnitt~\ref{subsec:paramleben} definierten Verteilungsmodelle zu parametrisieren.
-Die zentrale Problemstellung besteht darin, aus der empirischen Stichprobe bestehend aus $\sym{n}$ Realisierungen der Zufallsvariable $\sym{tau}$ statistisch fundierte Schätzwerte für die wahren Parameter der Grundgesamtheit (z.\,B. $\hat{\sym{T}}$ und $\hat{\sym{b}}$ für $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$) zu extrahieren.
+\highlight[id=Daz, comment={Jetzt hauptsächlich in Kap.~\ref{subsec:modellbildung}}]{Soll eine} geschlossene mathematische Beschreibung des stochastischen Ausfallverhaltens gefunden werden, ist nach Vorbild von Abschnitt~\ref{subsec:paramleben} ein adäquates Verteilungsmodell zu parametrisieren.
+Die zentrale Problemstellung besteht darin, aus der empirischen Stichprobe bestehend aus $\sym{n}$ Realisierungen der Zufallsvariable $\sym{tau}$ statistisch fundierte Schätzwerte für die wahren Parameter der Grundgesamtheit (z.\,B. $\hat{\sym{T}}$ und $\hat{\sym{b}}$ für $\sym{tau}=\sym{W}(\sym{b},\sym{T}) $) zu extrahieren.
 Diese Parameteridentifikation ist die zwingende Voraussetzung, um prädiktive Aussagen zur Zuverlässigkeit $\sym{R}(\sym{t})$ abzuleiten.
 
 Während in der klassischen, normalverteilten Statistik häufig die \textit{Methode der kleinsten Fehlerquadrate} (\textit{\ac{OLS}}) Anwendung findet, ist diese für die Lebensdauerdatenanalyse unzureichend.
-Zentraler Gründe hierfür sind das unvermeidbare Auftreten unvollständiger (\textit{zensierter}) Beobachtungen, sogenannter \textit{Durchläufer}, sowie das Vorhandensein nicht-normalverteilter Daten.
-Zur simultanen und erwartungstreuen Abbildung von exakten Ausfällen und Zensierungen hat sich die \textit{\ac{MLE}} als universeller Standard etabliert \cite{Meeker.2022,Nelson.1990}.
+Wesentliche Hauptgründe hierfür sind das Auftreten unvollständiger (rechts-zensierter) Beobachtungen, sogenannter \textit{Durchläufer}, sowie die möglicherweise nicht-normalverteilte Natur der Zufallsvariablen Lebensdauer $\sym{tau}$.
+Zur simultanen und erwartungstreuen Abbildung von exakten Ausfällen und Zensierungen hat sich stattdessen die \textit{\ac{MLE}} als universeller Standard etabliert \cite{Meeker.2022,Nelson.1990}.
 
 Das Grundprinzip der \ac{MLE} besteht darin, diejenigen Parameterwerte als Schätzwerte $\hat{\sym{theta}}$ zu identifizieren, welche die Wahrscheinlichkeit (Likelihood) maximieren, exakt die vorliegende empirische Stichprobe beobachtet zu haben.
 Formal wird die Stichprobe über Paare $(\symsub{t}{idx_i}, \symsub{delta}{idx_i})$ definiert, wobei $\symsub{t}{idx_i}$ der Prüfzeit und $\symsub{delta}{idx_i}$ einem Statusindikator (1 = Ausfall, 0 = Zensierung) entspricht \cite{Meeker.2022,Kalbfleisch.2002}.
@@ -196,107 +196,11 @@ Zur algorithmischen Maximierung wird dieser Ausdruck durch Logarithmierung in di
 \end{equation}
 
 Die Identifikation des Parametersatzes $\hat{\sym{theta}}$, der $\sym{Lambda}(\sym{theta})$ maximiert, erfolgt durch das Nullsetzen der partiellen Ableitungen ($\partial\sym{Lambda}/\partial \sym{theta} \stackrel{!}{=} 0$).
-Da für die Weibull-Verteilung hierfür keine geschlossenen analytischen Lösungen existieren, werden in der Praxis iterative, numerische Optimierungsalgorithmen (wie das Newton-Raphson-Verfahren) angewandt \cite{Nelson.2005,Kremer.2019b}.
+Da für die Weibull-Verteilung hierfür keine geschlossenen analytischen Lösungen existieren, werden in der Praxis iterative, numerische Optimierungsalgorithmen (wie das \textit{Newton-Raphson-Verfahren} oder \textit{Pattern-Search-Algorithmen}) angewandt \cite{Nelson.2005,Qiao.1994,Kremer.2019b}.
+Methodisch ist dabei zu beachten, dass die \ac{MLE} zwar asymptotisch erwartungstreu ist, bei kleinen Stichprobenumfängen $\sym{n}$ jedoch systematische Verzerrungen (\textit{Bias}) in $\hat{\sym{theta}}$ aufweisen kann \cite{Abernethy.2006}, welche sich bei Bedarf durch etablierte Korrekturverfahren kompensieren lassen (\textit{Bias-Korrektur}) \cite{Hirose.1999,Ross.1996}.
 
-Die \ac{MLE} liefert jedoch nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern bildet auch das stochastische Fundament zur Quantifizierung der Modellunsicherheiten und Vertrauensbereiche (\acp{CI}).
-Da diese Unsicherheitsquantifizierung insbesondere bei Vorliegen multivariater Beanspruchungen (\acp{GLM}) über die Effizienz der Versuchsplanung entscheidet, wird die dafür erforderliche mathematische Herleitung der Informationsmatrizen geschlossen in Abschnitt~\ref{subsec:modellbildung} behandelt.
-
-
-
-
-new
-
-new
-
-new
-
-
-
-
-
-
-
-Soll eine geschlossene mathematische Beschreibung des stochastischen Ausfallverhaltens eines Produktes gefunden werden, ist das in Abschnitt~\ref{subsec:paramleben} definierte parametrische Verteilungsmodell $\sym{tau} \sim \sym{W}(\sym{T}, \sym{b})$ zu schätzen.
-Die Modellparameter der Grundgesamtheit sind in der praktischen Anwendung jedoch unbekannt.
-Die zentrale Problemstellung der \textit{Parameterschätzung} besteht somit darin, aus der empirischen Stichprobe bestehend aus $\sym{n}$ Realisierungen $\sym{t}_{1}, \dots, \symsub{t}{n}$ der Zufallsvariable $\sym{tau}$ statistisch fundierte Schätzwerte $\hat{\sym{T}}$ und $\hat{\sym{b}}$ zu gewinnen.
-Diese sind Voraussetzung, um das Lebensdauermodell (z.B. Gleichung~\eqref{eq:weibull_cdf}) zu quantifizieren und prädiktive Aussagen zu Quantilen \highlight[id=Daz]{der Lebensdauer oder der} Zuverlässigkeit $\sym{R}(\sym{t})$ zu ermöglichen.
-Eine wesentliche Komplikation hierbei sind jedoch das mögliche Auftreten von unvollständigen bzw. \textit{zensierten} Daten sowie \textit{multivariate} Abhängigkeiten der Belastungen zur Messgröße.
-Während für die Schätzung von Verteilungsparametern einfache Verfahren, wie die \textit{Momentenmethode} oder die \textit{Methode der kleinsten Fehlerquadrate} - engl. \textit{\ac{OLS}}, die beispielsweise bei der \textit{\ac{MMR}} im Wahrscheinlichkeitsnetz Anwendung findet, existieren, sind diese für die umfassende Analyse vielschichtiger Lebensdauerdaten in der Regel unzureichend und hier nur der Vollständigkeit wegen erwähnt - vgl. \cite{Bertsche.2022,Montgomery.2021}.
-Das universell anwendbare und robuste Verfahren, das Herausforderungen wie zensierte Daten und multivariate Modelle inhärent behandelt, ist die \ac{MLE} \cite{Meeker.2022,Nelson.1990}.
-
-Das Grundprinzip der \ac{MLE} besteht darin, diejenigen Parameterwerte (z.B. $\hat{\sym{T}}, \hat{\sym{b}}$) als Schätzwerte auszuwählen, welche die Wahrscheinlichkeit (engl. Likelihood) maximieren, die empirisch beobachtete Stichprobe (bestehend aus unabhängigen Ausfällen und Zensierungen) zu erhalten.
-Mathematisch wird die Wahrscheinlichkeit der Realisierung von $\sym{t_vec} = (\sym{t}_{1}, \dots, \symsub{t}{n})$ einer Stichprobe durch die \textit{Likelihood-Funktion} $\sym{L_like}$ bestimmt.
-Diese ist eine Funktion des unbekannten Parametervektors $\sym{theta}$, der $\sym{k}$ zu schätzende Parameter enthält (z.B. $\sym{theta} = (\sym{T}, \sym{b})$ mit $\sym{k}=2$).\
-
-\highlight[id=Daz, comment={gekürzt}]{In der analytischen }Zuverlässigkeitstechnik umfassen empirische Datensätze in der praktischen Anwendung sowohl exakte Ausfallereignisse als auch rechts-zensierte Beobachtungen (\textit{Durchläufer}).
-Zur simultanen Abbildung beider Ereignistypen wird die Stichprobe für $\sym{t_vec}$ formal über die Paarung $(\symsub{t}{idx_i}, \symsub{delta}{idx_i})$ definiert.
-Dabei entspricht $\symsub{t}{idx_i}$ der beobachteten Zeit und $\symsub{delta}{idx_i}$ einem Statusindikator, der für einen exakten Ausfall den Wert $\symsub{delta}{idx_i}=1$ und für eine Rechts-Zensierung den Wert $\symsub{delta}{idx_i}=0$ annimmt \cite{Meeker.2022,Kalbfleisch.2002}.
-
-Unter der Annahme stochastisch unabhängiger Beobachtungen ergibt sich die Like\-li\-hood-Funk\-tion $\sym{L_like}$ für rechts-zensierte Lebensdauerdaten in Abhängigkeit des Parametervektors $\sym{theta}$ somit direkt als Produkt aus den Wahrscheinlichkeitsdichten $\sym{f}(\cdot)$ und den Zuverlässigkeiten $\sym{R}(\cdot)$:
-\begin{equation} \label{eq:mle_likelihood_censored}
-    \sym{L_like}(\sym{t_vec} | \sym{theta}) \propto \prod_{\sym{idx_i}=1}^{\sym{n}} \left[ \sym{f}(\symsub{t}{idx_i} | \sym{theta})^{\symsub{delta}{idx_i}} \cdot \sym{R}(\symsub{t}{idx_i} | \sym{theta})^{1 - \symsub{delta}{idx_i}} \right].
-\end{equation}
-
-Zur Gewährleistung der numerischen Stabilität bei der algorithmischen Optimierung wird der Ausdruck standardmäßig in die \textit{Log-Likelihood-Funktion} $\sym{Lambda}$ überführt.
-Die Logarithmierung transformiert das Produkt in eine rechentechnisch leichter zu maximierende Summe:
-\begin{equation} \label{eq:mle_loglikelihood_censored}
-    \sym{Lambda} \defeq \ln\left(\sym{L_like}(\sym{t_vec} | \sym{theta})\right) \propto \sum_{\sym{idx_i}=1}^{\sym{n}} \left[ \symsub{delta}{idx_i} \cdot \ln \sym{f}(\symsub{t}{idx_i} | \sym{theta}) + (1 - \symsub{delta}{idx_i}) \cdot \ln \sym{R}(\symsub{t}{idx_i} | \sym{theta}) \right].
-\end{equation}
-
-Der Parametervektor $\hat{\sym{theta}}$, der den Wert von $\sym{Lambda}(\sym{theta})$ maximiert, liefert die Schätzwerte der \ac{MLE}.
-Die Schätzwerte repräsentieren die (asymptotisch) effizientesten Werte für die Parameter der Grundgesamtheit.
-Dies erfolgt mathematisch durch Nullsetzen $\sym{k}$ partieller Ableitungen von $\sym{Lambda}$, sofern mathematisch entsprechende Schätzwerte in geschlossener Form durch $\partial\sym{Lambda}/\partial \sym{theta} \stackrel{!}{=} 0$ identifiziert werden können \cite{Nelson.2005,Rinne.2008}.
-Andernfalls werden numerische Optimierungsalgorithmen, vgl. \textit{Newton-Raphson-Verfahren}, \textit{Patternsearch} und vergleichbare, dafür herangezogen - siehe weiterführend \cite{Nelson.2005,Qiao.1994} sowie detaillierte Untersuchungen von \textcite{Kremer.2019b}.
-An dieser Stelle sei erwähnt, dass systematische Verzerrungen in $\hat{\sym{theta}}$ aufgrund kleiner Stichprobenumfänge auftreten können \cite{Abernethy.2006} - jedoch auch korrigierbar sind, vgl. Arbeiten von \textcite{Hirose.1999,Ross.1996}.
-
-Die Qualität der Parameterschätzung beeinflusst daraus nicht nur die Prädiktionsgüte zur Schätzung der Lebensdauer oder Zuverlässigkeit - sie bedingt schließlich auch die Effizienz des Schätzverfahrens.
-Wird im Sinne eines effizienten Verfahrens zur multivariaten Lebensdauermodellbildung eine Methodik gesucht, ist auch die Qualität der Parameterschätzung damit entscheidend.
-Vertrauensbereiche - \textit{\acp{CI}} - können eine Metrik für die Qualität der Modellierung einnehmen, da sie die Unsicherheit oder \textit{Unschärfe} in der Prädiktion bemessen.
-
-Die \ac{MLE} liefert nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern auch die Grundlage zur Quantifizierung von deren statistischen Unsicherheit (Präzision).
-Obwohl verschiedene Ansätze, wie die numerisch anspruchsvolleren Berechnungen nach \ac{LR-Test}-Methode, Bootstrap-Perzentil-Methode oder Mon\-te-Car\-lo-Ap\-pro\-xi\-ma\-tion existieren, ist das gängigste Verfahren zur Berechnung von \acp{CI} die Approximation mittels asymptotischer Normalverteilung der \ac{MLE}-Schätzer $\hat{\sym{theta}}$ \cite{Bertsche.2022,Nelson.1990}.
-Dies erfolgt über die \textit{Fisher-Informationsmatrix} $\sym{FIM}$, welche die Information der Stichprobe über die Parameter $\sym{theta}$ gemäß \textcite{Kremer.2019c} bezüglich des Rechenaufwands und resultierender Modellqualität vergleichsweise effizient quantifiziert.
-So wird diese Methodik auch in gängiger Applikationen als Standard angewandt, vgl. \cite{Nelson.2005,Nelson.1990,Yang.2007}.
-\highlight[id=Daz, comment={korrigiert}]{Da die} theoretische Fisher-Informationsmatrix die Kenntnis der wahren Parameter $\sym{theta}$ erfordert, wird in der statistischen Praxis stattdessen die \textit{beobachtete} Fisher-Informationsmatrix $\symsub{FIM}{idx_O}$ (engl. \textit{Observed Fisher Information}) herangezogen \cite{Nelson.1990,Lawless.2003}.
-Diese ist definiert als die negative \textit{Hesse-Matrix} $\sym{H}$ der Log-Likelihood-Funktion, ausgewertet an der Stelle der \ac{MLE}-Schätzwerte
-$\hat{\sym{theta}}$:
-\begin{equation} \label{eq:fim_o}
-    \symsub{FIM}{idx_O} \defeq - \sym{H}(\hat{\sym{theta}}) = - \left[ \frac{\partial^2 \sym{Lambda}(\sym{theta})}{\partial \symsub{thet}{idx_j} \partial \symsub{thet}{idx_l}} \right]_{\sym{theta} = \hat{\sym{theta}}}.
-\end{equation}
-Die Matrix $\sym{H}$ entspricht der ($\sym{k} \times \sym{k}$)-Matrix der $\sym{k}$ zweiten partiellen Ableitungen von $\sym{Lambda}$ (vgl. Gl.~\eqref{eq:mle_loglikelihood_censored}).
-Eine Invertierung ${\hat{\sym{FIM}}_{\sym{idx_O}}}^{-1}$ ergibt die geschätzte \textit{Varianz-Kovarianz-Matrix} $\hat{\sym{V}}$:
-\begin{equation} \label{eq:var_covar}
-    \hat{\sym{V}} \approx {\hat{\sym{FIM}}_{\sym{idx_O}}}^{-1}.
-\end{equation}
-Die Diagonalelemente dieser Matrix $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}$ entsprechen den Varianzen $\sym{Var}(\hat{\sym{thet}}_{\sym{idx_j}})$ der einzelnen Parameterschätzwerte \cite{Nelson.1990}.
-Die Nicht-Diagonalelemente $\hat{\sym{V}}_{\sym{idx_j}\sym{idx_l}}$ (für $\sym{idx_j} \neq \sym{idx_l}$) repräsentieren die \textit{Kovarianzen} $\sym{Cov}(\hat{\sym{thet}}_{\sym{idx_j}}, \hat{\sym{thet}}_{\sym{idx_l}})$ \cite{Nelson.1990,Yang.2007}.
-Diese Kovarianzen sind von entscheidender Bedeutung, da sie die statistische Abhängigkeit zwischen den Schätzwerten (z.B. zwischen $\hat{\sym{T}}$ und $\hat{\sym{b}}$) quantifizieren, welche für die Berechnung der \acp{CI} von abgeleiteten Funktionen wie $\hat{\sym{R}}(\sym{t})$ erforderlich sind \cite{Meeker.2022}.
-Basierend auf der Annahme der asymptotischen Normalität der Schätzer wird ein zweiseitiges $(1-\sym{alpha})$-\ac{CI} für einen einzelnen Parameter $\hat{\sym{thet}}_{\sym{idx_j}}$ direkt aus dessen Varianz approximiert durch:
-\begin{equation} \label{eq:ci_normal}
-    [\sym{thet}_{\sym{idx_j},\sym{idx_u}},\sym{thet}_{\sym{idx_j},\sym{idx_o}}]  = \hat{\sym{thet}}_{\sym{idx_j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}},
-\end{equation}
-wobei $\sym{z}_{1-\sym{alpha}/2}$ dem $(1-\sym{alpha}/2)$-Quantil der Standardnormalverteilung entspricht.
-Da Lebensdauerparameter (z.\,B. $\sym{T}, \sym{b}$) definitionsgemäß auf $\sym{RR}^{+}$ beschränkt sind, erfolgt die Berechnung der \acp{CI} standardmäßig über eine Log-Transformation der Parameter.
-Diese Vorgehensweise schließt physikalisch unmögliche (negative) Intervallgrenzen mathematisch konsistent aus \cite{Meeker.2022,Yang.2007,Nelson.1990}:
-\begin{equation} \label{eq:ci_ln}
-    [\sym{thet}_{\sym{idx_j},\sym{idx_u}}, \sym{thet}_{\sym{idx_j},\sym{idx_o}}] = \hat{\sym{thet}}_{\sym{idx_j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}}}{\hat{\sym{thet}}_{\sym{idx_j}}} \right).
-\end{equation}
-
-Die Berechnung dieser \acp{CI} für Schätzwerte $\sym{g_func}(\hat{\sym{theta}})$ zu Größen wie $\hat{\sym{R}}(\sym{t})$ oder $\hat{\sym{t}}_{\sym{idx_q}}$  erfolgt mittels \textit{Delta-Methode} \cite{Nelson.1990,Meeker.2022}.
-Dieses auf einer Taylor-Reihenentwicklung basierende Verfahren (Gauß'sche Fehlerfortpflanzung) approximiert die Varianz der Funktion $\hat{\sym{g_func}}=\sym{g_func}(\hat{\sym{theta}})$ unter Einbeziehung der gesamten Varianz-Kovarianz-Matrix.
-Dazu wird der \textit{Gradientenvektor} $\sym{g_grad}$ der Funktion $\sym{g_func}$ (z.B. $\sym{g_func} = \sym{R}(\sym{t})$) bezüglich des $\sym{k}$-dimensionalen Parametervektors $\sym{theta}$ gebildet:
-\begin{equation} \label{eq:delta_method_gradient}
-    \sym{g_grad} \defeq \left[ \frac{\partial \sym{g_func}(\sym{theta})}{\partial \sym{thet}_{1}}, \dots, \frac{\partial \sym{g_func}(\sym{theta})}{\partial \symsub{thet}{k}} \right]^T_{\sym{theta} = \hat{\sym{theta}}}.
-\end{equation}
-Die approximierte Varianz $\sym{Var}(\hat{\sym{g_func}})$ der Funktion ergibt sich dann aus:
-\begin{equation} \label{eq:delta_method_variance}
-    \sym{Var}(\hat{\sym{g_func}}) \approx \sym{g_grad}^T \hat{\sym{V}} \sym{g_grad}.
-\end{equation}
-Das Vertrauensintervall für die Funktion $\hat{\sym{g_func}}$ wird anschließend unter Verwendung dieser Varianz (bzw. des Standardfehlers $\sqrt{\sym{Var}(\hat{\sym{g_func}})}$) analog zu Gleichung~\eqref{eq:ci_normal} berechnet \cite{Bain.2017b,Yang.2007,Nelson.1990}:
-\begin{equation} \label{eq:ci_rel}
-    [\sym{g_func}_{\sym{idx_u}},\sym{g_func}_{\sym{idx_o}}]  = \hat{\sym{g_func}} \pm \sym{z}_{1-\sym{alpha}/2} \sqrt{\sym{Var}(\hat{\sym{g_func}})}.
-\end{equation}
-Sollen auch hier nur positive Werte für $\sym{g_func}$ berücksichtigt werden, kann eine Logarithmierung in der Berechnung der Vertrauensbereiche analog zu Gl.~\ref{eq:ci_ln} erfolgen \cite{Yang.2007}.
+Die \ac{MLE} liefert jedoch nicht nur die Punktschätzer $\hat{\sym{theta}}$, sondern bildet auch das stochastische Fundament zur Quantifizierung der Modellunsicherheiten und \textit{Vertrauensbereiche} (\textit{\acp{CI}}).
+Da diese Unsicherheitsquantifizierung insbesondere bei Vorliegen multivariater Beanspruchungen (\acp{GLM}) über die strukturelle Effizienz der Versuchsplanung entscheidet, wird die dafür erforderliche mathematische Herleitung der Informationsmatrizen geschlossen im multivariaten Kontext in Abschnitt~\ref{subsec:modellbildung} behandelt.
 
 \section{Statistische Versuchsplanung und Modellbildung} \label{sec:doe}
 
@@ -363,7 +267,7 @@ Etablierte Versuchspläne, wie sie in der einschlägigen Literatur \cite{Montgom
 
 \subsubsection{Faktorielle Versuchspläne zur linearen Modellbildung} \label{subsubsec:faktoriell}
 
-\highlight[id=Daz, comment={Abschnitt gekürzt}]{Um ein multivariates} Parameterset systematisch zu untersuchen, etabliert der \textit{$2^{\sym{k}}$ voll-faktorielle Versuchsplan} die Basis der klassischen Testplanung.
+\highlight[id=Daz, comment={Abschnitt gekürzt}]{Um ein multivariates} Parameterset systematisch zu un\-ter\-su\-chen, etabliert der \textit{$2^{\sym{k}}$ voll-fak\-to\-ri\-el\-le Ver\-suchs\-plan} die Basis der klassischen Testplanung.
 Durch die Kombination von $\sym{k}$ Faktoren auf jeweils zwei Einstellstufen ermöglicht er die Anpassung eines linearen Modells erster Ordnung inklusive aller Wechselwirkungen.
 Bei einfacher Durchführung (Replikation $\sym{m}=1$) erfordert dieses Design exakt
 \begin{equation}
@@ -628,18 +532,21 @@ Da es sich hierbei jedoch um rein retrospektive Diagnostikwerkzeuge handelt, die
 
 
 \subsubsection{Optimalitätskriterien}
-Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix $(\sym{X}'\sym{X})^{-1}$ den Informationsgehalt trotz Korrelationen zu maximieren.
-Die Generierung solcher maßgeschneiderten Pläne erfolgt algorithmisch unter Maximierung spezifischer statistischer Gütekriterien.
-Eine Übersicht der einschlägigen \textit{Optimalitätskriterien}, welche den quantitativen Vergleich zur Standard-Methodik ermöglichen, ist in Tabelle~\ref{tab:2.1_optimalitaeten} zusammengefasst \cite{Goos.2011,Montgomery.2020}.
+Da in restriktiven Versuchsräumen Orthogonalität oft nicht erreichbar ist, zielen optimale Versuchspläne darauf ab, durch Minimierung spezifischer Eigenschaften der Dispersionsmatrix den Informationsgehalt der Versuchsmatrix algorithmisch zu maximieren.
+In klassischen, normalverteilten \ac{OLS}-Modellen stützt sich diese Optimierung ausschließlich auf die geometrischen Eigenschaften der Matrix $(\sym{X}'\sym{X})^{-1}$.
+Für die Auslegung multivariater Lebensdauertests (\acp{GLM}) muss diese klassische Momentenmatrix jedoch zwingend durch die parameterabhängige Fisher-Informationsmatrix substituiert werden.
+Mittels \textit{\ac{IWLS}} lässt sich diese Informationsmatrix $\sym{M}$ als gewichtetes Skalarprodukt ausdrücken \cite{Monroe.2011}:
+\begin{equation} \label{eq:fim_glm_w}
+    \sym{M} = \sym{X}' \sym{W_mat} \sym{X}.
+\end{equation}
+Die $\sym{n} \times \sym{n}$ Diagonalmatrix $\sym{W_mat}$ enthält die Varianzen der Beobachtungen, welche wiederum direkte Funktionen der a priori unbekannten Modellparameter $\sym{theta}$ sind.
+Diese strukturelle Kopplung zwingt die Versuchsplanung bei Lebensdauerdaten zur Lösung eines streng lokalen Optimalitätsproblems, wofür zwingend theoretische Vorab-Annahmen (\textit{Planning Values}) für $\sym{theta}$ getroffen werden müssen \cite{Monroe.2010, Seo.2015}.
+Damit ist eine a-priori Grundkenntnis der zu erwartenden Lebensdauerverteilung und deren Parameter unabdingbar, um die geometrische Güte des Versuchsplans erfoglreich zu maximieren.
+Verfahren zu Bayesscher Optimierung der \textit{Planning Values} erlauben die Reduktion etwaiger Unsicherheiten und werden von \textcite{Monroe.2011} detailliert beschrieben.
+
+Unter steter Berücksichtigung dieses fundamentalen stochastischen Vorbehalts fasst Tabelle~\ref{tab:2.1_optimalitaeten} die etablierten Optimalitätskriterien zusammen, welche primär die geometrische Güte quantifizieren und den Vergleich zur Standard-Methodik ermöglichen \cite{Goos.2011,Montgomery.2020}.
 Sie bilden mitunter die Grundlage für diverse weitere Optimalitäten und hybride Ansätze und lassen sich prinzipiell in Modellierungskriterien (\textit{\textbf{A}}-, \textit{\textbf{D}}-~Optimalität) und Prädiktionskriterien (\textit{\textbf{G}}-, \textit{\textbf{I}}-, \textit{\textbf{U}}-, \textit{\textbf{V}}~-~Optimalität) unterteilen \cite{Myers.2016,Rigdon.2022}.
 Während konventionelle Ansätze stets die Optimierung eines einzelnen Kriteriums anstreben, können in der Praxis auch mehrere Kriterien gleichzeitig berücksichtigt werden, um eine ausgewogene Optimierung zu erreichen \cite{Goos.2011,Walsh.2024}.
-
-Jenseits praktischer Kriterien sind hier der Vollständigkeit halber auch eine Teilmenge eher theoretischerer Optimalitäten zu nennen.
-Die \textbf{\textit{E}}-Optimalität führt zur Minimierung des maximalen Eigenwerts der Dispersionsmatrix, was eine Worst-Case-Absicherung zur Varianzschätzung begünstigt - vergleiche \textcite{Boyd.2004,Russell.2019}.
-Für explorative Zielsetzungen ohne starre Modellannahmen kann nach \textcite{Atkinson.1970} die \textit{\textbf{S}}-Optimalität relevant sein, da hier durch die Maximierung der euklidischen Abstände benachbarter Punkte eine gleichmäßige Raumfüllung (\textit{Space-Filling}) sichergestellt werden kann.
-So können für sich ändernde Modelle entlang einzelner Parameter wie beispielsweise $\hat{\sym{T}} \in \hat{\sym{theta}}$ Sensitivatsanalysen effizient durchgeführt werden.
-Eine Verallgemeinerung der prädiktionsorientierten Kriterien stellt die \textit{\textbf{Q}}-Optimalität dar, welche analog zur \textbf{\textit{I}}-Optimalität die integrierte Prädiktionsvarianz minimiert, jedoch mittels Gewichtsfunktionen eine differenzierte Priorisierung spezifischer Regionen im Versuchsraum erlaubt, vgl. \textcite{Goos.2011}.
-Liegt der Fokus hingegen isoliert auf einer Teilmenge der Modellparameter - etwa zur Trennung von Haupteffekten und Blockeffekten oder von Termen erster und zweiter Ordnung - ermöglicht die \textit{\textbf{D}}$_{\textit{\textbf{S}}}$-Optimalität als Derivat der \textit{\textbf{D}}-Optimalität eine gezielte Maximierung der Schätzgüte für genau dieses jeweilige \textit{S}ubset der Parametergruppe - siehe auch Werke von \textcite{Goos.2011,Atkinson.2007,Myers.2016}.
 
 {
 \renewcommand{\arraystretch}{1.2}
@@ -867,23 +774,21 @@ Die $\sym{power}$ ist folglich definiert als das Komplement dieses Fehlers ($1 -
 \end{equation}
 
 In idealisierten, orthogonalen Standard-Versuchsplänen unter der Annahme normalverteilter Residuen $\sym{epsilon} \sim \mathcal{N}(0, \sym{sigma}^2)$ lässt sich die Trennschärfe für klassische \ac{OLS}-Regressionsmodelle exakt analytisch bestimmen.
-Die \sym{power} für den Signifikanztest eines einzelnen Regressionskoeffizienten $\symsub{beta}{idx_j}$ berechnet sich aus der Wahrscheinlichkeit, dass die Teststatistik den kritischen Wert der zentralen Prüfverteilung überschreitet.
-Unter der Gültigkeit der Alternativhypothese $\sym{H1}$ folgt die Teststatistik jedoch einer verschobenen, \textit{nicht-zentralen} Verteilung (z.B. der nicht-zentralen \sym{t}-Verteilung).
-Der Grad dieser Verschiebung wird durch den sogenannten \textit{Nichtzentralitätsparameter} $\sym{delta_nc}$ quantifiziert \cite{Montgomery.2020,Kutner.2005}.
-Für die Überprüfung eines individuellen Modellparameters ist dieser definiert als:
+Die $\sym{power}$ berechnet sich hierbei aus der Wahrscheinlichkeit, dass die Teststatistik unter der Alternativhypothese $\sym{H1}$ den kritischen Wert einer nicht-zentralen Prüfverteilung überschreitet.
+Der Grad dieser Verschiebung wird durch den sogenannten \textit{Nichtzentralitätsparameter} $\symsub{delta}{idx_nc}$ quantifiziert \cite{Montgomery.2020,Kutner.2005}.
+Für die Überprüfung eines individuellen Modellparameters $\symsub{beta}{idx_j}$ ist dieser definiert als:
 \begin{equation} \label{eq:non_centrality}
-    \symsub{delta}{idx_nc} = \frac{|\symsub{beta}{idx_j}|}{\sym{sigma} \sqrt{\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}}}
+    \symsub{delta}{idx_nc} = \frac{|\symsub{beta}{idx_j}|}{\sym{sigma} \sqrt{\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}}},
 \end{equation}
-wobei $|\symsub{beta}{idx_j}|$ die zu detektierende wahre Effektstärke, $\sym{sigma}$ die Standardabweichung des experimentellen Rauschens und $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$ das $\sym{idx_j}$-te Diagonalelement der inversen Informationsmatrix $\sym{M}^{-1}$ (vgl. Abschnitt~\ref{subsec:optimal}) darstellt \cite{Cohen.1988,Myers.2016}.
-Anhand von Gleichung~\ref{eq:non_centrality} wird der mathematische Zusammenhang der Effektivität deutlich: Die Trennschärfe, welche monoton mit $\symsub{delta}{idx_nc}$ wächst, steigt bei größeren Effekten und sinkt bei stärkerem Rauschen.
+wobei $|\symsub{beta}{idx_j}|$ die zu detektierende wahre Effektstärke und $\sym{sigma}$ die Standardabweichung des experimentellen Rauschens darstellt \cite{Cohen.1988,Myers.2016}.
+Anhand dieser analytischen \ac{OLS}-Metrik wird der fundamentale geometrische Hebel der Versuchsplanung deutlich: Sobald die Orthogonalität verloren geht, entstehen signifikante Kovarianzen in der Informationsmatrix $\sym{M} = \sym{X}'\sym{X}$.
+Die Matrixinvertierung führt zu einer Inflation des Diagonalelements $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$, was $\symsub{delta}{idx_nc}$ unmittelbar reduziert und somit die Trennschärfe mindert.
 
-Die entscheidende Rolle des Versuchsplans manifestiert sich im Term $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$.
-In einem vollständig orthogonalen Versuchsplan ist die Informationsmatrix $\sym{M} = \sym{X}'\sym{X}$ eine reine Diagonalmatrix.
-Die Schätzer der Koeffizienten sind somit linear unabhängig und das Diagonalelement der Inversen minimiert sich.
-Sobald jedoch geometrische Verzerrungen auftreten und die Orthogonalität verloren geht, entstehen signifikante Kovarianzen (Werte abseits der Hauptdiagonalen in $\sym{M}$).
-Bei der Invertierung der Matrix führt dies zu einer Inflation der Varianzen, wodurch der Wert $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$ anwächst.
-Dies vergrößert den Nenner in Gleichung~\ref{eq:non_centrality}, reduziert den Nichtzentralitätsparameter $\sym{delta_nc}$ und mindert somit unmittelbar die analytische Trennschärfe.
-Solche analytischen Berechnungen, die auf der exakten Bestimmung von $\symsub{delta}{idx_nc}$ beruhen, verkomplizieren sich erheblich, sobald asymmetrische Design-Modifikationen und Mehrfach-Korrelationen greifen.
+Für die multivariate Lebensdauererprobung verliert diese analytische Berechnung jedoch ihre methodische Anwendbarkeit.
+Aufgrund der asymmetrischen Verteilungsannahmen (Weibull) und dem Vorliegen zensierter Daten existieren im \ac{GLM}-Framework keine geschlossenen analytischen Lösungen zur exakten Bestimmung der Trennschärfe.
+Die Signifikanz der Koeffizienten $\symsub{beta}{idx_j}$ muss hier vorzugsweise über numerische \textit{\acp{LR-Test}} oder approximativ über \textit{Wald-Tests} ermittelt werden \cite{Rigdon.2022, Meeker.2022, McCulloch.2001}.
+Die Quantifizierung der Trennschärfe erfordert in der modernen Zuverlässigkeitsplanung folglich zwingend \textit{\acp{MCS}} \cite{Kremer.2021, Arndt.2022, Khuri.2006}.
+Hierbei wird der geplante Versuchsplan unter Vorgabe eines definierten Effektmodells virtuell iteriert ($\symsub{n}{idx_MC}$ Simulationsläufe), mit stochastischer Streuung überlagert und zensiert, um den relativen Anteil korrekter Signifikanz-Entscheidungen $(\sym{p-Wert} < \sym{alpha})$ als empirischen Schätzer der Test-Power zu extrahieren.
 
 
 \subsection{Statistische Modellbildung} \label{subsec:modellbildung}
@@ -959,9 +864,9 @@ Gängige Transformationen umfassen hierbei die reziproke Anpassung für thermisc
         \bottomrule
     \end{tabular}
 \end{table}
-Eine Übersicht verschiedener Modellierungsansätze (z.B. \textit{Arrhenius-Modell}, \textit{Inverses Potenzgesetz}, \textit{Eyring}, \textit{Coffin-Manson-Modell}, etc.) und deren Einbindung in die \ac{GLM}-Struktur findet sich in \text{Meeker.2022,Rigdon.2022,Modarres.2017}.
-Die Schätzung der unbekannten Parameter $\hat{\sym{Beta}}$ und $\hat{\sym{b}}$ erfolgt anschließend mittels \ac{MLE} durch Maximierung der Log-Likelihood-Funktion (Gleichung~\ref{eq:log_likelihood_explicit_censored}) mittels beispielsweise \textit{Newton-Raphson-Verfahren} bzw. \textit{Pattern-Search-Algorithmen} oder \textit{Gradientenverfahren}, \cite{Yang.2007,Qiao.1994}.
-Geeignete numerische Optimierungsverfahren wurden in Abschnitt~\ref{subsec:schätzer} erwähnt und unter anderem durch Vorarbeiten von \textcite{Kremer.2019b} evaluiert.
+Eine Übersicht verschiedener Modellierungsansätze (z.B. \textit{Arrhenius-Modell}, \textit{Inverses Potenzgesetz}, \textit{Eyring}, \textit{Coffin-Manson-Modell}, etc.) und deren Einbindung in die \ac{GLM}-Struktur findet sich in \cite{Meeker.2022,Rigdon.2022,Modarres.2017}.
+Die Schätzung der unbekannten Parameter $\hat{\sym{Beta}}$ und $\hat{\sym{b}}$ erfolgt mittels numerischer Maximierung der \ac{GLL}-Funktion (Gleichung~\ref{eq:log_likelihood_explicit_censored}).
+
 
 \subsubsection{Signifikanzanalyse}
 Liegen die Parameterschätzungen $\hat{\sym{thet}}_{\sym{idx_i}}$ vor, erfolgt die Bewertung ihrer statistischen Relevanz mittels \ac{LR-Test}.
@@ -982,9 +887,10 @@ Ist dieser $\sym{p-Wert}$ kleiner als das definierte Signifikanzniveau $\sym{p-W
 \subsubsection{Erwartungswerte und Konfidenzintervalle}
 Nach der Ermittlung der optimalen Modellparameter $\hat{\sym{theta}}$ ist die Quantifizierung der mit diesen Schätzungen verbundenen Unsicherheit essenziell.
 Analytisch erfolgt dies über die Betrachtung der Krümmung der Log-Likelihood-Funktion $\sym{Lambda}$ im Maximum. Je stärker die Krümmung, desto präziser ist die Schätzung (geringere Varianz).
-Mathematisch erfolgt dies durch die drei Schritte: Wahl der statistischen Zielgröße ($\sym{R}$,$\sym{F}$), Berechnung des Standard-Fehlers (via $\sym{FIM}$ analog zu Gleichung~\ref{eq:fim_o}) und Vertrauensbereich-Schätzung / Wald-Statistik (Gleichung~\ref{eq:ci_normal} bzw.~\ref{eq:ci_ln}).
-So wird dies analog zu Gleichungen~\ref{eq:fim_o}-\ref{eq:var_covar} durch die Hesse-Matrix $\sym{H}$ beschrieben, welche die zweiten partiellen Ableitungen der Log-Likelihood-Funktion nach den Parametern $\symsub{thet}{idx_i}$ (also $\symsub{beta}{idx_j}$ und $\sym{b}$) enthält.
-Der negative Erwartungswert dieser Matrix führt damit zur Erwartung der Fisher-Informationsmatrix $\sym{FIM}$ \cite{Fisher.1935,Rasch.2018}:
+Mathematisch erfordert dies die Auswertung der Hesse-Matrix $\sym{H}$, welche die zweiten partiellen Ableitungen der Log-Likelihood-Funktion nach den Parametern $\symsub{thet}{idx_i}$ (also $\symsub{beta}{idx_j}$ und $\sym{b}$) enthält.
+
+Da die theoretische (erwartete) Fisher-Informationsmatrix die Kenntnis der wahren Parameter $\sym{theta}$ erfordert, wird in der statistischen Praxis stattdessen die \textit{beobachtete} Fisher-Informationsmatrix $\symsub{FIM}{idx_O}$ (engl. \textit{Observed Fisher Information}) herangezogen \cite{Nelson.1990,Lawless.2003}.
+Diese ist definiert als die negative Hesse-Matrix, ausgewertet an der Stelle der \ac{MLE}-Schätzwerte $\hat{\sym{theta}}$ \cite{Fisher.1935,Rasch.2018}:
 \begin{equation} \label{eq:fim_o_glm}
     \symsub{FIM}{idx_O} \defeq - \sym{H}(\hat{\sym{theta}}) =
     \begin{bmatrix}
@@ -994,13 +900,6 @@ Der negative Erwartungswert dieser Matrix führt damit zur Erwartung der Fisher-
         -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}} \partial \sym{thet}_1} & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}} \partial \sym{thet}_2} & \cdots & -\frac{\partial^2 \sym{L_like}}{\partial \sym{thet}_{\sym{k}}^2}
     \end{bmatrix}.
 \end{equation}
-
-\highlight[id=Daz, comment={Absatz hinzugefügt für Tab2.4 und roten Faden zu CCD-based Motivation}]{Im Gegensatz} zu klas\-si\-schen, normal\-ver\-teil\-ten Mo\-del\-len lässt sich $\sym{FIM}$ im \ac{GLM}-Frame\-work mit\-tels \textit{\ac{IWLS}} als gewichtetes Skalarprodukt ausdrücken \cite{Monroe.2011}:
-\begin{equation} \label{eq:fim_glm_w}
-    \symsub{FIM}{idx_O} = \sym{X}' \sym{W_mat} \sym{X}.
-\end{equation}
-Die Diagonalmatrix $\sym{W_mat}$ enthält die $\sym{n}\times \sym{n}$ Varianzen der Beobachtungen, welche wiederum direkte Funktionen der zu schätzenden Modellparameter $\sym{theta}$ sind.
-Diese Parameterabhängigkeit stellt die optimale Versuchsplanung vor ein methodisches Dilemma: Um die Informationsmatrix a-priori berechnen und optimieren zu können (vgl. Optimalitätskriterien in Abschnitt~\ref{subsec:optimal}), müssen zwingend theoretische Vorab-Annahmen (\textit{Planning Values}) für $\sym{theta}$ getroffen werden \cite{Monroe.2010, Seo.2015}.
 
 Die asymptotische Varianz-Kovarianz-Matrix $\hat{\sym{V}}$ der Parameterschätzer wird anschließend durch die Inversion der Fisher-Informationsmatrix für $\hat{\sym{theta}}=\sym{theta}$ approximiert \cite{Yang.2007,Rasch.2018}:
 \begin{equation} \label{eq:var_covar_glm}
@@ -1013,10 +912,12 @@ Die asymptotische Varianz-Kovarianz-Matrix $\hat{\sym{V}}$ der Parameterschätze
     \end{bmatrix}.
 \end{equation}
 Die Hauptdiagonalelemente dieser Matrix liefern die geschätzten Varianzen $\hat{\sym{Var}}(\hat{\symsub{thet}{idx_j}})$ der einzelnen Modellparameter.
-Unter der Annahme der asymptotischen Normalverteilung der \ac{MLE} beschreibt \textcite{Yang.2007} neben weiteren Alternativen aus \textcite{Meeker.2022,Kremer.2019c} die symmetrischen $(1-\sym{alpha})$-Konfidenzintervalle (Wald-Intervalle) wie nachfolgend - vgl. Gleichung~\ref{eq:ci_ln}:
+Unter der Annahme der asymptotischen Normalverteilung der \ac{MLE} beschreibt \textcite{Yang.2007} neben weiteren Alternativen aus \textcite{Meeker.2022,Kremer.2019c} die symmetrischen $(1-\sym{alpha})$-Konfidenzintervalle (Wald-Intervalle) wie nachfolgend:
 \begin{equation} \label{eq:wald_ci}
-    [\sym{thet}_{\sym{idx_j},\sym{idx_u}},\sym{thet}_{\sym{idx_j},\sym{idx_o}}] = \hat{\sym{thet}}_{\sym{idx_j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{Var}}(\hat{\sym{thet}}_{\sym{idx_j}})}  \quad \text{bzw.} \cdots =\hat{\sym{thet}}_{\sym{idx_j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}}}{\hat{\sym{thet}}_{\sym{idx_j}}} \right).
+    [\sym{thet}_{\sym{idx_j},\sym{idx_u}},\sym{thet}_{\sym{idx_j},\sym{idx_o}}] = \hat{\sym{thet}}_{\sym{idx_j}} \pm \sym{z}_{1-\sym{alpha}/2} \cdot \sqrt{\hat{\sym{Var}}(\hat{\sym{thet}}_{\sym{idx_j}})}  \quad \text{bzw.} \cdots =\hat{\sym{thet}}_{\sym{idx_j}} \exp \left( \pm \sym{z}_{1-\sym{alpha}/2} \cdot \frac{\sqrt{\hat{\sym{V}}_{\sym{idx_j}\sym{idx_j}}}}{\hat{\sym{thet}}_{\sym{idx_j}}} \right),
 \end{equation}
+wobei $\sym{z}_{1-\sym{alpha}/2}$ dem $(1-\sym{alpha}/2)$-Quantil der Standardnormalverteilung entspricht.
+Da Lebensdauerparameter (z.\,B. der Skalenparameter $\sym{T}$) definitionsgemäß auf den positiven reellen Zahlenraum beschränkt sind, erfolgt die Berechnung der \acp{CI} standardmäßig über die im rechten Teil der Gleichung~\ref{eq:wald_ci} aufgeführte Log-Transformation, um physikalisch unmögliche, negative Intervallgrenzen mathematisch konsistent auszuschließen.
 
 \subsubsection{Vertrauensbereiche für Funktionswerte und Weibull-\ac{GLM}}
 Oft ist nicht nur die Unsicherheit der Modellparameter selbst, sondern die der daraus abgeleiteten Funktionen - wie der Zuverlässigkeit $\sym{R}(\sym{t})$ oder der Ausfallwahrscheinlichkeit $\sym{F}(\sym{t})$ - von Interesse.
@@ -1025,7 +926,7 @@ Diese normiert die logarithmische Abweichung der betrachteten Zeit $\sym{t}$ von
 \begin{equation} \label{eq:conf_aux_w}
     \hat{\sym{w_aux}} = \hat{\sym{b}} \cdot \ln \left( \frac{\sym{t}}{\hat{\sym{T}}} \right).
 \end{equation}
-Die Varianz dieser Größe lässt sich mittels Taylor-Reihenentwicklung (Delta-Methode, vgl. Abschnitt~\ref{subsec:schätzer}) approximativ aus den Varianzen und Kovarianzen der Parameterschätzer  und analog zu Gleichungen~\ref{eq:delta_method_gradient} und~\ref{eq:delta_method_variance} bestimmen:
+Die Varianz dieser transformierten Hilfsgröße lässt sich mittels der \textit{Delta-Methode} (einer auf der Taylor-Reihenentwicklung basierenden, linearen Fehlerfortpflanzung) approximativ aus den Varianzen und Kovarianzen der Parameterschätzer bestimmen:
 \begin{equation} \label{eq:var_w}
     \hat{\sym{Var}}(\hat{\sym{w_aux}}) = \left( \frac{\hat{\sym{b}}}{\hat{\sym{T}}} \right)^2 \hat{\sym{Var}}(\hat{\sym{T}}) + \left( \frac{\hat{\sym{w_aux}}}{\hat{\sym{b}}} \right)^2 \hat{\sym{Var}}(\hat{\sym{b}}) - \frac{2 \hat{\sym{w_aux}}}{\hat{\sym{T}}} \hat{\sym{Cov}}(\hat{\sym{T}}, \hat{\sym{b}}).
 \end{equation}

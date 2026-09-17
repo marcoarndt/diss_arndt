@@ -578,6 +578,50 @@
       \verb https://ebookcentral.proquest.com/lib/kxp/detail.action?docID=226561
       \endverb
     \endentry
+    \entry{Qiao.1994}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=2692c53aa5c359427b3082e09a2fbe6e}{%
+           family={Qiao},
+           familyi={Q\bibinitperiod},
+           given={Hongzhu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c404c6024b95c11c715ecdf8df8b9185}{%
+           family={Tsokos},
+           familyi={T\bibinitperiod},
+           given={Chris\bibnamedelima P.},
+           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{fullhash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{fullhashraw}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{bibnamehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authorbibnamehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authornamehash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authorfullhash}{366c7df0b59760b6d5b451ecc4d94e03}
+      \strng{authorfullhashraw}{366c7df0b59760b6d5b451ecc4d94e03}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Newton---Raphson's method plays a fundamental role in the maximum likelihood estimation of the two parameters of the Weibull probability distribution. It is well known that the method depends on the initial point of the iterative process and the iteration does not always converge. In the present article, we introduce an effective iterative procedure for estimating the subject parameter. Our proposed method always converges and does not depend on the initial point of the iteration. It will also be shown by numerical examples that our method converges faster than the popular Newton---Raphson method.}
+      \field{issn}{0378-4754}
+      \field{journaltitle}{Mathematics and Computers in Simulation}
+      \field{number}{1}
+      \field{title}{Parameter estimation of the Weibull probability distribution}
+      \field{volume}{37}
+      \field{year}{1994}
+      \field{pages}{47\bibrangedash 55}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/0378-4754(94)90058-2
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0378475494900582
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0378475494900582
+      \endverb
+    \endentry
     \entry{Kremer.2019b}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
@@ -636,93 +680,6 @@
       \range{pages}{8}
       \verb{doi}
       \verb 10.3850/978-981-11-2724-3{\textunderscore }0443-cd
-      \endverb
-    \endentry
-    \entry{Montgomery.2021}{book}{}{}
-      \name{author}{3}{}{%
-        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
-           family={Montgomery},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima C.},
-           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=bb9dadeef0e27beee51d152faff8ca96}{%
-           family={Peck},
-           familyi={P\bibinitperiod},
-           given={Elizabeth\bibnamedelima A.},
-           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-        {{hash=788c3b54381fbc8ef27cdf46201acf93}{%
-           family={Vining},
-           familyi={V\bibinitperiod},
-           given={G.\bibnamedelimi Geoffrey},
-           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, New Jersey}%
-      }
-      \list{publisher}{1}{%
-        {Wiley}%
-      }
-      \strng{namehash}{d5b92f1f1d7a32f637a9fa8267ad1bf4}
-      \strng{fullhash}{99eadd8af988e76081d9186d2fd2c617}
-      \strng{fullhashraw}{99eadd8af988e76081d9186d2fd2c617}
-      \strng{bibnamehash}{99eadd8af988e76081d9186d2fd2c617}
-      \strng{authorbibnamehash}{99eadd8af988e76081d9186d2fd2c617}
-      \strng{authornamehash}{d5b92f1f1d7a32f637a9fa8267ad1bf4}
-      \strng{authorfullhash}{99eadd8af988e76081d9186d2fd2c617}
-      \strng{authorfullhashraw}{99eadd8af988e76081d9186d2fd2c617}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{{"}In statistics, linear regression is a linear approach to modelling the relationship between a scalar response and one or more explanatory variables. A linear regression model attempts to explain the relationship between two or more variables using a straight line.{"}--}
-      \field{edition}{Sixth edition}
-      \field{isbn}{978-1-119-57872-7}
-      \field{series}{Wiley series in probability and statistics}
-      \field{title}{Introduction to linear regression analysis}
-      \field{year}{2021}
-    \endentry
-    \entry{Qiao.1994}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=2692c53aa5c359427b3082e09a2fbe6e}{%
-           family={Qiao},
-           familyi={Q\bibinitperiod},
-           given={Hongzhu},
-           giveni={H\bibinitperiod}}}%
-        {{hash=c404c6024b95c11c715ecdf8df8b9185}{%
-           family={Tsokos},
-           familyi={T\bibinitperiod},
-           given={Chris\bibnamedelima P.},
-           giveni={C\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-      }
-      \strng{namehash}{366c7df0b59760b6d5b451ecc4d94e03}
-      \strng{fullhash}{366c7df0b59760b6d5b451ecc4d94e03}
-      \strng{fullhashraw}{366c7df0b59760b6d5b451ecc4d94e03}
-      \strng{bibnamehash}{366c7df0b59760b6d5b451ecc4d94e03}
-      \strng{authorbibnamehash}{366c7df0b59760b6d5b451ecc4d94e03}
-      \strng{authornamehash}{366c7df0b59760b6d5b451ecc4d94e03}
-      \strng{authorfullhash}{366c7df0b59760b6d5b451ecc4d94e03}
-      \strng{authorfullhashraw}{366c7df0b59760b6d5b451ecc4d94e03}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Newton---Raphson's method plays a fundamental role in the maximum likelihood estimation of the two parameters of the Weibull probability distribution. It is well known that the method depends on the initial point of the iterative process and the iteration does not always converge. In the present article, we introduce an effective iterative procedure for estimating the subject parameter. Our proposed method always converges and does not depend on the initial point of the iteration. It will also be shown by numerical examples that our method converges faster than the popular Newton---Raphson method.}
-      \field{issn}{0378-4754}
-      \field{journaltitle}{Mathematics and Computers in Simulation}
-      \field{number}{1}
-      \field{title}{Parameter estimation of the Weibull probability distribution}
-      \field{volume}{37}
-      \field{year}{1994}
-      \field{pages}{47\bibrangedash 55}
-      \range{pages}{9}
-      \verb{doi}
-      \verb 10.1016/0378-4754(94)90058-2
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/0378475494900582
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/0378475494900582
       \endverb
     \endentry
     \entry{Abernethy.2006}{book}{}{}
@@ -820,121 +777,6 @@
       \verb 10.1109/94.485512
       \endverb
     \endentry
-    \entry{Kremer.2019c}{inproceedings}{}{}
-      \name{author}{2}{}{%
-        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
-           family={Kremer},
-           familyi={K\bibinitperiod},
-           given={Alexander},
-           giveni={A\bibinitperiod}}}%
-        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
-           family={Bertsche},
-           familyi={B\bibinitperiod},
-           given={Bernd},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{24084f1a715650339527050d213206f7}
-      \strng{fullhash}{24084f1a715650339527050d213206f7}
-      \strng{fullhashraw}{24084f1a715650339527050d213206f7}
-      \strng{bibnamehash}{24084f1a715650339527050d213206f7}
-      \strng{authorbibnamehash}{24084f1a715650339527050d213206f7}
-      \strng{authornamehash}{24084f1a715650339527050d213206f7}
-      \strng{authorfullhash}{24084f1a715650339527050d213206f7}
-      \strng{authorfullhashraw}{24084f1a715650339527050d213206f7}
-      \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2019 Annual Reliability and Maintainability Symposium (RAMS)}
-      \field{isbn}{978-1-5386-6554-1}
-      \field{title}{A Methodology for Consideration of Uncertainty in Lifetime Design of Experiments}
-      \field{year}{2019}
-      \field{pages}{1\bibrangedash 6}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1109/RAMS.2019.8768906
-      \endverb
-    \endentry
-    \entry{Lawless.2003}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=9c8522a82bdbffcb9e6b888b265dd0d3}{%
-           family={Lawless},
-           familyi={L\bibinitperiod},
-           given={Jerald\bibnamedelima F.},
-           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Hoboken, NJ}%
-      }
-      \list{publisher}{1}{%
-        {Wiley-Interscience}%
-      }
-      \strng{namehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
-      \strng{fullhash}{9c8522a82bdbffcb9e6b888b265dd0d3}
-      \strng{fullhashraw}{9c8522a82bdbffcb9e6b888b265dd0d3}
-      \strng{bibnamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
-      \strng{authorbibnamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
-      \strng{authornamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
-      \strng{authorfullhash}{9c8522a82bdbffcb9e6b888b265dd0d3}
-      \strng{authorfullhashraw}{9c8522a82bdbffcb9e6b888b265dd0d3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{2. ed.}
-      \field{isbn}{0471372153}
-      \field{series}{Wiley series in probabilitiy and statistics}
-      \field{title}{Statistical models and methods for lifetime data}
-      \field{year}{2003}
-      \verb{urlraw}
-      \verb http://www.loc.gov/catdir/bios/wiley044/2002151805.html
-      \endverb
-      \verb{url}
-      \verb http://www.loc.gov/catdir/bios/wiley044/2002151805.html
-      \endverb
-    \endentry
-    \entry{Bain.2017b}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=616127d3303355661d3437d6f1615d2d}{%
-           family={Bain},
-           familyi={B\bibinitperiod},
-           given={Lee\bibnamedelima J.},
-           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=c41ebdb27b647147d4ae9f658701119c}{%
-           family={Engelhardt},
-           familyi={E\bibinitperiod},
-           given={Max},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Routledge}%
-      }
-      \strng{namehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
-      \strng{fullhash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
-      \strng{fullhashraw}{494ebe44e88b7af1b3bd5a6b4274fbf2}
-      \strng{bibnamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
-      \strng{authorbibnamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
-      \strng{authornamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
-      \strng{authorfullhash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
-      \strng{authorfullhashraw}{494ebe44e88b7af1b3bd5a6b4274fbf2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9780203738733}
-      \field{title}{Statistical Analysis of Reliability and Life-Testing Models}
-      \field{year}{2017}
-      \verb{doi}
-      \verb 10.1201/9780203738733
-      \endverb
-      \verb{file}
-      \verb Bain, Engelhardt 2017 - Statistical Analysis of Reliability:Attachments/Bain, Engelhardt 2017 - Statistical Analysis of Reliability.pdf:application/pdf
-      \endverb
-    \endentry
     \entry{Fisher.1935}{book}{}{}
       \name{author}{1}{}{%
         {{hash=565b1403c3b3172839fa752390fdd3bf}{%
@@ -957,8 +799,8 @@
       \strng{authornamehash}{565b1403c3b3172839fa752390fdd3bf}
       \strng{authorfullhash}{565b1403c3b3172839fa752390fdd3bf}
       \strng{authorfullhashraw}{565b1403c3b3172839fa752390fdd3bf}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The Design of Experiments}
@@ -997,8 +839,8 @@
       \strng{authorfullhash}{80129b89e5b04c5d52c6d180f09396f2}
       \strng{authorfullhashraw}{80129b89e5b04c5d52c6d180f09396f2}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{0471093157}
@@ -1034,8 +876,8 @@
       \strng{authornamehash}{7d4a838891cb5c31eb1e3e089777efa0}
       \strng{authorfullhash}{7d4a838891cb5c31eb1e3e089777efa0}
       \strng{authorfullhashraw}{7d4a838891cb5c31eb1e3e089777efa0}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{10th}
@@ -1064,8 +906,8 @@
       \strng{authornamehash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
       \strng{authorfullhash}{1d15985a5d6d6ff86d3d5d2bdb63db71}
       \strng{authorfullhashraw}{1d15985a5d6d6ff86d3d5d2bdb63db71}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -1112,8 +954,8 @@
       \strng{authorfullhash}{f4be653f312765a5dc616d9a112196cf}
       \strng{authorfullhashraw}{f4be653f312765a5dc616d9a112196cf}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{For the investigation of influence of various parameters on properties and outputs of components or systems, Design of Experiments (DOE) offers the most efficient approach to create a{\&}nbsp;comprehensive empirical insight into product performance. However, especially if product lifetime is treated as the investigation objective, the main focus of attention must be placed on the efficiency of testing---if only to comply with the principle of DOE, even before testing begins. Without actual test runs, a{\&}nbsp;pre-selection of relevant factors influencing the target quantity can be performed here and strategically adjusted in scale compared to the subsequent method. In this work, common heuristic tools and methods are analyzed and evaluated with respect to a{\&}nbsp;deliberate preselection of influencing factors versus the challenges in lifetime testing and degradation behaviors. Several factors as well as their interactions are taken into account to achieve this. For this purpose, these methods are partially extended and adapted in their focus in order to finally be made applicable in a{\&}nbsp;suitable procedure. An illustration of this is also provided in a{\&}nbsp;selected use case with limited empirical and experimental prior-knowledge, in which a{\&}nbsp;sample of relevant influences is identified through qualitative heuristic decision making with respect to parameters that influence product lifetime.}
@@ -1157,8 +999,8 @@
       \strng{authornamehash}{378b8e259b386f1d908f287a81d3f95f}
       \strng{authorfullhash}{378b8e259b386f1d908f287a81d3f95f}
       \strng{authorfullhashraw}{378b8e259b386f1d908f287a81d3f95f}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Entwicklung eines ganzheitlichen Vorgehensmodells zur problemorientierten Anwendung des statistischen Versuchsplanung}
@@ -1192,8 +1034,8 @@
       \strng{authornamehash}{7aa05a2685adf946e74256782bec5282}
       \strng{authorfullhash}{7aa05a2685adf946e74256782bec5282}
       \strng{authorfullhashraw}{7aa05a2685adf946e74256782bec5282}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Als Ms. gedr}
@@ -1240,8 +1082,8 @@
       \strng{authornamehash}{56a2d4cb584abea19ecced826e5f6a8e}
       \strng{authorfullhash}{a4d6bc6a63af810baa307cce673cc7d5}
       \strng{authorfullhashraw}{a4d6bc6a63af810baa307cce673cc7d5}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3. ed.}
@@ -1279,8 +1121,8 @@
       \strng{authornamehash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
       \strng{authorfullhash}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
       \strng{authorfullhashraw}{1aa05eadd7d9b161f2af9ed5a1b7ebf0}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{"}This Third Edition covers design of experiments and integrates computer experiments with other design topics. The main changes in this Third Edition are two new chapters, one on computer experiments, the other on optimal design. Computer experiments have become very popular in experimental design because increasingly more and more experiments are conducted on a computer, such as running finite element simulations, instead of conducting physical experiments. This book starts each chapter with a real experiment. Then, the authors develop the needed tools in subsequent sections. Finally, the chapter ends with the application of these tools to the experiment. Each chapter includes exercises, and the authors have added new exercise problems with selected solutions to the Instructor's solutions manual. This is an ideal book for design of experiments courses at the upper-undergraduate and graduate levels. It is also a valuable resource for practicing engineers and statisticians. Design of experiments (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships. This information is needed to manage process inputs in order to optimize the output{"}--}
@@ -1323,8 +1165,8 @@
       \strng{editornamehash}{b269b5dbab6e5ecbbae3964a901e5ae2}
       \strng{editorfullhash}{b269b5dbab6e5ecbbae3964a901e5ae2}
       \strng{editorfullhashraw}{b269b5dbab6e5ecbbae3964a901e5ae2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{editor}
       \field{labeltitlesource}{title}
       \field{edition}{11., durchges. Aufl.}
@@ -1364,8 +1206,8 @@
       \strng{authornamehash}{06d8c16d8df8ef3e1f2d308a2fea81c7}
       \strng{authorfullhash}{dff827c6c99690c358cc79e787dc805a}
       \strng{authorfullhashraw}{dff827c6c99690c358cc79e787dc805a}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-540-87888-9}
@@ -1408,8 +1250,8 @@
       \strng{authornamehash}{1f49c6d22773878487629b490053f3fc}
       \strng{authorfullhash}{b15ed2ea37f9d9e8bc25c1fe4272853f}
       \strng{authorfullhashraw}{b15ed2ea37f9d9e8bc25c1fe4272853f}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3. Auflage}
@@ -1444,8 +1286,8 @@
       \strng{authorfullhash}{622bb48821228d9a7605a21d73f0fc9d}
       \strng{authorfullhashraw}{622bb48821228d9a7605a21d73f0fc9d}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{10., überarbeitete Auflage}
@@ -1453,6 +1295,49 @@
       \field{series}{Praxisreihe Qualität}
       \field{title}{Versuchsplanung: Produkte und Prozesse optimieren}
       \field{year}{2020}
+    \endentry
+    \entry{Montgomery.2021}{book}{}{}
+      \name{author}{3}{}{%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=bb9dadeef0e27beee51d152faff8ca96}{%
+           family={Peck},
+           familyi={P\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=788c3b54381fbc8ef27cdf46201acf93}{%
+           family={Vining},
+           familyi={V\bibinitperiod},
+           given={G.\bibnamedelimi Geoffrey},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, New Jersey}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{d5b92f1f1d7a32f637a9fa8267ad1bf4}
+      \strng{fullhash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{fullhashraw}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{bibnamehash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{authorbibnamehash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{authornamehash}{d5b92f1f1d7a32f637a9fa8267ad1bf4}
+      \strng{authorfullhash}{99eadd8af988e76081d9186d2fd2c617}
+      \strng{authorfullhashraw}{99eadd8af988e76081d9186d2fd2c617}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{"}In statistics, linear regression is a linear approach to modelling the relationship between a scalar response and one or more explanatory variables. A linear regression model attempts to explain the relationship between two or more variables using a straight line.{"}--}
+      \field{edition}{Sixth edition}
+      \field{isbn}{978-1-119-57872-7}
+      \field{series}{Wiley series in probability and statistics}
+      \field{title}{Introduction to linear regression analysis}
+      \field{year}{2021}
     \endentry
     \entry{Monroe.2008}{article}{}{}
       \name{author}{2}{}{%
@@ -1475,8 +1360,8 @@
       \strng{authornamehash}{213920aa947a9ef3844f00da276f16af}
       \strng{authorfullhash}{213920aa947a9ef3844f00da276f16af}
       \strng{authorfullhashraw}{213920aa947a9ef3844f00da276f16af}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-4065}
@@ -1512,8 +1397,8 @@
       \strng{authornamehash}{d41f15c7631a78ee4ad0aede691ad677}
       \strng{authorfullhash}{d41f15c7631a78ee4ad0aede691ad677}
       \strng{authorfullhashraw}{d41f15c7631a78ee4ad0aede691ad677}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The Annals of Mathematical Statistics}
@@ -1557,8 +1442,8 @@
       \strng{authorfullhash}{01c14a626dccac2c615539582f23bfbd}
       \strng{authorfullhashraw}{01c14a626dccac2c615539582f23bfbd}
       \field{extraname}{1}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{4}
@@ -1587,8 +1472,8 @@
       \strng{authornamehash}{eba72515134a9243ad73893f377d508c}
       \strng{authorfullhash}{eba72515134a9243ad73893f377d508c}
       \strng{authorfullhashraw}{eba72515134a9243ad73893f377d508c}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -1620,8 +1505,8 @@
       \strng{authornamehash}{0f4ea4b7232a0b8c44af01d054c4ff93}
       \strng{authorfullhash}{0f4ea4b7232a0b8c44af01d054c4ff93}
       \strng{authorfullhashraw}{0f4ea4b7232a0b8c44af01d054c4ff93}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -1663,8 +1548,8 @@
       \strng{authornamehash}{e9b8290c4891fab41ae653f4590250b9}
       \strng{authorfullhash}{e9b8290c4891fab41ae653f4590250b9}
       \strng{authorfullhashraw}{e9b8290c4891fab41ae653f4590250b9}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{1st}
@@ -1704,8 +1589,8 @@
       \strng{authornamehash}{84508ee195d2ab676b0d69ad6e098507}
       \strng{authorfullhash}{cf3fc23c2608632bed93c6faef5f2fc8}
       \strng{authorfullhashraw}{cf3fc23c2608632bed93c6faef5f2fc8}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{Second edition}
@@ -1741,8 +1626,8 @@
       \strng{authornamehash}{6eb96cefa94addb37eb003547b1710b5}
       \strng{authorfullhash}{6eb96cefa94addb37eb003547b1710b5}
       \strng{authorfullhashraw}{6eb96cefa94addb37eb003547b1710b5}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{00359246}
@@ -1791,8 +1676,8 @@
       \strng{authorfullhash}{35659a935d55876c452f11fb3d0af504}
       \strng{authorfullhashraw}{35659a935d55876c452f11fb3d0af504}
       \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0748-8017}
@@ -1823,8 +1708,8 @@
       \strng{authornamehash}{23959d092ae2a5edd5aa42a886a57cec}
       \strng{authorfullhash}{23959d092ae2a5edd5aa42a886a57cec}
       \strng{authorfullhashraw}{23959d092ae2a5edd5aa42a886a57cec}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0954-4828}
@@ -1863,8 +1748,8 @@
       \strng{authornamehash}{5b6d82aee353f8f289b23762f039622f}
       \strng{authorfullhash}{5b6d82aee353f8f289b23762f039622f}
       \strng{authorfullhashraw}{5b6d82aee353f8f289b23762f039622f}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Cover; Half Title; Series Page; Title Page; Copyright Page; Dedication; Contents; Preface; 1. Generalized Linear Models; 1.1 Introduction; 1.2 Mathematics of the general linear model; 1.3 Towards the generalized linear model; 1.4 Generalized linear models; 1.5 Estimating the values of the model parameters; 2. Background Material; 2.1 Introduction; 2.2 Maximisation or minimisation of a function; 2.2.1 A function of one variable; 2.2.2 A function of more than one variable; 2.3 Restrictions on independent variables; 2.4 Constrained optimisation in R; 2.4.1 The function constrOptim}
@@ -1906,8 +1791,8 @@
       \strng{authornamehash}{e1bf28b7ee62f39111c5ebc4d6d21679}
       \strng{authorfullhash}{e1bf28b7ee62f39111c5ebc4d6d21679}
       \strng{authorfullhashraw}{e1bf28b7ee62f39111c5ebc4d6d21679}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2326-8999}
@@ -1947,8 +1832,8 @@
       \strng{authornamehash}{49813af522fea15c0ac8ee3cfd8d3931}
       \strng{authorfullhash}{49813af522fea15c0ac8ee3cfd8d3931}
       \strng{authorfullhashraw}{49813af522fea15c0ac8ee3cfd8d3931}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Optimal Design of Experiments offers a rare blend of linear algebra, convex analysis, and statistics. The optimal design for statistical experiments is first formulated as a concave matrix optimization problem. Using tools from convex analysis, the problem is solved generally for a wide class of optimality criteria such as D-, A-, or E-optimality. The book then offers a complementary approach that calls for the study of the symmetry properties of the design problem, exploiting such notions as matrix majorization and the Kiefer information matrix ordering. The results are illustrated with optimal designs for polynomial fit models, Bayes designs, balanced incomplete block designs, exchangeable designs on the cube, rotatable designs on the sphere, and many other examples. Since the book's initial publication in 1993, readers have used its methods to derive optimal designs on the circle, optimal mixture designs, and optimal designs in other statistical models. Using local linearization techniques, the methods described in the book prove useful even for nonlinear cases, in identifying practical designs of experiments. Audience: anyone involved in planning statistical experiments, including mathematical statisticians, applied statisticians, and mathematicians interested in matrix optimization problems Includes bibliographical references (p. 432-447) and index Optimal Design of Experiments offers a rare blend of linear algebra, convex analysis, and statistics. The optimal design for statistical experiments is first formulated as a concave matrix optimization problem. Using tools from convex analysis, the problem is solved generally for a wide class of optimality criteria such as D-, A-, or E-optimality. The book then offers a complementary approach that calls for the study of the symmetry properties of the design problem, exploiting such notions as matrix majorization and the Kiefer information matrix ordering. The results are illustrated with optimal designs for polynomial fit models, Bayes designs, balanced incomplete block designs, exchangeable designs on the cube, rotatable designs on the sphere, and many other examples. Since the book's initial publication in 1993, readers have used its methods to derive optimal designs on the circle, optimal mixture designs, and optimal designs in other statistical models. Using local linearization techniques, the methods described in the book prove useful even for nonlinear cases, in identifying practical designs of experiments. Audience: anyone involved in planning statistical experiments, including mathematical statisticians, applied statisticians, and mathematicians interested in matrix optimization problems}
@@ -1983,8 +1868,8 @@
       \strng{authornamehash}{0f0d568b2491039855ed3fe37d54ee0e}
       \strng{authorfullhash}{0f0d568b2491039855ed3fe37d54ee0e}
       \strng{authorfullhashraw}{0f0d568b2491039855ed3fe37d54ee0e}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1359-8538}
@@ -2025,8 +1910,8 @@
       \strng{authorfullhash}{622bb48821228d9a7605a21d73f0fc9d}
       \strng{authorfullhashraw}{622bb48821228d9a7605a21d73f0fc9d}
       \field{extraname}{2}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Jede Neu- oder Weiterentwicklung von Produkten und Fertigungsprozessen durchläuft eine Vielzahl von Versuchen. Aber Versuche kosten Zeit und Geld, und manche Ergebnisse sind nicht reproduzierbar. Versuchsplanung (auch DOE = Design of Experiments genannt) hilft dabei, mit möglichst geringem Aufwand reproduzierbare Ergebnisse zu erhalten. Dieses Buch zeigt Praktikern in Entwicklung, Konstruktion und Fertigung, sowie Studenten, wie mit Versuchsplanung Produkte und Prozesse optimiert werden können. Versuchsplanung ist ein wesentlicher Bestandteil der Six-Sigma-Strategie. Anhand von vielen Beispielen wird beschrieben, wie man 'durch systematische Beobachtung Informationen sammeln, 'durch einfache Versuche einfache Probleme lösen, 'mit wenigen Einzelversuchen die Bedeutung vieler Faktoren gleichzeitig beurteilen und so die wichtigen von den unwichtigen trennen, 'robuste Produkte und Prozesse entwickeln, 'die Abhängigkeit mehrerer Zielgrö{ß}en von mehreren Faktoren gleichzeitig erfassen und ein gemeinsames Optimum suchen, und 'schrittweise Fertigungsprozesse und Produkte verbessern kann. Ziel des Buches ist, einen anwendungsorientierten Überblick zu geben. Es verbindet die Methoden der klassischen Statistischen Versuchsplanung mit Ideen von D. Shainin, G. Taguchi und vielen anderen zu einer neuen Kombination. So können die Vorteile aller Methoden genutzt werden. Visualisierungen in JavaTM bzw. JavaScript erlauben es, statistische Grundlagen spielerisch zu erleben und besser zu verstehen. In der 9. Auflage wurden die Versuchspläne und Optimierungsansätze erweitert, andere Kapitel wurden aktualisiert. Für die beiliegende DVD haben zahlreiche Hersteller die aktuellsten Demos ihrer Versuchsplanungs- bzw. Statistiksoftware zur Verfügung gestellt. Mit den Beispieldaten auf der DVD kann der Anwender die Programme anhand bekannter Beispiele selbst testen und das für seine Bedürfnisse am besten geeignete auswählen. Prof. Dr. Wilhelm Kleppmann war von 1986 bis 1991 Betreuer von Versuchsplanungsprojekten bei Siemens. Seither lehrt er an der Hochschule Aalen in den Studiengängen Elektronik, Informatik, Maschinenbau/Fertigungstechnik und Kunststofftechnik. Für Firmen und für die DGQ (Deutsche Gesellschaft für Qualität e.V.) führt er Lehrgänge und Pilotprojekte zur Versuchsplanung durch. Prof. Dr. Wilhelm Kleppmann, Hochschule Aalen, Beethovenstrasse 1, 73430 Aalen email: wilhelm.kleppmannhtw-aalen.de Internet: http://www.elektronik.htw-aalen.de/kleppmann/}
@@ -2077,8 +1962,8 @@
       \strng{authorfullhash}{3ae1ad58d7bca135f45130dd1e459966}
       \strng{authorfullhashraw}{3ae1ad58d7bca135f45130dd1e459966}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. ed.}
@@ -2116,8 +2001,8 @@
       \strng{authornamehash}{6910ad762b52d0b3a9f87266e1dc1988}
       \strng{authorfullhash}{328305cb2473619c908c23ee426a1f07}
       \strng{authorfullhashraw}{328305cb2473619c908c23ee426a1f07}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-4065}
@@ -2150,8 +2035,8 @@
       \strng{authornamehash}{6f00dbcc041f65d1e4ff5157396072d1}
       \strng{authorfullhash}{6f00dbcc041f65d1e4ff5157396072d1}
       \strng{authorfullhashraw}{6f00dbcc041f65d1e4ff5157396072d1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -2194,8 +2079,8 @@
       \strng{authornamehash}{ca97a979c0040c1c4867488d01f6afe9}
       \strng{authorfullhash}{cb1dafcbd328b0967dc3e4a116d20c45}
       \strng{authorfullhashraw}{cb1dafcbd328b0967dc3e4a116d20c45}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-4065}
@@ -2236,8 +2121,8 @@
       \strng{authornamehash}{d183012579a5a91e92241aab6cd79389}
       \strng{authorfullhash}{b2166bdb849421c537aa36d9ab131a3d}
       \strng{authorfullhashraw}{b2166bdb849421c537aa36d9ab131a3d}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-4065}
@@ -2278,8 +2163,8 @@
       \strng{authornamehash}{f1a51c8139600828ac2c1a0143f39d50}
       \strng{authorfullhash}{e599ece12c15e281742b76643ce7e8f9}
       \strng{authorfullhashraw}{e599ece12c15e281742b76643ce7e8f9}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0361-0926}
@@ -2326,8 +2211,8 @@
       \strng{authorfullhash}{fbfcb60937264dfcc56af3513d903fc5}
       \strng{authorfullhashraw}{fbfcb60937264dfcc56af3513d903fc5}
       \field{extraname}{3}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0022-4065}
@@ -2368,8 +2253,8 @@
       \strng{authornamehash}{9f1ea72e356594d1852c6921161c777f}
       \strng{authorfullhash}{b7f469314da9e043af16a960c764d420}
       \strng{authorfullhashraw}{b7f469314da9e043af16a960c764d420}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Statistical Software}
@@ -2411,8 +2296,8 @@
       \strng{authornamehash}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
       \strng{authorfullhash}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
       \strng{authorfullhashraw}{a36a3d8a96dcd1ba9ec1ff4f8641b7cf}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. ed.}
@@ -2443,8 +2328,8 @@
       \strng{authornamehash}{e6ca6b3bff2ac6561da420340530dc34}
       \strng{authorfullhash}{e6ca6b3bff2ac6561da420340530dc34}
       \strng{authorfullhashraw}{e6ca6b3bff2ac6561da420340530dc34}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Industrial Engineering}
@@ -2476,8 +2361,8 @@
       \strng{authornamehash}{7bb25e352d186fa63f389be0d951fbb6}
       \strng{authorfullhash}{7bb25e352d186fa63f389be0d951fbb6}
       \strng{authorfullhashraw}{7bb25e352d186fa63f389be0d951fbb6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780471725145}
@@ -2525,8 +2410,8 @@
       \strng{authorfullhash}{48f7e5a5ad0a1d3be534050db312dc6c}
       \strng{authorfullhashraw}{48f7e5a5ad0a1d3be534050db312dc6c}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2. Auflage}
@@ -2539,6 +2424,151 @@
       \endverb
       \verb{file}
       \verb Fahrmeir, Kneib et al. 2009 - Regression:Attachments/Fahrmeir, Kneib et al. 2009 - Regression.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Monroe.2011}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=62e3ef3d2fec635cf52f4fa441e1bd08}{%
+           family={Monroe},
+           familyi={M\bibinitperiod},
+           given={Eric\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3acacc1f684ef378918a00ece495d31b}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Rong},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
+           family={Anderson-Cook},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Christine\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=eee9a27c4461b65ac2489492c39aa52c}{%
+           family={Borror},
+           familyi={B\bibinitperiod},
+           given={Connie\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
+      \strng{fullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{fullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{bibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{authorbibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{authornamehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
+      \strng{authorfullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{authorfullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0748-8017}
+      \field{journaltitle}{Quality and Reliability Engineering International}
+      \field{number}{4}
+      \field{title}{A generalized linear model approach to designing accelerated life test experiments}
+      \field{volume}{27}
+      \field{year}{2011}
+      \field{pages}{595\bibrangedash 607}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1002/qre.1143
+      \endverb
+    \endentry
+    \entry{Monroe.2010}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=62e3ef3d2fec635cf52f4fa441e1bd08}{%
+           family={Monroe},
+           familyi={M\bibinitperiod},
+           given={Eric\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3acacc1f684ef378918a00ece495d31b}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Rong},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
+           family={Anderson-Cook},
+           familyi={A\bibinithyphendelim C\bibinitperiod},
+           given={Christine\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={Douglas\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=eee9a27c4461b65ac2489492c39aa52c}{%
+           family={Borror},
+           familyi={B\bibinitperiod},
+           given={Connie\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
+      \strng{fullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{fullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{bibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{authorbibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{authornamehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
+      \strng{authorfullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \strng{authorfullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
+      \field{extraname}{2}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-4065}
+      \field{journaltitle}{Journal of Quality Technology}
+      \field{number}{2}
+      \field{title}{Sensitivity Analysis of Optimal Designs for Accelerated Life Testing}
+      \field{volume}{42}
+      \field{year}{2010}
+      \field{pages}{121\bibrangedash 135}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/00224065.2010.11917811
+      \endverb
+    \endentry
+    \entry{Seo.2015}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=35414f33d3578c648de8846cc11e80d0}{%
+           family={Seo},
+           familyi={S\bibinitperiod},
+           given={Kangwon},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3acacc1f684ef378918a00ece495d31b}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Rong},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{fullhash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{fullhashraw}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{bibnamehash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{authorbibnamehash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{authornamehash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{authorfullhash}{111b353ec48bf68b0c276b2719b6f67f}
+      \strng{authorfullhashraw}{111b353ec48bf68b0c276b2719b6f67f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The R Journal}
+      \field{number}{2}
+      \field{title}{ALTopt: An R Package for Optimal Experimental Design of Accelerated Life Testing}
+      \field{volume}{7}
+      \field{year}{2015}
+      \field{pages}{177}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.32614/RJ-2015-029
+      \endverb
+      \verb{file}
+      \verb Seo, Pan 2015 - ALTopt An R Package:Attachments/Seo, Pan 2015 - ALTopt An R Package.pdf:application/pdf
       \endverb
     \endentry
     \entry{Walsh.2024}{article}{}{}
@@ -2583,82 +2613,6 @@
       \verb 10.1080/08982112.2023.2194963
       \endverb
     \endentry
-    \entry{Boyd.2004}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=5cd9791a43b8812be4e3f9d64521947a}{%
-           family={Boyd},
-           familyi={B\bibinitperiod},
-           given={Stephen\bibnamedelima P.},
-           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=2608d599a0bc2a784c301329a8da5f7b}{%
-           family={Vandenberghe},
-           familyi={V\bibinitperiod},
-           given={Lieven},
-           giveni={L\bibinitperiod}}}%
-      }
-      \list{location}{3}{%
-        {Cambridge}%
-        {New York, NY}%
-        {Port Melbourne}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{51b5c5e76e19784bb7c212d8d9235828}
-      \strng{fullhash}{51b5c5e76e19784bb7c212d8d9235828}
-      \strng{fullhashraw}{51b5c5e76e19784bb7c212d8d9235828}
-      \strng{bibnamehash}{51b5c5e76e19784bb7c212d8d9235828}
-      \strng{authorbibnamehash}{51b5c5e76e19784bb7c212d8d9235828}
-      \strng{authornamehash}{51b5c5e76e19784bb7c212d8d9235828}
-      \strng{authorfullhash}{51b5c5e76e19784bb7c212d8d9235828}
-      \strng{authorfullhashraw}{51b5c5e76e19784bb7c212d8d9235828}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{{"}Convex optimization problems arise frequently in many different fields. This book provides a comprehensive introduction to the subject, covering the theory, many applications and examples, and numerical methods. The book begins with the basic elements of convex sets and functions, describes various classes of convex optimization problems, and then treats duality theory. The second part covers a wide variety of applications, in estimation, approximation, statistics, computational geometry, and other areas. The last part of the book presents numerical methods for convex optimization problems, moving from basic methods for unconstrained problems to interior-point methods.{"} {"}The focus of the book is on recognizing and formulating convex optimization problems, and then solving them efficiently. It contains many worked examples and homework exercises and will appeal to students, researchers, and practitioners in fields such as engineering, computer science, mathematics, finance, and economics.{"}-- 4e de couverture}
-      \field{isbn}{978-0-521-83378-3}
-      \field{title}{Convex optimization}
-      \field{year}{2004}
-      \verb{urlraw}
-      \verb http://www.loc.gov/catdir/description/cam041/2003063284.html
-      \endverb
-      \verb{url}
-      \verb http://www.loc.gov/catdir/description/cam041/2003063284.html
-      \endverb
-    \endentry
-    \entry{Atkinson.1970}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=e1ed9ee5cdb5e73b2bf4c96c496616b0}{%
-           family={Atkinson},
-           familyi={A\bibinitperiod},
-           given={A.\bibnamedelimi C.},
-           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-      }
-      \strng{namehash}{e1ed9ee5cdb5e73b2bf4c96c496616b0}
-      \strng{fullhash}{e1ed9ee5cdb5e73b2bf4c96c496616b0}
-      \strng{fullhashraw}{e1ed9ee5cdb5e73b2bf4c96c496616b0}
-      \strng{bibnamehash}{e1ed9ee5cdb5e73b2bf4c96c496616b0}
-      \strng{authorbibnamehash}{e1ed9ee5cdb5e73b2bf4c96c496616b0}
-      \strng{authornamehash}{e1ed9ee5cdb5e73b2bf4c96c496616b0}
-      \strng{authorfullhash}{e1ed9ee5cdb5e73b2bf4c96c496616b0}
-      \strng{authorfullhashraw}{e1ed9ee5cdb5e73b2bf4c96c496616b0}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{00063444}
-      \field{journaltitle}{Biometrika}
-      \field{number}{2}
-      \field{title}{The Design of Experiments to Estimate the Slope of a Response Surface}
-      \field{volume}{57}
-      \field{year}{1970}
-      \field{pages}{319}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.2307/2334839
-      \endverb
-    \endentry
     \entry{Atkinson.2007}{book}{}{}
       \name{author}{3}{}{%
         {{hash=e1ed9ee5cdb5e73b2bf4c96c496616b0}{%
@@ -2699,151 +2653,6 @@
       \field{isbn}{9780199296590}
       \field{title}{Optimum Experimental Designs, with SAS}
       \field{year}{2007}
-    \endentry
-    \entry{Seo.2015}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=35414f33d3578c648de8846cc11e80d0}{%
-           family={Seo},
-           familyi={S\bibinitperiod},
-           given={Kangwon},
-           giveni={K\bibinitperiod}}}%
-        {{hash=3acacc1f684ef378918a00ece495d31b}{%
-           family={Pan},
-           familyi={P\bibinitperiod},
-           given={Rong},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{111b353ec48bf68b0c276b2719b6f67f}
-      \strng{fullhash}{111b353ec48bf68b0c276b2719b6f67f}
-      \strng{fullhashraw}{111b353ec48bf68b0c276b2719b6f67f}
-      \strng{bibnamehash}{111b353ec48bf68b0c276b2719b6f67f}
-      \strng{authorbibnamehash}{111b353ec48bf68b0c276b2719b6f67f}
-      \strng{authornamehash}{111b353ec48bf68b0c276b2719b6f67f}
-      \strng{authorfullhash}{111b353ec48bf68b0c276b2719b6f67f}
-      \strng{authorfullhashraw}{111b353ec48bf68b0c276b2719b6f67f}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{The R Journal}
-      \field{number}{2}
-      \field{title}{ALTopt: An R Package for Optimal Experimental Design of Accelerated Life Testing}
-      \field{volume}{7}
-      \field{year}{2015}
-      \field{pages}{177}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.32614/RJ-2015-029
-      \endverb
-      \verb{file}
-      \verb Seo, Pan 2015 - ALTopt An R Package:Attachments/Seo, Pan 2015 - ALTopt An R Package.pdf:application/pdf
-      \endverb
-    \endentry
-    \entry{Monroe.2010}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=62e3ef3d2fec635cf52f4fa441e1bd08}{%
-           family={Monroe},
-           familyi={M\bibinitperiod},
-           given={Eric\bibnamedelima M.},
-           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=3acacc1f684ef378918a00ece495d31b}{%
-           family={Pan},
-           familyi={P\bibinitperiod},
-           given={Rong},
-           giveni={R\bibinitperiod}}}%
-        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
-           family={Anderson-Cook},
-           familyi={A\bibinithyphendelim C\bibinitperiod},
-           given={Christine\bibnamedelima M.},
-           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
-           family={Montgomery},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima C.},
-           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=eee9a27c4461b65ac2489492c39aa52c}{%
-           family={Borror},
-           familyi={B\bibinitperiod},
-           given={Connie\bibnamedelima M.},
-           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
-      \strng{fullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{fullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{bibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{authorbibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{authornamehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
-      \strng{authorfullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{authorfullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0022-4065}
-      \field{journaltitle}{Journal of Quality Technology}
-      \field{number}{2}
-      \field{title}{Sensitivity Analysis of Optimal Designs for Accelerated Life Testing}
-      \field{volume}{42}
-      \field{year}{2010}
-      \field{pages}{121\bibrangedash 135}
-      \range{pages}{15}
-      \verb{doi}
-      \verb 10.1080/00224065.2010.11917811
-      \endverb
-    \endentry
-    \entry{Monroe.2011}{article}{}{}
-      \name{author}{5}{}{%
-        {{hash=62e3ef3d2fec635cf52f4fa441e1bd08}{%
-           family={Monroe},
-           familyi={M\bibinitperiod},
-           given={Eric\bibnamedelima M.},
-           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=3acacc1f684ef378918a00ece495d31b}{%
-           family={Pan},
-           familyi={P\bibinitperiod},
-           given={Rong},
-           giveni={R\bibinitperiod}}}%
-        {{hash=9d56379f37dfabe1487e62ae80f67e4e}{%
-           family={Anderson-Cook},
-           familyi={A\bibinithyphendelim C\bibinitperiod},
-           given={Christine\bibnamedelima M.},
-           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=7d4a838891cb5c31eb1e3e089777efa0}{%
-           family={Montgomery},
-           familyi={M\bibinitperiod},
-           given={Douglas\bibnamedelima C.},
-           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
-        {{hash=eee9a27c4461b65ac2489492c39aa52c}{%
-           family={Borror},
-           familyi={B\bibinitperiod},
-           given={Connie\bibnamedelima M.},
-           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-      }
-      \strng{namehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
-      \strng{fullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{fullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{bibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{authorbibnamehash}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{authornamehash}{752902afb2b0bdb1c0fc0b123f5c3ead}
-      \strng{authorfullhash}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \strng{authorfullhashraw}{74fbd9b628dc1ade020fc96e5c8f9629}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0748-8017}
-      \field{journaltitle}{Quality and Reliability Engineering International}
-      \field{number}{4}
-      \field{title}{A generalized linear model approach to designing accelerated life test experiments}
-      \field{volume}{27}
-      \field{year}{2011}
-      \field{pages}{595\bibrangedash 607}
-      \range{pages}{13}
-      \verb{doi}
-      \verb 10.1002/qre.1143
-      \endverb
     \endentry
     \entry{Goos.2025}{article}{}{}
       \name{author}{1}{}{%
@@ -3323,6 +3132,45 @@
       \verb 10.2307/2986301
       \endverb
     \endentry
+    \entry{Kremer.2019c}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=ab1e473436714f07a37d7a30b43f0cb0}{%
+           family={Kremer},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=568579fb03bcbfad384a46ba9e452cf9}{%
+           family={Bertsche},
+           familyi={B\bibinitperiod},
+           given={Bernd},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{24084f1a715650339527050d213206f7}
+      \strng{fullhash}{24084f1a715650339527050d213206f7}
+      \strng{fullhashraw}{24084f1a715650339527050d213206f7}
+      \strng{bibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorbibnamehash}{24084f1a715650339527050d213206f7}
+      \strng{authornamehash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhash}{24084f1a715650339527050d213206f7}
+      \strng{authorfullhashraw}{24084f1a715650339527050d213206f7}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 Annual Reliability and Maintainability Symposium (RAMS)}
+      \field{isbn}{978-1-5386-6554-1}
+      \field{title}{A Methodology for Consideration of Uncertainty in Lifetime Design of Experiments}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/RAMS.2019.8768906
+      \endverb
+    \endentry
     \entry{Rencher.2008}{book}{}{}
       \name{author}{2}{}{%
         {{hash=67e3a4b81bdc0419963f493654cb5bc7}{%
@@ -3365,6 +3213,44 @@
       \verb http://www.loc.gov/catdir/enhancements/fy0826/2007024268-b.html
       \endverb
     \endentry
+    \entry{Lawless.2003}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=9c8522a82bdbffcb9e6b888b265dd0d3}{%
+           family={Lawless},
+           familyi={L\bibinitperiod},
+           given={Jerald\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hoboken, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Wiley-Interscience}%
+      }
+      \strng{namehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{fullhash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{fullhashraw}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{bibnamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authorbibnamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authornamehash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authorfullhash}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \strng{authorfullhashraw}{9c8522a82bdbffcb9e6b888b265dd0d3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2. ed.}
+      \field{isbn}{0471372153}
+      \field{series}{Wiley series in probabilitiy and statistics}
+      \field{title}{Statistical models and methods for lifetime data}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb http://www.loc.gov/catdir/bios/wiley044/2002151805.html
+      \endverb
+      \verb{url}
+      \verb http://www.loc.gov/catdir/bios/wiley044/2002151805.html
+      \endverb
+    \endentry
     \entry{Rasch.2018}{book}{}{}
       \name{author}{2}{}{%
         {{hash=6a2238726880a5cc3addd61e17dfa4a0}{%
@@ -3402,6 +3288,44 @@
       \field{isbn}{9781119385288}
       \field{title}{Mathematical statistics}
       \field{year}{2018}
+    \endentry
+    \entry{Bain.2017b}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=616127d3303355661d3437d6f1615d2d}{%
+           family={Bain},
+           familyi={B\bibinitperiod},
+           given={Lee\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c41ebdb27b647147d4ae9f658701119c}{%
+           family={Engelhardt},
+           familyi={E\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Routledge}%
+      }
+      \strng{namehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{fullhash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{fullhashraw}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{bibnamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{authorbibnamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{authornamehash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{authorfullhash}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \strng{authorfullhashraw}{494ebe44e88b7af1b3bd5a6b4274fbf2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780203738733}
+      \field{title}{Statistical Analysis of Reliability and Life-Testing Models}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1201/9780203738733
+      \endverb
+      \verb{file}
+      \verb Bain, Engelhardt 2017 - Statistical Analysis of Reliability:Attachments/Bain, Engelhardt 2017 - Statistical Analysis of Reliability.pdf:application/pdf
+      \endverb
     \endentry
     \entry{Nelder.1972}{article}{}{}
       \name{author}{2}{}{%
@@ -3651,8 +3575,8 @@
       \strng{authornamehash}{3d7e34e7911e92e1677ed52fa24e732c}
       \strng{authorfullhash}{6406825bde53b82d47050deed34f2f20}
       \strng{authorfullhashraw}{6406825bde53b82d47050deed34f2f20}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{10170405}
@@ -3726,8 +3650,8 @@
       \strng{editorfullhash}{5b99632d0af8f03ec2d13d1ae1a5804e}
       \strng{editorfullhashraw}{5b99632d0af8f03ec2d13d1ae1a5804e}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{European Conference on Safety and Reliability (ESREL), 3rd September - 7th September 2023}
@@ -3772,8 +3696,8 @@
       \strng{authornamehash}{bce756dc5759b1bc87d9c7d067cda739}
       \strng{authorfullhash}{92910794072f549b819af4c181fdd243}
       \strng{authorfullhashraw}{92910794072f549b819af4c181fdd243}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2025 Annual Reliability and Maintainability Symposium (RAMS)}
@@ -3808,8 +3732,8 @@
       \strng{authorfullhash}{06de43da47c8b5ca086684bf9c477217}
       \strng{authorfullhashraw}{06de43da47c8b5ca086684bf9c477217}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{series}{6th International Conference on Design of Experiments (ICODOE 2022)}
@@ -3849,8 +3773,8 @@
       \strng{authorfullhash}{f938eb5ea778b1893dcdfbcde1ea455d}
       \strng{authorfullhashraw}{f938eb5ea778b1893dcdfbcde1ea455d}
       \field{extraname}{3}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Probabilistic Safety Assessment and Management PSAM 16, June 26-July 1, 2022, Honolulu, Hawaii}
@@ -3878,8 +3802,8 @@
       \strng{authornamehash}{002f69bf140cceda97f81a168d86ceec}
       \strng{authorfullhash}{002f69bf140cceda97f81a168d86ceec}
       \strng{authorfullhashraw}{002f69bf140cceda97f81a168d86ceec}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0040-1706}
@@ -3918,8 +3842,8 @@
       \strng{authornamehash}{8201088e1c474774d574c18a45ec8a11}
       \strng{authorfullhash}{8201088e1c474774d574c18a45ec8a11}
       \strng{authorfullhashraw}{8201088e1c474774d574c18a45ec8a11}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1863-8171}
@@ -3953,8 +3877,8 @@
       \strng{authornamehash}{46d7f24768b0de2e46147ba3da205e84}
       \strng{authorfullhash}{46d7f24768b0de2e46147ba3da205e84}
       \strng{authorfullhashraw}{46d7f24768b0de2e46147ba3da205e84}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0361-0926}
@@ -3991,8 +3915,8 @@
       \strng{authornamehash}{a39584d47f804edfd114dc151188882f}
       \strng{authorfullhash}{a39584d47f804edfd114dc151188882f}
       \strng{authorfullhashraw}{a39584d47f804edfd114dc151188882f}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-1-4471-4587-5}
