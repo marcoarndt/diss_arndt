@@ -809,8 +809,8 @@ Unter der Annahme Weibull-verteilter Ausfallzeiten (Abschnitt~\ref{subsec:paraml
 \begin{equation} \label{eq:glm_link}
     \sym{Er}_{\sym{thet}_{\sym{x}}}\left(\ln(\sym{T})\right) = \sym{y} = \symsub{beta}{idx_0} + \sum_{\sym{idx_j}=1}^{\sym{k}} \symsub{beta}{idx_j} \symsub{x}{idx_j} + \dots + \sym{epsilon}.
 \end{equation}
-In der Lebensdauer-Datenanalyse werden insbesondere zwei weitere Modellierungsansätze verwendet: neben den \ac{GLM}-Ansätzen insbesondere der \textit{\ac{PH}-Modell}-Ansatz.
-Jedoch werden \ac{PH}-Modelle vornehmlich in der Biostatistik verwendet und spielen hier ihre Stärke bei der Abbildung zeitabhängiger Kovariaten aus \cite{Modarres.2017,Kremer.2020}:
+In der Lebensdauer-Datenanalyse wird neben den \ac{GLM}-Ansätzen insbesondere der \textit{\ac{PH}-Modell}-Ansatz verwendet.
+Die Stärke dieser \ac{PH}-Modelle bildet dabei die Abbildung zeitabhängiger Kovariaten, weshalb sie vornehmlich in der Biostatistik verwendet werden \cite{Modarres.2017,Kremer.2020}:
 \begin{equation} \label{eq:weibull_pdf_cox}
     \sym{f}(\sym{t}, \sym{X}) = \sym{lambda}(\sym{t}, \sym{X}) \cdot \sym{R}(\sym{t}, \sym{X}) = \sym{b} \cdot \sym{t}^{\sym{b}-1} \cdot e^{\left[ \sym{y} - \sym{t}^{\sym{b}} e^{\sym{y}} \right]}.
 \end{equation}
