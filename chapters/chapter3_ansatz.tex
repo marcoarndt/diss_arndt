@@ -23,13 +23,14 @@ Anhand dieses Anforderungsprofils werden die methodischen Defizite aktueller For
 
 Der Einsatz computergenerierter, algorithmisch optimaler Versuchspläne (\textit{D}-, \textit{I}- oder \textit{U}-Optimalität) erscheint aus theoretischer Sicht zunächst als logische Konsequenz, um maßgeschneiderte, effiziente Designs für \ac{ALT} zu entwerfen.
 Im Kontext der Le\-bens\-dau\-er-Da\-ten\-a\-na\-ly\-se führt dies jedoch in ein methodisches Paradoxon \cite{Goos.2011}.
-\textcite{Khuri.2006}, \textcite{Stufken.2012} und \textcite{Yang.2011} beschreiben hier zusammenfassend, dass insbesondere die \textit{lokale Optimalität} dieser Pläne immer dann eine fundamentale Limitation darstellt, wenn die wahren Modellparameter $\sym{theta}$ (allen voran der Formparameter $\sym{b}$) a priori nicht bekannt oder abschätzbar sind.
+\textcite{Khuri.2006}, \textcite{Stufken.2012} und \textcite{Yang.2011} weisen bereits darauf hin, dass insbesondere die \textit{lokale Optimalität} dieser Pläne immer dann eine fundamentale Limitation darstellt, wenn die wahren Modellparameter $\sym{theta}$ (allen voran der Formparameter $\sym{b}$) a priori nicht bekannt oder abschätzbar sind.
 
-Forschungsarbeiten zu \ac{GLM}-\ac{ALT}-Modellen von \textcite{Monroe.2010} und \textcite{Seo.2015} adressieren dieselbe Problematik und belegen, dass die zu optimierende Fisher-Informationsmatrix bei Weibull-Verteilungen (gemäß Gleichung~\ref{eq:fim_glm_w} und~\ref{eq:fim_o_glm}) eine zwingende Parameterabhängigkeit aufweist.
+Forschungsarbeiten zu \ac{GLM}-optimalen Designs für \ac{ALT} von \textcite{Monroe.2010} und \textcite{Seo.2015} adressieren dieselbe Problematik und belegen, dass die zu optimierende Fisher-Informationsmatrix bei Weibull-Verteilungen (gemäß Gleichung~\ref{eq:fim_glm_w} und~\ref{eq:fim_o_glm}) eine zwingende Parameterabhängigkeit aufweist.
 Die Versuchsplanung erfordert damit unweigerlich stochastisches Vorwissen, welches sich, etwa im Fall der \textit{U}-Optimalität für Prognostik in relevanten Betriebsbereichen, in der zwingenden Vorgabe theoretischer \textit{Planning Values} für die Regressionskoeffizienten in $\sym{Beta}$ und den Formparameter $\sym{b}$ manifestiert.
 \textcite{Monroe.2011} erweitern diesen Ansatz durch iteratives Aktualisieren mittels Bayes'scher \textit{Updating}-Prozesse, um die lokale Optimalität sukzessive an die physikalische Realität anzupassen und so Effektivität und Effizienz zu maximieren.
 In konservativer Annahme muss jedoch davon ausgegangen werden, dass dem pragmatisch handelnden Ingenieur im Maschinen- oder Fahrzeugbau im realen Projektumfeld a priori Kenntnisse dieses Detailgrads zumeist vollständig fehlen.
-Stimmen anfängliche Schätzungen nicht mit der physikalischen Realität überein, entartet das optimale Testdesign und verliert seine statistische Integrität (\enquote{The designs may be poor if the choice of values is far from the true parameter values} \textcite[S.2]{Stufken.2012}).
+Stimmen anfängliche Schätzungen nicht mit der physikalischen Realität überein, entartet das \ac{GLM}-optimale Testdesign und verliert seine statistische Integrität (\enquote{The designs may be poor if the choice of values is far from the true parameter values} \textcite[S.2]{Stufken.2012}).
+Kompensationsstrategien entgegen der Design-Entartung werden an dieser Stelle jedoch nur unzureichend adressiert, da hier nur durch drastische Erhöhung des Stichprobenumfangs oder signifikante Verlängerung etwaiger Zensierungszeiten die statistische Effektivität wiederhergestellt sei \cite{Monroe.2010}
 
 Auch die in Forschungsarbeiten von \textcite{NunezAres.2020} und \textcite{Goos.2025} favorisierten \ac{OMARS}-Designs lösen diesen Konflikt aus ingenieurwissenschaftlicher Perspektive nicht auf, da sie nicht explizit für den \ac{ALT}-Kontext entwickelt wurden.
 Sie zielen zwar auf strukturelle Flexibilität und die orthogonale Schätzung von Haupteffekten in einem einzigen experimentellen Schritt (\textit{One-Step Approach}) ab, erkaufen dies jedoch durch ein algorithmisch kontrollierte Vermengung mit Wechselwirkungen.
@@ -86,6 +87,15 @@ Genau an diesem Konfliktpunkt verankert sich der methodische Beitrag der vorlieg
 Die inhärente strukturelle Überbestimmtheit des \ac{CCD} (beispielsweise durch mehrfache Zentralpunkt-Replikationen) birgt ein bislang ungenutztes Potenzial, welches hier als geometrisches \textit{Gestaltungsbudget} für die Prädiktion-basierte Designoptimierung definiert wird.
 Wird die unantastbare geometrische Symmetrie des Plans kritisch hinterfragt, können zur Disposition stehende Versuchspunkte aus dem originären Plan hinsichtlich ihrer Position gezielt modifiziert werden.
 Die identifizierte Forschungslücke besteht somit darin, dieses Gestaltungsbudget nicht primär zur passiven Kostenreduktion zu streichen.
+
+Dieser methodische Schritt wird durch Erkenntnisse der Optimalitätsforschung theoretisch legitimiert: \textcite{Seo.2015} sowie \textcite{Monroe.2010} belegen, dass algorithmisch auf eine Feldbetriebs-Prognose optimierte Designs (\textit{U}-Optimalität) von Natur aus eine massive topologische Asymmetrie erzwingen, indem sie einen erheblichen Großteil der Versuchspunkte auf das niedrigste Stressniveau allokieren.
+Zudem beweisen \textcite{Monroe.2008}, dass gezielt asymmetrische Designs in physikalisch restriktiven Versuchsräumen die Breite der Konfidenzintervalle für Parameterschätzungen im Vergleich zu starren konventionellen Designs drastisch reduzieren können.
+
+Um diese mathematisch bewiesenen Effizienzsprünge der Asymmetrie zu nutzen, ohne die Ausfallrisiken lokaler Optimalpläne in Kauf zu nehmen, formuliert diese Arbeit einen methodischen Brückenschlag:
+Die ungenutzten Stützstellen des robusteren \ac{CCD} sollen als dedizierte \textit{Extrapolations-Ankerpunkte} exakt dorthin verlagert werden, wo der perspektivische Prognosepunkt im Feldbetrieb allokiert ist, um das Regressionsmodell auf dem Extrapolationspfad stochastisch abzustützen.
+Auf diese Weise entsteht ein adaptiver Versuchsplan, der eine hin zur Prädiktionsvarianz optimierte Informationsgewinnung sicherstellt, während die parallel quantifizierte \sym{power} garantiert, dass der \textit{Return-on-Investment} des Lebensdauertests vollumfänglich gewahrt bleibt.
+
+
 Vielmehr sollen etwaige verfügbare Stützstellen als dedizierte Versuchspunkte exakt dorthin verlagert werden, wo der perspektivische Prognosepunkt im Feldbetrieb allokiert ist, um das Regressionsmodell auf dem Extrapolationspfad stochastisch abzustützen.
 Für diese neuartige, zielgerichtete Versuchspunkt-Allokation wird im Rahmen dieser Arbeit der Begriff der \textit{Extrapolations-Ankerpunkte} geprägt.
 Auf diese Weise kann ein adaptiver Versuchsplan entstehen, der einen optimalen Informationsgewinn für die Extrapolation sicherstellt, während die parallel quantifizierte \sym{power} garantiert, dass der \textit{Return-on-Investment} des Lebensdauertests vollumfänglich gewahrt bleibt.
@@ -120,7 +130,7 @@ Um diese Hypothese zu überprüfen und den in Abschnitt~\ref{sec:bewertung_stand
         \vspace{0.5em}
         \begin{quote}
             \centering\itshape
-            Wie kann die Architektur zentral zusammengesetzter Versuchspläne (\acp{CCD}) unter Beibehaltung oder Reduktion des Gesamtstichprobenumfangs $\sym{N}$ asymmetrisch adaptiert werden, um beschleunigte Lebensdauerprüfungen (\ac{ALT}) für eine varianzminimierte Zuverlässigkeitsmodellierung im fernen Extrapolationsraum des Feldbetriebs maximal ressourceneffizient auszulegen?
+            Wie kann die Architektur zentral zusammengesetzter Versuchspläne unter Beibehaltung oder Reduktion des Gesamtstichprobenumfangs asymmetrisch adaptiert werden, um beschleunigte Lebensdauerprüfungen für eine varianzminimierte Zuverlässigkeitsmodellierung im Extrapolationsraum des Feldbetriebs maximal effizient auszulegen?
         \end{quote}
         \vspace{-0.1em}
     }%

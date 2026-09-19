@@ -1,17 +1,17 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'diss_arndt.blg'
-[71] biber-MSWIN64:340> INFO - === 
-[104] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
-[232] Biber.pm:994> INFO - Found 109 citekeys in bib section 0
-[244] Biber.pm:4463> INFO - Processing section 0
-[254] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[320] bibtex.pm:1713> INFO - LaTeX decoding ...
-[551] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[859] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[860] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[860] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
-[861] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
-[904] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
-[1007] bbl.pm:779> INFO - Output to diss_arndt.bbl
-[1008] Biber.pm:131> WARN - misc entry 'AfA.2000' (bibliography.bib): Invalid format '23.07.2026' of date field 'urldate' - ignoring
-[1008] Biber.pm:133> INFO - WARNINGS: 1
+[73] biber-MSWIN64:340> INFO - === 
+[109] Biber.pm:420> INFO - Reading 'diss_arndt.bcf'
+[241] Biber.pm:994> INFO - Found 109 citekeys in bib section 0
+[254] Biber.pm:4463> INFO - Processing section 0
+[264] Biber.pm:4654> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[341] bibtex.pm:1713> INFO - LaTeX decoding ...
+[594] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[909] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[910] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[911] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'de-DE'
+[911] Biber.pm:4289> INFO - No sort tailoring available for locale 'de-DE'
+[953] bbl.pm:676> INFO - Writing 'diss_arndt.bbl' with encoding 'UTF-8'
+[1055] bbl.pm:779> INFO - Output to diss_arndt.bbl
+[1056] Biber.pm:131> WARN - misc entry 'AfA.2000' (bibliography.bib): Invalid format '23.07.2026' of date field 'urldate' - ignoring
+[1057] Biber.pm:133> INFO - WARNINGS: 1
