@@ -20,7 +20,7 @@ Mit der fortschreitenden mechatronischen Integration und Funktionsverdichtung ge
 
 \section{Forschungsperspektive und Problembeschreibung} \label{sec:problembeschreibung}
 
-\added[id=Daz, comment={knapper formuliert}]{Werden multivariate} Interdependenzen bei der Lebensdauerabsicherung methodisch unzureichend aufgelöst, ist in der industriellen Praxis das Ausweichen auf kostenintensive Kompensationsstrategien eine gängige aber unvorteilhafte Folge:
+\added[id=Daz, comment={knapper formuliert}]{Werden multivariate} Abhängigkeiten bei der Lebensdauerabsicherung methodisch unzureichend aufgelöst, ist in der industriellen Praxis das Ausweichen auf kostenintensive Kompensationsstrategien eine gängige aber unvorteilhafte Folge:
 Komponenten werden konservativ überdimensioniert, Austauschintervalle präventiv verkürzt oder unerkannte Wechselwirkungen provozieren fatale Feldausfälle mit unter Umständen kapitalen Gewährleistungs- und Reputationsfolgen.
 Um Lebensdauer-dominierende Schädigungsmechanismen unter multivariaten Beanspruchungskollektiven empirisch und ausfallbasiert zu quantifizieren und gleichzeitig ressourcenintensive Prüfzeiten zu minimieren, ist die methodische Kopplung von statistischer Versuchsplanung - \textit{\ac{DoE}} - mit der \textit{\ac{EoL}}-Erprobung durch \ac{ALT} zwingend erforderlich.
 
@@ -29,12 +29,21 @@ An dieser methodischen Schnittstelle offenbart sich jedoch eine fundamentale Dis
 Klassische Konzepte der \textit{\ac{RSM}} und etablierte Versuchsdesigns (wie das \textit{\ac{CCD}}) sind stochastisch und topologisch strikt auf Interpolation ausgelegt \cite{Rigdon.2022,Kremer.2021}.
 Ihre geometrische Struktur minimiert die Schätzvarianz exakt im Zentrum des experimentellen Versuchsraums.
 Die angewandte Zuverlässigkeitsmodellierung erfordert hingegen die Überbrückung zweier räumlich getrennter Domänen:
-Um physikalische Ausfälle innerhalb strenger ökonomischer Restriktionen zu provozieren, muss die \ac{ALT}-Prüfung zwingend im Hochlastbereich erfolgen - im \textit{Test-Parameterraum}.
+Um physikalische Ausfälle innerhalb strenger ökonomischer Restriktionen zu provozieren, muss die \ac{ALT}-Prüfung  im Hochlastbereich erfolgen - im \textit{Test-Parameterraum}.
 Die prädiktive Anwendung der erzeugten Modelle - die Absicherung der Systemlebensdauer - verlangt jedoch eine Prognose unter moderaten Feldbedingungen - im \textit{Betriebs-Parameterraum}.
-Da der experimentelle Prüfraum und der reale Betriebsraum topologisch getrennt sind, wird das Regressionsmodell unweigerlich zur fernen Extrapolation gezwungen.
+Da der experimentelle Prüfraum und der reale Betriebsraum topologisch getrennt sind, wird das Regressionsmodell unweigerlich zur fernen Extrapolation gezwungen, vergleiche Abbildung~\ref{fig:abb1.01_extrapolation}.
+
+\begin{figure}[htbp]
+      \centering
+      \setlength\figurewidth{0.6\textwidth}
+      \setlength\figureheight{7cm}
+      \input{plots/ma_abb1.01_alt_illu}
+      \caption{Schematische Darstellung des Zusammenhangs von \textit{Betriebs-Parameterraum} und \textit{Test-Parameterraum} für die Anwendung von \ac{ALT} in einem normalisierten Raum mit zwei Einflussparametern $\sym{x}_1$ und $\sym{x}_2$.}
+      \label{fig:abb1.01_extrapolation}
+\end{figure}
 
 Dieser strukturelle Widerspruch zwischen einem interpolationsoptimierten Versuchsentwurf und der extrapolationsbasierten Zu\-ver\-läs\-sig\-keits\-an\-wen\-dung führt in der Prüf\-praxis zu einer drastischen Fehl\-al\-lo\-ka\-tion ex\-pe\-ri\-men\-tel\-ler Ressourcen:
-Stand\-ard-\acp{DoE} konzentrieren ihre maximale Schätzpräzision im prädiktiv irrelevanten aber ökonomisch interessanten Hochlastbereich, während die Vorhersagegüte entlang des kritischen Extrapolationspfads in Richtung der realen Einsatzbedingungen kollabiert und die Prädiktionsvarianz massiv divergiert.
+Stand\-ard-\acp{DoE} konzentrieren ihre maximale Schätzpräzision im prädiktiv irrelevanten aber ökonomisch interessanten Test-Parameterraum des Hochlastbereichs, während die Vorhersagegüte entlang des kritischen Extrapolationspfads in Richtung der realen Einsatzbedingungen kollabiert und die Prädiktionsvarianz massiv divergiert.
 Die unmodifizierte Anwendung klassischer, zentrums-fokussierter Versuchspläne in der Lebensdauererprobung generiert demnach lediglich Scheingenauigkeiten im unmittelbaren Prüfraum, induziert am maßgeblichen Feld-Betriebspunkt jedoch unkontrollierbare stochastische Unsicherheiten.
 
 \section{Beitrag dieser Arbeit} \label{sec:beitrag}
@@ -46,14 +55,14 @@ Der wissenschaftliche Kern der Arbeit besteht folglich in der gezielten topologi
 Der wissenschaftliche Beitrag gliedert sich somit in \replaced[id=Daz, comment={Kap 4 raus}]{drei}{ vier} zentrale Kernelemente:
 
 \begin{itemize}
-    \item \textbf{Quantifizierung topologischer Resilienz:}\\
-          Systematischer, simulativer Nachweis mittels Monte-Carlo-Methoden, dass klassische \acp{RSD} eine signifikante Robustheit gegenüber praxis\-in\-duzierten, \replaced[id=Daz, comment={allgemeiner}]{strukturellen Modifikationen}{Orthogonalitätsabweichungen} aufweisen.
-          Hier\-aus werden neben der methodischen Existenz eines nutzbaren geometrischen \textit{Gestaltungsbudgets} auch die adäquaten Bewertungsmetriken für die Versuchsplaneignung abgeleitet.
-    \item \textbf{Adaptive Versuchsplanung und richtungs-sensitive Varianzbewertung:}\\
-          Pro\-ak\-tive Umwidmung des identifizierten Gestaltungsbudgets zur gezielten Anpassung des Versuchsplans in Richtung des angestrebten Prognosebereichs im Feld-Parameterraum, formalisiert im adaptiven \textit{\ac{EmALT}-Design}.
-          Zur objektiven Quantifizierung des stochastischen Leistungsgewinns wird begleitend der \textit{\ac{EVG}} als neuartiges Bewertungswerkzeug eingeführt, welches die Prognoseunsicherheit zum Prädiktionspunkt gerichtet erfasst.
-    \item \textbf{Ökonomische Synthese:}\\
-          Etablierung einer ganzheitlichen Bewertungsmetrik zur simultanen Bilanzierung von statistischer Trennschärfe, Extrapolationsunsicherheit und realen Prüfstandskosten.
+      \item \textbf{Quantifizierung topologischer Resilienz:}\\
+            Systematischer, simulativer Nachweis mittels Monte-Carlo-Methoden, dass klassische \acp{RSD} eine signifikante Robustheit gegenüber praxis\-in\-duzierten, \replaced[id=Daz, comment={allgemeiner}]{strukturellen Modifikationen}{Orthogonalitätsabweichungen} aufweisen.
+            Hier\-aus werden neben der methodischen Existenz eines nutzbaren geometrischen \textit{Gestaltungsbudgets} auch die adäquaten Bewertungsmetriken für die Versuchsplaneignung abgeleitet.
+      \item \textbf{Adaptive Versuchsplanung und richtungs-sensitive Varianzbewertung:}\\
+            Pro\-ak\-tive Umwidmung des identifizierten Gestaltungsbudgets zur gezielten Anpassung des Versuchsplans in Richtung des angestrebten Prognosebereichs im Feld-Parameterraum, formalisiert im adaptiven \textit{\ac{EmALT}-Design}.
+            Zur objektiven Quantifizierung des stochastischen Leistungsgewinns wird begleitend der \textit{\ac{EVG}} als neuartiges Bewertungswerkzeug eingeführt, welches die Prognoseunsicherheit zum Prädiktionspunkt gerichtet erfasst.
+      \item \textbf{Ökonomische Synthese:}\\
+            Etablierung einer ganzheitlichen Bewertungsmetrik zur simultanen Bilanzierung von statistischer Trennschärfe, Extrapolationsunsicherheit und realen Prüfstandskosten.
 \end{itemize}
 
 
@@ -71,9 +80,9 @@ In \textbf{Kapitel~\ref{chap:casestudy}} erfolgt der Transfer in die industriell
 Anhand eines realen Datensatzes zur Lebensdauerprüfung von Lenksystem-Zahnriemen wird die Leistungsfähigkeit der entwickelten Methodik durch statistische Bestätigungsversuche empirisch verifiziert und der resultierende ökonomische Business Case dargelegt.
 Die Arbeit schließt in \textbf{Kapitel~\ref{chap:fazit}} mit einer Zusammenfassung der Kernergebnisse, einer kritischen Diskussion methodischer Anwendungsgrenzen sowie einem Ausblick auf weiterführende Forschungsfelder ab.
 \begin{figure}[htbp]
-    \centering
-    \def\svgwidth{0.9\textwidth}
-    \input{plots/ma_abb1_aufbau.pdf_tex}
-    \caption{Aufbau der Arbeit.}
-    \label{fig:aufbau}
+      \centering
+      \def\svgwidth{0.9\textwidth}
+      \input{plots/ma_abb1_aufbau.pdf_tex}
+      \caption{Aufbau der Arbeit.}
+      \label{fig:aufbau}
 \end{figure}

@@ -1,42 +1,42 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Kapitel 3 - Effiziente Testplanung für die multivariate Lebensdauererprobung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Effiziente Testplanung für die multivariate Lebensdauererprobung} \label{chap:ansatz}
 
 \section{Bewertung des Forschungsstandes} \label{sec:bewertung_stand}
 
 Der in Kapitel~\ref{chap:stand} dargelegte Stand der Forschung und Technik verdeutlicht, dass die Zuverlässigkeitstechnik und das \ac{DoE} profunde Methodenrepertoires bereitstellen.
-Die methodische Schnittmenge beider Felder - die Planung multivariater Lebensdauerversuche unter Berücksichtigung schiefer Verteilungen und Zensierungen im Rahmen von Weibull-\acp{GLM} - offenbart jedoch fundamentale Konflikte, welche den zwingenden Bedarf an weiterführender Forschung für die Ingenieurspraxis begründen.
+Die methodische Schnittmenge beider Felder - die Planung effizienter multivariater Lebensdauerversuche unter Berücksichtigung schiefer Verteilungen und Zensierungen im Rahmen von Weibull-\acp{GLM} - offenbart jedoch fundamentale Konflikte, welche den zwingenden Bedarf an weiterführender Forschung für die versuchstechnische Praxis beim Einsatz von multivariatem \ac{ALT} begründen.
 
-Zur systematischen Einordnung dieser Defizite bedarf es zunächst einer grundlegenden Definition der zentralen Bewertungsmetriken, wie sie aus ingenieurwissenschaftlicher Sicht für die Lebensdauererprobung durch \ac{ALT} relevant sind:
+Zur systematischen Einordnung dieser Defizite bedarf es zunächst einer grundlegenden Definition der zentralen Bewertungsmetriken, wie sie aus ingenieurwissenschaftlicher Sicht für die Lebensdauererprobung relevant sind.
+Für die vorliegende Arbeit wird daher definiert, dass ein Versuchsplan nur dann als adäquat anwendbar gilt, wenn er die folgenden beiden Zielgrößen erfüllt:
 \begin{itemize}
-    \item \textbf{Statistische Effektivität:} Die Fähigkeit eines Versuchsplans, einen physikalischen Schädigungsmechanismus stochastisch verlässlich mit geforderter \sym{power} sowie hinreichender Parameter-Schätzgüte zu approximieren, um die Lebensdauer im Feld unverzerrt prognostizieren zu können: ef\-fek\-ti\-ve \ac{GLM}-Pa\-ra\-me\-ter\-schätz\-ung, Trenn\-schär\-fe und Prognosefähigkeit.
-    \item \textbf{Ökonomische Effizienz:} Die Allokation minimaler Ressourcen (restriktiver Stichprobenumfang $\sym{N}$ und adäquate Erprobungsdauer) zur Erreichung dieser geforderten statistischen Effektivität.
+    \item \textbf{Statistische Effektivität:} Die Fähigkeit eines Versuchsplans, eine physikalische Kausalität (entsprechend der Effekte, der Degradationen oder der Schädigungsmechanismen) hinsichtlich der Lebensdauer eines Produkts stochastisch verlässlich mit geforderter \sym{power} sowie hinreichender Parameter-Schätzgüte zu approximieren.
+          So soll die Lebensdauer über den relevanten Parameterraum hinweg unverzerrt prognostiziert werden können.
+          Demzufolge werden hierbei eine effektive \ac{GLM}-Parameterschätzung, die Trennschärfe sowie die Prognosefähigkeit bzw. die Prädiktionsvarianz als Maßstäbe herangezogen.
+    \item \textbf{Ökonomische Effizienz:} Die Allokation minimaler Ressourcen (allen voran ein restriktiver Stichprobenumfang $\sym{N}$ und eine adäquate Erprobungsdauer) zur Erreichung dieser geforderten statistischen Effektivität.
 \end{itemize}
-Ein Lebensdauertest ist folglich nur dann praxistauglich, wenn er das Investitionsrisiko der physikalischen Erprobung minimiert, ohne die Prädiktions-Garantie für Feldbetriebspunkte zu kompromittieren.
-
-Ausgehend von diesem inhärenten Zielkonflikt erfordert die kritische Evaluation etablierter Versuchsplanungsstrategien einen mehrdimensionalen Bewertungsmaßstab.
-Die nachfolgende Analyse des Forschungsstandes stützt sich daher auf vier relevante Leitgrößen der ingenieurwissenschaftlichen Praxis: die \textit{topologische Robustheit} gegenüber fehlendem stochastischen Vorwissen, die \textit{Prognosefähigkeit} im Extrapolationsraum, die \textit{methodische Quantifizierbarkeit} der Trennschärfe als Garantie-Metrik für einen erfolgreichen Testausgang sowie die \textit{strukturelle Flexibilität} für eine sequenzielle Versuchsadaption bei technischen Anwendungen.
+Ein Lebensdauertest ist folglich nur dann praxistauglich, wenn er das Investitionsrisiko der physikalischen Erprobung minimiert, ohne die Garantie zur Effekterkennung, deren Approximation selbst sowie die Anwendbarkeit der Modellierung zu kompromittieren.
+Demnach qualifizieren sich diese Metriken sowohl für die Bestandsaufnahme im aktuellen Forschungsumfeld als auch für die unmittelbare Planung effizienter, multivariater Versuchspläne.
 Anhand dieses Anforderungsprofils werden die methodischen Defizite aktueller Forschungsansätze im Folgenden diskutiert.
+Dies untergliedert sich in die methodische Dekonstruktion der optimalen Versuchsplanung (Abschnitt~\ref{subsec:paradoxon}), die Einordnung der beschränkten analytischen Quantifizierbarkeit stochastischer Trennschärfe als Optimierungsgröße (Abschnitt~\ref{subsec:limitierung_power}) sowie die finale Synthese, welche in die Ableitung der in dieser Arbeit adressierten Forschungslücke mündet (Abschnitt~\ref{subsec:synthese_luecke}).
 
 \subsection{Das methodische Paradoxon ALT-optimaler GLM-Designs} \label{subsec:paradoxon}
 
 Der Einsatz computergenerierter, algorithmisch optimaler Versuchspläne (\textit{D}-, \textit{I}- oder \textit{U}-Optimalität) erscheint aus theoretischer Sicht zunächst als logische Konsequenz, um maßgeschneiderte, effiziente Designs für \ac{ALT} zu entwerfen.
-Im Kontext der Le\-bens\-dau\-er-Da\-ten\-a\-na\-ly\-se führt dies jedoch in ein methodisches Paradoxon \cite{Goos.2011}.
-\textcite{Khuri.2006}, \textcite{Stufken.2012} und \textcite{Yang.2011} weisen bereits darauf hin, dass insbesondere die \textit{lokale Optimalität} dieser Pläne immer dann eine fundamentale Limitation darstellt, wenn die wahren Modellparameter $\sym{theta}$ (allen voran der Formparameter $\sym{b}$) a priori nicht bekannt oder abschätzbar sind.
+Im Kontext der Lebensdauer-Datenanalyse führt dies jedoch in ein methodisches Paradoxon \cite{Goos.2011}.
+\textcite{Khuri.2006}, \textcite{Stufken.2012} und \textcite{Yang.2011} weisen darauf hin, dass insbesondere die \textit{lokale Optimalität} dieser Pläne immer dann eine fundamentale Limitation darstellt, wenn die wahren Modellparameter $\sym{theta}$ (allen voran der Formparameter $\sym{b}$) \textit{a priori} nicht bekannt oder abschätzbar sind.
 
 Forschungsarbeiten zu \ac{GLM}-optimalen Designs für \ac{ALT} von \textcite{Monroe.2010} und \textcite{Seo.2015} adressieren dieselbe Problematik und belegen, dass die zu optimierende Fisher-Informationsmatrix bei Weibull-Verteilungen (gemäß Gleichung~\ref{eq:fim_glm_w} und~\ref{eq:fim_o_glm}) eine zwingende Parameterabhängigkeit aufweist.
-Die Versuchsplanung erfordert damit unweigerlich stochastisches Vorwissen, welches sich, etwa im Fall der \textit{U}-Optimalität für Prognostik in relevanten Betriebsbereichen, in der zwingenden Vorgabe theoretischer \textit{Planning Values} für die Regressionskoeffizienten in $\sym{Beta}$ und den Formparameter $\sym{b}$ manifestiert.
+Die Versuchsplanung erfordert damit unweigerlich stochastisches Vorwissen, welches sich, etwa im Fall der \textit{U}-Optimalität für Prognostik in relevanten Betriebsbereichen, in der Vorgabe theoretischer \textit{Planning Values} für die Regressionskoeffizienten in $\sym{Beta}$ und den Formparameter $\sym{b}$ manifestiert.
 \textcite{Monroe.2011} erweitern diesen Ansatz durch iteratives Aktualisieren mittels Bayes'scher \textit{Updating}-Prozesse, um die lokale Optimalität sukzessive an die physikalische Realität anzupassen und so Effektivität und Effizienz zu maximieren.
 In konservativer Annahme muss jedoch davon ausgegangen werden, dass dem pragmatisch handelnden Ingenieur im Maschinen- oder Fahrzeugbau im realen Projektumfeld a priori Kenntnisse dieses Detailgrads zumeist vollständig fehlen.
-Stimmen anfängliche Schätzungen nicht mit der physikalischen Realität überein, entartet das \ac{GLM}-optimale Testdesign und verliert seine statistische Integrität (\enquote{The designs may be poor if the choice of values is far from the true parameter values} \textcite[S.2]{Stufken.2012}).
-Kompensationsstrategien entgegen der Design-Entartung werden an dieser Stelle jedoch nur unzureichend adressiert, da hier nur durch drastische Erhöhung des Stichprobenumfangs oder signifikante Verlängerung etwaiger Zensierungszeiten die statistische Effektivität wiederhergestellt sei \cite{Monroe.2010}
+Stimmen anfängliche Schätzungen nicht mit der physikalischen Realität überein, entartet das \ac{GLM}-optimale Testdesign und verliert seine statistische Integrität (\enquote{The designs may be poor if the choice of values is far from the true parameter values} \textcite[S.\,2]{Stufken.2012}).
+Kompensationsstrategien entgegen dieser Design-Entartung werden in der Theorie so durch drastische Erhöhung des Stichprobenumfangs $\sym{N}$ oder durch signifikante Verlängerung etwaiger Zensierungszeiten adressiert \cite{Monroe.2010}, was die Methode für die industrielle Praxis jedoch wirtschaftlich unbrauchbar macht.
 
-Auch die in Forschungsarbeiten von \textcite{NunezAres.2020} und \textcite{Goos.2025} favorisierten \ac{OMARS}-Designs lösen diesen Konflikt aus ingenieurwissenschaftlicher Perspektive nicht auf, da sie nicht explizit für den \ac{ALT}-Kontext entwickelt wurden.
-Sie zielen zwar auf strukturelle Flexibilität und die orthogonale Schätzung von Haupteffekten in einem einzigen experimentellen Schritt (\textit{One-Step Approach}) ab, erkaufen dies jedoch durch ein algorithmisch kontrollierte Vermengung mit Wechselwirkungen.
-Vor allem aber adressieren sie nicht den fundamentalen \ac{ALT}-Konflikt: Die zwingende Notwendigkeit einer \textit{Extrapolation} in den Feldbetrieb steht der inhärenten Optimierung dieser Pläne auf \textit{Interpolation} im Zentrum des Versuchsraums diametral entgegen.
-Da dem pragmatischen Ingenieur im Vorfeld zumeist unbekannt ist, wie viele Faktoren tatsächlich relevant sind und ob diese in erster oder zweiter Ordnung wirken, beraubt ihn der einstufige Versuchsplanansatz der strategischen Rückfallebene einer sequenziellen Erweiterung (vgl. Abschnitt~\ref{subsec:strategie}).
-
+Auch die in Forschungsarbeiten von \textcite{NunezAres.2020} und \textcite{Goos.2025} favorisieren optimale Testplaungen durch \ac{OMARS}-Designs.
+Aus ingenieurwissenschaftlicher Perspektive lösen jedoch auch diese Ansätze nicht das fundamentale Problem der inhärenten Parameterabhängigkeit.
+Sie zielen auf strukturelle Flexibilität und die orthogonale Schätzung von Haupteffekten in einem einzigen experimentellen Schritt (\textit{One-Step Approach}) ab, erkaufen dies jedoch durch eine algorithmisch kontrollierte Vermengung von Wechselwirkungen.
+Vor allem aber adressieren sie nicht den fundamentalen \ac{ALT}-Konflikt: Die Notwendigkeit einer über den Raffungsfaktor hinweg reichenden \textit{Extrapolation} in den Feldbetrieb steht der inhärenten Optimierung dieser Pläne auf \textit{Interpolation} im Zentrum des Versuchsraums diametral entgegen.
+Konservativ wird in der Testplanung angenommen, dass im Vorfeld zumeist unbekannt ist, wie viele Faktoren tatsächlich relevant sind und ob diese in erster oder zweiter Ordnung wirken.
+Schlussfolgernd beraubt ein \ac{OMARS}-Design den Prüfingenieur der essenziellen strategischen Rückfallebene, eine sequenzielle Erweiterung von in der Regel kostenintensiven Versuchspunkten durchzuführen (vgl. Abschnitt~\ref{subsec:strategie}).
 
 \subsection{Diskrepanz zwischen geometrischer Optimalität und stochastischer Trennschärfe} \label{subsec:limitierung_power}
 
@@ -44,12 +44,12 @@ Ein weiteres fundamentales Forschungsdefizit besteht in der Entkopplung von geom
 Wie in Abschnitt~\ref{subsec:optimal} dargelegt, basieren klassische Metriken auf der Minimierung der Prädiktionsvarianz.
 Die Varianz allein garantiert jedoch nicht, dass ein physikalischer Effekt überhaupt signifikant vom Rauschen getrennt werden kann.
 
-Im klassischen \ac{OLS}-Umfeld ließe sich dies noch über den Nichtzentralitätsparameter $\symsub{delta}{idx_nc}$ analytisch korrelieren.
-Im Kontext der Lebensdauerdatenanalyse, bei der jedoch asymmetrische Verteilungen und zensierte Daten vorliegen, lassen sich diese Wahrscheinlichkeiten folglich nicht mehr über klassische \textit{\sym{t}-Tests} ableiten.
+Im klassischen \ac{OLS}-Umfeld lässt sich dies noch über den Nichtzentralitätsparameter $\symsub{delta}{idx_nc}$ analytisch korrelieren.
+Im Kontext der Lebensdauerdatenanalyse, bei der grundlegend mit asymmetrischer Datenverteilungen und Zensierung zu rechnen ist, lassen sich diese Wahrscheinlichkeiten folglich nicht mehr über klassische \textit{\sym{t}-Tests} ableiten.
 Ausgehend von den Arbeiten zu \acp{GLM} \cite{Nelder.1972} wird die Signifikanz der Koeffizienten vorzugsweise über \textit{\acp{LR-Test}} (oder approximativ über \textit{Wald-Tests}) ermittelt \cite{Rigdon.2022,Meeker.2022}.
-Da für diese komplexen Verteilungsmodelle - insbesondere unter dem Einfluss asymmetrischer Versuchsraumänderungen und kleiner Stichprobenumfänge $\sym{n}$ - keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, muss entsprechend \textcite{Kremer.2021} die Untersuchung numerisch mittels \textit{\ac{MCS}} erfolgen \cite{Arndt.2022}.
+Da für diese komplexen Verteilungsmodelle - insbesondere unter dem Einfluss asymmetrischer Versuchsraumänderungen und kleiner Stichprobenumfänge $\sym{N}$ - keine geschlossenen analytischen Lösungen zur Berechnung der Trennschärfe existieren, muss entsprechend \textcite{Kremer.2021} die Untersuchung numerisch mittels \textit{\ac{MCS}} erfolgen \cite{Arndt.2022}.
 Hierbei wird der geplante Versuchsplan iterativ unter Vorab-Annahmen eines vorliegenden Regressionsmodells simuliert, verrauscht und zensiert, um den Anteil korrekter Signifikanz-Entscheidungen ($\sym{p-Wert} < \sym{alpha}$) bei virtueller Design-Anwendung als empirische $\sym{power}$ zu extrahieren.
-Die Forschungslücke manifestiert sich darin, dass die Auswirkungen asymmetrischer Versuchsplanmodifikationen auf diese Trennschärfe nicht empirisch untersucht sind.
+Die Forschungslücke manifestiert sich darin, dass die Auswirkungen asymmetrischer Versuchsplanmodifikationen auf diese Trennschärfe empirisch nicht hinreichend untersucht sind.
 Aus Praxisperspektive ist die $\sym{power}$ als quantitative Erfolgsmetrik für den \textit{Return-on-Investment} eines Versuchs zu interpretieren, doch ihre Korrelation zu den reinen geometrischen Optimalitätskriterien am Extrapolationspunkt ist bei individuellen Designmodifikationen bislang unzureichend beleuchtet.
 
 Darüber hinaus wird die in der klassischen Versuchsplanung oft rein geometrisch betrachtete Design-Güte im Kontext der Zuverlässigkeitstechnik durch eine zeitliche Dynamik überlagert.
@@ -58,61 +58,59 @@ Ein Versuchsplan ist folglich nur dann im Sinne der ökonomischen Effizienz trag
 Dieser fundamentale Zielkonflikt zwischen geometrischem Informationsgewinn und realen zeitlichen Prüfstandskosten bleibt in gängigen statistischen Gütekriterien und Optimalitäten jedoch vollständig unberücksichtigt.
 
 \subsection{Synthese des Forschungsstandes und Ableitung der Forschungslücke} \label{subsec:synthese_luecke}
-Aus der Diskrepanz zwischen dem theoretischen Anspruch streng \textit{lokaler}, \ac{GLM}-op\-ti\-ma\-ler Designs und der strukturellen Starrheit einstufiger \textit{One-Step}-Ansätze leitet sich für die versuchstechnische Praxis die zwingende Notwendigkeit einer global robusteren Vorgehensweise ab.
-Anstatt ein künstliches Optimum zu berechnen, das bei geringfügigen Parameterabweichungen (\textit{Planning Values}) in seiner Modellbildung kollabiert, erweist sich eine perspektivische, gezielte Adaption bewährter, topologisch fehlertoleranter Standard-Designs als der methodisch zielführendste Pfad.
+
+Aus der Diskrepanz zwischen dem theoretischen Anspruch streng \textit{lokaler}, \ac{GLM}-optimaler Designs und der strukturellen Starrheit einstufiger \textit{One-Step}-Ansätze leitet sich für die versuchstechnische Praxis die  Notwendigkeit einer global robusteren Vorgehensweise ab.
+Anstatt ein künstliches Optimum zu berechnen, das bei geringfügigen Parameterabweichungen (\textit{Planning Values}) in seiner Modellbildung kollabiert, erweist sich eine perspektivische, gezielte Adaption bewährter, topologisch fehlertoleranter Standard-Designs als der methodisch zielführende Pfad.
 
 Dabei dürfen isolierte Optimalitätskriterien jedoch nicht als pauschales Entwurfsziel fungieren.
-Um den eingangs definierten Leitgrößen der ingenieurwissenschaftlichen \ac{ALT}-Praxis gerecht zu werden, muss das Anforderungsprofil an ein Testdesign in einen multidimensionalen Benchmark überführt werden, der exakt vier Zieldimensionen abbildet:
+Um den eingangs definierten Leitgrößen der ingenieurwissenschaftlichen \ac{ALT}-Praxis gerecht zu werden, muss das Anforderungsprofil an ein Testdesign in einen multidimensionalen Benchmark überführt werden, der vier Zieldimensionen abbildet:
 \begin{itemize}
-    \item \textbf{Modellierungsgüte (A-, D-Kriterien):} Adressiert die geforderte \textit{topologische Robustheit}. Sie sichert ab, dass die \ac{GLM}-Parameterschätzung ($\hat{\sym{theta}}$) auch bei Modifikationen des Designs und fehlendem Vorwissen numerisch stabil bleibt \cite{Montgomery.2020}.
-    \item \textbf{Prognosefähigkeit (\ac{SPV}, G-, I-, V-Kriterien):} Quantifiziert die \textit{Prognosefähigkeit im Prädiktionsraum}. In der Lebensdauererprobung besitzt diese absolute Priorität, da die präzise Vorhersage der Zuverlässigkeit $\sym{R}(\sym{t})$ im zumeist abweichenden \textit{Betriebs-Parameterraum} das eigentliche Versuchsziel darstellt \cite{Myers.2016}.
+    \item \textbf{Modellierungsgüte (A-, D-Kriterien):} Adressiert die geforderte \textit{topologische Robustheit}. Sie sichert ab, dass die \ac{GLM}-Parameterschätzung in $\hat{\sym{theta}}$ auch bei Modifikationen des Designs und fehlendem Vorwissen numerisch stabil bleibt \cite{Montgomery.2020}.
+    \item \textbf{Prognosefähigkeit (\ac{SPV}, G-, I-, U-, V-Kriterien):} Quantifiziert die \textit{Prognosefähigkeit im Prädiktionsraum}. In der Lebensdauererprobung besitzt diese absolute Priorität, da die präzise Vorhersage der Zuverlässigkeit $\sym{R}(\sym{t})$ im zumeist abweichenden \textit{Betriebs-Parameterraum} das eigentliche Versuchsziel darstellt \cite{Myers.2016,Rigdon.2022}.
     \item \textbf{Testdauer und Ressourceneffizienz:} Gewährleistet die \textit{ökonomische Effizienz} sowie die \textit{strukturelle Flexibilität}. Sie limitiert die Versuchsplanung durch die harte Realität exponentiell ansteigender \ac{EoL}-Prüfzeiten sowie Prüfstandskosten $\sym{Er}(\symsub{C}{idx_cost_total})$ und bewertet die zeitliche Skalierung der Informationsgewinnung \cite{Arndt.2023b}.
     \item \textbf{Trennschärfe (\sym{power}):} Dient als \textit{Garantie-Metrik} für einen erfolgreichen Testausgang. Ein theoretisch varianzminimales Design, das in der Praxis den Nachweis essenzieller physikalischer Effekte verfehlt, ist industriell wertlos (Anforderungshorizont: $\sym{power} \ge 80\,\%$) \cite{Cohen.1988, Rittmaier.2025}.
 \end{itemize}
 
 Diese vier Zieldimensionen verhalten sich in der realen Versuchspraxis zumeist gegensätzlich zueinander:
-Eine extreme Beschleunigung der Belastungen senkt zwar die Testdauer, zerstört jedoch die Prognosegüte im Feld; ein reiner Fokus auf lokale \textit{D}-Optimalität maximiert zwar die Parameterpräzision, ignoriert jedoch die asymmetrische Extrapolationsrichtung und die tatsächliche \sym{power}.
+Eine extreme Beschleunigung der Belastungen senkt zwar die Testdauer, kompromittiert jedoch die Prognosegüte im Feld.
+Ein reiner Fokus auf lokale \textit{D}-Optimalität maximiert zwar die Schätzpräzision für Effekt-Koeffizienten, ignoriert jedoch die asymmetrische Extrapolationsrichtung und die tatsächliche \sym{power}.
+Die Ausrichtung auf \textit{U}-Optimalität minimiert zwar theoretisch die Prädiktionsvarianz am fernen Betriebspunkt, erzwingt jedoch eine Konzentration der Versuchspunkte auf niedrige Stressniveaus; dies lässt die Erprobungsdauer massiv eskalieren und zieht bei fehlerhaften \textit{Planning Values} unwirtschaftliche Kompensationsmaßnahmen in Form von erhöhtem $\sym{N}$ oder drastisch verlängerten Zensierungszeiten nach sich.
+Ebenso reduzieren moderne \ac{OMARS}-Designs zwar den Stichprobenumfang durch einen einstufigen Versuchsaufbau (\textit{One-Step}), erkaufen diese strukturelle Effizienz jedoch durch eine unvermeidbare Vermengung der Wechselwirkungen und limitieren die stochastische Modellbildung durch ihre systemimmanente Beschränkung auf den Hyperwürfel $[-1, 1]^{\sym{k}}$ strikt auf die reine Interpolation.
 Eine effiziente Testplanung erfordert folglich zwingend einen strategischen Kompromiss.
 
-Als methodisches Fundament für diesen Kompromiss zeichnet sich insbesondere das \ac{CCD} aus, welches sich als robuster Standard für die Modellierung nichtlinearer Zusammenhänge bewährt hat \cite{Kleppmann.2020,Rigdon.2022}.
-Gegenüber alternativen Designs garantiert es durch seine \textit{Rotierbarkeit} sowie eine hohe \textit{D}-Effizienz ein vorteilhaftes Verhältnis zwischen Modellierungsumfang und benötigter Stichprobengröße.
-Zudem erlaubt es den strategisch essenziellen, sequenziellen Aufbau - vom Screening über augmentierte \acp{ZP} hin zu ergänzten \acp{SP} \cite{Montgomery.2020}.
-Basierend auf dem am \ac{IMA} generierten Wissensstand \cite{Kremer.2021} ist das \ac{CCD} im Rahmen des \ac{L-DoE} folglich bestens geeignet, um erwartungstreue Schätzungen und Vertrauensbereiche zu generieren \cite{Kremer.2019b, Kremer.2019c}.
+Als methodisches Fundament für diesen Kompromiss zeichnet sich insbesondere das \ac{CCD} aus, welches sich als robuster Standard - insbesondere für quadratische Ansätze der Lebensdauermodellierung - bewährt hat \cite{Kleppmann.2020,Rigdon.2022,Kremer.2021}.
+Gegenüber alternativen Designs garantiert es durch seine \textit{Rotierbarkeit} sowie eine hohe \textit{D}-Effizienz ein vorteilhaftes Verhältnis zwischen Modellierungsumfang und benötigter Stichprobengröße \cite{Rigdon.2022}.
+Zudem erlaubt es den strategisch starken, sequenziellen Aufbau - vom Screening über augmentierte \acp{ZP} hin zu ergänzten \acp{SP} \cite{Montgomery.2020,Bisgaard.1992}.
+Basierend auf dem am \ac{IMA} generierten Wissensstand \cite{Kremer.2021} ist das \ac{CCD} im Rahmen des \ac{L-DoE} folglich gleichermaßen bekannt sowie geeignet, um erwartungstreue Schätzungen und Vertrauensbereiche zu generieren \cite{Kremer.2019b, Kremer.2019c}.
 
 Für die spezifischen Anforderungen der \ac{ALT}-Erprobung erweist sich die starre geometrische Symmetrie des klassischen \ac{CCD} jedoch als limitierend.
 Die erforderliche \textit{Extrapolation} steht im direkten Konflikt mit der mathematischen Optimierung klassischer \acp{RSD} auf \textit{Interpolation} im Zentrum des Versuchsraums \cite{Box.1951}.
 Bestehende Ansätze zur Modifikation von \acp{CCD} \cite{Ahn.2015, Donev.2004, Ardakani.2011} adressieren diese Diskrepanz nicht proaktiv für den fernen Extrapolationsraum, sondern fokussieren sich zumeist auf den Erhalt generischer Optimalitätskriterien bei Ausfällen \cite{Arndt.2022, Rittmaier.2025}.
 
 Genau an diesem Konfliktpunkt verankert sich der methodische Beitrag der vorliegenden Arbeit.
-Die inhärente strukturelle Überbestimmtheit des \ac{CCD} (beispielsweise durch mehrfache Zentralpunkt-Replikationen) birgt ein bislang ungenutztes Potenzial, welches hier als geometrisches \textit{Gestaltungsbudget} für die Prädiktion-basierte Designoptimierung definiert wird.
-Wird die unantastbare geometrische Symmetrie des Plans kritisch hinterfragt, können zur Disposition stehende Versuchspunkte aus dem originären Plan hinsichtlich ihrer Position gezielt modifiziert werden.
+Die inhärente strukturelle Überbestimmtheit des \ac{CCD} (beispielsweise durch mehrfache Zentralpunkt-Replikationen) birgt ein ungenutztes Potenzial, welches hier als geometrisches \textit{Gestaltungsbudget} für die prädiktionsbasierte Designoptimierung definiert wird.
+Wird die geometrische Symmetrie des Plans kritisch hinterfragt, können zur Disposition stehende Versuchspunkte aus dem originären Plan hinsichtlich ihrer Position gezielt modifiziert werden.
 Die identifizierte Forschungslücke besteht somit darin, dieses Gestaltungsbudget nicht primär zur passiven Kostenreduktion zu streichen.
+Vielmehr sollen diese verfügbaren Stützstellen als dedizierte \textit{Extrapolations-Ankerpunkte} exakt dorthin verlagert werden, wo der perspektivische Prognosepunkt im Feldbetrieb allokiert ist, um das Regressionsmodell auf dem Extrapolationspfad stochastisch abzustützen.
 
-Dieser methodische Schritt wird durch Erkenntnisse der Optimalitätsforschung theoretisch legitimiert: \textcite{Seo.2015} sowie \textcite{Monroe.2010} belegen, dass algorithmisch auf eine Feldbetriebs-Prognose optimierte Designs (\textit{U}-Optimalität) von Natur aus eine massive topologische Asymmetrie erzwingen, indem sie einen erheblichen Großteil der Versuchspunkte auf das niedrigste Stressniveau allokieren.
-Zudem beweisen \textcite{Monroe.2008}, dass gezielt asymmetrische Designs in physikalisch restriktiven Versuchsräumen die Breite der Konfidenzintervalle für Parameterschätzungen im Vergleich zu starren konventionellen Designs drastisch reduzieren können.
-
-Um diese mathematisch bewiesenen Effizienzsprünge der Asymmetrie zu nutzen, ohne die Ausfallrisiken lokaler Optimalpläne in Kauf zu nehmen, formuliert diese Arbeit einen methodischen Brückenschlag:
-Die ungenutzten Stützstellen des robusteren \ac{CCD} sollen als dedizierte \textit{Extrapolations-Ankerpunkte} exakt dorthin verlagert werden, wo der perspektivische Prognosepunkt im Feldbetrieb allokiert ist, um das Regressionsmodell auf dem Extrapolationspfad stochastisch abzustützen.
-Auf diese Weise entsteht ein adaptiver Versuchsplan, der eine hin zur Prädiktionsvarianz optimierte Informationsgewinnung sicherstellt, während die parallel quantifizierte \sym{power} garantiert, dass der \textit{Return-on-Investment} des Lebensdauertests vollumfänglich gewahrt bleibt.
-
-
-Vielmehr sollen etwaige verfügbare Stützstellen als dedizierte Versuchspunkte exakt dorthin verlagert werden, wo der perspektivische Prognosepunkt im Feldbetrieb allokiert ist, um das Regressionsmodell auf dem Extrapolationspfad stochastisch abzustützen.
-Für diese neuartige, zielgerichtete Versuchspunkt-Allokation wird im Rahmen dieser Arbeit der Begriff der \textit{Extrapolations-Ankerpunkte} geprägt.
-Auf diese Weise kann ein adaptiver Versuchsplan entstehen, der einen optimalen Informationsgewinn für die Extrapolation sicherstellt, während die parallel quantifizierte \sym{power} garantiert, dass der \textit{Return-on-Investment} des Lebensdauertests vollumfänglich gewahrt bleibt.
+Dieser proaktive, methodische Schritt wird durch Erkenntnisse der Optimalitätsforschung theoretisch legitimiert: \textcite{Seo.2015} sowie \textcite{Monroe.2010} belegen, dass algorithmisch auf eine Feldbetriebs-Prognose optimierte Designs (\textit{U}-Optimalität) von Natur aus eine massive topologische Asymmetrie erzwingen, indem sie einen erheblichen Großteil der Versuchspunkte auf das niedrigste Stressniveau allokieren.
+Zudem beweisen \textcite{Monroe.2008}, dass gezielt asymmetrische Designs in physikalisch restriktiven Versuchsräumen die Breite der Konfidenzintervalle für Parameterschätzungen im Vergleich zu konventionellen, starren Designs drastisch reduzieren können.
+Um diese mathematisch nachgewiesenen Effizienzsprünge der Asymmetrie zu nutzen, ohne die Ausfallrisiken lokaler Optimalpläne in Kauf zu nehmen, formuliert diese Arbeit einen methodischen Brückenschlag:
+Auf Basis des \ac{CCD} entsteht ein adaptiver Versuchsplan, der eine hin zur Prädiktionsvarianz optimierte Informationsgewinnung in Extrapolationsrichtung sicherstellt, während die parallel quantifizierte \sym{power} garantiert, dass der \textit{Return-on-Investment} des Lebensdauertests gewahrt bleibt.
 
 \section{Forschungsfragen und wissenschaftliche Zielsetzung} \label{sec:forschungsfragen}
 
-Als methodisches Fundament für die multivariate Lebensdauererprobung dient in dieser Arbeit das Central Composite Design (\ac{CCD}).
-Diese Wahl begründet sich in fünf fundamentalen verfahrenstechnischen, physikalischen und statistischen Eigenschaften \cite{Box.1957, Meeker.2022, Myers.2016}:
+Als methodisches Fundament für die multivariate Lebensdauererprobung dient in dieser Arbeit somit das \ac{CCD} aus der Klasse der \acp{RSD}.
+Diese Wahl begründet sich zusammenfassend in fünf fundamentalen verfahrenstechnischen, physikalischen und statistischen Eigenschaften \cite{Box.1957, Meeker.2022, Myers.2016}:
 \begin{enumerate}
-    \item \textbf{Sequenzielle Augmentierbarkeit:} Ermöglicht den stufenweisen Ausbau vom linearen Screening zum vollwertigen quadratischen Modell und minimiert das ökonomische Fehlinvestitionsrisiko bei zeitintensiven Tests \cite{Bertsche.2022}.
+    \item \textbf{Sequenzielle Augmentierbarkeit:} Ermöglicht den stufenweisen Ausbau vom Screening zum vollwertigen quadratischen Modell und minimiert das ökonomische Fehlinvestitionsrisiko bei zeitintensiven Tests \cite{Bertsche.2022}.
     \item \textbf{Rotierbarkeit und Richtungsneutralität:} Bietet eine homogene Ausgangsbasis für die Prädiktionsgüte bei a priori unbekannter Lage des Zuverlässigkeitsoptimums \cite{Meeker.2022}.
     \item \textbf{Modellierung nichtlinearer Schädigungskinetik:} Die Abtastung auf fünf Faktorstufen erlaubt die Validierung physikalischer Beschleunigungsmodelle und die Detektion von Linearitätsgrenzen \cite{Yang.2007, Modarres.2017}.
     \item \textbf{Schätzung der reinen Systemstreuung:} Zentralpunkt-Replikationen ermöglichen die modellunabhängige Trennung von reinem Versuchsfehler (\textit{Pure Error}) und Modellanpassungsfehlern (\textit{Lack of Fit}) \cite{Meeker.2022}.
     \item \textbf{Topologische Fehlertoleranz:} Die symmetrische Grundstruktur garantiert eine extrem hohe Robustheit gegenüber unvorhergesehenen Zensierungen (\textit{Missing Data}) am Prüfstand \cite{Montgomery.2020}.
 \end{enumerate}
 
-Die vorliegende Arbeit verfolgt die wissenschaftliche Zielsetzung, diese überlegene Grundarchitektur nicht zu verwerfen, sondern den ihr zugrundeliegenden Ansatz zur Augmentierung konsequent auf den Extrapolationsraum auszuweiten.
+Die vorliegende Arbeit verfolgt die wissenschaftliche Zielsetzung, diese für die Lebensdauererprobung überlegene Grundarchitektur nicht zu verwerfen, sondern den ihr zugrundeliegenden Ansatz zur Augmentierung konsequent auf den Extrapolationsraum auszuweiten.
 Die forschungsleitende Hypothese besteht darin, dass der Informationsgewinn für die Feldbetriebs-Prognose nicht durch eine kostenintensive Vergrößerung der Prüflingsanzahl erzwungen werden muss.
 Vielmehr wird postuliert, dass sich durch die Identifikation ungenutzter geometrischer Freiheitsgrade ein Gestaltungsbudget ableiten lässt, dessen strategische Reinvestition als Extrapolations-Ankerpunkte ein stochastisches Nullsummenspiel im Versuchsraum ermöglicht.
 
@@ -149,11 +147,17 @@ Zur systematischen Beantwortung dieser übergeordneten Problemstellung werden dr
             }%
         }%
         \vspace{0.5em}
-        \begin{itemize}
-            \item[\textbf{1:}] Welches geometrische Gestaltungsbudget lässt sich aus der strukturellen Überbestimmtheit klassischer \acp{CCD} ableiten, ohne die grundlegende topologische Stabilität der multivariaten \ac{GLM}-Parameterschätzung zu gefährden?
-            \item[\textbf{2:}] Wie lassen sich diese freigewordenen Versuchspunkte als richtungsspezifische Extrapolations-Ankerpunkte allokieren, und mit welchen Metriken kann die Wahrung der statistischen Trennschärfe (\sym{power}) hierbei quantitativ garantiert werden?
-            \item[\textbf{3:}] Wie lässt sich der fundamentale Zielkonflikt zwischen stochastischer Vorhersagegüte und exponentiell skalierenden Prüfstandskosten in einem ökonomischen Bewertungsmodell abbilden, um ein skalares Effizienzoptimum für die Testplanung zu ermitteln?
-        \end{itemize}
+
+        % --- EINGRIFF: Die Minipage erzwingt einen rechten Rand von 1.5em ---
+        \begin{minipage}{\dimexpr\linewidth-1.5em\relax}
+            \begin{itemize}
+                \item[\textbf{1:}] Welches geometrische Gestaltungsbudget lässt sich aus der strukturellen Überbestimmtheit klassischer \acp{CCD} ableiten, ohne die grundlegende topologische Stabilität der multivariaten \ac{GLM}-Parameterschätzung zu gefährden?
+                \item[\textbf{2:}] Wie lassen sich diese freigewordenen Versuchspunkte als richtungsspezifische Extrapolations-Ankerpunkte allokieren, und mit welchen Metriken kann die Wahrung der statistischen Trennschärfe (\sym{power}) hierbei quantitativ garantiert werden?
+                \item[\textbf{3:}] Wie lässt sich der fundamentale Zielkonflikt zwischen stochastischer Vorhersagegüte und exponentiell skalierenden Prüfstandskosten in einem ökonomischen Bewertungsmodell abbilden, um ein skalares Effizienzoptimum für die Testplanung zu ermitteln?
+            \end{itemize}
+        \end{minipage}
+        % --------------------------------------------------------------------
+
         \vspace{0.2em}
     }%
 }
