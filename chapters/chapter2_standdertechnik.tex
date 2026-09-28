@@ -381,45 +381,39 @@ Abbildung~\ref{fig:abb2.08_strategy} fasst eine derartige strategische Vorgehens
     \setlength\figurewidth{0.2\textwidth}
     \setlength\figureheight{0.2\textwidth}
 
-    % --- 2. Vollfaktoriell ---
-    \begin{minipage}[b]{0.25\textwidth}
+    % --- 2. Vollfaktoriell (Breitere Box absorbiert das y-Label) ---
+    \begin{minipage}[c]{0.28\textwidth}
         \centering
         \input{plots/ma_abb2.08.2_strategy.tex}
-    \end{minipage}
+    \end{minipage}%
     \hfill
-    % --- Pfeil 2 ---
-    \begin{minipage}[b]{0.05\textwidth}
+    % --- Pfeil 1 ---
+    \begin{minipage}[c]{0.05\textwidth}
         \centering
-        \raisebox{2.25cm}{
-            \hspace*{0.0cm}
-            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
-        }
-    \end{minipage}
+        \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.6,0);
+    \end{minipage}%
     \hfill
     % --- 3. Zentralpunkt ---
-    \begin{minipage}[b]{0.25\textwidth}
+    \begin{minipage}[c]{0.23\textwidth}
         \centering
         \input{plots/ma_abb2.08.3_strategy.tex}
-    \end{minipage}
+    \end{minipage}%
     \hfill
-    % --- Pfeil 3 ---
-    \begin{minipage}[b]{0.05\textwidth}
+    % --- Pfeil 2 ---
+    \begin{minipage}[c]{0.05\textwidth}
         \centering
-        \raisebox{2.25cm}{
-            \hspace*{0.00cm}
-            \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.4,0);
-        }
-    \end{minipage}
+        \tikz \draw[-latex, line width=1.5pt] (0,0) -- (0.6,0);
+    \end{minipage}%
     \hfill
     % --- 4. CCD ---
-    \begin{minipage}[b]{0.25\textwidth}
+    \begin{minipage}[c]{0.23\textwidth}
         \centering
         \input{plots/ma_abb2.08.4_strategy.tex}
     \end{minipage}
-    \caption{Strategischer Ansatz zu augmentierter Versuchsplanung für die Lebensdauererprobung nach \cite{Box.1988,Bisgaard.1992}}
+
+    \caption{Strategischer Ansatz zur augmentierten Versuchsplanung für die Lebensdauererprobung nach \cite{Box.1988,Bisgaard.1992}, beispielhaft im zweidimensionalen Fall ($\sym{k}=2$) dargestellt.}
     \label{fig:abb2.08_strategy}
 \end{figure}
-
 
 Da die zwingend erforderliche Anzahl an Versuchspunkten $\sym{N}$ direkt mit der Anzahl der zu schätzenden Parameter $\sym{p}$ \cite{Russell.2019} korrespondiert, kann die schrittweise Augmentierung das ökonomische Risiko der Lebensdauererprobung minimieren.
 Während lineare Effekte durch zwei Stützstellen auflösbar sind, erfordert die Modellierung quadratischer Terme im Gleichungssystem zwingend mindestens drei Faktorstufen.
