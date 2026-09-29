@@ -53,7 +53,26 @@ BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thic
   \usepackage{longtable}  % tables across multiple pages
   \usepackage{bbding}
 
+\usepackage{tikz}
 
+\newcommand{\powerbar}[3]{%
+    \begin{tikzpicture}[baseline=-0.6ex, scale=0.025] % Breite: 100 * 0.025 = 2.5 cm
+        % Zarte Basislinie von 0 bis 100 %
+        \draw[gray!50, line width=0.4pt] (0,0) -- (100,0);
+        % Randbegrenzungen der Basislinie (0 und 100)
+        \draw[gray!50, line width=0.4pt] (0,-1.5) -- (0,1.5);
+        \draw[gray!50, line width=0.4pt] (100,-1.5) -- (100,1.5);
+        
+        % Dicker Balken für den tatsächlichen Wertebereich (Min bis Max)
+        \draw[black, line width=1.5pt] (#1,0) -- (#3,0);
+        % Vertikale Begrenzungen des Wertebereichs
+        \draw[black, line width=1.0pt] (#1,-2.5) -- (#1,2.5);
+        \draw[black, line width=1.0pt] (#3,-2.5) -- (#3,2.5);
+        
+        % Kreismarkierung für den Mittelwert
+        \filldraw[white, draw=black, line width=0.8pt] (#2,0) circle (2.5);
+    \end{tikzpicture}%
+}
 
 % Citation style. If your institute has specific requirements, configure here:
 \usepackage[style=numeric, % see https://www.overleaf.com/learn/latex/Biblatex_citation_styles for a list of predefined styles
@@ -511,8 +530,8 @@ Consequently, this dissertation demonstrates that efficiency in experimental des
 
 \cleardoublepage
 \ifpdf
-  \phantomsection
-  \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
+    \phantomsection
+    \pdfbookmark[0]{Inhaltsverzeichnis}{toc}
 \fi
 \tableofcontents
 

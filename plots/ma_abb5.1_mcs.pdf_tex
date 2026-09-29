@@ -58,16 +58,16 @@
     \put(0,0){\includegraphics[width=\unitlength,page=2]{ma_abb5.1_mcs.pdf}}%
     \put(0.24753206,1.34250051){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Pseudo-Physikalisches Modell}\end{tabular}}}}%
     \put(0.24990942,1.29736706){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Vorgabe einer }\textbf{\textit{Ground-Truth}}\textit{ zweiter }\\\textit{Ordnung mit $\sym{k}=2$.}\end{tabular}}}}%
-    \put(0.00972176,1.26089213){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\textbf{\textit{Kalibrierter Arbeitspunkt }}\\- \ac{SNR}$=1,2$ (\textit{Abschnitte~\ref{subsec:ergebnisse_sensitivitaet},~\ref{subsec:weibull_kalibrierung}})\\- Transfer Datengrundlage: $\sym{sigma}_{\textnormal{SEV}} = {1}/{\sym{b}}$\\- Effekt-Hierarchie (\textit{Sparsity of Effects})\\- Vorgabe quadr. Regressionsgleichung\\\end{tabular}}}}%
-    \put(0.02801875,1.09310962){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}$\sym{Y}=\sym{X}\sym{Beta} + \sym{Epsilon}$ nach Gleichung~\ref{eq:matrixmod}:\\mit $\sym{y}\sim \mathcal{N}(0, \sym{sigma}^2)$ \\$\rightarrow$  \textit{siehe Abschnitte~\ref{subsec:sensitivitaetsanalyse},\ref{subsec:ergebnisse_generic},\ref{subsec:spvbias})}\\mit $\sym{Epsilon} = \sym{t} \sim \sym{W}(\sym{T}, \sym{b})$\\$\rightarrow$  \textit{siehe Abschnitt~\ref{sec:ldoe}}\end{tabular}}}}%
+    \put(0.01758108,1.2530328){\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\\\textbf{\textit{Kalibrierter Arbeitspunkt }}\\- \ac{SNR}$=1,2$ (\textit{Abschnitte~\ref{subsec:ergebnisse_sensitivitaet},~\ref{subsec:weibull_kalibrierung}})\\- Transfer Datengrundlage: $\sym{sigma}_{\textnormal{SEV}} = {1}/{\sym{b}}$\\- Effekt-Hierarchie (\textit{Sparsity of Effects})\\- Vorgabe quadr. Regressionsgleichung\\\end{tabular}}}}%
+    \put(0.03587807,1.10096895){\makebox(0,0)[lt]{\lineheight{1.20000005}\smash{\begin{tabular}[t]{l}$\sym{Y}=\sym{X}\sym{Beta} + \sym{Epsilon}$ nach Gleichung~\ref{eq:matrixmod}:\\mit $\sym{Epsilon}\sim \mathcal{N}(0, \sym{sigma}^2)$ \\$\rightarrow$  \textit{siehe Abschnitte~\ref{subsec:sensitivitaetsanalyse},\ref{subsec:ergebnisse_generic},\ref{subsec:spvbias})}\\mit $\sym{y} = \sym{t} \sim \sym{W}(\sym{T}, \sym{b})$\\$\rightarrow$  \textit{siehe Abschnitt~\ref{sec:ldoe}}\end{tabular}}}}%
     \put(0.44585181,0.9373888){\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\\\textit{Seed Fixierung}\\\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{ma_abb5.1_mcs.pdf}}%
     \put(0.76122773,1.34250049){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textbf{Design und Versuchstopologie}\end{tabular}}}}%
     \put(0.76428698,1.2972977){\makebox(0,0)[t]{\lineheight{0.94999999}\smash{\begin{tabular}[t]{c}\textit{Auswahl des }\textbf{\textit{Testplans}}\textit{ zur }\\\textit{Ground Truth Erprobung}\end{tabular}}}}%
-    \put(0.52013241,1.26090152){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\textbf{\textit{Untersuchte Designmatrix $\sym{X}$ }}\\- Referenz: Basis-\ac{CCD} (\textit{Abbildung~\ref{fig:abb2.07_ccd_design}})\\- Sensitivitätsanalyse (\textit{Abschnitt~\ref{subsec:sensitivitaetsanalyse}})\\- Störfälle \textit{I}-\textit{IV} (\textit{Abschnitt~\ref{subsec:ergebnisse_generic}})\\- Gestaltungsbudget aus unkritischen \\~~\acp{ZP},~\acp{SP} (\textit{Abschnitte~\ref{subsec:ergebnisse_generic},~\ref{subsec:spv_metrik}})\\- \ac{EmALT}-Topologie (\textit{Abschnitt~\ref{sec:weibull_transfer}})\\~~nach identifizierter der Exposure \\~~Area $\sym{X_exposure}$ aus \textit{Abschnitt~\ref{subsec:evg_plot}}\\- Kostenmodell (\textit{Abschnitte~\ref{sec:kostenmodell},~\ref{sec:ldoe})}\end{tabular}}}}%
+    \put(0.52799173,1.25304219){\makebox(0,0)[lt]{\lineheight{0}\smash{\begin{tabular}[t]{l}\\\textbf{\textit{Untersuchte Designmatrix $\sym{X}$ }}\\- Referenz: Basis-\ac{CCD} (\textit{Abbildung~\ref{fig:abb2.07_ccd_design}})\\- Potenzialanalyse (\textit{Abschnitt~\ref{subsec:sensitivitaetsanalyse}})\\- Störfälle \textit{I}-\textit{IV} (\textit{Abschnitt~\ref{subsec:ergebnisse_generic}})\\- Gestaltungsbudget aus unkritischen \\~~\acp{ZP},~\acp{SP} (\textit{Abschnitte~\ref{subsec:ergebnisse_generic},~\ref{subsec:spv_metrik}})\\- \ac{EmALT}-Topologie (\textit{Abschnitt~\ref{sec:weibull_transfer}})\\~~nach identifizierter der Exposure \\~~Area $\sym{X_exposure}$ aus \textit{Abschnitt~\ref{subsec:evg_plot}}\\- Kostenmodell (\textit{Abschnitte~\ref{sec:kostenmodell},~\ref{sec:ldoe})}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{ma_abb5.1_mcs.pdf}}%
     \put(0.07355887,0.8688191){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\textbf{1) Stochastische Datengenerierung}\\\end{tabular}}}}%
-    \put(0.10478641,0.837926){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\- Sensitivitätsanalyse (Abschnitt~\ref{subsec:sensitivitaetsanalyse})\\~~(mit Koeffizientenstreuung $\symsub{beta}{idx_j} \sim \mathcal{N}(\sym{beta}_{\sym{idx_j}, \sym{idx_nom}}, \symsub{sigma}{idx_sim}^2)$) \\- Störfälle \textit{I}-\textit{IV }(\textit{\ref{subsec:ergebnisse_generic}}), \ac{EmALT} (\textit{\ref{sec:weibull_transfer}})\\- Lebensdauer-Daten (\textit{\ref{sec:ldoe}})\end{tabular}}}}%
+    \put(0.10478641,0.837926){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\- Potenzialanalyse (Abschnitt~\ref{subsec:sensitivitaetsanalyse})\\~~(mit \textit{Random-Effects} $\symsub{beta}{idx_j} \sim \mathcal{N}(\sym{beta}_{\sym{idx_j}, \sym{idx_nom}}, \symsub{sigma}{idx_sim}^2)$) \\- Störfälle \textit{I}-\textit{IV }(\textit{\ref{subsec:ergebnisse_generic}}), \ac{EmALT} (\textit{\ref{sec:weibull_transfer}})\\- Lebensdauer-Daten (\textit{\ref{sec:ldoe}})\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=5]{ma_abb5.1_mcs.pdf}}%
     \put(0.07346128,0.67945836){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\textbf{2) Paramterschätzverfahren}\\\end{tabular}}}}%
     \put(0.10468882,0.65134397){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\- \ac{OLS} (\textit{Abschnitte \ref{subsec:sensitivitaetsanalyse},~\ref{subsec:ergebnisse_generic},~\ref{subsec:spv_metrik},~\ref{subsec:spvbias}})\\- Weibull-\ac{GLM} (\textit{Abschnitt~\ref{sec:ldoe}})\end{tabular}}}}%
@@ -75,31 +75,31 @@
     \put(0.07532834,0.55122979){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\textbf{3) Signifikanzanalyse}\\\end{tabular}}}}%
     \put(0.10655588,0.52311553){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\- \ac{ANOVA} (\textit{Abschnitte \ref{subsec:sensitivitaetsanalyse},~\ref{subsec:ergebnisse_generic},~\ref{subsec:spv_metrik},~\ref{subsec:spvbias}})\\- \ac{LR-Test} (\textit{Abschnitt~\ref{sec:ldoe}})\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=7]{ma_abb5.1_mcs.pdf}}%
-    \put(0.76464117,0.94507547){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\textbf{\textit{Designmetriken}}\\- Optimalitäten\\- Effizienzen\\- \ac{SPV}\end{tabular}}}}%
+    \put(0.76741978,0.93951808){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\textbf{\textit{Designmetriken}}\\- Optimalitäten\\- Effizienzen\\- \ac{SPV}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=8]{ma_abb5.1_mcs.pdf}}%
     \put(0.67546512,0.66550446){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\textbf{\textit{Schätzwerte}}\\- $\hat{\sym{theta}}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=9]{ma_abb5.1_mcs.pdf}}%
     \put(0.67549158,0.53574731){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\textbf{\textit{Signifikanzen}}\\- $\sym{p-Wert}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=10]{ma_abb5.1_mcs.pdf}}%
-    \put(0.23982569,0.30445366){\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\\\textbf{\textit{Versuchsplan-Ökonomie}}\\\end{tabular}}}}%
+    \put(0.24399362,0.30236965){\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\\\textbf{\textit{Versuchsplan-Ökonomie}}\\\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=11]{ma_abb5.1_mcs.pdf}}%
     \put(0.46498704,0.10526284){\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\\\textbf{\textit{Effizienz-Bewertung}}\\\end{tabular}}}}%
-    \put(0.03367188,0.26918166){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\Monetärer Erwartungswert $\sym{Er}(\sym{C}_{\sym{idx_cost_total}})$\\- Basis-\ac{CCD}\\- \ac{EmALT}\\- theoretisch unbeschleunigter \\~~Feld-\ac{CCD}\end{tabular}}}}%
+    \put(0.0378398,0.26918166){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\Monetärer Erwartungswert $\sym{Er}(\sym{C}_{\sym{idx_cost_total}})$\\- Basis-\ac{CCD}\\- \ac{EmALT}\\- theoretisch unbeschleunigter \\~~Feld-\ac{CCD}\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=12]{ma_abb5.1_mcs.pdf}}%
     \put(0.39519409,0.41186141){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\$\sym{n}=\sym{n}_{\sym{idx_MC}}$\\\end{tabular}}}}%
     \put(0.49953043,0.38216148){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\Checkmark\\\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=13]{ma_abb5.1_mcs.pdf}}%
     \put(0.85690729,0.63852377){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\$\varnothing$ \\\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=14]{ma_abb5.1_mcs.pdf}}%
-    \put(0.48837905,0.26915542){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\- Schätzgüte (\textbf{\textit{Bias}}) und \ac{MSE}\\- Trennschärfe ($\sym{power}$)\\- Richtungssensitive \\~~Prognosefähigkeit (\ac{EVG})\end{tabular}}}}%
+    \put(0.49046314,0.26846077){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\- Schätzgüte (\textbf{\textit{Bias}}) und \ac{MSE}\\- Trennschärfe ($\sym{power}$)\\- Richtungssensitive \\~~Prognosefähigkeit (\ac{EVG})\end{tabular}}}}%
     \put(0.03352039,0.04236596){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}- Effizienz-Index \ac{EPI} nach \textit{Abschnitt~\ref{sec:ldoe}}: $\sym{epi}$\\- Korrelationsanalyse zu Designmetriken\end{tabular}}}}%
-    \put(0.69043267,0.30452299){\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\\\textbf{\textit{Statistische Effektivität}}\\\end{tabular}}}}%
+    \put(0.69251675,0.30313362){\makebox(0,0)[t]{\smash{\begin{tabular}[t]{c}\\\textbf{\textit{Statistische Effektivität}}\\\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=15]{ma_abb5.1_mcs.pdf}}%
     \put(0.83635483,0.49816989){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\\$ < \sym{alpha}$\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=16]{ma_abb5.1_mcs.pdf}}%
     \put(0.33030923,0.43889599){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\\\XSolidBrush\\\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=17]{ma_abb5.1_mcs.pdf}}%
-    \put(0.6502563,0.0555875){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\textbf{\textit{Auswahl effizientes}}\\\textbf{\textit{Testdesign }}\end{tabular}}}}%
+    \put(0.65511901,0.0555875){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\textbf{\textit{Auswahl effizientes}}\\\textbf{\textit{Testdesign }}\end{tabular}}}}%
     \put(0.61071403,0.04404412){\makebox(0,0)[lt]{\smash{\begin{tabular}[t]{l}\textbf{$\Rightarrow $}\end{tabular}}}}%
   \end{picture}%
 \endgroup%

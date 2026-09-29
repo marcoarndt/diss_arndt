@@ -48,21 +48,21 @@
 \contentsline {subsection}{\numberline {4.1.2}Simulationsarchitektur und Monte-Carlo-Inferenz}{57}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Effektivität von Versuchsplänen mit Orthogonalitätsabweichungen}{60}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Potenzialanalyse geometrischer und stochastischer Einflussgrößen}{61}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Ergebnisse der Potenzialanalyse und Quantifizierung der Trennschärfe}{64}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Generische Auswirkungen relevanter Orthogonalitätsabweichungen}{65}{subsection.4.2.3}%
-\contentsline {subsubsection}{\nonumberline Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}{66}{subsubsection*.81}%
-\contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{67}{subsubsection*.84}%
-\contentsline {subsection}{\numberline {4.2.4}Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung}{70}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Adaptive Versuchsplanung zur Extrapolationsabsicherung}{72}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Die Scaled Prediction Variance als Prognosemetrik}{72}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)}{74}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Isolierte stochastische Validierung der asymmetrischen Topologie}{75}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Kostenstruktur der Lebensdauererprobung}{80}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Übertragung auf multivariate Lebensdauermodelle}{80}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Signal-Rausch-Kalibrierung im AFT-Raum}{80}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Effizientes \cgls {L-DoE} und der Economic Extrapolation Power Index}{82}{subsection.4.5.2}%
-\contentsline {subsubsection}{\nonumberline Konsequenzen für die Prognoseunsicherheit im Feldbetrieb}{86}{subsubsection*.115}%
-\contentsline {section}{\numberline {4.6}Methodische Synthese und Transfer}{86}{section.4.6}%
+\contentsline {subsection}{\numberline {4.2.2}Ergebnisse der Potenzialanalyse und Quantifizierung der Trennschärfe}{65}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Generische Auswirkungen relevanter Orthogonalitätsabweichungen}{67}{subsection.4.2.3}%
+\contentsline {subsubsection}{\nonumberline Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}{68}{subsubsection*.82}%
+\contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{68}{subsubsection*.85}%
+\contentsline {subsection}{\numberline {4.2.4}Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung}{73}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Adaptive Versuchsplanung zur Extrapolationsabsicherung}{74}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Die Scaled Prediction Variance als Prognosemetrik}{74}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)}{75}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Isolierte stochastische Validierung der asymmetrischen Topologie}{77}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Kostenstruktur der Lebensdauererprobung}{81}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Übertragung auf multivariate Lebensdauermodelle}{83}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Signal-Rausch-Kalibrierung im AFT-Raum}{83}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Effizientes \cgls {L-DoE} und der Economic Extrapolation Power Index}{84}{subsection.4.5.2}%
+\contentsline {subsubsection}{\nonumberline Konsequenzen für die Prognoseunsicherheit im Feldbetrieb}{87}{subsubsection*.116}%
+\contentsline {section}{\numberline {4.6}Methodische Synthese und Transfer}{87}{section.4.6}%
 \contentsline {chapter}{\numberline {5}Empirische Validierung der Extrapolationsabsicherung}{89}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Modellschätzung und Anpassungsgüte}{92}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Residuenanalyse und Verifikationsdiagnostik}{94}{subsection.5.1.1}%
@@ -72,8 +72,8 @@
 \contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{101}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Diskussion}{103}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Ausblick}{104}{section.6.2}%
-\contentsline {chapter}{\nonumberline Literatur}{107}{chapter*.122}%
-\contentsline {chapter}{Anhang}{119}{chapter*.122}%
+\contentsline {chapter}{\nonumberline Literatur}{107}{chapter*.123}%
+\contentsline {chapter}{Anhang}{119}{chapter*.123}%
 \contentsline {section}{\numberline {A}Sensitivitätsanalyse}{119}{section.Alph0.1}%
 \contentsline {section}{\numberline {B}Orthogonalitäts-Analysen der Design-Modifikationen}{128}{section.Alph0.2}%
 \contentsline {subsection}{\numberline {B.1}Szenarien bei Arbeitspunkt SNR$=1$}{133}{subsection.Alph0.2.1}%
