@@ -93,10 +93,11 @@ Zur probabilistischen Quantifizierung dieser Praxisrestriktionen unter stochasti
 \subsection{Potenzialanalyse geometrischer und stochastischer Einflussgrößen} \label{subsec:sensitivitaetsanalyse}
 
 Um die Robustheit klassischer \acp{CCD} fundiert zu bewerten, wird eine Potenzialanalyse durchgeführt.
-Diese folgt methodisch dem Prinzip einer \textit{Meta-Versuchsplanung} (\textit{Meta-DoE}): Die topologischen Eigenschaften des Versuchsplans sowie die stochastischen Randbedingungen werden als Faktoren eines übergeordneten Meta-Designs derart variiert, dass deren funktionale Auswirkung auf die Schätzgüte -- und hier insbesondere auf die statistische Trennschärfe -- quantifiziert werden kann \cite{Arndt.2023}.
+Diese folgt methodisch dem Prinzip eines \textit{"Meta-DoE"}: Die topologischen Eigenschaften des Versuchsplans sowie die stochastischen Randbedingungen werden als Faktoren eines übergeordneten Meta-Designs - wiederum ein \ac{CCD} - derart variiert, dass deren funktionale Auswirkung auf die Schätzgüte - und hier insbesondere auf die statistische Trennschärfe - quantifiziert werden kann \cite{Arndt.2023}.
 
 Hierfür wird ein Spektrum aus acht praxisrelevanten Geometrie-, Stör- und Inferenzparametern definiert.
-Zur formalen Beschreibung des Sensitivitätsraums werden diese Einflussgrößen im Parametervektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]^\top$ zusammengefasst. Die Parametrisierung ist in Tabelle~\ref{tab:sensitivitaetsfaktoren} deklariert und visuell in Abbildung~\ref{fig:ccd_design_sensitivitaet} veranschaulicht:
+Zur formalen Beschreibung des Sensitivitätsraums werden diese Einflussgrößen im Parametervektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]^\top$ zusammengefasst.
+Die Parametrisierung ist in Tabelle~\ref{tab:sensitivitaetsfaktoren} deklariert und visuell in Abbildung~\ref{fig:ccd_design_sensitivitaet} veranschaulicht:
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
     \setlength{\parskip}{0pt}
@@ -109,10 +110,9 @@ Zur formalen Beschreibung des Sensitivitätsraums werden diese Einflussgrößen 
     \item Standardabweichung des experimentellen Versuchsfehlers (System- und Messrauschen, \ac{SNR});
     \item Vorgegebenes statistisches Signifikanzniveau ($\sym{alpha}$).
 \end{enumerate}
-
-Die exklusive Fokussierung der asymmetrischen Geometrievariationen (Faktor $\symsub{xi_factor}{idx_fac_b}$) sowie potenzieller lokaler Zensierungen auf die axialen \acp{SP} begründet sich unmittelbar aus der Erprobungspraxis:
-Im Rahmen von \acp{ALT} repräsentieren diese Stützstellen die absolut extremsten, uni-axialen Belastungsgrenzen des Versuchsraums.
-An exakt diesen physischen Systemgrenzen ist die Wahrscheinlichkeit für anlagenbedingte Stellrestriktionen oder stochastische Frühausfälle am höchsten, unabhängig davon, ob sie geometrisch auf derselben Sphäre wie die faktoriellen Eckpunkte liegen.
+Die Fokussierung der asymmetrischen Geometrievariationen (Faktor $\symsub{xi_factor}{idx_fac_b}$) sowie potenzieller lokaler Zensierungen auf vornehmlich axiale \acp{SP} begründet sich unmittelbar aus der Erprobungspraxis:
+Im Rahmen von \acp{ALT} repräsentieren diese Stützstellen die schärfsten, uni-axialen Beanspruchungsbedingungen des Versuchsraums.
+An diesen physischen Systemgrenzen ist zunächst mit grundlegenden Restriktionen auf Basis von Randbedingungen der Prüfumgebung oder allgemein mit stochastischen Frühausfällen zu rechnen, unabhängig davon, ob sie geometrisch auf derselben Sphäre wie die faktoriellen Eckpunkte liegen.
 \begin{figure}[!htbp]
     \centering
     \setlength\figurewidth{0.6\textwidth}
@@ -121,11 +121,11 @@ An exakt diesen physischen Systemgrenzen ist die Wahrscheinlichkeit für anlagen
     \caption{Variationen der Design-Matrix im Rahmen der Potenzialanalyse. Die Abbildung zeigt die geometrischen Modifikationen entsprechend Tabelle~\ref{tab:sensitivitaetsfaktoren} für die gewählten Einflussgrößen.}
     \label{fig:ccd_design_sensitivitaet}
 \end{figure}
-Die methodische Beschränkung auf nur einen vereinzelten \ac{SP} - in Abbildung~\ref{fig:ccd_design_sensitivitaet} exemplarisch visualisiert - ist dabei analytisch hinreichend.
+Die methodische Beschränkung auf nur einen vereinzelten \ac{SP} - in Abbildung~\ref{fig:ccd_design_sensitivitaet} exemplarisch visualisiert - vereinfacht dabei das Simulationslayout sowie die Interpretierbarkeit und ist analytisch hinreichend.
 Da das zugrundeliegende Basis-\ac{CCD} a priori eine vollständige Achsensymmetrie aufweist, verhalten sich die Dimensionen des Parameterraums isotrop.
 Ein isolierter topologischer Eingriff entlang einer spezifischen Achse legt somit den reinen Wirkmechanismus der Varianzinflation offen, welcher sich aufgrund der geometrischen Gleichwertigkeit direkt auf alle anderen Achsen projizieren lässt \cite{Kleppmann.2020}.
 Würden stattdessen multiple asymmetrische Verschiebungen simultan induziert, resultierte dies in nichtlinearen Überlagerungen der Kovarianzen innerhalb der inversen Informationsmatrix $\sym{M}^{-1}$.
-Eine derartige untrennbare statistische Vermengung der Störeinflüsse würde die Identifikation isolierter Kausalitäten - das Kernziel der Potenzialanalyse - vereiteln.
+Eine derartige untrennbare statistische Vermengung der Störeinflüsse würde die Identifikation isolierter Kausalitäten - das Kernziel der Potenzialanalyse - erschweren.
 Globale, symmetrische Skalierungen des gesamten Versuchsraums werden ohnehin entkoppelt über den Faktor $\symsub{xi_factor}{idx_fac_a}$ (Variation von $\symsub{alpha}{idx_D}$) erfasst.
 \begin{table}[!htbp]
     \centering
@@ -174,58 +174,38 @@ Die in Tabelle~\ref{tab:simulation_parameters} definierten Startwerte der Modell
         \bottomrule
     \end{tabular}
 \end{table}
-Da die topologische Auswertung von \acp{RSD} maßstabs- und translationsinvariant ist - die $\sym{power}$ wird nicht durch absolute Werte, sondern durch die relativen Amplituden- und Rauschverhältnisse in $\sym{xi_vek}$ determiniert - dienen diese Werte alleinig der Etablierung eines numerisch stabilen Referenzniveaus.
-Sie stellen über die vollständige Regressionsgleichung sicher, dass die berechnete Systemantwort über den gesamten Versuchsraum hinweg strikt positiv bleibt und physikalisch möglicherweise unplausible (negative) Werte infolge der stochastischen Überlagerungen vermieden werden.
+Da die topologische Auswertung von \acp{RSD} maßstabs- und translationsinvariant ist - die $\sym{power}$ wird nicht durch absolute Werte, sondern durch die relativen Amplituden- und Rauschverhältnisse (\ac{SNR}) in $\sym{xi_vek}$ determiniert, dienen diese Werte alleinig der Etablierung eines numerisch stabilen Referenzniveaus.
+Sie stellen über die vollständige Regressionsgleichung sicher, dass die berechnete Systemantwort über den gesamten Versuchsraum hinweg strikt positiv bleibt und physikalisch möglicherweise unplausible (z.B. negative) Werte infolge der stochastischen Überlagerungen vermieden werden.
 Zur formalen Beschreibung des Sensitivitätsraums der Potenzialanalyse werden die acht Einflussgrößen im Parametervektor $\sym{xi_vek} = [\symsub{xi_factor}{idx_fac_a},\dots, \symsub{xi_factor}{idx_fac_h}]^\top$ zusammengefasst und gemäß Tabelle~\ref{tab:sensitivitaetsfaktoren} parametrisiert.
 Die Einbindung in das Meta-Design erfolgt methodisch differenziert:
 Während die sechs kontinuierlichen Geometrie- und Rauschparameter den stetigen Parameterraum aufspannen, werden die strukturellen Stützstellenzahlen ($\symsub{xi_factor}{idx_fac_c}, \symsub{xi_factor}{idx_fac_d}$) als kategoriale Blockfaktoren über jeweils drei diskrete Stufen $(-1, 0, +1)$ variiert.
-Diese Entkopplung ist geboten: Eine Reduktion der Stützstellen verändert die Rang- und Freiheitsgradstruktur der Informationsmatrix diskontinuierlich.
-Ein kontinuierliches Meta-Modell würde unzulässig über diese strukturellen Singularitäten interpolieren.
+Diese Entkopplung ist notwendig: Eine Reduktion der Stützstellen verändert die Rang- und Freiheitsgradstruktur der Informationsmatrix diskontinuierlich.
+Ein kontinuierliches Meta-Modell würde unzulässig über diese strukturellen Singularitäten interpolieren (in Form von beispielsweise "halben"~Versuchspunkten).
 Die Kombination der beiden diskreten Blockfaktoren spannt folglich exakt $3 \times 3 = 9$ isolierte Basis-Topologien auf.
 Die kontinuierlichen Sensitivitäten werden isoliert innerhalb dieser neun diskreten Topologie-Blöcke ermittelt (dokumentiert im Anhang~\ref{app:c}).
 Im Fokus dieser Potenzialanalyse steht dabei exklusiv die statistische Trennschärfe (\sym{power}).
 Für den Zuverlässigkeitsingenieur stellt sie die primäre quantitative Entscheidungsgröße dar: Sie definiert maßgeblich, ob ein ressourcenintensiver Test überhaupt die methodische Aussicht auf einen erfolgreichen Nachweis des physikalischen Effekts besitzt.
 Die exakte Ausprägung des Schätzwertes ordnet sich dieser grundlegenden Erfolgsgarantie im Rahmen eines Screenings unter, weshalb sie als entscheidende Kenngröße in der Potenzialanalyse betrachtet wird.
-Der makroskopische Effekt der Stützstellenreduktion selbst wird separat über die Niveauverschiebungen der \sym{power} zwischen den neun Blöcken quantifiziert.
-Gegenüber alternativen Screening-Verfahren gewährleistet dieser hierarchische \ac{DoE}-Ansatz eine formal abgesicherte Kausalitätsprüfung zur Trennung von Haupteffekten, Interaktionen und Krümmungsanteilen auf die resultierende Trennschärfe \cite{Kleppmann.2020,Zio.2013}.
+Der makroskopische Effekt der Stützstellenreduktion selbst wird separat über die Niveauverschiebungen der $\sym{power}$ zwischen den neun Blöcken quantifiziert.
+Gegenüber alternativen Screening-Verfahren gewährleistet dieser hierarchische \ac{DoE}-Ansatz eine formal abgesicherte Kausalitätsprüfung zur Trennung von Haupteffekten, Interaktionen und Krümmungsanteilen auf die resultierende Trennschärfe \cite{Kleppmann.2020,Zio.2013}, wenngleich zu nachfolgenden Untersuchungen ergänzend weitere Metriken in der Analyse bewertet werden.
 
 
 \subsection{Ergebnisse der Potenzialanalyse und Quantifizierung der Trennschärfe} \label{subsec:ergebnisse_sensitivitaet}
 
-Die Untersuchung der Trennschärfe im Meta-Design offenbart eine strukturelle Dichotomie zwischen dispositiven Designfaktoren (Geometrie, Stützstellenanzahl) und externen Systemrestriktionen (Rauschen).
-Tabelle~\ref{tab:summary_power_sensitivity} fasst die Ergebnisse der \ac{ANOVA} zusammen, wobei die signifikante Effektstärke $\sym{Eff}$ als Maß für die Dominanz eines Faktors dient.
+Die Untersuchung der Trennschärfe im Meta-Design offenbart eine grundlegende Zweiteilung zwischen dispositiven Designfaktoren (Geometrie, Stützstellenanzahl) und externen Systemrestriktionen (Rauschen, Signifikanzniveau).
+Tabelle~\ref{tab:summary_power_sensitivity} fasst die Ergebnisse der \ac{ANOVA} zusammen, wobei die signifikante Effektstärke $\sym{Eff}$ als Maß für die Dominanz eines Faktors dient:
+Sie erfasst hier, in welchem Maß die Variation eines der acht Einflussgrößen die Trennschärfe bei der Identifikation des jeweiligen Koeffizienten beeinflusst - und in welchem Umfang der resultierende $\sym{power}$-Wert schlussfolgernd streut.
+Vereinfachend werden pro Koeffizient nur die jeweils dominierenden Einflussgrößen mit der höchsten Effektstärke ausgewiesen.
 
-Wird die globale Modell-Power ($\sym{power}_{\sym{idx_M}}$) betrachtet, zeigt sich eine hohe Robustheit mit einer mittleren Trennschärfe von $\overline{\sym{power}} > 99{,}7\,\%$.
-Diese Metrik verdeckt jedoch, dass das Verhalten spezifischer Einzel-Effekte - insbesondere die Identifikation der quadratischen Terme - sensitiver ausfällt.
-Die mittlere Trennschärfe für quadratische Terme ($\sym{power}_{\sym{beta}_{11}}, \sym{power}_{\sym{beta}_{22}}$) liegt im Bereich von $70\,\%$ bis $79\,\%$.
-Die Sensitivitäts-Indizes verdeutlichen, dass für die Mehrheit der Koeffizienten nicht die Versuchspunktanzahl der limitierende Faktor ist, sondern das Effektstärke-Verhältnis ($\symsub{xi_factor}{idx_fac_f}$) sowie das Messrauschen ($\symsub{xi_factor}{idx_fac_g}$).
-Da das Rauschen in der Praxis zumeist eine feste Randbedingung darstellt, definiert es eine natürliche Obergrenze der erreichbaren Trennschärfe.
-%
-% \begin{table}[htbp]
-%     \centering
-%     \caption{Zusammenfassende Statistik der Trennschärfe und Identifikation der dominierenden Einflussfaktoren.}
-%     \label{tab:summary_power_sensitivity}
-%     \renewcommand{\arraystretch}{1.2}
-%     \small
-%     \begin{tabular}{@{}l r r c r@{}}
-%         \toprule
-%         \textbf{Koeffizient}            & \textbf{Mittelwert}      & \textbf{Wertebereich}          & \multicolumn{2}{c}{\textbf{Dominierende Sensitivität}}                                 \\
-%         \cmidrule(lr){2-3} \cmidrule(lr){4-5}
-%                                         & $\overline{\sym{power}}$ & $[\text{min}; \text{max}]\,\%$ & \textbf{Einflussfaktor $\symsub{xi_factor}{idx_i}$ (Kategorie)} & \textbf{$\sym{Eff}$} \\
-%         \midrule
-%         $\sym{power}_{\sym{idx_M}}$     & $99{,}7\,\%$             & $[94{,}5; 100{,}0]$            & $\symsub{xi_factor}{idx_fac_g}$ (System)                        & $0{,}10$             \\
-%         $\sym{power}_{\sym{beta}_0}$    & $97{,}9\,\%$             & $[76{,}9; 100{,}0]$            & $\symsub{xi_factor}{idx_fac_e}$ (System)                        & $0{,}52$             \\
-%         $\sym{power}_{\sym{beta}_1}$    & $78{,}6\,\%$             & $[60{,}0; \phantom{0}90{,}8]$  & $\symsub{xi_factor}{idx_fac_g}$ (System)                        & $1{,}50$             \\
-%         $\sym{power}_{\sym{beta}_2}$    & $66{,}0\,\%$             & $[37{,}3; \phantom{0}84{,}1]$  & $\symsub{xi_factor}{idx_fac_f}$ (System)                        & $2{,}53$             \\
-%         $\sym{power}_{\sym{beta}_{12}}$ & $72{,}6\,\%$             & $[52{,}5; \phantom{0}85{,}9]$  & $\symsub{xi_factor}{idx_fac_g}$ (System)                        & $1{,}93$             \\
-%         $\sym{power}_{\sym{beta}_{11}}$ & $70{,}9\,\%$             & $[32{,}6; \phantom{0}86{,}8]$  & $\symsub{xi_factor}{idx_fac_g}$ (System)                        & $1{,}99$             \\
-%         $\sym{power}_{\sym{beta}_{22}}$ & $79{,}3\,\%$             & $[33{,}4; 100{,}0]$            & $\symsub{xi_factor}{idx_fac_a}$ \textbf{(Design)}               & $3{,}72$             \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
+Wird die globale Modell-Power betrachtet, zeigt sich eine hohe Robustheit mit einer mittleren Trennschärfe von $\overline{\sym{power}_{\sym{idx_M}}} > 99{,}7\,\%$.
+Diese globale Metrik verdeckt jedoch das hochsensitive Verhalten der isolierten Einzel-Effekte - insbesondere der quadratischen Terme ($\sym{power}_{\sym{beta}_{11}}, \sym{power}_{\sym{beta}_{22}}$), deren Trennschärfe in den Bereich von $70\,\%$ bis $79\,\%$ abfällt.
+Unterschiedliche Trennschärfen der quadratischen Terme trotz identischer nominaler Startkoeffizienten ergeben sich hierbei aufgrund der Konsequenz der zuvor etablierten asymmetrischen Stör-Topologie:
+Da der simulierte \ac{SP}-Shift (Faktor $\symsub{xi_factor}{idx_fac_b}$) auf der $\sym{x}_2$-Achse induziert wird, wird die Schätzung von $\sym{beta}_{22}$ maßgeblich durch die physische Design-Geometrie ($\symsub{xi_factor}{idx_fac_a}$) dominiert.
+Der Term $\sym{beta}_{11}$ auf der ungestörten Achse wird hingegen primär durch die allgemeine Systemrestriktion des Messrauschens ($\symsub{xi_factor}{idx_fac_g}$) limitiert, was die Effektstärke des Design-Faktors $\symsub{xi_factor}{idx_fac_a}$ auf $\sym{power}_{\sym{beta}_{11}}$ zwar reduziert, für den Koeffizienten $\sym{beta}_{22}$ jedoch als dominant herausstellt.
+Da das Rauschen in der Praxis zumeist eine unveränderliche Randbedingung darstellt, definiert es die natürliche Obergrenze der erreichbaren Trennschärfe.
 \begin{table}[htbp]
     \centering
-    \caption{Zusammenfassende Statistik der Trennschärfe und Identifikation der dominierenden Einflussfaktoren. Die integrierten \textit{Sparklines} visualisieren die Lage des Mittelwerts ($\circ$) innerhalb des resultierenden Wertebereichs ($[\text{min}; \text{max}]$) auf der Basislinie von $0\,\%$ bis $100\,\%$.}
+    \caption{Ausgewählte Statistik der Trennschärfe (Lage des Mittelwerts ($\circ$) innerhalb des resultierenden Wertebereichs ($[\text{min}; \text{max}]$) auf der Basislinie von $0\,\%$ bis $100\,\%$) und Identifikation der jeweils dominierenden Einflussfaktoren mit Kategorien.}
     \label{tab:summary_power_sensitivity}
     \renewcommand{\arraystretch}{1.3}
     \small
@@ -241,12 +221,14 @@ Da das Rauschen in der Praxis zumeist eine feste Randbedingung darstellt, defini
         $\sym{power}_{\sym{beta}_2}$    & $66{,}0\,\%$             & \powerbar{37.3}{66.0}{84.1}  & $\symsub{xi_factor}{idx_fac_f}$ (System)               & $2{,}53$             \\
         $\sym{power}_{\sym{beta}_{12}}$ & $72{,}6\,\%$             & \powerbar{52.5}{72.6}{85.9}  & $\symsub{xi_factor}{idx_fac_g}$ (System)               & $1{,}93$             \\
         $\sym{power}_{\sym{beta}_{11}}$ & $70{,}9\,\%$             & \powerbar{32.6}{70.9}{86.8}  & $\symsub{xi_factor}{idx_fac_g}$ (System)               & $1{,}99$             \\
-        $\sym{power}_{\sym{beta}_{22}}$ & $79{,}3\,\%$             & \powerbar{33.4}{79.3}{100.0} & $\symsub{xi_factor}{idx_fac_a}$ \textbf{(Design)}      & $3{,}72$             \\
+        $\sym{power}_{\sym{beta}_{22}}$ & $79{,}3\,\%$             & \powerbar{33.4}{79.3}{100.0} & $\symsub{xi_factor}{idx_fac_a}$ \textbf{(Design)}      & \textbf{$3{,}72$}    \\
         \bottomrule
     \end{tabular}
 \end{table}
-Aus dieser Gegenüberstellung leitet sich ab: Wenn die Nachweiswahrscheinlichkeit der linearen Haupteffekte durch externe Systemrestriktionen limitiert wird, ist zu prüfen, inwieweit eine gezielte Reduktion der Stützstellen ($\symsub{xi_factor}{idx_fac_c}$, $\symsub{xi_factor}{idx_fac_d}$) die statistische Aussagekraft kompromittiert.
-Tabelle~\ref{tab:impact_cd} quantifiziert diesen topologisch induzierten Schätzgüteverlust als mittleren Trennschärfe-Rückgang.
+Aus der Systematik in Tabelle~\ref{tab:summary_power_sensitivity} kristallisiert sich der zentrale Umkehrschluss für die weitere Versuchsplanung heraus: Da die Nachweiswahrscheinlichkeit der linearen Haupteffekte nahezu exklusiv durch systemische Rauschfaktoren beschrieben wird, reagiert das Design gegenüber einer Reduktion seiner axialen und zentralen Stützstellen hochgradig robust.
+Weder die \ac{ZP}- noch die \ac{SP}-Anzahl (Faktoren $\symsub{xi_factor}{idx_fac_c}$ und $\symsub{xi_factor}{idx_fac_d}$) treten als dominierende Limitierung in Erscheinung.
+Genau in dieser topologischen Unempfindlichkeit verbirgt sich das gesuchte geometrische Gestaltungspotenzial.
+Um zu verifizieren, ob eine gezielte Ausdünnung dieser unkritischen Punkte die statistische Aussagekraft tatsächlich nicht nennenswert kompromittiert, quantifiziert Tabelle~\ref{tab:impact_cd} den topologisch induzierten Einfluss auf die $\sym{power}$ als mittlere Trennschärfe-Änderung.
 \begin{table}[htbp]
     \centering
     \caption{Systematischer Trennschärfe-Verlust ($\Delta \sym{power}$) bei Ausdünnung der Versuchsstützpunkte.}
@@ -254,56 +236,78 @@ Tabelle~\ref{tab:impact_cd} quantifiziert diesen topologisch induzierten Schätz
     \renewcommand{\arraystretch}{1.2}
     \begin{tabular}{@{}l rr@{}}
         \toprule
-        \textbf{Koeffizient}            & \multicolumn{2}{c}{\textbf{Durchschnittlicher Trennschärfe-Verlust ($\Delta \sym{power}$)}}                                                                              \\
+        \textbf{Koeffizient}            & \multicolumn{2}{c}{\textbf{Durchschnittlicher Trennschärfe-Verlust ($\Delta \sym{power}$)}}                                                                      \\
         \cmidrule(l){2-3}
-                                        & \textbf{bei $\symsub{xi_factor}{idx_fac_c}$ ($\symsub{n}{idx_C}=8 \to 1$)}                  & \textbf{bei $\symsub{xi_factor}{idx_fac_d}$ ($\symsub{n}{idx_S}=4 \to 2$)} \\
+                                        & \textbf{durch $\symsub{xi_factor}{idx_fac_c}$ ($\symsub{n}{idx_C}$)}                        & \textbf{bei $\symsub{xi_factor}{idx_fac_d}$ ($\symsub{n}{idx_S}$)} \\
         \midrule
-        $\sym{power}_{\sym{beta}_0}$    & $-4{,}5\,\%$                                                                                & $-0{,}3\,\%$                                                               \\
-        $\sym{power}_{\sym{beta}_1}$    & $-2{,}4\,\%$                                                                                & $-6{,}0\,\%$                                                               \\
-        $\sym{power}_{\sym{beta}_2}$    & $+1{,}1\,\%$\rlap{$^*$}                                                                     & $-8{,}0\,\%$                                                               \\
-        $\sym{power}_{\sym{beta}_{12}}$ & $-1{,}2\,\%$                                                                                & $-0{,}9\,\%$                                                               \\
-        $\sym{power}_{\sym{beta}_{11}}$ & $-13{,}9\,\%$                                                                               & $-12{,}8\,\%$                                                              \\
-        $\sym{power}_{\sym{beta}_{22}}$ & n.\,a.\rlap{$^{**}$}                                                                        & $-6{,}1\,\%$                                                               \\
+        $\sym{power}_{\sym{beta}_0}$    & $-4{,}5\,\%$                                                                                & $-0{,}3\,\%$                                                       \\
+        $\sym{power}_{\sym{beta}_1}$    & $-2{,}4\,\%$                                                                                & $-6{,}0\,\%$                                                       \\
+        $\sym{power}_{\sym{beta}_2}$    & $+1{,}1\,\%$\rlap{$^*$}                                                                     & $-8{,}0\,\%$                                                       \\
+        $\sym{power}_{\sym{beta}_{12}}$ & $-1{,}2\,\%$                                                                                & $-0{,}9\,\%$                                                       \\
+        $\sym{power}_{\sym{beta}_{11}}$ & $-13{,}9\,\%$                                                                               & $-12{,}8\,\%$                                                      \\
+        $\sym{power}_{\sym{beta}_{22}}$ & n.\,a.\rlap{$^{**}$}                                                                        & $-6{,}1\,\%$                                                       \\
         \bottomrule
-        \multicolumn{3}{l}{\footnotesize $^*$ \phantom{$^*$}Resultiert aus Varianzverschiebungen bei instabilen Designs.}                                                                                          \\
+        \multicolumn{3}{l}{\footnotesize $^*$ \phantom{$^*$}Resultiert aus Varianzverschiebungen bei instabilen Designs.}                                                                                  \\
         \multicolumn{3}{l}{\footnotesize $^{**}$ Nicht auswertbar aufgrund von Singularität.}
     \end{tabular}
 \end{table}
-Die numerische Bilanzierung belegt die Robustheit des \ac{CCD}-Skeletts: Der Verzicht auf redundante Zentralpunkte oder die Ausdünnung der Sternpunkte zieht für die Haupteffekte lediglich einen geringen Trennschärfe-Verlust nach sich.
-Der signifikante Schwachpunkt dieser Reduktion manifestiert sich in den quadratischen Termen (bis zu $-13{,}9\,\%$ bei $\sym{power}_{\sym{beta}_{11}}$).
-Hierin begründet sich die Strategie gezielter Design-Modifikationen:
-Die Reduktion klassischer Stützstellen gefährdet die Detektion von Haupteffekten kaum, was ein \textbf{geometrisches Gestaltungsbudget} freisetzt.
+Die numerische Bilanzierung belegt hier die Robustheit des \ac{CCD}-Skeletts:
+Der Verzicht auf redundante Zentralpunkte oder die Ausdünnung der Sternpunkte zieht für die Haupteffekte lediglich einen untergeordneten Trennschärfe-Verlust nach sich.
+Der exklusive strukturelle Schwachpunkt dieser Reduktion isoliert sich auf die quadratischen Terme (bis zu $-13{,}9\,\%$ bei $\sym{power}_{\sym{beta}_{11}}$).
 
-Gleichzeitig belegt Tabelle~\ref{tab:summary_power_sensitivity}, dass die periphere Geometrie (Sternpunktabstand $\symsub{xi_factor}{idx_fac_a}$) mit $\sym{Eff}=3{,}72$ den stärksten Hebel auf die quadratischen Terme besitzt.
-Dieses Budget wird folglich nicht zur Kostensenkung gestrichen, sondern durch asymmetrische topologische Reallokationen umgewidmet, um die quadratische Modellkrümmung abzustützen und die Extrapolationsvarianz zu minimieren.
+Aus dieser Erkenntnis formt sich die übergeordnete Strategie der adaptiven Versuchsplanung:
+Die unkritische Reduktion klassischer Stützstellen gefährdet die Detektion von Haupteffekten kaum, was ein \textit{geometrisches Gestaltungsbudget} freisetzt.
+Gleichzeitig belegt Tabelle~\ref{tab:summary_power_sensitivity}, dass die periphere Design-Geometrie (Sternpunktabstand $\symsub{xi_factor}{idx_fac_a}$) mit $\sym{Eff}=3{,}72$ den mit Abstand stärksten Hebel auf eben jene sensitiven quadratischen Terme besitzt.
+Die methodische Schlussfolgerung lautet daher: Das freigesetzte Gestaltungsbudget wird folglich nicht zur trivialen Kostensenkung gestrichen, sondern proaktiv in asymmetrische topologische Reallokationen investiert.
+Diese umgewidmeten Stützstellen stützen die Modellkrümmung ab und minimieren so systematisch die Extrapolationsvarianz für die Lebensdauerprognose im Feldbetrieb.
+Inwiefern diese Strategie in der Praxis tatsächlich die statistische Aussagekraft des Versuchsplans bewahrt, wird in Abschnitt~\ref{subsec:ergebnisse_generic} im Folgenden anhand von vier gewählten Störszenarien evaluiert.
 
 \subsection{Generische Auswirkungen relevanter Orthogonalitätsabweichungen} \label{subsec:ergebnisse_generic}
 
-Die Ergebnisse zeigen, dass das \ac{CCD} im Hinblick auf die statistische Trennschärfe ein robustes Verhalten gegenüber Modifikationen seiner Stützstellenanzahl aufweist.
-In der Erprobungspraxis treten Abweichungen jedoch häufig als unvorhergesehene, asymmetrische und isolierte Einzelphänomene auf, erzwungen durch physikalische Restriktionen \cite{Arndt.2022,Mell.2022,Box.1963,Ahn.2015}.
-Um diese singulären Praxisphänomene systematisch bewerten zu können, werden vier archetypische Störszenarien definiert:
+Für die praktische Versuchsplanung von \acp{ALT} greift der generalisierte, kombinatorische Block-Ansatz des Meta-Designs aus dem Abschnitt zuvor noch zu kurz.
+In der Realität am Prüfstand ist davon auszugehen, dass topologische Abweichungen von der idealen Design-Matrix technisch bedingt oftmals nicht als geplante, systematische Ausdünnung auftreten, sondern als unvorhergesehene, isolierte Einzelphänomene - erzwungen durch physikalische oder normative Restriktionen, vergleiche \cite{Arndt.2022,Mell.2022,Box.1963,Ahn.2015}.
+
+Wenn gezielte Design-Modifikationen die Effektivität des Nachweises ohnehin nur moderat beeinträchtigen, ist umso drängender zu prüfen, inwiefern unvermeidbare geometrische Manipulationen oder Anlagentoleranzen die Vorhersagegüte demnach gefährden.
+Da eine erschöpfende numerische Simulation sämtlicher denkbarer Störungskombinationen aufgrund des unendlichen Parameterraums weder zielführend noch methodisch realisierbar ist, fokussiert sich die nachfolgende Analyse auf isolierte, charakteristische Einzelrestriktionen.
+Das wissenschaftliche Ziel besteht darin, anhand dieser repräsentativen Störszenarien die fundamentalen Wirkmechanismen zwischen dem geometrischen Orthogonalitätsverlust und der resultierenden \acp{KPI}, hier unter anderem aber nicht ausschließlich die $\sym{power}$, aufzudecken.
+Aus dem Verständnis dieser kausalen Zusammenhänge lassen sich generalisierbare, methodische Anreize für die Entwicklung effizienter multivariater Lebensdauerversuche ableiten.
+
+Dementsprechend werden, basierend auf der Simulationsmethodik aus Abschnitt~\ref{subsec:simulationsmethodik}, vier spezifische Störszenarien definiert, welche typische Restriktionen der industriellen Erprobungspraxis abbilden \cite{Arndt.2022,Mell.2022}:
 
 \begin{itemize}
-    \item \textbf{Fall I (Axialer Abstandsfehler):} \acp{SP} ($\symsub{n}{idx_S}\geq 1$) können nicht auf dem nominellen Abstand $\symsub{alpha}{idx_D}$ gefahren werden. (Simulation: Stauchung auf $80\,\%$, Streckung auf $120\,\%$, Rückzug auf \textit{\ac{FC}}, $\symsub{alpha}{idx_D}=1$).
-    \item \textbf{Fall II (Co-faktorielle Korrelation):} Ein \ac{SP} ist nicht achsenrein realisierbar, was eine asymmetrische geometrische Korrelation erzeugt. (Simulation: Überlagerung durch $\sym{x}_2 = 0{,}1$ und $\sym{x}_2 = 1{,}0$).
-    \item \textbf{Fall III (Stellgrößen-Scatter):} Die \acp{SP} unterliegen einem stochastischen Rauschen ($\pm 10\,\%$ auf $\symsub{x}{idx_i}$).
-    \item \textbf{Fall IV (Früh-Ausfall / Zensierung):} Ein Versuchspunkt entfällt vollständig.
+    \item \textbf{Fall I (Asymmetrischer axialer Abstandsfehler):} Ein singulärer \ac{SP} kann aufgrund lokaler Anlagenrestriktionen nicht auf dem nominellen Abstand $\symsub{alpha}{idx_D}$ positioniert werden.
+          Im Gegensatz zur symmetrischen Verschiebung aller \acp{SP} - die primär eine Skalierung des Versuchsraums oder einen Verlust der Rotierbarkeit repräsentiert - erzwingt erst dieser isolierte Fehler den kritischen asymmetrischen Orthogonalitätsbruch.
+          Die Quantifizierung erfolgt methodisch über drei Stufen: eine axiale Stauchung auf $80\,\%$, eine Streckung auf $120\,\%$ sowie der vollständige Rückzug auf das Nennlastniveau des faktoriellen Kerns (\textit{Face-Centered}, $\symsub{alpha}{idx_D}=1$).
+    \item \textbf{Fall II (Asymmetrische co-faktorielle Korrelation):} Ein singulärer \ac{SP} ist nicht mehr achsenrein isoliert realisierbar. Spezifische physikalische Systemfunktionalitäten (beispielsweise kombinierte Einflüsse durch Temperatur und mechanische Kraft) erzwingen die parasitäre Aussteuerung eines zweiten Faktors, wodurch eine asymmetrische geometrische Korrelation im ansonsten orthogonalen Raum entsteht.
+          Dieser Fall wird in einer leichten und einer starken Ausprägung untersucht, indem ausschließlich der Sternpunkt der $\sym{x}_1$-Achse durch einen parasitären Stellgrößenanteil von $\sym{x}_2 = 0{,}1$ sowie $\sym{x}_2 = 1{,}0$ überlagert wird.
+    \item \textbf{Fall III (Stellgrößen-Scatter):} Die Aktorik des Prüfstands erlaubt keine exakte Ansteuerung der Zielkoordinaten in den extremsten Einstellungen, sodass die nominellen \acp{SP} einer unbeabsichtigten stochastischen Streuung unterliegen (uniformes Rauschen von $\pm 10\,\%$ auf der Eingangsvariablen $\symsub{x}{idx_i}$).
+    \item \textbf{Fall IV (Früh-Ausfall / Zensierung):} Ein Versuchspunkt führt zu einem Frühausfall, abweichendem Schädigungsmechanismus, wird als Durchläufer zensiert oder kann aus Zeitgründen nicht abgeschlossen werden. Der Versuch entfällt somit vollständig aus der finalen Design-Matrix.
+          Der Ausfall faktorieller Eckpunkte wird hierbei bewusst exkludiert, da deren Verlust die orthogonale Basis der linearen Haupteffekte fundamental zerstört und zumeist einen analytischen Versuchsabbruch erzwingt. Stattdessen wird vereinfacht die Zensierung peripherer und zentraler Punkte in zwei Unterkategorien differenziert:
           \begin{itemize}
-              \item \textbf{Fall IV: \ac{ZP}}: Eliminierung geometrisch redundanter \acp{ZP}.
-              \item \textbf{Fall IV: \ac{SP}}: Asymmetrische Eliminierung extremer \acp{SP}.
+              \item \textbf{Fall IV-\ac{ZP}}: Eliminierung eines geometrisch redundanten \ac{ZP}. Da diese Punkte räumlich deckungsgleich im Ursprung liegen, dient deren Wiederholung primär der Schätzung des reinen Versuchsfehlers. Ihr Wegfall reduziert folglich nicht die geometrische Aufspannung des Parameterraums.
+              \item \textbf{Fall IV-\ac{SP}}: Asymmetrische Eliminierung extremer \acp{SP} - hier simuliert am isolierten Entfall des nördlichen \ac{SP} auf der Achse von Faktor $\sym{x}_1$.
           \end{itemize}
 \end{itemize}
 
-Zusätzlich zum Basis-\ac{CCD} ergeben sich insgesamt neun Szenarien.
-Es wird quantifiziert, inwiefern der Verlust der Orthogonalität zu einer Varianzinflation (\ac{VIF} beziehungsweise \ac{MSE}) oder zu systematischen Verzerrungen (\textit{Bias}) führt.
+Wird als Referenzbasis zusätzlich zu den Design-Variationen der \textbf{Fälle I-IV} das ungestörte \textit{Basis \ac{CCD}} berücksichtigt, ergeben sich insgesamt neun zu evaluierende Szenarien.
+Für diese werden die Auswirkungen der jeweiligen Praxisrestriktion auf die Effektivität der Parameterschätzung und die $\sym{power}$ der Effekte isoliert quantifiziert.
+Es gilt zu ermitteln, inwiefern der Verlust der Orthogonalität - messbar über den globalen $\sym{A2}$-Indikator - zu Multikollinearität und folglich zu einer schädlichen Varianzinflation (\ac{VIF} beziehungsweise \ac{MSE}) oder gar zu systematischen Verzerrungen der Koeffizientenschätzung (\textit{Bias}) führt.
+Die analytische Differenzierung dieser Fehlerarten ist elementar, da ein signifikanter Bias die Validität der gesamten Lebensdauerprognose unbemerkt kompromittieren würde, während eine reine Varianzinflation primär die Konfidenzintervalle aufweitet.
 
 \subsubsection{Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}
 
-Um den isolierten Einfluss von Orthogonalitätsabweichungen quantifizierbar zu machen, wird der Arbeitspunkt der Simulation in einen kritischen Bereich verschoben.
-Bei einer fixierten Standardabweichung von $\sym{sigma} = 5{,}0$ wird das Signal-Rausch-Verhältnis für die Terme zweiter Ordnung auf $\sym{snr} = 1{,}20$ justiert ($|\sym{beta}_{11}| = |\sym{beta}_{22}| = |\sym{beta}_{12}| = 6{,}0$).
-Die linearen Haupteffekte fließen entsprechend dem empirisch belegten \textit{Sparsity of Effects Principle} \cite{Montgomery.2020} proportional dominanter mit $\sym{beta}_1 = \sym{beta}_2 = 12{,}0$ ($\sym{snr} = 2{,}40$) in das Modell ein (vgl. Tabelle~\ref{tab:simulation_parameters_normal}).
-Die Wahl positiver Haupteffekte in Kombination mit negativen Krümmungstermen modelliert ein durch Sättigungseffekte physikalisch begrenztes Leistungsoptimum.
-Auf eine zusätzliche stochastische Streuung der Effektkoeffizienten (\textit{Random Effects}) wird verzichtet.
+Die vorausgegangene Potenzialanalyse (vgl. Abschnitt~\ref{subsec:ergebnisse_sensitivitaet} und Tabelle~\ref{tab:summary_power_sensitivity}) hat das \ac{SNR} als dominierenden Begrenzungsfaktor der statistischen Trennschärfe identifiziert.
+Bei extrem starken physikalischen Effekten ($\sym{snr} \gg 1$) konvergiert die $\sym{power}$ in eine asymptotische Sättigung nahe $100\,\%$, vergleiche Abbildung~\ref{fig:power_nonlinearity} \cite{Cohen.1988}.
+In diesem Zustand operiert das Regressionsmodell derart fehlerverzeihend, dass selbst gravierende geometrische Verzerrungen des \ac{CCD} durch das starke Signal maskiert werden und keinen messbaren Einbruch der Nachweiswahrscheinlichkeit ($\sym{power}$) provozieren.
+Um die methodische Sensitivität für die Evaluation subtiler topologischer Schwachstellen zu maximieren, muss der stochastische Arbeitspunkt der Simulation daher kalibriert werden.
+
+Hierfür wird das Basismodell am kritischen Punkt maximaler Empfindlichkeit verankert:
+Bei einer vorgegebenen Standardabweichung der Systemantwort von $\sym{sigma} = 5{,}0$ wird das \ac{SNR} für die schätztechnisch sensitiven Terme zweiter Ordnung auf die obere Intervallgrenze von $\symsub{xi_factor}{idx_fac_g}$ mit $\sym{snr} = 1{,}20$ justiert: $|\sym{beta}_{11}| = |\sym{beta}_{22}| = |\sym{beta}_{12}| = 6{,}0$.
+Diese Parametrisierung zwingt das Referenz-Design für die quadratischen Effekte exakt auf die steilste Flanke der sigmoidalen Trennschärfe-Funktion (Basis-\sym{power} von ca. $70\,\%$ bis $80\,\%$) \cite{Montgomery.2020}.
+An diesem Wendepunkt schlagen geometrisch induzierte Varianzinflationen maximal auf die Trennschärfe durch, wodurch der topologisch induzierte Effektivitätsverlust erst trennscharf quantifizierbar wird.
+
+In strikter Übereinstimmung mit dem \textit{Sparsity of Effects Principle} \cite{Montgomery.2020} - welches postuliert, dass technische Systeme primär durch Haupteffekte und erst nachgelagert durch Interaktionen niederer Ordnung dominiert werden - fließen die linearen Terme proportional stärker mit $\sym{beta}_1 = \sym{beta}_2 = 12{,}0$ ($\sym{snr} = 2{,}40$) in das Modell ein (vgl. Tabelle~\ref{tab:simulation_parameters_normal}).
+Zusammen mit der Konstanten $\sym{beta}_0 = 24{,}0$ hebt dies die Systemantworten in einen plausiblen, strikt positiven Bereich. Die gezielte Kombination aus positiven Haupteffekten und negativen quadratischen Termen emuliert dabei exakt das physikalische Verhalten eines durch Sättigungseffekte begrenzten Leistungsoptimums - entsprechend gängiger Zuverlässigkeitsmodellierungen, vergleiche später Abbildung~\ref{fig:ma_abb5.4.3_response_surface}.
 
 \begin{table}[htbp]
     \centering
@@ -320,48 +324,69 @@ Auf eine zusätzliche stochastische Streuung der Effektkoeffizienten (\textit{Ra
     \end{tabular}
 \end{table}
 
-\subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse}
+Wie in Abschnitt~\ref{subsec:Simulationsarchitektur} methodisch abgeleitet, wird zur fokussierten Evaluation dieser geometrischen Störszenarien die zusätzliche Überlagerung durch \textit{Random Effects} deaktiviert.
+Ebenso greift an dieser Stelle die algorithmische Kontrollfunktion der \textit{Common Random Numbers} (Seed-Fixierung) \cite{Zio.2013}:
+Da sämtliche zu evaluierenden Design-Derivate auf exakt identische stochastische Rauschvektoren angewendet werden, ist methodisch garantiert, dass jede resultierende Abweichung in Bias und \ac{MSE} kausal und ausschließlich auf den induzierten Orthogonalitätsverlust der Matrix $\sym{X}$ zurückzuführen ist.
 
-Die Auswertung der Praxis-Szenarien am kalibrierten Arbeitspunkt offenbart eine differenzierte Reaktion der klassischen Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}).
+
+\subsubsection{Quantitative Auswertung und explorative Optimalitäts-Analyse} \label{subsubsec:quantiplore}
+
+Die Auswertung der definierten Praxis-Szenarien (\textbf{Fälle I-IV}) am kalibrierten, kritischen Arbeitspunkt ($\sym{snr} = 1{,}20$) offenbart eine hochgradig differenzierte Reaktion der klassischen Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}) und der numerisch ermittelten Schätzgüte.
+Zur detaillierten Evaluation wird die Leistungsfähigkeit nachfolgend auf Basis der kombinierten Schätzvarianz (\textit{\ac{VIF}} in Tabelle~\ref{tab:results_ortho_metrics} bzw. \textit{\ac{MSE}} in Abbildung~\ref{fig:ma_abb5.1.4_msedev}), dem systematischen Schätzfehler (\textit{Bias} in Abbildung~\ref{fig:ma_abb5.1.4_betadev}) sowie der resultierenden Trennschärfe-Variation ($\Delta \sym{power}$ in Abbildung~\ref{fig:ma_abb5.1.4_powerdev}) aufgeschlüsselt.
+
+Die nachfolgende Auswertung der Design-Metriken (Tabelle~\ref{tab:results_ortho_metrics}) fokussiert sich bewusst auf algebraische \textit{a priori}-Kriterien.
+Da Metriken wie die \textit{D-}, \textit{I-} oder \textit{G-Effizienz} im linearen Modell exklusiv auf der Informationsmatrix $\sym{X}'\sym{X}$ beruhen, isolieren sie den reinen geometrischen Design-Fehler.
+Parameterabhängige Gütemaße - wie beispielsweise die $U$-Optimalität - werden an dieser Stelle  exkludiert, um die topologische Bewertung nicht unzulässig mit den stochastischen Annahmen der wahren Koeffizienten zu verfälschen.
+Ein erster Blick auf diese rein informationsbasierten Metriken offenbart dabei physikalisch wie geometrisch plausible Gesetzmäßigkeiten:
+\begin{itemize}
+    \item \textbf{Volumeneffekte und Prädiktionsgüte:} Kriterien wie die \textit{I-} und \textit{D-Effizienz} skalieren direkt mit dem geometrischen Trägheitsmoment (der räumlichen Ausdehnung) des Versuchsraums.
+          So erzielt der nach außen gestreckte Shift (\textit{Fall I}, $+20\,\%$) Bestwerte in der integrierten Prädiktionsvarianz mit $\sym{eff_I}=85{,}1\,\%$.
+          Demgegenüber erzeugen Ausfälle periphere Informationsverluste, deren topologische Sensitivität jedoch gravierend divergiert: Während der asymmetrische Entfall eines extremen Sternpunktes (\textit{Fall IV-\ac{SP}}) eine starke Reduktion der \textit{I}-Effizienz auf $\sym{eff_I}=69{,}0\,\%$ resultieren lässt, dämpft der Ausfall eines Zentralpunktes (\textit{Fall IV-\ac{ZP}}) die Vorhersagegüte keineswegs.
+          Vielmehr steigt die \ac{SPV}-normierte $\sym{eff_I}$ aufgrund des reduzierten Stichprobenumfangs $\sym{N}$ rechnerisch sogar leicht auf $85{,}7\,\%$ an.
+          Dies belegt unmissverständlich die statistische Ineffizienz reiner Basis-\acp{ZP} für den Bereich der Extrapolation in den \textit{Feld-Parameterraum}.
+
+    \item \textbf{Topologische Warnsignale und blinde Flecken:} Eine starke \textit{co-faktorielle Korrelation} (\textit{Fall II, stark}) erzeugt einen statistischen blinden Fleck.
+          Obwohl das globale Design-Volumen bei dieser Modifikation weitestgehend erhalten bleibt, konvergiert der $\sym{A2}$-Indikator als Maß für die Nicht-Orthogonalität gegen sein absolutes Maximum von $0{,}352$.
+          Die durch die parasitäre Abhängigkeit entstehenden Lücken im Parameterraum bestraft die an \textit{Worst-Case}-Szenarien orientierte \textit{G-Effizienz} mit einem drastischen Einbruch, während sich der reale Informationsverlust in eine term-spezifische Varianzinflation verlagert.
+
+    \item \textbf{Geometrische Selektivität der Varianzinflation:} Der \ac{VIF} bildet den Orthogonalitätsverlust nicht global, sondern hochgradig isoliert ab.
+          Beim asymmetrischen Sternpunkt-Ausfall (\textit{Fall IV-\ac{SP}}) greift die stringente Mathematik der entkoppelten Achsen: Da der zensierte \ac{SP} exakt auf der $\sym{x}_1$-Achse liegt, leiden ausschließlich der zugehörige Haupteffekt $\hat{\sym{beta}}_1$ sowie der quadratische Term $\hat{\sym{beta}}_{11}$ unter spürbarer Varianzinflation.
+          Die orthogonal dazu stehende $\sym{x}_2$-Achse bleibt von diesem topologischen Bruch vollkommen unbeschadet.
+\end{itemize}
 
 \input{tables/tab_results_ortho_metrics.tex}
 
-\begin{itemize}
-    \item \textbf{Volumeneffekte und Prädiktionsgüte:} Die \textit{I-} und \textit{D-Effizienz} skalieren mit der räumlichen Ausdehnung. Der nach außen gestreckte Shift (\textit{Fall I}) erzielt Bestwerte in der integrierten Prädiktionsvarianz. Der asymmetrische Entfall eines Sternpunktes (\textit{Fall IV: \ac{SP}}) provoziert einen signifikanten Rückgang der \textit{I}-Effizienz auf $\sym{eff_I}=69{,}0\,\%$, während der Ausfall eines Zentralpunktes (\textit{Fall IV: \ac{ZP}}) die Vorhersagegüte nicht dämpft.
-    \item \textbf{Lokale Varianzmaxima:} Eine starke co-faktorielle Korrelation (\textit{Fall II}) erzeugt topologische Lücken im Parameterraum. Der $\sym{A2}$-Indikator konvergiert gegen sein lokales Maximum von $0{,}352$.
-    \item \textbf{Geometrische Selektivität der Varianzinflation:} Der \ac{VIF} bildet den Orthogonalitätsverlust term-spezifisch ab. Beim Ausfall des \ac{SP} auf der $\sym{x}_1$-Achse weisen ausschließlich der zugehörige Haupteffekt $\hat{\sym{beta}}_1$ und der quadratische Term $\hat{\sym{beta}}_{11}$ eine Varianzinflation auf.
-\end{itemize}
-
-Diese Varianzerhöhung wird in Abbildung~\ref{fig:ma_abb5.1.4_msedev} über den \ac{MSE} quantifiziert. Während die Zensierung des Zentralpunktes (\textit{Fall IV: \ac{ZP}}) in keiner signifikanten Varianzinflation resultiert, induziert der asymmetrische Freiheitsgradverlust in \textit{Fall IV: \ac{SP}} einen substanziellen Anstieg des \ac{MSE} für die betroffenen Terme.
-Gleichzeitig belegt die Auswertung die Erwartungstreue des \ac{OLS}-Schätzers: Der relative systematische Schätzfehler (Bias) verharrt im Promillebereich (vgl. Tabelle~\ref{tab:results_ortho_bias} und Abbildung~\ref{fig:ma_abb5.1.4_betadev}).
+Diese geometrisch induzierten Varianzerhöhungen werden in Abbildung~\ref{fig:ma_abb5.1.4_msedev} über den \ac{MSE} empirisch verifiziert.
+Ein scheinbares Paradoxon offenbart sich hierbei für den Interaktionsterm $\sym{beta}_{12}$ unter der starken co-faktoriellen Korrelation (\textit{Fall II, stark}): Sein \ac{MSE} sinkt im Vergleich zum Basis-Design, anstatt zu steigen. Dies ist mathematisch jedoch zwingend: Durch das parasitäre Abdriften des Sternpunkts von $(\symsub{alpha}{idx_D}, 0)$ auf $(\symsub{alpha}{idx_D}, 1)$ vergrößert sich die Stützbasis für das Kreuzprodukt $\sym{x}_1\sym{x}_2$ künstlich. Das Design gewinnt für exakt diesen Term an Hebelwirkung, was dessen isolierte Schätzvarianz senkt - erkauft wird dieser lokale Gewinn jedoch durch die fatale Zerstörung der Matrix-Orthogonalität und massive Varianzerhöhungen der übrigen Parameter.
 
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.9\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.1.4_msedev.tex}
-    \caption{Güte der Schätzer (\ac{MSE}) am Arbeitspunkt $\sym{snr}=1{,}20$. Geometrische Verzerrungen entladen sich primär in der Schätzvarianz (\textbf{\textit{Fall IV: \ac{SP}}}).}
+    \caption{Güte der Schätzer (\ac{MSE}) am Arbeitspunkt $\sym{snr}=1{,}20$. Geometrische Verzerrungen entladen sich primär in der Schätzvarianz (vgl. \textbf{\textit{Fall IV-\ac{SP}}}). Das Absinken des Fehlers für $\sym{beta}_{12}$ in \textbf{\textit{Fall II}} resultiert aus dem künstlich erhöhten Hebelarm für das Interaktions-Kreuzprodukt.}
     \label{fig:ma_abb5.1.4_msedev}
 \end{figure}
 
-\input{tables/tab_results_ortho_bias.tex}
+Gleichzeitig belegt die Auswertung der Fehlerstrukturen in Tabelle~\ref{tab:results_ortho_bias} und Abbildung~\ref{fig:ma_abb5.1.4_betadev} die uneingeschränkte Erwartungstreue des \ac{OLS}-Schätzers. Die empirische Ausweisung dieser Metrik ist für die Design-Evaluation von essenzieller Bedeutung: Sie erbringt den formalen Beweis, dass geometrische Verzerrungen des Versuchsplans -- solange das Auswertemodell korrekt spezifiziert bleibt -- ausschließlich die Schätzvarianz befeuern. Der systematische Schätzfehler (Bias) verharrt im Bereich des numerischen Rauschens (Promillebereich) und kompromittiert das Gauss-Markow-Fundament nicht.
+
+
 
 \begin{figure}[htbp]
     \centering
     \setlength\figurewidth{0.9\textwidth}
     \setlength\figureheight{6cm}
     \input{plots/ma_abb5.1.4_betadev.tex}
-    \caption{Absolute Schätzwerte der Modellkoeffizienten für den Arbeitspunkt $\sym{snr}=1{,}20$. Der Bias bleibt marginal.}
+    \caption{Absolute Schätzwerte der Modellkoeffizienten für den Arbeitspunkt $\sym{snr}=1{,}20$. Der systematische Schätzfehler (Bias) bleibt marginal, was die OLS-Erwartungstreue trotz topologischer Verzerrungen verifiziert.}
     \label{fig:ma_abb5.1.4_betadev}
 \end{figure}
 
-Der resultierende Einfluss auf die Trennschärfe (Tabelle~\ref{tab:results_ortho_power} und Abbildung~\ref{fig:ma_abb5.1.4_powerdev}) zeigt folgendes Bild:
+Der resultierende Einfluss dieser Fehlerarchitektur auf die Trennschärfe (Tabelle~\ref{tab:results_ortho_power} und Abbildung~\ref{fig:ma_abb5.1.4_powerdev}) verdichtet sich in folgendem Bild:
 \begin{enumerate}
-    \item \textbf{Gutmütige Restriktionen:} Stochastisch verzerrte Ansteuerung (\textit{Fall III}) und der Entfall eines Zentralpunktes (\textit{Fall IV: \ac{ZP}}) erzeugen lediglich marginale Einbußen.
-    \item \textbf{Kritische Restriktionen für Terme höherer Ordnung:} Sobald die periphere Geometrie kompromittiert wird, reduziert sich die Trennschärfe der quadratischen Terme maßgeblich. Der asymmetrische Entfall eines Sternpunktes (\textit{Fall IV: \ac{SP}}) führt zum signifikantesten Rückgang der Entdeckungswahrscheinlichkeit.
+    \item \textbf{Gutmütige Restriktionen:} Stochastisch verzerrte Ansteuerung (\textit{Fall III}) und der Entfall eines Zentralpunktes (\textit{Fall IV-\ac{ZP}}) erzeugen lediglich marginale Einbußen in der Entdeckungswahrscheinlichkeit.
+    \item \textbf{Kritische Restriktionen für Terme höherer Ordnung:} Sobald die periphere Geometrie asymmetrisch kompromittiert wird, reduziert sich die Trennschärfe exklusiv für die quadratischen Terme maßgeblich. Der Entfall eines Sternpunktes (\textit{Fall IV-\ac{SP}}) führt zum signifikantesten Rückgang der $\sym{power}$.
 \end{enumerate}
 
-\input{tables/tab_results_ortho_power.tex}
 
 \begin{figure}[htbp]
     \centering
@@ -372,7 +397,7 @@ Der resultierende Einfluss auf die Trennschärfe (Tabelle~\ref{tab:results_ortho
     \label{fig:ma_abb5.1.4_powerdev}
 \end{figure}
 
-Die Korrelation zwischen den \textit{a priori} Design-Metriken und dem Trennschärfe-Verlust $\Delta \sym{power}$ (Abbildung~\ref{fig:ma_abb5.1.4_korrelation}) belegt, dass der \ac{MSE} als verlässlicher Prädiktor für den Trennschärfe-Erhalt isolierter Koeffizienten fungiert. Die $\sym{eff_I}$ erweist sich als robustes Maß zur Bewertung der globalen Prognosegüte.
+Die Korrelation zwischen den algebraischen \textit{a priori} Design-Metriken und dem simulativen Trennschärfe-Verlust $\Delta \sym{power}$ (Abbildung~\ref{fig:ma_abb5.1.4_korrelation}) belegt abschließend, dass der \ac{MSE} als direkter und verlässlichster Prädiktor für den Trennschärfe-Erhalt isolierter Koeffizienten fungiert. Die $\sym{eff_I}$ erweist sich hingegen als robustes Makro-Maß zur Bewertung der globalen Prognosegüte.
 
 \begin{figure}[htbp]
     \centering

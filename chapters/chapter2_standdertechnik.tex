@@ -775,9 +775,19 @@ Für die Überprüfung eines individuellen Modellparameters $\symsub{beta}{idx_j
     \symsub{delta}{idx_nc} = \frac{|\symsub{beta}{idx_j}|}{\sym{sigma} \sqrt{\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}}},
 \end{equation}
 wobei $|\symsub{beta}{idx_j}|$ die zu detektierende wahre Effektstärke und $\sym{sigma}$ die Standardabweichung des experimentellen Rauschens darstellt \cite{Cohen.1988,Myers.2016}.
-Anhand dieser analytischen \ac{OLS}-Metrik wird der fundamentale geometrische Hebel der Versuchsplanung deutlich: Sobald die Orthogonalität verloren geht, entstehen signifikante Kovarianzen in der Informationsmatrix $\sym{M} = \sym{X}'\sym{X}$.
-Die Matrixinvertierung führt zu einer Inflation des Diagonalelements $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$, was $\symsub{delta}{idx_nc}$ unmittelbar reduziert und somit die Trennschärfe mindert.
-
+Der funktionale Zusammenhang zwischen diesem Nichtzentralitätsparameter und der resultierenden Trennschärfe ist jedoch hochgradig nichtlinear: Die $\sym{power}$ folgt in Abhängigkeit von $\symsub{delta}{idx_nc}$ - und damit vom Signal-Rausch-Verhältnis - dem Verlauf einer \textit{sigmoidalen Sättigungsfunktion}, vergleiche Abbildung~\ref{fig:power_nonlinearity} \cite{Cohen.1988}.
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.5\textwidth}
+    \setlength\figureheight{\figurewidth}
+    \input{plots/ma_abb2.25_power_nonlinearity}
+    \caption{Zusammenhang zwischen $\sym{power}$ und $\symsub{delta}{idx_nc}$.}
+    \label{fig:power_nonlinearity}
+\end{figure}
+In den asymptotischen Randbereichen (bei extrem schwachen oder hochgradig dominanten Effekten) reagiert die Trennschärfe nahezu unempfindlich auf topologische Änderungen im Design.
+Im Bereich des Wendepunkts - der \textit{steilsten Flanke} dieser sigmoidalen Funktion - entfaltet die geometrische Matrixstruktur $\sym{X}$ hingegen ihren maximalen Hebel auf die Prognosegüte.
+Anhand der analytischen \ac{OLS}-Metrik in Gleichung~\ref{eq:non_centrality} wird dieser Mechanismus unmittelbar ersichtlich: Sobald die topologische Orthogonalität verloren geht, entstehen signifikante Kovarianzen in der Informationsmatrix $\sym{M} = \sym{X}'\sym{X}$.
+Die Invertierung dieser Matrix erzwingt eine Inflation des Diagonalelements $\left( \sym{X}'\sym{X} \right)^{-1}_{\sym{idx_j} \sym{idx_j}}$, was den Wert von $\symsub{delta}{idx_nc}$ mathematisch komprimiert und die Trennschärfe genau an der kritischen Flanke der Funktion drastisch einbrechen lässt.
 Für die multivariate Lebensdauererprobung verliert diese analytische Berechnung jedoch ihre methodische Anwendbarkeit.
 Aufgrund der asymmetrischen Verteilungsannahmen (Weibull) und dem Vorliegen zensierter Daten existieren im \ac{GLM}-Framework keine geschlossenen analytischen Lösungen zur exakten Bestimmung der Trennschärfe.
 Die Signifikanz der Koeffizienten $\symsub{beta}{idx_j}$ muss hier vorzugsweise über numerische \textit{\acp{LR-Test}} oder approximativ über \textit{Wald-Tests} ermittelt werden \cite{Rigdon.2022, Meeker.2022, McCulloch.2001}.
