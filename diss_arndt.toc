@@ -52,32 +52,32 @@
 \contentsline {subsection}{\numberline {4.2.3}Generische Auswirkungen relevanter Orthogonalitätsabweichungen}{68}{subsection.4.2.3}%
 \contentsline {subsubsection}{\nonumberline Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}{70}{subsubsection*.83}%
 \contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{72}{subsubsection*.86}%
-\contentsline {subsection}{\numberline {4.2.4}Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung}{77}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}Adaptive Versuchsplanung zur Extrapolationsabsicherung}{77}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Die Scaled Prediction Variance als Prognosemetrik}{77}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)}{78}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Isolierte stochastische Validierung der asymmetrischen Topologie}{80}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Kostenstruktur der Lebensdauererprobung}{85}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Übertragung auf multivariate Lebensdauermodelle}{85}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Signal-Rausch-Kalibrierung im AFT-Raum}{85}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Effizientes \cgls {L-DoE} und der Economic Extrapolation Power Index}{87}{subsection.4.5.2}%
-\contentsline {subsubsection}{\nonumberline Konsequenzen für die Prognoseunsicherheit im Feldbetrieb}{91}{subsubsection*.115}%
-\contentsline {section}{\numberline {4.6}Methodische Synthese und Transfer}{91}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Empirische Validierung der Extrapolationsabsicherung}{93}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Modellschätzung und Anpassungsgüte}{96}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Residuenanalyse und Verifikationsdiagnostik}{98}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Konsequenzen für die Zuverlässigkeitsmodellierung}{99}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Confirmation Experiments: Der statistische Härtetest}{101}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Ökonomische Schlussfolgerung und industrieller Business Case}{103}{subsection.5.2.2}%
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{105}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Diskussion}{107}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Ausblick}{108}{section.6.2}%
-\contentsline {chapter}{\nonumberline Literatur}{111}{chapter*.122}%
-\contentsline {chapter}{Anhang}{123}{chapter*.122}%
-\contentsline {section}{\numberline {A}Sensitivitätsanalyse}{123}{section.Alph0.1}%
-\contentsline {section}{\numberline {B}Orthogonalitäts-Analysen der Design-Modifikationen}{132}{section.Alph0.2}%
-\contentsline {subsection}{\numberline {B.1}Orthogonalitäts-Analysen aus Abschnitt~\ref {subsubsec:quantiplore}}{132}{subsection.Alph0.2.1}%
-\contentsline {subsection}{\numberline {B.2}Szenarien bei Arbeitspunkt SNR$=1$}{138}{subsection.Alph0.2.2}%
-\contentsline {subsection}{\numberline {B.3}Effizienzanalysen}{138}{subsection.Alph0.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung}{79}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}Adaptive Versuchsplanung zur Extrapolationsabsicherung}{80}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Die Scaled Prediction Variance als Prognosemetrik}{81}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)}{85}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Kostenstruktur der Lebensdauererprobung}{90}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Übertragung auf multivariate Lebensdauermodelle}{94}{section.4.5}%
+\contentsline {subsubsection}{\nonumberline Signal-Rausch-Kalibrierung unter dem Sparsity of Effects Principle}{96}{subsubsection*.103}%
+\contentsline {subsection}{\numberline {4.5.1}Generische Auswirkungen asymmetrischer Versuchsplanung}{100}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Effizientes \cgls {L-DoE} und der Economic Extrapolation Power Index}{103}{subsection.4.5.2}%
+\contentsline {subsubsection}{\nonumberline Konsequenzen für die Prognoseunsicherheit im Feldbetrieb}{108}{subsubsection*.115}%
+\contentsline {section}{\numberline {4.6}Fazit}{110}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Empirische Validierung der Extrapolationsabsicherung}{113}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Modellschätzung und Anpassungsgüte}{116}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Residuenanalyse und Verifikationsdiagnostik}{118}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Konsequenzen für die Zuverlässigkeitsmodellierung}{119}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Confirmation Experiments: Der statistische Härtetest}{121}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Ökonomische Schlussfolgerung und industrieller Business Case}{123}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{125}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Diskussion}{127}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Ausblick}{128}{section.6.2}%
+\contentsline {chapter}{\nonumberline Literatur}{131}{chapter*.122}%
+\contentsline {chapter}{Anhang}{143}{chapter*.122}%
+\contentsline {section}{\numberline {A}Sensitivitätsanalyse}{143}{section.Alph0.1}%
+\contentsline {section}{\numberline {B}Orthogonalitäts-Analysen der Design-Modifikationen}{152}{section.Alph0.2}%
+\contentsline {subsection}{\numberline {B.1}Orthogonalitäts-Analysen aus Abschnitt~\ref {subsubsec:quantiplore}}{152}{subsection.Alph0.2.1}%
+\contentsline {subsection}{\numberline {B.2}Szenarien bei Arbeitspunkt SNR$=1$}{158}{subsection.Alph0.2.2}%
+\contentsline {subsection}{\numberline {B.3}Effizienzanalysen}{158}{subsection.Alph0.2.3}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
