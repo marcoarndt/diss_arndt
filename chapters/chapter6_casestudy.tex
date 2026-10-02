@@ -2,28 +2,24 @@
 %% Kapitel 6 - CaseStudy %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Empirische Validierung der Extrapolationsabsicherung} \label{chap:casestudy}
+\chapter{Empirische Anwendung der Extrapolationsabsicherung} \label{chap:casestudy}
 
-Die Ausführungen in Kapitel~\ref{chap:entwurf} erbringen auf Basis umfangreicher \acp{MCS} den theoretischen und algorithmischen Nachweis, dass das \ac{EmALT}-Design im Rahmen der multivariaten, effizienten Lebensdauererprobung signifikante informationstheoretische Vorteile gegenüber klassisch orthogonalen Versuchsplänen für \ac{ALT} bietet.
-Für den finalen Transfer dieser Methodik in die industrielle Zuverlässigkeitstechnik dient das vorliegende Kapitel der ergänzenden empirischen Validierung in der \textbf{Fallstudie} zum real vermessenen Hardwaredatensatz aus Untersuchungen von \textcite{Arndt.2026}.
-Damit untermauert dieser Abschnitt die numerischen Ergebnisse des vorherigen Kapitels durch die Betrachtung realer Bauteilversuche an Zahnriemen für Lenksysteme in automobilen Anwendungen.
+Für den Transfer der in Kapitel~\ref{chap:entwurf} entwickelten \ac{EmALT}-Planung in die industrielle Zuverlässigkeitstechnik dient das vorliegende Kapitel der empirischen Anwendung.
+Anhand einer Fallstudie zu einem real vermessenen Hardwaredatensatz von Lenksystem-Zahnriemen \cite{Arndt.2026} wird die praktische Leistungsfähigkeit asymmetrischer Versuchsplanung demonstriert.
+Vorausgesetzt sei hier, dass im Rahmen einer effizienten Versuchsplanung bereits die grundlegende Parameterauswahl auf Basis von heuristischen oder experimentellen Vorversuchen erfolgt ist \cite{Arndt.2023c}.
 
-Der methodische Übergang von der Simulation zur physischen Erprobung impliziert zwei wesentliche Verschärfungen der Randbedingungen:
-Erstens weicht die idealisierte Gesetzmäßigkeit unendlicher Simulationsiterationen der harten statistischen Realität stark limitierter Stichprobenumfänge.
-Die Untersuchung basiert auf einem realen Versuchsdatensatz mit lediglich zweifacher Replikation und damit $\sym{N} = 26$ Versuchspunkt-Durchführungen.
-Zweitens unterliegen experimentelle \ac{EoL}-Versuche zwingenden physikalischen und normativen Restriktionen.
-Anstatt diese als Mangel zu betrachten, generieren sie aus Sicht der adaptiven Versuchsplanung durch \ac{EmALT} das \textbf{geometrische Gestaltungsbudget} nach Abschnitt~\ref{sec:adaptive_planung}.
-Hier beispielhaft und abweichend von der rein theoriegeleiteten Ausdünnung redundanter \acp{ZP} speist sich dieses Budget im vorliegenden Fall aus dem Entfall des nördlichen und östlichen \acp{SP} - $(0 ; \symsub{alpha}{idx_D})$ und $(\symsub{alpha}{idx_D} ; 0)$ - sowie des faktoriellen Eckpunktes $(1; -1)$.
+Dieser methodische Übergang von der theoretischen Simulation zur physischen Erprobung erzwingt eine Konfrontation mit der industriellen Messrealität:
+Die idealisierte Gesetzmäßigkeit der \ac{MCS} mit vollumfänglicher Kenntnis der wahren Parameter weicht der limitierten Schätzpräzision eines realen, zweifach replizierten Datensatzes ($\sym{N} = 26$).
+Zudem unterliegen experimentelle \ac{EoL}-Versuche physikalischen und normativen Restriktionen an den Belastungsgrenzen.
+Anstatt diese Limitierungen als methodischen Makel zu betrachten, generieren sie aus Sicht der adaptiven Versuchsplanung das \textbf{geometrische Gestaltungsbudget} für den \ac{EmALT}-Ansatz (vgl. Abschnitt~\ref{sec:adaptive_planung}).
+Hier speist sich dieses Budget abweichend von der theoriegeleiteten Zentralpunkt-Reduktion aus dem zwingenden Entfall zweier Hochlast-\acp{SP} - $(0 ; \symsub{alpha}{idx_D})$ und $(\symsub{alpha}{idx_D} ; 0)$ - sowie des faktoriellen Eckpunktes $(1; -1)$.
+Diese topologische Restriktion ist physikalisch durch die Versuchsträger determiniert: In diesem spezifischen Höchstlastbereich kann für diesen beispielhaften Datensatz ein Wechsel des Ausfallmechanismus resultieren \cite{Perneder.2009,Nagel.2008b} und durch Befundung charakterisiert werden, wodurch die erhobenen Lebensdauerdaten ihre regressionsanalytische Validität für den Feldbetrieb verliert.
 
-Diese topologische Limitierung ist physikalisch determiniert: Das komplexe tribologische Eingriffsverhalten des Zahnriemens verliert in diesem spezifischen, kombinierten Belastungsregime seine funktionale Plausibilität, wodurch abweichende Ausfallmechanismen provoziert werden können, vergleiche \cite{Perneder.2009,Nagel.2008b}.
-
-Wenngleich die Prüfläufe in der Realität hier schon durchgeführt wurden, werden die als nicht realisierbar deklarierten Hochlast-Versuche zum Zweck des systematischen Design-Vergleichs konsequent aus der Design-Matrix gestrichen.
-Anstatt den Versuchsplan dadurch lediglich passiv auszudünnen und eine asymmetrische Varianzaufweitung in Kauf zu nehmen, wird das hypothetisch freigewordene Budget proaktiv umgewidmet:
-Die Aufwände werden in die direkte Peripherie des hier beispielhaft anvisierten Feldbetriebspunktes $(-1{,}50; -1{,}80)$ im Niedrigstressbereich zur Prognoseoptimierung re-allokiert.
-Da der originäre Basis-Datensatz nach \textcite{Arndt.2026} diese massiv entschärften Stressniveaus naturgemäß nicht abdeckt, werden die Positionierungen und Ausfallergebnisse der \acp{AP} beispielhaft aus begleitenden Untersuchungen des Erprobungsprojekts übernommen: Es liegt somit ein vollständiger \ac{ALT}-Datensatz mit realen \ac{EoL}-Zeiten für einen orthogonalen \ac{CCD}-Versuchsplan sowie die ergänzenden \acp{AP} vor.
-Dieser subtile methodische Transfer dient primär dem Zweck, das Wirkprinzip der \ac{EmALT}-Topologie an einem kohärenten Realdatensatz methodisch geschlossen zu exemplifizieren und greifbar zu visualisieren.
-Entscheidend ist hierbei, dass die Reallokation algorithmisch optimiert in Relation zum Prognosepunkt und nach den in Kapitel~\ref{chap:entwurf} entwickelten \ac{EmALT}-Kriterien in Kombination mit realen Prüfstandsbeschränkungen erfolgen kann.
-Tabelle~\ref{tab:ieee_experimental_data} fasst alle experimentell ermittelten Ausfallzeiten des untersuchten Lenksystem-Zahnriemens für die jeweiligen Faktorkombinationen übersichtlich zusammen.
+Um die Leistungsfähigkeit der \ac{EmALT}-Strategie am Realdatensatz zu evaluieren, wird das durch den Entfall der Hochlast-Punkte theoretisch freigewordene Budget proaktiv umgewidmet.
+Die experimentellen Aufwände werden algorithmisch als asymmetrische \acp{AP} in die Peripherie des anvisierten Feldbetriebspunktes $(-1{,}50; -1{,}80)$ reallokiert.
+Da der originäre Datensatz nach \textcite{Arndt.2026} diese entschärften Stressniveaus nicht abdeckt, werden reale Prüfläufe aus flankierenden Versuchsträgern des Erprobungsprojekts für die \ac{AP}-Koordinaten integriert.
+Diese methodische Synthese eines kohärenten Datensatzes dient dem ingenieurswissenschaftlichen Zweck, das Wirkprinzip der Extrapolationsabsicherung unter realem stochastischem Materialrauschen zu verifizieren.
+Tabelle~\ref{tab:ieee_experimental_data} fasst die empirischen Ausfallzeiten für die vergleichende Modellierung zusammen.
 \input{tables/tab_ieee_experimental_data.tex}
 Da die \acp{AP} im Gegensatz zur theoretischen Simulation nun mit realen Ausfallzeiten unterlegt sind, ermöglicht dieser Datensatz einen einzigartigen, zweiseitigen Modellvergleich:
 Die Parameterschätzung und Lebensdauerprognose erfolgen separat für das klassische Basis-\ac{CCD} (ohne \acp{AP}, isoliert aus den Untersuchungen von \textcite{Arndt.2026}) sowie für das reallokierte \ac{EmALT}-Design inklusive der Ankerpunkte.
@@ -45,14 +41,20 @@ Abbildung~\ref{fig:ma_abb6.1_parameter_estimates} veranschaulicht die Gegenüber
 \end{figure}
 
 Die Integration der Ankerpunkte modifiziert das Regressionsmodell messbar und offenbart eine wertvolle Anreicherung des ungestützten Extrapolationsmodells.
-Während die Konstante $\hat{\sym{beta}}_0$ sowie die Effekte $\hat{\sym{beta}}_2$ und $\hat{\sym{beta}}_{22}$ mit relativen Abweichungen von lediglich rund $2\,\%$ bis $7\,\%$ ein -- im Hinblick auf den limitierten Stichprobenumfang von $\sym{N}=26$ -- absolut tolerierbares und hochgradig konsistentes Grundniveau aufzeigen, erfahren andere Terme eine signifikante Neukalibrierung.
-So wird der Haupteffekt $\hat{\sym{beta}}_1$ durch die Ankerpunkte drastisch gedämpft ($-1{,}34 \to -0{,}62$, ca. $-54\,\%$), während sich der quadratische Term $\hat{\sym{beta}}_{11}$ mehr als verdoppelt ($0{,}23 \to 0{,}57$, ca. $+148\,\%$).
-Besonders bemerkenswert ist das Verhalten der Faktoren-Interaktion $\hat{\sym{beta}}_{12}$, welche eine vollständige Vorzeichenumkehr erfährt ($0{,}60 \to -0{,}37$).
+Während die Konstante $\hat{\sym{beta}}_0$ sowie die Effekte $\hat{\sym{beta}}_2$ und $\hat{\sym{beta}}_{22}$ eine hohe Konsistenz aufzeigen, erzwingen die \acp{AP} bei den übrigen Termen eine signifikante Neukalibrierung.
+So wird der Haupteffekt $\hat{\sym{beta}}_1$ drastisch gedämpft (ca. $-54\,\%$), während sich der quadratische Term $\hat{\sym{beta}}_{11}$ mehr als verdoppelt (ca. $+148\,\%$).
+Besonders prägnant ist die vollständige Vorzeichenumkehr der Faktoren-Interaktion $\hat{\sym{beta}}_{12}$ ($0{,}60 \to -0{,}37$).
+Da bei empirischen Daten keine absolute \textit{Ground-Truth} vorliegt, belegen diese Verschiebungen primär die immense strukturelle Instabilität des reinen \ac{CCD}-Modells: Ohne die Stützung durch \acp{AP} kippt die Parameterkonstellation auf dem Extrapolationspfad erheblich.
 
-Flankierend korrigiert das \ac{EmALT}-Design die struktur- und stichprobenbedingte Unterschätzung des Weibull-Formparameters $\hat{\sym{b}}$.
-Das eng im Hochlastzentrum konzentrierte Basis-\ac{CCD} schätzt mit $\hat{\sym{b}}=1{,}25$ eine physikalisch verhältnismäßig breite Streuung der Lebensdauern.
-Die realen Ankerpunkte heben diesen Wert um $33\,\%$ auf ein Niveau von $\hat{\sym{b}}=1{,}66$ an, was einer geringeren, deterministischeren Bauteilstreuung entspricht.
-Diese numerische Verschiebung der Parameter manifestiert sich visuell prägnant in den rekonstruierten Antwortflächen nach Abbildung~\ref{fig:ma_abb6.1_response_surface}.
+Flankierend induzieren die Realdaten einen datensatzspezifischen Effekt bezüglich des Weibull-Formparameters $\hat{\sym{b}}$.
+Das eng im Hochlastzentrum konzentrierte Basis-\ac{CCD} schätzt mit $\hat{\sym{b}}=1{,}25$ eine hohe Varianz der Lebensdauern, was auf eine starke stochastische Bauteilstreuung unter Extrembelastung hindeutet.
+Die Einbindung der feldnahen Ankerpunkte stabilisiert diesen Wert auf $\hat{\sym{b}}=1{,}66$.
+Diese deterministischere Schädigungskinetik im moderaten Stressbereich korrespondiert mit der werkstoffphysikalischen Erwartungshaltung, dass tribologische Verschleißmechanismen fernab der makroskopischen Belastungsgrenzen eine reduzierte Ausfallstreuung aufweisen.
+
+Diese Neukalibrierung manifestiert sich visuell prägnant in der Antwortfläche (Abbildung~\ref{fig:ma_abb6.1_response_surface}).
+Das ungestützte Basis-\ac{CCD} extrapoliert den steilen Gradienten des Hochlastzentrums starr und linear in den fernen \textit{Use-Space}, was zu einer potenziell fatalen Überschätzung der zu erwartenden Systemlebensdauer im Feld führt.
+Das \ac{EmALT}-Design registriert durch seine \acp{AP} physikalisch korrekt, dass die Lebensdauer bei moderateren Lasten nicht im gleichen Maße ansteigt, wie es die initiale Hochlast-Extrapolation suggeriert.
+Die Response Surface erfährt durch die \acp{AP} somit eine empirisch gestützte Dämpfung in Richtung konservativerer Lebensdauern.
 
 \begin{figure}[htbp]
     \centering
@@ -60,13 +62,6 @@ Diese numerische Verschiebung der Parameter manifestiert sich visuell prägnant 
     \caption{Modellanpassung im Parameterraum (logarithmische Darstellung): Beide Regressionsflächen im direkten visuellen Vergleich. Das Basis-\ac{CCD} extrapoliert starr aus dem Hochlastzentrum. Das \ac{EmALT}-Design wird durch die \acp{AP} im südwestlichen Parameterbereich gestützt und erfährt eine merkliche Dämpfung der prognostizierten Lebensdauer.}
     \label{fig:ma_abb6.1_response_surface}
 \end{figure}
-
-Die dreidimensionale, gemeinsame Visualisierung der Regressionsflächen liefert die ingenieurswissenschaftliche Interpretation dieser methodischen Optimierung durch Anwendung eines \ac{EmALT}-Designs -- wohl berücksichtigend, dass die Approximation der Response Surface nur eine richtungsabhängige, statistische Repräsentation der realen Lebensdauer ist:
-Das Basis-\ac{CCD} approximiert die Versuchspunkte im beschleunigten Zentrum präzise entlang der Ergebnislage, extrapoliert diesen steilen Gradienten jedoch linear und ungebremst in den fernen \textit{Use-Space}.
-Das \ac{EmALT}-Design hingegen registriert durch seine \acp{AP}, dass die Lebensdauer bei moderateren Lasten physikalisch nicht in dem Maße ansteigt, wie es die initiale Hochlast-Extrapolation vermuten ließe.
-Die Response Surface erfährt durch die Ankerpunkte damit eine deutliche Dämpfung in Richtung geringerer Lebensdauern und taucht im Extrapolationsbereich messbar unter die Fläche des Basis-Modells ab.
-Die durch das \ac{EmALT}-Design induzierte Ausprägung der Wirkungsfläche im Feldbereich stellt somit nicht nur eine graduelle Reduktion der Prädiktionsvarianz dar, sondern eine konsequente und empirisch gestützte Verfeinerung des Regressionsmodells.
-Daraus ergibt sich die Notwendigkeit, die ingenieurwissenschaftlichen Auswirkungen auf die Zuverlässigkeitsprognose am Feldpunkt zu evaluieren und die grundlegende methodische Verträglichkeit beider Ansätze zu plausibilisieren.
 
 \subsection{Residuenanalyse und Verifikationsdiagnostik} \label{subsec:case_residuals}
 
@@ -109,40 +104,26 @@ Die Auswertung bestätigt zunächst die theoriegeleitete Erwartung zur Varianzre
 Das Basis-\ac{CCD} weist aufgrund der ungestützten Extrapolationsdistanz eine stark ausgeprägte Prädiktionsvarianz von $\sym{SPV} = 55{,}04$ im Prognosepunkt auf.
 Dies führt zu einem extrem breiten Konfidenzband für die Prognose im Feldbetriebspunkt, das bei einer beispielhaften Laufzeit von $5\times 10^5\text{ h}$ eine maximale Unschärfe von $98{,}2\,\%$ aufspannt.
 Das \ac{EmALT}-Design hingegen reduziert die Varianz durch die implementierten \acp{AP} massiv:
-Die \ac{SPV} kollabiert auf $4{,}86$, wodurch sich die Breite des \ac{CI} am Referenzpunkt auf hochpräzise $7{,}4\,\%$ verdichtet.
-Die Extrapolationsunsicherheit wird somit um einen Faktor von $11{,}3$ minimiert.
-
-Neben dieser Varianzdämpfung offenbart Abbildung~\ref{fig:ma_abb6.1_reliability_ci} ein für die methodische Einordnung essenzielles Phänomen:
-Das \ac{EmALT}-Design zeichnet aufgrund der Dämpfung und des höheren Formparameters zwar einen steileren, konservativeren Verlauf des Zuverlässigkeitsabfalls.
-Der Median-Schätzwert dieses angepassten Modells wird jedoch über weite Strecken der Laufzeit nahezu vollständig vom breiten Varianzbereich des Basis-\ac{CCD}-Modells abgedeckt.
-Die Nutzung von Ankerpunkten dementiert das Basis-\ac{CCD} nicht, sondern reichert es substanziell an.
-Das \ac{EmALT}-Design überführt die valide, aber extrapolationsbedingt unscharfe Basisprognose des \ac{CCD} in einen hochpräzisen und empirisch fundierten Vertrauenskorridor.
-
-Diese stochastische Absicherung spiegelt sich unweigerlich in der ökonomischen Realität der Kostengleichung entsprechend Abschnitt~\ref{sec:kostenmodell} wider.
-Während das Basis-\ac{CCD} mit aggregierten Gesamtkosten von lediglich $68{,}3\text{ kCU}$ vordergründig extrem wirtschaftlich erscheint, schlägt sich das \ac{EmALT}-Design mit $371{,}2\text{ kCU}$ zu Buche.
-Dieser Kostenanstieg ist physikalisch determiniert: Die Verschiebung der \acp{AP} in den Niedrigstress-Bereich (nahe dem Feldbetrieb) erzwingt exponentiell längere Testlaufzeiten der Prüflinge.
-Aus dieser Gegenüberstellung resultiert die Notwendigkeit, diesen monetären Mehraufwand objektiv zu evaluieren.
-Es gilt zu überprüfen, ob sich dieser Einsatz bei einem statistischen Härtetest des Basis-Modells als zwingend wirtschaftliche und stochastische Notwendigkeit erweist.
+Die \ac{SPV} reduziert sich durch die Ankerpunkte auf $4{,}86$, wodurch sich die Breite des \ac{CI} am Referenzpunkt auf $7{,}4\,\%$ verdichtet.
+Die formale Extrapolationsunsicherheit wird somit um den Faktor $11{,}3$ gedämpft.
+In der industriellen Auslegungspraxis bedeutet dies: Das Basis-\ac{CCD} liefert im Feldbereich eine stochastisch derart unscharfe Prognose, dass das Modell für normative Zulassungsprozesse faktisch unnutzbar bleibt.
+Erst die topologische Stützung durch die Ankerpunkte überführt die Extrapolation in ein belastbares, normativ verwertbares Zuverlässigkeitsmodell.
+Die mediane Prognose des \ac{EmALT}-Designs steht dabei nicht im fundamentalen Widerspruch zur Basis-Approximation, sondern reichert diese stochastisch an: Der konservativere Erwartungswert der angepassten Modellierung verbleibt über weite Strecken tief im massiven Streuband der ungestützten \ac{CCD}-Prognose.
 
 \subsection{Confirmation Experiments: Der statistische Härtetest}\label{subsec:confirmationruns}
 
-Um das Basis-\ac{CCD} einem belastbaren Härtetest zu unterziehen, wird dieses anhand der real getesteten Ankerpunkte mittels \textit{prädiktionsintervall-basierter} Analysemethoden herausgefordert.
-Hierfür fungieren die \acp{AP} als formale \textit{Confirmation Runs} nach \textcite{Stevens.2019}.
-Die zugrundeliegende Prüflogik besagt: Wenn das durch das Basis-\ac{CCD} im Hochlastbereich extrahierte Modell die physikalische Realität auch an den Rändern des Versuchsraums noch valide abbildet, müssen die realen Ausfallzeiten der fernen Ankerpunkte zwingend innerhalb des vom \ac{CCD} prädizierten Streubandes liegen.
-Sollten die empirischen Ausfallzeiten dieses Intervall wider Erwarten verfehlen, wäre das Basis-Modell stochastisch falsifiziert und müsste zwingend um zusätzliche Stützstellen korrigiert werden, um fatale Fehlauslegungen im Feldbereich zu verhindern.
-Dazu wird für die \ac{AP}-Koordinaten das \ac{PI} des Basis-\ac{CCD} berechnet.
-Da die Ausfallzeiten Weibull-verteilt sind, definiert sich das \ac{PI} über das $5\,\%$- und $95\,\%$-Quantil der geschätzten Verteilung, auf welches additiv die epistemische Parameterunsicherheit über die $\Delta$-Methode der \ac{FIM} angewandt wird.
+Um die Belastbarkeit der reinen Hochlast-Extrapolation (Basis-\ac{CCD}) formell zu prüfen, werden die am Prüfstand ermittelten Ausfallzeiten der Ankerpunkte als \textit{Confirmation Runs} nach \textcite{Stevens.2019} ausgewertet.
+Die Prüflogik lautet: Bildet das extrapolierende Hochlastmodell die physikalische Realität valide ab, müssen die neuen, empirischen Ausfallzeiten zwingend innerhalb der Prädiktionsintervalle (\acp{PI}) des Modells am jeweiligen Lastpunkt liegen.
+Da die Richtung einer potenziellen Fehlprädiktion (\textit{a priori} unbekannte Über- oder Unterschätzung der Lebensdauer) offen ist, wird hierbei methodisch zwingend ein zweiseitiges \ac{PI} konstruiert.
+Dieses definiert sich über das $5\,\%$- und $95\,\%$-Quantil der prognostizierten Weibull-Verteilung, wobei die epistemische Parameterunsicherheit additiv über die $\Delta$-Methode der Fisher-Informationsmatrix (\ac{FIM}) integriert wird.
 
-Die quantitative Auswertung dieser Konfirmationsläufe liefert ein hochgradig aufschlussreiches stochastisches Resultat:
-Die empirisch realisierten Ausfallzeiten an beiden peripheren Ankerpunkten (welche sich im Bereich von rund $3{,}95$ bis $4{,}30\times 10^6\text{ h}$ für die erste und $1{,}85$ bis $1{,}91\times 10^6\text{ h}$ für die zweite Stützstelle bewegen) liegen \textbf{vollständig innerhalb} der durch das Basis-\ac{CCD} berechneten $90\,\%$-\acp{PI}.
-Das ungestützte Basis-Modell wird durch die realen Testläufe somit formell statistisch bestätigt und keineswegs falsifiziert.
-
-Eine ingenieurswissenschaftliche Betrachtung der berechneten Intervallgrenzen entlarvt jedoch die fundamentale Schwäche der reinen Hochlast-Extrapolation: Bedingt durch die extreme Prädiktionsvarianz spannen die Vertrauensbereiche des Basis-\ac{CCD} an diesen Koordinaten unbrauchbare Größenordnungen auf -- von minimal $3{,}63\times 10^5\text{ h}$ bis hin zu exorbitanten $8{,}23\times 10^{12}\text{ h}$ am ersten Ankerpunkt sowie von $7{,}11\times 10^4\text{ h}$ bis $1{,}51\times 10^{10}\text{ h}$ am zweiten.
-Dieser Härtetest verdeutlicht empirisch den Kern des Problems:
-Das orthogonale Basis-\ac{CCD} besteht den formalen statistischen Test ($90\,\%$ Coverage) paradoxerweise nur deshalb, weil seine ungebremste Varianzinflation im Extrapolationsraum ein Streuband erzeugt, das mehrere Zehnerpotenzen umfasst.
-Für normative Zuverlässigkeitsnachweise und Garantieentscheidungen verliert es dadurch jegliche praktische Trennschärfe.
-Die methodische Allokation der \acp{AP} stellt somit keine rein akademische Optimierung dar, sondern eine zwingende ingenieurswissenschaftliche Notwendigkeit:
-Sie zwingt das ausufernde Konfidenzband der Hochlast-Extrapolation in ein belastbares, praxistaugliches Prognosemodell mit eng geführten und empirisch fundierten Vertrauensgrenzen.
+Die quantitative Auswertung liefert ein paradox anmutendes stochastisches Resultat:
+Die empirischen Ausfallzeiten der Replikationen an beiden peripheren Ankerpunkten (etwa $3{,}95$ bis $4{,}30\times 10^6\text{ h}$ sowie $1{,}85$ bis $1{,}91\times 10^6\text{ h}$) liegen \textbf{vollständig innerhalb} der durch das Basis-\ac{CCD} berechneten $90\,\%$-\acp{PI}.
+Das ungestützte Basis-Modell besteht diesen formalen statistischen Test auf $90\,\%$ \textit{Coverage} und wird folglich nicht falsifiziert.
+Eine ingenieurswissenschaftliche Betrachtung der Intervallgrenzen entlarvt jedoch die methodische Schwäche des reinen Hochlast-Versuchsplans:
+Bedingt durch die extreme Prädiktionsvarianz spannt das Basis-\ac{CCD} an diesen Koordinaten \acp{PI} von physikalisch nicht verwertbarer Größenordnung auf - von minimal $3{,}63\times 10^5\text{ h}$ bis hin zu $8{,}23\times 10^{12}\text{ h}$ am ersten \ac{AP} sowie $7{,}11\times 10^4\text{ h}$ bis $1{,}51\times 10^{10}\text{ h}$ am zweiten.
+Das Modell passiert den statistischen Konfirmationstest somit ausschließlich aufgrund seiner eigenen, ungebremsten Varianzinflation, die ein Streuband über mehrere Zehnerpotenzen erzeugt.
+Für normative Garantieentscheidungen verliert die Extrapolation dadurch jegliche Trennschärfe, was die proaktive Varianzdämpfung durch \ac{EmALT} aus der empirischen Praxis heraus als zwingende Notwendigkeit legitimiert.
 
 \subsection{Ökonomische Schlussfolgerung und industrieller Business Case} \label{subsec:oekonomische_schlussfolgerung}
 
@@ -150,19 +131,10 @@ Die Validierung am extremen Randbereich durch die \textit{Confirmation Runs} lie
 Vordergründig suggeriert der rein monetäre Vergleich eine Ineffizienz des \ac{EmALT}-Designs: Einem ressourcenschonenden Basis-\ac{CCD} mit Gesamtkosten von lediglich $68{,}3\text{ kCU}$ steht im \ac{EmALT}-Design ein geforderter Prüfstandsaufwand von $371{,}2\text{ kCU}$ gegenüber.
 Werden diese Versuchspläne jedoch der industriellen Realität der Zuverlässigkeitsfreigabe unterzogen, entlarvt sich die reine \ac{ALT}-Kostenreduktion des Basis-Designs als irreführende Investition.
 
-Der entscheidende ingenieurswissenschaftliche Maßstab für die Testeffizienz ist nicht die alleinige Minimierung der nominalen Prüfkosten, sondern die Minimierung von Garantierisiken bei gleichzeitiger Sicherstellung der \textit{Time-to-Market}.
-Das Basis-\ac{CCD} erkauft sich seine geringen nominellen Testkosten durch eine Prädiktionsunsicherheit, die für normative Sicherheitsnachweise unzureichend ist:
-Die resultierenden Konfidenzbänder spannen am Prognosepunkt eine rechnerische Überlebenswahrscheinlichkeit zwischen nahezu $0\,\%$ und $100\,\%$ auf, wodurch eine belastbare Aussage zur Feldbewährung unmöglich wird.
+Der entscheidende Maßstab für die Testeffizienz ist in der industriellen Realität nicht die isolierte Minimierung der nominalen Prüfkosten, sondern die Beherrschung von Garantierisiken bei gleichzeitiger Sicherstellung der \textit{Time-to-Market}.
+Das Basis-\ac{CCD} erkauft sich seinen monetären Kostenvorteil durch Konfidenzbänder, die am Prognosepunkt eine rechnerische Überlebenswahrscheinlichkeit zwischen $0\,\%$ und $100\,\%$ aufspannen, was eine belastbare Systemfreigabe unmöglich macht.
 
-Die fundamentale Überlegenheit der topologischen Anpassung offenbart sich beim Vergleich mit der vermeintlich idealen Alternative: einem direkt auf den Prognosepunkt zentrierten, orthogonalen Feld-CCD (13 Versuchspunkte mit zwei Replikationen, $\sym{N}=26$).
-Ein solcher Versuchsplan würde zwar die Extrapolationsunschärfe eliminieren, müsste jedoch vollständig unter unbeschleunigten, feldnahen Bedingungen betrieben werden.
-Die analytische Kostenprognose entlarvt die ökonomische Inkompatibilität dieses theoretischen Optimums mit industriellen Entwicklungszyklen:
-Der Feld-CCD würde an dieser Stelle exorbitante Prüfkosten von $22\,152{,}0\text{ kCU}$ verursachen.
-Dieser extreme Aufwand blockiert nicht nur immense Prüfstandskapazitäten, sondern sprengt auch jegliche Entwicklungszeitpläne im Sinne der \textit{Time-to-Market} vollständig.
-
-Vor diesem Hintergrund transformiert sich die scheinbare Kostendifferenz von rund $300\text{ kCU}$ des \ac{EmALT}-Designs im Vergleich zum Basis-CCD in eine hochprofitable Investitionsprämie.
-Das \ac{EmALT}-Design agiert hierbei als hoch\-ef\-fizien\-te ma\-the\-ma\-tisch-geo\-me\-tri\-sche Brücke: Durch das strategische Re-Investment der asymmetrischen Ankerpunkte komprimiert es die Prognoseunschärfe im anvisierten Feld-Betriebspunkt auf präzise $7{,}4\,\%$.
-Es realisiert somit die stochastische Präzision eines echten Feldtests für einen Bruchteil von dessen Kosten (lediglich ca. $1{,}68\,\%$ des Feld-CCD-Aufwands) und bewahrt gleichzeitig den signifikanten Beschleunigungsvorteil der klassischen \ac{ALT}-Methodik.
-
-Die adaptive Nutzung des topologischen Gestaltungsbudgets legitimiert sich somit nicht allein aus informationstheoretischer Ästhetik.
-Sie etabliert sich vielmehr als unabdingbares industrielles Steuerungswerkzeug, das die Vorhersagegüte schärft, konservative Systemreserven vor teurer Überdimensionierung schützt und das Zuverlässigkeitsmanagement befähigt, harte, wirtschaftlich belastbare Garantieentscheidungen zu treffen.
+Ein alternativer, rein auf den Prognosepunkt zentrierter Feld-Versuchsplan würde diese Unschärfe zwar eliminieren, erforderte aufgrund unbeschleunigter Laufzeiten jedoch exorbitante Prüfkosten von analytisch $22\,152{,}0\text{ kCU}$, was jegliche Entwicklungszeitpläne sprengen würde.
+Vor diesem Hintergrund transformiert sich der nominale Prüfstands-Mehraufwand des \ac{EmALT}-Designs (Differenz ca. $300\text{ kCU}$ zum Basis-\ac{CCD}) in ein hochprofitables Re-Investment:
+Das Design komprimiert die Prognoseunschärfe im Feld-Betriebspunkt auf präzise $7{,}4\,\%$. Es realisiert somit die stochastische Präzision eines echten Feldtests für einen Bruchteil von dessen Kosten (ca. $1{,}68\,\%$), während der entscheidende Beschleunigungsvorteil der \ac{ALT}-Methodik vollständig gewahrt bleibt.
+Die adaptive \ac{EmALT}-Strategie etabliert sich folglich als ein hocheffektives methodisches Steuerungswerkzeug, um hochbeschleunigte Lebensdauerversuche ökonomisch effizient und sicherheitstechnisch belastbar auszurichten und schließt damit die informationstheoretische Lücke zwischen statistischer Optimalität und industrieller Feldbewährung.

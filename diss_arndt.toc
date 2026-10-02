@@ -15,26 +15,26 @@
 \contentsline {subsection}{\numberline {2.1.1}Begriffe und Definitionen}{8}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Deskriptive Statistik für Lebensdauerdaten}{9}{subsection.2.1.2}%
 \contentsline {subsection}{\numberline {2.1.3}Parametrische Lebensdauermodelle}{10}{subsection.2.1.3}%
-\contentsline {subsubsection}{\nonumberline Weibull-Verteilung}{11}{subsubsection*.31}%
+\contentsline {subsubsection}{\nonumberline Weibull-Verteilung}{11}{subsubsection*.14}%
 \contentsline {subsection}{\numberline {2.1.4}Parameterschätzverfahren}{12}{subsection.2.1.4}%
 \contentsline {section}{\numberline {2.2}Statistische Versuchsplanung und Modellbildung}{14}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Grundlagen zur statistischen Versuchsplanung}{15}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Parameter-Screening}{16}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Statistische Versuchsplanung zur Lebensdauererprobung}{17}{subsection.2.2.3}%
-\contentsline {subsubsection}{\nonumberline Faktorielle Versuchspläne zur linearen Modellbildung}{17}{subsubsection*.40}%
-\contentsline {subsubsection}{\nonumberline Wirkungsflächenversuchspläne zur quadratischen Modellbildung}{19}{subsubsection*.43}%
+\contentsline {subsubsection}{\nonumberline Faktorielle Versuchspläne zur linearen Modellbildung}{17}{subsubsection*.17}%
+\contentsline {subsubsection}{\nonumberline Wirkungsflächenversuchspläne zur quadratischen Modellbildung}{19}{subsubsection*.19}%
 \contentsline {subsection}{\numberline {2.2.4}Strategische Vorgehensweisen}{21}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}Bewertung und Optimierung von Versuchsplanung}{23}{subsection.2.2.5}%
-\contentsline {subsubsection}{\nonumberline Orthogonalität, Ausgewogenheit und Multikollinearität}{25}{subsubsection*.53}%
-\contentsline {subsubsection}{\nonumberline Optimalitätskriterien}{27}{subsubsection*.56}%
-\contentsline {subsubsection}{\nonumberline Forschungsschwerpunkte in der \cgls {RSM}}{32}{subsubsection*.58}%
-\contentsline {subsubsection}{\nonumberline Signifikanz und Trennschärfe}{33}{subsubsection*.61}%
+\contentsline {subsection}{\numberline {2.2.5}Bewertung und Optimierung von Versuchsplanung}{22}{subsection.2.2.5}%
+\contentsline {subsubsection}{\nonumberline Orthogonalität, Ausgewogenheit und Multikollinearität}{24}{subsubsection*.24}%
+\contentsline {subsubsection}{\nonumberline Optimalitätskriterien}{26}{subsubsection*.26}%
+\contentsline {subsubsection}{\nonumberline Forschungsschwerpunkte in der \cgls {RSM}}{31}{subsubsection*.28}%
+\contentsline {subsubsection}{\nonumberline Signifikanz und Trennschärfe}{33}{subsubsection*.30}%
 \contentsline {subsection}{\numberline {2.2.6}Statistische Modellbildung}{36}{subsection.2.2.6}%
-\contentsline {subsubsection}{\nonumberline Weibull-\cgls {GLM}}{37}{subsubsection*.65}%
-\contentsline {subsubsection}{\nonumberline Signifikanzanalyse}{39}{subsubsection*.68}%
-\contentsline {subsubsection}{\nonumberline Erwartungswerte und Konfidenzintervalle}{40}{subsubsection*.70}%
-\contentsline {subsubsection}{\nonumberline Vertrauensbereiche für Funktionswerte und Weibull-\cgls {GLM}}{41}{subsubsection*.72}%
-\contentsline {subsubsection}{\nonumberline Modellgüte und Residuenanalyse}{42}{subsubsection*.74}%
+\contentsline {subsubsection}{\nonumberline Weibull-\cgls {GLM}}{37}{subsubsection*.33}%
+\contentsline {subsubsection}{\nonumberline Signifikanzanalyse}{39}{subsubsection*.36}%
+\contentsline {subsubsection}{\nonumberline Erwartungswerte und Konfidenzintervalle}{39}{subsubsection*.38}%
+\contentsline {subsubsection}{\nonumberline Vertrauensbereiche für Funktionswerte und Weibull-\cgls {GLM}}{41}{subsubsection*.40}%
+\contentsline {subsubsection}{\nonumberline Modellgüte und Residuenanalyse}{42}{subsubsection*.42}%
 \contentsline {chapter}{\numberline {3}Testplanung für die multivariate Lebensdauererprobung}{45}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Bewertung des Forschungsstandes}{45}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Das methodische Paradoxon ALT-optimaler GLM-Designs}{46}{subsection.3.1.1}%
@@ -50,34 +50,35 @@
 \contentsline {subsection}{\numberline {4.2.1}Potenzialanalyse geometrischer und stochastischer Einflussgrößen}{61}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Ergebnisse der Potenzialanalyse und Quantifizierung der Trennschärfe}{66}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Generische Auswirkungen relevanter Orthogonalitätsabweichungen}{68}{subsection.4.2.3}%
-\contentsline {subsubsection}{\nonumberline Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}{70}{subsubsection*.83}%
-\contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{72}{subsubsection*.86}%
+\contentsline {subsubsection}{\nonumberline Kalibrierung der Signal-to-Noise Ratio und analytische Justierung des Arbeitspunkts}{70}{subsubsection*.50}%
+\contentsline {subsubsection}{\nonumberline Quantitative Auswertung und explorative Optimalitäts-Analyse}{72}{subsubsection*.53}%
 \contentsline {subsection}{\numberline {4.2.4}Fazit: Statistische Effektivität als Basis der explorativen Versuchsplanung}{79}{subsection.4.2.4}%
 \contentsline {section}{\numberline {4.3}Adaptive Versuchsplanung zur Extrapolationsabsicherung}{80}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Die Scaled Prediction Variance als Prognosemetrik}{81}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Richtungsabhängige Bewertung: Der Extrapolation Variance Graph (EVG)}{85}{subsection.4.3.2}%
 \contentsline {section}{\numberline {4.4}Kostenstruktur der Lebensdauererprobung}{90}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Übertragung auf multivariate Lebensdauermodelle}{94}{section.4.5}%
-\contentsline {subsubsection}{\nonumberline Signal-Rausch-Kalibrierung unter dem Sparsity of Effects Principle}{96}{subsubsection*.103}%
-\contentsline {subsection}{\numberline {4.5.1}Generische Auswirkungen asymmetrischer Versuchsplanung}{100}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Effizientes \cgls {L-DoE} und der Economic Extrapolation Power Index}{103}{subsection.4.5.2}%
-\contentsline {subsubsection}{\nonumberline Konsequenzen für die Prognoseunsicherheit im Feldbetrieb}{108}{subsubsection*.115}%
+\contentsline {subsubsection}{\nonumberline Signal-Rausch-Kalibrierung unter dem Sparsity of Effects Principle}{96}{subsubsection*.70}%
+\contentsline {subsection}{\numberline {4.5.1}Generische Auswirkungen asymmetrischer Versuchsplanung}{98}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Effizientes \cgls {L-DoE} und der Economic Extrapolation Power Index}{102}{subsection.4.5.2}%
+\contentsline {subsubsection}{\nonumberline Konsequenzen für die Prognoseunsicherheit im Feldbetrieb}{106}{subsubsection*.83}%
 \contentsline {section}{\numberline {4.6}Fazit}{110}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Empirische Validierung der Extrapolationsabsicherung}{113}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Modellschätzung und Anpassungsgüte}{116}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Residuenanalyse und Verifikationsdiagnostik}{118}{subsection.5.1.1}%
+\contentsline {chapter}{\numberline {5}Empirische Anwendung der Extrapolationsabsicherung}{113}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Modellschätzung und Anpassungsgüte}{114}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Residuenanalyse und Verifikationsdiagnostik}{117}{subsection.5.1.1}%
 \contentsline {section}{\numberline {5.2}Konsequenzen für die Zuverlässigkeitsmodellierung}{119}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Confirmation Experiments: Der statistische Härtetest}{121}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Ökonomische Schlussfolgerung und industrieller Business Case}{123}{subsection.5.2.2}%
-\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{125}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Diskussion}{127}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Ausblick}{128}{section.6.2}%
-\contentsline {chapter}{\nonumberline Literatur}{131}{chapter*.122}%
-\contentsline {chapter}{Anhang}{143}{chapter*.122}%
-\contentsline {section}{\numberline {A}Sensitivitätsanalyse}{143}{section.Alph0.1}%
-\contentsline {section}{\numberline {B}Orthogonalitäts-Analysen der Design-Modifikationen}{152}{section.Alph0.2}%
-\contentsline {subsection}{\numberline {B.1}Orthogonalitäts-Analysen aus Abschnitt~\ref {subsubsec:quantiplore}}{152}{subsection.Alph0.2.1}%
-\contentsline {subsection}{\numberline {B.2}Szenarien bei Arbeitspunkt SNR$=1$}{158}{subsection.Alph0.2.2}%
-\contentsline {subsection}{\numberline {B.3}Effizienzanalysen}{158}{subsection.Alph0.2.3}%
+\contentsline {subsection}{\numberline {5.2.1}Confirmation Experiments: Der statistische Härtetest}{120}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Ökonomische Schlussfolgerung und industrieller Business Case}{121}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {6}Zusammenfassung und Ausblick}{123}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Diskussion}{125}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Ausblick}{126}{section.6.2}%
+\contentsline {chapter}{\nonumberline Literatur}{127}{chapter*.90}%
+\contentsline {chapter}{Anhang}{139}{chapter*.90}%
+\contentsline {section}{\numberline {A}Sensitivitätsanalyse}{139}{section.Alph0.1}%
+\contentsline {section}{\numberline {B}Orthogonalitäts-Analysen der Design-Modifikationen}{148}{section.Alph0.2}%
+\contentsline {subsection}{\numberline {B.1}Orthogonalitäts-Analysen aus Abschnitt~\ref {subsubsec:quantiplore}}{148}{subsection.Alph0.2.1}%
+\contentsline {subsubsection}{\nonumberline Algorithmus zur Berechnung der Exposure-Area}{148}{subsubsection*.104}%
+\contentsline {subsection}{\numberline {B.2}Szenarien bei Arbeitspunkt SNR$=1$}{155}{subsection.Alph0.2.2}%
+\contentsline {subsection}{\numberline {B.3}Effizienzanalysen aus Abschnitt~\ref {sec:ldoe}}{156}{subsection.Alph0.2.3}%
 \contentsfinish 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

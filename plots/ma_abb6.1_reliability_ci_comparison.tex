@@ -22,6 +22,7 @@ legend style={legend cell align=left, align=left},
 grid=major,
 grid style={dotted, gray!50},
 scaled x ticks=base 10:-6,
+xtick distance=1000000,
 x tick label style={/pgf/number format/fixed, /pgf/number format/precision=0}
 ]
 
@@ -5056,5 +5057,12 @@ x	y\\
 3991983.96794	0.00000\\
 4000000.00000	0.00000\\
 };
+\addplot [color=black, dashdotted, line width=1.2pt, forget plot]
+  table[row sep=crcr]{%
+500000.00000	0.00000\\
+500000.00000	1.00000\\
+};
+\node[below right, align=left, inner sep=0, font=\color{mycolor1}]
+at (axis cs:580000,0.25) {\textbf{Auswertung} $\hat{\sym{R}}(\sym{t} = 5 \cdot 10^5\,\text{h})$};
 \end{axis}
 \end{tikzpicture}%

@@ -2910,11 +2910,11 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="2.8284271"
-     inkscape:cx="116.49584"
-     inkscape:cy="150.43697"
+     inkscape:cx="144.78011"
+     inkscape:cy="179.7819"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
-     inkscape:window-x="2552"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="g15"
@@ -3101,7 +3101,7 @@
          y="44.937225"
          id="tspan29-5-7">$\rightarrow$  <tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:1.3;font-family:'Palatino Linotype';-inkscape-font-specification:'Palatino Linotype Italic'"
-   id="tspan55">siehe Abschnitte~\ref{subsec:sensitivitaetsanalyse},\ref{subsec:ergebnisse_generic},\ref{subsec:spv_metrik})</tspan></tspan><tspan
+   id="tspan55">siehe Abschnitte~\ref{subsec:sensitivitaetsanalyse},\ref{subsec:ergebnisse_generic},\ref{subsec:spvbias})</tspan></tspan><tspan
          sodipodi:role="line"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0015px;line-height:1.3;font-family:'Palatino Linotype';-inkscape-font-specification:'Palatino Linotype Italic';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.975;stroke-miterlimit:10;stroke-dasharray:none"
          x="1048.9077"
@@ -3537,7 +3537,7 @@
          y="253.74408"
          id="tspan90-6">- \ac{OLS} (<tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Palatino Linotype';-inkscape-font-specification:'Palatino Linotype Italic'"
-   id="tspan105">Abschnitte \ref{subsec:sensitivitaetsanalyse},~\ref{subsec:ergebnisse_generic},~\ref{subsec:spv_metrik},~\ref{subsec:spv_metrik}</tspan>)</tspan><tspan
+   id="tspan105">Abschnitte \ref{subsec:sensitivitaetsanalyse},~\ref{subsec:ergebnisse_generic},~\ref{subsec:spv_metrik},~\ref{subsec:spvbias}</tspan>)</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0015px;line-height:1;font-family:'Palatino Linotype';-inkscape-font-specification:'Palatino Linotype';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.975;stroke-miterlimit:10;stroke-dasharray:none"
          x="1083.5089"
@@ -3592,7 +3592,7 @@
          y="318.76999"
          id="tspan90-6-1">- \ac{ANOVA} (<tspan
    style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Palatino Linotype';-inkscape-font-specification:'Palatino Linotype Italic'"
-   id="tspan105-8">Abschnitte \ref{subsec:sensitivitaetsanalyse},~\ref{subsec:ergebnisse_generic},~\ref{subsec:spv_metrik},~\ref{subsec:spv_metrik}</tspan>)</tspan><tspan
+   id="tspan105-8">Abschnitte \ref{subsec:sensitivitaetsanalyse},~\ref{subsec:ergebnisse_generic},~\ref{subsec:spv_metrik},~\ref{subsec:spvbias}</tspan>)</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.0015px;line-height:1;font-family:'Palatino Linotype';-inkscape-font-specification:'Palatino Linotype';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.975;stroke-miterlimit:10;stroke-dasharray:none"
          x="1084.4478"
@@ -4097,4 +4097,13 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:12.0015px;line-height:1;font-family:'Palatino Linotype';-inkscape-font-specification:'Palatino Linotype Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke-width:0.975;stroke-miterlimit:10;stroke-dasharray:none"
          x="1337.9615"
          y="549.71033"
-         id="tspan148">$\Rightarrow $</tspan></text></g></svg>
+         id="tspan148">$\Rightarrow $</tspan></text><text
+       xml:space="preserve"
+       style="font-size:10.5833px;line-height:1.3;font-family:'Palatino Linotype';-inkscape-font-specification:'Palatino Linotype';writing-mode:lr-tb;direction:rtl;fill:#e6e6e6;stroke-width:0.750001;stroke-miterlimit:10"
+       x="1719.9729"
+       y="82.318489"
+       id="text6"
+       transform="scale(1,-1)"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="stroke-width:0.75"></tspan></text></g></svg>

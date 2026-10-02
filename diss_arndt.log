@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  2 OCT 2026 00:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.8)  2 OCT 2026 03:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -783,71 +783,101 @@ Package: longtable 2024-10-27 v4.22 Multi-page Table package (DPC)
 Class scrbook Info: longtable captions redefined on input line 54.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/bbding\bbding.sty
 Package: bbding 1999/04/15 v1.01 Dingbats symbols
+) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/algorithms\algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count349
+\float@exts=\toks48
+\float@box=\box75
+\@float@everytoks=\toks49
+\@floatcapt=\box76
+)
+\@float@every@algorithm=\toks50
+\c@algorithm=\count350
+) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algpseudocode.sty
+Package: algpseudocode 
+ (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/algorithmicx\algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count351
+\c@ALG@rem=\count352
+\c@ALG@nested=\count353
+\ALG@tlm=\skip77
+\ALG@thistlm=\skip78
+\c@ALG@Lnr=\count354
+\c@ALG@blocknr=\count355
+\c@ALG@storecount=\count356
+\c@ALG@tmpcounter=\count357
+\ALG@tmplength=\skip79
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count349
+\lrq@indent=\count358
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count350
-\c@listtotal=\count351
-\c@listcount=\count352
-\c@liststart=\count353
-\c@liststop=\count354
-\c@citecount=\count355
-\c@citetotal=\count356
-\c@multicitecount=\count357
-\c@multicitetotal=\count358
-\c@instcount=\count359
-\c@maxnames=\count360
-\c@minnames=\count361
-\c@maxitems=\count362
-\c@minitems=\count363
-\c@citecounter=\count364
-\c@maxcitecounter=\count365
-\c@savedcitecounter=\count366
-\c@uniquelist=\count367
-\c@uniquename=\count368
-\c@refsection=\count369
-\c@refsegment=\count370
-\c@maxextratitle=\count371
-\c@maxextratitleyear=\count372
-\c@maxextraname=\count373
-\c@maxextradate=\count374
-\c@maxextraalpha=\count375
-\c@abbrvpenalty=\count376
-\c@highnamepenalty=\count377
-\c@lownamepenalty=\count378
-\c@maxparens=\count379
-\c@parenlevel=\count380
-\blx@tempcnta=\count381
-\blx@tempcntb=\count382
-\blx@tempcntc=\count383
-\c@blx@maxsection=\count384
-\blx@maxsegment@0=\count385
-\blx@notetype=\count386
-\blx@parenlevel@text=\count387
-\blx@parenlevel@foot=\count388
-\blx@sectionciteorder@0=\count389
-\blx@sectionciteorderinternal@0=\count390
-\blx@entrysetcounter=\count391
-\blx@biblioinstance=\count392
-\labelnumberwidth=\skip77
-\labelalphawidth=\skip78
-\biblabelsep=\skip79
-\bibitemsep=\skip80
-\bibnamesep=\skip81
-\bibinitsep=\skip82
-\bibparsep=\skip83
-\bibhang=\skip84
+\c@tabx@nest=\count359
+\c@listtotal=\count360
+\c@listcount=\count361
+\c@liststart=\count362
+\c@liststop=\count363
+\c@citecount=\count364
+\c@citetotal=\count365
+\c@multicitecount=\count366
+\c@multicitetotal=\count367
+\c@instcount=\count368
+\c@maxnames=\count369
+\c@minnames=\count370
+\c@maxitems=\count371
+\c@minitems=\count372
+\c@citecounter=\count373
+\c@maxcitecounter=\count374
+\c@savedcitecounter=\count375
+\c@uniquelist=\count376
+\c@uniquename=\count377
+\c@refsection=\count378
+\c@refsegment=\count379
+\c@maxextratitle=\count380
+\c@maxextratitleyear=\count381
+\c@maxextraname=\count382
+\c@maxextradate=\count383
+\c@maxextraalpha=\count384
+\c@abbrvpenalty=\count385
+\c@highnamepenalty=\count386
+\c@lownamepenalty=\count387
+\c@maxparens=\count388
+\c@parenlevel=\count389
+\blx@tempcnta=\count390
+\blx@tempcntb=\count391
+\blx@tempcntc=\count392
+\c@blx@maxsection=\count393
+\blx@maxsegment@0=\count394
+\blx@notetype=\count395
+\blx@parenlevel@text=\count396
+\blx@parenlevel@foot=\count397
+\blx@sectionciteorder@0=\count398
+\blx@sectionciteorderinternal@0=\count399
+\blx@entrysetcounter=\count400
+\blx@biblioinstance=\count401
+\labelnumberwidth=\skip80
+\labelalphawidth=\skip81
+\biblabelsep=\skip82
+\bibitemsep=\skip83
+\bibnamesep=\skip84
+\bibinitsep=\skip85
+\bibparsep=\skip86
+\bibhang=\skip87
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count393
-\c@maxcomprange=\count394
-\c@mincompwidth=\count395
+\c@mincomprange=\count402
+\c@maxcomprange=\count403
+\c@mincompwidth=\count404
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
@@ -857,88 +887,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count396
-\c@savedafterword=\count397
-\c@annotator=\count398
-\c@savedannotator=\count399
-\c@author=\count400
-\c@savedauthor=\count401
-\c@bookauthor=\count402
-\c@savedbookauthor=\count403
-\c@commentator=\count404
-\c@savedcommentator=\count405
-\c@editor=\count406
-\c@savededitor=\count407
-\c@editora=\count408
-\c@savededitora=\count409
-\c@editorb=\count410
-\c@savededitorb=\count411
-\c@editorc=\count412
-\c@savededitorc=\count413
-\c@foreword=\count414
-\c@savedforeword=\count415
-\c@holder=\count416
-\c@savedholder=\count417
-\c@introduction=\count418
-\c@savedintroduction=\count419
-\c@namea=\count420
-\c@savednamea=\count421
-\c@nameb=\count422
-\c@savednameb=\count423
-\c@namec=\count424
-\c@savednamec=\count425
-\c@translator=\count426
-\c@savedtranslator=\count427
-\c@shortauthor=\count428
-\c@savedshortauthor=\count429
-\c@shorteditor=\count430
-\c@savedshorteditor=\count431
-\c@labelname=\count432
-\c@savedlabelname=\count433
-\c@institution=\count434
-\c@savedinstitution=\count435
-\c@lista=\count436
-\c@savedlista=\count437
-\c@listb=\count438
-\c@savedlistb=\count439
-\c@listc=\count440
-\c@savedlistc=\count441
-\c@listd=\count442
-\c@savedlistd=\count443
-\c@liste=\count444
-\c@savedliste=\count445
-\c@listf=\count446
-\c@savedlistf=\count447
-\c@location=\count448
-\c@savedlocation=\count449
-\c@organization=\count450
-\c@savedorganization=\count451
-\c@origlocation=\count452
-\c@savedoriglocation=\count453
-\c@origpublisher=\count454
-\c@savedorigpublisher=\count455
-\c@publisher=\count456
-\c@savedpublisher=\count457
-\c@language=\count458
-\c@savedlanguage=\count459
-\c@origlanguage=\count460
-\c@savedoriglanguage=\count461
-\c@pageref=\count462
-\c@savedpageref=\count463
-\shorthandwidth=\skip85
-\shortjournalwidth=\skip86
-\shortserieswidth=\skip87
-\shorttitlewidth=\skip88
-\shortauthorwidth=\skip89
-\shorteditorwidth=\skip90
-\locallabelnumberwidth=\skip91
-\locallabelalphawidth=\skip92
-\localshorthandwidth=\skip93
-\localshortjournalwidth=\skip94
-\localshortserieswidth=\skip95
-\localshorttitlewidth=\skip96
-\localshortauthorwidth=\skip97
-\localshorteditorwidth=\skip98
+\c@afterword=\count405
+\c@savedafterword=\count406
+\c@annotator=\count407
+\c@savedannotator=\count408
+\c@author=\count409
+\c@savedauthor=\count410
+\c@bookauthor=\count411
+\c@savedbookauthor=\count412
+\c@commentator=\count413
+\c@savedcommentator=\count414
+\c@editor=\count415
+\c@savededitor=\count416
+\c@editora=\count417
+\c@savededitora=\count418
+\c@editorb=\count419
+\c@savededitorb=\count420
+\c@editorc=\count421
+\c@savededitorc=\count422
+\c@foreword=\count423
+\c@savedforeword=\count424
+\c@holder=\count425
+\c@savedholder=\count426
+\c@introduction=\count427
+\c@savedintroduction=\count428
+\c@namea=\count429
+\c@savednamea=\count430
+\c@nameb=\count431
+\c@savednameb=\count432
+\c@namec=\count433
+\c@savednamec=\count434
+\c@translator=\count435
+\c@savedtranslator=\count436
+\c@shortauthor=\count437
+\c@savedshortauthor=\count438
+\c@shorteditor=\count439
+\c@savedshorteditor=\count440
+\c@labelname=\count441
+\c@savedlabelname=\count442
+\c@institution=\count443
+\c@savedinstitution=\count444
+\c@lista=\count445
+\c@savedlista=\count446
+\c@listb=\count447
+\c@savedlistb=\count448
+\c@listc=\count449
+\c@savedlistc=\count450
+\c@listd=\count451
+\c@savedlistd=\count452
+\c@liste=\count453
+\c@savedliste=\count454
+\c@listf=\count455
+\c@savedlistf=\count456
+\c@location=\count457
+\c@savedlocation=\count458
+\c@organization=\count459
+\c@savedorganization=\count460
+\c@origlocation=\count461
+\c@savedoriglocation=\count462
+\c@origpublisher=\count463
+\c@savedorigpublisher=\count464
+\c@publisher=\count465
+\c@savedpublisher=\count466
+\c@language=\count467
+\c@savedlanguage=\count468
+\c@origlanguage=\count469
+\c@savedoriglanguage=\count470
+\c@pageref=\count471
+\c@savedpageref=\count472
+\shorthandwidth=\skip88
+\shortjournalwidth=\skip89
+\shortserieswidth=\skip90
+\shorttitlewidth=\skip91
+\shortauthorwidth=\skip92
+\shorteditorwidth=\skip93
+\locallabelnumberwidth=\skip94
+\locallabelalphawidth=\skip95
+\localshorthandwidth=\skip96
+\localshortjournalwidth=\skip97
+\localshortserieswidth=\skip98
+\localshorttitlewidth=\skip99
+\localshortauthorwidth=\skip100
+\localshorteditorwidth=\skip101
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-compat.def
@@ -948,19 +978,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count464
-\c@textcitetotal=\count465
-\c@textcitemaxnames=\count466
-\c@biburlbigbreakpenalty=\count467
-\c@biburlbreakpenalty=\count468
-\c@biburlnumpenalty=\count469
-\c@biburlucpenalty=\count470
-\c@biburllcpenalty=\count471
+\c@textcitecount=\count473
+\c@textcitetotal=\count474
+\c@textcitemaxnames=\count475
+\c@biburlbigbreakpenalty=\count476
+\c@biburlbreakpenalty=\count477
+\c@biburlnumpenalty=\count478
+\c@biburlucpenalty=\count479
+\c@biburllcpenalty=\count480
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count472
+\c@smartand=\count481
 )
 Package biblatex Info: Trying to load natbib compatibility...
 Package biblatex Info: ... file 'blx-natbib.def' found.
@@ -976,8 +1006,8 @@ Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count473
-\c@bbx:relatedtotal=\count474
+\c@bbx:relatedcount=\count482
+\c@bbx:relatedtotal=\count483
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1032,10 +1062,10 @@ Package: breakurl 2013/04/10 v1.40 Breakable hyperref URLs
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks48
-\XKV@tempa@toks=\toks49
+\XKV@toks=\toks51
+\XKV@tempa@toks=\toks52
 )
-\XKV@depth=\count475
+\XKV@depth=\count484
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 
@@ -1045,45 +1075,45 @@ Package breakurl Warning: You are using breakurl while processing via pdflatex.
 
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2024-12-06 v3.4.0 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count476
-\l__siunitx_number_exponent_fixed_int=\count477
-\l__siunitx_number_min_decimal_int=\count478
-\l__siunitx_number_min_integer_int=\count479
-\l__siunitx_number_round_precision_int=\count480
-\l__siunitx_number_lower_threshold_int=\count481
-\l__siunitx_number_upper_threshold_int=\count482
-\l__siunitx_number_group_first_int=\count483
-\l__siunitx_number_group_size_int=\count484
-\l__siunitx_number_group_minimum_int=\count485
+\l__siunitx_number_uncert_offset_int=\count485
+\l__siunitx_number_exponent_fixed_int=\count486
+\l__siunitx_number_min_decimal_int=\count487
+\l__siunitx_number_min_integer_int=\count488
+\l__siunitx_number_round_precision_int=\count489
+\l__siunitx_number_lower_threshold_int=\count490
+\l__siunitx_number_upper_threshold_int=\count491
+\l__siunitx_number_group_first_int=\count492
+\l__siunitx_number_group_size_int=\count493
+\l__siunitx_number_group_minimum_int=\count494
 \l__siunitx_angle_tmp_dim=\dimen310
-\l__siunitx_angle_marker_box=\box75
-\l__siunitx_angle_unit_box=\box76
-\l__siunitx_compound_count_int=\count486
+\l__siunitx_angle_marker_box=\box77
+\l__siunitx_angle_unit_box=\box78
+\l__siunitx_compound_count_int=\count495
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/translations\translations.sty
 Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages (CN)
 )
-\l__siunitx_table_tmp_box=\box77
+\l__siunitx_table_tmp_box=\box79
 \l__siunitx_table_tmp_dim=\dimen311
 \l__siunitx_table_column_width_dim=\dimen312
-\l__siunitx_table_integer_box=\box78
-\l__siunitx_table_decimal_box=\box79
-\l__siunitx_table_uncert_box=\box80
-\l__siunitx_table_before_box=\box81
-\l__siunitx_table_after_box=\box82
+\l__siunitx_table_integer_box=\box80
+\l__siunitx_table_decimal_box=\box81
+\l__siunitx_table_uncert_box=\box82
+\l__siunitx_table_before_box=\box83
+\l__siunitx_table_after_box=\box84
 \l__siunitx_table_before_dim=\dimen313
 \l__siunitx_table_carry_dim=\dimen314
-\l__siunitx_unit_tmp_int=\count487
-\l__siunitx_unit_position_int=\count488
-\l__siunitx_unit_total_int=\count489
+\l__siunitx_unit_tmp_int=\count496
+\l__siunitx_unit_position_int=\count497
+\l__siunitx_unit_total_int=\count498
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
 \col@sep=\dimen315
-\ar@mcellbox=\box83
+\ar@mcellbox=\box85
 \extrarowheight=\dimen316
-\NC@list=\toks50
-\extratabsurround=\skip99
-\backup@length=\skip100
-\ar@cellbox=\box84
+\NC@list=\toks53
+\extratabsurround=\skip102
+\backup@length=\skip103
+\ar@cellbox=\box86
 ))
 
 Package siunitx Info: Option "table-omit-exponent" has been deprecated in this
@@ -1096,46 +1126,46 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count490
-\c@Blindtext=\count491
-\c@blind@countparstart=\count492
-\blind@countxx=\count493
-\blindtext@numBlindtext=\count494
-\blind@countyy=\count495
-\c@blindlist=\count496
-\c@blindlistlevel=\count497
-\c@blindlist@level=\count498
-\blind@listitem=\count499
-\c@blind@listcount=\count500
-\c@blind@levelcount=\count501
-\blind@mathformula=\count502
-\blind@Mathformula=\count503
-\c@blind@randomcount=\count504
-\c@blind@randommax=\count505
-\c@blind@pangramcount=\count506
-\c@blind@pangrammax=\count507
+\c@blindtext=\count499
+\c@Blindtext=\count500
+\c@blind@countparstart=\count501
+\blind@countxx=\count502
+\blindtext@numBlindtext=\count503
+\blind@countyy=\count504
+\c@blindlist=\count505
+\c@blindlistlevel=\count506
+\c@blindlist@level=\count507
+\blind@listitem=\count508
+\c@blind@listcount=\count509
+\c@blind@levelcount=\count510
+\blind@mathformula=\count511
+\blind@Mathformula=\count512
+\c@blind@randomcount=\count513
+\c@blind@randommax=\count514
+\c@blind@pangramcount=\count515
+\c@blind@pangrammax=\count516
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/changes\changes.sty
 Package: changes 2021/07/15 v4.2.1 changes package
 
 *** changes package 2021/07/15 v4.2.1 ***
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/xstring\xstring.sty (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count508
-\xs_countb=\count509
+\xs_counta=\count517
+\xs_countb=\count518
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
 ulem-option 'normalem,normalbf', passed to package ulem
 truncate-option 'breakall,fit', passed to package truncate
-changes-option 'draft'
+changes-option 'final'
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
-\UL@box=\box85
-\UL@hyphenbox=\box86
-\UL@skip=\skip101
-\UL@hook=\toks51
+\UL@box=\box87
+\UL@hyphenbox=\box88
+\UL@skip=\skip104
+\UL@hook=\toks54
 \UL@height=\dimen317
-\UL@pe=\count510
+\UL@pe=\count519
 \UL@pixel=\dimen318
-\ULC@box=\box87
+\ULC@box=\box89
 Package: ulem 2019/11/18
 \ULdepth=\dimen319
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.sty
@@ -1145,48 +1175,48 @@ Package: todonotes 2024/01/05
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count511
-\calc@Bcount=\count512
+\calc@Acount=\count520
+\calc@Bcount=\count521
 \calc@Adimen=\dimen320
 \calc@Bdimen=\dimen321
-\calc@Askip=\skip102
-\calc@Bskip=\skip103
+\calc@Askip=\skip105
+\calc@Bskip=\skip106
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count513
-\calc@Cskip=\skip104
+\calc@Ccount=\count522
+\calc@Cskip=\skip107
 )
-\c@@todonotes@numberoftodonotes=\count514
+\c@@todonotes@numberoftodonotes=\count523
 )
-\c@Changes@AuthorCount=\count515
-\c@Changes@Author=\count516
-\c@Changes@addedCount=\count517
-\c@Changes@deletedCount=\count518
-\c@Changes@replacedCount=\count519
-\c@Changes@highlightCount=\count520
-\c@Changes@commentCount=\count521
-\c@authorcommentcount=\count522
+\c@Changes@AuthorCount=\count524
+\c@Changes@Author=\count525
+\c@Changes@addedCount=\count526
+\c@Changes@deletedCount=\count527
+\c@Changes@replacedCount=\count528
+\c@Changes@highlightCount=\count529
+\c@Changes@commentCount=\count530
+\c@authorcommentcount=\count531
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/truncate\truncate.sty
 Package: truncate 2001/08/20  ver 3.6
-\@Trunc@RestHyph=\toks52
+\@Trunc@RestHyph=\toks55
 )
-\Changestruncatewidth=\skip105
-\Changes@summary@width=\skip106
+\Changestruncatewidth=\skip108
+\Changes@summary@width=\skip109
 )
-\c@Changes@addedCountDaz=\count523
-\c@Changes@deletedCountDaz=\count524
-\c@Changes@replacedCountDaz=\count525
-\c@Changes@highlightCountDaz=\count526
-\c@Changes@commentCountDaz=\count527
-\c@Changes@addedCountMell=\count528
-\c@Changes@deletedCountMell=\count529
-\c@Changes@replacedCountMell=\count530
-\c@Changes@highlightCountMell=\count531
-\c@Changes@commentCountMell=\count532
+\c@Changes@addedCountDaz=\count532
+\c@Changes@deletedCountDaz=\count533
+\c@Changes@replacedCountDaz=\count534
+\c@Changes@highlightCountDaz=\count535
+\c@Changes@commentCountDaz=\count536
+\c@Changes@addedCountMell=\count537
+\c@Changes@deletedCountMell=\count538
+\c@Changes@replacedCountMell=\count539
+\c@Changes@highlightCountMell=\count540
+\c@Changes@commentCountMell=\count541
  (settings/definitions.tex) (settings/tikz.tex (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@layerbox@background=\box88
-\pgf@layerboxsaved@background=\box89
+\pgf@layerbox@background=\box90
+\pgf@layerboxsaved@background=\box91
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryfit.code.tex
@@ -1217,26 +1247,26 @@ File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box90
-\pgfnodeparttwobox=\box91
-\pgfnodepartthreebox=\box92
-\pgfnodepartfourbox=\box93
-\pgfnodeparttwentybox=\box94
-\pgfnodepartnineteenbox=\box95
-\pgfnodeparteighteenbox=\box96
-\pgfnodepartseventeenbox=\box97
-\pgfnodepartsixteenbox=\box98
-\pgfnodepartfifteenbox=\box99
-\pgfnodepartfourteenbox=\box100
-\pgfnodepartthirteenbox=\box101
-\pgfnodeparttwelvebox=\box102
-\pgfnodepartelevenbox=\box103
-\pgfnodeparttenbox=\box104
-\pgfnodepartninebox=\box105
-\pgfnodeparteightbox=\box106
-\pgfnodepartsevenbox=\box107
-\pgfnodepartsixbox=\box108
-\pgfnodepartfivebox=\box109
+\pgfnodepartlowerbox=\box92
+\pgfnodeparttwobox=\box93
+\pgfnodepartthreebox=\box94
+\pgfnodepartfourbox=\box95
+\pgfnodeparttwentybox=\box96
+\pgfnodepartnineteenbox=\box97
+\pgfnodeparteighteenbox=\box98
+\pgfnodepartseventeenbox=\box99
+\pgfnodepartsixteenbox=\box100
+\pgfnodepartfifteenbox=\box101
+\pgfnodepartfourteenbox=\box102
+\pgfnodepartthirteenbox=\box103
+\pgfnodeparttwelvebox=\box104
+\pgfnodepartelevenbox=\box105
+\pgfnodeparttenbox=\box106
+\pgfnodepartninebox=\box107
+\pgfnodeparteightbox=\box108
+\pgfnodepartsevenbox=\box109
+\pgfnodepartsixbox=\box110
+\pgfnodepartfivebox=\box111
 ))) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshadings.code.tex
 File: tikzlibraryshadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryshadings.code.tex
@@ -1254,19 +1284,19 @@ File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryfadings.code.tex
 File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-\pgf@layerbox@foreground=\box110
-\pgf@layerboxsaved@foreground=\box111
-\figureheight=\skip107
-\figurewidth=\skip108
-\halffigurewidth=\skip109
+\pgf@layerbox@foreground=\box112
+\pgf@layerboxsaved@foreground=\box113
+\figureheight=\skip110
+\figurewidth=\skip111
+\halffigurewidth=\skip112
 ) (settings/tikz_blocks.tex) (settings/glossaries.tex (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/glossaries-extra\glossaries-extra.sty
 Package: glossaries-extra 2025/05/14 v1.7 (NLCT)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/base\glossaries.sty
 Package: glossaries 2025/05/14 v4.7 (NLCT)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/mfirstuc\mfirstuc.sty
 Package: mfirstuc 2025/04/03 v2.09 (NLCT)
-\@glsmfirst=\toks53
-\@glsmrest=\toks54
+\@glsmfirst=\toks56
+\@glsmrest=\toks57
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/xfor\xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
 ) () (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/tracklang\tracklang.sty
@@ -1283,37 +1313,37 @@ Package: datatool-base 2025/04/25 v3.4.1 (NLCT)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-l3fp.def
 File: datatool-l3fp.def 2025/04/25 v3.4.1 (NLCT)
 )
-\@dtl@toks=\toks55
-\@dtl@tmpcount=\count533
-\dtl@tmplength=\skip110
-\l__datatool_measure_box=\box112
-\dtl@sortresult=\count534
+\@dtl@toks=\toks58
+\@dtl@tmpcount=\count542
+\dtl@tmplength=\skip113
+\l__datatool_measure_box=\box114
+\dtl@sortresult=\count543
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/datatool\datatool-utf8.ldf
 File: datatool-utf8.ldf 2025/04/25 v3.4.1 (NLCT)
 )
-\@dtl@datatype=\count535
-\l__datatool_tmpa_int=\count536
-\l__datatool_tmpb_int=\count537
-\l__datatool_tmpc_int=\count538
-\l__datatool_tmpd_int=\count539
-\l__datatool_count_int=\count540
-\l__datatool_tmp_datatype_int=\count541
+\@dtl@datatype=\count544
+\l__datatool_tmpa_int=\count545
+\l__datatool_tmpb_int=\count546
+\l__datatool_tmpc_int=\count547
+\l__datatool_tmpd_int=\count548
+\l__datatool_count_int=\count549
+\l__datatool_tmp_datatype_int=\count550
 \l__datatool_tmpa_dim=\dimen322
 \l__datatool_tmpb_dim=\dimen323
-\c_datatool_unknown_int=\count542
-\l__datatool_year_int=\count543
-\l__datatool_month_int=\count544
-\l__datatool_day_int=\count545
-\l__datatool_hour_int=\count546
-\l__datatool_minute_int=\count547
-\l__datatool_second_int=\count548
-\l__datatool_tzhour_int=\count549
-\l__datatool_tzminute_int=\count550
-\l__datatool_julian_int=\count551
-\l__datatool_local_julian_int=\count552
-\l__datatool_prefix_int=\count553
-\l__datatool_suffix_int=\count554
-\@dtl@foreach@level=\count555
+\c_datatool_unknown_int=\count551
+\l__datatool_year_int=\count552
+\l__datatool_month_int=\count553
+\l__datatool_day_int=\count554
+\l__datatool_hour_int=\count555
+\l__datatool_minute_int=\count556
+\l__datatool_second_int=\count557
+\l__datatool_tzhour_int=\count558
+\l__datatool_tzminute_int=\count559
+\l__datatool_julian_int=\count560
+\l__datatool_local_julian_int=\count561
+\l__datatool_prefix_int=\count562
+\l__datatool_suffix_int=\count563
+\@dtl@foreach@level=\count564
 
 
 Package tracklang Warning: No `datatool' support for dialect `english'  on input line 9908.
@@ -1321,36 +1351,36 @@ Package tracklang Warning: No `datatool' support for dialect `english'  on input
 
 Package tracklang Warning: No `datatool' support for dialect `ngerman'  on input line 9908.
 
-\dtl@codeA=\count556
-\dtl@codeB=\count557
+\dtl@codeA=\count565
+\dtl@codeB=\count566
 )
-\gls@level=\count558
-\@gls@tmpb=\toks56
-\gls@tmplen=\skip111
+\gls@level=\count567
+\@gls@tmpb=\toks59
+\gls@tmplen=\skip114
 \l__glossaries_tmpa_dim=\dimen324
 \l__glossaries_tmpb_dim=\dimen325
-\glskeylisttok=\toks57
-\glslabeltok=\toks58
-\glsshorttok=\toks59
-\glslongtok=\toks60
+\glskeylisttok=\toks60
+\glslabeltok=\toks61
+\glsshorttok=\toks62
+\glslongtok=\toks63
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-hypernav.sty
 Package: glossary-hypernav 2025/05/14 v4.7 (NLCT)
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-list.sty
 Package: glossary-list 2025/05/14 v4.7 (NLCT)
-\glslistdottedwidth=\skip112
+\glslistdottedwidth=\skip115
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-long.sty
 Package: glossary-long 2025/05/14 v4.7 (NLCT)
-\glsdescwidth=\skip113
-\glspagelistwidth=\skip114
+\glsdescwidth=\skip116
+\glspagelistwidth=\skip117
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-super.sty
 Package: glossary-super 2025/05/14 v4.7 (NLCT)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/supertabular\supertabular.sty
 Package: supertabular 2024/07/20 v4.2c the supertabular environment
-\c@tracingst=\count559
+\c@tracingst=\count568
 \ST@wd=\dimen326
-\ST@rightskip=\skip115
-\ST@leftskip=\skip116
-\ST@parfillskip=\skip117
+\ST@rightskip=\skip118
+\ST@leftskip=\skip119
+\ST@parfillskip=\skip120
 \ST@pageleft=\dimen327
 \ST@headht=\dimen328
 \ST@tailht=\dimen329
@@ -1360,10 +1390,10 @@ Package: supertabular 2024/07/20 v4.2c the supertabular environment
 \ST@prevht=\dimen333
 \ST@toadd=\dimen334
 \ST@dimen=\dimen335
-\ST@pbox=\box113
+\ST@pbox=\box115
 )) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/glossaries/styles\glossary-tree.sty
 Package: glossary-tree 2025/05/14 v4.7 (NLCT)
-\l__glossaries_tree_max_known_level_int=\count560
+\l__glossaries_tree_max_known_level_int=\count569
 \l__glossaries_tree_offset_dim=\dimen336
 \l__glossaries_tree_namewidth_dim=\dimen337
 \l__glossaries_tree_symbolwidth_dim=\dimen338
@@ -1373,18 +1403,18 @@ Package: glossary-tree 2025/05/14 v4.7 (NLCT)
 \l__glossaries_tree_symbolwidth_padding_dim=\dimen342
 \l__glossaries_tree_namesymbolwidth_dim=\dimen343
 \l__glossaries_tree_namesymbolwidth_padding_dim=\dimen344
-\l__glossaries_tree_level_int=\count561
-\glstreeindent=\skip118
+\l__glossaries_tree_level_int=\count570
+\glstreeindent=\skip121
 ))
-\@glsxtr@leveloffset=\count562
-\glsxtrresourcecount=\count563
-\@glsxtrnewgls@inner=\count564
-\glsshortpltok=\toks61
-\glslongpltok=\toks62
+\@glsxtr@leveloffset=\count571
+\glsxtrresourcecount=\count572
+\@glsxtrnewgls@inner=\count573
+\glsshortpltok=\toks64
+\glslongpltok=\toks65
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/glossaries-extra\glossaries-extra-abbrstyles.def
 File: glossaries-extra-abbrstyles.def 2025/05/14 v1.7 (NLCT)
 )
-\mglselementindex=\count565
+\mglselementindex=\count574
 )
 runsystem(makeindex -s diss_arndt.ist -t diss_arndt.alg -o diss_arndt.acr diss_arndt.acn)...executed safely (allowed).
 
@@ -1416,34 +1446,38 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
- (diss_arndt.aux)
+ (diss_arndt.aux
+
+LaTeX Warning: Label `tab:results_emalt_bias_wbl' multiply defined.
+
+)
 \openout1 = `diss_arndt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 466.
-LaTeX Font Info:    ... okay on input line 466.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 466.
-LaTeX Font Info:    ... okay on input line 466.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 466.
-LaTeX Font Info:    ... okay on input line 466.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 466.
-LaTeX Font Info:    ... okay on input line 466.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 466.
-LaTeX Font Info:    ... okay on input line 466.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 466.
-LaTeX Font Info:    ... okay on input line 466.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 466.
-LaTeX Font Info:    ... okay on input line 466.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 466.
-LaTeX Font Info:    ... okay on input line 466.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 466.
-LaTeX Font Info:    ... okay on input line 466.
-LaTeX Info: Redefining \microtypecontext on input line 466.
-Package microtype Info: Applying patch `item' on input line 466.
-Package microtype Info: Applying patch `toc' on input line 466.
-Package microtype Info: Applying patch `eqnum' on input line 466.
-Package microtype Info: Applying patch `footnote' on input line 466.
-Package microtype Info: Applying patch `verbatim' on input line 466.
-LaTeX Info: Redefining \microtypesetup on input line 466.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 468.
+LaTeX Font Info:    ... okay on input line 468.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 468.
+LaTeX Font Info:    ... okay on input line 468.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 468.
+LaTeX Font Info:    ... okay on input line 468.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 468.
+LaTeX Font Info:    ... okay on input line 468.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 468.
+LaTeX Font Info:    ... okay on input line 468.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 468.
+LaTeX Font Info:    ... okay on input line 468.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 468.
+LaTeX Font Info:    ... okay on input line 468.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 468.
+LaTeX Font Info:    ... okay on input line 468.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 468.
+LaTeX Font Info:    ... okay on input line 468.
+LaTeX Info: Redefining \microtypecontext on input line 468.
+Package microtype Info: Applying patch `item' on input line 468.
+Package microtype Info: Applying patch `toc' on input line 468.
+Package microtype Info: Applying patch `eqnum' on input line 468.
+Package microtype Info: Applying patch `footnote' on input line 468.
+Package microtype Info: Applying patch `verbatim' on input line 468.
+LaTeX Info: Redefining \microtypesetup on input line 468.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2),
 (microtype)             factor: 1100.
@@ -1451,7 +1485,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 10, shrink: 10, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 466.
+LaTeX Info: Redefining \showhyphens on input line 468.
 Package microtype Info: Tracking enabled.
 Package microtype Info: Using default tracking set `smallcaps'.
 Package microtype Info: Adjustment of interword spacing enabled.
@@ -1461,7 +1495,7 @@ Package microtype Info: Using default kerning set `alltext'.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-Package hyperref Info: Link coloring ON on input line 466.
+Package hyperref Info: Link coloring ON on input line 468.
  (diss_arndt.out) (diss_arndt.out)
 \@outlinefile=\write10
 \openout10 = `diss_arndt.out'.
@@ -1473,25 +1507,25 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 466.
+(scrbook)           before \begin{document} on input line 468.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count566
+\BKM@id=\count575
 )) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count567
+\scratchcounter=\count576
 \scratchdimen=\dimen345
-\scratchbox=\box114
-\nofMPsegments=\count568
-\nofMParguments=\count569
-\everyMPshowfont=\toks63
-\MPscratchCnt=\count570
+\scratchbox=\box116
+\nofMPsegments=\count577
+\nofMParguments=\count578
+\everyMPshowfont=\toks66
+\MPscratchCnt=\count579
 \MPscratchDim=\dimen346
-\MPnumerator=\count571
-\makeMPintoPDFobject=\count572
-\everyMPtoPDFconversion=\toks64
+\MPnumerator=\count580
+\makeMPintoPDFobject=\count581
+\everyMPtoPDFconversion=\toks67
 ) (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1501,6 +1535,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
@@ -1540,17 +1575,17 @@ Package biblatex Warning: Biber reported the following issues
 (biblatex)                - misc entry 'AfA.2000' (bibliography.bib): Invalid format '23.07.2026' of date field 'urldate' - ignoring.
 
 )
-Package biblatex Info: Reference section=0 on input line 466.
-Package biblatex Info: Reference segment=0 on input line 466.
+Package biblatex Info: Reference section=0 on input line 468.
+Package biblatex Info: Reference segment=0 on input line 468.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-german.trsl
 File: translations-basic-dictionary-german.trsl (german translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 466.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `german'. on input line 468.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 466.
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 469.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 468.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 471.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
@@ -1558,23 +1593,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `qhv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 469.
+LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 471.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Trying to load font information for OML+zplm on input line 469.
+LaTeX Font Info:    Trying to load font information for OML+zplm on input line 471.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 469.
+LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 471.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 469.
+LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 471.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 469.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 471.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
@@ -1586,23 +1621,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 469.
+(Font)              scaled to size 11.40997pt on input line 471.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 469.
+(Font)              scaled to size 8.33606pt on input line 471.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 469.
+(Font)              scaled to size 6.25204pt on input line 471.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 469.
+(Font)              scaled to size 11.40997pt on input line 471.
  (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 469.
+(Font)              scaled to size 8.33606pt on input line 471.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 469.
+(Font)              scaled to size 6.25204pt on input line 471.
 
 
 [1
@@ -1625,12 +1660,15 @@ chapter without number
 
 
 LaTeX Font Warning: Font shape `T1/qpl/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/qpl/m/it' tried instead on input line 497.
+(Font)              Font shape `T1/qpl/m/it' tried instead on input line 501.
 
 [3]
 
 [4]
 chapter without number
+
+Underfull \vbox (badness 2818) has occurred while \output is active []
+
 
 
 [5
@@ -1641,9 +1679,6 @@ chapter without number
 [6]
 chapter without number
 
-Underfull \vbox (badness 2818) has occurred while \output is active []
-
-
 
 [7
 
@@ -1652,7 +1687,7 @@ Underfull \vbox (badness 2818) has occurred while \output is active []
 ]
 
 [8]
-Package tocbasic Info: character protrusion at toc deactivated on input line 537.
+Package tocbasic Info: character protrusion at toc deactivated on input line 542.
  (diss_arndt.toc
 Package tocbasic Info: Using my definition of `\numberline' on input line 2.
 Package tocbasic Info: Using my definition of `\numberline' on input line 3.
@@ -1747,8 +1782,8 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 76.
 Package tocbasic Info: Using my definition of `\numberline' on input line 77.
 Package tocbasic Info: Using my definition of `\numberline' on input line 78.
 Package tocbasic Info: Using my definition of `\numberline' on input line 79.
-Package tocbasic Info: Using my definition of `\numberline' on input line 80.
 Package tocbasic Info: Using my definition of `\numberline' on input line 81.
+Package tocbasic Info: Using my definition of `\numberline' on input line 82.
 )
 \tf@toc=\write11
 \openout11 = `diss_arndt.toc'.
@@ -1783,7 +1818,7 @@ Overfull \hbox (23.39185pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (23.39185pt too wide) in alignment at lines 2--333
+Overfull \hbox (23.39185pt too wide) in alignment at lines 2--341
  [] [] 
  []
 
@@ -1811,7 +1846,7 @@ Overfull \hbox (23.39185pt too wide) in alignment at lines 2--2
  []
 
 
-Overfull \hbox (23.39185pt too wide) in alignment at lines 2--180
+Overfull \hbox (23.39185pt too wide) in alignment at lines 2--182
  [] [] 
  []
 
@@ -1835,42 +1870,30 @@ Overfull \hbox (23.39185pt too wide) in alignment at lines 2--2
  [] [] 
  []
 
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 365.
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 372.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (23.39185pt too wide) in alignment at lines 2--551
+Overfull \hbox (23.39185pt too wide) in alignment at lines 2--561
  [] [] 
  []
 
 [16] [17] [18] [19])
 
-[20]
-\Changes@InFile=\read5
+[20] (chapters/chapter1_einleitung.tex
+chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 581--582
-
+Overfull \hbox (8.98479pt too wide) in paragraph at lines 11--17
+[]\T1/qpl/m/n/10.95 (-10) Die Zu-ver-läs-sig-keits-tech-nik stellt die er-for-der-li-chen Me-tho-den be-reit, um das Produkt-
  []
 
 
 
-[21
-
-
-]
-
-[22
-
-
-] (chapters/chapter1_einleitung.tex
-chapter 1.
-Package hyperref Info: bookmark level for unknown replaced defaults to 0 on input line 7.
-Package hyperref Info: bookmark level for unknown added defaults to 0 on input line 8.
-Package hyperref Info: bookmark level for unknown deleted defaults to 0 on input line 9.
-Package hyperref Info: bookmark level for unknown highlight defaults to 0 on input line 13.
-
-
 [1
+
+
+
+
 
 
 ] (plots/ma_abb1.01_alt_illu.tex)
@@ -1884,57 +1907,57 @@ File: ts1qpl.fd 2009/09/25 v1.2 font definition file for TS1/qpl
 )
 
 [4{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}] (plots/ma_abb1_aufbau.pdf_tex
-<plots/ma_abb1_aufbau.pdf, id=548, page=1, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=527, page=1, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=550, page=2, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=529, page=2, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=551, page=3, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=530, page=3, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page3 used on input line 60.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=552, page=4, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=531, page=4, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page4 used on input line 62.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=555, page=5, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=534, page=5, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page5 used on input line 66.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=557, page=6, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=536, page=6, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page6 used on input line 68.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=558, page=7, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=537, page=7, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page7 used on input line 70.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=560, page=8, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=539, page=8, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 8>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page8 used on input line 72.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=561, page=9, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=540, page=9, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 9>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page9 used on input line 74.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=563, page=10, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=542, page=10, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 10>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page10 used on input line 76.
 (pdftex.def)             Requested size: 365.6724pt x 393.8997pt.
-<plots/ma_abb1_aufbau.pdf, id=564, page=11, 133.99901pt x 144.3112pt>
+<plots/ma_abb1_aufbau.pdf, id=543, page=11, 133.99901pt x 144.3112pt>
 File: plots/ma_abb1_aufbau.pdf Graphic file (type pdf)
 <use plots/ma_abb1_aufbau.pdf, page 11>
 Package pdftex.def Info: plots/ma_abb1_aufbau.pdf , page11 used on input line 78.
@@ -1985,11 +2008,6 @@ chapter 2.
 [9]
 
 [10]
-Overfull \hbox (4.80638pt too wide) in paragraph at lines 119--122
-\T1/qpl/m/n/10.95 (-10) (zur Mo-del-lie-rung von Zu-falls-aus-fäl-len oh-ne Al-te-rungs-ef-fek-te) []|   []   |   []   |   []
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
@@ -2025,8 +2043,8 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 [15]
 
 [16]
-Overfull \hbox (11.88037pt too wide) in paragraph at lines 270--273
-[][][][][][][][][] \T1/qpl/m/n/10.95 (-10) Pa-ra-me-ter-set sys-te-ma-tisch zu un-ter-su-chen, eta-bliert der $\OT1/pplx/m/n/10.95 2[]$ \T1/qpl/m/it/10.95 (-10) voll-fak^^?
+Overfull \hbox (3.17844pt too wide) in paragraph at lines 270--273
+\T1/qpl/m/n/10.95 (-10) Um ein mul-ti-va-ria-tes Pa-ra-me-ter-set sys-te-ma-tisch zu un-ter-su-chen, eta-bliert der $\OT1/pplx/m/n/10.95 2[]$ \T1/qpl/m/it/10.95 (-10) voll-fak^^?
  []
 
 
@@ -2034,7 +2052,7 @@ Overfull \hbox (11.88037pt too wide) in paragraph at lines 270--273
 [17]
 
 [18] (plots/ma_abb2.07_CCD_design.tex)
-Overfull \hbox (8.14264pt too wide) in paragraph at lines 159--315
+Overfull \hbox (8.14264pt too wide) in paragraph at lines 159--327
  [][] 
  []
 
@@ -2042,9 +2060,7 @@ Overfull \hbox (8.14264pt too wide) in paragraph at lines 159--315
 
 [19]
 
-[20]
-
-[21] (plots/ma_abb2.08.2_strategy.tex
+[20] (plots/ma_abb2.08.2_strategy.tex
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 10.42007pt on input line 52.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
@@ -2054,62 +2070,66 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.91925pt on input line 52.
 )
-Overfull \hbox (6.35129pt too wide) in paragraph at lines 53--388
+Overfull \hbox (6.35129pt too wide) in paragraph at lines 53--387
  [][] 
  []
 
 (plots/ma_abb2.08.3_strategy.tex)
-Overfull \hbox (15.02893pt too wide) in paragraph at lines 55--400
+Overfull \hbox (15.02893pt too wide) in paragraph at lines 55--399
  [][] 
  []
 
 (plots/ma_abb2.08.4_strategy.tex)
-Overfull \hbox (7.52351pt too wide) in paragraph at lines 165--412
+Overfull \hbox (7.52351pt too wide) in paragraph at lines 165--411
  [][] 
  []
 
 
 
+[21]
+
 [22]
-<plots/ma_abb2.2.5_fds_ccd.pdf, id=1327, 239.89626pt x 187.70125pt>
+<plots/ma_abb2.2.5_fds_ccd.pdf, id=1291, 239.89626pt x 187.70125pt>
 File: plots/ma_abb2.2.5_fds_ccd.pdf Graphic file (type pdf)
 <use plots/ma_abb2.2.5_fds_ccd.pdf>
-Package pdftex.def Info: plots/ma_abb2.2.5_fds_ccd.pdf  used on input line 465.
+Package pdftex.def Info: plots/ma_abb2.2.5_fds_ccd.pdf  used on input line 464.
 (pdftex.def)             Requested size: 190.96404pt x 149.41653pt.
-<plots/ma_abb2.2.5_vdg_ccd.pdf, id=1330, 239.89626pt x 190.7125pt>
+<plots/ma_abb2.2.5_vdg_ccd.pdf, id=1294, 239.89626pt x 190.7125pt>
 File: plots/ma_abb2.2.5_vdg_ccd.pdf Graphic file (type pdf)
 <use plots/ma_abb2.2.5_vdg_ccd.pdf>
-Package pdftex.def Info: plots/ma_abb2.2.5_vdg_ccd.pdf  used on input line 473.
+Package pdftex.def Info: plots/ma_abb2.2.5_vdg_ccd.pdf  used on input line 472.
 (pdftex.def)             Requested size: 190.96404pt x 151.81358pt.
 
 
 [23]
 
 [24 <./plots/ma_abb2.2.5_fds_ccd.pdf> <./plots/ma_abb2.2.5_vdg_ccd.pdf>]
-
-[25]
-Overfull \hbox (5.9391pt too wide) in paragraph at lines 506--507
+Overfull \hbox (5.9391pt too wide) in paragraph at lines 505--506
 \T1/qpl/m/n/10.95 (-10) for-ma-ti-ons-ma-trix, wel-che als \T1/qpl/m/it/10.95 (-10) Va^^?ri^^?anz-^^?Ko^^?va^^?ri^^?anz-^^?Ma^^?trix \T1/qpl/m/n/10.95 (-10) (oder \T1/qpl/m/it/10.95 (-10) Di^^?sper^^?si^^?ons^^?ma^^?trix\T1/qpl/m/n/10.95 (-10) ) $\OT1/zplm/m/n/10.95 ([][][][][][][][][][][][][][][])[]$
  []
 
 
 
-[26]
+[25]
 
-[27]
-Underfull \hbox (badness 1194) in paragraph at lines 611--614
+[26]
+Underfull \hbox (badness 1194) in paragraph at lines 610--613
 []|\T1/qpl/m/n/10.95 (+10) Minimierung der Prä-dik-ti-ons-va-ri-anz an ei-nem spe-zi-fi-schen
  []
 
-[28] [29] [30]
+
+
+[27] [28]
+
+[29] [30]
 
 [31]
 
 [32]
 
-[33]
+[33] (plots/ma_abb2.25_power_nonlinearity.tex)
 
-[34] (plots/ma_abb2.25_power_nonlinearity.tex)
+[34]
 
 [35]
 
@@ -2125,18 +2145,18 @@ Underfull \hbox (badness 1194) in paragraph at lines 611--614
 
 [41]
 
-[42]
+[42]) (chapters/chapter3_ansatz.tex
 
-[43]) (chapters/chapter3_ansatz.tex
+[43]
 
-[44]
-chapter 3.
-
-
-[45
+[44
 
 
 ]
+chapter 3.
+
+
+[45]
 Overfull \hbox (11.07503pt too wide) in paragraph at lines 23--26
 \T1/qpl/m/n/10.95 (-10) maÿ-ge-schnei-der-te, ef-fi-zi-en-te De-si-gns für [][][]ALT[][] zu ent-wer-fen. Im Kon-text der Lebensdauer-
  []
@@ -2186,62 +2206,62 @@ chapter 4.
 [56]
 
 [57] (plots/ma_abb5.1_mcs.pdf_tex
-<plots/ma_abb5.1_mcs.pdf, id=2949, page=1, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2901, page=1, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=2953, page=2, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2905, page=2, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=2976, page=3, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2928, page=3, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page3 used on input line 64.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=2992, page=4, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2944, page=4, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page4 used on input line 68.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3003, page=5, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2955, page=5, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page5 used on input line 71.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3011, page=6, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2963, page=6, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page6 used on input line 74.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3019, page=7, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2971, page=7, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page7 used on input line 77.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3021, page=8, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2973, page=8, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 8>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page8 used on input line 79.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3024, page=9, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2976, page=9, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 9>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page9 used on input line 81.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3026, page=10, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2978, page=10, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 10>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page10 used on input line 83.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3027, page=11, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2979, page=11, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 11>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page11 used on input line 85.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3034, page=12, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2986, page=12, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 12>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page12 used on input line 88.
@@ -2252,27 +2272,27 @@ File: Uding.fd 1996/02/01 v1.0 BBding font definitions
 )
 Package microtype Info: Fixing zero \fontdimen 6 for font `U/ding/m/n/10'
 (microtype)             (new value: 10.0pt) on input line 90.
-<plots/ma_abb5.1_mcs.pdf, id=3038, page=13, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2990, page=13, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 13>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page13 used on input line 91.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3039, page=14, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2991, page=14, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 14>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page14 used on input line 93.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3046, page=15, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=2998, page=15, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 15>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page15 used on input line 97.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3048, page=16, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3000, page=16, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 16>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page16 used on input line 99.
 (pdftex.def)             Requested size: 406.30542pt x 556.95677pt.
-<plots/ma_abb5.1_mcs.pdf, id=3049, page=17, 191.57175pt x 262.59198pt>
+<plots/ma_abb5.1_mcs.pdf, id=3001, page=17, 191.57175pt x 262.59198pt>
 File: plots/ma_abb5.1_mcs.pdf Graphic file (type pdf)
 <use plots/ma_abb5.1_mcs.pdf, page 17>
 Package pdftex.def Info: plots/ma_abb5.1_mcs.pdf , page17 used on input line 101.
@@ -2434,7 +2454,7 @@ Overfull \hbox (0.69661pt too wide) in paragraph at lines 261--544
  [][] 
  []
 
-<plots/ma_abb5.2.1_contour_spv.pdf, id=3859, 341.275pt x 199.74625pt>
+<plots/ma_abb5.2.1_contour_spv.pdf, id=3811, 341.275pt x 199.74625pt>
 File: plots/ma_abb5.2.1_contour_spv.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.1_contour_spv.pdf>
 Package pdftex.def Info: plots/ma_abb5.2.1_contour_spv.pdf  used on input line 556.
@@ -2444,150 +2464,148 @@ Package pdftex.def Info: plots/ma_abb5.2.1_contour_spv.pdf  used on input line 5
 [83]
 
 [84 <./plots/ma_abb5.2.1_contour_spv.pdf>]
-
-[85]
-<plots/ma_abb5.2.2_exposure_scatter.pdf, id=3976, 261.97874pt x 261.97874pt>
+<plots/ma_abb5.2.2_exposure_scatter.pdf, id=3880, 261.97874pt x 261.97874pt>
 File: plots/ma_abb5.2.2_exposure_scatter.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.2_exposure_scatter.pdf>
-Package pdftex.def Info: plots/ma_abb5.2.2_exposure_scatter.pdf  used on input line 605.
-(pdftex.def)             Requested size: 243.78572pt x 243.79361pt.
+Package pdftex.def Info: plots/ma_abb5.2.2_exposure_scatter.pdf  used on input line 582.
+(pdftex.def)             Requested size: 203.15271pt x 203.15935pt.
 
 
-[86]
+[85]
 
-[87 <./plots/ma_abb5.2.2_exposure_scatter.pdf>]
-<plots/ma_abb5.2.2_contour.pdf, id=4036, 349.305pt x 271.0125pt>
+[86 <./plots/ma_abb5.2.2_exposure_scatter.pdf>]
+<plots/ma_abb5.2.2_contour.pdf, id=3974, 349.305pt x 271.0125pt>
 File: plots/ma_abb5.2.2_contour.pdf Graphic file (type pdf)
 <use plots/ma_abb5.2.2_contour.pdf>
-Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 616.
+Package pdftex.def Info: plots/ma_abb5.2.2_contour.pdf  used on input line 610.
 (pdftex.def)             Requested size: 325.04556pt x 252.20442pt.
  (plots/ma_abb5.2.2_evg.tex)
 
+[87]
+
 [88 <./plots/ma_abb5.2.2_contour.pdf>]
 
-[89]
-
-[90] (plots/ma_abb5.14_costmodel.pdf_tex
-<plots/ma_abb5.14_costmodel.pdf, id=4171, page=1, 173.2403pt x 287.23065pt>
+[89] (plots/ma_abb5.14_costmodel.pdf_tex
+<plots/ma_abb5.14_costmodel.pdf, id=4087, page=1, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 1>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4172, page=2, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4088, page=2, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 2>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page2 used on input line 58.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4173, page=3, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4089, page=3, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 3>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page3 used on input line 60.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4174, page=4, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4090, page=4, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 4>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page4 used on input line 62.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4177, page=5, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4093, page=5, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 5>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page5 used on input line 64.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4180, page=6, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4096, page=6, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 6>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page6 used on input line 66.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4183, page=7, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4099, page=7, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 7>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page7 used on input line 68.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4186, page=8, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4102, page=8, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 8>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page8 used on input line 70.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4189, page=9, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4105, page=9, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 9>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page9 used on input line 72.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4192, page=10, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4108, page=10, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 10>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page10 used on input line 74.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4195, page=11, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4111, page=11, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 11>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page11 used on input line 76.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4196, page=12, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4112, page=12, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 12>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page12 used on input line 78.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4197, page=13, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4113, page=13, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 13>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page13 used on input line 80.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4200, page=14, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4116, page=14, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 14>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page14 used on input line 82.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4203, page=15, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4119, page=15, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 15>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page15 used on input line 84.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4206, page=16, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4122, page=16, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 16>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page16 used on input line 86.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4209, page=17, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4125, page=17, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 17>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page17 used on input line 88.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4212, page=18, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4128, page=18, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 18>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page18 used on input line 90.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4215, page=19, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4131, page=19, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 19>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page19 used on input line 92.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4216, page=20, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4132, page=20, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 20>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page20 used on input line 94.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4217, page=21, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4133, page=21, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 21>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page21 used on input line 96.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4219, page=22, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4135, page=22, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 22>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page22 used on input line 98.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
-<plots/ma_abb5.14_costmodel.pdf, id=4220, page=23, 173.2403pt x 287.23065pt>
+<plots/ma_abb5.14_costmodel.pdf, id=4136, page=23, 173.2403pt x 287.23065pt>
 File: plots/ma_abb5.14_costmodel.pdf Graphic file (type pdf)
 <use plots/ma_abb5.14_costmodel.pdf, page 23>
 Package pdftex.def Info: plots/ma_abb5.14_costmodel.pdf , page23 used on input line 100.
 (pdftex.def)             Requested size: 203.15271pt x 336.83424pt.
 )
 
-[91]
+[90]
 
-[92 <./plots/ma_abb5.14_costmodel.pdf> <./plots/ma_abb5.14_costmodel.pdf
+[91 <./plots/ma_abb5.14_costmodel.pdf> <./plots/ma_abb5.14_costmodel.pdf
 
 pdfTeX warning: pdflatex (file ./plots/ma_abb5.14_costmodel.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./plots/ma_abb5.14_costmodel.pdf
@@ -2655,22 +2673,24 @@ pdfTeX warning: pdflatex (file ./plots/ma_abb5.14_costmodel.pdf): PDF inclusion:
 pdfTeX warning: pdflatex (file ./plots/ma_abb5.14_costmodel.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
+[92]
+
 [93]
 
 [94]
-Overfull \hbox (13.62672pt too wide) in paragraph at lines 748--750
+Overfull \hbox (13.62672pt too wide) in paragraph at lines 745--747
 \T1/qpl/m/n/10.95 (-10) che-rung ab-schlie-ÿend zu quan-ti-fi-zie-ren, wer-den drei spe-zi-fi-sche Design-Konfigurationen
  []
 
 
-Overfull \hbox (20.91345pt too wide) in paragraph at lines 752--755
+Overfull \hbox (20.91345pt too wide) in paragraph at lines 749--752
 []\T1/qpl/b/n/10.95 (-10) Passiv aus^^?ge^^?dünn^^?tes De^^?sign ($[][]$, Bud^^?ge^^?tein^^?spa^^?rung): \T1/qpl/m/n/10.95 (-10) Die aus Ab-schnitt [][]4.3.1[][]
  []
 
 
 
 [95]
-Overfull \hbox (6.73816pt too wide) in paragraph at lines 764--766
+Overfull \hbox (6.73816pt too wide) in paragraph at lines 761--763
 \T1/qpl/m/n/10.95 (-10) bar-keit der Trennschärfe-Verluste auf-recht-zu-er-hal-ten, wird das Referenz-Modell (\T1/qpl/m/it/10.95 (-10) Groun^^?
  []
 
@@ -2679,13 +2699,13 @@ Overfull \hbox (6.73816pt too wide) in paragraph at lines 764--766
 [96]
 
 [97]
-<plots/ma_abb5.4.3_response_surface.pdf, id=4456, 315.1775pt x 219.82124pt>
+<plots/ma_abb5.4.3_response_surface.pdf, id=4409, 315.1775pt x 219.82124pt>
 File: plots/ma_abb5.4.3_response_surface.pdf Graphic file (type pdf)
 <use plots/ma_abb5.4.3_response_surface.pdf>
-Package pdftex.def Info: plots/ma_abb5.4.3_response_surface.pdf  used on input line 804.
+Package pdftex.def Info: plots/ma_abb5.4.3_response_surface.pdf  used on input line 801.
 (pdftex.def)             Requested size: 325.04556pt x 226.71692pt.
-
-Overfull \hbox (1.50696pt too wide) in paragraph at lines 826--830
+ (tables/tab_results_emalt_metrics_ols.tex)
+Overfull \hbox (1.50696pt too wide) in paragraph at lines 822--826
 \T1/qpl/m/n/10.95 (-10) die-rung. Um den struk-tu-rel-len Ein-fluss der asym-me-tri-schen Ankerpunkt-Reallokation
  []
 
@@ -2693,59 +2713,50 @@ Overfull \hbox (1.50696pt too wide) in paragraph at lines 826--830
 
 [98]
 
-[99 <./plots/ma_abb5.4.3_response_surface.pdf>]
-
-LaTeX Warning: Reference `tab:results_emalt_metrics_ols' on page 100 undefined on input line 831.
-
-
-Overfull \hbox (54.6983pt too wide) in paragraph at lines 831--836
-\T1/qpl/m/n/10.95 (-10) zwingt einen Bruch der Ro-ta-ti-ons-sym-me-trie, was sich im An-stieg des Nicht-Orthogonalitätsmaÿes
- []
-
-(plots/ma_abb5.4.2_betadev_ols.tex)
+[99 <./plots/ma_abb5.4.3_response_surface.pdf>] (plots/ma_abb5.4.2_betadev_ols.tex)
 
 [100] (tables/tab_results_emalt_mse_ols.tex
-Underfull \hbox (badness 3009) in paragraph at lines 3--3
+Underfull \hbox (badness 1406) in paragraph at lines 3--3
 [][][]|\T1/qpl/m/n/10.95 (+10) Schätz-va-ri-anz ([][][]MSE[][]) der ein-zel-nen Ko-ef-fi-zi-en-ten bei OLS-Baseline
  []
 
-) (plots/ma_abb5.4.2_powerdev_ols.tex)
+)
 
-[101]
-
-[102]
+[101] (plots/ma_abb5.4.2_powerdev_ols.tex)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\cgls' on input line 873.
+(hyperref)                removing `\cgls' on input line 869.
 
 
 
-[103] (tables/tab_results_emalt_bias_wbl.tex
+[102] (tables/tab_results_emalt_bias_wbl.tex
 Underfull \hbox (badness 2735) in paragraph at lines 3--3
 [][][]|\T1/qpl/m/n/10.95 (+10) Re-la-ti-ver sys-te-ma-ti-scher Schätz-feh-ler (Bi-as) in Pro-zent bei GLLW-
  []
 
-) (plots/ma_abb5.4.3_betadev_wbl.tex
+)
+
+[103] (plots/ma_abb5.4.3_betadev_wbl.tex
 
 Package pgfplots Warning: the current plot has no coordinates (or all have been filtered away) on input line 110.
 
  [warning /pgfplots/warning/plot without coordinates]
-)
+) (plots/ma_abb5.4.3_powerdev_wbl.tex) (tables/tab_results_emalt_kpi_eco.tex)
 
-[104] (plots/ma_abb5.4.3_powerdev_wbl.tex) (tables/tab_results_emalt_kpi_eco.tex)
+[104]
 
 [105] (plots/ma_abb5.4.3_tradeoff_eco.tex)
 
 [106]
 
-[107]
-
-[108] (plots/ma_abb5.4.3_reliability_ci.tex)
-Overfull \hbox (2.93262pt too wide) in paragraph at lines 11076--977
+[107] (plots/ma_abb5.4.3_reliability_ci.tex)
+Overfull \hbox (2.93262pt too wide) in paragraph at lines 11076--973
  [][] 
  []
 
 
+
+[108]
 
 [109]
 
@@ -2759,103 +2770,105 @@ Overfull \hbox (2.93262pt too wide) in paragraph at lines 11076--977
 ]
 chapter 5.
 (tables/tab_ieee_experimental_data.tex)
+Overfull \hbox (3.01877pt too wide) in paragraph at lines 18--28
+\T1/qpl/m/n/10.95 (-10) proak-tiv um-ge-wid-met. Die ex-pe-ri-men-tel-len Auf-wän-de wer-den al-go-rith-misch als asym-
+ []
 
-[113]
+
+
+[113] (plots/ma_abb6.1_parameter_estimates_comparison.tex)
 
 [114]
 
-[115] (plots/ma_abb6.1_parameter_estimates_comparison.tex)
-
-[116]
-<plots/ma_abb6.1_response_surface_comparison_log.pdf, id=5169, 430.60875pt x 233.87375pt>
+[115]
+<plots/ma_abb6.1_response_surface_comparison_log.pdf, id=5163, 430.60875pt x 233.87375pt>
 File: plots/ma_abb6.1_response_surface_comparison_log.pdf Graphic file (type pdf)
 <use plots/ma_abb6.1_response_surface_comparison_log.pdf>
-Package pdftex.def Info: plots/ma_abb6.1_response_surface_comparison_log.pdf  used on input line 59.
+Package pdftex.def Info: plots/ma_abb6.1_response_surface_comparison_log.pdf  used on input line 61.
 (pdftex.def)             Requested size: 365.6724pt x 198.6116pt.
 
 
-[117 <./plots/ma_abb6.1_response_surface_comparison_log.pdf>]
-<plots/ma_abb6.1_residuals_combined.pdf, id=5217, 472.76625pt x 230.8625pt>
+[116]
+<plots/ma_abb6.1_residuals_combined.pdf, id=5182, 472.76625pt x 230.8625pt>
 File: plots/ma_abb6.1_residuals_combined.pdf Graphic file (type pdf)
 <use plots/ma_abb6.1_residuals_combined.pdf>
-Package pdftex.def Info: plots/ma_abb6.1_residuals_combined.pdf  used on input line 78.
+Package pdftex.def Info: plots/ma_abb6.1_residuals_combined.pdf  used on input line 73.
 (pdftex.def)             Requested size: 385.9889pt x 188.4912pt.
 
 
-[118] (plots/ma_abb6.1_reliability_ci_comparison.tex)
-Overfull \hbox (4.14655pt too wide) in paragraph at lines 5060--104
+[117 <./plots/ma_abb6.1_response_surface_comparison_log.pdf>]
+
+[118 <./plots/ma_abb6.1_residuals_combined.pdf>] (plots/ma_abb6.1_reliability_ci_comparison.tex)
+Overfull \hbox (4.14655pt too wide) in paragraph at lines 5068--99
  [][] 
  []
 
 
 
-[119 <./plots/ma_abb6.1_residuals_combined.pdf>]
+[119]
 
-[120]
-Overfull \hbox (1.3437pt too wide) in paragraph at lines 115--120
-\T1/qpl/m/n/10.95 (-10) Ein-ord-nung es-sen-zi-el-les Phä-no-men: Das [][][]EmALT[][]-Design zeich-net auf-grund der Dämp-
- []
-
-
+[120]) (chapters/chapter7_zusammenfassung.tex
 
 [121]
 
 [122]
-
-[123]) (chapters/chapter7_zusammenfassung.tex
-
-[124]
 chapter 6.
 
-LaTeX Warning: Reference `chap:screening' on page 125 undefined on input line 15.
-
-
-
-[125
-
-
-]
-Overfull \hbox (22.34982pt too wide) in paragraph at lines 27--32
+Overfull \hbox (22.34982pt too wide) in paragraph at lines 22--27
 []\T1/qpl/b/n/10.95 (-10) Bewertungsmethodik und phy^^?si^^?ka^^?lisch-^^?öko^^?no^^?mi^^?sches Op^^?ti^^?mum (Teil^^?for^^?schungs^^?
  []
 
 
-Overfull \hbox (0.64565pt too wide) in paragraph at lines 33--37
-\T1/qpl/m/it/10.95 (-10) ments\T1/qpl/m/n/10.95 (-10) ) be-le-gen em-pi-risch, dass ein un-ge-stütz-tes Basis-Modell bei rei-ner Hochlast-
+
+[123
+
+
+]
+Overfull \hbox (14.70532pt too wide) in paragraph at lines 28--33
+\T1/qpl/m/n/10.95 (-10) ti-sche Leis-tungs-fä-hig-keit der Ex-tra-po-la-ti-ons-ab-si-che-rung. Zwar wur-den der [][][]EmALT[][]-
  []
 
 
 
+[124]
+
+[125])
+
 [126]
-
-[127])
-
-[128]
-
-[129]
-
-[130
-
-
-]
 chapter without number
-LaTeX Font Info:    Trying to load font information for T1+DejaVuSansMono-TLF on input line 612.
+LaTeX Font Info:    Trying to load font information for T1+DejaVuSansMono-TLF on input line 617.
 (C:\Users\m-arn\AppData\Local\Programs\MiKTeX\tex/latex/dejavu\t1dejavusansmono-tlf.fd
 File: T1DejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T1/DejaVuSansMono-TLF.
 )
 LaTeX Font Info:    Font shape `T1/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 612.
+(Font)              scaled to size 9.30756pt on input line 617.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `DejaVuSansMono-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
 
-[131{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
+[127
+
+
+{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ec-sc.enc}{C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}]
+
+[128]
+
+[129]
+
+[130]
+
+[131]
 
 [132]
 
 [133]
+Overfull \hbox (2.13684pt too wide) in paragraph at lines 617--617
+\T1/qpl/m/it/10.95 (-10) with SAS\T1/qpl/m/n/10.95 (-10) . 1st. New York: Ox-ford Uni-ver-si-ty Press Inc, 2007. \T1/qpl/m/sc/10.95/50ls (-10) isbn\T1/qpl/m/n/10.95 (-10) : 9780199296590. 
+ []
+
+
 
 [134]
 
@@ -2864,106 +2877,108 @@ Package microtype Info: Loading generic protrusion settings for font family
 [136]
 
 [137]
-Overfull \hbox (2.13684pt too wide) in paragraph at lines 612--612
-\T1/qpl/m/it/10.95 (-10) with SAS\T1/qpl/m/n/10.95 (-10) . 1st. New York: Ox-ford Uni-ver-si-ty Press Inc, 2007. \T1/qpl/m/sc/10.95/50ls (-10) isbn\T1/qpl/m/n/10.95 (-10) : 9780199296590. 
- []
+
+[138] (chapters/anhang/anhanga/anhanga.tex (tables/table_sens_Cplus_1_Dplus_1.tex) (tables/table_sens_Cplus_1_D00.tex) (tables/table_sens_Cplus_1_Dminus_1.tex)
+
+[139
 
 
-
-[138]
-
-[139]
+]
 
 [140]
 
-[141]
+[141] (tables/table_sens_C00_Dplus_1.tex) (tables/table_sens_C00_D00.tex) (tables/table_sens_C00_Dminus_1.tex)
 
-[142] (chapters/anhang/anhanga/anhanga.tex (tables/table_sens_Cplus_1_Dplus_1.tex) (tables/table_sens_Cplus_1_D00.tex) (tables/table_sens_Cplus_1_Dminus_1.tex)
-
-[143
-
+[142
 
 ]
 
-[144]
+[143]
 
-[145] (tables/table_sens_C00_Dplus_1.tex) (tables/table_sens_C00_D00.tex) (tables/table_sens_C00_Dminus_1.tex)
+[144] (tables/table_sens_Cminus_1_Dplus_1.tex) (tables/table_sens_Cminus_1_D00.tex) (tables/table_sens_Cminus_1_Dminus_1.tex))
 
-[146
-
-]
-
-[147]
-
-[148] (tables/table_sens_Cminus_1_Dplus_1.tex) (tables/table_sens_Cminus_1_D00.tex) (tables/table_sens_Cminus_1_Dminus_1.tex))
-
-[149
+[145
 
 ]
 
-[150]
+[146]
 
-[151] (chapters/anhang/anhangb/anhangb.tex (tables/tab_results_ortho_mse.tex) (tables/tab_results_ortho_power.tex
+[147] (chapters/anhang/anhangb/anhangb.tex (tables/tab_results_ortho_mse.tex) (tables/tab_results_ortho_power.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--3
 [][][]|\T1/qpl/m/n/10.95 (+10) Simulations-ergebnisse: Durch-schnitt-li-che Trennschärfe-Änderung
  []
 
-) (tables/tab_results_ortho_bias.tex) (plots/ma_abb_app.c_convergence_power.tex) (plots/ma_abb_app.c_convergence_beta.tex)
+) (tables/tab_results_ortho_bias.tex)
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 21.
+ (plots/ma_abb_app.c_convergence_power.tex) (plots/ma_abb_app.c_convergence_beta.tex)
 
-LaTeX Warning: Float too large for page by 19.93176pt on input line 44.
+LaTeX Warning: Float too large for page by 19.93176pt on input line 85.
 
 (plots/ma_abb_app.c_pvalue_hist.tex) (plots/ma_abb_app.c_korrelation_all.tex)
-Underfull \hbox (badness 1087) in paragraph at lines 60--60
+Underfull \hbox (badness 1087) in paragraph at lines 101--101
 [][][]|\T1/qpl/m/n/10.95 (+10) Kor-re-li-e-ren-de Me-tri-ken zur pro-zen-tua-len Trennschärfe-Änderung
  []
 
 
-LaTeX Warning: Float too large for page by 77.81639pt on input line 62.
+LaTeX Warning: Float too large for page by 77.81639pt on input line 103.
 
 
 
-[152
+[148
 
 ]
+
+[149]
+
+[150]
+
+[151]
+
+[152]
 
 [153]
 
 [154]
-
-[155]
-
-[156]
-
-[157]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 65.
+(Font)              scaled to size 12.50409pt on input line 106.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 12.50409pt on input line 65.
+(Font)              scaled to size 12.50409pt on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 65.
+(hyperref)                removing `math shift' on input line 106.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 65.
+(hyperref)                removing `math shift' on input line 106.
 
 (plots/ma_abb5.1.4_msedev_snr1.tex) (plots/ma_abb5.1.4_powerdev_snr1.tex)
-Overfull \hbox (0.60976pt too wide) in paragraph at lines 244--81
+Overfull \hbox (0.60976pt too wide) in paragraph at lines 244--122
  [][] 
  []
 
-(plots/ma_abb_app.d_kpi_all_coeffs.tex)
 
-LaTeX Warning: Float too large for page by 31.67674pt on input line 95.
 
-)
+[155
 
-[158
+] (plots/ma_abb_app.d_kpi_all_coeffs.tex)
+
+LaTeX Warning: Float too large for page by 31.67674pt on input line 137.
+
+(plots/ma_abb5.4.3_phisto_all_wbl.tex) (tables/tab_results_emalt_bias_wbl.tex
+Underfull \hbox (badness 5756) in paragraph at lines 3--3
+[][][]|\T1/qpl/m/n/10.95 (+10) Re-la-ti-ver sys-te-ma-ti-scher Schätz-feh-ler (Bi-as) in Pro-zent bei GLLW-
+ []
+
+))
+
+[156
 
 ]
 
-[159]
+[157]
+
+[158]
 \Changes@OutFile=\write12
 \openout12 = `diss_arndt.soc'.
 
@@ -2977,7 +2992,7 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `diss_arndt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -2986,17 +3001,17 @@ Package logreq Info: Writing requests to 'diss_arndt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 80009 strings out of 473577
- 1847299 string characters out of 5716318
- 4147217 words of memory out of 5000000
- 100854 multiletter control sequences out of 15000+600000
+ 80468 strings out of 473577
+ 1854526 string characters out of 5716318
+ 4151878 words of memory out of 5000000
+ 101321 multiletter control sequences out of 15000+600000
  747277 words of font info for 413 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 122i,26n,121p,10968b,3333s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,26n,121p,10968b,3327s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\m-arn\AppData\Local\MiKTeX\fonts/pk/ljfour/public/bbding/dpi600\bbding10.pk><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/dejavu/DejaVuSansMono.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/euler/eurb10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplb.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplbi.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplr.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qplri.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/m-arn/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on diss_arndt.pdf (181 pages, 3718050 bytes).
+Output written on diss_arndt.pdf (178 pages, 3707629 bytes).
 PDF statistics:
- 6362 PDF objects out of 7423 (max. 8388607)
- 784 named destinations out of 1000 (max. 500000)
+ 6395 PDF objects out of 7423 (max. 8388607)
+ 753 named destinations out of 1000 (max. 500000)
  93596 words of extra memory for PDF output out of 106986 (max. 10000000)
 

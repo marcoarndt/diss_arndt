@@ -15,6 +15,47 @@ In diesem Anhang sind ergänzende Visualisierungen und Analysen zur Bewertung de
 
 \input{tables/tab_results_ortho_bias.tex}
 
+
+\subsubsection{Algorithmus zur Berechnung der Exposure-Area}
+\begin{algorithm}[htbp]
+    \caption{Algorithmische Identifikation der Anker-Exposition (\textit{Exposure-Area})}
+    \label{alg:exposure_area}
+    \begin{algorithmic}[1]
+        \Require Basis-Design $\sym{X}_{\text{base}}$, polynomialer Prognosevektor $f(\sym{x}_{\text{pr}})$,
+        diskreter Suchraum $\mathcal{X}$, Anzahl umzuwidmender \acp{AP} $n_{\text{AP}}$, relative Toleranzmarge $q$
+
+        \State $\nu_{\text{min}} \gets \infty$ \Comment{Initialisierung der minimalen Prädiktionsvarianz}
+        \State $\mathcal{C} \gets \text{Kombinationen}(\mathcal{X}, n_{\text{AP}})$ \Comment{Menge aller möglichen \ac{AP}-Kombinationen}
+        \State $\sym{V} \gets$ Array der Länge $|\mathcal{C}|$ zur Speicherung der Varianzen
+
+        \vspace{0.5em}
+        \Statex \textit{// Phase 1: Exhaustive Evaluierung der \ac{SPV} im Prognosepunkt}
+        \For{\textbf{each} $C_i \in \mathcal{C}$}
+        \State $\sym{X}_{\text{aug}} \gets \sym{X}_{\text{base}} \cup C_i$ \Comment{Augmentierung des Designs}
+        \State $\sym{M}_i \gets \sym{X}_{\text{aug}}^\top \sym{X}_{\text{aug}}$ \Comment{Informationsmatrix}
+        \State $\nu_i \gets N \cdot f(\sym{x}_{\text{pr}})^\top \sym{M}_i^{-1} f(\sym{x}_{\text{pr}})$ \Comment{Berechnung der \ac{SPV} gem. Gl. X.X}
+        \State $\sym{V}[i] \gets \nu_i$
+        \If{$\nu_i < \nu_{\text{min}}$}
+        \State $\nu_{\text{min}} \gets \nu_i$ \Comment{Registrierung des absoluten Minimums}
+        \EndIf
+        \EndFor
+
+        \vspace{0.5em}
+        \Statex \textit{// Phase 2: Filterung und Konstruktion des Toleranzraums}
+        \State $\nu_{\text{thresh}} \gets \nu_{\text{min}} \cdot (1 + q)$ \Comment{Definition der oberen Toleranzschranke}
+        \State $\mathcal{X}_{\text{exposure}} \gets \emptyset$
+
+        \For{\textbf{each} $C_i \in \mathcal{C}$}
+        \If{$\sym{V}[i] \le \nu_{\text{thresh}}$}
+        \State $\mathcal{X}_{\text{exposure}} \gets \mathcal{X}_{\text{exposure}} \cup C_i$ \Comment{Akkumulation valider Stützstellen}
+        \EndIf
+        \EndFor
+
+        \Ensure Toleranzraum $\mathcal{X}_{\text{exposure}}$ (Menge aller zulässigen geometrischen Verortungen)
+    \end{algorithmic}
+\end{algorithm}
+
+
 % \begin{figure}[htbp]
 %     \centering
 %     \setlength\figurewidth{0.9\textwidth}
@@ -82,8 +123,9 @@ In diesem Anhang sind ergänzende Visualisierungen und Analysen zur Bewertung de
     \label{fig:app.c_powerdev_snr1}
 \end{figure}
 
+\clearpage
 
-\subsection{Effizienzanalysen} \label{app:c_effizienz}
+\subsection{Effizienzanalysen aus Abschnitt~\ref{sec:ldoe}} \label{app:c_effizienz}
 
 \begin{figure}[htbp]
     \centering
@@ -93,3 +135,13 @@ In diesem Anhang sind ergänzende Visualisierungen und Analysen zur Bewertung de
     \caption{\ac{KPI} ggü. \textit{D}-Effizienz aller Koeffizienten.}
     \label{fig:app.c_kpi_all_coeffs}
 \end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \setlength\figurewidth{0.8\textwidth}
+    \setlength\figureheight{5cm}
+    \input{plots/ma_abb5.4.3_phisto_all_wbl.tex}
+    \caption{Aggregierte $\sym{p-Wert}$ Histogramme der \ac{MLE}-Signifikanztests. Die stochastische Auswertung liefert artefaktfreie Verteilungen.}
+    \label{fig:ma_abb5.4.3_phisto_all_wbl}
+\end{figure}
+\input{tables/tab_results_emalt_bias_wbl.tex}

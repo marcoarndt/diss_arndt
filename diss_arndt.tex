@@ -7,7 +7,7 @@
 
 \documentclass[
 %  accepted, % uncomment this after your oral exam for the final print (changes title page)
-%  print,% use this flag for printing (turns links black)
+ print,% use this flag for printing (turns links black)
 english, ngerman,% Language: last one is the main language used in the document
 smallfont, % if you wish a smaller font. This is 12pt for the manuscript, 
 twoside, % one of {oneside, twoside} -> onesided or twosided layout. for twosided print choose twoside
@@ -52,6 +52,8 @@ BCOR=6mm, % binding correction, 6 mm for 200 pages, 80 g/m² Paper (half of thic
   \usepackage{upgreek}    % upright greek letters
   \usepackage{longtable}  % tables across multiple pages
   \usepackage{bbding}
+  \usepackage{algorithm}
+    \usepackage{algpseudocode}
 
 \usepackage{tikz}
 
@@ -142,7 +144,7 @@ isbn=true]{biblatex}
 %% You can even list all changes so they can easily be checked with "\listofchanges"
 % \usepackage[%final % keyword "final" is to hide changes highlighting
 % 				]{changes}
-\usepackage[draft]{changes} % --->>> \usepackage[final]{changes}
+\usepackage[final]{changes} % --->>> \usepackage[final]{changes}
 \definechangesauthor[name={Martin}, color=magenta]{Daz}
 \definechangesauthor[name={Heiko}, color=orange]{Mell}
 %\definechangesauthor[name=Prof. Mit berichter, color=OliveGreen]{OtherProf}
@@ -471,9 +473,11 @@ isbn=true]{biblatex}
 
 
 \addchap{Vorwort}
+\vspace{-0.5cm}
+
 Die vorliegende Arbeit entstand während meiner Tätigkeit als akademischer Mitarbeiter am Institut für Maschinenelemente (IMA) der Universität Stuttgart.
 
-Mein tiefster Dank gilt meinem Doktorvater und Mentor Herrn PD Dr.-Ing. habil. Martin Dazer.
+Mein größter Dank gilt meinem Doktorvater und Mentor Herrn PD Dr.-Ing. habil. Martin Dazer.
 Als sein Stellvertreter im Fachbereich Zuverlässigkeitstechnik durfte ich neben seinem herausragenden Fachwissen eine außergewöhnliche Förderung erfahren.
 Seine stetige Unterstützung, die unzähligen Diskussionen und sein uneingeschränktes Vertrauen legten das absolute Fundament für diese Arbeit.
 Für dieses freundschaftliche Miteinander bin ich zutiefst dankbar.
@@ -487,7 +491,7 @@ Für die hervorragende Zusammenarbeit im Industrieprojekt danke ich Herrn Dr. sc
 Unser freundschaftlicher Austausch und die fruchtbaren Gespräche waren stets eine wertvolle Inspirationsquelle.
 
 Mein Dank gilt ebenso allen Mitarbeiterinnen und Mitarbeitern des IMA für das einzigartige Arbeitsklima.
-Allen voran danke ich Philipp Mell für den stets fachlich bereichernden und befruchtenden Austausch sowie für das akribische Korrekturlesen dieser Arbeit.
+Allen voran danke ich Philipp Mell für den stets fachlich bereichernden und freundschaftlichen Austausch sowie für das akribische Korrekturlesen dieser Arbeit.
 Giuseppe Mannone, Kim Hintz, Dr.-Ing. Alexander Grundler und Erich Rittmaier danke ich für die wertvollen Diskussionen und die großartige gemeinsame Zeit am Institut.
 Ein besonderer Dank gilt Dr.-Ing. Kevin Lucan für das von ihm initiierte vertrauensvolle Umfeld und die gelebte unternehmerische Freiheit, die meinen Weg und den vieler ehemaliger Kollegen nachhaltig und mit großer Freude prägen.
 Gleichermaßen danke ich allen studentischen Hilfskräften und Verfassern von Abschlussarbeiten für ihre tatkräftige Unterstützung.
@@ -495,26 +499,27 @@ Gleichermaßen danke ich allen studentischen Hilfskräften und Verfassern von Ab
 Der wichtigste Dank gebührt meiner Familie.
 Meiner Ehefrau Marei und meiner Tochter Karla danke ich von ganzem Herzen für den unermüdlichen Rückhalt und die grenzenlose Geduld in all den Phasen, in denen diese Arbeit meine Zeit beansprucht hat.
 
-\vspace{2cm}
-\noindent Ravensburg, im September 2026 \hfill Marco Arndt
+\vspace{0.5cm}
+\noindent Ravensburg, im Oktober 2026 \hfill Marco Arndt
 
 
 % \cleardoublepage
 \addchap{Kurzfassung}
 
-Die Zuverlässigkeitstechnik bedient sich beschleunigter Lebensdauererprobungen (\textit{Accelerated Life Testing}, \textit{ALT}), um Entwicklungszyklen zu reduzieren. Da das Ausfallverhalten technischer Systeme zumeist durch mehrere interagierende Belastungen determiniert wird, erfordert die zugehörige empirische Modellierung der Lebensdauer zwingend die multivariate statistische Versuchsplanung (\textit{Design of Experiments}, \textit{DoE}) mittels \textit{Response Surface Methodology} (\textit{RSM}), wobei sich für technische Anwendungen das C\textit{entral Composite Design} (\textit{CCD}) als Standard-Testplan etabliert hat. Dessen ungeprüfte Übertragung auf ALT birgt jedoch einen fundamentalen methodischen Konflikt: Während klassische Versuchspläne auf geometrische Symmetrie und Interpolation im Zentrum des Versuchsraums ausgelegt sind, erfordert die Lebensdauererprobung prinzipbedingt die Extrapolation von hohen Prüflasten auf moderate Feldbedingungen. Zudem verletzen Lebensdauerdaten durch asymmetrische Weibull-Verteilungen und Zensierungen die klassischen Prämissen normalverteilter Residuen.
-Die vorliegende Dissertation adressiert diesen Konflikt durch ein holistisches Framework zur Auslegung hocheffizienter Lebensdauertests. Zunächst reduziert ein heuristisches Screening-Verfahren die Dimensionalität des Parameterraums im Vorfeld rational auf die vitalen Einflussgrößen. Im informationstheoretischen Kern wird daraufhin per \textit{Monte-Carlo-Simulation} (\textit{MCS}) nachgewiesen, dass das CCD eine ausgeprägte topologische Resilienz gegenüber praxisinduzierten Orthogonalitätsabweichungen hinsichtlich der relevanten Metriken zur Bewertung der Modellierungsfähigkeit aufweist. Diese nachgewiesene Fehlertoleranz erschließt ein wertvolles geometrisches Gestaltungsbudget, welches den Übergang zur adaptiven Versuchsplanung legitimiert. Anstatt Versuchspunkte lediglich zur passiven Kostensenkung zu eliminieren, werden freigewordene Stützstellen proaktiv als Extrapolations-Ankerpunkte in Richtung des Feldbereichs verlagert. Dieser methodische Brückenbau - formalisiert im neu entwickelten \textit{Extrapolation-Variance minimized Accelerated Lifetime Testing} Design (\textit{EmALT}) - stützt das Regressionsmodell auf dem Extrapolationspfad empirisch ab. Zur richtungsabhängigen Quantifizierung der resultierenden Prognosevarianz wird der \textit{Extrapolation Variance Graph} (\textit{EVG}) eingeführt. Dieser belegt formal, dass die Allokation der Ankerpunkte die Unsicherheit am anvisierten Feld-Betriebspunkt massiv reduziert.
-Den Abschluss bildet die Synthese mit einem Kostenmodell, welches den inhärenten Zielkonflikt der Lebensdauererprobung quantifiziert: Eine gesteigerte Prognosegüte im Feldbereich verursacht durch die reduzierte Stressbeschleunigung exponentiell höhere Prüfstandskosten. Die Arbeit etabliert hierfür den \textit{Economic Extrapolation Power Index} (\textit{EPI}) als holistische Bewertungsmetrik. Eine empirische Fallstudie verifiziert die Methodik abschließend anhand prädiktiver Confirmation Experiments.
+Die Zuverlässigkeitstechnik bedient sich beschleunigter Lebensdauererprobungen (\textit{Accelerated Life Testing}, \textit{ALT}), um Entwicklungszyklen zu reduzieren. Da das Ausfallverhalten technischer Systeme zumeist durch mehrere interagierende Belastungen determiniert wird, erfordert die zugehörige empirische Modellierung der Lebensdauer zwingend die multivariate statistische Versuchsplanung (\textit{Design of Experiments}, \textit{DoE}) mittels \textit{Response Surface Methodology} (\textit{RSM}), wobei sich für technische Anwendungen das \textit{Central Composite Design} (\textit{CCD}) als Standard-Testplan etabliert hat. Dessen ungeprüfte Übertragung auf ALT birgt jedoch einen fundamentalen methodischen Konflikt: Während klassische Versuchspläne auf geometrische Symmetrie und Interpolation im Zentrum des Versuchsraums ausgelegt sind, erfordert die Lebensdauererprobung prinzipbedingt die Extrapolation von hohen Prüflasten auf moderate Feldbedingungen. Zudem verletzen Lebensdauerdaten durch asymmetrische Weibull-Verteilungen und Zensierungen die klassischen Prämissen normalverteilter Residuen.
+
+Die vorliegende Dissertation adressiert diesen Konflikt durch ein ganzheitliches methodisches Framework zur Auslegung hocheffizienter Lebensdauertests. Im informationstheoretischen Kern der Arbeit wird per \textit{Monte-Carlo-Simulation} (\textit{MCS}) nachgewiesen, dass das CCD eine ausgeprägte topologische Resilienz gegenüber praxisinduzierten Orthogonalitätsabweichungen hinsichtlich der relevanten Metriken zur Bewertung der Modellierungsfähigkeit aufweist. Diese nachgewiesene Fehlertoleranz erschließt ein wertvolles geometrisches Gestaltungsbudget, welches den Übergang zur adaptiven Versuchsplanung legitimiert. Anstatt Versuchspunkte lediglich zur passiven Kostensenkung zu eliminieren, werden freigewordene Stützstellen proaktiv als Extrapolations-Ankerpunkte in Richtung des Feldbereichs verlagert. Dieser methodische Brückenbau - formalisiert im neu entwickelten \textit{Extrapolation-Variance minimized Accelerated Lifetime Testing} Design (\textit{EmALT}) - stützt das Regressionsmodell auf dem Extrapolationspfad empirisch ab. Zur richtungsabhängigen Quantifizierung der resultierenden Prognosevarianz wird der \textit{Extrapolation Variance Graph} (\textit{EVG}) eingeführt. Dieser belegt formal, dass die Allokation der Ankerpunkte die Unsicherheit am anvisierten Feld-Betriebspunkt signifikant reduziert.
+
+Den Abschluss bildet die Synthese mit einem Kostenmodell, welches den inhärenten Zielkonflikt der Lebensdauererprobung quantifiziert: Eine gesteigerte Prognosegüte im Feldbereich verursacht durch die reduzierte Stressbeschleunigung exponentiell höhere Prüfstandskosten. Die Arbeit etabliert hierfür den \textit{Economic Extrapolation Power Index} (\textit{EPI}) als integrale Bewertungsmetrik. Eine empirische Fallstudie an realen Prüfstandsdaten demonstriert die praktische Leistungsfähigkeit der Methodik abschließend anhand prädiktiver \textit{Confirmation Experiments}.
 Die Dissertation weist somit nach, dass sich Effizienz in der Versuchsplanung nicht über die bedingungslose Minimierung von Prüfläufen definiert, sondern sich durch das ökonomische Optimum zwischen minimalem Ressourceneinsatz und der zwingenden Absicherung der statistischen Vorhersagegüte im Einsatzbereich manifestiert.
 
 \clearpage
 
 \addchap{Abstract}
-Reliability engineering employs Accelerated Life Testing (ALT) to compress development cycles. Because the failure behavior of technical systems is typically governed by multiple interacting loads, the corresponding empirical modeling of component life strictly requires multivariate statistical Design of Experiments (DoE) utilizing Response Surface Methodology (RSM). Within this context, the Central Composite Design (CCD) has emerged as the standard experimental design for technical applications. However, applying this design to ALT without scrutiny introduces a fundamental methodological conflict: While classical experimental designs are optimized for geometric symmetry and interpolation within the center of the design space, life testing inherently necessitates extrapolation from elevated test loads to moderate field conditions. Furthermore, lifetime data - characterized by asymmetric Weibull distributions and censoring - violate the classical premises of normally distributed residuals.
+Reliability engineering employs accelerated life testing (\textit{Accelerated Life Testing}, \textit{ALT}) to compress development cycles. Because the failure behavior of technical systems is typically governed by multiple interacting loads, the corresponding empirical modeling of lifetime strictly requires multivariate statistical design of experiments (\textit{Design of Experiments}, \textit{DoE}) utilizing \textit{Response Surface Methodology} (\textit{RSM}). Within this context, the \textit{Central Composite Design} (\textit{CCD}) has emerged as the standard experimental design for technical applications. However, applying this design to ALT without scrutiny introduces a fundamental methodological conflict: While classical experimental designs are optimized for geometric symmetry and interpolation within the center of the design space, life testing inherently necessitates extrapolation from elevated test loads to moderate field conditions. Furthermore, lifetime data—characterized by asymmetric Weibull distributions and censoring—violate the classical premises of normally distributed residuals.
 
-This dissertation addresses this conflict by introducing a holistic framework for the design of highly efficient lifetime tests. Initially, a heuristic screening procedure rationally reduces the dimensionality of the parameter space to the critical influencing variables. In the information-theoretic core of the study, Monte Carlo Simulation (MCS) demonstrates that the CCD exhibits pronounced topological resilience against practice-induced deviations from orthogonality, as evaluated by relevant metrics for modeling capability. This proven fault tolerance unlocks a valuable geometric design budget, which legitimizes the transition toward adaptive experimental design. Rather than merely eliminating design points for passive cost reduction, available support points are proactively relocated as extrapolation anchor points toward the expected field operation domain. This methodological bridging - formalized in the newly developed Extrapolation-Variance minimized Accelerated Lifetime Testing Design (EmALT) - empirically anchors the regression model along the extrapolation path. To quantify the resulting prediction variance on a directional basis, the Extrapolation Variance Graph (EVG) is introduced. This metric formally substantiates that the strategic allocation of anchor points significantly reduces uncertainty at the targeted field operating point.
-
-The framework concludes with a synthesis incorporating a cost model that quantifies the inherent trade-off in life testing: Enhanced prediction accuracy in the field domain incurs exponentially higher test rig costs due to the reduced stress acceleration. To address this, the study establishes the Economic Extrapolation Power Index (EPI) as a holistic evaluation metric. Finally, an empirical case study verifies the methodology through predictive confirmation experiments.
+This dissertation addresses this conflict by introducing a comprehensive methodological framework for the design of highly efficient lifetime tests. In the information-theoretic core of the study, \textit{Monte Carlo Simulation} (\textit{MCS}) demonstrates that the CCD exhibits pronounced topological resilience against practice-induced deviations from orthogonality, as evaluated by relevant metrics for modeling capability. This proven fault tolerance unlocks a valuable geometric design budget, which legitimizes the transition toward adaptive experimental design. Rather than merely eliminating design points for passive cost reduction, available support points are proactively relocated as extrapolation anchor points toward the expected field operation domain. This methodological bridging—formalized in the newly developed \textit{Extrapolation-Variance minimized Accelerated Lifetime Testing} Design (\textit{EmALT})—empirically anchors the regression model along the extrapolation path. To quantify the resulting prediction variance on a directional basis, the \textit{Extrapolation Variance Graph} (\textit{EVG}) is introduced. This metric formally substantiates that the allocation of anchor points significantly reduces uncertainty at the targeted field operating point.
+The framework concludes with a synthesis incorporating a cost model that quantifies the inherent trade-off in life testing: Enhanced prediction accuracy in the field domain incurs exponentially higher test rig costs due to the reduced stress acceleration. To address this, the study establishes the \textit{Economic Extrapolation Power Index} (\textit{EPI}) as an integral evaluation metric. Finally, an empirical case study utilizing real test rig data demonstrates the practical capability of the methodology through predictive \textit{Confirmation Experiments}.
 
 Consequently, this dissertation demonstrates that efficiency in experimental design is not defined by the unconditional minimization of test runs, but rather manifests as the economic optimum between minimizing resource expenditure and rigorously ensuring statistical prediction quality within the intended application domain.
 

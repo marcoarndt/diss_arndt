@@ -303,7 +303,19 @@ Ein \ac{CCD} entsteht durch die \textit{Augmentierung} des ursprünglichen voll-
     \item eine definierte Anzahl $\symsub{n}{idx_C}$ an wiederholten \acp{ZP} (üblicherweise $3 \leq \symsub{n}{idx_C} \leq 5$ zur Abschätzung des reinen Fehlers) \cite{Montgomery.2021}; sowie
     \item $\symsub{n}{idx_S} = 2 \cdot \sym{k}$ zusätzliche \textit{\acp{SP}}, die auf den Achsen des Koordinatensystems im Abstand $\pm \symsub{alpha}{idx_D}$ vom Zentrum liegen.
 \end{itemize}
-\begin{figure}[htbp]
+Während die \acp{ZP} das Vorhandensein quadratischer Effekte validieren, ermöglichen die \acp{SP} deren Wertbestimmung.
+Die Wahl des Abstands $\symsub{alpha}{idx_D}$ wird primär durch die Geometrie des relevanten \textit{Test-Parameterraums} (\textit{Region of Interest}) diktiert.
+Wird dieser Raum als \textit{Sphäre} verstanden, ist die \textit{Drehbarkeit} (\textit{Rotierbarkeit}) ein wesentliches Qualitätsmerkmal.
+Sie stellt sicher, dass die Varianz der Vorhersage nur vom Abstand zum Zentrum abhängt und invariant gegenüber einer Rotation des Koordinatensystems ist.
+Um diese Eigenschaft zu gewährleisten, berechnet sich der Abstand $\symsub{alpha}{idx_D}$ in Abhängigkeit der \highlight[id=Daz, comment={Abhängigkeit von $n_F$ und damit Faktorenanzahl}]{faktoriellen Versuchspunkte} $\symsub{n}{idx_F}$ zu \cite{Box.1957,Montgomery.2020}:
+\begin{equation} \label{eq:ccd_alpha}
+    \symsub{alpha}{idx_D} = (\symsub{n}{idx_F})^{1/4}.
+\end{equation}
+Alternativ kann für sphärische Räume auch $\symsub{alpha}{idx_D} = \sqrt{\sym{k}}$ gewählt werden (\textit{Sphärisches \ac{CCD}}), wodurch alle faktoriellen Punkte und \acp{SP} auf einer Kugeloberfläche liegen \cite{Myers.2016}.
+Ist der Versuchsraum hingegen durch harte physikalische Grenzen (z.B. maximale Temperatur) kubisch beschränkt, bietet sich der \textit{flächenzentrierte \ac{CCD}} (\textit{Face Centered \ac{CCD}}) an.
+Hierbei wird $\symsub{alpha}{idx_D} = 1$ gesetzt, sodass die \acp{SP} direkt auf den Flächenmitten des Würfels liegen.
+Dies vereinfacht die Durchführung, da nur drei Faktorstufen ($-1$, $0$, $+1$) benötigt werden, opfert jedoch die Eigenschaft der Rotierbarkeit.
+\begin{figure}[!htbp]
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \centering
@@ -348,18 +360,6 @@ Ein \ac{CCD} entsteht durch die \textit{Augmentierung} des ursprünglichen voll-
     \caption{Zentral zusammengesetzter Versuchsplan (CCD) mit $\sym{k}=2$}
     \label{fig:abb2.07_ccd_design}
 \end{figure}
-Während die \acp{ZP} das Vorhandensein quadratischer Effekte validieren, ermöglichen die \acp{SP} deren Wertbestimmung.
-Die Wahl des Abstands $\symsub{alpha}{idx_D}$ wird primär durch die Geometrie des relevanten \textit{Test-Parameterraums} (\textit{Region of Interest}) diktiert.
-Wird dieser Raum als \textit{Sphäre} verstanden, ist die \textit{Drehbarkeit} (\textit{Rotierbarkeit}) ein wesentliches Qualitätsmerkmal.
-Sie stellt sicher, dass die Varianz der Vorhersage nur vom Abstand zum Zentrum abhängt und invariant gegenüber einer Rotation des Koordinatensystems ist.
-Um diese Eigenschaft zu gewährleisten, berechnet sich der Abstand $\symsub{alpha}{idx_D}$ in Abhängigkeit der \highlight[id=Daz, comment={Abhängigkeit von $n_F$ und damit Faktorenanzahl}]{faktoriellen Versuchspunkte} $\symsub{n}{idx_F}$ zu \cite{Box.1957,Montgomery.2020}:
-\begin{equation} \label{eq:ccd_alpha}
-    \symsub{alpha}{idx_D} = (\symsub{n}{idx_F})^{1/4}.
-\end{equation}
-Alternativ kann für sphärische Räume auch $\symsub{alpha}{idx_D} = \sqrt{\sym{k}}$ gewählt werden (\textit{Sphärisches \ac{CCD}}), wodurch alle faktoriellen Punkte und \acp{SP} auf einer Kugeloberfläche liegen \cite{Myers.2016}.
-Ist der Versuchsraum hingegen durch harte physikalische Grenzen (z.B. maximale Temperatur) kubisch beschränkt, bietet sich der \textit{flächenzentrierte \ac{CCD}} (\textit{Face Centered \ac{CCD}}) an.
-Hierbei wird $\symsub{alpha}{idx_D} = 1$ gesetzt, sodass die \acp{SP} direkt auf den Flächenmitten des Würfels liegen.
-Dies vereinfacht die Durchführung, da nur drei Faktorstufen ($-1$, $0$, $+1$) benötigt werden, opfert jedoch die Eigenschaft der Rotierbarkeit.
 Eine effiziente Alternative zum \ac{CCD} stellt das \textit{Box-Behnken-Design} dar \cite{Box.1960}.
 Dieses Design kombiniert $2^{\sym{k}}$-Faktorielle mit unvollständigen Blockplänen und platziert Versuchspunkte auf den Kantenmitten des Versuchsraums, vermeidet jedoch die extremen faktoriellen Versuchspunkte.
 Dies kann vorteilhaft für Lebensdauertests sein, bei denen extreme Ecken oft zu verfrühten Ausfällen führen können.
@@ -367,7 +367,6 @@ Zudem ist es bei korrekter Wahl der \acp{ZP} alias-optimal gegenüber kubischen 
 Stoßen Standard-Designs (\ac{CCD}, Box-Behnken) aufgrund von Restriktionen im Versuchsraum, nicht-standardmäßigen Modellierungszielen oder ungewöhnlichen Stichprobenumfängen an ihre Grenzen, empfiehlt sich der Einsatz von \textit{Optimalen Versuchsplänen}, vergleiche Abschnitt~\ref{subsec:optimal}.
 Diese computergenerierten Designs minimieren beispielsweise algorithmisch die durchschnittliche Vorhersagevarianz über den gesamten Designraum und können Standard-Designs in ihrer Prädiktionsgüte oft übertreffen \cite{Goos.2011,Montgomery.2020}.
 Gleichzeitig ist zu dieser Stelle festzuhalten, dass mit den Eigenschaften der Rotierbarkeit und der Orthogonalität zwei fundamentale Qualitätsmerkmale für \acp{CCD} existieren, die einen varianz-optimierten Versuchsplan charakterisieren.
-
 \subsection{Strategische Vorgehensweisen} \label{subsec:strategie}
 In der versuchstechnischen Praxis entsteht ein \ac{CCD} vorzugsweise im Rahmen einer \textit{sequenziellen Versuchsstrategie}.
 Zeigt das initiale lineare Modell signifikante Anpassungsmängel (\textit{Lack-of-Fit}), wird der bestehende faktorielle Basisplan um die \acp{SP} augmentiert, um ein Regressionsmodell zweiter Ordnung abzubilden \cite{Myers.2016}.
